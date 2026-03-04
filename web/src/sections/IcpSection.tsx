@@ -9,20 +9,33 @@ type IcpSectionProps = {
 
 export function IcpSection({ title, cards }: IcpSectionProps) {
   return (
-    <section className="py-16">
-      <Container className="space-y-8">
-        <h2 className="text-2xl font-semibold md:text-3xl">{title}</h2>
-        <div className="grid gap-6 lg:grid-cols-3">
+    <section className="relative py-36 min-h-[100vh]">
+      <Container className="relative space-y-14">
+        <div className="mx-auto flex w-full items-center justify-between lg:w-[85%]">
+          <img
+            src="/brand/logo-wordmark.png"
+            alt="Bold Brands"
+            className="h-6 w-auto"
+          />
+          <h2 className="text-lg font-semibold text-[#ff2b44] md:text-2xl">
+            {title}
+          </h2>
+        </div>
+        <div className="mx-auto grid gap-10 lg:w-[85%] lg:grid-cols-3">
           {cards.map((card) => (
             <article
               key={card.title}
-              className="flex h-full flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="bbi-card flex h-full min-h-[220px] flex-col gap-5 rounded-3xl border border-white/10 bg-[#1b1c21] p-8"
             >
-              <h3 className="text-lg font-semibold">{card.title}</h3>
-              <p className="text-sm text-white/70">{card.description}</p>
+              <h3 className="text-base font-semibold text-white md:text-lg">
+                {card.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-white/70">
+                {card.description}
+              </p>
               <Link
                 href={card.href}
-                className="mt-auto text-sm text-red-400 hover:text-red-300"
+                className="mt-auto text-sm text-[#ff2b44] hover:text-[#ff4960]"
               >
                 {card.linkLabel}
               </Link>

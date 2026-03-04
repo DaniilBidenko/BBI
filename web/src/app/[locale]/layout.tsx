@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { AppBar } from "@/components/AppBar";
 import { getDictionary } from "@/content/dictionaries";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 
@@ -28,11 +28,8 @@ export default async function LocaleLayout({
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header
-        locale={locale}
-        navItems={dictionary.nav.items}
-        ctaLabel={dictionary.nav.cta}
-      />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_85%_35%,rgba(255,43,68,0.28),rgba(14,14,14,0)_45%),radial-gradient(circle_at_70%_80%,rgba(255,43,68,0.16),rgba(14,14,14,0)_40%)]" />
+      <AppBar locale={locale} ctaLabel={dictionary.nav.cta} />
       <main className="flex-1">{children}</main>
       <Footer text={dictionary.footer.copyright} />
     </div>
