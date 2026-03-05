@@ -35,13 +35,17 @@ export function HeroSection({
             <Button href={ctaHref}>{ctaLabel}</Button>
           </div>
         </div>
-        <div className="relative flex h-40 items-center justify-end md:h-56">
+        <div className="relative flex h-[300px] items-center justify-end md:h-[420px]">
           <img
             src="/brand/pattern-white.png"
             alt=""
             className="pointer-events-none absolute -right-6 -top-10 h-[210px] w-auto opacity-[0.07] mix-blend-screen"
           />
-          <div className="absolute right-0 -top-2 h-[330px] w-[330px] bg-[linear-gradient(135deg,#eeeeee,#cfcfcf)] [mask-image:url('/brand/logo-mark.png')] [mask-repeat:no-repeat] [mask-size:contain] [mask-position:center] [webkit-mask-image:url('/brand/logo-mark.png')] [webkit-mask-repeat:no-repeat] [webkit-mask-size:contain] [webkit-mask-position:center]" />
+          <img
+            src="/brand/hero-mechanism.svg"
+            alt=""
+            className="relative h-[280px] w-auto opacity-90 md:h-[360px]"
+          />
           <div className="absolute -right-12 -top-16 h-[340px] w-[340px] rounded-full bg-[#ff2b44]/20 blur-3xl" />
         </div>
         <div id="hero-details" className="sr-only">

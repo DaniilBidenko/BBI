@@ -22,6 +22,20 @@ export type HomePillar = {
   href: string;
 };
 
+export type AboutPrinciple = {
+  text: string;
+};
+
+export type AboutManifesto = {
+  text: string;
+};
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  note: string;
+};
+
 export type Dictionary = {
   nav: {
     items: NavItem[];
@@ -51,6 +65,35 @@ export type Dictionary = {
     position: {
       title: string;
       description: string;
+    };
+  };
+  about: {
+    who: {
+      title: string;
+      text: string;
+      emphasis: string;
+    };
+    principles: {
+      title: string;
+      items: AboutPrinciple[];
+    };
+    manifesto: {
+      title: string;
+      items: AboutManifesto[];
+    };
+    team: {
+      title: string;
+      members: TeamMember[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      form: {
+        name: string;
+        phone: string;
+        message: string;
+        submit: string;
+      };
     };
   };
   footer: {
