@@ -3,414 +3,572 @@ import type { Dictionary } from "./types";
 export const en: Dictionary = {
   nav: {
     items: [
-      { label: "[EN] Home", href: "/" },
-      { label: "[EN] About BBI", href: "/about" },
-      { label: "[EN] How We Work", href: "/work" },
-      { label: "[EN] Cases", href: "/cases" },
-      { label: "[EN] Blog", href: "/blog" },
-      { label: "[EN] Contacts", href: "/contacts" },
+      { label: "Home", href: "/" },
+      { label: "About BBI", href: "/about" },
+      { label: "How We Work", href: "/work" },
+      { label: "Cases", href: "/cases" },
+      { label: "Blog", href: "/blog" },
+      { label: "Contacts", href: "/contacts" },
     ],
-    cta: "[EN] Start",
+    cta: "Start",
   },
   work: {
     hero: {
-      eyebrow: "[EN] Operating Partner Model",
-      title: "[EN] 6 pillars: one system, not a bundle of services",
+      eyebrow: "Operating Partner Model",
+      title: "6 pillars: one system, not a bundle of services",
       description:
-        "[EN] We don’t sell operations separately from marketing, or marketing separately from finance. Business is a system. A hole in one pillar collapses the rest. BBI enters all six and builds a single management contour.",
-      ctaLabel: "[EN] 6 PILLARS OF BBI",
-      ctaHint: "[EN] Open the pillars page",
+        "We don’t sell operations separately from marketing, or marketing separately from finance. Business is a system. A hole in one pillar collapses the rest. BBI enters all six and builds a single management contour.",
+      ctaLabel: "6 PILLARS OF BBI",
+      ctaHint: "Open the pillars page",
     },
     pillarsIntro: {
-      title: "[EN] BBI system",
+      title: "BBI system",
       description:
-        "[EN] BBI unites six directions into one system aligned with the owner’s interests. These are not “services” you buy separately — these are six support points that make the business asset resilient and protected. Resilience is the outcome of all six.",
-      detailsLabel: "[EN] Learn more",
+        "BBI unites six directions into one system aligned with the owner’s interests. These are not “services” you buy separately — these are six support points that make the business asset resilient and protected. Resilience is the outcome of all six.",
+      detailsLabel: "Learn more",
     },
     pillars: [
       {
         key: "operations",
-        title: "[EN] Operations",
+        title: "Operations",
         group: "Leverage",
-        groupLabel: "[EN] Leverage",
+        groupLabel: "Leverage",
         summary:
-          "[EN] Operating rhythm, SOPs, org structure, KPI panels, and execution control.",
+          "Operating rhythm, SOPs, org structure, KPI panels, and execution control.",
         details: [
-          "[EN] Operating rhythm and governance meetings.",
-          "[EN] SOPs, checklists, roles and ownership.",
-          "[EN] Dashboards, deadlines, and quality control.",
+          "Operating rhythm and governance meetings.",
+          "SOPs, checklists, roles and ownership.",
+          "Dashboards, deadlines, and quality control.",
         ],
         result:
-          "[EN] The business runs on rhythm and rules, not on team mood.",
+          "The business runs on rhythm and rules, not on team mood.",
         broken:
-          "[EN] Firefighting, chaos, manual control, and dependency on people.",
+          "Firefighting, chaos, manual control, and dependency on people.",
         actions:
-          "[EN] We build org structure, regulations, cadence, and control.",
+          "We build org structure, regulations, cadence, and control.",
       },
       {
         key: "marketing",
-        title: "[EN] Marketing",
+        title: "Marketing",
         group: "Leverage",
-        groupLabel: "[EN] Leverage",
+        groupLabel: "Leverage",
         summary:
-          "[EN] Full-funnel analytics, channel economics, predictable demand.",
+          "Full-funnel analytics, channel economics, predictable demand.",
         details: [
-          "[EN] Channel economics and transparent budgets.",
-          "[EN] Full-funnel analytics and audit.",
-          "[EN] Stable demand without budget leaks.",
+          "Channel economics and transparent budgets.",
+          "Full-funnel analytics and audit.",
+          "Stable demand without budget leaks.",
         ],
         result:
-          "[EN] Clear cost per lead/client and controlled growth.",
+          "Clear cost per lead/client and controlled growth.",
         broken:
-          "[EN] Budget leakage, no forecasts, and weak effectiveness control.",
+          "Budget leakage, no forecasts, and weak effectiveness control.",
         actions:
-          "[EN] We set analytics, funnels, budgets, and growth metrics.",
+          "We set analytics, funnels, budgets, and growth metrics.",
       },
       {
         key: "sales",
-        title: "[EN] Sales",
+        title: "Sales",
         group: "Leverage",
-        groupLabel: "[EN] Leverage",
+        groupLabel: "Leverage",
         summary:
-          "[EN] Systemic sales without “stars”: standards, scripts, CRM control.",
+          "Systemic sales without “stars”: standards, scripts, CRM control.",
         details: [
-          "[EN] Communication standards and scripts.",
-          "[EN] CRM control, funnel, and lead handling.",
-          "[EN] Results stay stable when people change.",
+          "Communication standards and scripts.",
+          "CRM control, funnel, and lead handling.",
+          "Results stay stable when people change.",
         ],
         result:
-          "[EN] Sales are predictable and not tied to individual heroes.",
+          "Sales are predictable and not tied to individual heroes.",
         broken:
-          "[EN] Dependence on stars and drops when people leave.",
+          "Dependence on stars and drops when people leave.",
         actions:
-          "[EN] We build sales system, standards, training, and control.",
+          "We build sales system, standards, training, and control.",
       },
       {
         key: "finance",
-        title: "[EN] Finance",
+        title: "Finance",
         group: "Shield",
-        groupLabel: "[EN] Shield",
+        groupLabel: "Shield",
         summary:
-          "[EN] Transparent finance, management accounting, and margin control.",
+          "Transparent finance, management accounting, and margin control.",
         details: [
-          "[EN] Management accounting and plan-vs-actual.",
-          "[EN] Profit and cost transparency.",
-          "[EN] Cashflow discipline and risk control.",
+          "Management accounting and plan-vs-actual.",
+          "Profit and cost transparency.",
+          "Cashflow discipline and risk control.",
         ],
         result:
-          "[EN] The owner sees real profit and makes decisions on data.",
+          "The owner sees real profit and makes decisions on data.",
         broken:
-          "[EN] No single source of truth, cash gaps, blind spots.",
+          "No single source of truth, cash gaps, blind spots.",
         actions:
-          "[EN] We build financial model, reporting, and control rules.",
+          "We build financial model, reporting, and control rules.",
       },
       {
         key: "hr",
-        title: "[EN] HR",
+        title: "HR",
         group: "Shield",
-        groupLabel: "[EN] Shield",
+        groupLabel: "Shield",
         summary:
-          "[EN] Structured hiring, onboarding, evaluation, and talent pipeline.",
+          "Structured hiring, onboarding, evaluation, and talent pipeline.",
         details: [
-          "[EN] Role profiles and hiring standards.",
-          "[EN] Onboarding, training, mentorship.",
-          "[EN] Evaluation system and talent growth.",
+          "Role profiles and hiring standards.",
+          "Onboarding, training, mentorship.",
+          "Evaluation system and talent growth.",
         ],
         result:
-          "[EN] Stable team, fixed roles, growth without system breaks.",
+          "Stable team, fixed roles, growth without system breaks.",
         broken:
-          "[EN] Turnover, chaotic hiring, dependence on key people.",
+          "Turnover, chaotic hiring, dependence on key people.",
         actions:
-          "[EN] We build HR processes, role profiles, and evaluation.",
+          "We build HR processes, role profiles, and evaluation.",
       },
       {
         key: "legal",
-        title: "[EN] Legal protection",
+        title: "Legal protection",
         group: "Shield",
-        groupLabel: "[EN] Shield",
+        groupLabel: "Shield",
         summary:
-          "[EN] Asset protection, contracts, IP, and data security.",
+          "Asset protection, contracts, IP, and data security.",
         details: [
-          "[EN] Contract base and ownership protection.",
-          "[EN] Security policies and personal data compliance.",
-          "[EN] Legal audit and risk reduction.",
+          "Contract base and ownership protection.",
+          "Security policies and personal data compliance.",
+          "Legal audit and risk reduction.",
         ],
         result:
-          "[EN] The asset is protected: rights, data, and contracts.",
+          "The asset is protected: rights, data, and contracts.",
         broken:
-          "[EN] Lawsuit risks, data leaks, and asset vulnerabilities.",
+          "Lawsuit risks, data leaks, and asset vulnerabilities.",
         actions:
-          "[EN] We close legal risks and build a protective contour.",
+          "We close legal risks and build a protective contour.",
       },
     ],
     results: {
-      title: "[EN] Valuable end result (VER)",
-      description: "[EN] What the owner gets from each pillar.",
-      badge: "[EN] VER",
+      title: "Valuable end result (VER)",
+      description: "What the owner gets from each pillar.",
+      badge: "VER",
     },
     problems: {
-      title: "[EN] When a pillar is broken",
-      description: "[EN] Symptoms in each direction when the system fails.",
-      badge: "[EN] Risks",
+      title: "When a pillar is broken",
+      description: "Symptoms in each direction when the system fails.",
+      badge: "Risks",
     },
     actions: {
-      title: "[EN] What BBI does",
-      description: "[EN] How we build the system in each pillar.",
-      badge: "[EN] BBI",
+      title: "What BBI does",
+      description: "How we build the system in each pillar.",
+      badge: "BBI",
     },
     format: {
-      title: "[EN] Format",
+      title: "Format",
       description:
-        "[EN] BBI is not about tasks or hours. We work as a project for 45+ business days with full immersion.",
+        "BBI is not about tasks or hours. We work as a project for 45+ business days with full immersion.",
       zones: [
         {
-          label: "[EN] Green zone (this is BBI)",
+          label: "Green zone (this is BBI)",
           description:
-            "[EN] Screening → diagnosis / audit → 45+ day project → retainer role.",
+            "Screening → diagnosis / audit → 45+ day project → retainer role.",
           tone: "green",
         },
         {
-          label: "[EN] Yellow zone (allowed as part of the project)",
+          label: "Yellow zone (allowed as part of the project)",
           description:
-            "[EN] SMM, website, CRM — only as elements of the built system.",
+            "SMM, website, CRM — only as elements of the built system.",
           tone: "yellow",
         },
         {
-          label: "[EN] Red zone (we do not do this)",
+          label: "Red zone (we do not do this)",
           description:
-            "[EN] SMM outsourcing, marketing-as-a-service, brandbook as a service, one-off consulting.",
+            "SMM outsourcing, marketing-as-a-service, brandbook as a service, one-off consulting.",
           tone: "red",
         },
       ],
     },
     stages: {
-      title: "[EN] Project stages",
-      description: "[EN] How the system is built step by step.",
+      title: "Project stages",
+      description: "How the system is built step by step.",
       steps: [
         {
-          title: "[EN] Screening (free)",
-          description: "[EN] Fit check and problem framing.",
+          title: "Screening (free)",
+          description: "Fit check and problem framing.",
         },
         {
-          title: "[EN] Diagnosis / audit",
+          title: "Diagnosis / audit",
           description:
-            "[EN] Full picture: finance, processes, team, marketing, sales.",
+            "Full picture: finance, processes, team, marketing, sales.",
         },
         {
-          title: "[EN] System design",
+          title: "System design",
           description:
-            "[EN] Architecture of shield, leverage, and the management contour.",
+            "Architecture of shield, leverage, and the management contour.",
         },
         {
-          title: "[EN] Implementation & control (45–90 business days)",
+          title: "Implementation & control (45–90 business days)",
           description:
-            "[EN] BBI works inside the business until the system stabilizes.",
+            "BBI works inside the business until the system stabilizes.",
         },
         {
-          title: "[EN] Retainer role",
+          title: "Retainer role",
           description:
-            "[EN] BBI stays as a partner to maintain resilience.",
+            "BBI stays as a partner to maintain resilience.",
         },
       ],
     },
     responsibility: {
-      title: "[EN] Responsibility",
-      bbiTitle: "[EN] BBI is responsible for",
-      clientTitle: "[EN] Client is responsible for",
+      title: "Responsibility",
+      bbiTitle: "BBI is responsible for",
+      clientTitle: "Client is responsible for",
       bbi: [
-        "[EN] Management architecture and system",
-        "[EN] Asset protection and ownership",
-        "[EN] Standards and reproducibility (SOP, playbook, RACI)",
-        "[EN] Financial transparency and decision logic",
-        "[EN] Change management",
+        "Management architecture and system",
+        "Asset protection and ownership",
+        "Standards and reproducibility (SOP, playbook, RACI)",
+        "Financial transparency and decision logic",
+        "Change management",
       ],
       client: [
-        "[EN] Involvement (up to 10 h/week) and fast decisions",
-        "[EN] Transparency and access to data",
-        "[EN] Responsible owners for 6 pillars",
-        "[EN] Execution inside the business by the client team",
-        "[EN] Governance rhythm and discipline",
+        "Involvement (up to 10 h/week) and fast decisions",
+        "Transparency and access to data",
+        "Responsible owners for 6 pillars",
+        "Execution inside the business by the client team",
+        "Governance rhythm and discipline",
       ],
     },
     targetState: {
-      title: "[EN] Target State",
-      minimumTitle: "[EN] Target Minimum (45–90 business days)",
+      title: "Target State",
+      minimumTitle: "Target Minimum (45–90 business days)",
       minimumDescription:
-        "[EN] Threat control, single source of truth, system works without the owner.",
-      idealTitle: "[EN] Target Ideal (benchmark)",
+        "Threat control, single source of truth, system works without the owner.",
+      idealTitle: "Target Ideal (benchmark)",
       idealDescription:
-        "[EN] The business is stable, protected, and grows reproducibly, ready for investment.",
+        "The business is stable, protected, and grows reproducibly, ready for investment.",
     },
     cta: {
-      title: "[EN] Start with screening",
-      description: "[EN] Free and no obligations.",
+      title: "Start with screening",
+      description: "Free and no obligations.",
       form: {
-        name: "[EN] Name",
-        phone: "[EN] Phone",
-        message: "[EN] Short brief",
-        submit: "[EN] Book a screening",
+        name: "Name",
+        phone: "Phone",
+        message: "Short brief",
+        submit: "Book a screening",
       },
     },
   },
   pillarsPage: {
-    title: "[EN] 6 pillars of BBI",
+    title: "6 pillars of BBI",
     description:
-      "[EN] Six support points that build a resilient and protected business asset.",
-    ctaLabel: "[EN] Start with screening",
-    ctaDescription: "[EN] We’ll map your gaps in 30 minutes.",
+      "Six support points that build a resilient and protected business asset.",
+    ctaLabel: "Start with screening",
+    ctaDescription: "We’ll map your gaps in 30 minutes.",
   },
   home: {
     hero: {
-      eyebrow: "[EN] Brand Promise",
-      title: "[EN] Shield. Leverage. System. for your business",
+      eyebrow: "Brand Promise",
+      title: "Shield. Leverage. System. for your business",
       subtitle:
-        "[EN] BBI is an operating partner for owners and CEOs. We enter the business, surface real issues, and build systems that run without manual control.",
-      cta: "[EN] Start with diagnostics",
-      secondaryCta: "[EN] Learn more",
+        "BBI is an operating partner for owners and CEOs. We enter the business, surface real issues, and build systems that run without manual control.",
+      cta: "Start with diagnostics",
+      secondaryCta: "Learn more",
     },
     icp: {
-      title: "[EN] Is this you?",
+      title: "Is this you?",
       cards: [
         {
-          title: "[EN] The business grows, but you put out fires",
+          title: "The business grows, but you put out fires",
           description:
-            "[EN] We build operating rhythm and roles so the owner can stop micromanaging.",
-          linkLabel: "[EN] Learn more",
+            "We build operating rhythm and roles so the owner can stop micromanaging.",
+          linkLabel: "Learn more",
           href: "/icp/operations",
         },
         {
-          title: "[EN] Scaling chaos means scaling losses",
+          title: "Scaling chaos means scaling losses",
           description:
-            "[EN] We remove bottlenecks, stabilize processes, and lock in growth levers.",
-          linkLabel: "[EN] Learn more",
+            "We remove bottlenecks, stabilize processes, and lock in growth levers.",
+          linkLabel: "Learn more",
           href: "/icp/scale",
         },
         {
-          title: "[EN] Investors need an asset, not the owner’s brain",
+          title: "Investors need an asset, not the owner’s brain",
           description:
-            "[EN] We make the company predictable and transparent for valuation.",
-          linkLabel: "[EN] Learn more",
+            "We make the company predictable and transparent for valuation.",
+          linkLabel: "Learn more",
           href: "/icp/investor",
         },
       ],
     },
     process: {
-      title: "[EN] How we work",
-      stepLabel: "[EN] Step",
+      title: "How we work",
+      stepLabel: "Step",
       steps: [
         {
-          title: "[EN] Screening — do we fit",
+          title: "Screening — do we fit",
           description:
-            "[EN] A fast diagnostic session to gauge chaos, team readiness, and growth potential.",
+            "A fast diagnostic session to gauge chaos, team readiness, and growth potential.",
         },
         {
-          title: "[EN] Diagnosis / Audit — reveal the real picture",
+          title: "Diagnosis / Audit — reveal the real picture",
           description:
-            "[EN] We analyze operations, finance, sales, and team to find constraints and growth points.",
+            "We analyze operations, finance, sales, and team to find constraints and growth points.",
         },
         {
-          title: "[EN] Project (45–90 working days) — build the system",
+          title: "Project (45–90 working days) — build the system",
           description:
-            "[EN] We join as an operating team, implement changes daily, and train your team.",
+            "We join as an operating team, implement changes daily, and train your team.",
         },
       ],
     },
     pillars: {
-      title: "[EN] Shield. Leverage. Resilience.",
+      title: "Shield. Leverage. Resilience.",
       items: [
         {
-          title: "[EN] Shield",
+          title: "Shield",
           description:
-            "[EN] Asset protection, ownership, legal armor, and transparent finances.",
-          linkLabel: "[EN] Learn more",
+            "Asset protection, ownership, legal armor, and transparent finances.",
+          details:
+            "Shield is not «safety in general». It’s about moving assets and control into the company — so the business doesn’t depend on people, contractors, or «fictitious numbers». We don’t «reassure» — we surface vulnerabilities and close them with a system: ownership, legal armor, transparent finances, HR stability.",
+          linkLabel: "Learn more",
           href: "/pillars/shield",
         },
         {
-          title: "[EN] Leverage",
+          title: "Leverage",
           description:
-            "[EN] Operating cadence, full-funnel analytics, sales system without stars.",
-          linkLabel: "[EN] Learn more",
+            "Operating cadence, full-funnel analytics, sales system without stars.",
+          details:
+            "Leverage is not «we’ll empower you 10x» (a dangerous promise). It’s about control points you can influence for measurable results: operating rhythm (cadence), full-funnel analytics, sales system without «stars», standards and reproducibility.",
+          linkLabel: "Learn more",
           href: "/pillars/leverage",
         },
         {
-          title: "[EN] System",
+          title: "System",
           description:
-            "[EN] Roles fixed, processes standardized, people changes do not break the system.",
-          linkLabel: "[EN] Learn more",
+            "Roles fixed, processes standardized, people changes do not break the system.",
+          details:
+            "System is the opposite of «heroism» and manual control. It replaces owner pressure with management rhythm and regulations. We build a mechanism where every process is documented, every result predictable, and an employee departure is «planned knowledge transfer», not a stop signal for the business.",
+          linkLabel: "Learn more",
           href: "/pillars/system",
         },
       ],
     },
     position: {
-      title: "[EN] BBI is not a neutral contractor",
+      title: "BBI is not a neutral contractor",
       description:
-        "[EN] We take the owner’s side. We speak hard truth, surface vulnerabilities, and fix them systematically.",
+        "We take the owner’s side. We speak hard truth, surface vulnerabilities, and fix them systematically.",
     },
   },
   about: {
     who: {
-      title: "[EN] Who we are",
+      title: "Who we are",
       text:
-        "[EN] BBI (Bold Brands International) is an Operating Partner (RevOps). We enter the business, surface real issues, and build systems. Not a marketing agency. Not consulting with pretty slides. Not a neutral contractor that leaves after delivery.",
+        "BBI (Bold Brands International) is an Operating Partner (RevOps). We enter the business, surface real issues, and build systems. Not a marketing agency. Not consulting with pretty slides. Not a neutral contractor that leaves after delivery.",
       emphasis:
-        "[EN] Key point: BBI is on the owner’s side, not a contractor. There is no neutral position.",
+        "Key point: BBI is on the owner’s side, not a contractor. There is no neutral position.",
     },
     principles: {
-      title: "[EN] Key beliefs",
+      title: "Key beliefs",
       items: [
-        { text: "[EN] We stand with owners and CEOs who carry full responsibility." },
-        { text: "[EN] We choose an honest view of the business, even if painful." },
-        { text: "[EN] System matters more than talent." },
-        { text: "[EN] Personal experience. We know threats firsthand." },
+        { text: "We stand with owners and CEOs who carry full responsibility." },
+        { text: "We choose an honest view of the business, even if painful." },
+        { text: "System matters more than talent." },
+        { text: "Personal experience. We know threats firsthand." },
       ],
     },
     manifesto: {
-      title: "[EN] What we stand against",
+      title: "What we stand against",
       items: [
-        { text: "[EN] We are against empty hype." },
-        { text: "[EN] We are against “services” instead of a system." },
-        { text: "[EN] We are against dependency on people." },
-        { text: "[EN] We are against opacity." },
-        { text: "[EN] We are against firefighting." },
+        { text: "We are against empty hype." },
+        { text: "We are against “services” instead of a system." },
+        { text: "We are against dependency on people." },
+        { text: "We are against opacity." },
+        { text: "We are against firefighting." },
       ],
     },
     team: {
-      title: "[EN] Team",
+      title: "Team",
       members: [
         {
-          name: "[EN] First Last",
-          role: "[EN] CEO",
-          note: "[EN] Builds business protection as a system, not services.",
+          name: "First Last",
+          role: "CEO",
+          note: "Builds business protection as a system, not services.",
         },
         {
-          name: "[EN] First Last",
-          role: "[EN] Operating Partner",
-          note: "[EN] Leads transformation with accountability for outcomes.",
+          name: "First Last",
+          role: "Operating Partner",
+          note: "Leads transformation with accountability for outcomes.",
         },
         {
-          name: "[EN] First Last",
-          role: "[EN] RevOps Specialist",
-          note: "[EN] Sets operational rhythm, analytics, and control.",
+          name: "First Last",
+          role: "RevOps Specialist",
+          note: "Sets operational rhythm, analytics, and control.",
         },
         {
-          name: "[EN] First Last",
-          role: "[EN] RevOps Specialist",
-          note: "[EN] Builds sales systems where results beat charisma.",
+          name: "First Last",
+          role: "RevOps Specialist",
+          note: "Builds sales systems where results beat charisma.",
         },
       ],
     },
     cta: {
-      title: "[EN] Want to see if we fit?",
-      description: "[EN] Book a screening and we’ll map your gaps and growth.",
+      title: "Want to see if we fit?",
+      description: "Book a screening and we’ll map your gaps and growth.",
       form: {
-        name: "[EN] Name",
-        phone: "[EN] Phone",
-        message: "[EN] Short brief",
-        submit: "[EN] Book a screening",
+        name: "Name",
+        phone: "Phone",
+        message: "Short brief",
+        submit: "Book a screening",
       },
     },
   },
   footer: {
-    copyright: "[EN] BBI (Bold Brands International). All rights reserved.",
+    copyright: "BBI (Bold Brands International). All rights reserved.",
+  },
+  cases: {
+    hero: {
+      eyebrow: "Real results",
+      title: "Cases: systems approach in action",
+      description:
+        "We show not «we launched ads» but how we built protection, levers and system. Context, problem, BBI action and measurable result.",
+    },
+    filters: {
+      industry: "Industry",
+      direction: "Direction",
+      scale: "Scale",
+      all: "All",
+    },
+    filterLabels: {
+      retail: "Retail",
+      fAndB: "HoReCa / F&B",
+      services: "Services",
+      ecom: "E-commerce",
+      other: "Other",
+      operations: "Operations",
+      marketing: "Marketing",
+      sales: "Sales",
+      finance: "Finance",
+      hr: "HR",
+      legal: "Legal",
+      smb: "SMB",
+      mid: "Mid-market",
+      enterprise: "Enterprise",
+    },
+    card: { readMore: "Read more" },
+    noResults: "No cases match the selected filters.",
+    caseDetail: {
+      backToCases: "← Cases",
+      context: "Context",
+      problem: "Problem",
+      whatBbiDid: "What BBI did",
+      result: "Result",
+      artifacts: "Artifacts",
+      bbiRole: "BBI role",
+    },
+    items: [
+      {
+        slug: "retail-revops",
+        company: "Retail (NDA)",
+        industry: "Retail",
+        keyResult: "LTV +34%, funnel conversion +22%",
+        excerpt: "12-store chain: single truth in numbers and a managed funnel instead of chaos.",
+        tags: ["Operations", "Sales", "Marketing"],
+        industryFilter: "retail",
+        directionFilter: "operations",
+        scaleFilter: "mid",
+        context:
+          "12-store chain, 450M/year revenue. Owner as sole decision center. Finance in Excel, sales without CRM.",
+        problem:
+          "Chaos in numbers, funnel opacity, owner dependency. Each store calculated differently, no single truth.",
+        whatBbiDid: [
+          "Built unified data loop: CRM + full-funnel analytics.",
+          "Implemented SOP for intake, accounting and control.",
+          "Set management rhythm and funnel dashboards.",
+        ],
+        resultNumbers: [
+          { before: "Lead→deal conversion 12%", after: "14.6%" },
+          { before: "LTV without system", after: "+34% in 8 mo." },
+        ],
+        artifacts: ["Intake SOP", "Funnel dashboard", "RACI by store"],
+        bbiRole:
+          "Ownership: owner got a system that runs without manual control. BBI didn't «launch ads» but built a management loop.",
+      },
+      {
+        slug: "fandb-operations",
+        company: "HoReCa (NDA)",
+        industry: "HoReCa / F&B",
+        keyResult: "Margin +18%, leakage −60%",
+        excerpt: "5 venues: transparent cost and procurement control instead of manual accounting.",
+        tags: ["Operations", "Finance"],
+        industryFilter: "fAndB",
+        directionFilter: "operations",
+        scaleFilter: "smb",
+        context:
+          "5 F&B venues. Manual accounting, no cost control, procurement leaks.",
+        problem:
+          "Cost opacity, dependency on buyer and chef. System «broke» when key people left.",
+        whatBbiDid: [
+          "Set up standard accounting, procurement and cost control.",
+          "Implemented checklists and SOP for kitchen and warehouse.",
+        ],
+        resultNumbers: [
+          { before: "Margin 22%", after: "26%" },
+          { before: "Leaks unrecorded", after: "Reduced 60%" },
+        ],
+        artifacts: ["Procurement SOP", "Kitchen checklists", "Margin dashboard"],
+        bbiRole:
+          "Ownership: owner sees numbers in real time. BBI built the system, not a substitute for management.",
+      },
+      {
+        slug: "ecom-growth",
+        company: "E-commerce (NDA)",
+        industry: "E-commerce",
+        keyResult: "CAC −25%, ROAS +40%",
+        excerpt: "D2C brand: channel economics, full-funnel analytics and manageable growth.",
+        tags: ["Marketing", "Sales"],
+        industryFilter: "ecom",
+        directionFilter: "marketing",
+        scaleFilter: "mid",
+        context:
+          "D2C brand, 80M revenue. Ad spend without clear channel economics.",
+        problem:
+          "Money went «nowhere», CAC rose, ROAS fell. No unified funnel or full-funnel analytics.",
+        whatBbiDid: [
+          "Launched full-funnel analytics and channel audit.",
+          "Built lead and LTV economics by channel.",
+          "Standardized CRM and sales funnel.",
+        ],
+        resultNumbers: [
+          { before: "CAC 3200₽", after: "2400₽" },
+          { before: "ROAS 2.1", after: "2.94" },
+        ],
+        artifacts: ["Full-funnel analytics", "Channel dashboard", "Funnel RACI"],
+        bbiRole:
+          "Ownership: marketing and sales run as a system with measurable metrics. BBI didn't «pour budget», but built manageable growth.",
+      },
+    ],
+  },
+  blog: {
+    hero: { title: "Blog & Expertise", description: "Articles on building autonomous and protected business systems." },
+    card: { readMore: "Read more" },
+    article: { backToBlog: "← Blog" },
+    posts: [
+      { slug: "5-shagov-avtonomnoe-upravlenie", category: "Operations", categoryKey: "operations", title: "5 Steps to Autonomous Management", description: "How to build rhythm, SOP and execution control.", image: "/work/pillars-1.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Download checklist", href: "/contacts" } },
+      { slug: "diagnostika-problemy-biznesa", category: "Diagnostics", categoryKey: "diagnostics", title: "Diagnostics: Uncover Real Problems", description: "Find real failure points in your system.", image: "/brand/decor-pattern.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Book screening", href: "/contacts" } },
+      { slug: "ekonomika-kanalov-marketing", category: "Marketing", categoryKey: "marketing", title: "Channel Economics", description: "Full-funnel analytics and manageable growth.", image: "/work/zones.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
+      { slug: "sistemnye-prodazhi", category: "Sales", categoryKey: "sales", title: "System Sales Without Stars", description: "Standards, scripts and CRM.", image: "/work/responsibility.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
+      { slug: "finansovaya-prozrachnost", category: "Finance", categoryKey: "finance", title: "Financial Transparency", description: "One truth in numbers.", image: "/work/target-state.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
+      { slug: "hr-kak-sistema", category: "HR", categoryKey: "hr", title: "HR as a System", description: "Roles, accountability, onboarding.", image: "/work/responsibility.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
+    ],
+  },
+  contacts: {
+    hero: {
+      eyebrow: "Screening",
+      title: "Book a screening",
+      description:
+        "Fill out the form — we'll get back within 24 hours to discuss scale, growth points and fit.",
+    },
+    form: {
+      name: "Name",
+      company: "Company / business",
+      contact: "Phone or messenger",
+      turnoverTeamSize: "Turnover or team size (optional)",
+      request: "Brief about your request",
+      submit: "Book a screening",
+    },
   },
 };

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Container } from "./Container";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -17,6 +18,10 @@ type AppBarProps = {
 
 export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === withLocale(locale, href);
+
   return (
     <div className="border-b border-white/10 bg-[#0e0e0e]/80 backdrop-blur">
       <Container className="flex items-center justify-between py-2">
@@ -27,16 +32,20 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
             className="h-5 w-auto"
           />
         </Link>
-        <nav className="hidden items-center gap-6 text-sm text-white/70 lg:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={withLocale(locale, item.href)}
-              className="transition hover:text-white"
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-6 text-sm lg:flex">
+          {navItems.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={withLocale(locale, item.href)}
+                className={`transition hover:text-white ${active ? "font-medium text-white" : "text-white/70"}`}
+                aria-current={active ? "page" : undefined}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
         <div className="flex items-center gap-3">
           <LanguageSwitcher locale={locale} />
@@ -61,17 +70,21 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
       </Container>
       {isOpen ? (
         <div id="mobile-nav" className="border-t border-white/10 lg:hidden">
-          <div className="flex flex-col gap-3 px-6 py-4 text-sm text-white/80">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={withLocale(locale, item.href)}
-                className="transition hover:text-white"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+          <div className="flex flex-col gap-3 px-6 py-4 text-sm">
+            {navItems.map((item) => {
+              const active = isActive(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={withLocale(locale, item.href)}
+                  className={`transition hover:text-white ${active ? "font-medium text-white" : "text-white/80"}`}
+                  aria-current={active ? "page" : undefined}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
       ) : null}

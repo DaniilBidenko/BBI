@@ -3,414 +3,572 @@ import type { Dictionary } from "./types";
 export const uz: Dictionary = {
   nav: {
     items: [
-      { label: "[UZ] Bosh sahifa", href: "/" },
-      { label: "[UZ] BBI haqida", href: "/about" },
-      { label: "[UZ] Qanday ishlaymiz", href: "/work" },
-      { label: "[UZ] Кейslar", href: "/cases" },
-      { label: "[UZ] Blog", href: "/blog" },
-      { label: "[UZ] Aloqa", href: "/contacts" },
+      { label: "Bosh sahifa", href: "/" },
+      { label: "BBI haqida", href: "/about" },
+      { label: "Qanday ishlaymiz", href: "/work" },
+      { label: "Кейslar", href: "/cases" },
+      { label: "Blog", href: "/blog" },
+      { label: "Aloqa", href: "/contacts" },
     ],
-    cta: "[UZ] Ishni boshlash",
+    cta: "Ishni boshlash",
   },
   work: {
     hero: {
-      eyebrow: "[UZ] Ish modeli",
-      title: "[UZ] 6 tayanch: bitta tizim, xizmatlar to‘plami emas",
+      eyebrow: "Ish modeli",
+      title: "6 tayanch: bitta tizim, xizmatlar to‘plami emas",
       description:
-        "[UZ] Biz operatsiyani marketingdan, marketingni moliyadan ajratib sotmaymiz. Biznes — bu tizim. Bir tayanchdagi teshik boshqalarini ham qulatadi. BBI olti yo‘nalishga bir vaqtning o‘zida kiradi va yagona boshqaruv konturini quradi.",
-      ctaLabel: "[UZ] 6 BBI TAYANCHI",
-      ctaHint: "[UZ] Tayanchlar sahifasini ochish",
+        "Biz operatsiyani marketingdan, marketingni moliyadan ajratib sotmaymiz. Biznes — bu tizim. Bir tayanchdagi teshik boshqalarini ham qulatadi. BBI olti yo‘nalishga bir vaqtning o‘zida kiradi va yagona boshqaruv konturini quradi.",
+      ctaLabel: "6 BBI TAYANCHI",
+      ctaHint: "Tayanchlar sahifasini ochish",
     },
     pillarsIntro: {
-      title: "[UZ] BBI tizimi",
+      title: "BBI tizimi",
       description:
-        "[UZ] BBI oltita yo‘nalishni egalar manfaatiga bo‘ysunadigan yagona tizimga birlashtiradi. Bu alohida sotib olinadigan «xizmatlar» emas — barqaror va himoyalangan biznes‑aktivni ushlab turuvchi oltita tayanchdir. Barqarorlik — olti tayanchning natijasi.",
-      detailsLabel: "[UZ] Batafsil",
+        "BBI oltita yo‘nalishni egalar manfaatiga bo‘ysunadigan yagona tizimga birlashtiradi. Bu alohida sotib olinadigan «xizmatlar» emas — barqaror va himoyalangan biznes‑aktivni ushlab turuvchi oltita tayanchdir. Barqarorlik — olti tayanchning natijasi.",
+      detailsLabel: "Batafsil",
     },
     pillars: [
       {
         key: "operations",
-        title: "[UZ] Operatsiya",
+        title: "Operatsiya",
         group: "Leverage",
-        groupLabel: "[UZ] Rychag",
+        groupLabel: "Rychag",
         summary:
-          "[UZ] Boshqaruv ritmi, SOP, org‑tuzilma, KPI panellari va ijro nazorati.",
+          "Boshqaruv ritmi, SOP, org‑tuzilma, KPI panellari va ijro nazorati.",
         details: [
-          "[UZ] Boshqaruv ritmi va muntazam yig‘ilishlar.",
-          "[UZ] SOP, chek‑listlar, rollar va mas’uliyat.",
-          "[UZ] Dashboardlar, muddat va sifat nazorati.",
+          "Boshqaruv ritmi va muntazam yig‘ilishlar.",
+          "SOP, chek‑listlar, rollar va mas’uliyat.",
+          "Dashboardlar, muddat va sifat nazorati.",
         ],
         result:
-          "[UZ] Biznes ritm va qoidalarga ko‘ra ishlaydi, kayfiyatga emas.",
+          "Biznes ritm va qoidalarga ko‘ra ishlaydi, kayfiyatga emas.",
         broken:
-          "[UZ] Yong‘in o‘chirish, xaos, qo‘lda boshqaruv va odamga bog‘liqlik.",
+          "Yong‘in o‘chirish, xaos, qo‘lda boshqaruv va odamga bog‘liqlik.",
         actions:
-          "[UZ] Org‑tuzilma, reglamentlar, ritm va nazoratni quramiz.",
+          "Org‑tuzilma, reglamentlar, ritm va nazoratni quramiz.",
       },
       {
         key: "marketing",
-        title: "[UZ] Marketing",
+        title: "Marketing",
         group: "Leverage",
-        groupLabel: "[UZ] Rychag",
+        groupLabel: "Rychag",
         summary:
-          "[UZ] Skvoznoy analitika, kanal iqtisodi, prognozli talab.",
+          "Skvoznoy analitika, kanal iqtisodi, prognozli talab.",
         details: [
-          "[UZ] Kanal iqtisodi va shaffof byudjet.",
-          "[UZ] Skvoznoy analitika va audit.",
-          "[UZ] Byudjetsiz yo‘qotishlarsiz barqaror talab.",
+          "Kanal iqtisodi va shaffof byudjet.",
+          "Skvoznoy analitika va audit.",
+          "Byudjetsiz yo‘qotishlarsiz barqaror talab.",
         ],
         result:
-          "[UZ] LID va mijoz narxi aniq, o‘sish boshqariladi.",
+          "LID va mijoz narxi aniq, o‘sish boshqariladi.",
         broken:
-          "[UZ] Byudjet «yo‘qoladi», prognoz va nazorat yo‘q.",
+          "Byudjet «yo‘qoladi», prognoz va nazorat yo‘q.",
         actions:
-          "[UZ] Analitika, voronka, byudjet va metrikalarni sozlaymiz.",
+          "Analitika, voronka, byudjet va metrikalarni sozlaymiz.",
       },
       {
         key: "sales",
-        title: "[UZ] Savdo",
+        title: "Savdo",
         group: "Leverage",
-        groupLabel: "[UZ] Rychag",
+        groupLabel: "Rychag",
         summary:
-          "[UZ] «Yulduzsiz» tizimli savdo: standartlar, skriptlar, CRM nazorat.",
+          "«Yulduzsiz» tizimli savdo: standartlar, skriptlar, CRM nazorat.",
         details: [
-          "[UZ] Muloqot standartlari va skriptlar.",
-          "[UZ] CRM nazorat, voronka va lead ishlovi.",
-          "[UZ] Xodim almashsa ham natija saqlanadi.",
+          "Muloqot standartlari va skriptlar.",
+          "CRM nazorat, voronka va lead ishlovi.",
+          "Xodim almashsa ham natija saqlanadi.",
         ],
         result:
-          "[UZ] Savdo prognozli va odamga bog‘liq emas.",
+          "Savdo prognozli va odamga bog‘liq emas.",
         broken:
-          "[UZ] «Yulduz»larga bog‘liqlik, jamoa almashsa natija tushadi.",
+          "«Yulduz»larga bog‘liqlik, jamoa almashsa natija tushadi.",
         actions:
-          "[UZ] Savdo tizimi, reglamentlar, o‘qitish va nazoratni quramiz.",
+          "Savdo tizimi, reglamentlar, o‘qitish va nazoratni quramiz.",
       },
       {
         key: "finance",
-        title: "[UZ] Moliya",
+        title: "Moliya",
         group: "Shield",
-        groupLabel: "[UZ] Qalqon",
+        groupLabel: "Qalqon",
         summary:
-          "[UZ] Shaffof moliya, boshqaruv hisobi va marja nazorati.",
+          "Shaffof moliya, boshqaruv hisobi va marja nazorati.",
         details: [
-          "[UZ] Boshqaruv hisobi va plan‑fakt.",
-          "[UZ] Foyda va xarajat shaffofligi.",
-          "[UZ] Kesh‑flow intizomi va risk nazorati.",
+          "Boshqaruv hisobi va plan‑fakt.",
+          "Foyda va xarajat shaffofligi.",
+          "Kesh‑flow intizomi va risk nazorati.",
         ],
         result:
-          "[UZ] Egasi real foydani ko‘radi va qarorlarni raqamlarga tayaydi.",
+          "Egasi real foydani ko‘radi va qarorlarni raqamlarga tayaydi.",
         broken:
-          "[UZ] «Bitta haqiqat» yo‘q, kassa uzilishlari, ko‘r joylar.",
+          "«Bitta haqiqat» yo‘q, kassa uzilishlari, ko‘r joylar.",
         actions:
-          "[UZ] Moliya modeli, hisobot va nazorat qoidalarini quramiz.",
+          "Moliya modeli, hisobot va nazorat qoidalarini quramiz.",
       },
       {
         key: "hr",
-        title: "[UZ] HR",
+        title: "HR",
         group: "Shield",
-        groupLabel: "[UZ] Qalqon",
+        groupLabel: "Qalqon",
         summary:
-          "[UZ] Tizimli yollash, onboarding, baholash va kadr zaxirasi.",
+          "Tizimli yollash, onboarding, baholash va kadr zaxirasi.",
         details: [
-          "[UZ] Lavozim profili va yollash standartlari.",
-          "[UZ] Onboarding, o‘qitish, mentoring.",
-          "[UZ] Baholash tizimi va kadrlar o‘sishi.",
+          "Lavozim profili va yollash standartlari.",
+          "Onboarding, o‘qitish, mentoring.",
+          "Baholash tizimi va kadrlar o‘sishi.",
         ],
         result:
-          "[UZ] Jamoa barqaror, rollar mustahkam, o‘sish tizimni buzmaydi.",
+          "Jamoa barqaror, rollar mustahkam, o‘sish tizimni buzmaydi.",
         broken:
-          "[UZ] Kadrlar oqimi, tartibsiz yollash va odamga bog‘liqlik.",
+          "Kadrlar oqimi, tartibsiz yollash va odamga bog‘liqlik.",
         actions:
-          "[UZ] HR jarayonlari va rol profillarini quramiz.",
+          "HR jarayonlari va rol profillarini quramiz.",
       },
       {
         key: "legal",
-        title: "[UZ] Yuridik himoya",
+        title: "Yuridik himoya",
         group: "Shield",
-        groupLabel: "[UZ] Qalqon",
+        groupLabel: "Qalqon",
         summary:
-          "[UZ] Aktiv himoyasi, shartnomalar, IP va ma’lumot xavfsizligi.",
+          "Aktiv himoyasi, shartnomalar, IP va ma’lumot xavfsizligi.",
         details: [
-          "[UZ] Shartnoma bazasi va ownership himoyasi.",
-          "[UZ] Xavfsizlik siyosatlari va personal data.",
-          "[UZ] Yuridik audit va risklarni kamaytirish.",
+          "Shartnoma bazasi va ownership himoyasi.",
+          "Xavfsizlik siyosatlari va personal data.",
+          "Yuridik audit va risklarni kamaytirish.",
         ],
         result:
-          "[UZ] Aktiv himoyalangan: huquqlar, data va shartnomalar.",
+          "Aktiv himoyalangan: huquqlar, data va shartnomalar.",
         broken:
-          "[UZ] Sud risklari, data sizishi va aktiv zaifligi.",
+          "Sud risklari, data sizishi va aktiv zaifligi.",
         actions:
-          "[UZ] Yuridik risklarni yopamiz va himoya konturini quramiz.",
+          "Yuridik risklarni yopamiz va himoya konturini quramiz.",
       },
     ],
     results: {
-      title: "[UZ] Qimmatli yakuniy natija (QYN)",
-      description: "[UZ] Har bir tayanch bo‘yicha egaga beriladigan natija.",
-      badge: "[UZ] QYN",
+      title: "Qimmatli yakuniy natija (QYN)",
+      description: "Har bir tayanch bo‘yicha egaga beriladigan natija.",
+      badge: "QYN",
     },
     problems: {
-      title: "[UZ] Tayanch «sinса» nima bo‘ladi",
+      title: "Tayanch «sinса» nima bo‘ladi",
       description:
-        "[UZ] Tizim ishlamasa, har yo‘nalishda ko‘rinadigan alomatlar.",
-      badge: "[UZ] Risklar",
+        "Tizim ishlamasa, har yo‘nalishda ko‘rinadigan alomatlar.",
+      badge: "Risklar",
     },
     actions: {
-      title: "[UZ] BBI nima qiladi",
-      description: "[UZ] Har bir yo‘nalishda tizimni qanday quramiz.",
-      badge: "[UZ] BBI",
+      title: "BBI nima qiladi",
+      description: "Har bir yo‘nalishda tizimni qanday quramiz.",
+      badge: "BBI",
     },
     format: {
-      title: "[UZ] Format",
+      title: "Format",
       description:
-        "[UZ] BBI — vazifa yoki soat sotmaydi. 45+ ish kuniga mo‘ljallangan loyiha va to‘liq sho‘ng‘ish.",
+        "BBI — vazifa yoki soat sotmaydi. 45+ ish kuniga mo‘ljallangan loyiha va to‘liq sho‘ng‘ish.",
       zones: [
         {
-          label: "[UZ] Yashil zona (BBI)",
+          label: "Yashil zona (BBI)",
           description:
-            "[UZ] Skrining → diagnostika/audit → 45+ kun loyiha → abonent roli.",
+            "Skrining → diagnostika/audit → 45+ kun loyiha → abonent roli.",
           tone: "green",
         },
         {
-          label: "[UZ] Sariq zona (loyiha ichida mumkin)",
+          label: "Sariq zona (loyiha ichida mumkin)",
           description:
-            "[UZ] SMM, sayt, CRM — faqat tizim elementi sifatida.",
+            "SMM, sayt, CRM — faqat tizim elementi sifatida.",
           tone: "yellow",
         },
         {
-          label: "[UZ] Qizil zona (buni qilmaymiz)",
+          label: "Qizil zona (buni qilmaymiz)",
           description:
-            "[UZ] SMM outsourcing, marketing‑xizmat, brandbook, bir martalik konsultatsiya.",
+            "SMM outsourcing, marketing‑xizmat, brandbook, bir martalik konsultatsiya.",
           tone: "red",
         },
       ],
     },
     stages: {
-      title: "[UZ] Loyiha bosqichlari",
-      description: "[UZ] Tizimni bosqichma-bosqich qurish.",
+      title: "Loyiha bosqichlari",
+      description: "Tizimni bosqichma-bosqich qurish.",
       steps: [
         {
-          title: "[UZ] Skrining (bepul)",
-          description: "[UZ] Tanishtirish, moslik va vazifani aniqlash.",
+          title: "Skrining (bepul)",
+          description: "Tanishtirish, moslik va vazifani aniqlash.",
         },
         {
-          title: "[UZ] Diagnostika / audit",
+          title: "Diagnostika / audit",
           description:
-            "[UZ] To‘liq rasm: moliya, jarayonlar, jamoa, marketing, savdo.",
+            "To‘liq rasm: moliya, jarayonlar, jamoa, marketing, savdo.",
         },
         {
-          title: "[UZ] Tizim dizayni",
+          title: "Tizim dizayni",
           description:
-            "[UZ] Qalqon, leverage va boshqaruv konturi arxitekturasi.",
+            "Qalqon, leverage va boshqaruv konturi arxitekturasi.",
         },
         {
-          title: "[UZ] Joriy etish va nazorat (45–90 ish kuni)",
+          title: "Joriy etish va nazorat (45–90 ish kuni)",
           description:
-            "[UZ] BBI biznes ichida ishlaydi, tizim barqarorlashguncha.",
+            "BBI biznes ichida ishlaydi, tizim barqarorlashguncha.",
         },
         {
-          title: "[UZ] Abonent roli",
-          description: "[UZ] BBI barqarorlik uchun hamkor bo‘lib qoladi.",
+          title: "Abonent roli",
+          description: "BBI barqarorlik uchun hamkor bo‘lib qoladi.",
         },
       ],
     },
     responsibility: {
-      title: "[UZ] Mas’uliyat",
-      bbiTitle: "[UZ] BBI javob beradi",
-      clientTitle: "[UZ] Mijoz javob beradi",
+      title: "Mas’uliyat",
+      bbiTitle: "BBI javob beradi",
+      clientTitle: "Mijoz javob beradi",
       bbi: [
-        "[UZ] Boshqaruv arxitekturasi va tizimi",
-        "[UZ] Aktiv himoyasi va ownership",
-        "[UZ] Standart va takrorlanish (SOP, playbook, RACI)",
-        "[UZ] Moliya shaffofligi va qarorlar logikasi",
-        "[UZ] O‘zgarishlarni boshqarish",
+        "Boshqaruv arxitekturasi va tizimi",
+        "Aktiv himoyasi va ownership",
+        "Standart va takrorlanish (SOP, playbook, RACI)",
+        "Moliya shaffofligi va qarorlar logikasi",
+        "O‘zgarishlarni boshqarish",
       ],
       client: [
-        "[UZ] Ishtirok (haftasiga 10 soatgacha) va tez qarorlar",
-        "[UZ] Shaffoflik va ma’lumotlarga kirish",
-        "[UZ] 6 tayanch bo‘yicha mas’ullar",
-        "[UZ] Ichki jamoa bilan bajarish",
-        "[UZ] Boshqaruv ritmi va intizom",
+        "Ishtirok (haftasiga 10 soatgacha) va tez qarorlar",
+        "Shaffoflik va ma’lumotlarga kirish",
+        "6 tayanch bo‘yicha mas’ullar",
+        "Ichki jamoa bilan bajarish",
+        "Boshqaruv ritmi va intizom",
       ],
     },
     targetState: {
-      title: "[UZ] Target State",
-      minimumTitle: "[UZ] Target Minimum (45–90 ish kuni)",
+      title: "Target State",
+      minimumTitle: "Target Minimum (45–90 ish kuni)",
       minimumDescription:
-        "[UZ] Tahdidlar nazorati, raqamlarda «bitta haqiqat», egasiz ham ishlaydi.",
-      idealTitle: "[UZ] Target Ideal (etalon)",
+        "Tahdidlar nazorati, raqamlarda «bitta haqiqat», egasiz ham ishlaydi.",
+      idealTitle: "Target Ideal (etalon)",
       idealDescription:
-        "[UZ] Biznes barqaror, himoyalangan, takrorlanib o‘sadi va investitsiyaga tayyor.",
+        "Biznes barqaror, himoyalangan, takrorlanib o‘sadi va investitsiyaga tayyor.",
     },
     cta: {
-      title: "[UZ] Skriningdan boshlang",
-      description: "[UZ] Bepul va majburiyatsiz.",
+      title: "Skriningdan boshlang",
+      description: "Bepul va majburiyatsiz.",
       form: {
-        name: "[UZ] Ism",
-        phone: "[UZ] Telefon",
-        message: "[UZ] Qisqa so‘rov",
-        submit: "[UZ] Skriningga yozilish",
+        name: "Ism",
+        phone: "Telefon",
+        message: "Qisqa so‘rov",
+        submit: "Skriningga yozilish",
       },
     },
   },
   pillarsPage: {
-    title: "[UZ] BBI ning 6 tayanchi",
+    title: "BBI ning 6 tayanchi",
     description:
-      "[UZ] Barqaror va himoyalangan biznes‑aktivni quradigan oltita tayanch.",
-    ctaLabel: "[UZ] Skriningdan boshlash",
-    ctaDescription: "[UZ] 30 daqiqada bo‘shliq va o‘sishni aniqlaymiz.",
+      "Barqaror va himoyalangan biznes‑aktivni quradigan oltita tayanch.",
+    ctaLabel: "Skriningdan boshlash",
+    ctaDescription: "30 daqiqada bo‘shliq va o‘sishni aniqlaymiz.",
   },
   home: {
     hero: {
-      eyebrow: "[UZ] Brand Promise",
-      title: "[UZ] Qalqon. Lever. Tizim. biznesingiz uchun",
+      eyebrow: "Brand Promise",
+      title: "Qalqon. Lever. Tizim. biznesingiz uchun",
       subtitle:
-        "[UZ] BBI — egalar va CEOlar uchun operatsion hamkor. Biz biznesga kiramiz, muammolarni ochamiz va qo‘lda boshqaruvisiz ishlaydigan tizim quramiz.",
-      cta: "[UZ] Diagnostikadan boshlash",
-      secondaryCta: "[UZ] Batafsil",
+        "BBI — egalar va CEOlar uchun operatsion hamkor. Biz biznesga kiramiz, muammolarni ochamiz va qo‘lda boshqaruvisiz ishlaydigan tizim quramiz.",
+      cta: "Diagnostikadan boshlash",
+      secondaryCta: "Batafsil",
     },
     icp: {
-      title: "[UZ] O‘zingizni tanidingizmi?",
+      title: "O‘zingizni tanidingizmi?",
       cards: [
         {
-          title: "[UZ] Biznes o‘sadi, ammo siz yong‘in o‘chirayapsiz",
+          title: "Biznes o‘sadi, ammo siz yong‘in o‘chirayapsiz",
           description:
-            "[UZ] Operatsion ritm va rollarni qurib, mikroboshqaruvni bartaraf qilamiz.",
-          linkLabel: "[UZ] Batafsil",
+            "Operatsion ritm va rollarni qurib, mikroboshqaruvni bartaraf qilamiz.",
+          linkLabel: "Batafsil",
           href: "/icp/operations",
         },
         {
-          title: "[UZ] Xaosni kengaytirish — zararlarni kengaytirish",
+          title: "Xaosni kengaytirish — zararlarni kengaytirish",
           description:
-            "[UZ] Tor joylarni olib tashlaymiz, jarayonlarni barqaror qilamiz.",
-          linkLabel: "[UZ] Batafsil",
+            "Tor joylarni olib tashlaymiz, jarayonlarni barqaror qilamiz.",
+          linkLabel: "Batafsil",
           href: "/icp/scale",
         },
         {
-          title: "[UZ] Investor aktivni xohlaydi, egani emas",
+          title: "Investor aktivni xohlaydi, egani emas",
           description:
-            "[UZ] Kompaniyani prognozli va shaffof qilamiz.",
-          linkLabel: "[UZ] Batafsil",
+            "Kompaniyani prognozli va shaffof qilamiz.",
+          linkLabel: "Batafsil",
           href: "/icp/investor",
         },
       ],
     },
     process: {
-      title: "[UZ] Qanday ishlaymiz",
-      stepLabel: "[UZ] Bosqich",
+      title: "Qanday ishlaymiz",
+      stepLabel: "Bosqich",
       steps: [
         {
-          title: "[UZ] Skrining — bir-birimizga mosmizmi?",
+          title: "Skrining — bir-birimizga mosmizmi?",
           description:
-            "[UZ] Tezkor diagnostika: xaos ko‘lami, jamoa tayyorgarligi va o‘sish salohiyati.",
+            "Tezkor diagnostika: xaos ko‘lami, jamoa tayyorgarligi va o‘sish salohiyati.",
         },
         {
-          title: "[UZ] Diagnostika / Audit — real holatni ochish",
+          title: "Diagnostika / Audit — real holatni ochish",
           description:
-            "[UZ] Operatsiya, moliya, savdo va jamoani tahlil qilib, o‘sish nuqtalarini topamiz.",
+            "Operatsiya, moliya, savdo va jamoani tahlil qilib, o‘sish nuqtalarini topamiz.",
         },
         {
-          title: "[UZ] Loyiha (45–90 ish kuni) — tizim qurish",
+          title: "Loyiha (45–90 ish kuni) — tizim qurish",
           description:
-            "[UZ] Operatsion jamoa sifatida kirib, har kuni o‘zgarishlarni joriy qilamiz.",
+            "Operatsion jamoa sifatida kirib, har kuni o‘zgarishlarni joriy qilamiz.",
         },
       ],
     },
     pillars: {
-      title: "[UZ] Qalqon. Lever. Barqarorlik.",
+      title: "Qalqon. Lever. Barqarorlik.",
       items: [
         {
-          title: "[UZ] Qalqon",
+          title: "Qalqon",
           description:
-            "[UZ] Aktivlarni himoya qilish, ownership, yuridik himoya, shaffof moliya.",
-          linkLabel: "[UZ] Batafsil",
+            "Aktivlarni himoya qilish, ownership, yuridik himoya, shaffof moliya.",
+          details:
+            "Qalqon — bu «umumiy xavfsizlik» emas. Aktivlar va nazoratni kompaniyaga o‘tkazish haqida — biznes odamlar, pudratchilar va «virtual raqamlar»dan mustaqil bo‘lishi uchun. Biz «tinchlantirmaymiz» — zaifliklarni ochamiz va tizim bilan yopamiz: ownership, yuridik himoya, shaffof moliya, kadrlar barqarorligi.",
+          linkLabel: "Batafsil",
           href: "/pillars/shield",
         },
         {
-          title: "[UZ] Lever",
+          title: "Lever",
           description:
-            "[UZ] Operatsion ritm, skvoznoy analitika, «yulduzsiz» savdo tizimi.",
-          linkLabel: "[UZ] Batafsil",
+            "Operatsion ritm, skvoznoy analitika, «yulduzsiz» savdo tizimi.",
+          details:
+            "Lever — «sizni 10 marta kuchaytiramiz» emas (bu xavfli va‘da). O‘lchanadigan natija uchun ta‘sir qilish mumkin bo‘lgan nazorat nuqtalari haqida: operatsion ritm (cadence), skvoznoy analitika, «yulduzsiz» savdo tizimi, standartlar va qayta ishlab chiqarish.",
+          linkLabel: "Batafsil",
           href: "/pillars/leverage",
         },
         {
-          title: "[UZ] Tizim",
+          title: "Tizim",
           description:
-            "[UZ] Rollar mustahkam, jarayonlar standart, odamlar almashsa ham buzilmaydi.",
-          linkLabel: "[UZ] Batafsil",
+            "Rollar mustahkam, jarayonlar standart, odamlar almashsa ham buzilmaydi.",
+          details:
+            "Tizim — «qahramonlik» va qo‘lda boshqaruvning qarama-qarshisi. Egаning shaxsiy bosimini boshqaruv ritmi va qoidalar bilan almashtirish. Har bir jarayon tasvirlangan, har bir natija bashorat qilinadigan mexanizm qurish — xodimning ketishi «rejalashtirilgan kompetensiyalarni o‘tkazish», biznes uchun to‘xtov emas.",
+          linkLabel: "Batafsil",
           href: "/pillars/system",
         },
       ],
     },
     position: {
-      title: "[UZ] BBI neytral pudratchi emas",
+      title: "BBI neytral pudratchi emas",
       description:
-        "[UZ] Biz egalar tomoni. Qattiq haqiqatni aytamiz, zaifliklarni ochamiz va tizimli tuzatamiz.",
+        "Biz egalar tomoni. Qattiq haqiqatni aytamiz, zaifliklarni ochamiz va tizimli tuzatamiz.",
     },
   },
   about: {
     who: {
-      title: "[UZ] Biz kimmiz",
+      title: "Biz kimmiz",
       text:
-        "[UZ] BBI (Bold Brands International) — Operating Partner (RevOps). Biz biznesga kiramiz, real muammolarni ochamiz va tizim quramiz. Marketing agentligi emas. Konsalting ham emas. «Neytral pudratchi» ham emas.",
+        "BBI (Bold Brands International) — Operating Partner (RevOps). Biz biznesga kiramiz, real muammolarni ochamiz va tizim quramiz. Marketing agentligi emas. Konsalting ham emas. «Neytral pudratchi» ham emas.",
       emphasis:
-        "[UZ] Asosiy fikr: BBI egalar tomonida, pudratchi emas. Neytral pozitsiya yo‘q.",
+        "Asosiy fikr: BBI egalar tomonida, pudratchi emas. Neytral pozitsiya yo‘q.",
     },
     principles: {
-      title: "[UZ] Asosiy e’tiqodlar",
+      title: "Asosiy e’tiqodlar",
       items: [
-        { text: "[UZ] Biz biznes uchun to‘liq mas’ul bo‘lgan egalar va CEO tomoni." },
-        { text: "[UZ] Biz halol tahlil tarafdorimiz, og‘riqli bo‘lsa ham." },
-        { text: "[UZ] Tizim iste’doddan muhim." },
-        { text: "[UZ] Shaxsiy tajriba. Tahdidni yuzma-yuz bilamiz." },
+        { text: "Biz biznes uchun to‘liq mas’ul bo‘lgan egalar va CEO tomoni." },
+        { text: "Biz halol tahlil tarafdorimiz, og‘riqli bo‘lsa ham." },
+        { text: "Tizim iste’doddan muhim." },
+        { text: "Shaxsiy tajriba. Tahdidni yuzma-yuz bilamiz." },
       ],
     },
     manifesto: {
-      title: "[UZ] Biz qarshimiz",
+      title: "Biz qarshimiz",
       items: [
-        { text: "[UZ] Biz «havo gap»ga qarshimiz." },
-        { text: "[UZ] Biz «xizmat» o‘rniga tizimsizlikka qarshimiz." },
-        { text: "[UZ] Biz odamga bog‘liqlikka qarshimiz." },
-        { text: "[UZ] Biz shaffof emaslikka qarshimiz." },
-        { text: "[UZ] Biz doimiy «yong‘in o‘chirish»ga qarshimiz." },
+        { text: "Biz «havo gap»ga qarshimiz." },
+        { text: "Biz «xizmat» o‘rniga tizimsizlikka qarshimiz." },
+        { text: "Biz odamga bog‘liqlikka qarshimiz." },
+        { text: "Biz shaffof emaslikka qarshimiz." },
+        { text: "Biz doimiy «yong‘in o‘chirish»ga qarshimiz." },
       ],
     },
     team: {
-      title: "[UZ] Jamoa",
+      title: "Jamoa",
       members: [
         {
-          name: "[UZ] Ism Familiya",
-          role: "[UZ] CEO",
-          note: "[UZ] Biznes himoyasini tizim sifatida quradi.",
+          name: "Ism Familiya",
+          role: "CEO",
+          note: "Biznes himoyasini tizim sifatida quradi.",
         },
         {
-          name: "[UZ] Ism Familiya",
-          role: "[UZ] Operating Partner",
-          note: "[UZ] Natijaga javob beradi, jarayonga emas.",
+          name: "Ism Familiya",
+          role: "Operating Partner",
+          note: "Natijaga javob beradi, jarayonga emas.",
         },
         {
-          name: "[UZ] Ism Familiya",
-          role: "[UZ] RevOps mutaxassisi",
-          note: "[UZ] Operatsion ritm, analitika va nazoratni quradi.",
+          name: "Ism Familiya",
+          role: "RevOps mutaxassisi",
+          note: "Operatsion ritm, analitika va nazoratni quradi.",
         },
         {
-          name: "[UZ] Ism Familiya",
-          role: "[UZ] RevOps mutaxassisi",
-          note: "[UZ] Savdo tizimini natija uchun quradi.",
+          name: "Ism Familiya",
+          role: "RevOps mutaxassisi",
+          note: "Savdo tizimini natija uchun quradi.",
         },
       ],
     },
     cta: {
-      title: "[UZ] Mos kelamizmi?",
-      description: "[UZ] Skriningga yoziling — bo‘shliq va o‘sishni aniqlaymiz.",
+      title: "Mos kelamizmi?",
+      description: "Skriningga yoziling — bo‘shliq va o‘sishni aniqlaymiz.",
       form: {
-        name: "[UZ] Ism",
-        phone: "[UZ] Telefon",
-        message: "[UZ] Qisqa so‘rov",
-        submit: "[UZ] Skriningga yozilish",
+        name: "Ism",
+        phone: "Telefon",
+        message: "Qisqa so‘rov",
+        submit: "Skriningga yozilish",
       },
     },
   },
   footer: {
-    copyright: "[UZ] BBI (Bold Brands International). Barcha huquqlar himoyalangan.",
+    copyright: "BBI (Bold Brands International). Barcha huquqlar himoyalangan.",
+  },
+  cases: {
+    hero: {
+      eyebrow: "Haqiqiy natijalar",
+      title: "Kейslar: tizimli yondashuv amalda",
+      description:
+        "«Reklama qildik» emas, balki himoya, tayanch va tizimni qanday qurganimizni ko‘rsatamiz. Kontekst, muammo, BBI harakati va o‘lchanadigan natija.",
+    },
+    filters: {
+      industry: "Sanoat",
+      direction: "Yo‘nalish",
+      scale: "O‘lcham",
+      all: "Barchasi",
+    },
+    filterLabels: {
+      retail: "Chakana",
+      fAndB: "HoReCa / F&B",
+      services: "Xizmatlar",
+      ecom: "E-commerce",
+      other: "Boshqa",
+      operations: "Operatsiya",
+      marketing: "Marketing",
+      sales: "Savdo",
+      finance: "Moliya",
+      hr: "HR",
+      legal: "Yuridik",
+      smb: "SMB",
+      mid: "Mid-market",
+      enterprise: "Enterprise",
+    },
+    card: { readMore: "Batafsil" },
+    noResults: "Tanlangan filterlar bo‘yicha kейslar topilmadi.",
+    caseDetail: {
+      backToCases: "← Keyslar",
+      context: "Kontekst",
+      problem: "Muammo",
+      whatBbiDid: "BBI nima qildi",
+      result: "Natija",
+      artifacts: "Artefaktlar",
+      bbiRole: "BBI roli",
+    },
+    items: [
+      {
+        slug: "retail-revops",
+        company: "Chakana (NDA)",
+        industry: "Chakana",
+        keyResult: "LTV +34%, konversiya +22%",
+        excerpt: "12 do‘kon: raqamlarda yagona haqiqat va boshqariladigan vornka.",
+        tags: ["Operatsiya", "Savdo", "Marketing"],
+        industryFilter: "retail",
+        directionFilter: "operations",
+        scaleFilter: "mid",
+        context:
+          "12 do‘kon tarmog‘i, 450 mln yillik daromad. Egasi yagona qaror markazi. Moliya Excelda, CRM siz savdo.",
+        problem:
+          "Raqamlarda tartibsizlik, vornka noaniq, egaga bog‘liqlik. Har do‘kon alohida hisoblagan.",
+        whatBbiDid: [
+          "CRM + vornka analitikasi bilan birlashtirilgan ma’lumot konturi qurildi.",
+          "Qabul, hisob va nazorat uchun SOP joriy etildi.",
+          "Boshqaruv ritmi va vornka dashbordlari qurildi.",
+        ],
+        resultNumbers: [
+          { before: "Lid→savdo 12%", after: "14.6%" },
+          { before: "Tizimsiz LTV", after: "8 oyda +34%" },
+        ],
+        artifacts: ["Qabul SOP", "Vornka dashbord", "Do‘kon RACI"],
+        bbiRole:
+          "Ownership: egasi qo‘lda nazoratsiz ishlaydigan tizim oldi. BBI «reklama qilmadi», balki boshqaruv konturini qurdi.",
+      },
+      {
+        slug: "fandb-operations",
+        company: "HoReCa (NDA)",
+        industry: "HoReCa / F&B",
+        keyResult: "Marja +18%, oqim −60%",
+        excerpt: "5 ta joy: aniq xarajat va xarid nazorati.",
+        tags: ["Operatsiya", "Moliya"],
+        industryFilter: "fAndB",
+        directionFilter: "operations",
+        scaleFilter: "smb",
+        context:
+          "5 ta ovqatlanish joyi. Qo‘lda hisob, xarajat nazorati yo‘q, xarid oqimlari.",
+        problem:
+          "Xarajat noaniq, xaridor va oshpazga bog‘liqlik. Asosiy odamlar ketganda tizim «singan».",
+        whatBbiDid: [
+          "Standart hisob, xarid va xarajat nazoratini sozladik.",
+          "Oshxona va ombor uchun chek-list va SOP joriy etildi.",
+        ],
+        resultNumbers: [
+          { before: "Marja 22%", after: "26%" },
+          { before: "Oqimlar yozilmagan", after: "60% kamaydi" },
+        ],
+        artifacts: ["Xarid SOP", "Oshxona chek-list", "Marja dashbord"],
+        bbiRole:
+          "Ownership: egasi raqamlarni real vaqtda ko‘radi. BBI tizimni qurdi, boshqaruvni almashtirmadi.",
+      },
+      {
+        slug: "ecom-growth",
+        company: "E-commerce (NDA)",
+        industry: "E-commerce",
+        keyResult: "CAC −25%, ROAS +40%",
+        excerpt: "D2C brend: kanal iqtisodiyoti va boshqariladigan o‘sish.",
+        tags: ["Marketing", "Savdo"],
+        industryFilter: "ecom",
+        directionFilter: "marketing",
+        scaleFilter: "mid",
+        context:
+          "D2C brend, 80 mln daromad. Kanal iqtisodiyotisiz reklama byudjeti.",
+        problem:
+          "Pul «hech qayerda» ketdi, CAC oshdi, ROAS tushdi. Yagona vornka va skvoz analitika yo‘q.",
+        whatBbiDid: [
+          "Skvoz analitika va kanal auditi ishga tushirildi.",
+          "Kanal bo‘yicha lid va LTV iqtisodiyoti qurildi.",
+          "CRM va savdo vornkasi standartlashtirildi.",
+        ],
+        resultNumbers: [
+          { before: "CAC 3200₽", after: "2400₽" },
+          { before: "ROAS 2.1", after: "2.94" },
+        ],
+        artifacts: ["Skvoz analitika", "Kanal dashbord", "Vornka RACI"],
+        bbiRole:
+          "Ownership: marketing va savdo o‘lchanadigan metrikali tizim sifatida ishlaydi. BBI «byudjet to‘kalmadi», balki boshqariladigan o‘sishni qurdi.",
+      },
+    ],
+  },
+  blog: {
+    hero: { title: "Blog va ekspertiza", description: "Mustaqil va himoyalangan biznes tizimlari haqida maqolalar." },
+    card: { readMore: "Batafsil" },
+    article: { backToBlog: "← Blog" },
+    posts: [
+      { slug: "5-shagov-avtonomnoe-upravlenie", category: "Operatsiya", categoryKey: "operations", title: "5 qadam: avtonom boshqaruv", description: "Ritm, SOP va nazorat qanday quriladi.", image: "/work/pillars-1.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }], cta: { label: "Chek-list yuklash", href: "/contacts" } },
+      { slug: "diagnostika-problemy-biznesa", category: "Diagnostika", categoryKey: "diagnostics", title: "Diagnostika", description: "Haqiqiy muammolarni topish.", image: "/brand/decor-pattern.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }], cta: { label: "Skriningga yozilish", href: "/contacts" } },
+      { slug: "ekonomika-kanalov-marketing", category: "Marketing", categoryKey: "marketing", title: "Kanal iqtisodiyoti", description: "Skvoz analitika va o'sish.", image: "/work/zones.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
+      { slug: "sistemnye-prodazhi", category: "Savdo", categoryKey: "sales", title: "Tizimli savdo", description: "Standartlar va CRM.", image: "/work/responsibility.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
+      { slug: "finansovaya-prozrachnost", category: "Moliya", categoryKey: "finance", title: "Moliyaviy shaffoflik", description: "Yagona haqiqat raqamlarda.", image: "/work/target-state.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
+      { slug: "hr-kak-sistema", category: "HR", categoryKey: "hr", title: "HR tizim sifatida", description: "Rollar va mas'uliyat.", image: "/work/responsibility.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
+    ],
+  },
+  contacts: {
+    hero: {
+      eyebrow: "Skrining",
+      title: "Skriningga yozilish",
+      description:
+        "Formani to'ldiring — 24 soat ichida bog'lanamiz va o'lcham, o'sish nuqtalari va hamkorlik imkoniyatini muhokama qilamiz.",
+    },
+    form: {
+      name: "Ism",
+      company: "Kompaniya / biznes",
+      contact: "Telefon yoki messenjer",
+      turnoverTeamSize: "Aylanma yoki jamoa hajmi (ixtiyoriy)",
+      request: "So'rov haqida qisqacha",
+      submit: "Skriningga yozilish",
+    },
   },
 };

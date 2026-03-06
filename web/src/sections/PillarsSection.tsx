@@ -12,59 +12,79 @@ type PillarsSectionProps = {
 };
 
 export function PillarsSection({ title, items }: PillarsSectionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndices, setOpenIndices] = useState<Set<number>>(new Set());
+
+  const toggleIndex = (index: number) => {
+    setOpenIndices((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  };
+
   return (
-    <section className="relative py-36 min-h-[100vh]">
-      <ClockBackground className="pointer-events-none absolute -left-4 -top-40 -z-10 h-[520px] w-[520px] opacity-[0.22]" />
-      <Container className="relative space-y-14">
-        <div className="mx-auto w-full lg:w-[85%]">
-          <h2 className="text-2xl font-semibold md:text-3xl">{title}</h2>
+    <section className="relative py-20 md:py-24">
+      <ClockBackground className="pointer-events-none absolute -left-4 -top-32 -z-10 h-[400px] w-[400px] opacity-[0.18]" />
+      <Container className="relative max-w-7xl space-y-8">
+        <div className="mx-auto w-full lg:w-[95%]">
+          <h2 className="text-2xl font-semibold text-white md:text-3xl">
+            {title}
+          </h2>
         </div>
-        <div className="relative mx-auto grid gap-16 lg:w-[85%] lg:grid-cols-3 lg:items-stretch lg:gap-24">
+        <div className="relative mx-auto grid items-start gap-6 lg:w-[95%] lg:grid-cols-3 lg:gap-8">
           {items.map((item, index) => {
             const isCenter = index === 2;
-            const isOpen = openIndex === index;
+            const isOpen = openIndices.has(index);
 
             return (
               <div
                 key={item.title}
-                className={`bbi-card no-details pillars-details group relative h-full min-h-[220px] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#1c1d23] via-[#16171b] to-[#141518] p-8 transition duration-300 hover:border-white/20 ${isCenter ? "border-[#ff2b44]/30 shadow-[0_18px_40px_rgba(0,0,0,0.45)]" : ""}`}
+                className={`group relative flex min-h-0 flex-col overflow-hidden rounded-2xl border border-white/[0.12] bg-gradient-to-b from-[#1e1f24] to-[#16171b] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition duration-300 hover:border-white/[0.18] hover:shadow-[0_8px_32px_rgba(0,0,0,0.4)] md:p-7 ${isCenter ? "ring-1 ring-[#ff2b44]/40" : ""}`}
               >
-                <div className="pointer-events-none absolute left-0 top-6 h-12 w-[3px] bg-gradient-to-b from-[#ff2b44] via-[#b61f33] to-transparent" />
-                <div className="flex flex-col gap-5">
-                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.28em] text-white/45">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <span className="text-[#ff2b44]">Pillar</span>
+                <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#ff2b44] via-[#ff2b44]/80 to-transparent" />
+                <div className="flex flex-col gap-4 pl-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-semibold tabular-nums text-white/90">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="rounded-full bg-[#ff2b44]/15 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[#ff2b44]">
+                      Pillar
+                    </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-lg font-semibold leading-tight text-white md:text-xl">
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-white/70 md:text-base">
+                  <p className="text-[15px] leading-[1.75] text-white/90 md:text-base">
                     {item.description}
                   </p>
                   <button
                     type="button"
-                    className="text-left text-xs uppercase tracking-[0.22em] text-white/50 transition hover:text-white"
+                    className="mt-1 inline-flex w-fit items-center gap-2 text-sm font-medium text-white/70 transition hover:text-[#ff2b44]"
                     aria-expanded={isOpen}
-                    onClick={() =>
-                      setOpenIndex((current) =>
-                        current === index ? null : index
-                      )
-                    }
+                    onClick={() => toggleIndex(index)}
                   >
-                    Подробнее
+                    <span className="uppercase tracking-wider">
+                      {item.linkLabel}
+                    </span>
+                    <span
+                      className={`inline-block transition-transform ${isOpen ? "rotate-180" : ""}`}
+                    >
+                      ↓
+                    </span>
                   </button>
                 </div>
                 {isOpen ? (
-                  <div className="pillars-body mt-4 border-t border-white/10 pt-4">
-                    <div className="text-sm text-white/70">
-                      {item.description}
-                    </div>
+                  <div className="mt-4 border-t border-white/10 pt-4 pl-1">
+                    <p className="text-[15px] leading-[1.75] text-white/90 md:text-base">
+                      {item.details ?? item.description}
+                    </p>
                     <Link
                       href={item.href}
-                      className="mt-4 inline-flex text-sm text-[#ff2b44] transition hover:text-[#ff4960]"
+                      className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[#ff2b44] transition hover:text-[#ff4960]"
                     >
                       {item.linkLabel}
+                      <span aria-hidden>→</span>
                     </Link>
                   </div>
                 ) : null}

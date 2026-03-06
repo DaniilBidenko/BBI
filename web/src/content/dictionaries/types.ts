@@ -18,6 +18,8 @@ export type HomeStep = {
 export type HomePillar = {
   title: string;
   description: string;
+  /** Expanded content shown when "Подробнее" is clicked */
+  details?: string;
   linkLabel: string;
   href: string;
 };
@@ -131,6 +133,67 @@ export type TeamMember = {
   note: string;
 };
 
+export type CaseStudy = {
+  slug: string;
+  company: string;
+  industry: string;
+  keyResult: string;
+  excerpt?: string;
+  tags: string[];
+  industryFilter: string;
+  directionFilter: string;
+  scaleFilter: string;
+  context: string;
+  problem: string;
+  whatBbiDid: string[];
+  resultNumbers: { before: string; after: string }[];
+  artifacts: string[];
+  bbiRole: string;
+};
+
+export type CasesPage = {
+  hero: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+  filters: {
+    industry: string;
+    direction: string;
+    scale: string;
+    all: string;
+  };
+  filterLabels: {
+    retail: string;
+    fAndB: string;
+    services: string;
+    ecom: string;
+    other: string;
+    operations: string;
+    marketing: string;
+    sales: string;
+    finance: string;
+    hr: string;
+    legal: string;
+    smb: string;
+    mid: string;
+    enterprise: string;
+  };
+  card: {
+    readMore: string;
+  };
+  noResults: string;
+  caseDetail: {
+    backToCases: string;
+    context: string;
+    problem: string;
+    whatBbiDid: string;
+    result: string;
+    artifacts: string;
+    bbiRole: string;
+  };
+};
+
 export type Dictionary = {
   nav: {
     items: NavItem[];
@@ -195,5 +258,54 @@ export type Dictionary = {
   };
   footer: {
     copyright: string;
+  };
+  cases: CasesPage & { items: CaseStudy[] };
+  blog: BlogPage & { posts: BlogPost[] };
+  contacts: ContactsPage;
+};
+
+export type BlogSection = {
+  title?: string;
+  paragraphs: string[];
+  image?: string;
+};
+
+export type BlogPost = {
+  slug: string;
+  category: string;
+  categoryKey: string;
+  title: string;
+  description: string;
+  image?: string;
+  sections: BlogSection[];
+  cta?: { label: string; href: string };
+};
+
+export type BlogPage = {
+  hero: {
+    title: string;
+    description: string;
+  };
+  card: {
+    readMore: string;
+  };
+  article: {
+    backToBlog: string;
+  };
+};
+
+export type ContactsPage = {
+  hero: {
+    title: string;
+    description: string;
+    eyebrow: string;
+  };
+  form: {
+    name: string;
+    company: string;
+    contact: string;
+    turnoverTeamSize: string;
+    request: string;
+    submit: string;
   };
 };

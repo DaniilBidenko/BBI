@@ -26,7 +26,9 @@ export function HeroSection({
           <h1 className="max-w-[560px] text-3xl font-semibold uppercase leading-[1.08] tracking-[0.04em] md:max-w-[640px] md:text-5xl">
             {title}
           </h1>
-          <p className="text-sm text-white/70 md:text-base">{subtitle}</p>
+          <p className="max-w-[52ch] text-base leading-[1.7] text-white/90 md:text-lg">
+            {subtitle}
+          </p>
           <div className="flex flex-wrap items-center gap-4 pt-1">
             <Button href={ctaHref}>{ctaLabel}</Button>
           </div>

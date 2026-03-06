@@ -2,8 +2,6 @@ import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/content/dictionaries";
 import { Container } from "@/components/Container";
-import { Button } from "@/components/Button";
-import { withLocale } from "@/i18n/paths";
 
 type LocalePageProps = {
   params: Promise<{ locale: string }>;
@@ -51,16 +49,6 @@ export default async function AboutPage({ params }: LocalePageProps) {
           <img src="/brand/pattern-white.png" alt="" className="h-full w-full" />
         </div>
         <Container className="relative space-y-10 lg:w-[85%]">
-          <div className="flex items-center justify-between">
-            <img
-              src="/brand/logo-wordmark.png"
-              alt="Bold Brands"
-              className="h-6 w-auto"
-            />
-            <div className="text-sm uppercase tracking-[0.35em] text-white/50">
-              About
-            </div>
-          </div>
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="space-y-6">
               <h1 className="text-3xl font-semibold uppercase leading-tight md:text-5xl">
@@ -193,9 +181,12 @@ export default async function AboutPage({ params }: LocalePageProps) {
                 className="min-h-[96px] rounded-2xl border border-white/10 bg-[#14151a] px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/60"
                 placeholder={cta.form.message}
               />
-              <Button href={withLocale(locale, "/contacts")}>
+              <button
+                type="button"
+                className="inline-flex items-center justify-center rounded-full bg-[#ff2b44] px-4 py-1.5 text-sm font-medium text-[#eeeeee] transition hover:bg-[#ff4960] focus-visible:outline-[#ff2b44]"
+              >
                 {cta.form.submit}
-              </Button>
+              </button>
             </form>
           </div>
         </Container>

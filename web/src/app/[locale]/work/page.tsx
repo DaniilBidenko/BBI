@@ -3,9 +3,8 @@ import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/content/dictionaries";
 import { withLocale } from "@/i18n/paths";
 import { WorkHeroSection } from "@/sections/WorkHeroSection";
-import { WorkInfographicSection } from "@/sections/WorkInfographicSection";
-import { WorkPillarsSection } from "@/sections/WorkPillarsSection";
 import { WorkPillarGridSection } from "@/sections/WorkPillarGridSection";
+import { WorkSchemeSection } from "@/sections/WorkSchemeSection";
 import { WorkFormatSection } from "@/sections/WorkFormatSection";
 import { WorkStagesSection } from "@/sections/WorkStagesSection";
 import { WorkResponsibilitySection } from "@/sections/WorkResponsibilitySection";
@@ -36,16 +35,7 @@ export default async function WorkPage({ params }: LocalePageProps) {
         ctaHint={work.hero.ctaHint}
         ctaHref={withLocale(locale, "/pillars")}
       />
-      <WorkInfographicSection
-        title={work.pillarsIntro.title}
-        description={work.pillarsIntro.description}
-      />
-      <WorkPillarsSection
-        title={work.pillarsIntro.title}
-        description={work.pillarsIntro.description}
-        detailsLabel={work.pillarsIntro.detailsLabel}
-        pillars={work.pillars}
-      />
+      <WorkSchemeSection />
       <WorkPillarGridSection
         title={work.results.title}
         description={work.results.description}

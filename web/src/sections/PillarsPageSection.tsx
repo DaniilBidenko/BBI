@@ -24,16 +24,13 @@ export function PillarsPageSection({
   return (
     <section className="relative pb-32 pt-24">
       <Container className="relative mx-auto space-y-12 lg:w-[85%]">
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-4">
-            <h1 className="text-3xl font-semibold uppercase md:text-5xl">
-              {title}
-            </h1>
-            <p className="text-sm text-white/70 md:text-base">{description}</p>
-          </div>
-          <div className="rounded-3xl border border-white/10 bg-[#1b1c21] p-6 text-sm text-white/70">
-            {ctaDescription}
-          </div>
+        <div className="space-y-4">
+          <h1 className="text-3xl font-semibold uppercase md:text-5xl">
+            {title}
+          </h1>
+          <p className="max-w-[60ch] text-sm text-white/70 md:text-base">
+            {description}
+          </p>
         </div>
         <div className="grid gap-5">
           {pillars.map((pillar, index) => (
