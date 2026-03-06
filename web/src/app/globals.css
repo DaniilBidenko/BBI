@@ -64,6 +64,26 @@ h4 {
   }
 }
 
+.no-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.no-details summary::marker {
+  content: "";
+}
+
+.pillars-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 240ms ease, opacity 240ms ease;
+}
+
+.pillars-details[open] .pillars-body {
+  max-height: 200px;
+  opacity: 1;
+}
+
 /* Scrollbar styling */
 * {
   scrollbar-color: rgba(255, 43, 79, 0.6) rgba(20, 20, 24, 0.9);

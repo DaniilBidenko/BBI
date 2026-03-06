@@ -26,6 +26,7 @@ export type WorkPillar = {
   key: string;
   title: string;
   group: "Shield" | "Leverage" | "Resilience";
+  groupLabel: string;
   summary: string;
   details: string[];
   result: string;
@@ -46,6 +47,7 @@ export type WorkStage = {
 
 export type WorkPage = {
   hero: {
+    eyebrow: string;
     title: string;
     description: string;
     ctaLabel: string;
@@ -54,19 +56,23 @@ export type WorkPage = {
   pillarsIntro: {
     title: string;
     description: string;
+    detailsLabel: string;
   };
   pillars: WorkPillar[];
   results: {
     title: string;
     description: string;
+    badge: string;
   };
   problems: {
     title: string;
     description: string;
+    badge: string;
   };
   actions: {
     title: string;
     description: string;
+    badge: string;
   };
   format: {
     title: string;

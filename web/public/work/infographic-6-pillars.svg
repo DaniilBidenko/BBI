@@ -1,0 +1,47 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="none" />
+  <g stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Core hexagon -->
+    <path d="M600 240L740 320V480L600 560L460 480V320L600 240Z" />
+    <path d="M600 275L710 338V462L600 525L490 462V338L600 275Z" opacity="0.45" />
+    <circle cx="600" cy="400" r="48" />
+    <circle cx="600" cy="400" r="16" />
+
+    <!-- Connectors to pillars -->
+    <path d="M600 240L600 160" />
+    <path d="M740 320L840 270" />
+    <path d="M740 480L840 530" />
+    <path d="M600 560L600 640" />
+    <path d="M460 480L360 530" />
+    <path d="M460 320L360 270" />
+
+    <!-- Pillar nodes -->
+    <circle cx="600" cy="130" r="46" />
+    <circle cx="600" cy="130" r="28" opacity="0.55" />
+
+    <circle cx="885" cy="250" r="46" />
+    <circle cx="885" cy="250" r="28" opacity="0.55" />
+
+    <circle cx="885" cy="550" r="46" />
+    <circle cx="885" cy="550" r="28" opacity="0.55" />
+
+    <circle cx="600" cy="670" r="46" />
+    <circle cx="600" cy="670" r="28" opacity="0.55" />
+
+    <circle cx="315" cy="550" r="46" />
+    <circle cx="315" cy="550" r="28" opacity="0.55" />
+
+    <circle cx="315" cy="250" r="46" />
+    <circle cx="315" cy="250" r="28" opacity="0.55" />
+  </g>
+
+  <!-- Accent rings -->
+  <g stroke="#FF2B44" stroke-width="2.2">
+    <circle cx="600" cy="130" r="54" opacity="0.55" />
+    <circle cx="885" cy="250" r="54" opacity="0.4" />
+    <circle cx="885" cy="550" r="54" opacity="0.4" />
+    <circle cx="600" cy="670" r="54" opacity="0.55" />
+    <circle cx="315" cy="550" r="54" opacity="0.4" />
+    <circle cx="315" cy="250" r="54" opacity="0.4" />
+  </g>
+</svg>
