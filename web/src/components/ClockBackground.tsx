@@ -27,21 +27,21 @@ export function ClockBackground({ className }: ClockBackgroundProps) {
       className={`pointer-events-none absolute ${className ?? ""}`}
       aria-hidden="true"
     >
-      <div className="relative h-full w-full rounded-full bg-[#0b0b0d]">
-        <div className="absolute inset-3 rounded-full bg-[radial-gradient(circle_at_50%_45%,#ff5b75,#ff2b4f_55%,#7a1426_100%)]" />
-        <div className="absolute inset-0 rounded-full border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.7)]" />
-        <div className="absolute inset-1 rounded-full border border-black/60" />
+      <div className="relative h-full w-full rounded-full border border-black/15 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+        <div className="absolute inset-3 rounded-full bg-[var(--bbi-red)]" />
+        <div className="absolute inset-0 rounded-full border border-black/10" />
+        <div className="absolute inset-1 rounded-full border border-black/20" />
 
-        <div className="absolute left-1/2 top-2 -translate-x-1/2 text-xl font-semibold text-white/90">
+        <div className="absolute left-1/2 top-2 -translate-x-1/2 text-xl font-semibold text-[var(--bbi-text)]">
           12
         </div>
-        <div className="absolute right-3 top-1/2 -translate-y-1/2 text-xl font-semibold text-white/90">
+        <div className="absolute right-3 top-1/2 -translate-y-1/2 text-xl font-semibold text-[var(--bbi-text)]">
           3
         </div>
-        <div className="absolute left-1/2 bottom-2 -translate-x-1/2 text-xl font-semibold text-white/90">
+        <div className="absolute left-1/2 bottom-2 -translate-x-1/2 text-xl font-semibold text-[var(--bbi-text)]">
           6
         </div>
-        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-xl font-semibold text-white/90">
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-xl font-semibold text-[var(--bbi-text)]">
           9
         </div>
 
@@ -61,7 +61,7 @@ export function ClockBackground({ className }: ClockBackgroundProps) {
         />
 
         <div className="absolute right-[18%] top-1/2 -translate-y-1/2 opacity-90">
-          <div className="h-12 w-12 bg-white [mask-image:url('/brand/logo-mark.png')] [mask-repeat:no-repeat] [mask-size:contain] [mask-position:center] [webkit-mask-image:url('/brand/logo-mark.png')] [webkit-mask-repeat:no-repeat] [webkit-mask-size:contain] [webkit-mask-position:center]" />
+          <div className="h-12 w-12 bg-[var(--bbi-red)] [mask-image:url('/brand/logo-mark.png')] [mask-repeat:no-repeat] [mask-size:contain] [mask-position:center] [webkit-mask-image:url('/brand/logo-mark.png')] [webkit-mask-repeat:no-repeat] [webkit-mask-size:contain] [webkit-mask-position:center]" />
         </div>
       </div>
     </div>

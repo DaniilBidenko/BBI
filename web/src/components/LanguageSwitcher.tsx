@@ -15,8 +15,8 @@ export function LanguageSwitcher({ locale }: LanguageSwitcherProps) {
           href={withLocale(item, "/")}
           className={
             item === locale
-              ? "text-white"
-              : "text-white/50 hover:text-white/80"
+              ? "text-[var(--bbi-black)]"
+              : "text-[var(--bbi-muted)] hover:text-[var(--bbi-black)]"
           }
         >
           {item}

@@ -210,13 +210,25 @@ export type Dictionary = {
       secondaryCta: string;
     };
     icp: {
+      eyebrow: string;
       title: string;
       cards: HomeCard[];
     };
-    process: {
+    icpBridge: {
+      label: string;
       title: string;
-      stepLabel: string;
-      steps: HomeStep[];
+      description: string;
+    };
+    process: {
+      eyebrow: string;
+      title: string;
+      approaches: HomeStep[];
+    };
+    casesBlog: {
+      title: string;
+      casesLabel: string;
+      blogLabel: string;
+      readMore: string;
     };
     pillars: {
       title: string;

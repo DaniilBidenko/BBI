@@ -17,12 +17,8 @@ export function Header({ locale, navItems, ctaLabel }: HeaderProps) {
   return (
     <header className="border-b border-white/10 bg-neutral-950/80 backdrop-blur">
       <Container className="flex items-center justify-between py-6">
-        <Link href={withLocale(locale, "/")} className="flex items-center gap-3">
-          <img
-            src="/brand/logo-wordmark.png"
-            alt="Bold Brands"
-            className="h-6 w-auto"
-          />
+        <Link href={withLocale(locale, "/")} className="flex items-center gap-3" aria-label="Bold Brands">
+          <span className="logo-wordmark logo-wordmark-lg" role="img" aria-hidden />
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-white/70 lg:flex">
           {navItems.map((item) => (

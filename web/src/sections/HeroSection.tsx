@@ -26,7 +26,7 @@ export function HeroSection({
           <h1 className="max-w-[560px] text-3xl font-semibold uppercase leading-[1.08] tracking-[0.04em] md:max-w-[640px] md:text-5xl">
             {title}
           </h1>
-          <p className="max-w-[52ch] text-base leading-[1.7] text-white/90 md:text-lg">
+          <p className="max-w-[52ch] text-base leading-[1.7] text-[var(--bbi-muted)] md:text-lg">
             {subtitle}
           </p>
           <div className="flex flex-wrap items-center gap-4 pt-1">
@@ -37,14 +37,13 @@ export function HeroSection({
           <img
             src="/brand/pattern-white.png"
             alt=""
-            className="pointer-events-none absolute -right-6 -top-10 h-[210px] w-auto opacity-[0.07] mix-blend-screen"
+            className="pointer-events-none absolute -right-6 -top-10 h-[210px] w-auto opacity-[0.04] invert mix-blend-multiply"
           />
           <img
             src="/brand/hero-mechanism-traced.png"
             alt=""
-            className="relative h-[280px] w-auto opacity-90 invert brightness-0 md:h-[360px]"
+            className="relative h-[280px] w-auto opacity-90 brightness-0 md:h-[360px]"
           />
-          <div className="absolute -right-12 -top-16 h-[340px] w-[340px] rounded-full bg-[#ff2b44]/20 blur-3xl" />
         </div>
         <div id="hero-details" className="sr-only">
           {secondaryLabel}

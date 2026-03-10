@@ -269,6 +269,7 @@ export const en: Dictionary = {
       secondaryCta: "Learn more",
     },
     icp: {
+      eyebrow: "Question",
       title: "Is this you?",
       cards: [
         {
@@ -294,29 +295,46 @@ export const en: Dictionary = {
         },
       ],
     },
+    icpBridge: {
+      label: "Answer",
+      title: "How do we help?",
+      description:
+        "We design the target state, immerse in your reality, build the architecture and implement it with you. Not slide-deck consulting — operational work inside the business.",
+    },
     process: {
+      eyebrow: "Approach",
       title: "How we work",
-      stepLabel: "Step",
-      steps: [
+      approaches: [
         {
-          title: "Screening — do we fit",
+          title: "Design",
           description:
-            "A fast diagnostic session to gauge chaos, team readiness, and growth potential.",
+            "We define the target state and solution architecture. Not «best practice» — what your business actually needs, given scale, team and ambitions.",
         },
         {
-          title: "Diagnosis / Audit — reveal the real picture",
+          title: "Immerse",
           description:
-            "We analyze operations, finance, sales, and team to find constraints and growth points.",
+            "We analyze processes, finance, sales and team. Find growth points, bottlenecks and real causes of failures. No templates — only your data.",
         },
         {
-          title: "Project (45–90 working days) — build the system",
+          title: "Build the architecture",
           description:
-            "We join as an operating team, implement changes daily, and train your team.",
+            "Management rhythm, regulations, dashboards, accountability. All in one system, not scattered «improvements».",
+        },
+        {
+          title: "Implement",
+          description:
+            "We implement changes daily, train your team, hand over control. BBI stays as a partner for resilience.",
         },
       ],
     },
+    casesBlog: {
+      title: "Cases & Blog",
+      casesLabel: "All cases",
+      blogLabel: "All articles",
+      readMore: "Read more",
+    },
     pillars: {
-      title: "Shield. Leverage. Resilience.",
+      title: "Shield. Leverage. System.",
       items: [
         {
           title: "Shield",

@@ -269,6 +269,7 @@ export const uz: Dictionary = {
       secondaryCta: "Batafsil",
     },
     icp: {
+      eyebrow: "Savol",
       title: "O‘zingizni tanidingizmi?",
       cards: [
         {
@@ -294,29 +295,46 @@ export const uz: Dictionary = {
         },
       ],
     },
+    icpBridge: {
+      label: "Javob",
+      title: "Qanday yordam beramiz?",
+      description:
+        "Maqsadli holatni loyihalaymiz, real holatga sho‘ng‘iramiz, arxitektura qurib amalga oshiramiz. Slaydli maslahat emas — biznes ichida operatsion ish.",
+    },
     process: {
+      eyebrow: "Yondashuv",
       title: "Qanday ishlaymiz",
-      stepLabel: "Bosqich",
-      steps: [
+      approaches: [
         {
-          title: "Skrining — bir-birimizga mosmizmi?",
+          title: "Loyihalaymiz",
           description:
-            "Tezkor diagnostika: xaos ko‘lami, jamoa tayyorgarligi va o‘sish salohiyati.",
+            "Maqsadli holat va yechim arxitekturasini aniqlaymiz. «Qanday qilish kerak» emas — sizning biznesingizga o‘lcham, jamoa va ambitsiyaga qarab.",
         },
         {
-          title: "Diagnostika / Audit — real holatni ochish",
+          title: "Sho‘ng‘iramiz",
           description:
-            "Operatsiya, moliya, savdo va jamoani tahlil qilib, o‘sish nuqtalarini topamiz.",
+            "Jarayonlar, moliya, savdo va jamoani tahlil qilamiz. O‘sish nuqtalari, tor joylar va haqiqiy sabablarni topamiz. Shablon yo‘q — faqat sizning ma’lumotlaringiz.",
         },
         {
-          title: "Loyiha (45–90 ish kuni) — tizim qurish",
+          title: "Arxitektura quramiz",
           description:
-            "Operatsion jamoa sifatida kirib, har kuni o‘zgarishlarni joriy qilamiz.",
+            "Boshqaruv ritmi, qoidalar, dashbordlar, mas’uliyat zonalari. Hammasi bitta tizimda, ajratilgan «yaxshilanishlar» emas.",
+        },
+        {
+          title: "Amalga oshiramiz",
+          description:
+            "Har kuni o‘zgarishlarni joriy qilamiz, jamoani o‘qitamiz, boshqaruvni topshiramiz. BBI barqarorlik uchun hamkor sifatida qoladi.",
         },
       ],
     },
+    casesBlog: {
+      title: "Keyslar va blog",
+      casesLabel: "Barcha keyslar",
+      blogLabel: "Barcha maqolalar",
+      readMore: "Batafsil",
+    },
     pillars: {
-      title: "Qalqon. Lever. Barqarorlik.",
+      title: "Qalqon. Lever. Tizim.",
       items: [
         {
           title: "Qalqon",

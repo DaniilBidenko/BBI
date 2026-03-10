@@ -6,7 +6,7 @@ type FooterProps = {
 
 export function Footer({ text }: FooterProps) {
   return (
-    <footer className="border-t border-white/10 py-8 text-sm text-white/60">
+    <footer className="border-t border-[color:var(--bbi-border)] py-8 text-sm text-[var(--bbi-muted)]">
       <Container>
         <div>{text}</div>
       </Container>

@@ -12,8 +12,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <body className="bg-neutral-950 text-white antialiased">
+    <html lang="ru" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                var p = window.location.pathname;
+                var isHome = p === '/' || /^\\/(ru|en|uz)\\/?$/.test(p);
+                var root = document.documentElement;
+                root.classList.remove('theme-light', 'theme-dark');
+                root.classList.add(isHome ? 'theme-light' : 'theme-dark');
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="antialiased">
         {children}
       </body>
     </html>

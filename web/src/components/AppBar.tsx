@@ -23,14 +23,10 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
   const isActive = (href: string) => pathname === withLocale(locale, href);
 
   return (
-    <div className="border-b border-white/10 bg-[#0e0e0e]/80 backdrop-blur">
+    <div className="border-b border-[color:var(--bbi-border)] bg-[var(--bbi-bg)]/95 backdrop-blur">
       <Container className="flex items-center justify-between py-2">
-        <Link href={withLocale(locale, "/")} className="flex items-center">
-          <img
-            src="/brand/logo-wordmark.png"
-            alt="Bold Brands"
-            className="h-5 w-auto"
-          />
+        <Link href={withLocale(locale, "/")} className="flex items-center" aria-label="Bold Brands">
+          <span className="logo-wordmark" role="img" aria-hidden />
         </Link>
         <nav className="hidden items-center gap-6 text-sm lg:flex">
           {navItems.map((item) => {
@@ -39,7 +35,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
               <Link
                 key={item.href}
                 href={withLocale(locale, item.href)}
-                className={`transition hover:text-white ${active ? "font-medium text-white" : "text-white/70"}`}
+                className={`transition hover:text-[var(--bbi-black)] ${active ? "font-medium text-[var(--bbi-black)]" : "text-[var(--bbi-muted)]"}`}
                 aria-current={active ? "page" : undefined}
               >
                 {item.label}
@@ -54,7 +50,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
           </Button>
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70 transition hover:text-white lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--bbi-border)] text-[var(--bbi-muted)] transition hover:text-[var(--bbi-black)] lg:hidden"
             aria-label="Open menu"
             aria-expanded={isOpen}
             aria-controls="mobile-nav"
@@ -69,7 +65,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
         </div>
       </Container>
       {isOpen ? (
-        <div id="mobile-nav" className="border-t border-white/10 lg:hidden">
+        <div id="mobile-nav" className="border-t border-[color:var(--bbi-border)] lg:hidden">
           <div className="flex flex-col gap-3 px-6 py-4 text-sm">
             {navItems.map((item) => {
               const active = isActive(item.href);
@@ -77,7 +73,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
                 <Link
                   key={item.href}
                   href={withLocale(locale, item.href)}
-                  className={`transition hover:text-white ${active ? "font-medium text-white" : "text-white/80"}`}
+                  className={`transition hover:text-[var(--bbi-black)] ${active ? "font-medium text-[var(--bbi-black)]" : "text-[var(--bbi-muted)]"}`}
                   aria-current={active ? "page" : undefined}
                   onClick={() => setIsOpen(false)}
                 >

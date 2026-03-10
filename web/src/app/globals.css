@@ -1,23 +1,91 @@
 @import "tailwindcss";
 
+/* Тёмная тема (по умолчанию) — все страницы кроме главной */
+:root,
+.theme-dark {
+  --bbi-bg: #0e0e0e;
+  --bbi-text: #eeeeee;
+  --bbi-muted: rgba(255, 255, 255, 0.7);
+  --bbi-black: #ffffff;
+  --bbi-border: rgba(255, 255, 255, 0.1);
+  --bbi-ghost-hover: rgba(255, 255, 255, 0.05);
+  --bbi-card-shadow: 0 18px 50px rgba(0, 0, 0, 0.45), 0 6px 16px rgba(0, 0, 0, 0.35);
+  --bbi-scrollbar-track: rgba(20, 20, 24, 0.9);
+  --bbi-scrollbar-thumb: rgba(255, 43, 79, 0.6);
+  --bbi-scrollbar-thumb-hover: rgba(255, 73, 105, 0.8);
+}
+
+/* Светлая тема — только главная страница */
+.theme-light {
+  --bbi-bg: #f2f1ed;
+  --bbi-text: #1a1a1a;
+  --bbi-muted: #4a4a4a;
+  --bbi-black: #0a0a0a;
+  --bbi-border: rgba(0, 0, 0, 0.1);
+  --bbi-ghost-hover: rgba(0, 0, 0, 0.05);
+  --bbi-card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --bbi-scrollbar-track: #e8e6e2;
+  --bbi-scrollbar-thumb: #b91c1c;
+  --bbi-scrollbar-thumb-hover: #991b1b;
+}
+
 :root {
-  color-scheme: dark;
+  --bbi-red: #b91c1c;
+  --bbi-red-hover: #991b1b;
+}
+
+/* Логотип в цвете --bbi-red */
+.logo-wordmark {
+  display: inline-block;
+  height: 1.25rem;
+  width: 7rem;
+  background-color: var(--bbi-red);
+  mask-image: url("/brand/logo-wordmark.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("/brand/logo-wordmark.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.logo-wordmark-lg {
+  height: 1.5rem;
+  width: 8.4rem;
 }
 
 body {
   font-family: "Articulat", "Akrobat", "Noto Sans", "Inter", "Arial", sans-serif;
-  background-color: #0e0e0e;
-  color: #eeeeee;
+  background-color: var(--bbi-bg);
+  color: var(--bbi-text);
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Читаемость: оптимальная длина строки и межстрочный интервал для абзацев */
 .readable {
   max-width: 65ch;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--bbi-muted);
+}
+
+.layout-bg {
+  background-color: var(--bbi-bg);
+}
+
+.theme-dark .layout-bg {
+  background: radial-gradient(
+      circle at 85% 35%,
+      rgba(255, 43, 68, 0.28),
+      rgba(14, 14, 14, 0) 45%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(255, 43, 68, 0.16),
+      rgba(14, 14, 14, 0) 40%
+    ),
+    #0e0e0e;
 }
 
 h1,
@@ -28,7 +96,7 @@ h4 {
 }
 
 .bbi-card {
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45), 0 6px 16px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--bbi-card-shadow);
 }
 
 .no-scrollbar {
@@ -95,7 +163,7 @@ h4 {
 
 /* Scrollbar styling */
 * {
-  scrollbar-color: rgba(255, 43, 79, 0.6) rgba(20, 20, 24, 0.9);
+  scrollbar-color: var(--bbi-scrollbar-thumb) var(--bbi-scrollbar-track);
   scrollbar-width: thin;
 }
 
@@ -105,17 +173,17 @@ h4 {
 }
 
 *::-webkit-scrollbar-track {
-  background: rgba(20, 20, 24, 0.9);
+  background: var(--bbi-scrollbar-track);
   border-radius: 999px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ff2b4f, #7a1426);
+  background: var(--bbi-scrollbar-thumb);
   border-radius: 999px;
-  border: 2px solid rgba(20, 20, 24, 0.9);
+  border: 2px solid var(--bbi-scrollbar-track);
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff4969, #9a1d33);
+  background: var(--bbi-scrollbar-thumb-hover);
 }
 

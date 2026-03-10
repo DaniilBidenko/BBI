@@ -2,11 +2,12 @@ import { isLocale, type Locale } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { HeroSection } from "@/sections/HeroSection";
 import { IcpSection } from "@/sections/IcpSection";
+import { IcpBridgeSection } from "@/sections/IcpBridgeSection";
 import { ProcessSection } from "@/sections/ProcessSection";
 import { PillarsSection } from "@/sections/PillarsSection";
+import { CasesBlogSection } from "@/sections/CasesBlogSection";
 import { getDictionary } from "@/content/dictionaries";
 import { withLocale } from "@/i18n/paths";
-import { ClockBackground } from "@/components/ClockBackground";
 
 type LocalePageProps = {
   params: Promise<{ locale: string }>;
@@ -31,18 +32,24 @@ export default async function HomePage({ params }: LocalePageProps) {
         ctaHref={withLocale(locale, "/contacts")}
         secondaryLabel={dictionary.home.hero.secondaryCta}
       />
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <IcpSection
+          eyebrow={dictionary.home.icp.eyebrow}
           title={dictionary.home.icp.title}
           cards={dictionary.home.icp.cards.map((card) => ({
             ...card,
             href: withLocale(locale, card.href),
           }))}
         />
+        <IcpBridgeSection
+          label={dictionary.home.icpBridge.label}
+          title={dictionary.home.icpBridge.title}
+          description={dictionary.home.icpBridge.description}
+        />
         <ProcessSection
+          eyebrow={dictionary.home.process.eyebrow}
           title={dictionary.home.process.title}
-          stepLabel={dictionary.home.process.stepLabel}
-          steps={dictionary.home.process.steps}
+          approaches={dictionary.home.process.approaches}
         />
       </div>
       <PillarsSection
@@ -51,6 +58,15 @@ export default async function HomePage({ params }: LocalePageProps) {
           ...item,
           href: withLocale(locale, item.href),
         }))}
+      />
+      <CasesBlogSection
+        title={dictionary.home.casesBlog.title}
+        casesLabel={dictionary.home.casesBlog.casesLabel}
+        blogLabel={dictionary.home.casesBlog.blogLabel}
+        readMore={dictionary.home.casesBlog.readMore}
+        cases={dictionary.cases.items}
+        blogPosts={dictionary.blog.posts}
+        locale={locale}
       />
     </>
   );
