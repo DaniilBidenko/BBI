@@ -45,6 +45,7 @@ export default async function HomePage({ params }: LocalePageProps) {
           label={dictionary.home.icpBridge.label}
           title={dictionary.home.icpBridge.title}
           description={dictionary.home.icpBridge.description}
+          highlightPhrase={dictionary.home.icpBridge.highlightPhrase}
         />
         <ProcessSection
           eyebrow={dictionary.home.process.eyebrow}

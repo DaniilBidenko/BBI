@@ -1,33 +1,87 @@
+import type { ReactNode } from "react";
 import { Container } from "@/components/Container";
 
 type IcpBridgeSectionProps = {
   label: string;
   title: string;
   description: string;
+  highlightPhrase?: string;
 };
 
-export function IcpBridgeSection({ label, title, description }: IcpBridgeSectionProps) {
+function highlightPhraseInText(
+  text: string,
+  phrase: string | undefined,
+  className: string
+): ReactNode {
+  if (!phrase || phrase.trim() === "" || !text.includes(phrase)) {
+    return text;
+  }
+  const parts = text.split(phrase);
   return (
-    <section className="relative overflow-hidden border-y border-black/[0.06] py-16 md:py-20">
-      <div className="absolute inset-x-0 top-1/2 h-px -translate-y-px bg-black/10" />
+    <>
+      {parts[0]}
+      <span className={className}>{phrase}</span>
+      {parts.slice(1).join(phrase)}
+    </>
+  );
+}
 
+function ArrowIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5 text-[var(--bbi-red)]"
+      aria-hidden
+    >
+      <path d="M7 17L17 7M17 7h-6M17 7v6" />
+    </svg>
+  );
+}
+
+export function IcpBridgeSection({
+  label,
+  title,
+  description,
+  highlightPhrase,
+}: IcpBridgeSectionProps) {
+  return (
+    <section className="relative pt-20 pb-12 md:pt-24 md:pb-16">
       <Container className="relative mx-auto lg:w-[90%]">
-        <div className="bbi-card relative mx-auto max-w-2xl overflow-hidden rounded-2xl border border-black/[0.08] bg-white px-8 py-10 md:px-12 md:py-14">
+        <article className="bbi-card group relative mx-auto max-w-4xl overflow-hidden rounded-2xl border border-black/[0.08] bg-white transition hover:border-[var(--bbi-red)]/40">
           <div className="absolute inset-y-0 left-0 w-1 rounded-l-2xl bg-[var(--bbi-red)]" />
 
-          <div className="pl-4">
-            <span className="mb-3 inline-block text-xs font-medium uppercase tracking-[0.25em] text-[var(--bbi-red)]">
-              {label}
-            </span>
-            <h2 className="text-xl font-semibold text-[var(--bbi-text)] md:text-2xl">
-              {title}
-            </h2>
-            <p className="mt-5 text-[15px] leading-[1.8] text-[var(--bbi-muted)]">
-              {description}
-            </p>
-            <div className="mt-6 h-px w-12 bg-[var(--bbi-red)]" />
+          <div className="grid gap-8 p-6 pl-8 md:grid-cols-[1fr_1.3fr] md:gap-12 md:p-8 md:pl-10">
+            <div className="flex flex-col justify-between">
+              <div>
+                <span className="mb-3 inline-block text-xs font-medium uppercase tracking-[0.25em] text-[var(--bbi-red)]">
+                  {label}
+                </span>
+                <h2 className="text-2xl font-semibold leading-tight text-[var(--bbi-text)] md:text-3xl">
+                  {title}
+                </h2>
+              </div>
+              <div className="mt-6 md:mt-0">
+                <ArrowIcon />
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-center border-l-0 md:border-l md:border-black/[0.08] md:pl-10">
+              <p className="text-[15px] leading-[1.8] text-[var(--bbi-muted)] md:text-base">
+                {highlightPhraseInText(
+                  description,
+                  highlightPhrase ?? "",
+                  "font-medium text-[var(--bbi-red)]"
+                )}
+              </p>
+              <div className="mt-6 h-px w-12 bg-[var(--bbi-red)]" />
+            </div>
           </div>
-        </div>
+        </article>
       </Container>
     </section>
   );

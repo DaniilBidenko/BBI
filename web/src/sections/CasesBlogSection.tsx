@@ -179,7 +179,13 @@ export function CasesBlogSection({
               className="bbi-card group relative flex flex-col overflow-hidden rounded-2xl border border-black/[0.08] bg-white transition hover:border-[var(--bbi-red)]"
             >
               {post.image && (
-                <div className="relative aspect-video w-full border-b border-black/[0.06] bg-[var(--bbi-bg)]" />
+                <div className="relative aspect-video w-full shrink-0 overflow-hidden border-b border-black/[0.06] bg-[var(--bbi-bg)]">
+                  <img
+                    src={post.image}
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               )}
               <div className="flex flex-1 flex-col gap-4 p-5">
                 <div className="flex items-center gap-3">

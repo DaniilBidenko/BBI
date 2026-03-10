@@ -302,6 +302,7 @@ export const ru: Dictionary = {
       title: "Чем мы поможем?",
       description:
         "Мы проектируем целевое состояние, погружаемся в вашу реальность, строим архитектуру и реализуем её вместе с вами. Не консалтинг «на слайдах» — операционная работа внутри бизнеса.",
+      highlightPhrase: "работа внутри бизнеса",
     },
     process: {
       eyebrow: "Подход",
@@ -584,7 +585,7 @@ export const ru: Dictionary = {
         categoryKey: "operations",
         title: "5 шагов к автономному управлению",
         description: "Как выстроить ритм, SOP и контроль исполнения так, чтобы бизнес работал без ручного вмешательства собственника.",
-        image: "/work/pillars-1.png",
+        image: "/blog/operations-autonomous.png",
         sections: [
           {
             title: "Почему «директор» не решает проблему",
@@ -631,7 +632,7 @@ export const ru: Dictionary = {
         categoryKey: "diagnostics",
         title: "Диагностика: как вскрыть реальные проблемы бизнеса",
         description: "Почему «всё плохо» редко оказывается правдой и как найти настоящие точки сбоя в системе.",
-        image: "/brand/decor-pattern.png",
+        image: "/blog/diagnostics-analysis.png",
         sections: [
           {
             title: "Зачем нужна диагностика",

@@ -218,6 +218,7 @@ export type Dictionary = {
       label: string;
       title: string;
       description: string;
+      highlightPhrase?: string;
     };
     process: {
       eyebrow: string;

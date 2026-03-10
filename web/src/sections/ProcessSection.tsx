@@ -20,9 +20,9 @@ export function ProcessSection({
   approaches,
 }: ProcessSectionProps) {
   return (
-    <section id="process" className="relative py-20 md:py-24">
+    <section id="process" className="relative pt-12 pb-20 md:pt-16 md:pb-24">
       <Container className="relative mx-auto lg:w-[90%]">
-        <div className="mb-12 flex flex-col items-center gap-3">
+        <div className="mb-6 flex flex-col items-center gap-3 md:mb-8">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-[var(--bbi-red)]">
             {eyebrow}
           </span>
@@ -31,7 +31,7 @@ export function ProcessSection({
           </h2>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {approaches.map((item, index) => (
             <article
               key={item.title}

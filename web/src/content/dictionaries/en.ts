@@ -300,6 +300,7 @@ export const en: Dictionary = {
       title: "How do we help?",
       description:
         "We design the target state, immerse in your reality, build the architecture and implement it with you. Not slide-deck consulting — operational work inside the business.",
+      highlightPhrase: "operational work inside the business",
     },
     process: {
       eyebrow: "Approach",
@@ -565,8 +566,8 @@ export const en: Dictionary = {
     card: { readMore: "Read more" },
     article: { backToBlog: "← Blog" },
     posts: [
-      { slug: "5-shagov-avtonomnoe-upravlenie", category: "Operations", categoryKey: "operations", title: "5 Steps to Autonomous Management", description: "How to build rhythm, SOP and execution control.", image: "/work/pillars-1.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Download checklist", href: "/contacts" } },
-      { slug: "diagnostika-problemy-biznesa", category: "Diagnostics", categoryKey: "diagnostics", title: "Diagnostics: Uncover Real Problems", description: "Find real failure points in your system.", image: "/brand/decor-pattern.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Book screening", href: "/contacts" } },
+      { slug: "5-shagov-avtonomnoe-upravlenie", category: "Operations", categoryKey: "operations", title: "5 Steps to Autonomous Management", description: "How to build rhythm, SOP and execution control.", image: "/blog/operations-autonomous.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Download checklist", href: "/contacts" } },
+      { slug: "diagnostika-problemy-biznesa", category: "Diagnostics", categoryKey: "diagnostics", title: "Diagnostics: Uncover Real Problems", description: "Find real failure points in your system.", image: "/blog/diagnostics-analysis.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Book screening", href: "/contacts" } },
       { slug: "ekonomika-kanalov-marketing", category: "Marketing", categoryKey: "marketing", title: "Channel Economics", description: "Full-funnel analytics and manageable growth.", image: "/work/zones.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
       { slug: "sistemnye-prodazhi", category: "Sales", categoryKey: "sales", title: "System Sales Without Stars", description: "Standards, scripts and CRM.", image: "/work/responsibility.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
       { slug: "finansovaya-prozrachnost", category: "Finance", categoryKey: "finance", title: "Financial Transparency", description: "One truth in numbers.", image: "/work/target-state.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
