@@ -264,43 +264,80 @@ export const en: Dictionary = {
       eyebrow: "Brand Promise",
       title: "Shield. Leverage. System. for your business",
       subtitle:
-        "BBI is an operating partner for owners and CEOs. We enter the business, surface real issues, and build systems that run without manual control.",
+        "Operating Partner for owners and CEOs. We build systems of protection and growth — on the owner's side, not agencies or consultants.",
       cta: "Start with diagnostics",
-      secondaryCta: "Learn more",
+      secondaryCta: "View cases",
+      secondaryCtaHref: "/cases",
+    },
+    icpIntro: {
+      eyebrow: "Target audience",
+      title: "For whom we work",
+      items: [
+        "Owner in growth — business depends on them. $30k–250k/mo, 15–80 employees, 5+ years. Pain: «Put out fires instead of managing»",
+        "Owner scaling — chaos multiplies. $80k–500k/mo, 40–200 employees. Pain: «Scale chaos — scale losses»",
+        "Owner preparing for investment. $150k–1M+/mo, 80–500+ employees. Pain: «Investor needs an asset, not a business in my head»",
+        "Not for: business under 5 years, startups in PMF, one-off consulting, agency services. Or expecting «guarantee growth» without readiness to change the system.",
+      ],
     },
     icp: {
       eyebrow: "Question",
       title: "Is this you?",
       cards: [
         {
-          title: "The business grows, but you put out fires",
+          title: "Put out fires instead of managing",
           description:
-            "We build operating rhythm and roles so the owner can stop micromanaging.",
+            "Within 45–90 days: «shield», unified picture, regular management. You exit micromanagement.",
           linkLabel: "Learn more",
           href: "/icp/operations",
         },
         {
-          title: "Scaling chaos means scaling losses",
+          title: "Scale chaos — scale losses",
           description:
-            "We remove bottlenecks, stabilize processes, and lock in growth levers.",
+            "We make scaling manageable: unified standards, one truth by numbers, clear management contour.",
           linkLabel: "Learn more",
           href: "/icp/scale",
         },
         {
-          title: "Investors need an asset, not the owner’s brain",
+          title: "Investor needs an asset, not a business in my head",
           description:
-            "We make the company predictable and transparent for valuation.",
+            "We turn «business in the head» into an asset that passes due diligence.",
           linkLabel: "Learn more",
           href: "/icp/investor",
         },
       ],
+      ctaLabel: "Discuss your situation",
     },
     icpBridge: {
       label: "Answer",
       title: "How do we help?",
       description:
-        "We design the target state, immerse in your reality, build the architecture and implement it with you. Not slide-deck consulting — operational work inside the business.",
+        "We design the target state, immerse in your reality, build the architecture and implement it with you. Not slides «to take away» — work inside the business.",
       highlightPhrase: "operational work inside the business",
+      ctaLabel: "Discuss your task",
+    },
+    whatWeChange: {
+      eyebrow: "Our 6 pillars",
+      title: "What exactly we change in your business",
+      pillars: [
+        { title: "Operations", items: ["Owner exits manual management — business becomes «self-driving»", "Management rhythm, SOPs, org structure, meetings, dashboards, KPIs, adaptation checklists"] },
+        { title: "Marketing", items: ["Budget doesn't leak «into nowhere» — you see client cost and leaks", "Full-funnel analytics, channel audit, database ownership"] },
+        { title: "Sales", items: ["Result doesn't depend on «stars» — new manager hits targets in 2–4 weeks", "Scripts, regulations, CRM, funnel, lead processing"] },
+        { title: "Finance", items: ["Honest answer «Where is my money?» — decisions on data, not intuition", "Management accounting, plan-vs-actual, payment calendar, accounting by area"] },
+        { title: "HR", items: ["Team is reproducible — roles fixed, one person's exit doesn't break the system", "Role profiles, systemic hiring, onboarding, evaluation, talent pipeline"] },
+        { title: "Legal protection", items: ["Protection from lawsuits, data leaks, and database theft", "NDA, employment contracts, job descriptions, data consent, contractor agreements"] },
+      ],
+    },
+    whatYouGet: {
+      eyebrow: "Outcome",
+      title: "What you get from working with us",
+      items: [
+        "Business runs without you 24/7 — autonomous and protected asset",
+        "No one is irreplaceable — system is reproducible, one person's exit isn't a stop",
+        "You manage through numbers and rhythm (up to 10 hrs/week), not in operations",
+        "Leads, sales and margin manageable — not «hope it works»",
+        "Growth is controlled and reproducible",
+        "Phased: first critical risks, then standards",
+      ],
     },
     process: {
       eyebrow: "Approach",
@@ -309,23 +346,36 @@ export const en: Dictionary = {
         {
           title: "Design",
           description:
-            "We define the target state and solution architecture. Not «best practice» — what your business actually needs, given scale, team and ambitions.",
+            "Define target state and architecture. Not «best practice» — what your business needs.",
         },
         {
           title: "Immerse",
           description:
-            "We analyze processes, finance, sales and team. Find growth points, bottlenecks and real causes of failures. No templates — only your data.",
+            "Analyze processes, finance, sales and team. Find bottlenecks and real causes of failures.",
         },
         {
           title: "Build the architecture",
           description:
-            "Management rhythm, regulations, dashboards, accountability. All in one system, not scattered «improvements».",
+            "Rhythm, regulations, dashboards, accountability — one system, not scattered «improvements».",
         },
         {
           title: "Implement",
           description:
-            "We implement changes daily, train your team, hand over control. BBI stays as a partner for resilience.",
+            "Implement daily, train the team, hand over control. Stay as a partner for resilience.",
         },
+      ],
+      ctaLabel: "Book a diagnosis",
+    },
+    whyBbi: {
+      eyebrow: "Differentiation",
+      title: "Why BBI",
+      items: [
+        { label: "Not an agency", text: "We don't sell hands and hours. We build systems. Our competitor is chaos and unmanageability, not other contractors." },
+        { label: "Not consulting", text: "We don't recommend «to take away». We implement and control ourselves. We stay inside until systems stabilize." },
+        { label: "Not autopilot", text: "You need involvement up to 10 hrs/week. Management through numbers — not your disappearance." },
+        { label: "Not CEO replacement", text: "We build business autonomy, not dependence on us." },
+        { label: "Not «x10 in 30 days»", text: "Growth is controlled and reproducible — system, not magic." },
+        { label: "Operating partner", text: "Six directions into one system, on the owner's side." },
       ],
     },
     casesBlog: {
@@ -333,6 +383,22 @@ export const en: Dictionary = {
       casesLabel: "All cases",
       blogLabel: "All articles",
       readMore: "Read more",
+      ctaLabel: "Discuss your case",
+    },
+    faq: {
+      title: "Frequently asked questions",
+      items: [
+        { q: "How long does a project take?", a: "Screening is free. Then: diagnosis → project from 45 business days → retainer support. Exact duration depends on scale." },
+        { q: "Do you work remotely?", a: "Yes, with regular on-site visits. Process immersion requires presence." },
+        { q: "Does a small business fit?", a: "We focus on turnover from $30k/mo and teams of 15+. Business under 5 years or startup in PMF — usually no." },
+        { q: "How do you differ from agencies and consultants?", a: "We don't sell hours (agency) or recommend «to take away» (consulting). We implement ourselves and stay until systems stabilize." },
+        { q: "When do you refuse?", a: "Owner is not involved. No data access. Agency model needed. Business under 5 years or startup. Expecting «guarantee growth» without readiness to change the system." },
+      ],
+    },
+    finalCta: {
+      title: "Business grows — manageability lags? Start with a diagnosis",
+      ctaLabel: "Start with diagnosis",
+      subtitle: "Understand real failure points, not treat symptoms",
     },
     pillars: {
       title: "Shield. Leverage. System.",

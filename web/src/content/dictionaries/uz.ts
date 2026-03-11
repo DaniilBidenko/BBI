@@ -264,43 +264,80 @@ export const uz: Dictionary = {
       eyebrow: "Brand Promise",
       title: "Qalqon. Lever. Tizim. biznesingiz uchun",
       subtitle:
-        "BBI — egalar va CEOlar uchun operatsion hamkor. Biz biznesga kiramiz, muammolarni ochamiz va qo‘lda boshqaruvisiz ishlaydigan tizim quramiz.",
+        "Egalar va CEOlar uchun Operating Partner. Himoya va o‘sish tizimlarini quramiz — egasi tomonida, agentliklar va maslahatchilar emas.",
       cta: "Diagnostikadan boshlash",
-      secondaryCta: "Batafsil",
+      secondaryCta: "Keyslarni ko‘rish",
+      secondaryCtaHref: "/cases",
+    },
+    icpIntro: {
+      eyebrow: "Maqsadli auditoriya",
+      title: "Kimlar uchun",
+      items: [
+        "Egasi o‘sishda — biznes unda turyapti. $30k–250k/oy, 15–80 xodim, 5+ yil. Og‘riq: «Boshqarish o‘rniga yong‘in o‘chiraman»",
+        "Egasi kengaytirmoqda — xaos ko‘payadi. $80k–500k/oy, 40–200 xodim. Og‘riq: «Xaosni kengaytirsam — zararlarni kengaytiraman»",
+        "Egasi investitsiyaga tayyorlanmoqda. $150k–1M+/oy, 80–500+ xodim. Og‘riq: «Investorga mening boshimdagi biznes emas, aktiv kerak»",
+        "Mos emas: 5 yildan kam biznes, PMF bosqichidagi startaplar, bir martalik konsultatsiya, agentlik xizmatlari. Va tizimni o‘zgartirishga tayyor emas holda «o‘sishni kafolatlang» talabi.",
+      ],
     },
     icp: {
       eyebrow: "Savol",
       title: "O‘zingizni tanidingizmi?",
       cards: [
         {
-          title: "Biznes o‘sadi, ammo siz yong‘in o‘chirayapsiz",
+          title: "Boshqarish o‘rniga yong‘in o‘chiraman",
           description:
-            "Operatsion ritm va rollarni qurib, mikroboshqaruvni bartaraf qilamiz.",
+            "45–90 kun ichida: «qalqon», yagona rasm, muntazam boshqaruv. Siz mikroboshqaruvdan chiqasiz.",
           linkLabel: "Batafsil",
           href: "/icp/operations",
         },
         {
-          title: "Xaosni kengaytirish — zararlarni kengaytirish",
+          title: "Xaosni kengaytirsam — zararlarni kengaytiraman",
           description:
-            "Tor joylarni olib tashlaymiz, jarayonlarni barqaror qilamiz.",
+            "Kengaytirishni boshqariladigan qilamiz: yagona standartlar, raqamlar bo‘yicha bitta haqiqat.",
           linkLabel: "Batafsil",
           href: "/icp/scale",
         },
         {
-          title: "Investor aktivni xohlaydi, egani emas",
+          title: "Investorga mening boshimdagi biznes emas, aktiv kerak",
           description:
-            "Kompaniyani prognozli va shaffof qilamiz.",
+            "«Boshimdagi biznes»ni due diligence dan o‘tadigan aktivga aylantiramiz.",
           linkLabel: "Batafsil",
           href: "/icp/investor",
         },
       ],
+      ctaLabel: "Vaziyatingizni muhokama qilish",
     },
     icpBridge: {
       label: "Javob",
       title: "Qanday yordam beramiz?",
       description:
-        "Maqsadli holatni loyihalaymiz, real holatga sho‘ng‘iramiz, arxitektura qurib amalga oshiramiz. Slaydli maslahat emas — biznes ichida operatsion ish.",
+        "Maqsadli holatni loyihalaymiz, real holatga sho‘ng‘iramiz, arxitektura qurib amalga oshiramiz. «Olib ketish» uchun slaydlar emas — biznes ichida ish.",
       highlightPhrase: "biznes ichida operatsion ish",
+      ctaLabel: "Vazifangizni muhokama qilish",
+    },
+    whatWeChange: {
+      eyebrow: "Bizning 6 tayanchimiz",
+      title: "Biznesda nimani o‘zgartiramiz",
+      pillars: [
+        { title: "Operatsiya", items: ["Egasi qo‘lda boshqaruvdan chiqadi — biznes «o‘z-o‘zidan» ishlaydi", "Boshqaruv ritmi, SOP, org-tuzilma, yig‘ilishlar, dashboardlar, KPI, adaptatsiya chek-listlari"] },
+        { title: "Marketing", items: ["Byudjet «yo‘qqa» ketmaydi — mijoz narxi va sizilishlar ko‘rinadi", "Skvoznoy analitika, kanal auditi, bazalarga egalik"] },
+        { title: "Savdo", items: ["Natija «yulduz»larga bog‘liq emas — yangi menejer 2–4 haftada natijaga erishadi", "Skriptlar, reglamentlar, CRM, voronka, lead ishlovi"] },
+        { title: "Moliya", items: ["«Pulim qayerda?» — halol javob, qarorlar raqamlar asosida", "Boshqaruv hisobi, plan-fakt, to‘lov kalendari, yo‘nalishlar bo‘yicha hisob"] },
+        { title: "HR", items: ["Jamoa qayta ishlab chiqariladi — rollar mustahkam, odam ketishi tizimni buzmaydi", "Lavozim profillari, tizimli yollash, onboarding, baholash, kadr zaxirasi"] },
+        { title: "Yuridik himoya", items: ["Suddan, ma’lumot sizilishidan va bazalarning o‘g‘irlanishidan himoya", "NDA, mehnat shartnomalari, lavozim tavsiflari, shaxsiy ma’lumotlarga rozilik, pudratchilar bilan shartnomalar"] },
+      ],
+    },
+    whatYouGet: {
+      eyebrow: "Natija",
+      title: "Bilanishdan nima olasiz",
+      items: [
+        "Biznes sizsiz 24/7 ishlaydi — avtonom va himoyalangan aktiv",
+        "Hech kim almashtirilmas emas — tizim qayta ishlab chiqariladi, odam ketishi to‘xtov emas",
+        "Siz raqamlar va ritm orqali boshqarasiz (10 soat/haftagacha), operatsiyada emas",
+        "Leadlar, savdo va marja boshqariladi — «ishlashini umid qilamiz» emas",
+        "O‘sish boshqariladigan va qayta ishlab chiqariladigan",
+        "Bosqichma-bosqich: avval kritik risklar, keyin standartlar",
+      ],
     },
     process: {
       eyebrow: "Yondashuv",
@@ -309,23 +346,36 @@ export const uz: Dictionary = {
         {
           title: "Loyihalaymiz",
           description:
-            "Maqsadli holat va yechim arxitekturasini aniqlaymiz. «Qanday qilish kerak» emas — sizning biznesingizga o‘lcham, jamoa va ambitsiyaga qarab.",
+            "Maqsadli holat va arxitektura aniqlaymiz. «Qanday qilish kerak» emas — biznesingizga nima kerak.",
         },
         {
           title: "Sho‘ng‘iramiz",
           description:
-            "Jarayonlar, moliya, savdo va jamoani tahlil qilamiz. O‘sish nuqtalari, tor joylar va haqiqiy sabablarni topamiz. Shablon yo‘q — faqat sizning ma’lumotlaringiz.",
+            "Jarayonlar, moliya, savdo va jamoani tahlil qilamiz. Tor joylar va haqiqiy sabablarni topamiz.",
         },
         {
           title: "Arxitektura quramiz",
           description:
-            "Boshqaruv ritmi, qoidalar, dashbordlar, mas’uliyat zonalari. Hammasi bitta tizimda, ajratilgan «yaxshilanishlar» emas.",
+            "Ritm, qoidalar, dashbordlar, mas’uliyat zonalari — bitta tizimda, ajratilgan «yaxshilanishlar» emas.",
         },
         {
           title: "Amalga oshiramiz",
           description:
-            "Har kuni o‘zgarishlarni joriy qilamiz, jamoani o‘qitamiz, boshqaruvni topshiramiz. BBI barqarorlik uchun hamkor sifatida qoladi.",
+            "Har kuni joriy qilamiz, jamoani o‘qitamiz, boshqaruvni topshiramiz. Barqarorlik uchun hamkor qolamiz.",
         },
+      ],
+      ctaLabel: "Diagnostikaga yozilish",
+    },
+    whyBbi: {
+      eyebrow: "Farqlanish",
+      title: "Nima uchun BBI",
+      items: [
+        { label: "Agentlik emas", text: "Qo‘l va soat sotmaymiz. Tizim quramiz. Raqibimiz — xaos va boshqarilmaslik, boshqa pudratchilar emas." },
+        { label: "Konsultatsiya emas", text: "«Olib ketish» uchun tavsiya bermaymiz. O‘zimiz joriy qilamiz va nazorat qilamiz. Barqarorlashguncha ichida qolamiz." },
+        { label: "Avtopilot emas", text: "Sizga 10 soat/haftagacha jalb qilish kerak. Raqamlar orqali boshqaruv — siz yo‘qolishingiz emas." },
+        { label: "CEO o‘rni emas", text: "Biznes avtonomligini quramiz, bizga bog‘liqlik emas." },
+        { label: "«30 kun ichida x10» emas", text: "O‘sish boshqariladigan va qayta ishlab chiqariladigan — tizim, sehr emas." },
+        { label: "Operatsion hamkor", text: "6 yo‘nalishni egasi manfaatiga yagona tizimga birlashtiramiz." },
       ],
     },
     casesBlog: {
@@ -333,6 +383,22 @@ export const uz: Dictionary = {
       casesLabel: "Barcha keyslar",
       blogLabel: "Barcha maqolalar",
       readMore: "Batafsil",
+      ctaLabel: "Keysingizni muhokama qilish",
+    },
+    faq: {
+      title: "Tez-tez beriladigan savollar",
+      items: [
+        { q: "Loyiha qancha davom etadi?", a: "Skrining bepul. Keyin: diagnostika → 45+ ish kunlari loyiha → abonent qo‘llab-quvvatlash. Aniq davr o‘lchamga bog‘liq." },
+        { q: "Uzoqdan ishlaysizmi?", a: "Ha, muntazam tashriflar bilan. Jarayonlarga sho‘ng‘ish uchun mavjudlik kerak." },
+        { q: "Kichik biznes mos keladimi?", a: "Aylanma $30k/oydan va 15+ xodimga qaratamiz. 5 yildan kam biznes yoki PMF startap — odatda yo‘q." },
+        { q: "Agentliklar va maslahatchilardan qanday farqlanasiz?", a: "Soat sotmaymiz (agentlik), «olib ketish» uchun tavsiya bermaymiz (konsultatsiya). O‘zimiz joriy qilamiz va barqarorlashguncha qolamiz." },
+        { q: "Qachon rad etasiz?", a: "Egasi jalb qilinmaydi. Ma’lumotlarga kirish yo‘q. Agentlik modeli kerak. 5 yildan kam biznes yoki startap. Tizimni o‘zgartirishga tayyor emas holda «o‘sishni kafolatlang» kutiladi." },
+      ],
+    },
+    finalCta: {
+      title: "Biznes o‘sadi — boshqaruv yetolmayaptimi? Diagnostikadan boshlang",
+      ctaLabel: "Diagnostikadan boshlash",
+      subtitle: "Haqiqiy nosozlik nuqtalarini tushunish, alomatlarni davolash emas",
     },
     pillars: {
       title: "Qalqon. Lever. Tizim.",

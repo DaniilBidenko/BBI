@@ -8,6 +8,7 @@ type HeroSectionProps = {
   ctaLabel: string;
   ctaHref: string;
   secondaryLabel: string;
+  secondaryHref?: string;
 };
 
 export function HeroSection({
@@ -17,6 +18,7 @@ export function HeroSection({
   ctaLabel,
   ctaHref,
   secondaryLabel,
+  secondaryHref,
 }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden pb-16 pt-32">
@@ -31,6 +33,11 @@ export function HeroSection({
           </p>
           <div className="flex flex-wrap items-center gap-4 pt-1">
             <Button href={ctaHref}>{ctaLabel}</Button>
+            {secondaryHref && (
+              <Button href={secondaryHref} variant="ghost">
+                {secondaryLabel}
+              </Button>
+            )}
           </div>
         </div>
         <div className="relative flex min-h-[260px] items-start justify-end md:min-h-[360px]">
@@ -44,9 +51,6 @@ export function HeroSection({
             alt=""
             className="relative h-[280px] w-auto opacity-90 brightness-0 md:h-[360px]"
           />
-        </div>
-        <div id="hero-details" className="sr-only">
-          {secondaryLabel}
         </div>
       </Container>
     </section>

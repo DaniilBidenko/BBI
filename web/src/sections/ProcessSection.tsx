@@ -1,10 +1,13 @@
 import { Container } from "@/components/Container";
+import { CtaBlock } from "@/components/CtaBlock";
 import type { HomeStep } from "@/content/dictionaries/types";
 
 type ProcessSectionProps = {
   eyebrow: string;
   title: string;
   approaches: HomeStep[];
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
 const ICONS: Record<number, string> = {
@@ -18,6 +21,8 @@ export function ProcessSection({
   eyebrow,
   title,
   approaches,
+  ctaLabel,
+  ctaHref,
 }: ProcessSectionProps) {
   return (
     <section id="process" className="relative pt-12 pb-20 md:pt-16 md:pb-24">
@@ -66,6 +71,9 @@ export function ProcessSection({
             </article>
           ))}
         </div>
+        {ctaLabel && ctaHref && (
+          <CtaBlock href={ctaHref} label={ctaLabel} />
+        )}
       </Container>
     </section>
   );

@@ -1,14 +1,17 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { CtaBlock } from "@/components/CtaBlock";
 import type { HomeCard } from "@/content/dictionaries/types";
 
 type IcpSectionProps = {
   eyebrow: string;
   title: string;
   cards: HomeCard[];
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
-export function IcpSection({ eyebrow, title, cards }: IcpSectionProps) {
+export function IcpSection({ eyebrow, title, cards, ctaLabel, ctaHref }: IcpSectionProps) {
   return (
     <section className="relative py-20 md:py-24">
       <Container className="relative mx-auto lg:w-[90%]">
@@ -55,6 +58,9 @@ export function IcpSection({ eyebrow, title, cards }: IcpSectionProps) {
             </article>
           ))}
         </div>
+        {ctaLabel && ctaHref && (
+          <CtaBlock href={ctaHref} label={ctaLabel} />
+        )}
       </Container>
     </section>
   );

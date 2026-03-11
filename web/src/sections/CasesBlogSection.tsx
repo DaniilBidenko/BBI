@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { CtaBlock } from "@/components/CtaBlock";
 import type { CaseStudy } from "@/content/dictionaries/types";
 import type { BlogPost } from "@/content/dictionaries/types";
 
@@ -12,6 +13,8 @@ type CasesBlogSectionProps = {
   cases: CaseStudy[];
   blogPosts: BlogPost[];
   locale: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
 /* 3D isometric icons — hollow, thematic, each unique */
@@ -121,6 +124,8 @@ export function CasesBlogSection({
   cases,
   blogPosts,
   locale,
+  ctaLabel,
+  ctaHref,
 }: CasesBlogSectionProps) {
   const featuredCase = cases[0];
   const posts = blogPosts.slice(0, 2);
@@ -224,6 +229,9 @@ export function CasesBlogSection({
             {blogLabel}
           </Link>
         </div>
+        {ctaLabel && ctaHref && (
+          <CtaBlock href={ctaHref} label={ctaLabel} />
+        )}
       </Container>
     </section>
   );

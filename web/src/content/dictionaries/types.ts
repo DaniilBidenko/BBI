@@ -208,32 +208,66 @@ export type Dictionary = {
       subtitle: string;
       cta: string;
       secondaryCta: string;
+      secondaryCtaHref?: string;
+    };
+    icpIntro: {
+      eyebrow: string;
+      title: string;
+      items: string[];
     };
     icp: {
       eyebrow: string;
       title: string;
       cards: HomeCard[];
+      ctaLabel?: string;
     };
     icpBridge: {
       label: string;
       title: string;
       description: string;
       highlightPhrase?: string;
+      ctaLabel?: string;
+    };
+    whatWeChange: {
+      eyebrow: string;
+      title: string;
+      pillars: { title: string; items: string[] }[];
+    };
+    whatYouGet: {
+      eyebrow: string;
+      title: string;
+      items: string[];
     };
     process: {
       eyebrow: string;
       title: string;
       approaches: HomeStep[];
+      ctaLabel?: string;
+    };
+    whyBbi: {
+      eyebrow: string;
+      title: string;
+      items: { label: string; text: string }[];
     };
     casesBlog: {
       title: string;
       casesLabel: string;
       blogLabel: string;
       readMore: string;
+      ctaLabel?: string;
     };
     pillars: {
       title: string;
       items: HomePillar[];
+    };
+    faq: {
+      title: string;
+      items: { q: string; a: string }[];
+    };
+    finalCta: {
+      title: string;
+      ctaLabel: string;
+      subtitle: string;
     };
     position: {
       title: string;

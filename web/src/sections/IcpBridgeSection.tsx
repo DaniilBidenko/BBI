@@ -1,11 +1,14 @@
 import type { ReactNode } from "react";
 import { Container } from "@/components/Container";
+import { CtaBlock } from "@/components/CtaBlock";
 
 type IcpBridgeSectionProps = {
   label: string;
   title: string;
   description: string;
   highlightPhrase?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
 function highlightPhraseInText(
@@ -48,6 +51,8 @@ export function IcpBridgeSection({
   title,
   description,
   highlightPhrase,
+  ctaLabel,
+  ctaHref,
 }: IcpBridgeSectionProps) {
   return (
     <section className="relative pt-20 pb-12 md:pt-24 md:pb-16">
@@ -82,6 +87,9 @@ export function IcpBridgeSection({
             </div>
           </div>
         </article>
+        {ctaLabel && ctaHref && (
+          <CtaBlock href={ctaHref} label={ctaLabel} />
+        )}
       </Container>
     </section>
   );
