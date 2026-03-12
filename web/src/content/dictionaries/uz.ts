@@ -6,7 +6,7 @@ export const uz: Dictionary = {
       { label: "Bosh sahifa", href: "/" },
       { label: "BBI haqida", href: "/about" },
       { label: "Qanday ishlaymiz", href: "/work" },
-      { label: "Кейslar", href: "/cases" },
+      { label: "Keyslar", href: "/cases" },
       { label: "Blog", href: "/blog" },
       { label: "Aloqa", href: "/contacts" },
     ],
@@ -15,16 +15,16 @@ export const uz: Dictionary = {
   work: {
     hero: {
       eyebrow: "Ish modeli",
-      title: "6 tayanch: bitta tizim, xizmatlar to‘plami emas",
+      title: "6 tayanch: bitta tizim, xizmatlar to'plami emas",
       description:
-        "Biz operatsiyani marketingdan, marketingni moliyadan ajratib sotmaymiz. Biznes — bu tizim. Bir tayanchdagi teshik boshqalarini ham qulatadi. BBI olti yo‘nalishga bir vaqtning o‘zida kiradi va yagona boshqaruv konturini quradi.",
+        "Biz operatsiyani marketingdan, marketingni moliyadan ajratib sotmaymiz. Biznes — bu tizim. Bir tayanchdagi teshik boshqalarini ham qulatadi. BBI olti yo'nalishga bir vaqtning o'zida kiradi va yagona boshqaruv konturini quradi.",
       ctaLabel: "6 BBI TAYANCHI",
       ctaHint: "Tayanchlar sahifasini ochish",
     },
     pillarsIntro: {
       title: "BBI tizimi",
       description:
-        "BBI oltita yo‘nalishni egalar manfaatiga bo‘ysunadigan yagona tizimga birlashtiradi. Bu alohida sotib olinadigan «xizmatlar» emas — barqaror va himoyalangan biznes‑aktivni ushlab turuvchi oltita tayanchdir. Barqarorlik — olti tayanchning natijasi.",
+        "BBI oltita yo'nalishni egalar manfaatiga bo'ysunadigan yagona tizimga birlashtiradi. Bu alohida sotib olinadigan «xizmatlar» emas — barqaror va himoyalangan biznes‑aktivni ushlab turuvchi oltita tayanchdir. Barqarorlik — olti tayanchning natijasi.",
       detailsLabel: "Batafsil",
     },
     pillars: [
@@ -36,14 +36,14 @@ export const uz: Dictionary = {
         summary:
           "Boshqaruv ritmi, SOP, org‑tuzilma, KPI panellari va ijro nazorati.",
         details: [
-          "Boshqaruv ritmi va muntazam yig‘ilishlar.",
-          "SOP, chek‑listlar, rollar va mas’uliyat.",
+          "Boshqaruv ritmi va muntazam yig'ilishlar.",
+          "SOP, chek‑listlar, rollar va mas'uliyat.",
           "Dashboardlar, muddat va sifat nazorati.",
         ],
         result:
-          "Biznes ritm va qoidalarga ko‘ra ishlaydi, kayfiyatga emas.",
+          "Biznes ritm va qoidalarga ko'ra ishlaydi, kayfiyatga emas.",
         broken:
-          "Yong‘in o‘chirish, xaos, qo‘lda boshqaruv va odamga bog‘liqlik.",
+          "Yong'in o'chirish, xaos, qo'lda boshqaruv va odamga bog'liqlik.",
         actions:
           "Org‑tuzilma, reglamentlar, ritm va nazoratni quramiz.",
       },
@@ -57,12 +57,12 @@ export const uz: Dictionary = {
         details: [
           "Kanal iqtisodi va shaffof byudjet.",
           "Skvoznoy analitika va audit.",
-          "Byudjetsiz yo‘qotishlarsiz barqaror talab.",
+          "Byudjetsiz yo'qotishlarsiz barqaror talab.",
         ],
         result:
-          "LID va mijoz narxi aniq, o‘sish boshqariladi.",
+          "LID va mijoz narxi aniq, o'sish boshqariladi.",
         broken:
-          "Byudjet «yo‘qoladi», prognoz va nazorat yo‘q.",
+          "Byudjet «yo'qoladi», prognoz va nazorat yo'q.",
         actions:
           "Analitika, voronka, byudjet va metrikalarni sozlaymiz.",
       },
@@ -79,11 +79,11 @@ export const uz: Dictionary = {
           "Xodim almashsa ham natija saqlanadi.",
         ],
         result:
-          "Savdo prognozli va odamga bog‘liq emas.",
+          "Savdo prognozli va odamga bog'liq emas.",
         broken:
-          "«Yulduz»larga bog‘liqlik, jamoa almashsa natija tushadi.",
+          "«Yulduz»larga bog'liqlik, jamoa almashsa natija tushadi.",
         actions:
-          "Savdo tizimi, reglamentlar, o‘qitish va nazoratni quramiz.",
+          "Savdo tizimi, reglamentlar, o'qitish va nazoratni quramiz.",
       },
       {
         key: "finance",
@@ -98,9 +98,9 @@ export const uz: Dictionary = {
           "Kesh‑flow intizomi va risk nazorati.",
         ],
         result:
-          "Egasi real foydani ko‘radi va qarorlarni raqamlarga tayaydi.",
+          "Egasi real foydani ko'radi va qarorlarni raqamlarga tayaydi.",
         broken:
-          "«Bitta haqiqat» yo‘q, kassa uzilishlari, ko‘r joylar.",
+          "«Bitta haqiqat» yo'q, kassa uzilishlari, ko'r joylar.",
         actions:
           "Moliya modeli, hisobot va nazorat qoidalarini quramiz.",
       },
@@ -113,13 +113,13 @@ export const uz: Dictionary = {
           "Tizimli yollash, onboarding, baholash va kadr zaxirasi.",
         details: [
           "Lavozim profili va yollash standartlari.",
-          "Onboarding, o‘qitish, mentoring.",
-          "Baholash tizimi va kadrlar o‘sishi.",
+          "Onboarding, o'qitish, mentoring.",
+          "Baholash tizimi va kadrlar o'sishi.",
         ],
         result:
-          "Jamoa barqaror, rollar mustahkam, o‘sish tizimni buzmaydi.",
+          "Jamoa barqaror, rollar mustahkam, o'sish tizimni buzmaydi.",
         broken:
-          "Kadrlar oqimi, tartibsiz yollash va odamga bog‘liqlik.",
+          "Kadrlar oqimi, tartibsiz yollash va odamga bog'liqlik.",
         actions:
           "HR jarayonlari va rol profillarini quramiz.",
       },
@@ -129,7 +129,7 @@ export const uz: Dictionary = {
         group: "Shield",
         groupLabel: "Qalqon",
         summary:
-          "Aktiv himoyasi, shartnomalar, IP va ma’lumot xavfsizligi.",
+          "Aktiv himoyasi, shartnomalar, IP va ma'lumot xavfsizligi.",
         details: [
           "Shartnoma bazasi va ownership himoyasi.",
           "Xavfsizlik siyosatlari va personal data.",
@@ -145,24 +145,24 @@ export const uz: Dictionary = {
     ],
     results: {
       title: "Qimmatli yakuniy natija (QYN)",
-      description: "Har bir tayanch bo‘yicha egaga beriladigan natija.",
+      description: "Har bir tayanch bo'yicha egaga beriladigan natija.",
       badge: "QYN",
     },
     problems: {
-      title: "Tayanch «sinса» nima bo‘ladi",
+      title: "Tayanch «sinса» nima bo'ladi",
       description:
-        "Tizim ishlamasa, har yo‘nalishda ko‘rinadigan alomatlar.",
+        "Tizim ishlamasa, har yo'nalishda ko'rinadigan alomatlar.",
       badge: "Risklar",
     },
     actions: {
       title: "BBI nima qiladi",
-      description: "Har bir yo‘nalishda tizimni qanday quramiz.",
+      description: "Har bir yo'nalishda tizimni qanday quramiz.",
       badge: "BBI",
     },
     format: {
       title: "Format",
       description:
-        "BBI — vazifa yoki soat sotmaydi. 45+ ish kuniga mo‘ljallangan loyiha va to‘liq sho‘ng‘ish.",
+        "BBI — vazifa yoki soat sotmaydi. 45+ ish kuniga mo'ljallangan loyiha va to'liq sho'ng'ish.",
       zones: [
         {
           label: "Yashil zona (BBI)",
@@ -195,7 +195,7 @@ export const uz: Dictionary = {
         {
           title: "Diagnostika / audit",
           description:
-            "To‘liq rasm: moliya, jarayonlar, jamoa, marketing, savdo.",
+            "To'liq rasm: moliya, jarayonlar, jamoa, marketing, savdo.",
         },
         {
           title: "Tizim dizayni",
@@ -209,12 +209,12 @@ export const uz: Dictionary = {
         },
         {
           title: "Abonent roli",
-          description: "BBI barqarorlik uchun hamkor bo‘lib qoladi.",
+          description: "BBI barqarorlik uchun hamkor bo'lib qoladi.",
         },
       ],
     },
     responsibility: {
-      title: "Mas’uliyat",
+      title: "Mas'uliyat",
       bbiTitle: "BBI javob beradi",
       clientTitle: "Mijoz javob beradi",
       bbi: [
@@ -222,12 +222,12 @@ export const uz: Dictionary = {
         "Aktiv himoyasi va ownership",
         "Standart va takrorlanish (SOP, playbook, RACI)",
         "Moliya shaffofligi va qarorlar logikasi",
-        "O‘zgarishlarni boshqarish",
+        "O'zgarishlarni boshqarish",
       ],
       client: [
         "Ishtirok (haftasiga 10 soatgacha) va tez qarorlar",
-        "Shaffoflik va ma’lumotlarga kirish",
-        "6 tayanch bo‘yicha mas’ullar",
+        "Shaffoflik va ma'lumotlarga kirish",
+        "6 tayanch bo'yicha mas'ullar",
         "Ichki jamoa bilan bajarish",
         "Boshqaruv ritmi va intizom",
       ],
@@ -239,7 +239,7 @@ export const uz: Dictionary = {
         "Tahdidlar nazorati, raqamlarda «bitta haqiqat», egasiz ham ishlaydi.",
       idealTitle: "Target Ideal (etalon)",
       idealDescription:
-        "Biznes barqaror, himoyalangan, takrorlanib o‘sadi va investitsiyaga tayyor.",
+        "Biznes barqaror, himoyalangan, takrorlanib o'sadi va investitsiyaga tayyor.",
     },
     cta: {
       title: "Skriningdan boshlang",
@@ -247,7 +247,7 @@ export const uz: Dictionary = {
       form: {
         name: "Ism",
         phone: "Telefon",
-        message: "Qisqa so‘rov",
+        message: "Qisqa so'rov",
         submit: "Skriningga yozilish",
       },
     },
@@ -257,16 +257,16 @@ export const uz: Dictionary = {
     description:
       "Barqaror va himoyalangan biznes‑aktivni quradigan oltita tayanch.",
     ctaLabel: "Skriningdan boshlash",
-    ctaDescription: "30 daqiqada bo‘shliq va o‘sishni aniqlaymiz.",
+    ctaDescription: "30 daqiqada bo'shliq va o'sishni aniqlaymiz.",
   },
   home: {
     hero: {
       eyebrow: "Brand Promise",
       title: "Biznesingizni avtonom va himoyalangan aktivga aylantiramiz",
       subtitle:
-        "Egalar va CEOlar uchun Operating Partner. Himoya va o‘sish tizimlarini quramiz — egasi tomonida, agentliklar va maslahatchilar emas.",
+        "Egalar va CEOlar uchun Operating Partner. Himoya va o'sish tizimlarini quramiz — egasi tomonida, agentliklar va maslahatchilar emas.",
       cta: "Diagnostikadan boshlash",
-      secondaryCta: "Keyslarni ko‘rish",
+      secondaryCta: "Keyslarni ko'rish",
       secondaryCtaHref: "/cases",
     },
     icpIntro: {
@@ -282,11 +282,11 @@ export const uz: Dictionary = {
     },
     icp: {
       eyebrow: "Savol",
-      title: "O‘zingizni tanidingizmi?",
+      title: "O'zingizni tanidingizmi?",
       subtitle: "Uch odatiy stsenariy. O'zingizni tanisangiz — pastda qanday yordam berishimizni tushuntiramiz.",
       cards: [
         {
-          title: "Boshqarish o‘rniga yong‘in o‘chiraman",
+          title: "Boshqarish o'rniga yong'in o'chiraman",
           description:
             "Biznes sizsiz ishlamaydi. Qarorlar, yong'inlar, qo'lda boshqaruv — har kuni. Strategiya uchun vaqt yo'q.",
           linkLabel: "Batafsil",
@@ -313,7 +313,7 @@ export const uz: Dictionary = {
       label: "Javob",
       title: "Qanday yordam beramiz?",
       description:
-        "Maqsadli holatni loyihalaymiz, real holatga sho‘ng‘iramiz, arxitektura qurib amalga oshiramiz. «Olib ketish» uchun slaydlar emas — biznes ichida ish.",
+        "Maqsadli holatni loyihalaymiz, real holatga sho'ng'iramiz, arxitektura qurib amalga oshiramiz. «Olib ketish» uchun slaydlar emas — biznes ichida ish.",
       highlightPhrase: "biznes ichida ish",
       items: [
         "Haqiqiy nosozlik nuqtalarini diagnostika qilamiz — moliya, jarayonlar, savdo, jamoa",
@@ -340,10 +340,10 @@ export const uz: Dictionary = {
       title: "Bilanishdan nima olasiz",
       items: [
         "Biznes sizsiz 24/7 ishlaydi — avtonom va himoyalangan aktiv",
-        "Hech kim almashtirilmas emas — tizim qayta ishlab chiqariladi, odam ketishi to‘xtov emas",
+        "Hech kim almashtirilmas emas — tizim qayta ishlab chiqariladi, odam ketishi to'xtov emas",
         "Siz raqamlar va ritm orqali boshqarasiz (10 soat/haftagacha), operatsiyada emas",
         "Leadlar, savdo va marja boshqariladi — «ishlashini umid qilamiz» emas",
-        "O‘sish boshqariladigan va qayta ishlab chiqariladigan",
+        "O'sish boshqariladigan va qayta ishlab chiqariladigan",
         "Bosqichma-bosqich: avval kritik risklar, keyin standartlar",
       ],
     },
@@ -357,19 +357,19 @@ export const uz: Dictionary = {
             "Maqsadli holat va arxitektura aniqlaymiz. «Qanday qilish kerak» emas — biznesingizga nima kerak.",
         },
         {
-          title: "Sho‘ng‘iramiz",
+          title: "Sho'ng'iramiz",
           description:
             "Jarayonlar, moliya, savdo va jamoani tahlil qilamiz. Tor joylar va haqiqiy sabablarni topamiz.",
         },
         {
           title: "Arxitektura quramiz",
           description:
-            "Ritm, qoidalar, dashbordlar, mas’uliyat zonalari — bitta tizimda, ajratilgan «yaxshilanishlar» emas.",
+            "Ritm, qoidalar, dashbordlar, mas'uliyat zonalari — bitta tizimda, ajratilgan «yaxshilanishlar» emas.",
         },
         {
           title: "Amalga oshiramiz",
           description:
-            "Har kuni joriy qilamiz, jamoani o‘qitamiz, boshqaruvni topshiramiz. Barqarorlik uchun hamkor qolamiz.",
+            "Har kuni joriy qilamiz, jamoani o'qitamiz, boshqaruvni topshiramiz. Barqarorlik uchun hamkor qolamiz.",
         },
       ],
       ctaLabel: "Diagnostikaga yozilish",
@@ -378,12 +378,12 @@ export const uz: Dictionary = {
       eyebrow: "Farqlanish",
       title: "Nima uchun BBI",
       items: [
-        { label: "Agentlik emas", text: "Qo‘l va soat sotmaymiz. Tizim quramiz. Raqibimiz — xaos va boshqarilmaslik, boshqa pudratchilar emas." },
-        { label: "Konsultatsiya emas", text: "«Olib ketish» uchun tavsiya bermaymiz. O‘zimiz joriy qilamiz va nazorat qilamiz. Barqarorlashguncha ichida qolamiz." },
-        { label: "Avtopilot emas", text: "Sizga 10 soat/haftagacha jalb qilish kerak. Raqamlar orqali boshqaruv — siz yo‘qolishingiz emas." },
-        { label: "CEO o‘rni emas", text: "Biznes avtonomligini quramiz, bizga bog‘liqlik emas." },
-        { label: "«30 kun ichida x10» emas", text: "O‘sish boshqariladigan va qayta ishlab chiqariladigan — tizim, sehr emas." },
-        { label: "Operatsion hamkor", text: "6 yo‘nalishni egasi manfaatiga yagona tizimga birlashtiramiz." },
+        { label: "Agentlik emas", text: "Qo'l va soat sotmaymiz. Tizim quramiz. Raqibimiz — xaos va boshqarilmaslik, boshqa pudratchilar emas." },
+        { label: "Konsultatsiya emas", text: "«Olib ketish» uchun tavsiya bermaymiz. O'zimiz joriy qilamiz va nazorat qilamiz. Barqarorlashguncha ichida qolamiz." },
+        { label: "Avtopilot emas", text: "Sizga 10 soat/haftagacha jalb qilish kerak. Raqamlar orqali boshqaruv — siz yo'qolishingiz emas." },
+        { label: "CEO o'rni emas", text: "Biznes avtonomligini quramiz, bizga bog'liqlik emas." },
+        { label: "«30 kun ichida x10» emas", text: "O'sish boshqariladigan va qayta ishlab chiqariladigan — tizim, sehr emas." },
+        { label: "Operatsion hamkor", text: "6 yo'nalishni egasi manfaatiga yagona tizimga birlashtiramiz." },
       ],
     },
     casesBlog: {
@@ -396,15 +396,15 @@ export const uz: Dictionary = {
     faq: {
       title: "Tez-tez beriladigan savollar",
       items: [
-        { q: "Loyiha qancha davom etadi?", a: "Skrining bepul. Keyin: diagnostika → 45+ ish kunlari loyiha → abonent qo‘llab-quvvatlash. Aniq davr o‘lchamga bog‘liq." },
-        { q: "Uzoqdan ishlaysizmi?", a: "Ha, muntazam tashriflar bilan. Jarayonlarga sho‘ng‘ish uchun mavjudlik kerak." },
-        { q: "Kichik biznes mos keladimi?", a: "Aylanma $30k/oydan va 15+ xodimga qaratamiz. 5 yildan kam biznes yoki PMF startap — odatda yo‘q." },
-        { q: "Agentliklar va maslahatchilardan qanday farqlanasiz?", a: "Soat sotmaymiz (agentlik), «olib ketish» uchun tavsiya bermaymiz (konsultatsiya). O‘zimiz joriy qilamiz va barqarorlashguncha qolamiz." },
-        { q: "Qachon rad etasiz?", a: "Egasi jalb qilinmaydi. Ma’lumotlarga kirish yo‘q. Agentlik modeli kerak. 5 yildan kam biznes yoki startap. Tizimni o‘zgartirishga tayyor emas holda «o‘sishni kafolatlang» kutiladi." },
+        { q: "Loyiha qancha davom etadi?", a: "Skrining bepul. Keyin: diagnostika → 45+ ish kunlari loyiha → abonent qo'llab-quvvatlash. Aniq davr o'lchamga bog'liq." },
+        { q: "Uzoqdan ishlaysizmi?", a: "Ha, muntazam tashriflar bilan. Jarayonlarga sho'ng'ish uchun mavjudlik kerak." },
+        { q: "Kichik biznes mos keladimi?", a: "Aylanma $30k/oydan va 15+ xodimga qaratamiz. 5 yildan kam biznes yoki PMF startap — odatda yo'q." },
+        { q: "Agentliklar va maslahatchilardan qanday farqlanasiz?", a: "Soat sotmaymiz (agentlik), «olib ketish» uchun tavsiya bermaymiz (konsultatsiya). O'zimiz joriy qilamiz va barqarorlashguncha qolamiz." },
+        { q: "Qachon rad etasiz?", a: "Egasi jalb qilinmaydi. Ma'lumotlarga kirish yo'q. Agentlik modeli kerak. 5 yildan kam biznes yoki startap. Tizimni o'zgartirishga tayyor emas holda «o'sishni kafolatlang» kutiladi." },
       ],
     },
     finalCta: {
-      title: "Biznes o‘sadi — boshqaruv yetolmayaptimi? Diagnostikadan boshlang",
+      title: "Biznes o'sadi — boshqaruv yetolmayaptimi? Diagnostikadan boshlang",
       ctaLabel: "Diagnostikadan boshlash",
       subtitle: "Haqiqiy nosozlik nuqtalarini tushunish, alomatlarni davolash emas",
     },
@@ -416,7 +416,7 @@ export const uz: Dictionary = {
           description:
             "Aktivlarni himoya qilish, ownership, yuridik himoya, shaffof moliya.",
           details:
-            "Qalqon — bu «umumiy xavfsizlik» emas. Aktivlar va nazoratni kompaniyaga o‘tkazish haqida — biznes odamlar, pudratchilar va «virtual raqamlar»dan mustaqil bo‘lishi uchun. Biz «tinchlantirmaymiz» — zaifliklarni ochamiz va tizim bilan yopamiz: ownership, yuridik himoya, shaffof moliya, kadrlar barqarorligi.",
+            "Qalqon — bu «umumiy xavfsizlik» emas. Aktivlar va nazoratni kompaniyaga o'tkazish haqida — biznes odamlar, pudratchilar va «virtual raqamlar»dan mustaqil bo'lishi uchun. Biz «tinchlantirmaymiz» — zaifliklarni ochamiz va tizim bilan yopamiz: ownership, yuridik himoya, shaffof moliya, kadrlar barqarorligi.",
           linkLabel: "Batafsil",
           href: "/pillars/shield",
         },
@@ -425,7 +425,7 @@ export const uz: Dictionary = {
           description:
             "Operatsion ritm, skvoznoy analitika, «yulduzsiz» savdo tizimi.",
           details:
-            "Lever — «sizni 10 marta kuchaytiramiz» emas (bu xavfli va‘da). O‘lchanadigan natija uchun ta‘sir qilish mumkin bo‘lgan nazorat nuqtalari haqida: operatsion ritm (cadence), skvoznoy analitika, «yulduzsiz» savdo tizimi, standartlar va qayta ishlab chiqarish.",
+            "Lever — «sizni 10 marta kuchaytiramiz» emas (bu xavfli va'da). O'lchanadigan natija uchun ta'sir qilish mumkin bo'lgan nazorat nuqtalari haqida: operatsion ritm (cadence), skvoznoy analitika, «yulduzsiz» savdo tizimi, standartlar va qayta ishlab chiqarish.",
           linkLabel: "Batafsil",
           href: "/pillars/leverage",
         },
@@ -434,7 +434,7 @@ export const uz: Dictionary = {
           description:
             "Rollar mustahkam, jarayonlar standart, odamlar almashsa ham buzilmaydi.",
           details:
-            "Tizim — «qahramonlik» va qo‘lda boshqaruvning qarama-qarshisi. Egаning shaxsiy bosimini boshqaruv ritmi va qoidalar bilan almashtirish. Har bir jarayon tasvirlangan, har bir natija bashorat qilinadigan mexanizm qurish — xodimning ketishi «rejalashtirilgan kompetensiyalarni o‘tkazish», biznes uchun to‘xtov emas.",
+            "Tizim — «qahramonlik» va qo'lda boshqaruvning qarama-qarshisi. Egаning shaxsiy bosimini boshqaruv ritmi va qoidalar bilan almashtirish. Har bir jarayon tasvirlangan, har bir natija bashorat qilinadigan mexanizm qurish — xodimning ketishi «rejalashtirilgan kompetensiyalarni o'tkazish», biznes uchun to'xtov emas.",
           linkLabel: "Batafsil",
           href: "/pillars/system",
         },
@@ -452,14 +452,14 @@ export const uz: Dictionary = {
       text:
         "BBI (Bold Brands International) — Operating Partner (RevOps). Biz biznesga kiramiz, real muammolarni ochamiz va tizim quramiz. Marketing agentligi emas. Konsalting ham emas. «Neytral pudratchi» ham emas.",
       emphasis:
-        "Asosiy fikr: BBI egalar tomonida, pudratchi emas. Neytral pozitsiya yo‘q.",
+        "Asosiy fikr: BBI egalar tomonida, pudratchi emas. Neytral pozitsiya yo'q.",
     },
     principles: {
-      title: "Asosiy e’tiqodlar",
+      title: "Asosiy e'tiqodlar",
       items: [
-        { text: "Biz biznes uchun to‘liq mas’ul bo‘lgan egalar va CEO tomoni." },
-        { text: "Biz halol tahlil tarafdorimiz, og‘riqli bo‘lsa ham." },
-        { text: "Tizim iste’doddan muhim." },
+        { text: "Biz biznes uchun to'liq mas'ul bo'lgan egalar va CEO tomoni." },
+        { text: "Biz halol tahlil tarafdorimiz, og'riqli bo'lsa ham." },
+        { text: "Tizim iste'doddan muhim." },
         { text: "Shaxsiy tajriba. Tahdidni yuzma-yuz bilamiz." },
       ],
     },
@@ -467,10 +467,10 @@ export const uz: Dictionary = {
       title: "Biz qarshimiz",
       items: [
         { text: "Biz «havo gap»ga qarshimiz." },
-        { text: "Biz «xizmat» o‘rniga tizimsizlikka qarshimiz." },
-        { text: "Biz odamga bog‘liqlikka qarshimiz." },
+        { text: "Biz «xizmat» o'rniga tizimsizlikka qarshimiz." },
+        { text: "Biz odamga bog'liqlikka qarshimiz." },
         { text: "Biz shaffof emaslikka qarshimiz." },
-        { text: "Biz doimiy «yong‘in o‘chirish»ga qarshimiz." },
+        { text: "Biz doimiy «yong'in o'chirish»ga qarshimiz." },
       ],
     },
     team: {
@@ -500,11 +500,11 @@ export const uz: Dictionary = {
     },
     cta: {
       title: "Mos kelamizmi?",
-      description: "Skriningga yoziling — bo‘shliq va o‘sishni aniqlaymiz.",
+      description: "Skriningga yoziling — bo'shliq va o'sishni aniqlaymiz.",
       form: {
         name: "Ism",
         phone: "Telefon",
-        message: "Qisqa so‘rov",
+        message: "Qisqa so'rov",
         submit: "Skriningga yozilish",
       },
     },
@@ -517,12 +517,12 @@ export const uz: Dictionary = {
       eyebrow: "Haqiqiy natijalar",
       title: "Kейslar: tizimli yondashuv amalda",
       description:
-        "«Reklama qildik» emas, balki himoya, tayanch va tizimni qanday qurganimizni ko‘rsatamiz. Kontekst, muammo, BBI harakati va o‘lchanadigan natija.",
+        "«Reklama qildik» emas, balki himoya, tayanch va tizimni qanday qurganimizni ko'rsatamiz. Kontekst, muammo, BBI harakati va o'lchanadigan natija.",
     },
     filters: {
       industry: "Sanoat",
-      direction: "Yo‘nalish",
-      scale: "O‘lcham",
+      direction: "Yo'nalish",
+      scale: "O'lcham",
       all: "Barchasi",
     },
     filterLabels: {
@@ -542,7 +542,7 @@ export const uz: Dictionary = {
       enterprise: "Enterprise",
     },
     card: { readMore: "Batafsil" },
-    noResults: "Tanlangan filterlar bo‘yicha kейslar topilmadi.",
+    noResults: "Tanlangan filterlar bo'yicha kейslar topilmadi.",
     caseDetail: {
       backToCases: "← Keyslar",
       context: "Kontekst",
@@ -551,88 +551,46 @@ export const uz: Dictionary = {
       result: "Natija",
       artifacts: "Artefaktlar",
       bbiRole: "BBI roli",
+      infographicForecast: "Oldin",
+      infographicResult: "Natija",
+      infographicTitle: "Raqamlarda natijalar",
     },
     items: [
       {
-        slug: "retail-revops",
-        company: "Chakana (NDA)",
-        industry: "Chakana",
-        keyResult: "LTV +34%, konversiya +22%",
-        excerpt: "12 do‘kon: raqamlarda yagona haqiqat va boshqariladigan vornka.",
-        tags: ["Operatsiya", "Savdo", "Marketing"],
-        industryFilter: "retail",
-        directionFilter: "operations",
+        slug: "med-lab-sla",
+        company: "Tibbiy laboratoriya (NDA)",
+        industry: "Sog'liqni saqlash xizmatlari",
+        keyResult: "SLA 87%, baza reaktivatsiyasi 34%, konversiya +21%",
+        excerpt: "Tizimli xatolikni yakka holdan ajratish: tijoriy blokni qayta loyihaladik, rollarni ajratdik — boshqariladigan vornka va bashorat qilinadigan pipeline.",
+        tags: ["Savdo", "CRM va SLA", "Operatsiya"],
+        industryFilter: "services",
+        directionFilter: "sales",
         scaleFilter: "mid",
         context:
-          "12 do‘kon tarmog‘i, 450 mln yillik daromad. Egasi yagona qaror markazi. Moliya Excelda, CRM siz savdo.",
+          "Tibbiy laboratoriya. CRM sozlangan, SLA belgilangan, reklama kampaniyalari ishlaydi. Ammo samaradorlikni tahlil qilganda: lidlar ko'pchiligi «yo'qolgan», vornka boshqarilmaydi. Menedjerlar: «marketing noto'g'ri lidlar olib keldi, ular sovuq». Audit ko'rsatdi: SLA bajarilmagan, kechikishlar yig'ilgan, rahbar xabarnomalarga javob bermagan. Lidlarning 31% trigger so'rovlar bilan kontaktlar (ishlash mumkin va kerak). 59% faqat avtojavob oldi — hech kim ishlamadi. Muammo «lid sifatida» emas, balki lidlar bilan ishlash jarayoni mavjud emas edi.",
         problem:
-          "Raqamlarda tartibsizlik, vornka noaniq, egaga bog‘liqlik. Har do‘kon alohida hisoblagan.",
+          "Ijrochilarni tanlashda tizimli xato: savdo menedjerlari o'rniga admin funktsiyasi bo'lgan odamlar — muntazam mijozlardan so'rovlarni qabul qilish, ijroga uzatish, status bo'yicha kuzatish. Koordinator/admin roli, savdo emas. Admin reaktiv: oqimni qabul qilish, shoshilinchni yopish. Savdo proaktiv: suhbat olib borish, kontaktga qaytarish, rad etishlarga chiday olish. Operatsion yuk ostida admin har doim «shoshilinch»ni tanlaydi, savdo «qoldiq»da. Motivatsiya masalasi emas, funktsiyalar arxitekturasi masalasi.",
         whatBbiDid: [
-          "CRM + vornka analitikasi bilan birlashtirilgan ma’lumot konturi qurildi.",
-          "Qabul, hisob va nazorat uchun SOP joriy etildi.",
-          "Boshqaruv ritmi va vornka dashbordlari qurildi.",
+          "Funktsiyalarni ajratdik va har bir rol uchun o'lchanadigan natijani belgiladik — odamlarni «zo'rlash» o'rniga.",
+          "Tijoriy blokni «passiv buyurtma kutilishi» modelidan daromadni boshqarishga o'tkazdik: ekspansiya (yangi mijozlar) + LTV maksimallashtirish (baza rivoji).",
+          "Rollarni joriy qildik: Hunter (yangi mijozlar), Farmer (buyurtma chastotasi, saqlash, reaktivatsiya), KAM (asosiy hisoblar), Administratorlar (operatsiya savdoni almashtirmasdan).",
+          "Har bir rolni «bitta natija»da qildik — savdo ishlab chiqarish o'tini bilan yutilgan aralashuvni olib tashladik.",
         ],
         resultNumbers: [
-          { before: "Lid→savdo 12%", after: "14.6%" },
-          { before: "Tizimsiz LTV", after: "8 oyda +34%" },
+          { before: "SLA bajarilmagan, kechikishlar odat", after: "SLA 87%", beforeValue: 15, afterValue: 87, label: "SLA" },
+          { before: "Konversiya: lidlar avtojavobda o'ldi", after: "+21%", beforeValue: 5, afterValue: 26, label: "Konversiya" },
+          { before: "Bazaga javobgar rol siz buyurtma chastotasi", after: "birinchi oy +23%", beforeValue: 10, afterValue: 33, label: "Buyurtma chastotasi" },
+          { before: "4–6 oy uxlab yotgan baza qaytishsiz", after: "34% reaktivatsiya qilindi", beforeValue: 0, afterValue: 34, label: "Baza reaktivatsiyasi" },
         ],
-        artifacts: ["Qabul SOP", "Vornka dashbord", "Do‘kon RACI"],
+        artifacts: [
+          "Hunter / Farmer / KAM / Admin roli struktura",
+          "CRM da SLA nazorati",
+          "Lid qayta ishlash rejalari",
+          "Baza reaktivatsiya jarayoni",
+        ],
         bbiRole:
-          "Ownership: egasi qo‘lda nazoratsiz ishlaydigan tizim oldi. BBI «reklama qilmadi», balki boshqaruv konturini qurdi.",
-      },
-      {
-        slug: "fandb-operations",
-        company: "HoReCa (NDA)",
-        industry: "HoReCa / F&B",
-        keyResult: "Marja +18%, oqim −60%",
-        excerpt: "5 ta joy: aniq xarajat va xarid nazorati.",
-        tags: ["Operatsiya", "Moliya"],
-        industryFilter: "fAndB",
-        directionFilter: "operations",
-        scaleFilter: "smb",
-        context:
-          "5 ta ovqatlanish joyi. Qo‘lda hisob, xarajat nazorati yo‘q, xarid oqimlari.",
-        problem:
-          "Xarajat noaniq, xaridor va oshpazga bog‘liqlik. Asosiy odamlar ketganda tizim «singan».",
-        whatBbiDid: [
-          "Standart hisob, xarid va xarajat nazoratini sozladik.",
-          "Oshxona va ombor uchun chek-list va SOP joriy etildi.",
-        ],
-        resultNumbers: [
-          { before: "Marja 22%", after: "26%" },
-          { before: "Oqimlar yozilmagan", after: "60% kamaydi" },
-        ],
-        artifacts: ["Xarid SOP", "Oshxona chek-list", "Marja dashbord"],
-        bbiRole:
-          "Ownership: egasi raqamlarni real vaqtda ko‘radi. BBI tizimni qurdi, boshqaruvni almashtirmadi.",
-      },
-      {
-        slug: "ecom-growth",
-        company: "E-commerce (NDA)",
-        industry: "E-commerce",
-        keyResult: "CAC −25%, ROAS +40%",
-        excerpt: "D2C brend: kanal iqtisodiyoti va boshqariladigan o‘sish.",
-        tags: ["Marketing", "Savdo"],
-        industryFilter: "ecom",
-        directionFilter: "marketing",
-        scaleFilter: "mid",
-        context:
-          "D2C brend, 80 mln daromad. Kanal iqtisodiyotisiz reklama byudjeti.",
-        problem:
-          "Pul «hech qayerda» ketdi, CAC oshdi, ROAS tushdi. Yagona vornka va skvoz analitika yo‘q.",
-        whatBbiDid: [
-          "Skvoz analitika va kanal auditi ishga tushirildi.",
-          "Kanal bo‘yicha lid va LTV iqtisodiyoti qurildi.",
-          "CRM va savdo vornkasi standartlashtirildi.",
-        ],
-        resultNumbers: [
-          { before: "CAC 3200₽", after: "2400₽" },
-          { before: "ROAS 2.1", after: "2.94" },
-        ],
-        artifacts: ["Skvoz analitika", "Kanal dashbord", "Vornka RACI"],
-        bbiRole:
-          "Ownership: marketing va savdo o‘lchanadigan metrikali tizim sifatida ishlaydi. BBI «byudjet to‘kalmadi», balki boshqariladigan o‘sishni qurdi.",
-      },
+          "Tizimlini yakka holdan ajratdik. «Jazolash/o'qitish/KPI ni qattiqlashtirish» o'rniga tizimli sababni bartaraf ettik — noto'g'ri loyihalangan rollar. Natija: boshqariladigan vornka, bashorat qilinadigan daromad pipeline, kassa bo'shliqlari ruxsat etilgan diapazonda. BBI tijoriy blokni qayta loyihaladi, boshqaruvni imitatsiya qilmadi.",
+      }
     ],
   },
   blog: {

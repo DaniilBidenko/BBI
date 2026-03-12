@@ -146,7 +146,16 @@ export type CaseStudy = {
   context: string;
   problem: string;
   whatBbiDid: string[];
-  resultNumbers: { before: string; after: string }[];
+  resultNumbers: {
+    before: string;
+    after: string;
+    /** Для инфографики: числовое значение «до» (0–100) */
+    beforeValue?: number;
+    /** Для инфографики: числовое значение «после» (0–100) */
+    afterValue?: number;
+    /** Краткая подпись метрики для графика (напр. «SLA», «Конверсия») */
+    label?: string;
+  }[];
   artifacts: string[];
   bbiRole: string;
 };
@@ -191,6 +200,9 @@ export type CasesPage = {
     result: string;
     artifacts: string;
     bbiRole: string;
+    infographicForecast: string;
+    infographicResult: string;
+    infographicTitle: string;
   };
 };
 

@@ -4,6 +4,7 @@ import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/content/dictionaries";
 import { ru } from "@/content/dictionaries/ru";
 import { Container } from "@/components/Container";
+import { CaseResultsInfographic } from "@/components/CaseResultsInfographic";
 import { withLocale } from "@/i18n/paths";
 
 type LocalePageProps = {
@@ -134,50 +135,71 @@ export default async function CaseDetailPage({ params }: LocalePageProps) {
             </div>
           </article>
 
-          <div className="grid gap-6 lg:grid-cols-2">
-            <article className="bbi-card overflow-hidden rounded-2xl border border-[#ff2b44]/15 bg-gradient-to-br from-[#ff2b44]/5 via-[#1b1c21] to-[#1b1c21] p-6 md:p-8">
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#ff2b44]/20 text-[#ff2b44]">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
-                    <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-                <h2 className="text-sm font-semibold uppercase tracking-wider text-[#ff2b44]">
-                  {caseDetail.result}
-                </h2>
+          <div className="space-y-6">
+            {/* Инфографика и Результат — равные колонки, визуально сбалансированы */}
+            <div className="grid min-w-0 gap-6 lg:grid-cols-2">
+              <div className="min-w-0">
+                <CaseResultsInfographic
+                  items={item.resultNumbers}
+                  forecastLabel={caseDetail.infographicForecast}
+                  resultLabel={caseDetail.infographicResult}
+                  title={caseDetail.infographicTitle}
+                />
               </div>
-              <div className="mt-6 space-y-5">
-                {item.resultNumbers.map((r, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-4 rounded-xl border border-white/[0.04] bg-white/[0.02] px-4 py-4"
-                  >
-                    <span className="text-sm text-white/55">{r.before}</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5 shrink-0 text-[#ff2b44]/70">
-                      <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <span className="text-base font-bold text-[#ff2b44] md:text-lg">
-                      {r.after}
-                    </span>
+              <div className="min-w-0">
+                <div className="rounded-2xl border border-[#ff2b44]/15 bg-[#1b1c21] p-6 shadow-[0_12px_40px_rgba(0,0,0,0.5),0_0_60px_-12px_rgba(255,43,68,0.15),inset_0_1px_0_rgba(255,255,255,0.04)] md:p-8">
+                  <div className="flex items-center gap-2.5">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#ff2b44]/15 text-[#ff2b44]">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+                        <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                    <h2 className="text-xs font-semibold uppercase tracking-[0.28em] text-[#ff2b44]">
+                      {caseDetail.result}
+                    </h2>
                   </div>
-                ))}
+                  <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
+                    {item.resultNumbers.map((r, i) => (
+                      <div
+                        key={i}
+                        className="min-w-0 overflow-hidden rounded-xl border border-white/[0.05] bg-white/[0.02] px-4 py-3"
+                        title={r.before}
+                      >
+                        <div className="flex min-w-0 items-start justify-between gap-2">
+                          <span className="shrink-0 truncate text-xs font-medium uppercase tracking-wider text-white/40">
+                            {r.label ?? ""}
+                          </span>
+                          <span className="min-w-0 shrink truncate text-right text-sm font-bold leading-tight text-[#ff2b44]">
+                            {r.after}
+                          </span>
+                        </div>
+                        <p className="mt-1.5 line-clamp-2 overflow-hidden text-xs leading-snug text-white/45">
+                          {r.before}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </article>
-            <article className="bbi-card rounded-2xl border border-white/[0.06] bg-[#1b1c21] p-6 md:p-8">
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-[#ff2b44]">
+            </div>
+            {/* Артефакты — отдельная строка на всю ширину */}
+            <div className="rounded-2xl border border-white/[0.06] bg-[#1b1c21] p-5 shadow-[0_8px_24px_rgba(0,0,0,0.35)] md:p-6">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-[#ff2b44]">
                 {caseDetail.artifacts}
               </h2>
-              <ul className="mt-4 flex flex-wrap gap-3">
+              <ul className="mt-3 flex flex-wrap gap-2">
                 {item.artifacts.map((a) => (
                   <li
                     key={a}
-                    className="rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white/85"
+                    className="max-w-[min(100%,18rem)] min-w-0 overflow-hidden rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-white/80"
                   >
-                    {a}
+                    <span className="block truncate" title={a}>
+                      {a}
+                    </span>
                   </li>
                 ))}
               </ul>
-            </article>
+            </div>
           </div>
 
           <article className="bbi-card rounded-2xl border border-[#ff2b44]/10 bg-[#14151a] p-6 md:p-8">
