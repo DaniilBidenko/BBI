@@ -262,7 +262,7 @@ export const en: Dictionary = {
   home: {
     hero: {
       eyebrow: "Brand Promise",
-      title: "Shield. Leverage. System. for your business",
+      title: "We turn your business into an autonomous and protected asset",
       subtitle:
         "Operating Partner for owners and CEOs. We build systems of protection and growth — on the owner's side, not agencies or consultants.",
       cta: "Start with diagnostics",
@@ -272,35 +272,37 @@ export const en: Dictionary = {
     icpIntro: {
       eyebrow: "Target audience",
       title: "For whom we work",
-      items: [
-        "Owner in growth — business depends on them. $30k–250k/mo, 15–80 employees, 5+ years. Pain: «Put out fires instead of managing»",
-        "Owner scaling — chaos multiplies. $80k–500k/mo, 40–200 employees. Pain: «Scale chaos — scale losses»",
-        "Owner preparing for investment. $150k–1M+/mo, 80–500+ employees. Pain: «Investor needs an asset, not a business in my head»",
-        "Not for: business under 5 years, startups in PMF, one-off consulting, agency services. Or expecting «guarantee growth» without readiness to change the system.",
+      segments: [
+        { title: "Owner in growth", description: "Business depends on them.", metrics: "$30k–250k/mo · 15–80 people · 5+ yrs", pain: "Put out fires instead of managing" },
+        { title: "Owner scaling", description: "Chaos multiplies.", metrics: "$80k–500k/mo · 40–200 people", pain: "Scale chaos — scale losses" },
+        { title: "Owner preparing for investment", description: "Business as an asset.", metrics: "$150k–1M+/mo · 80–500+ people", pain: "Investor needs an asset, not a business in my head" },
       ],
+      exclude: "Business under 5 years, startups in PMF, one-off consulting, agency services. Or expecting «guarantee growth» without readiness to change the system.",
+      excludeLabel: "Not for",
     },
     icp: {
       eyebrow: "Question",
       title: "Is this you?",
+      subtitle: "Three typical scenarios. If you recognize yourself — below we explain exactly how we help.",
       cards: [
         {
           title: "Put out fires instead of managing",
           description:
-            "Within 45–90 days: «shield», unified picture, regular management. You exit micromanagement.",
+            "Business doesn't run without you. Decisions, fires, manual control — every day. No time for strategy.",
           linkLabel: "Learn more",
           href: "/icp/operations",
         },
         {
           title: "Scale chaos — scale losses",
           description:
-            "We make scaling manageable: unified standards, one truth by numbers, clear management contour.",
+            "Growth multiplies problems. New people, departments, processes — chaos grows with revenue.",
           linkLabel: "Learn more",
           href: "/icp/scale",
         },
         {
           title: "Investor needs an asset, not a business in my head",
           description:
-            "We turn «business in the head» into an asset that passes due diligence.",
+            "You know the business inside out. But the investor wants numbers, structure, transparency — not your head.",
           linkLabel: "Learn more",
           href: "/icp/investor",
         },
@@ -312,7 +314,13 @@ export const en: Dictionary = {
       title: "How do we help?",
       description:
         "We design the target state, immerse in your reality, build the architecture and implement it with you. Not slides «to take away» — work inside the business.",
-      highlightPhrase: "operational work inside the business",
+      highlightPhrase: "work inside the business",
+      items: [
+        "Diagnose real failure points — finance, processes, sales, team",
+        "Design target state for your scale and ambitions",
+        "Implement the system in 45–90 days — we do it ourselves, not recommend",
+        "Hand over control to your team, stay as partner for resilience",
+      ],
       ctaLabel: "Discuss your task",
     },
     whatWeChange: {

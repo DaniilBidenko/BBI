@@ -1,7 +1,7 @@
 import type { ComponentType } from "react";
 import Link from "next/link";
 import { Container } from "@/components/Container";
-import { CtaBlock } from "@/components/CtaBlock";
+import { Button } from "@/components/Button";
 import type { CaseStudy } from "@/content/dictionaries/types";
 import type { BlogPost } from "@/content/dictionaries/types";
 
@@ -215,23 +215,36 @@ export function CasesBlogSection({
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-6 border-t border-black/10 pt-10">
-          <Link
-            href={`/${locale}/cases`}
-            className="text-sm font-medium text-[var(--bbi-muted)] transition hover:text-[var(--bbi-red)]"
-          >
-            {casesLabel}
-          </Link>
-          <Link
-            href={`/${locale}/blog`}
-            className="text-sm font-medium text-[var(--bbi-muted)] transition hover:text-[var(--bbi-red)]"
-          >
-            {blogLabel}
-          </Link>
+        <div className="mt-14 flex flex-col items-center gap-7 border-t border-black/[0.06] pt-10 md:flex-row md:items-center md:justify-between md:gap-12">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <Link
+              href={`/${locale}/cases`}
+              className="group inline-flex items-center gap-2 rounded-xl border border-black/[0.08] bg-white/80 px-5 py-2.5 text-sm font-medium text-[var(--bbi-text)] transition-all hover:border-[var(--bbi-red)]/25 hover:bg-white hover:text-[var(--bbi-red)] hover:shadow-[0_2px_12px_rgba(185,28,28,0.06)]"
+            >
+              {casesLabel}
+              <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <Link
+              href={`/${locale}/blog`}
+              className="group inline-flex items-center gap-2 rounded-xl border border-black/[0.08] bg-white/80 px-5 py-2.5 text-sm font-medium text-[var(--bbi-text)] transition-all hover:border-[var(--bbi-red)]/25 hover:bg-white hover:text-[var(--bbi-red)] hover:shadow-[0_2px_12px_rgba(185,28,28,0.06)]"
+            >
+              {blogLabel}
+              <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+          {ctaLabel && ctaHref && (
+            <div className="flex shrink-0 items-center gap-8 sm:gap-10">
+              <div className="hidden h-10 w-px flex-shrink-0 bg-black/[0.08] md:block" aria-hidden />
+              <Button href={ctaHref} variant="primary">
+                {ctaLabel}
+              </Button>
+            </div>
+          )}
         </div>
-        {ctaLabel && ctaHref && (
-          <CtaBlock href={ctaHref} label={ctaLabel} />
-        )}
       </Container>
     </section>
   );

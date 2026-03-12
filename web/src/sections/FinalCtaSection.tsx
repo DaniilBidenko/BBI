@@ -17,7 +17,7 @@ export function FinalCtaSection({
   return (
     <section className="relative py-20 md:py-28">
       <Container className="relative mx-auto lg:w-[90%]">
-        <div className="bbi-card mx-auto max-w-3xl rounded-2xl border border-black/[0.08] bg-white px-8 py-14 text-center md:px-12 md:py-20">
+        <div className="bbi-card mx-auto w-full max-w-6xl rounded-2xl border border-black/[0.08] bg-white px-8 py-14 text-center md:px-12 md:py-20">
           <h2 className="text-2xl font-semibold leading-tight text-[var(--bbi-text)] md:text-3xl lg:text-4xl">
             {title}
           </h2>

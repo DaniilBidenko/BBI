@@ -8,7 +8,7 @@ type CtaBlockProps = {
 
 export function CtaBlock({ href, label, className = "" }: CtaBlockProps) {
   return (
-    <div className={`flex justify-center py-6 md:py-8 ${className}`}>
+    <div className={`flex justify-center py-5 md:py-6 ${className}`}>
       <Button href={href} variant="primary">
         {label}
       </Button>

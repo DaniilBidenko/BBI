@@ -72,7 +72,9 @@ export function ProcessSection({
           ))}
         </div>
         {ctaLabel && ctaHref && (
-          <CtaBlock href={ctaHref} label={ctaLabel} />
+          <div className="mt-8">
+            <CtaBlock href={ctaHref} label={ctaLabel} />
+          </div>
         )}
       </Container>
     </section>

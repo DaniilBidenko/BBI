@@ -22,18 +22,24 @@ export function WhatYouGetSection({
             {title}
           </h2>
         </div>
-        <div className="bbi-card mx-auto max-w-3xl rounded-2xl border border-black/[0.08] bg-white p-6 md:p-8">
-          <ul className="grid gap-4 sm:grid-cols-2">
+
+        <div className="bbi-card relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-black/[0.08] bg-white">
+          <div className="absolute inset-y-0 left-0 w-1 bg-[var(--bbi-red)]" />
+          <div className="grid sm:grid-cols-2">
             {items.map((item, i) => (
-              <li
+              <div
                 key={i}
-                className="flex gap-3 text-[15px] leading-[1.7] text-[var(--bbi-text)]"
+                className={`group flex gap-5 border-black/[0.06] p-5 pl-6 transition-colors hover:bg-[var(--bbi-bg)]/50 ${i < 4 ? "border-b" : ""} ${i % 2 === 0 ? "sm:border-r" : ""}`}
               >
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--bbi-red)]" />
-                <span>{item}</span>
-              </li>
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[var(--bbi-red)] bg-white text-sm font-bold tabular-nums text-[var(--bbi-red)] transition-colors group-hover:bg-[var(--bbi-red)] group-hover:text-white">
+                  {i + 1}
+                </span>
+                <p className="pt-0.5 text-[15px] leading-[1.7] text-[var(--bbi-text)]">
+                  {item}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </Container>
     </section>

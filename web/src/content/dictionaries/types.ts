@@ -213,11 +213,14 @@ export type Dictionary = {
     icpIntro: {
       eyebrow: string;
       title: string;
-      items: string[];
+      segments: { title: string; description: string; metrics?: string; pain: string }[];
+      exclude: string;
+      excludeLabel?: string;
     };
     icp: {
       eyebrow: string;
       title: string;
+      subtitle?: string;
       cards: HomeCard[];
       ctaLabel?: string;
     };
@@ -226,6 +229,7 @@ export type Dictionary = {
       title: string;
       description: string;
       highlightPhrase?: string;
+      items?: string[];
       ctaLabel?: string;
     };
     whatWeChange: {

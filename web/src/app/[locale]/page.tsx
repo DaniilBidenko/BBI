@@ -43,11 +43,13 @@ export default async function HomePage({ params }: LocalePageProps) {
         <IcpIntroSection
           eyebrow={dictionary.home.icpIntro.eyebrow}
           title={dictionary.home.icpIntro.title}
-          items={dictionary.home.icpIntro.items}
+          segments={dictionary.home.icpIntro.segments}
+          exclude={dictionary.home.icpIntro.exclude}
+          excludeLabel={dictionary.home.icpIntro.excludeLabel}
         />
         <IcpSection
-          eyebrow={dictionary.home.icp.eyebrow}
           title={dictionary.home.icp.title}
+          subtitle={dictionary.home.icp.subtitle}
           cards={dictionary.home.icp.cards.map((card) => ({
             ...card,
             href: withLocale(locale, card.href),
@@ -60,6 +62,7 @@ export default async function HomePage({ params }: LocalePageProps) {
           title={dictionary.home.icpBridge.title}
           description={dictionary.home.icpBridge.description}
           highlightPhrase={dictionary.home.icpBridge.highlightPhrase}
+          items={dictionary.home.icpBridge.items}
           ctaLabel={dictionary.home.icpBridge.ctaLabel}
           ctaHref={contactsHref}
         />

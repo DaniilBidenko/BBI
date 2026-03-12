@@ -262,7 +262,7 @@ export const uz: Dictionary = {
   home: {
     hero: {
       eyebrow: "Brand Promise",
-      title: "Qalqon. Lever. Tizim. biznesingiz uchun",
+      title: "Biznesingizni avtonom va himoyalangan aktivga aylantiramiz",
       subtitle:
         "Egalar va CEOlar uchun Operating Partner. Himoya va o‘sish tizimlarini quramiz — egasi tomonida, agentliklar va maslahatchilar emas.",
       cta: "Diagnostikadan boshlash",
@@ -272,35 +272,37 @@ export const uz: Dictionary = {
     icpIntro: {
       eyebrow: "Maqsadli auditoriya",
       title: "Kimlar uchun",
-      items: [
-        "Egasi o‘sishda — biznes unda turyapti. $30k–250k/oy, 15–80 xodim, 5+ yil. Og‘riq: «Boshqarish o‘rniga yong‘in o‘chiraman»",
-        "Egasi kengaytirmoqda — xaos ko‘payadi. $80k–500k/oy, 40–200 xodim. Og‘riq: «Xaosni kengaytirsam — zararlarni kengaytiraman»",
-        "Egasi investitsiyaga tayyorlanmoqda. $150k–1M+/oy, 80–500+ xodim. Og‘riq: «Investorga mening boshimdagi biznes emas, aktiv kerak»",
-        "Mos emas: 5 yildan kam biznes, PMF bosqichidagi startaplar, bir martalik konsultatsiya, agentlik xizmatlari. Va tizimni o‘zgartirishga tayyor emas holda «o‘sishni kafolatlang» talabi.",
+      segments: [
+        { title: "Egasi o'sishda", description: "Biznes unda turyapti.", metrics: "$30k–250k/oy · 15–80 kishi · 5+ yil", pain: "Boshqarish o'rniga yong'in o'chiraman" },
+        { title: "Egasi kengaytirmoqda", description: "Xaos ko'payadi.", metrics: "$80k–500k/oy · 40–200 kishi", pain: "Xaosni kengaytirsam — zararlarni kengaytiraman" },
+        { title: "Egasi investitsiyaga tayyorlanmoqda", description: "Biznes aktiv sifatida.", metrics: "$150k–1M+/oy · 80–500+ kishi", pain: "Investorga mening boshimdagi biznes emas, aktiv kerak" },
       ],
+      exclude: "5 yildan kam biznes, PMF bosqichidagi startaplar, bir martalik konsultatsiya, agentlik xizmatlari. Va tizimni o'zgartirishga tayyor emas holda «o'sishni kafolatlang» talabi.",
+      excludeLabel: "Mos emas",
     },
     icp: {
       eyebrow: "Savol",
       title: "O‘zingizni tanidingizmi?",
+      subtitle: "Uch odatiy stsenariy. O'zingizni tanisangiz — pastda qanday yordam berishimizni tushuntiramiz.",
       cards: [
         {
           title: "Boshqarish o‘rniga yong‘in o‘chiraman",
           description:
-            "45–90 kun ichida: «qalqon», yagona rasm, muntazam boshqaruv. Siz mikroboshqaruvdan chiqasiz.",
+            "Biznes sizsiz ishlamaydi. Qarorlar, yong'inlar, qo'lda boshqaruv — har kuni. Strategiya uchun vaqt yo'q.",
           linkLabel: "Batafsil",
           href: "/icp/operations",
         },
         {
           title: "Xaosni kengaytirsam — zararlarni kengaytiraman",
           description:
-            "Kengaytirishni boshqariladigan qilamiz: yagona standartlar, raqamlar bo‘yicha bitta haqiqat.",
+            "O'sish muammolarni ko'paytiradi. Yangi odamlar, bo'limlar, jarayonlar — xaos aylanmaga qo'shimcha o'sadi.",
           linkLabel: "Batafsil",
           href: "/icp/scale",
         },
         {
           title: "Investorga mening boshimdagi biznes emas, aktiv kerak",
           description:
-            "«Boshimdagi biznes»ni due diligence dan o‘tadigan aktivga aylantiramiz.",
+            "Biznesni bilasiz. Lekin investor raqamlar, tuzilma, shaffoflik kerak — boshingiz emas.",
           linkLabel: "Batafsil",
           href: "/icp/investor",
         },
@@ -312,19 +314,25 @@ export const uz: Dictionary = {
       title: "Qanday yordam beramiz?",
       description:
         "Maqsadli holatni loyihalaymiz, real holatga sho‘ng‘iramiz, arxitektura qurib amalga oshiramiz. «Olib ketish» uchun slaydlar emas — biznes ichida ish.",
-      highlightPhrase: "biznes ichida operatsion ish",
+      highlightPhrase: "biznes ichida ish",
+      items: [
+        "Haqiqiy nosozlik nuqtalarini diagnostika qilamiz — moliya, jarayonlar, savdo, jamoa",
+        "Maqsadli holatni sizning o'lchamingiz va ambitsiyalaringizga loyihalaymiz",
+        "Tizimni 45–90 kun ichida joriy qilamiz — tavsiya bermaymiz, o'zimiz qilamiz",
+        "Boshqaruvni jamoangizga topshiramiz, barqarorlik uchun hamkor qolamiz",
+      ],
       ctaLabel: "Vazifangizni muhokama qilish",
     },
     whatWeChange: {
       eyebrow: "Bizning 6 tayanchimiz",
-      title: "Biznesda nimani o‘zgartiramiz",
+      title: "Biznesda nimani o'zgartiramiz",
       pillars: [
-        { title: "Operatsiya", items: ["Egasi qo‘lda boshqaruvdan chiqadi — biznes «o‘z-o‘zidan» ishlaydi", "Boshqaruv ritmi, SOP, org-tuzilma, yig‘ilishlar, dashboardlar, KPI, adaptatsiya chek-listlari"] },
-        { title: "Marketing", items: ["Byudjet «yo‘qqa» ketmaydi — mijoz narxi va sizilishlar ko‘rinadi", "Skvoznoy analitika, kanal auditi, bazalarga egalik"] },
-        { title: "Savdo", items: ["Natija «yulduz»larga bog‘liq emas — yangi menejer 2–4 haftada natijaga erishadi", "Skriptlar, reglamentlar, CRM, voronka, lead ishlovi"] },
-        { title: "Moliya", items: ["«Pulim qayerda?» — halol javob, qarorlar raqamlar asosida", "Boshqaruv hisobi, plan-fakt, to‘lov kalendari, yo‘nalishlar bo‘yicha hisob"] },
+        { title: "Operatsiya", items: ["Egasi qo'lda boshqaruvdan chiqadi — biznes «o'z-o'zidan» ishlaydi", "Boshqaruv ritmi, SOP, org-tuzilma, yig'ilishlar, dashboardlar, KPI, adaptatsiya chek-listlari"] },
+        { title: "Marketing", items: ["Byudjet «yo'qqa» ketmaydi — mijoz narxi va sizilishlar ko'rinadi", "Skvoznoy analitika, kanal auditi, bazalarga egalik"] },
+        { title: "Savdo", items: ["Natija «yulduz»larga bog'liq emas — yangi menejer 2–4 haftada natijaga erishadi", "Skriptlar, reglamentlar, CRM, voronka, lead ishlovi"] },
+        { title: "Moliya", items: ["«Pulim qayerda?» — halol javob, qarorlar raqamlar asosida", "Boshqaruv hisobi, plan-fakt, to'lov kalendari, yo'nalishlar bo'yicha hisob"] },
         { title: "HR", items: ["Jamoa qayta ishlab chiqariladi — rollar mustahkam, odam ketishi tizimni buzmaydi", "Lavozim profillari, tizimli yollash, onboarding, baholash, kadr zaxirasi"] },
-        { title: "Yuridik himoya", items: ["Suddan, ma’lumot sizilishidan va bazalarning o‘g‘irlanishidan himoya", "NDA, mehnat shartnomalari, lavozim tavsiflari, shaxsiy ma’lumotlarga rozilik, pudratchilar bilan shartnomalar"] },
+        { title: "Yuridik himoya", items: ["Suddan, ma'lumot sizilishidan va bazalarning o'g'irlanishidan himoya", "NDA, mehnat shartnomalari, lavozim tavsiflari, shaxsiy ma'lumotlarga rozilik, pudratchilar bilan shartnomalar"] },
       ],
     },
     whatYouGet: {
