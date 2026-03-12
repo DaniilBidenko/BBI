@@ -562,6 +562,26 @@ export const en: Dictionary = {
         industry: "Healthcare services",
         keyResult: "SLA 87%, base reactivation 34%, conversion +21%",
         excerpt: "How to tell systemic error from one-off: we redesigned the commercial block, separated roles — got a managed funnel and predictable pipeline.",
+        seoTitle: "Systemic error in sales: lab case — SLA 87%, 34% base reactivation",
+        metaDescription:
+          "How to tell systemic from one-off: lab case — SLA 87%, order frequency +23%, 34% base reactivation and predictable pipeline.",
+        keywords: [
+          "medical lab case study",
+          "SLA in sales",
+          "CRM and SLA",
+          "managed sales funnel",
+          "systemic error in sales",
+          "lead conversion growth",
+          "revenue pipeline",
+          "leads lost",
+          "sales vs marketing",
+          "client base reactivation",
+          "order frequency growth",
+          "LTV growth",
+          "SLA control in CRM",
+          "commercial block building",
+        ],
+        h1: "Medical lab case: how to tell systemic error from one-off — and restore revenue control",
         tags: ["Sales", "CRM & SLA", "Operations"],
         industryFilter: "services",
         directionFilter: "sales",
@@ -590,6 +610,120 @@ export const en: Dictionary = {
         ],
         bbiRole:
           "Separated systemic from one-off. Instead of «punish/train/tighten KPI» we fixed the systemic cause — misdesigned roles. Result: managed funnel, predictable revenue pipeline, cash gaps in acceptable range. BBI redesigned the commercial block, not simulated management.",
+        sections: [
+          { title: "Client", paragraphs: ["Healthcare / medical laboratory sector."] },
+          {
+            title: "Request",
+            paragraphs: [
+              "The company set up CRM, defined SLA, runs regular ad campaigns. But when analyzing campaign effectiveness, most leads were in fact «lost», and the funnel was unmanaged.",
+              "The classic conflict started immediately: managers said «marketing brought the wrong people, leads are cold».",
+            ],
+          },
+          {
+            title: "What the fact audit showed",
+            paragraphs: ["We traced the lead handling chain in CRM and saw the real picture:"],
+            bullets: [
+              "SLA was not followed by managers, backlogs accumulated.",
+              "The manager did not react to overdue notifications in CRM.",
+              "31% of leads came with trigger requests and left contacts (i.e. leads worth working with).",
+              "59% of leads received only the system auto-reply, after which no one followed up.",
+            ],
+            paragraphsAfterBullets: [
+              "So the problem was not «lead quality» — the problem was that lead handling as a process did not exist.",
+            ],
+          },
+          {
+            title: "Why «punish / train / tighten KPI» is not always the answer",
+            paragraphs: ["When a business sees leads being lost, the standard toolkit looks like this:"],
+            bullets: [
+              "train managers in «sales»,",
+              "strengthen control,",
+              "introduce penalties,",
+              "recalculate KPI,",
+              "force «calling» and «pushing».",
+            ],
+            paragraphsAfterBullets: [
+              "This works only if the cause is one-off: discipline slipped, team relaxed, manager didn't follow up, one or two people «messing up».",
+              "But the key management skill is distinguishing systemic error from one-off.",
+              "Because if the cause is systemic, any «tightening» turns into management theater: you'll spend time, get a short-term activity spike, and in 2–3 weeks the system will return to where it was.",
+            ],
+          },
+          {
+            title: "What it really was: systemic error in choosing executors",
+            paragraphs: [
+              "We went deeper into diagnostics and separated symptoms from cause.",
+              "It turned out that people in «sales manager» roles were actually doing an administrative function:",
+            ],
+            bullets: [
+              "accepting requests from existing clients,",
+              "passing requests for execution,",
+              "tracking statuses,",
+              "handling operational issues.",
+            ],
+            paragraphsAfterBullets: [
+              "So this was a «coordinator/admin» role, not sales.",
+              "And here the systemic role mismatch kicked in:",
+              "Admin — reactive role: take the flow, avoid errors, close urgent, «hold operations».",
+              "Sales — proactive role: drive dialogue, bring client back into contact, handle objections, push to decision, keep timing.",
+              "Under operational load, the admin will always choose «urgent and hot», and sales will be «by default». And it's not a motivation issue. It's an architecture-of-functions issue.",
+              "Bottom line: the problem was systemic — not «bad leads» and not «bad managers», but misdesigned roles and accountability.",
+            ],
+          },
+          {
+            title: "Solution: redesign the commercial block, not «push» people",
+            paragraphs: [
+              "Instead of treating the symptom (punish/train), we changed the system — separated functions and assigned measurable outcome to each role.",
+              "We shifted the commercial block from a «passive order waiting» model to revenue management via two levers:",
+            ],
+            bullets: [
+              "Expansion — systematic market share capture through new clients (here: segments where the lab objectively benefits from growth).",
+              "LTV maximization — developing the current base: order frequency, average check, «sleeping» returns, retention.",
+            ],
+            paragraphsAfterBullets: [
+              "New structure by roles and outcomes:",
+              "We separated «sales», «base development» and «operational support» so sales weren't eaten by production firefighting.",
+              "1) Hunter Manager (new client acquisition) — responsible for new clients and onboarding them into a regular order cycle.",
+              "2) Farmer Manager (current base development) — responsible for share of client spend, order frequency, retention and returns.",
+              "3) KAM / Business unit head (key accounts and major contracts) — responsible for strategic relationships and protecting large deals.",
+              "4) Administrators (operations and service) — responsible for correct order handling and status communication — but do not substitute sales.",
+              "Key point: each role should be «single-outcome». When roles are mixed — the business loses money «in silence», then looks for someone to blame in marketing.",
+            ],
+          },
+          {
+            title: "What changed after implementation: results in numbers",
+            paragraphs: [
+              "When we removed the systemic cause, metrics moved quickly and predictably — because the system started working as a system, not as a set of heroic efforts.",
+            ],
+            bullets: [
+              "SLA leveled at 87% — overdues stopped being the norm, control became regular, lead handling became stable.",
+              "That drove a 21% conversion increase: inquiries stopped «dying» on auto-replies and overdues, more leads reached real dialogue and orders.",
+              "Order frequency per client grew 23% in the first month — thanks to a role dedicated to base development and returns.",
+              "34% of the client base that had gone «dormant» and hadn't ordered in 4–6 months was reactivated — because client return became a process, not chance.",
+            ],
+            insertInfographic: true,
+          },
+          {
+            title: "Financial effect: cash gaps moved into the «acceptable corridor»",
+            paragraphs: [
+              "Separately important: SLA improvement and conversion growth brought not only commercial but also financial management impact.",
+              "When the funnel became manageable, the company got predictable revenue flow — clear future inflows tied to CRM stages and SLA discipline.",
+              "That in turn:",
+            ],
+            bullets: [
+              "reduced recurring cash gaps, because inflows stopped being a «lottery»;",
+              "allowed planning payments and procurement not «by feel» but by revenue forecast based on funnel movement;",
+              "reduced dependence on manual control and firefighting — money became a consequence of process, not heroics.",
+            ],
+          },
+          {
+            title: "Main takeaway",
+            paragraphs: [
+              "This case is about one thing: you cannot make management decisions without separating systemic from one-off.",
+              "If we had gone the typical «managers are to blame — fine/train/tighten KPI» route, the company would have gotten a short-term effect and then returned to the same point, because the architecture of roles and accountability would have stayed the same.",
+              "We did otherwise: removed the systemic cause — and got measurable results in SLA, conversions, order frequency, base reactivation and, most importantly, revenue predictability.",
+            ],
+          },
+        ],
       },
     ],
   },

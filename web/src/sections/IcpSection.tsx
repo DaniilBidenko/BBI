@@ -32,11 +32,11 @@ export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref 
           )}
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:items-start lg:gap-7">
           {cards.map((card, index) => (
             <article
               key={card.title}
-              className="bbi-card group relative flex flex-col overflow-hidden rounded-2xl border border-black/[0.08] bg-white p-6 transition hover:border-[var(--bbi-red)]/25 hover:shadow-[0_6px_24px_rgba(0,0,0,0.06)] md:p-7"
+              className="bbi-card group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-black/[0.08] bg-white p-6 transition hover:border-[var(--bbi-red)]/25 hover:shadow-[0_6px_24px_rgba(0,0,0,0.06)] md:p-7"
             >
               <div className="absolute inset-y-0 left-0 w-1 rounded-l-2xl bg-[var(--bbi-red)]/30 transition-all group-hover:bg-[var(--bbi-red)]" />
               <div className="flex flex-col">

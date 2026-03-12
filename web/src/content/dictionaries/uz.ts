@@ -562,6 +562,26 @@ export const uz: Dictionary = {
         industry: "Sog'liqni saqlash xizmatlari",
         keyResult: "SLA 87%, baza reaktivatsiyasi 34%, konversiya +21%",
         excerpt: "Tizimli xatolikni yakka holdan ajratish: tijoriy blokni qayta loyihaladik, rollarni ajratdik — boshqariladigan vornka va bashorat qilinadigan pipeline.",
+        seoTitle: "Savdoda tizimli xato: laboratoriya keysi — SLA 87%, baza reaktivatsiyasi 34%",
+        metaDescription:
+          "Tizimlini yakka holdan ajratish: laboratoriya keysi — SLA 87%, buyurtma chastotasi +23%, baza reaktivatsiyasi 34% va bashorat qilinadigan pipeline.",
+        keywords: [
+          "tibbiy laboratoriya keysi",
+          "savdoda SLA",
+          "CRM va SLA",
+          "boshqariladigan savdo vornkasi",
+          "savdoda tizimli xato",
+          "lid konversiyasining o'sishi",
+          "daromad pipeline",
+          "lidlar yo'qolgan",
+          "savdo va marketing",
+          "mijozlar bazasini qayta faollashtirish",
+          "buyurtma chastotasi o'sishi",
+          "LTV o'sishi",
+          "CRM da SLA nazorati",
+          "tijoriy blok qurish",
+        ],
+        h1: "Tibbiy laboratoriya keysi: tizimli xatolikni yakka holdan qanday ajratish — va daromadni boshqarishni qaytarish",
         tags: ["Savdo", "CRM va SLA", "Operatsiya"],
         industryFilter: "services",
         directionFilter: "sales",
@@ -590,6 +610,120 @@ export const uz: Dictionary = {
         ],
         bbiRole:
           "Tizimlini yakka holdan ajratdik. «Jazolash/o'qitish/KPI ni qattiqlashtirish» o'rniga tizimli sababni bartaraf ettik — noto'g'ri loyihalangan rollar. Natija: boshqariladigan vornka, bashorat qilinadigan daromad pipeline, kassa bo'shliqlari ruxsat etilgan diapazonda. BBI tijoriy blokni qayta loyihaladi, boshqaruvni imitatsiya qilmadi.",
+        sections: [
+          { title: "Mijoz", paragraphs: ["Sog'liqni saqlash / tibbiy laboratoriya sohasi."] },
+          {
+            title: "So'rov",
+            paragraphs: [
+              "Kompaniya CRM sozladi, SLA belgiladi, muntazam reklama kampaniyalarini olib bordi. Ammo reklama kampaniyalari samaradorligini tahlil qilganda, lidlarning ko'p qismi haqiqatda «yo'qolgan», vornka boshqarilmas edi.",
+              "Klassik konflikt darhol boshlandi: menedjerlar «marketing noto'g'ri odamlarni olib keldi, lidlar sovuq» deb aytishdi.",
+            ],
+          },
+          {
+            title: "Faktlar auditi nima ko'rsatdi",
+            paragraphs: ["CRM da murojaatlarni qayta ishlash zanjirini ko'tardik va haqiqiy rasmini ko'rdik:"],
+            bullets: [
+              "SLA menedjerlar tomonidan bajarilmagan, kechikishlar yig'ilgan.",
+              "Rahbar CRM dagi kechikishlar haqidagi xabarnomalarga javob bermagan.",
+              "Lidlarning 31% trigger so'rovlar bilan kelgan va kontaktlarni qoldirgan (ya'ni ular bilan ishlash mumkin va kerak).",
+              "Lidlarning 59% faqat tizim avtojavobini olgan, keyin hech kim ular bilan ishlamagan.",
+            ],
+            paragraphsAfterBullets: [
+              "Demak, muammo «lidlar sifatida» emas edi — muammo shundaki, lidlar bilan ishlash jarayoni mavjud emas edi.",
+            ],
+          },
+          {
+            title: "Nima uchun «jazolash / o'qitish / KPI ni qattiqlashtirish» har doim yechim emas",
+            paragraphs: ["Biznes lidlarning yo'qolishini ko'rganda, standart choralar to'plami quyidagicha ko'rinadi:"],
+            bullets: [
+              "menedjerlarni «savdo»ga o'qitish,",
+              "nazoratni kuchaytirish,",
+              "penaltilarni joriy qilish,",
+              "KPI ni qayta hisoblash,",
+              "«qo'ng'iroq qilish» va «bosish»ga majburlash.",
+            ],
+            paragraphsAfterBullets: [
+              "Bu faqat sabab yakka holda bo'lsa ishlaydi: intizom tushgan, jamoa bo'shashgan, rahbar bosishmagan, bir-ikki xodim «xato qilgan».",
+              "Lekin asosiy boshqaruv ko'nikmasi — tizimli xatolikni yakka holdan ajratish.",
+              "Chunki sabab tizimli bo'lsa, har qanday «kuchaytirish» boshqaruv teatriga aylanadi: vaqt sarflaysiz, qisqa muddatli faollik o'sishini olasiz va 2–3 hafta ichida tizim yana avvalgi holatiga qaytadi.",
+            ],
+          },
+          {
+            title: "Aslida nima bo'lgan: ijrochilarni tanlashda tizimli xato",
+            paragraphs: [
+              "Diagnostikaga chuqurroq kirib, simptomlarni sababdan ajratdik.",
+              "Ma'lum bo'ldiki, «savdo menedjerlari» rolida haqiqatda ma'muriy funktsiyani bajaradigan odamlar tayinlangan:",
+            ],
+            bullets: [
+              "muntazam mijozlardan so'rovlarni qabul qilish,",
+              "ijroga uzatish,",
+              "status bo'yicha kuzatish,",
+              "operatsion savollarni hal qilish.",
+            ],
+            paragraphsAfterBullets: [
+              "Demak, bu «koordinator/admin» roli edi, savdo emas.",
+              "Va bu yerda tizimli rol nomuvofiqligi ishga tushdi:",
+              "Admin — reaktiv rol: oqimni qabul qilish, xatolarga yo'l qo'ymaslik, shoshilincni yopish, «operatsiyani ushlab turish».",
+              "Savdo — proaktiv rol: suhbat olib borish, mijozni kontaktga qaytarish, rad etishlarga chiday olish, qarorgacha bosish, taymingni saqlash.",
+              "Operatsion yuk ostida admin har doim «shoshilinch va qizigan»ni tanlaydi, savdo «qoldiq»da qoladi. Va bu motivatsiya masalasi emas. Bu funktsiyalar arxitekturasi masalasi.",
+              "Xulosa: muammo tizimli edi — «yomon lidlar» va «yomon menedjerlar» emas, balki noto'g'ri loyihalangan rollar va mas'uliyat.",
+            ],
+          },
+          {
+            title: "Yechim: tijoriy blokni qayta loyihalash, odamlarni «kuchaytirish» emas",
+            paragraphs: [
+              "Simptomni davolash (jazolash/o'qitish) o'rniga tizimni o'zgartirdik — funktsiyalarni ajratdik va har bir rol uchun o'lchanadigan natijani belgiladik.",
+              "Tijoriy blokni «passiv buyurtma kutilishi» modelidan daromadni boshqarish modeliga ikki asosiy rukn orqali o'tkazdik:",
+            ],
+            bullets: [
+              "Ekspansiya — yangi mijozlar orqali bozor ulushini tizimli egallash (bizning holatda — laboratoriyaga objektiv ravishda o'sish foydali bo'lgan segmentlar).",
+              "LTV maksimallashtirish — joriy bazani rivojlantirish: chastota o'sishi, o'rtacha chek, «uxlab yotgan» qaytishlar, saqlash.",
+            ],
+            paragraphsAfterBullets: [
+              "Rollar va natijalar bo'yicha yangi tuzilma:",
+              "«Savdo», «baza rivoji» va «operatsion qo'llab-quvvatlash» funktsiyalarini ajratdik, savdo ishlab chiqarish o'tini bilan yutilmasin.",
+              "1) Hunter Menedjer (yangi mijozlarni jalb qilish) — yangi mijozlar va ularni muntazam buyurtma tsikliga jalb qilish uchun javobgar.",
+              "2) Farmer Menedjer (joriy baza rivoji) — mijoz xaridlaridagi ulush, buyurtma chastotasi, saqlash va qaytishlar uchun javobgar.",
+              "3) KAM / Yo'nalish rahbari (asosiy mijozlar va yirik shartnomalar) — strategik munosabatlar va yirik shartnomalarni himoya qilish uchun javobgar.",
+              "4) Administratorlar (operatsiya va xizmat) — buyurtmalarni to'g'ri qayta ishlash va status bo'yicha kommunikatsiya uchun javobgar — lekin savdoni almashtirmaydi.",
+              "Asosiy ma'no: har bir rol «bitta natija»da bo'lishi kerak. Rollar aralashganda — biznes «sukunatda» pul yo'qotadi, keyin marketingda aybdorni qidiradi.",
+            ],
+          },
+          {
+            title: "Joriy etilgandan keyin nima o'zgardi: raqamlarda natija",
+            paragraphs: [
+              "Tizimli sababni olib tashlaganimizda, ko'rsatkichlar tez va bashorat qilinadigan tarzda siljidi — chunki tizim tizim sifatida ishlashni boshladi, geroik harakatlar to'plami emas.",
+            ],
+            bullets: [
+              "SLA 87% gacha tekislandi — kechikishlar odat bo'lishni to'xtatdi, nazorat muntazam bo'ldi, lidlarni qayta ishlash barqaror bo'ldi.",
+              "Bu konversiyada 21% o'sish berdi: murojaatlar avtojavoblar va kechikishlarda «o'lmasdan», ko'proq lidlar haqiqiy suhbat va buyurtmagacha yetdi.",
+              "Bitta mijozdan buyurtma chastotasi birinchi oyda 23% oshdi — bazani rivojlantirish va qaytishlar uchun javobgar rol paydo bo'lgani uchun.",
+              "4–6 oy buyurtma bermagan «uxlab yotgan» mijozlar bazasining 34% reaktivatsiya qilindi — chunki mijozlarni qaytarish jarayon bo'ldi, tasodif emas.",
+            ],
+            insertInfographic: true,
+          },
+          {
+            title: "Moliyaviy ta'sir: kassa bo'shliqlari «ruxsat etilgan koridor»ga kirgan",
+            paragraphs: [
+              "Alohida muhim: SLA yaxshilanishi va konversiya o'sishi nafaqat tijoriy, balki moliyaviy boshqaruv ta'sirini ham berdi.",
+              "Vornka boshqariladigan bo'lgach, kompaniya bashorat qilinadigan daromad oqimini oldi — CRM bosqichlari va SLA intizomiga bog'langan kelajakdagi tushumlarning aniq hajmi.",
+              "Bu o'z navbatida:",
+            ],
+            bullets: [
+              "davriy kassa bo'shliqlarini qisqartirdi, chunki tushumlar «lotereya» bo'lishni to'xtatdi;",
+              "to'lovlar va xaridlarni «his-tuyg'u» bo'yicha emas, vornka harakati asosida daromad prognozi bo'yicha rejalashtirishga imkon berdi;",
+              "qo'lda boshqaruv va favqulodda vaziyatlardan qat'iy nazar — pul jarayon natijasi bo'ldi, geroizm emas.",
+            ],
+          },
+          {
+            title: "Asosiy xulosa",
+            paragraphs: [
+              "Bu keys bitta narsa haqida: tizimlini yakka holdan ajratmasdan boshqaruv qararlarini qabul qilib bo'lmaydi.",
+              "Agar biz odatiy «menedjerlar aybdor — jarima/o'qitish/KPI ni qattiqlashtirish» yo'lini tanlagan bo'lsak, kompaniya qisqa muddatli ta'sir olgan va keyin yana o'sha nuqtaga qaytgan bo'lar edi, chunki rollar va mas'uliyat arxitekturasi o'zgarmagan bo'lardi.",
+              "Biz boshqacha qildik: tizimli sababni olib tashladik — va SLA, konversiyalar, buyurtma chastotasi, baza reaktivatsiyasi va eng muhimi daromad bashorat qilinadiganligida o'lchanadigan natijaga erishdik.",
+            ],
+          },
+        ],
       }
     ],
   },

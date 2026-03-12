@@ -133,6 +133,15 @@ export type TeamMember = {
   note: string;
 };
 
+export type CaseStudySection = {
+  title: string;
+  paragraphs?: string[];
+  bullets?: string[];
+  /** Абзацы после списка (если нужен порядок: абзацы — список — ещё абзацы) */
+  paragraphsAfterBullets?: string[];
+  insertInfographic?: boolean;
+};
+
 export type CaseStudy = {
   slug: string;
   company: string;
@@ -143,21 +152,28 @@ export type CaseStudy = {
   industryFilter: string;
   directionFilter: string;
   scaleFilter: string;
+  /** SEO: title страницы */
+  seoTitle?: string;
+  /** SEO: meta description */
+  metaDescription?: string;
+  /** SEO: keywords (основные и дополнительные) */
+  keywords?: string[];
+  /** Кастомный H1 (если не задан — используется company) */
+  h1?: string;
   context: string;
   problem: string;
   whatBbiDid: string[];
   resultNumbers: {
     before: string;
     after: string;
-    /** Для инфографики: числовое значение «до» (0–100) */
     beforeValue?: number;
-    /** Для инфографики: числовое значение «после» (0–100) */
     afterValue?: number;
-    /** Краткая подпись метрики для графика (напр. «SLA», «Конверсия») */
     label?: string;
   }[];
   artifacts: string[];
   bbiRole: string;
+  /** Дополнительные секции для полной статьи (если заданы — рендерится развёрнутый контент) */
+  sections?: CaseStudySection[];
 };
 
 export type CasesPage = {
