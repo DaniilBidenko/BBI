@@ -260,6 +260,18 @@ export type Dictionary = {
       items?: string[];
       ctaLabel?: string;
     };
+    helpAndProcess?: {
+      label?: string;
+      title: string;
+      description?: string;
+      stages: {
+        title: string;
+        description: string;
+        result?: string;
+        clientGets?: string[];
+      }[];
+      ctaLabel?: string;
+    };
     whatWeChange: {
       eyebrow: string;
       title: string;
@@ -268,7 +280,19 @@ export type Dictionary = {
     whatYouGet: {
       eyebrow: string;
       title: string;
-      items: string[];
+      subheadline?: string;
+      items?: string[];
+      cards?: {
+        title: string;
+        whatItMeans: string;
+        clientGets: string[];
+        important: string;
+      }[];
+      finalAccent?: {
+        title: string;
+        text: string;
+        ctaLabel: string;
+      };
     };
     process: {
       eyebrow: string;
@@ -277,9 +301,12 @@ export type Dictionary = {
       ctaLabel?: string;
     };
     whyBbi: {
-      eyebrow: string;
+      eyebrow?: string;
       title: string;
-      items: { label: string; text: string }[];
+      subtitle?: string;
+      items?: { label: string; text: string }[];
+      topCards?: { label: string; intro: string; outcomeBullets: string[] }[];
+      wideCard?: { label: string; intro: string; outcomeBullets: string[] };
     };
     casesBlog: {
       title: string;

@@ -3,10 +3,9 @@ import { notFound } from "next/navigation";
 import { HeroSection } from "@/sections/HeroSection";
 import { IcpIntroSection } from "@/sections/IcpIntroSection";
 import { IcpSection } from "@/sections/IcpSection";
-import { IcpBridgeSection } from "@/sections/IcpBridgeSection";
+import { HelpAndProcessSection } from "@/sections/HelpAndProcessSection";
 import { WhatWeChangeSection } from "@/sections/WhatWeChangeSection";
 import { WhatYouGetSection } from "@/sections/WhatYouGetSection";
-import { ProcessSection } from "@/sections/ProcessSection";
 import { WhyBBISection } from "@/sections/WhyBBISection";
 import { CasesBlogSection } from "@/sections/CasesBlogSection";
 import { FAQSection } from "@/sections/FAQSection";
@@ -27,86 +26,89 @@ export default async function HomePage({ params }: LocalePageProps) {
   const locale = localeParam as Locale;
   const dictionary = getDictionary(locale);
   const contactsHref = withLocale(locale, "/contacts");
+  const casesHref = withLocale(locale, "/cases");
+  const { home } = dictionary;
 
   return (
     <>
       <HeroSection
-        eyebrow={dictionary.home.hero.eyebrow}
-        title={dictionary.home.hero.title}
-        subtitle={dictionary.home.hero.subtitle}
-        ctaLabel={dictionary.home.hero.cta}
+        eyebrow={home.hero.eyebrow}
+        title={home.hero.title}
+        subtitle={home.hero.subtitle}
+        ctaLabel={home.hero.cta}
         ctaHref={contactsHref}
-        secondaryLabel={dictionary.home.hero.secondaryCta}
-        secondaryHref={dictionary.home.hero.secondaryCtaHref ? withLocale(locale, dictionary.home.hero.secondaryCtaHref) : undefined}
+        secondaryLabel={home.hero.secondaryCta}
+        secondaryHref={home.hero.secondaryCtaHref ? withLocale(locale, home.hero.secondaryCtaHref) : undefined}
       />
       <div className="relative overflow-hidden">
         <IcpIntroSection
-          eyebrow={dictionary.home.icpIntro.eyebrow}
-          title={dictionary.home.icpIntro.title}
-          segments={dictionary.home.icpIntro.segments}
-          exclude={dictionary.home.icpIntro.exclude}
-          excludeLabel={dictionary.home.icpIntro.excludeLabel}
+          eyebrow={home.icpIntro.eyebrow}
+          title={home.icpIntro.title}
+          segments={home.icpIntro.segments}
+          exclude={home.icpIntro.exclude}
+          excludeLabel={home.icpIntro.excludeLabel}
         />
         <IcpSection
-          title={dictionary.home.icp.title}
-          subtitle={dictionary.home.icp.subtitle}
-          cards={dictionary.home.icp.cards.map((card) => ({
+          title={home.icp.title}
+          subtitle={home.icp.subtitle}
+          cards={home.icp.cards.map((card) => ({
             ...card,
             href: withLocale(locale, card.href),
           }))}
-          ctaLabel={dictionary.home.icp.ctaLabel}
+          ctaLabel={home.icp.ctaLabel}
           ctaHref={contactsHref}
         />
-        <IcpBridgeSection
-          label={dictionary.home.icpBridge.label}
-          title={dictionary.home.icpBridge.title}
-          description={dictionary.home.icpBridge.description}
-          highlightPhrase={dictionary.home.icpBridge.highlightPhrase}
-          items={dictionary.home.icpBridge.items}
-          ctaLabel={dictionary.home.icpBridge.ctaLabel}
-          ctaHref={contactsHref}
-        />
-        <WhatWeChangeSection
-          eyebrow={dictionary.home.whatWeChange.eyebrow}
-          title={dictionary.home.whatWeChange.title}
-          pillars={dictionary.home.whatWeChange.pillars}
-        />
-        <WhatYouGetSection
-          eyebrow={dictionary.home.whatYouGet.eyebrow}
-          title={dictionary.home.whatYouGet.title}
-          items={dictionary.home.whatYouGet.items}
-        />
-        <ProcessSection
-          eyebrow={dictionary.home.process.eyebrow}
-          title={dictionary.home.process.title}
-          approaches={dictionary.home.process.approaches}
-          ctaLabel={dictionary.home.process.ctaLabel}
-          ctaHref={contactsHref}
-        />
-        <WhyBBISection
-          eyebrow={dictionary.home.whyBbi.eyebrow}
-          title={dictionary.home.whyBbi.title}
-          items={dictionary.home.whyBbi.items}
-        />
+        {home.helpAndProcess && (
+          <HelpAndProcessSection
+            label={home.helpAndProcess.label}
+            title={home.helpAndProcess.title}
+            description={home.helpAndProcess.description}
+            stages={home.helpAndProcess.stages}
+            ctaLabel={home.helpAndProcess.ctaLabel}
+            ctaHref={casesHref}
+          />
+        )}
         <CasesBlogSection
-          title={dictionary.home.casesBlog.title}
-          casesLabel={dictionary.home.casesBlog.casesLabel}
-          blogLabel={dictionary.home.casesBlog.blogLabel}
-          readMore={dictionary.home.casesBlog.readMore}
+          title={home.casesBlog.title}
+          casesLabel={home.casesBlog.casesLabel}
+          blogLabel={home.casesBlog.blogLabel}
+          readMore={home.casesBlog.readMore}
           cases={dictionary.cases.items}
           blogPosts={dictionary.blog.posts}
           locale={locale}
-          ctaLabel={dictionary.home.casesBlog.ctaLabel}
+          ctaLabel={home.casesBlog.ctaLabel}
+          ctaHref={contactsHref}
+        />
+        <WhyBBISection
+          eyebrow={home.whyBbi.eyebrow}
+          title={home.whyBbi.title}
+          subtitle={home.whyBbi.subtitle}
+          items={home.whyBbi.items}
+          topCards={home.whyBbi.topCards}
+          wideCard={home.whyBbi.wideCard}
+        />
+        <WhatWeChangeSection
+          eyebrow={home.whatWeChange.eyebrow}
+          title={home.whatWeChange.title}
+          pillars={home.whatWeChange.pillars}
+        />
+        <WhatYouGetSection
+          eyebrow={home.whatYouGet.eyebrow}
+          title={home.whatYouGet.title}
+          subheadline={home.whatYouGet.subheadline}
+          items={home.whatYouGet.items}
+          cards={home.whatYouGet.cards}
+          finalAccent={home.whatYouGet.finalAccent}
           ctaHref={contactsHref}
         />
         <FAQSection
-          title={dictionary.home.faq.title}
-          items={dictionary.home.faq.items}
+          title={home.faq.title}
+          items={home.faq.items}
         />
         <FinalCtaSection
-          title={dictionary.home.finalCta.title}
-          ctaLabel={dictionary.home.finalCta.ctaLabel}
-          subtitle={dictionary.home.finalCta.subtitle}
+          title={home.finalCta.title}
+          ctaLabel={home.finalCta.ctaLabel}
+          subtitle={home.finalCta.subtitle}
           ctaHref={contactsHref}
         />
       </div>

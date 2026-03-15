@@ -262,9 +262,9 @@ export const uz: Dictionary = {
   home: {
     hero: {
       eyebrow: "Brand Promise",
-      title: "Biznesingizni avtonom va himoyalangan aktivga aylantiramiz",
+      title: "Biznesni xaotik emas, balki boshqariladigan va masshtablanadigan tizim sifatida quramiz",
       subtitle:
-        "Egalar va CEOlar uchun Operating Partner. Himoya va o'sish tizimlarini quramiz — egasi tomonida, agentliklar va maslahatchilar emas.",
+        "Markaziy Osiyodagi egalar va CEOlar uchun operatsion hamkor: nosozlik nuqtalarini aniqlaymiz, biznes arxitekturasini loyihalaymiz va uni jamoangiz bilan birga joriy qilamiz.",
       cta: "Diagnostikadan boshlash",
       secondaryCta: "Keyslarni ko'rish",
       secondaryCtaHref: "/cases",

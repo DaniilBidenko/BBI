@@ -262,9 +262,9 @@ export const en: Dictionary = {
   home: {
     hero: {
       eyebrow: "Brand Promise",
-      title: "We turn your business into an autonomous and protected asset",
+      title: "We build a business that works not chaotically, but as a manageable and scalable system",
       subtitle:
-        "Operating Partner for owners and CEOs. We build systems of protection and growth — on the owner's side, not agencies or consultants.",
+        "Operating partner for owners and CEOs in Central Asia: we diagnose failure points, design business architecture and implement it together with your team.",
       cta: "Start with diagnostics",
       secondaryCta: "View cases",
       secondaryCtaHref: "/cases",
