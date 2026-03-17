@@ -388,6 +388,8 @@ export const uz: Dictionary = {
     },
     casesBlog: {
       title: "Keyslar va blog",
+      casesTitle: "Keyslar",
+      blogTitle: "Blog",
       casesLabel: "Barcha keyslar",
       blogLabel: "Barcha maqolalar",
       readMore: "Batafsil",
@@ -510,7 +512,56 @@ export const uz: Dictionary = {
     },
   },
   footer: {
-    copyright: "BBI (Bold Brands International). Barcha huquqlar himoyalangan.",
+    copyright: "© 2024 BBI (Bold Brands International). Barcha huquqlar himoyalangan.",
+    tagline: "Bold Brands International — tashqi marketing bo'linmangiz.",
+    aboutTitle: "Kompaniya haqida",
+    aboutLinks: [
+      { label: "Biz haqimizda", href: "/about" },
+      { label: "Keyslar", href: "/cases" },
+      { label: "Sharhlar", href: "/reviews" },
+    ],
+    servicesTitle: "Xizmatlar",
+    servicesLinks: [
+      { label: "Brending" },
+      { label: "Digital targ'ib" },
+      { label: "Video ishlab chiqarish" },
+      { label: "Veb-ishlab chiqish va dizayn" },
+      { label: "Kompleks marketing qo'llab-quvvatlash" },
+      { label: "Avtomatlashtirish va tahlil" },
+      { label: "Operativ bosish" },
+    ],
+    socialTitle: "Biz",
+    locations: [
+      {
+        city: "Bishkek",
+        address: "Matrosova ko'chasi, 102",
+        phone: "+996 999 99 22 44",
+        email: "office.kg@boldbrands.pro",
+        socials: {
+          instagram: "https://instagram.com",
+          facebook: "https://facebook.com",
+          whatsapp: "https://wa.me/996999992244",
+        },
+      },
+      {
+        city: "Toshkent",
+        address: "Yashnobod tumani, Yangibozor 1/4",
+        phone: "+998 90 054 34 45",
+        email: "office.uz@boldbrands.pro",
+        socials: {
+          instagram: "https://instagram.com",
+          facebook: "https://facebook.com",
+          telegram: "https://t.me/",
+        },
+      },
+    ],
+    addressLabel: "Manzil",
+    phoneLabel: "Telefon",
+    emailLabel: "Elektron pochta",
+    workingHoursLabel: "Ish vaqti",
+    workingHours: "Du-Ju: 09:00-18:00",
+    privacyLabel: "Maxfiylik siyosati",
+    privacyHref: "/privacy",
   },
   cases: {
     hero: {
@@ -754,6 +805,8 @@ export const uz: Dictionary = {
       turnoverTeamSize: "Aylanma yoki jamoa hajmi (ixtiyoriy)",
       request: "So'rov haqida qisqacha",
       submit: "Skriningga yozilish",
+      successMessage: "So'rov yuborildi. Tez orada siz bilan bog'lanamiz.",
+      errorMessage: "So'rovni yuborib bo'lmadi. Keyinroq urinib ko'ring yoki to'g'ridan-to'g'ri yozing.",
     },
   },
 };

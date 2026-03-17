@@ -7,7 +7,8 @@ import { HelpAndProcessSection } from "@/sections/HelpAndProcessSection";
 import { WhatWeChangeSection } from "@/sections/WhatWeChangeSection";
 import { WhatYouGetSection } from "@/sections/WhatYouGetSection";
 import { WhyBBISection } from "@/sections/WhyBBISection";
-import { CasesBlogSection } from "@/sections/CasesBlogSection";
+import { CasesSection } from "@/sections/CasesSection";
+import { BlogSection } from "@/sections/BlogSection";
 import { FAQSection } from "@/sections/FAQSection";
 import { FinalCtaSection } from "@/sections/FinalCtaSection";
 import { getDictionary } from "@/content/dictionaries";
@@ -68,17 +69,6 @@ export default async function HomePage({ params }: LocalePageProps) {
             ctaHref={casesHref}
           />
         )}
-        <CasesBlogSection
-          title={home.casesBlog.title}
-          casesLabel={home.casesBlog.casesLabel}
-          blogLabel={home.casesBlog.blogLabel}
-          readMore={home.casesBlog.readMore}
-          cases={dictionary.cases.items}
-          blogPosts={dictionary.blog.posts}
-          locale={locale}
-          ctaLabel={home.casesBlog.ctaLabel}
-          ctaHref={contactsHref}
-        />
         <WhyBBISection
           eyebrow={home.whyBbi.eyebrow}
           title={home.whyBbi.title}
@@ -86,6 +76,13 @@ export default async function HomePage({ params }: LocalePageProps) {
           items={home.whyBbi.items}
           topCards={home.whyBbi.topCards}
           wideCard={home.whyBbi.wideCard}
+        />
+        <CasesSection
+          title={home.casesBlog.casesTitle ?? home.casesBlog.title}
+          casesLabel={home.casesBlog.casesLabel}
+          readMore={home.casesBlog.readMore}
+          cases={dictionary.cases.items}
+          locale={locale}
         />
         <WhatWeChangeSection
           eyebrow={home.whatWeChange.eyebrow}
@@ -105,11 +102,17 @@ export default async function HomePage({ params }: LocalePageProps) {
           title={home.faq.title}
           items={home.faq.items}
         />
+        <BlogSection
+          title={home.casesBlog.blogTitle ?? home.casesBlog.title}
+          blogLabel={home.casesBlog.blogLabel}
+          readMore={home.casesBlog.readMore}
+          blogPosts={dictionary.blog.posts}
+          locale={locale}
+        />
         <FinalCtaSection
           title={home.finalCta.title}
-          ctaLabel={home.finalCta.ctaLabel}
           subtitle={home.finalCta.subtitle}
-          ctaHref={contactsHref}
+          contacts={dictionary.contacts}
         />
       </div>
     </>

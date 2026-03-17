@@ -551,6 +551,8 @@ export const ru: Dictionary = {
     },
     casesBlog: {
       title: "Кейсы и блог",
+      casesTitle: "Кейсы",
+      blogTitle: "Блог",
       casesLabel: "Все кейсы",
       blogLabel: "Все статьи",
       readMore: "Подробнее",
@@ -681,7 +683,56 @@ export const ru: Dictionary = {
     },
   },
   footer: {
-    copyright: "BBI (Bold Brands International). Все права защищены.",
+    copyright: "© 2024 BBI (Bold Brands International). Все права защищены.",
+    tagline: "Bold Brands International — ваш внешний отдел маркетинга.",
+    aboutTitle: "О компании",
+    aboutLinks: [
+      { label: "О нас", href: "/about" },
+      { label: "Кейсы", href: "/cases" },
+      { label: "Отзывы", href: "/reviews" },
+    ],
+    servicesTitle: "Услуги",
+    servicesLinks: [
+      { label: "Брендинг" },
+      { label: "Digital продвижение" },
+      { label: "Видеопродакшн" },
+      { label: "Веб-разработка и дизайн" },
+      { label: "Комплексное маркетинговое сопровождение" },
+      { label: "Автоматизация и аналитика" },
+      { label: "Оперативная печать" },
+    ],
+    socialTitle: "Мы есть",
+    locations: [
+      {
+        city: "Бишкек",
+        address: "ул. Матросова, дом 102",
+        phone: "+996 999 99 22 44",
+        email: "office.kg@boldbrands.pro",
+        socials: {
+          instagram: "https://instagram.com",
+          facebook: "https://facebook.com",
+          whatsapp: "https://wa.me/996999992244",
+        },
+      },
+      {
+        city: "Ташкент",
+        address: "Яшнободский район, Янгибозор 1/4",
+        phone: "+998 90 054 34 45",
+        email: "office.uz@boldbrands.pro",
+        socials: {
+          instagram: "https://instagram.com",
+          facebook: "https://facebook.com",
+          telegram: "https://t.me/",
+        },
+      },
+    ],
+    addressLabel: "Адрес",
+    phoneLabel: "Телефон",
+    emailLabel: "Электронная почта",
+    workingHoursLabel: "Работаем",
+    workingHours: "Пн-Пт: 09:00-18:00",
+    privacyLabel: "Политика конфиденциальности",
+    privacyHref: "/privacy",
   },
   cases: {
     hero: {
@@ -1137,6 +1188,8 @@ export const ru: Dictionary = {
       turnoverTeamSize: "Оборот или размер команды (по желанию)",
       request: "Кратко о запросе",
       submit: "Записаться на скрининг",
+      successMessage: "Заявка отправлена. Мы свяжемся с вами в ближайшее время.",
+      errorMessage: "Не удалось отправить заявку. Попробуйте позже или напишите нам напрямую.",
     },
   },
 };

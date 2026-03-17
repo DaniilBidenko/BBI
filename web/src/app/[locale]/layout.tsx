@@ -37,7 +37,7 @@ export default async function LocaleLayout({
         ctaLabel={dictionary.nav.cta}
       />
       <main className="flex-1">{children}</main>
-        <Footer text={dictionary.footer.copyright} />
+        <Footer footer={dictionary.footer} locale={locale} />
       </div>
     </ThemeProvider>
   );

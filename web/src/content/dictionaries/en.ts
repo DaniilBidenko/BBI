@@ -388,6 +388,8 @@ export const en: Dictionary = {
     },
     casesBlog: {
       title: "Cases & Blog",
+      casesTitle: "Cases",
+      blogTitle: "Blog",
       casesLabel: "All cases",
       blogLabel: "All articles",
       readMore: "Read more",
@@ -510,7 +512,56 @@ export const en: Dictionary = {
     },
   },
   footer: {
-    copyright: "BBI (Bold Brands International). All rights reserved.",
+    copyright: "© 2024 BBI (Bold Brands International). All rights reserved.",
+    tagline: "Bold Brands International — your outsourced marketing department.",
+    aboutTitle: "About company",
+    aboutLinks: [
+      { label: "About us", href: "/about" },
+      { label: "Cases", href: "/cases" },
+      { label: "Reviews", href: "/reviews" },
+    ],
+    servicesTitle: "Services",
+    servicesLinks: [
+      { label: "Branding" },
+      { label: "Digital promotion" },
+      { label: "Video production" },
+      { label: "Web development and design" },
+      { label: "Comprehensive marketing support" },
+      { label: "Automation and analytics" },
+      { label: "Operational printing" },
+    ],
+    socialTitle: "Find us",
+    locations: [
+      {
+        city: "Bishkek",
+        address: "Matrosova st., 102",
+        phone: "+996 999 99 22 44",
+        email: "office.kg@boldbrands.pro",
+        socials: {
+          instagram: "https://instagram.com",
+          facebook: "https://facebook.com",
+          whatsapp: "https://wa.me/996999992244",
+        },
+      },
+      {
+        city: "Tashkent",
+        address: "Yashnobod district, Yangibozor 1/4",
+        phone: "+998 90 054 34 45",
+        email: "office.uz@boldbrands.pro",
+        socials: {
+          instagram: "https://instagram.com",
+          facebook: "https://facebook.com",
+          telegram: "https://t.me/",
+        },
+      },
+    ],
+    addressLabel: "Address",
+    phoneLabel: "Phone",
+    emailLabel: "Email",
+    workingHoursLabel: "Working hours",
+    workingHours: "Mon-Fri: 09:00-18:00",
+    privacyLabel: "Privacy policy",
+    privacyHref: "/privacy",
   },
   cases: {
     hero: {
@@ -754,6 +805,8 @@ export const en: Dictionary = {
       turnoverTeamSize: "Turnover or team size (optional)",
       request: "Brief about your request",
       submit: "Book a screening",
+      successMessage: "Request sent. We'll get back to you shortly.",
+      errorMessage: "Could not send the request. Please try again later or contact us directly.",
     },
   },
 };

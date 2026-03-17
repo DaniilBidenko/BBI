@@ -310,6 +310,8 @@ export type Dictionary = {
     };
     casesBlog: {
       title: string;
+      casesTitle?: string;
+      blogTitle?: string;
       casesLabel: string;
       blogLabel: string;
       readMore: string;
@@ -364,6 +366,26 @@ export type Dictionary = {
   };
   footer: {
     copyright: string;
+    tagline?: string;
+    aboutTitle: string;
+    aboutLinks: { label: string; href: string }[];
+    servicesTitle: string;
+    servicesLinks: { label: string; href?: string }[];
+    socialTitle: string;
+    locations: {
+      city: string;
+      address?: string;
+      phone?: string;
+      email?: string;
+      socials?: { instagram?: string; facebook?: string; whatsapp?: string; telegram?: string };
+    }[];
+    addressLabel: string;
+    phoneLabel: string;
+    emailLabel: string;
+    workingHoursLabel?: string;
+    workingHours?: string;
+    privacyLabel?: string;
+    privacyHref?: string;
   };
   cases: CasesPage & { items: CaseStudy[] };
   blog: BlogPage & { posts: BlogPost[] };
@@ -413,5 +435,7 @@ export type ContactsPage = {
     turnoverTeamSize: string;
     request: string;
     submit: string;
+    successMessage?: string;
+    errorMessage?: string;
   };
 };
