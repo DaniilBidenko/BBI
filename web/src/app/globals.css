@@ -88,6 +88,11 @@ body {
     #0e0e0e;
 }
 
+/* Страница О компании — без градиента, однотонный фон */
+.page-about .layout-bg {
+  background: #121212 !important;
+}
+
 h1,
 h2,
 h3,

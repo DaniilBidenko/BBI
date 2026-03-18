@@ -51,7 +51,13 @@ export default async function AboutPage({ params }: LocalePageProps) {
   const { who, principles, manifesto, team, cta } = dictionary.about;
 
   return (
-    <div className="min-h-screen text-white" style={{ backgroundColor: PAGE_BG }}>
+    <>
+      {/* Сплошной фон поверх градиента layout-bg — без градиента на всей странице */}
+      <div
+        className="fixed inset-0 -z-10 bg-[#121212]"
+        aria-hidden
+      />
+      <div className="min-h-screen text-white" style={{ backgroundColor: PAGE_BG }}>
       {/* Hero: кто мы */}
       <section className="relative overflow-hidden pb-20 pt-24 md:pb-28 md:pt-28">
         <Container className="relative lg:w-[88%]">
@@ -220,6 +226,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
           </div>
         </Container>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
