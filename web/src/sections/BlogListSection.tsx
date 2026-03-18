@@ -27,7 +27,7 @@ export function BlogListSection({
   readMoreLabel,
 }: BlogListSectionProps) {
   return (
-    <section className="relative py-8">
+    <section className="relative py-8 pb-16 md:pb-20">
       <Container className="relative mx-auto lg:w-[85%]">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (

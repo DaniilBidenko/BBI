@@ -513,22 +513,12 @@ export const en: Dictionary = {
   },
   footer: {
     copyright: "© 2024 BBI (Bold Brands International). All rights reserved.",
-    tagline: "Bold Brands International — your outsourced marketing department.",
+    tagline: "Bold Brands International — your reliable operational partner.",
     aboutTitle: "About company",
     aboutLinks: [
-      { label: "About us", href: "/about" },
+      { label: "How we work", href: "/work" },
       { label: "Cases", href: "/cases" },
-      { label: "Reviews", href: "/reviews" },
-    ],
-    servicesTitle: "Services",
-    servicesLinks: [
-      { label: "Branding" },
-      { label: "Digital promotion" },
-      { label: "Video production" },
-      { label: "Web development and design" },
-      { label: "Comprehensive marketing support" },
-      { label: "Automation and analytics" },
-      { label: "Operational printing" },
+      { label: "Blog", href: "/blog" },
     ],
     socialTitle: "Find us",
     locations: [

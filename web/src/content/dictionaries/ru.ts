@@ -684,22 +684,12 @@ export const ru: Dictionary = {
   },
   footer: {
     copyright: "© 2024 BBI (Bold Brands International). Все права защищены.",
-    tagline: "Bold Brands International — ваш внешний отдел маркетинга.",
+    tagline: "Bold Brands International — ваш надежный операционный партнер.",
     aboutTitle: "О компании",
     aboutLinks: [
-      { label: "О нас", href: "/about" },
+      { label: "Как мы работаем", href: "/work" },
       { label: "Кейсы", href: "/cases" },
-      { label: "Отзывы", href: "/reviews" },
-    ],
-    servicesTitle: "Услуги",
-    servicesLinks: [
-      { label: "Брендинг" },
-      { label: "Digital продвижение" },
-      { label: "Видеопродакшн" },
-      { label: "Веб-разработка и дизайн" },
-      { label: "Комплексное маркетинговое сопровождение" },
-      { label: "Автоматизация и аналитика" },
-      { label: "Оперативная печать" },
+      { label: "Блог", href: "/blog" },
     ],
     socialTitle: "Мы есть",
     locations: [

@@ -369,8 +369,6 @@ export type Dictionary = {
     tagline?: string;
     aboutTitle: string;
     aboutLinks: { label: string; href: string }[];
-    servicesTitle: string;
-    servicesLinks: { label: string; href?: string }[];
     socialTitle: string;
     locations: {
       city: string;

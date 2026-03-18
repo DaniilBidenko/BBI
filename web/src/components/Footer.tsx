@@ -37,16 +37,12 @@ type FooterLocation = {
   socials?: { instagram?: string; facebook?: string; whatsapp?: string; telegram?: string };
 };
 
-type FooterLink = { label: string; href?: string };
-
 export type FooterProps = {
   footer: {
     copyright: string;
     tagline?: string;
     aboutTitle: string;
     aboutLinks: { label: string; href: string }[];
-    servicesTitle: string;
-    servicesLinks: FooterLink[];
     socialTitle: string;
     locations: FooterLocation[];
     addressLabel: string;
@@ -84,12 +80,12 @@ function SocialIcon({
 
 export function Footer({ footer, locale }: FooterProps) {
   return (
-    <footer className="bg-white">
-      {/* Верхний блок: скруглённые углы */}
-      <div className="rounded-t-3xl border-t border-[var(--bbi-text)]/[0.08] bg-white pt-12 pb-10 md:pt-14 md:pb-12">
+    <footer className="relative z-10 mt-10 bg-white text-neutral-800 md:mt-12">
+      {/* Верхний блок: скруглённые углы, контрастный текст на всех страницах */}
+      <div className="rounded-t-3xl border-t border-black/10 bg-white pt-12 pb-10 md:pt-14 md:pb-12">
         <Container className="px-4 lg:px-6">
-          {/* 4 колонки */}
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+          {/* 3 колонки: бренд, о компании, соцсети */}
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
             {/* Бренд + слоган */}
             <div className="max-w-xs">
               <Link
@@ -100,7 +96,7 @@ export function Footer({ footer, locale }: FooterProps) {
                 <span className="logo-wordmark" role="img" aria-hidden />
               </Link>
               {footer.tagline && (
-                <p className="mt-3 text-[13px] leading-[1.5] text-[var(--bbi-text)]/70">
+                <p className="mt-3 text-[13px] leading-[1.5] text-neutral-700">
                   {footer.tagline}
                 </p>
               )}
@@ -108,7 +104,7 @@ export function Footer({ footer, locale }: FooterProps) {
 
             {/* О компании */}
             <div>
-              <h3 className="text-[13px] font-semibold text-[var(--bbi-text)]">
+              <h3 className="text-[13px] font-semibold text-neutral-800">
                 {footer.aboutTitle}
               </h3>
               <ul className="mt-3 space-y-2">
@@ -116,7 +112,7 @@ export function Footer({ footer, locale }: FooterProps) {
                   <li key={item.href}>
                     <Link
                       href={withLocale(locale, item.href)}
-                      className="text-[13px] text-[var(--bbi-text)]/80 transition hover:text-[var(--bbi-red)]"
+                      className="text-[13px] text-neutral-700 transition hover:text-[var(--bbi-red)]"
                     >
                       {item.label}
                     </Link>
@@ -125,40 +121,15 @@ export function Footer({ footer, locale }: FooterProps) {
               </ul>
             </div>
 
-            {/* Услуги */}
-            <div>
-              <h3 className="text-[13px] font-semibold text-[var(--bbi-text)]">
-                {footer.servicesTitle}
-              </h3>
-              <ul className="mt-3 space-y-2">
-                {footer.servicesLinks.map((item, i) => (
-                  <li key={i}>
-                    {item.href ? (
-                      <Link
-                        href={withLocale(locale, item.href)}
-                        className="text-[13px] text-[var(--bbi-text)]/80 transition hover:text-[var(--bbi-red)]"
-                      >
-                        {item.label}
-                      </Link>
-                    ) : (
-                      <span className="text-[13px] text-[var(--bbi-text)]/80">
-                        {item.label}
-                      </span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             {/* Мы есть — соцсети по городам */}
             <div>
-              <h3 className="text-[13px] font-semibold text-[var(--bbi-text)]">
+              <h3 className="text-[13px] font-semibold text-neutral-800">
                 {footer.socialTitle}
               </h3>
               <div className="mt-3 space-y-5">
                 {footer.locations.map((loc) => (
                   <div key={loc.city}>
-                    <p className="text-[13px] text-[var(--bbi-text)]/80">
+                    <p className="text-[13px] text-neutral-700">
                       {loc.city}
                     </p>
                     {loc.socials && (
@@ -195,27 +166,27 @@ export function Footer({ footer, locale }: FooterProps) {
           </div>
 
           {/* Средний блок: контакты по городам + режим работы */}
-          <div className="mt-10 grid gap-8 border-t border-[var(--bbi-text)]/[0.08] pt-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-8 border-t border-black/10 pt-8 sm:grid-cols-2 lg:grid-cols-3">
             {footer.locations.map((loc) => (
               <div key={loc.city} className="space-y-3">
                 {loc.address && (
                   <div>
-                    <p className="text-[11px] font-medium uppercase tracking-wider text-[var(--bbi-text)]/60">
+                    <p className="text-[11px] font-medium uppercase tracking-wider text-neutral-500">
                       {footer.addressLabel} ({loc.city})
                     </p>
-                    <p className="mt-0.5 text-[13px] font-medium text-[var(--bbi-text)]">
+                    <p className="mt-0.5 text-[13px] font-medium text-neutral-800">
                       {loc.address}
                     </p>
                   </div>
                 )}
                 {loc.phone && (
                   <div>
-                    <p className="text-[11px] font-medium uppercase tracking-wider text-[var(--bbi-text)]/60">
+                    <p className="text-[11px] font-medium uppercase tracking-wider text-neutral-500">
                       {footer.phoneLabel} ({loc.city})
                     </p>
                     <a
                       href={`tel:${loc.phone.replace(/\s/g, "")}`}
-                      className="mt-0.5 block text-[13px] font-medium text-[var(--bbi-text)] hover:text-[var(--bbi-red)]"
+                      className="mt-0.5 block text-[13px] font-medium text-neutral-800 hover:text-[var(--bbi-red)]"
                     >
                       {loc.phone}
                     </a>
@@ -223,12 +194,12 @@ export function Footer({ footer, locale }: FooterProps) {
                 )}
                 {loc.email && (
                   <div>
-                    <p className="text-[11px] font-medium uppercase tracking-wider text-[var(--bbi-text)]/60">
+                    <p className="text-[11px] font-medium uppercase tracking-wider text-neutral-500">
                       {footer.emailLabel} ({loc.city})
                     </p>
                     <a
                       href={`mailto:${loc.email}`}
-                      className="mt-0.5 block text-[13px] font-medium text-[var(--bbi-text)] hover:text-[var(--bbi-red)]"
+                      className="mt-0.5 block text-[13px] font-medium text-neutral-800 hover:text-[var(--bbi-red)]"
                     >
                       {loc.email}
                     </a>
@@ -238,10 +209,10 @@ export function Footer({ footer, locale }: FooterProps) {
             ))}
             {footer.workingHoursLabel && footer.workingHours && (
               <div className="space-y-3 sm:col-span-2 lg:col-span-1">
-                <p className="text-[11px] font-medium uppercase tracking-wider text-[var(--bbi-text)]/60">
+                <p className="text-[11px] font-medium uppercase tracking-wider text-neutral-500">
                   {footer.workingHoursLabel}
                 </p>
-                <p className="mt-0.5 text-[13px] font-medium text-[var(--bbi-text)]">
+                <p className="mt-0.5 text-[13px] font-medium text-neutral-800">
                   {footer.workingHours}
                 </p>
               </div>
@@ -251,16 +222,16 @@ export function Footer({ footer, locale }: FooterProps) {
       </div>
 
       {/* Нижняя полоса: копирайт + политика */}
-      <div className="border-t border-[var(--bbi-text)]/[0.08] py-4">
+      <div className="border-t border-black/10 py-4">
         <Container className="px-4 lg:px-6">
           <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-            <p className="text-[12px] text-[var(--bbi-text)]/60">
+            <p className="text-[12px] text-neutral-600">
               {footer.copyright}
             </p>
             {footer.privacyLabel && footer.privacyHref && (
               <Link
                 href={withLocale(locale, footer.privacyHref)}
-                className="text-[12px] text-[var(--bbi-text)]/60 transition hover:text-[var(--bbi-red)]"
+                className="text-[12px] text-neutral-600 transition hover:text-[var(--bbi-red)]"
               >
                 {footer.privacyLabel}
               </Link>

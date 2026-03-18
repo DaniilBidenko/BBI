@@ -513,22 +513,12 @@ export const uz: Dictionary = {
   },
   footer: {
     copyright: "© 2024 BBI (Bold Brands International). Barcha huquqlar himoyalangan.",
-    tagline: "Bold Brands International — tashqi marketing bo'linmangiz.",
+    tagline: "Bold Brands International — ishonchli operatsion hamkoringiz.",
     aboutTitle: "Kompaniya haqida",
     aboutLinks: [
-      { label: "Biz haqimizda", href: "/about" },
+      { label: "Qanday ishlaymiz", href: "/work" },
       { label: "Keyslar", href: "/cases" },
-      { label: "Sharhlar", href: "/reviews" },
-    ],
-    servicesTitle: "Xizmatlar",
-    servicesLinks: [
-      { label: "Brending" },
-      { label: "Digital targ'ib" },
-      { label: "Video ishlab chiqarish" },
-      { label: "Veb-ishlab chiqish va dizayn" },
-      { label: "Kompleks marketing qo'llab-quvvatlash" },
-      { label: "Avtomatlashtirish va tahlil" },
-      { label: "Operativ bosish" },
+      { label: "Blog", href: "/blog" },
     ],
     socialTitle: "Biz",
     locations: [
