@@ -273,9 +273,27 @@ export const en: Dictionary = {
       eyebrow: "Target audience",
       title: "For whom we work",
       segments: [
-        { title: "Owner in growth", description: "Business depends on them.", metrics: "$30k–250k/mo · 15–80 people · 5+ yrs", pain: "Put out fires instead of managing" },
-        { title: "Owner scaling", description: "Chaos multiplies.", metrics: "$80k–500k/mo · 40–200 people", pain: "Scale chaos — scale losses" },
-        { title: "Owner preparing for investment", description: "Business as an asset.", metrics: "$150k–1M+/mo · 80–500+ people", pain: "Investor needs an asset, not a business in my head" },
+        {
+          title: "Owner in growth",
+          description: "Business depends on them.",
+          details: "You're the main «firefighter» and «decision maker»: without you, no decisions, no deals closed. Weekends and vacation — working from your phone. No time for strategy, only operations. The system is replaced by personal control, the team waits for instructions. The result depends on you.",
+          metrics: "$30k–250k/mo · 15–80 people · 5+ yrs",
+          pain: "Put out fires instead of managing",
+        },
+        {
+          title: "Owner scaling",
+          description: "Chaos multiplies.",
+          details: "Revenue growth brings no relief — more gaps and losses. New people, departments, processes, but no connection. 80 people behave like 8. Each department in its own reality, numbers don't add up. Decisions made blindly. Revenue grows, profit «disappears somewhere».",
+          metrics: "$80k–500k/mo · 40–200 people",
+          pain: "Scale chaos — scale losses",
+        },
+        {
+          title: "Owner preparing for investment",
+          description: "Business as an asset.",
+          details: "You know the business inside out. The investor wants numbers, structure, transparency — not your head. Due diligence reveals gaps in accounting and processes. Hard to justify valuation without a system. «Business in owner's head» — red flag. Need manageability on paper.",
+          metrics: "$150k–1M+/mo · 80–500+ people",
+          pain: "Investor needs an asset, not a business in my head",
+        },
       ],
       exclude: "Business under 5 years, startups in PMF, one-off consulting, agency services. Or expecting «guarantee growth» without readiness to change the system.",
       excludeLabel: "Not for",
@@ -287,27 +305,47 @@ export const en: Dictionary = {
       cards: [
         {
           title: "Put out fires instead of managing",
-          description:
-            "Business doesn't run without you. Decisions, fires, manual control — every day. No time for strategy.",
+          description: "Business doesn't run without you. Every day — decisions, firefighting, manual control. Strategy waits for «someday».",
           linkLabel: "Learn more",
           href: "/icp/operations",
+          symptoms: [
+            "«Nothing gets done without me» — you're at the center of everything",
+            "Weekend = working from your phone",
+            "No time for growth, only plugging holes",
+          ],
+          solutionHint: "Rhythm system, SOP and delegation — so business runs while you focus on strategy.",
         },
         {
           title: "Scale chaos — scale losses",
-          description:
-            "Growth multiplies problems. New people, departments, processes — chaos grows with revenue.",
+          description: "Growth brings no relief. New people, departments, processes — chaos and losses grow with revenue.",
           linkLabel: "Learn more",
           href: "/icp/scale",
+          symptoms: [
+            "80 people behave like 8 — no connection",
+            "Each department lives in its own reality",
+            "Revenue grows but profit «disappears somewhere»",
+          ],
+          solutionHint: "Architecture for scale: roles, metrics, unified management — instead of disconnected islands.",
         },
         {
           title: "Investor needs an asset, not a business in my head",
-          description:
-            "You know the business inside out. But the investor wants numbers, structure, transparency — not your head.",
+          description: "You know the business inside out. But the investor wants numbers, structure, transparency — not your head.",
           linkLabel: "Learn more",
           href: "/icp/investor",
+          symptoms: [
+            "Due diligence reveals gaps in accounting and processes",
+            "Hard to justify valuation without a system",
+            "«Business in owner's head» — red flag for investors",
+          ],
+          solutionHint: "Manageability «on paper»: finance, metrics, processes — so the business can be valued and handed over.",
         },
       ],
       ctaLabel: "Discuss your situation",
+      modal: {
+        scenarioLabel: "Scenario breakdown",
+        signsLabel: "Typical signs",
+        solutionLabel: "What can be done",
+      },
     },
     icpBridge: {
       label: "Answer",
@@ -775,10 +813,10 @@ export const en: Dictionary = {
     posts: [
       { slug: "5-shagov-avtonomnoe-upravlenie", category: "Operations", categoryKey: "operations", title: "5 Steps to Autonomous Management", description: "How to build rhythm, SOP and execution control.", image: "/blog/operations-autonomous.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Download checklist", href: "/contacts" } },
       { slug: "diagnostika-problemy-biznesa", category: "Diagnostics", categoryKey: "diagnostics", title: "Diagnostics: Uncover Real Problems", description: "Find real failure points in your system.", image: "/blog/diagnostics-analysis.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Book screening", href: "/contacts" } },
-      { slug: "ekonomika-kanalov-marketing", category: "Marketing", categoryKey: "marketing", title: "Channel Economics", description: "Full-funnel analytics and manageable growth.", image: "/work/zones.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
-      { slug: "sistemnye-prodazhi", category: "Sales", categoryKey: "sales", title: "System Sales Without Stars", description: "Standards, scripts and CRM.", image: "/work/responsibility.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
-      { slug: "finansovaya-prozrachnost", category: "Finance", categoryKey: "finance", title: "Financial Transparency", description: "One truth in numbers.", image: "/work/target-state.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
-      { slug: "hr-kak-sistema", category: "HR", categoryKey: "hr", title: "HR as a System", description: "Roles, accountability, onboarding.", image: "/work/responsibility.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
+      { slug: "ekonomika-kanalov-marketing", category: "Marketing", categoryKey: "marketing", title: "Channel Economics", description: "Full-funnel analytics and manageable growth.", image: "/blog/ekonomika-kanalov.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
+      { slug: "sistemnye-prodazhi", category: "Sales", categoryKey: "sales", title: "System Sales Without Stars", description: "Standards, scripts and CRM.", image: "/blog/sistemnye-prodazhi.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
+      { slug: "finansovaya-prozrachnost", category: "Finance", categoryKey: "finance", title: "Financial Transparency", description: "One truth in numbers.", image: "/blog/finansovaya-prozrachnost.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
+      { slug: "hr-kak-sistema", category: "HR", categoryKey: "hr", title: "HR as a System", description: "Roles, accountability, onboarding.", image: "/blog/hr-kak-sistema.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
     ],
   },
   contacts: {

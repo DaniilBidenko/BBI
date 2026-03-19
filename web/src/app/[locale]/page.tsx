@@ -26,8 +26,8 @@ export default async function HomePage({ params }: LocalePageProps) {
 
   const locale = localeParam as Locale;
   const dictionary = getDictionary(locale);
-  const contactsHref = withLocale(locale, "/contacts");
   const casesHref = withLocale(locale, "/cases");
+  const formAnchor = "#contact-form";
   const { home } = dictionary;
 
   return (
@@ -37,7 +37,7 @@ export default async function HomePage({ params }: LocalePageProps) {
         title={home.hero.title}
         subtitle={home.hero.subtitle}
         ctaLabel={home.hero.cta}
-        ctaHref={contactsHref}
+        ctaHref={formAnchor}
         secondaryLabel={home.hero.secondaryCta}
         secondaryHref={home.hero.secondaryCtaHref ? withLocale(locale, home.hero.secondaryCtaHref) : undefined}
       />
@@ -56,8 +56,10 @@ export default async function HomePage({ params }: LocalePageProps) {
             ...card,
             href: withLocale(locale, card.href),
           }))}
+          segments={home.icpIntro.segments}
           ctaLabel={home.icp.ctaLabel}
-          ctaHref={contactsHref}
+          ctaHref={formAnchor}
+          modalLabels={home.icp.modal}
         />
         {home.helpAndProcess && (
           <HelpAndProcessSection
@@ -96,7 +98,7 @@ export default async function HomePage({ params }: LocalePageProps) {
           items={home.whatYouGet.items}
           cards={home.whatYouGet.cards}
           finalAccent={home.whatYouGet.finalAccent}
-          ctaHref={contactsHref}
+          ctaHref={formAnchor}
         />
         <FAQSection
           title={home.faq.title}

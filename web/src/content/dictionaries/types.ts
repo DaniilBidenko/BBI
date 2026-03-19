@@ -8,6 +8,10 @@ export type HomeCard = {
   description: string;
   linkLabel: string;
   href: string;
+  /** Признаки / симптомы — для отображения в карточке и модалке */
+  symptoms?: string[];
+  /** Намёк на решение — показывается в модалке */
+  solutionHint?: string;
 };
 
 export type HomeStep = {
@@ -241,7 +245,7 @@ export type Dictionary = {
     icpIntro: {
       eyebrow: string;
       title: string;
-      segments: { title: string; description: string; metrics?: string; pain: string }[];
+      segments: { title: string; description: string; details?: string; metrics?: string; pain: string }[];
       exclude: string;
       excludeLabel?: string;
     };
@@ -251,6 +255,7 @@ export type Dictionary = {
       subtitle?: string;
       cards: HomeCard[];
       ctaLabel?: string;
+      modal?: { scenarioLabel: string; signsLabel: string; solutionLabel: string };
     };
     icpBridge: {
       label: string;

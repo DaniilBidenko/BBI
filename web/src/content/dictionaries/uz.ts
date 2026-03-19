@@ -273,9 +273,27 @@ export const uz: Dictionary = {
       eyebrow: "Maqsadli auditoriya",
       title: "Kimlar uchun",
       segments: [
-        { title: "Egasi o'sishda", description: "Biznes unda turyapti.", metrics: "$30k–250k/oy · 15–80 kishi · 5+ yil", pain: "Boshqarish o'rniga yong'in o'chiraman" },
-        { title: "Egasi kengaytirmoqda", description: "Xaos ko'payadi.", metrics: "$80k–500k/oy · 40–200 kishi", pain: "Xaosni kengaytirsam — zararlarni kengaytiraman" },
-        { title: "Egasi investitsiyaga tayyorlanmoqda", description: "Biznes aktiv sifatida.", metrics: "$150k–1M+/oy · 80–500+ kishi", pain: "Investorga mening boshimdagi biznes emas, aktiv kerak" },
+        {
+          title: "Egasi o'sishda",
+          description: "Biznes unda turyapti.",
+          details: "Siz asosiy «yong'in o'chiruvchi» va «qaror qabul qiluvchisiz»: sizsiz qarorlar qabul qilinmaydi, bitimlar yopilmaydi. Dam olish va ta'til — telefonda ishlash. Strategiya uchun vaqt yo'q, faqat operatsionka. Tizim shaxsiy nazorat bilan almashtirilgan, jamoa ko'rsatmalar kutyapti. Natija sizga bog'liq.",
+          metrics: "$30k–250k/oy · 15–80 kishi · 5+ yil",
+          pain: "Boshqarish o'rniga yong'in o'chiraman",
+        },
+        {
+          title: "Egasi kengaytirmoqda",
+          description: "Xaos ko'payadi.",
+          details: "Tushum o'sishi yengillik bermaydi — bo'shliqlar va zararlar ko'payadi. Yangi odamlar, bo'limlar, jarayonlar, lekin bog'liqlik yo'q. 80 kishi 8 kabi harakat qiladi. Har bir bo'lim o'z realiligida, raqamlar mos kelmaydi. Qarorlar ko'r-ko'rona. Tushum o'sadi, foyda «qayerdadir yo'qoladi».",
+          metrics: "$80k–500k/oy · 40–200 kishi",
+          pain: "Xaosni kengaytirsam — zararlarni kengaytiraman",
+        },
+        {
+          title: "Egasi investitsiyaga tayyorlanmoqda",
+          description: "Biznes aktiv sifatida.",
+          details: "Biznesni bilasiz. Investor raqamlar, tuzilma, shaffoflik kerak — boshingiz emas. Due diligence hisob va jarayonlardagi bo'shliqlarni ochadi. Tizimsiz baholashni asoslash qiyin. «Biznes egasi boshida» — xavf belgisi. Qog'ozda boshqariluvchanlik kerak.",
+          metrics: "$150k–1M+/oy · 80–500+ kishi",
+          pain: "Investorga mening boshimdagi biznes emas, aktiv kerak",
+        },
       ],
       exclude: "5 yildan kam biznes, PMF bosqichidagi startaplar, bir martalik konsultatsiya, agentlik xizmatlari. Va tizimni o'zgartirishga tayyor emas holda «o'sishni kafolatlang» talabi.",
       excludeLabel: "Mos emas",
@@ -287,27 +305,47 @@ export const uz: Dictionary = {
       cards: [
         {
           title: "Boshqarish o'rniga yong'in o'chiraman",
-          description:
-            "Biznes sizsiz ishlamaydi. Qarorlar, yong'inlar, qo'lda boshqaruv — har kuni. Strategiya uchun vaqt yo'q.",
+          description: "Biznes sizsiz ishlamaydi. Har kuni — qarorlar, yong'in o'chirish, qo'lda boshqaruv. Strategiya «qachondir» uchun qoldi.",
           linkLabel: "Batafsil",
           href: "/icp/operations",
+          symptoms: [
+            "«Mensiz hech narsa qilmaydi» — siz hamma narsaning markazidasiz",
+            "Dam olish kuni = telefonda ishlash",
+            "Rivojlantirish uchun vaqt yo'q, faqat «teshiklarni yopish»",
+          ],
+          solutionHint: "Ritm tizimi, SOP va vakolatlanish — siz strategiya ustida o'ylaganda biznes ishlashi uchun.",
         },
         {
           title: "Xaosni kengaytirsam — zararlarni kengaytiraman",
-          description:
-            "O'sish muammolarni ko'paytiradi. Yangi odamlar, bo'limlar, jarayonlar — xaos aylanmaga qo'shimcha o'sadi.",
+          description: "O'sish yengillik bermaydi. Yangi odamlar, bo'limlar, jarayonlar — xaos va zararlar aylanma bilan o'sadi.",
           linkLabel: "Batafsil",
           href: "/icp/scale",
+          symptoms: [
+            "80 kishi 8 kabi harakat qiladi — bog'liqliksiz",
+            "Har bir bo'lim o'z realiligida yashaydi",
+            "Tushum o'sadi, lekin foyda «qayerdadir yo'qoladi»",
+          ],
+          solutionHint: "O'lcham uchun arxitektura: rollar, ko'rsatkichlar, yagona boshqaruv — ajratilgan orollar o'rniga.",
         },
         {
           title: "Investorga mening boshimdagi biznes emas, aktiv kerak",
-          description:
-            "Biznesni bilasiz. Lekin investor raqamlar, tuzilma, shaffoflik kerak — boshingiz emas.",
+          description: "Biznesni bilasiz. Lekin investor raqamlar, tuzilma, shaffoflik kerak — boshingiz emas.",
           linkLabel: "Batafsil",
           href: "/icp/investor",
+          symptoms: [
+            "Due diligence hisob va jarayonlardagi bo'shliqlarni ochadi",
+            "Tizimsiz baholashni asoslash qiyin",
+            "«Biznes egasi boshida» — investor uchun xavf belgisi",
+          ],
+          solutionHint: "«Qog'ozda» boshqariluvchanlik: moliya, ko'rsatkichlar, jarayonlar — biznesni baholash va topshirish mumkin bo'ladi.",
         },
       ],
       ctaLabel: "Vaziyatingizni muhokama qilish",
+      modal: {
+        scenarioLabel: "Stsenariy tahlili",
+        signsLabel: "Odatiy belgilar",
+        solutionLabel: "Nima qilish mumkin",
+      },
     },
     icpBridge: {
       label: "Javob",
@@ -775,10 +813,10 @@ export const uz: Dictionary = {
     posts: [
       { slug: "5-shagov-avtonomnoe-upravlenie", category: "Operatsiya", categoryKey: "operations", title: "5 qadam: avtonom boshqaruv", description: "Ritm, SOP va nazorat qanday quriladi.", image: "/blog/operations-autonomous.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }], cta: { label: "Chek-list yuklash", href: "/contacts" } },
       { slug: "diagnostika-problemy-biznesa", category: "Diagnostika", categoryKey: "diagnostics", title: "Diagnostika", description: "Haqiqiy muammolarni topish.", image: "/blog/diagnostics-analysis.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }], cta: { label: "Skriningga yozilish", href: "/contacts" } },
-      { slug: "ekonomika-kanalov-marketing", category: "Marketing", categoryKey: "marketing", title: "Kanal iqtisodiyoti", description: "Skvoz analitika va o'sish.", image: "/work/zones.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
-      { slug: "sistemnye-prodazhi", category: "Savdo", categoryKey: "sales", title: "Tizimli savdo", description: "Standartlar va CRM.", image: "/work/responsibility.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
-      { slug: "finansovaya-prozrachnost", category: "Moliya", categoryKey: "finance", title: "Moliyaviy shaffoflik", description: "Yagona haqiqat raqamlarda.", image: "/work/target-state.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
-      { slug: "hr-kak-sistema", category: "HR", categoryKey: "hr", title: "HR tizim sifatida", description: "Rollar va mas'uliyat.", image: "/work/responsibility.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
+      { slug: "ekonomika-kanalov-marketing", category: "Marketing", categoryKey: "marketing", title: "Kanal iqtisodiyoti", description: "Skvoz analitika va o'sish.", image: "/blog/ekonomika-kanalov.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
+      { slug: "sistemnye-prodazhi", category: "Savdo", categoryKey: "sales", title: "Tizimli savdo", description: "Standartlar va CRM.", image: "/blog/sistemnye-prodazhi.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
+      { slug: "finansovaya-prozrachnost", category: "Moliya", categoryKey: "finance", title: "Moliyaviy shaffoflik", description: "Yagona haqiqat raqamlarda.", image: "/blog/finansovaya-prozrachnost.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
+      { slug: "hr-kak-sistema", category: "HR", categoryKey: "hr", title: "HR tizim sifatida", description: "Rollar va mas'uliyat.", image: "/blog/hr-kak-sistema.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
     ],
   },
   contacts: {

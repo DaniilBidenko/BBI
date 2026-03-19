@@ -1,4 +1,7 @@
+"use client";
+
 import type { ComponentType } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import type { BlogPost } from "@/content/dictionaries/types";
@@ -87,6 +90,49 @@ type BlogSectionProps = {
   locale: string;
 };
 
+function BlogCard({
+  post,
+  locale,
+  readMore,
+}: {
+  post: BlogPost;
+  locale: string;
+  readMore: string;
+}) {
+  return (
+    <Link
+      href={`/${locale}/blog/${post.slug}`}
+      className="bbi-card group relative flex h-full flex-col overflow-hidden rounded-2xl border border-black/[0.08] bg-white transition hover:border-[var(--bbi-red)]"
+    >
+      {post.image && (
+        <div className="relative aspect-video w-full shrink-0 overflow-hidden border-b border-black/[0.06] bg-[var(--bbi-bg)]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={post.image} alt="" className="h-full w-full object-cover" />
+        </div>
+      )}
+      <div className="flex flex-1 flex-col gap-4 p-5">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--bbi-red)] bg-[var(--bbi-red)]/5">
+            <BlogIcon categoryKey={post.categoryKey} />
+          </div>
+          <span className="text-xs font-medium uppercase tracking-widest text-[var(--bbi-red)]">
+            {post.category}
+          </span>
+        </div>
+        <h3 className="text-base font-semibold text-[var(--bbi-text)] line-clamp-2">
+          {post.title}
+        </h3>
+        <p className="line-clamp-2 text-sm text-[var(--bbi-muted)]">
+          {post.description}
+        </p>
+        <span className="mt-auto text-sm text-[var(--bbi-red)] transition group-hover:text-[var(--bbi-red-hover)]">
+          {readMore} →
+        </span>
+      </div>
+    </Link>
+  );
+}
+
 export function BlogSection({
   title,
   blogLabel,
@@ -94,51 +140,58 @@ export function BlogSection({
   blogPosts,
   locale,
 }: BlogSectionProps) {
-  const posts = blogPosts.slice(0, 2);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "prev" | "next") => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const step = el.clientWidth * (dir === "next" ? 1 : -1);
+    el.scrollBy({ left: step, behavior: "smooth" });
+  };
 
   return (
     <section className="relative py-20 md:py-24">
       <Container className="relative mx-auto lg:w-[90%]">
-        <h2 className="mb-12 text-2xl font-semibold text-[var(--bbi-text)] md:text-3xl">
-          {title}
-        </h2>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
-          {posts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/${locale}/blog/${post.slug}`}
-              className="bbi-card group relative flex flex-col overflow-hidden rounded-2xl border border-black/[0.08] bg-white transition hover:border-[var(--bbi-red)]"
+        <div className="mb-12 flex items-center justify-between gap-4">
+          <h2 className="text-2xl font-semibold text-[var(--bbi-text)] md:text-3xl">
+            {title}
+          </h2>
+          <div className="flex shrink-0 gap-2">
+            <button
+              type="button"
+              onClick={() => scroll("prev")}
+              aria-label="Previous"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--bbi-border)] text-[var(--bbi-text)] transition hover:border-[var(--bbi-red)]/30 hover:text-[var(--bbi-red)]"
             >
-              {post.image && (
-                <div className="relative aspect-video w-full shrink-0 overflow-hidden border-b border-black/[0.06] bg-[var(--bbi-bg)]">
-                  <img
-                    src={post.image}
-                    alt=""
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              )}
-              <div className="flex flex-1 flex-col gap-4 p-5">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--bbi-red)] bg-[var(--bbi-red)]/5">
-                    <BlogIcon categoryKey={post.categoryKey} />
-                  </div>
-                  <span className="text-xs font-medium uppercase tracking-widest text-[var(--bbi-red)]">
-                    {post.category}
-                  </span>
-                </div>
-                <h3 className="text-base font-semibold text-[var(--bbi-text)] line-clamp-2">
-                  {post.title}
-                </h3>
-                <p className="line-clamp-2 text-sm text-[var(--bbi-muted)]">
-                  {post.description}
-                </p>
-                <span className="mt-auto text-sm text-[var(--bbi-red)] transition group-hover:text-[var(--bbi-red-hover)]">
-                  {readMore} →
-                </span>
-              </div>
-            </Link>
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => scroll("next")}
+              aria-label="Next"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--bbi-border)] text-[var(--bbi-text)] transition hover:border-[var(--bbi-red)]/30 hover:text-[var(--bbi-red)]"
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          ref={scrollRef}
+          className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 scroll-smooth lg:gap-8 [&::-webkit-scrollbar]:hidden"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {blogPosts.map((post) => (
+            <div
+              key={post.slug}
+              className="w-[min(85vw,320px)] shrink-0 snap-start sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-64px)/3)]"
+            >
+              <BlogCard post={post} locale={locale} readMore={readMore} />
+            </div>
           ))}
         </div>
 

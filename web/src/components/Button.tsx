@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -16,6 +18,21 @@ const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
 
 export function Button({ href, children, variant = "primary" }: ButtonProps) {
   const className = `inline-flex items-center justify-center rounded-full px-4 py-1.5 text-sm font-medium transition ${variantClasses[variant]}`;
+
+  const isAnchor = href?.startsWith("#");
+
+  if (href && isAnchor) {
+    const scrollToAnchor = () => {
+      const id = href.slice(1);
+      const el = document.getElementById(id);
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    return (
+      <button type="button" onClick={scrollToAnchor} className={className}>
+        {children}
+      </button>
+    );
+  }
 
   if (href) {
     return (

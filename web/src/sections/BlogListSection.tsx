@@ -37,7 +37,10 @@ export function BlogListSection({
               className="bbi-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-[#1b1c21] transition-all duration-200 hover:border-[#ff2b44]/20"
             >
               {post.image && (
-                <div className="relative aspect-video w-full overflow-hidden border-b border-white/[0.06] bg-white/[0.03]" />
+                <div className="relative aspect-video w-full overflow-hidden border-b border-white/[0.06] bg-white/[0.03]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={post.image} alt="" className="h-full w-full object-cover" />
+                </div>
               )}
               <div className="relative flex flex-1 flex-col gap-4 p-6">
                 <div className="flex items-start justify-between gap-3">

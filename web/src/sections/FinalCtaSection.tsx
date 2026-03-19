@@ -14,7 +14,7 @@ export function FinalCtaSection({
   contacts,
 }: FinalCtaSectionProps) {
   return (
-    <section className="relative py-20 md:py-28">
+    <section id="contact-form" className="relative py-20 md:py-28 scroll-mt-24">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--bbi-bg)]/50 to-[var(--bbi-bg)]/80" />
       <Container className="relative mx-auto lg:w-[90%]">
         <div className="mx-auto w-full max-w-6xl">
