@@ -1,7 +1,7 @@
 "use client";
 
 import type { ComponentType } from "react";
-import { useRef } from "react";
+import { useCallback, useLayoutEffect, useMemo, useRef } from "react";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import type { BlogPost } from "@/content/dictionaries/types";
@@ -141,12 +141,53 @@ export function BlogSection({
   locale,
 }: BlogSectionProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isLoopAdjusting = useRef(false);
+
+  /** Три копии: ручная прокрутка без конца, позиция «перекидывается» незаметно */
+  const loopPosts = useMemo(
+    () => [...blogPosts, ...blogPosts, ...blogPosts],
+    [blogPosts],
+  );
+
+  useLayoutEffect(() => {
+    const el = scrollRef.current;
+    if (!el || blogPosts.length === 0) return;
+    const apply = () => {
+      const setW = el.scrollWidth / 3;
+      if (setW > 0) el.scrollLeft = setW;
+      else requestAnimationFrame(apply);
+    };
+    apply();
+  }, [blogPosts.length, loopPosts.length]);
+
+  const onScrollLoop = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el || blogPosts.length === 0 || isLoopAdjusting.current) return;
+    const setW = el.scrollWidth / 3;
+    if (setW <= 0) return;
+    const { scrollLeft } = el;
+    const threshold = 12;
+    if (scrollLeft >= 2 * setW - threshold) {
+      isLoopAdjusting.current = true;
+      el.scrollLeft = scrollLeft - setW;
+      requestAnimationFrame(() => {
+        isLoopAdjusting.current = false;
+      });
+    } else if (scrollLeft <= threshold) {
+      isLoopAdjusting.current = true;
+      el.scrollLeft = scrollLeft + setW;
+      requestAnimationFrame(() => {
+        isLoopAdjusting.current = false;
+      });
+    }
+  }, [blogPosts.length]);
 
   const scroll = (dir: "prev" | "next") => {
     const el = scrollRef.current;
     if (!el) return;
     const step = el.clientWidth * (dir === "next" ? 1 : -1);
-    el.scrollBy({ left: step, behavior: "smooth" });
+    /* instant: без smooth — иначе длинная анимация и конфликт с бесконечным циклом */
+    el.scrollBy({ left: step, behavior: "auto" });
   };
 
   return (
@@ -182,13 +223,14 @@ export function BlogSection({
 
         <div
           ref={scrollRef}
-          className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 scroll-smooth lg:gap-8 [&::-webkit-scrollbar]:hidden"
+          onScroll={onScrollLoop}
+          className="flex touch-pan-x gap-6 overflow-x-auto overscroll-x-contain pb-2 [scroll-behavior:auto] lg:gap-8 [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {blogPosts.map((post) => (
+          {loopPosts.map((post, i) => (
             <div
-              key={post.slug}
-              className="w-[min(85vw,320px)] shrink-0 snap-start sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-64px)/3)]"
+              key={`${post.slug}-${i}`}
+              className="w-[min(85vw,320px)] shrink-0 sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-64px)/3)]"
             >
               <BlogCard post={post} locale={locale} readMore={readMore} />
             </div>
