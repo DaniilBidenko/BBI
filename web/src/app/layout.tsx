@@ -18,11 +18,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function(){
-                var p = window.location.pathname;
-                var isHome = p === '/' || /^\\/(ru|en|uz)\\/?$/.test(p);
                 var root = document.documentElement;
                 root.classList.remove('theme-light', 'theme-dark');
-                root.classList.add(isHome ? 'theme-light' : 'theme-dark');
+                root.classList.add('theme-dark');
               })();
             `,
           }}

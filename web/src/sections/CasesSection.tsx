@@ -34,9 +34,10 @@ export function CasesSection({
   const featuredCase = cases[0];
 
   return (
-    <section className="relative py-20 md:py-24">
+    <section className="relative py-16 md:py-20">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[90%]">
-        <h2 className="mb-12 text-2xl font-semibold text-[var(--bbi-text)] md:text-3xl">
+        <h2 className="mb-8 text-center text-[42px] font-semibold uppercase text-white md:mb-10 md:text-[50px]">
           {title}
         </h2>
 
@@ -44,50 +45,54 @@ export function CasesSection({
           {featuredCase && (
             <Link
               href={`/${locale}/cases/${featuredCase.slug}`}
-              className="bbi-card group relative col-span-1 flex flex-col overflow-hidden rounded-2xl border border-black/[0.08] bg-white transition hover:border-[var(--bbi-red)] lg:col-span-2"
+              className="group relative col-span-1 flex flex-col overflow-hidden rounded-[32px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(120%_95%_at_45%_0%,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.025)_34%,rgba(255,255,255,0)_66%),var(--bbi-panel-bg)] shadow-[0_18px_46px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-white/24 lg:col-span-4"
             >
               <div className="flex flex-1 flex-col gap-5 p-6 md:p-8">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[var(--bbi-red)] bg-[var(--bbi-red)]/5">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-2xl border border-white/28 bg-white/6 text-white/90">
                     <CaseIcon />
                   </div>
-                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--bbi-red)]">
-                    {featuredCase.industry}
-                  </span>
+                  <div className="pt-1">
+                    <span className="text-[12px] font-medium uppercase tracking-[0.2em] text-[rgba(255,43,68,1)]">
+                      {featuredCase.industry}
+                    </span>
+                    <h3 className="mt-1 text-[46px] font-semibold leading-[1.04] text-white md:text-[50px]">
+                      {featuredCase.company}
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-[var(--bbi-text)] md:text-xl">
-                  {featuredCase.company}
-                </h3>
-                <p className="text-sm leading-relaxed text-[var(--bbi-muted)] line-clamp-2">
+                <p className="max-w-5xl text-[15px] leading-[1.48] text-white/78 md:text-[16px]">
                   {featuredCase.excerpt}
                 </p>
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {featuredCase.tags.slice(0, 2).map((tag) => (
+                <div className="mt-2 flex flex-wrap gap-2.5">
+                  {featuredCase.tags.slice(0, 4).map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md border border-black/10 px-2 py-0.5 text-xs text-[var(--bbi-muted)]"
+                      className="rounded-full border border-white/20 bg-black/24 px-4 py-1.5 text-[13px] text-white/84"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <span className="text-sm font-medium text-[var(--bbi-red)] transition group-hover:text-[var(--bbi-red-hover)]">
-                  {readMore} →
-                </span>
+                <div className="mt-1 flex items-center gap-2">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/18 bg-black/30 text-[var(--bbi-red)]">
+                    ↗
+                  </span>
+                  <span className="text-[14px] font-medium text-[var(--bbi-red)] transition group-hover:text-[var(--bbi-red-hover)]">
+                    {readMore}
+                  </span>
+                </div>
               </div>
             </Link>
           )}
         </div>
 
-        <div className="mt-10 border-t border-black/[0.06] pt-8">
+        <div className="mt-8 flex justify-center">
           <Link
             href={`/${locale}/cases`}
-            className="group inline-flex items-center gap-2 rounded-xl border border-black/[0.08] bg-white/80 px-5 py-2.5 text-sm font-medium text-[var(--bbi-text)] transition-all hover:border-[var(--bbi-red)]/25 hover:bg-white hover:text-[var(--bbi-red)] hover:shadow-[0_2px_12px_rgba(185,28,28,0.06)]"
+            className="group inline-flex items-center gap-1 rounded-full border border-white/28 bg-[linear-gradient(180deg,#f6f6f6_0%,#d8d8d8_100%)] px-5 py-2 text-[20px] font-medium text-[#1a1a1a] transition hover:brightness-105"
           >
-            {casesLabel}
-            <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
+            {casesLabel} &gt;&gt;
           </Link>
         </div>
       </Container>

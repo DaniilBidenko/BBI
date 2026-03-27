@@ -9,7 +9,7 @@ export function BlogHeroSection({ title, description }: BlogHeroSectionProps) {
   return (
     <section className="relative overflow-hidden pb-16 pt-20">
       <div className="pointer-events-none absolute right-0 top-0 h-[280px] w-[280px] opacity-[0.06]">
-        <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(255,43,68,0.4)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.18)_0%,transparent_70%)]" />
       </div>
       <Container className="relative mx-auto max-w-3xl lg:w-[85%]">
         <div className="space-y-4">

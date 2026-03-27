@@ -10,25 +10,22 @@ type FinalCtaSectionProps = {
 
 export function FinalCtaSection({
   title,
-  subtitle,
+  subtitle: _subtitle,
   contacts,
 }: FinalCtaSectionProps) {
   return (
-    <section id="contact-form" className="relative py-20 md:py-28 scroll-mt-24">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--bbi-bg)]/50 to-[var(--bbi-bg)]/80" />
+    <section id="contact-form" className="relative py-16 md:py-20 scroll-mt-24">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[90%]">
         <div className="mx-auto w-full max-w-6xl">
-          <div className="rounded-2xl border border-[var(--bbi-text)]/[0.08] bg-white p-8 shadow-[0_4px_24px_rgba(0,0,0,0.06)] md:p-10 lg:p-12">
-            <div className="mx-auto max-w-xl space-y-4 text-center">
-              <h2 className="text-2xl font-semibold leading-tight text-[var(--bbi-text)] md:text-3xl lg:text-4xl">
+          <div className="rounded-[30px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(120%_90%_at_45%_0%,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.02)_34%,rgba(255,255,255,0)_66%),var(--bbi-panel-bg)] p-6 shadow-[0_18px_48px_rgba(0,0,0,0.5)] md:p-8 lg:p-10">
+            <div className="mx-auto max-w-4xl text-center">
+              <h2 className="text-[40px] font-semibold uppercase leading-[0.98] text-white md:text-[52px]">
                 {title}
               </h2>
-              <p className="text-[15px] leading-[1.75] text-[var(--bbi-text)]/85 md:text-base">
-                {subtitle}
-              </p>
             </div>
-            <div className="mx-auto mt-10 max-w-xl">
-              <ContactsForm contacts={contacts} variant="light" />
+            <div className="mx-auto mt-8 max-w-5xl">
+              <ContactsForm contacts={contacts} variant="dark" />
             </div>
           </div>
         </div>

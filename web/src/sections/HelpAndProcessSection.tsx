@@ -1,5 +1,4 @@
 import { Container } from "@/components/Container";
-import { CtaBlock } from "@/components/CtaBlock";
 
 type Stage = {
   title: string;
@@ -45,20 +44,21 @@ export function HelpAndProcessSection({
 }: HelpAndProcessSectionProps) {
   return (
     <section className="relative py-14 md:py-16">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--bbi-bg)]/40 to-[var(--bbi-bg)]/80" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto w-full max-w-6xl px-4 lg:px-6">
-        <header className="mb-10 max-w-2xl md:mb-12">
+        <div className="rounded-[28px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(125%_90%_at_50%_0%,rgba(255,255,255,0.085)_0%,rgba(255,255,255,0.02)_36%,rgba(255,255,255,0)_70%),var(--bbi-panel-bg)] p-5 shadow-[0_26px_70px_rgba(0,0,0,0.55)] md:p-7">
+        <header className="mb-8 text-center md:mb-10">
           {label && (
-            <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.3em] text-[var(--bbi-red)]">
+            <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.26em] text-[var(--bbi-red)]">
               {label}
             </span>
           )}
-          <h2 className="text-2xl font-semibold leading-tight tracking-tight text-[var(--bbi-text)] md:text-3xl">
+          <h2 className="text-[34px] font-semibold uppercase leading-[0.96] tracking-tight text-white md:text-[44px]">
             {title}
           </h2>
-          <div className="mt-3 h-0.5 w-12 rounded-full bg-[var(--bbi-red)]/70" />
+          <div className="mx-auto mt-3 h-px w-[90px] bg-white/22" />
           {description && (
-            <p className="mt-4 text-[15px] leading-[1.75] text-[var(--bbi-text)]/85 md:text-base">
+            <p className="mx-auto mt-3 max-w-3xl text-[12px] uppercase leading-[1.32] tracking-[0.16em] text-[rgba(255,192,7,1)] md:text-[13px]">
               {description}
             </p>
           )}
@@ -68,45 +68,40 @@ export function HelpAndProcessSection({
           {stages.map((stage, i) => (
             <article
               key={i}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--bbi-text)]/[0.08] bg-white shadow-[0_4px_24px_rgba(0,0,0,0.05)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[var(--bbi-red)]/20 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]"
+              className="group relative flex min-h-[305px] flex-col overflow-hidden rounded-[26px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(120%_92%_at_45%_0%,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.024)_34%,rgba(255,255,255,0)_66%),var(--bbi-panel-bg)] p-5 shadow-[0_16px_36px_rgba(0,0,0,0.46)] transition-all duration-300 hover:border-white/25 md:min-h-[320px] md:p-6"
             >
-              <div className="absolute inset-y-0 left-0 w-[3px] bg-[var(--bbi-red)]/40 transition-colors duration-300 group-hover:bg-[var(--bbi-red)]" />
-              <div className="flex flex-1 flex-col p-6 pl-7 md:p-7 md:pl-8">
-                <div className="flex items-start gap-3 pb-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--bbi-red)]/15 text-[var(--bbi-red)] transition-colors group-hover:bg-[var(--bbi-red)]/20 [&_svg]:shrink-0">
+              <div className="flex h-full flex-col">
+                <div className="flex items-start gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/6 text-white/85 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0">
                     {STAGE_ICONS[i % STAGE_ICONS.length]}
                   </span>
-                  <div>
-                    <span className="text-[11px] font-bold tabular-nums text-[var(--bbi-text)]/50">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <h3 className="mt-0.5 text-lg font-semibold leading-snug text-[var(--bbi-text)]">
+                  <div className="pt-0.5">
+                    <h3 className="text-[37px] font-semibold leading-[1.05] text-white">
                       {stage.title}
                     </h3>
                   </div>
                 </div>
 
-                <p className="text-[14px] leading-[1.7] text-[var(--bbi-text)]">
+                <p className="mt-3 text-[15px] leading-[1.55] text-white/78">
                   {stage.description}
                 </p>
 
                 {stage.result && (
-                  <div className="mt-4 rounded-lg border-l-4 border-[var(--bbi-red)]/50 bg-[var(--bbi-red)]/[0.06] py-3 pl-4 pr-4">
-                    <p className="text-[13px] font-medium leading-snug text-[var(--bbi-text)]">
+                  <div className="mt-4 w-fit rounded-full border border-[rgba(255,43,68,0.55)] px-3 py-1.5">
+                    <p className="text-[12px] font-medium leading-none text-[var(--bbi-red)]">
                       {stage.result}
                     </p>
                   </div>
                 )}
 
                 {stage.clientGets && stage.clientGets.length > 0 && (
-                  <div className="mt-5 border-t border-[var(--bbi-text)]/[0.08] pt-4">
-                    <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-[var(--bbi-text)]/70">
-                      На руки
-                    </p>
+                  <div className="mt-auto border-t border-white/16 pt-3">
                     <ul className="space-y-1.5">
                       {stage.clientGets.map((item, j) => (
-                        <li key={j} className="flex gap-2.5 text-[13px] leading-snug text-[var(--bbi-text)]">
-                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--bbi-red)]/70" aria-hidden />
+                        <li key={j} className="flex gap-2 text-[13px] leading-snug text-white/68">
+                          <span className="mt-0.5 shrink-0 text-[var(--bbi-red)]" aria-hidden>
+                            &gt;
+                          </span>
                           {item}
                         </li>
                       ))}
@@ -119,10 +114,16 @@ export function HelpAndProcessSection({
         </div>
 
         {ctaLabel && ctaHref && (
-          <div className="mt-8">
-            <CtaBlock href={ctaHref} label={ctaLabel} />
+          <div className="mt-8 flex justify-center">
+            <a
+              href={ctaHref}
+              className="inline-flex items-center justify-center rounded-full bg-[var(--bbi-red)] px-6 py-2 text-[13px] font-medium text-white shadow-[0_0_28px_rgba(255,43,68,0.35)] transition hover:bg-[var(--bbi-red-hover)]"
+            >
+              {ctaLabel}
+            </a>
           </div>
         )}
+        </div>
       </Container>
     </section>
   );

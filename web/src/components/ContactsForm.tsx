@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { ContactsPage } from "@/content/dictionaries/types";
 
 const fieldBaseDark =
-  "w-full rounded-xl border border-white/10 bg-[#14151a] px-4 py-3 text-sm text-white placeholder:text-white/40 transition focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/50 focus:border-[#ff2b44]/30";
+  "w-full rounded-full border border-white/14 bg-[rgba(10,12,18,0.82)] px-5 py-3.5 text-[16px] leading-[1.45] text-white/90 placeholder:text-white/34 transition focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/40 focus:border-[#ff2b44]/40";
 
 const fieldBaseLight =
   "w-full rounded-xl border border-[var(--bbi-text)]/10 bg-white px-4 py-3 text-sm text-[var(--bbi-text)] placeholder:text-[var(--bbi-muted)] transition focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/40 focus:border-[var(--bbi-red)]/30";
@@ -20,13 +20,13 @@ export function ContactsForm({ contacts, variant = "dark" }: ContactsFormProps) 
   const fieldBase = isLight ? fieldBaseLight : fieldBaseDark;
   const labelClass = isLight
     ? "block text-xs font-medium uppercase tracking-wider text-[var(--bbi-muted)]"
-    : "block text-xs font-medium uppercase tracking-wider text-white/60";
+    : "block text-[18px] font-medium uppercase tracking-[0.02em] text-white/72";
   const labelClassOptional = isLight
     ? "block text-xs font-medium uppercase tracking-wider text-[var(--bbi-muted)]/80"
-    : "block text-xs font-medium uppercase tracking-wider text-white/50";
+    : "block text-[18px] font-medium uppercase tracking-[0.02em] text-white/65";
   const buttonClass = isLight
     ? "inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--bbi-red)] px-6 py-3.5 text-sm font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/50 focus:ring-offset-2 focus:ring-offset-white disabled:opacity-70 sm:w-auto sm:min-w-[240px]"
-    : "inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ff2b44] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-[#ff4960] focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/60 focus:ring-offset-2 focus:ring-offset-[#0e0e0e] disabled:opacity-70 sm:w-auto sm:min-w-[240px]";
+    : "inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ff2b44] px-6 py-3 text-[14px] font-medium text-white transition hover:bg-[#ff4960] focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/60 focus:ring-offset-2 focus:ring-offset-[#0e0e0e] disabled:opacity-70 sm:w-auto sm:min-w-[180px]";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -70,7 +70,7 @@ export function ContactsForm({ contacts, variant = "dark" }: ContactsFormProps) 
 
   return (
     <form
-      className="space-y-6"
+      className="space-y-5"
       onSubmit={handleSubmit}
     >
       <div className="space-y-2">
@@ -138,7 +138,7 @@ export function ContactsForm({ contacts, variant = "dark" }: ContactsFormProps) 
           rows={4}
           required
           placeholder={contacts.form.request}
-          className={`${fieldBase} min-h-[120px] resize-y`}
+          className={`${fieldBase} min-h-[150px] rounded-[28px] pl-6 pr-5 py-4 leading-[1.5] resize-y`}
         />
       </div>
 
@@ -147,7 +147,7 @@ export function ContactsForm({ contacts, variant = "dark" }: ContactsFormProps) 
           {errorMsg}
         </p>
       )}
-      <div className="pt-2">
+      <div className="pt-1">
         <button
           type="submit"
           disabled={status === "submitting"}

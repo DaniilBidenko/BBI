@@ -51,14 +51,24 @@ export function WhatWeChangeSection({
   title,
   pillars,
 }: WhatWeChangeSectionProps) {
+  const CARD_STYLES = [
+    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
+    "border-[rgba(255,255,255,0.18)] bg-[rgba(9,11,16,0.94)]",
+    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
+    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
+    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
+    "border-[rgba(255,255,255,0.18)] bg-[rgba(9,11,16,0.94)]",
+  ] as const;
+
   return (
     <section className="relative py-16 md:py-20">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[90%]">
         <div className="mb-10 flex flex-col items-center gap-3">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-[var(--bbi-red)]">
             {eyebrow}
           </span>
-          <h2 className="text-center text-2xl font-semibold text-[var(--bbi-text)] md:text-3xl">
+          <h2 className="text-center text-[42px] font-semibold uppercase text-white md:text-[50px]">
             {title}
           </h2>
         </div>
@@ -68,7 +78,7 @@ export function WhatWeChangeSection({
             return (
               <article
                 key={pillar.title}
-                className="bbi-card flex flex-col gap-4 rounded-2xl border border-black/[0.08] bg-white p-6 transition hover:border-[var(--bbi-red)] md:p-7"
+                className={`bbi-card flex flex-col gap-4 rounded-2xl border p-6 transition hover:border-[var(--bbi-red)]/35 md:p-7 ${CARD_STYLES[pillarIndex % CARD_STYLES.length]}`}
               >
                 <div className="flex items-center gap-2">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--bbi-red)]/10 text-[var(--bbi-red)] [&>svg]:h-4 [&>svg]:w-4">
@@ -78,7 +88,7 @@ export function WhatWeChangeSection({
                     {pillar.title}
                   </h3>
                 </div>
-                <ul className="space-y-2 text-sm leading-[1.7] text-[var(--bbi-muted)]">
+                <ul className="space-y-2 text-sm leading-[1.7] text-white/72">
                   {pillar.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--bbi-red)]/80" />

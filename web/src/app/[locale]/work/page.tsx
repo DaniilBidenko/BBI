@@ -67,26 +67,38 @@ export default async function WorkPage({ params }: LocalePageProps) {
         description={work.stages.description}
         steps={work.stages.steps}
       />
-      <WorkResponsibilitySection
-        title={work.responsibility.title}
-        bbiTitle={work.responsibility.bbiTitle}
-        clientTitle={work.responsibility.clientTitle}
-        bbi={work.responsibility.bbi}
-        client={work.responsibility.client}
-      />
-      <WorkTargetStateSection
-        title={work.targetState.title}
-        minimumTitle={work.targetState.minimumTitle}
-        minimumDescription={work.targetState.minimumDescription}
-        idealTitle={work.targetState.idealTitle}
-        idealDescription={work.targetState.idealDescription}
-      />
-      <WorkCtaSection
-        title={work.cta.title}
-        description={work.cta.description}
-        form={work.cta.form}
-        submitHref={withLocale(locale, "/contacts")}
-      />
+      <div className="relative">
+        <div className="pointer-events-none absolute inset-x-0 -top-24 -bottom-24 -z-10 overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand/work-final-blocks-photo.png"
+            alt=""
+            className="h-full w-full object-cover object-center brightness-[0.5]"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.88)_0%,rgba(0,0,0,0.64)_36%,rgba(0,0,0,0.62)_68%,rgba(0,0,0,0.92)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_50%,rgba(0,0,0,0.06)_24%,rgba(0,0,0,0.42)_70%,#000_100%)]" />
+        </div>
+        <WorkResponsibilitySection
+          title={work.responsibility.title}
+          bbiTitle={work.responsibility.bbiTitle}
+          clientTitle={work.responsibility.clientTitle}
+          bbi={work.responsibility.bbi}
+          client={work.responsibility.client}
+        />
+        <WorkTargetStateSection
+          title={work.targetState.title}
+          minimumTitle={work.targetState.minimumTitle}
+          minimumDescription={work.targetState.minimumDescription}
+          idealTitle={work.targetState.idealTitle}
+          idealDescription={work.targetState.idealDescription}
+        />
+        <WorkCtaSection
+          title={work.cta.title}
+          description={work.cta.description}
+          form={work.cta.form}
+          submitHref={withLocale(locale, "/contacts")}
+        />
+      </div>
     </div>
   );
 }

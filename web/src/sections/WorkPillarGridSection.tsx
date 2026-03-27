@@ -11,28 +11,28 @@ type WorkPillarGridSectionProps = {
 
 const variantStyles = {
   result: {
-    section: "relative py-24",
-    headerBadge: "text-xs font-medium uppercase tracking-[0.28em] text-emerald-400/90",
-    card: "group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br from-[#1a1b20] to-[#15161a] p-6 transition hover:border-emerald-500/20",
-    cardAccent: "absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-emerald-500/50 to-transparent",
-    label: "text-xs font-medium uppercase tracking-[0.2em] text-white/50",
-    text: "mt-3 text-[15px] leading-[1.65] text-white/88",
+    section: "relative pt-20 pb-12",
+    headerBadge: "text-xs font-medium uppercase tracking-[0.28em] text-[rgba(255,196,58,0.95)]",
+    card: "group relative overflow-hidden rounded-[24px] border border-white/20 bg-[linear-gradient(180deg,rgba(42,44,50,0.9)_0%,rgba(16,18,24,0.96)_100%)] p-5 pt-12 shadow-[0_14px_34px_rgba(0,0,0,0.35)] transition hover:border-[rgba(255,196,58,0.35)]",
+    cardAccent: "absolute inset-x-0 top-0 h-[44%] bg-[radial-gradient(120%_90%_at_50%_0%,rgba(255,196,58,0.18)_0%,rgba(255,196,58,0.06)_35%,rgba(255,196,58,0)_74%)]",
+    label: "text-[36px] font-semibold leading-[1.05] text-white md:text-[40px]",
+    text: "mt-3 text-[15px] leading-[1.52] text-white/78",
   },
   broken: {
-    section: "relative py-24",
-    headerBadge: "text-xs font-medium uppercase tracking-[0.28em] text-amber-400/90",
-    card: "relative rounded-xl border border-amber-500/15 bg-[#18191d] px-5 py-4",
-    cardAccent: "absolute left-0 top-0 bottom-0 w-[3px] rounded-l bg-amber-500/40",
-    label: "text-xs font-medium uppercase tracking-[0.2em] text-white/45",
-    text: "mt-2 text-sm leading-relaxed text-white/80",
+    section: "relative py-12",
+    headerBadge: "text-xs font-medium uppercase tracking-[0.28em] text-white/95",
+    card: "",
+    cardAccent: "",
+    label: "",
+    text: "",
   },
   actions: {
-    section: "relative py-24",
+    section: "relative pt-12 pb-20",
     headerBadge: "text-xs font-medium uppercase tracking-[0.28em] text-[#ff2b44]",
-    card: "relative rounded-2xl border border-[#ff2b44]/20 bg-[#1b1c21] p-6 shadow-[inset_0_1px_0_rgba(255,43,68,0.08)]",
+    card: "",
     cardAccent: "",
-    label: "text-xs font-medium uppercase tracking-[0.22em] text-[#ff2b44]/80",
-    text: "mt-3 text-[15px] leading-[1.65] text-white/90",
+    label: "",
+    text: "",
   },
 } as const;
 
@@ -47,66 +47,169 @@ export function WorkPillarGridSection({
 
   return (
     <section className={styles.section}>
-      <Container className="relative mx-auto space-y-10 lg:w-[85%]">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div className="space-y-2">
-            <div className={styles.headerBadge}>{badge}</div>
-            <h2 className="text-2xl font-semibold text-white md:text-3xl">
-              {title}
-            </h2>
-          </div>
-          <p className="max-w-xl text-[15px] leading-[1.6] text-white/70">
+      <Container className="relative mx-auto space-y-10 lg:w-[90%]">
+        <div className="flex flex-col items-center gap-3 text-center">
+          <div className={styles.headerBadge}>{badge}</div>
+          <h2 className="text-2xl font-semibold text-white md:text-3xl">
+            {title}
+          </h2>
+          <p className="max-w-3xl text-[15px] leading-[1.6] text-white/70">
             {description}
           </p>
         </div>
 
         {field === "result" && (
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {pillars.map((pillar, i) => (
-              <article
-                key={`${pillar.key}-${field}`}
-                className={styles.card}
-              >
-                <div className={styles.cardAccent} />
-                <div className={styles.label}>{pillar.title}</div>
-                <p className={styles.text}>{pillar[field]}</p>
+              <article key={`${pillar.key}-${field}`} className="group relative flex flex-col overflow-visible">
+                <span
+                  className="icp-card__index absolute z-20 flex items-center justify-center text-[36px] font-semibold leading-none"
+                  style={{
+                    color: "rgba(255,196,58,0.98)",
+                    borderColor: "rgba(255,196,58,0.38)",
+                    background:
+                      "linear-gradient(180deg, rgba(255,196,58,0.2) 0%, rgba(78,62,19,0.42) 44%, rgba(14,13,10,0.92) 100%)",
+                    width: "58px",
+                    height: "58px",
+                    left: "10px",
+                    top: "6px",
+                    fontSize: "24px",
+                  }}
+                >
+                  {i + 1}
+                </span>
+                <div
+                  className="icp-card relative mt-1 ml-1 !h-[228px]"
+                  style={{
+                    background:
+                      "radial-gradient(130% 95% at 50% 0%, rgba(255,196,58,0.18) 0%, rgba(255,196,58,0.06) 34%, rgba(255,196,58,0.01) 58%, rgba(10,12,17,0.98) 100%), linear-gradient(165deg, rgba(22,25,32,0.97), rgba(8,10,15,0.99))",
+                    borderColor: "rgba(255,196,58,0.22)",
+                  }}
+                >
+                  <div className="icp-card__content">
+                    <div className="icp-card__title">
+                      <h3 className="line-clamp-3 max-w-[12ch] text-[23px] font-semibold leading-[1.08] text-white md:max-w-[12.5ch] md:text-[26px]">
+                        {pillar.title}
+                      </h3>
+                    </div>
+                    <div className="icp-card__body text-[14px] leading-[1.42] text-white/82">
+                      <p className="line-clamp-3 max-w-[28ch]">{pillar[field]}</p>
+                    </div>
+                    <div className="icp-card__footer">
+                      <span className="inline-flex w-fit items-center gap-1 text-[13px] leading-none text-[rgba(255,196,58,0.98)]">
+                        Подробнее
+                        <span className="text-[11px] leading-none">&gt;&gt;</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         )}
 
         {field === "broken" && (
-          <div className="space-y-3">
-            {pillars.map((pillar, i) => (
-              <article
-                key={`${pillar.key}-${field}`}
-                className={styles.card}
-              >
-                <div className={styles.cardAccent} />
-                <div className="flex items-baseline justify-between gap-4">
-                  <span className={styles.label}>{pillar.title}</span>
-                  <span className="text-[10px] font-semibold tabular-nums text-amber-500/60">
-                    {String(i + 1).padStart(2, "0")}
+          <>
+            <div className="-mt-2 flex justify-center text-white/95">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7">
+                <path d="M12 3 2 21h20L12 3Zm-1 6h2v6h-2V9Zm1 10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Z" />
+              </svg>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {pillars.map((pillar, i) => (
+                <article key={`${pillar.key}-${field}`} className="group relative flex flex-col overflow-visible">
+                  <span
+                    className="icp-card__index absolute z-20 flex items-center justify-center text-[36px] font-semibold leading-none"
+                    style={{
+                      color: "rgba(255,255,255,0.95)",
+                      borderColor: "rgba(255,255,255,0.3)",
+                      background:
+                        "linear-gradient(180deg, rgba(255,255,255,0.16) 0%, rgba(70,70,70,0.34) 44%, rgba(10,10,12,0.9) 100%)",
+                      width: "58px",
+                      height: "58px",
+                      left: "10px",
+                      top: "6px",
+                      fontSize: "24px",
+                    }}
+                  >
+                    {i + 1}
                   </span>
-                </div>
-                <p className={styles.text}>{pillar[field]}</p>
-              </article>
-            ))}
-          </div>
+                  <div
+                    className="icp-card relative mt-1 ml-1 !h-[228px]"
+                    style={{
+                      background:
+                        "radial-gradient(130% 95% at 50% 0%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 34%, rgba(255,255,255,0) 58%, rgba(10,12,17,0.98) 100%), linear-gradient(165deg, rgba(22,25,32,0.97), rgba(8,10,15,0.99))",
+                      borderColor: "rgba(255,255,255,0.22)",
+                    }}
+                  >
+                    <div className="icp-card__content">
+                      <div className="icp-card__title">
+                        <h3 className="line-clamp-3 max-w-[12ch] text-[23px] font-semibold leading-[1.08] text-white md:max-w-[12.5ch] md:text-[26px]">
+                          {pillar.title}
+                        </h3>
+                      </div>
+                      <div className="icp-card__body text-[14px] leading-[1.42] text-white/82">
+                        <p className="line-clamp-3 max-w-[28ch]">{pillar[field]}</p>
+                      </div>
+                      <div className="icp-card__footer">
+                        <span className="inline-flex w-fit items-center gap-1 text-[13px] leading-none text-white/92">
+                          Подробнее
+                          <span className="text-[11px] leading-none">&gt;&gt;</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
         )}
 
         {field === "actions" && (
-          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {pillars.map((pillar, i) => (
-              <article
-                key={`${pillar.key}-${field}`}
-                className={styles.card}
-              >
-                <div className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#ff2b44]/15 text-xs font-bold text-[#ff2b44]">
+              <article key={`${pillar.key}-${field}`} className="group relative flex flex-col overflow-visible">
+                <span
+                  className="icp-card__index absolute z-20 flex items-center justify-center text-[36px] font-semibold leading-none"
+                  style={{
+                    color: "rgba(255,43,68,0.98)",
+                    borderColor: "rgba(255,43,68,0.38)",
+                    background:
+                      "linear-gradient(180deg, rgba(255,43,68,0.22) 0%, rgba(70,18,26,0.42) 44%, rgba(14,10,12,0.92) 100%)",
+                    width: "58px",
+                    height: "58px",
+                    left: "10px",
+                    top: "6px",
+                    fontSize: "24px",
+                  }}
+                >
                   {i + 1}
+                </span>
+                <div
+                  className="icp-card relative mt-1 ml-1 !h-[228px]"
+                  style={{
+                    background:
+                      "radial-gradient(130% 95% at 50% 0%, rgba(255,43,68,0.18) 0%, rgba(255,43,68,0.06) 34%, rgba(255,43,68,0.01) 58%, rgba(10,12,17,0.98) 100%), linear-gradient(165deg, rgba(22,25,32,0.97), rgba(8,10,15,0.99))",
+                    borderColor: "rgba(255,43,68,0.24)",
+                  }}
+                >
+                  <div className="icp-card__content">
+                    <div className="icp-card__title">
+                      <h3 className="line-clamp-3 max-w-[12ch] text-[23px] font-semibold leading-[1.08] text-white md:max-w-[12.5ch] md:text-[26px]">
+                        {pillar.title}
+                      </h3>
+                    </div>
+                    <div className="icp-card__body text-[14px] leading-[1.42] text-white/82">
+                      <p className="line-clamp-3 max-w-[28ch]">{pillar[field]}</p>
+                    </div>
+                    <div className="icp-card__footer">
+                      <span className="inline-flex w-fit items-center gap-1 text-[13px] leading-none text-[rgba(255,43,68,0.98)]">
+                        Подробнее
+                        <span className="text-[11px] leading-none">&gt;&gt;</span>
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className={styles.label}>{pillar.title}</div>
-                <p className={styles.text}>{pillar[field]}</p>
               </article>
             ))}
           </div>

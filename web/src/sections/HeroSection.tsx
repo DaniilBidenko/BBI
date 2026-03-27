@@ -20,37 +20,41 @@ export function HeroSection({
   secondaryLabel,
   secondaryHref,
 }: HeroSectionProps) {
+  const formattedTitle = title
+    .replace("Строим бизнес, ", "Строим бизнес,\n")
+    .replace("который работает ", "который работает\n")
+    .replace("не хаотично, ", "не хаотично,\n")
+    .replace("а как управляемая ", "а как управляемая\n")
+    .replace("и масштабируемая ", "и масштабируемая\n");
+
   return (
-    <section className="relative overflow-hidden pb-16 pt-32">
-      <Container className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-        <div className="max-w-3xl space-y-5">
-          <span className="sr-only">{eyebrow}</span>
-          <h1 className="max-w-[560px] text-3xl font-semibold uppercase leading-[1.08] tracking-[0.04em] md:max-w-[640px] md:text-5xl">
-            {title}
+    <section className="relative -mt-[58px] overflow-hidden bg-[var(--bbi-bg)] pb-12 pt-[72px] md:-mt-[62px] md:pt-[82px]">
+      <img
+        src="/brand/hero-header-photo.png"
+        alt=""
+        className="pointer-events-none absolute inset-0 h-full w-full scale-[1.06] object-cover object-[52%_30%] opacity-84"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(6,7,10,0.18)_0%,rgba(6,7,10,0.34)_52%,rgba(6,7,10,0.72)_72%,rgba(6,7,10,0.94)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(6,7,10,0.08)_0%,rgba(6,7,10,0.32)_46%,rgba(6,7,10,0.78)_70%,rgba(7,8,11,0.98)_88%,rgba(7,8,11,1)_100%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(7,8,11,0)_0%,rgba(7,8,11,0.74)_70%,rgba(7,8,11,1)_100%)]" />
+      <Container className="relative grid gap-7 lg:grid-cols-[1fr] lg:items-center">
+        <div className="max-w-[760px] space-y-5">
+          <h1 className="max-w-[700px] whitespace-pre-line text-[35px] font-semibold uppercase leading-[0.98] tracking-[0.01em] text-white md:text-[52px] lg:text-[4rem]">
+            {formattedTitle}
           </h1>
-          <p className="max-w-[52ch] text-base leading-[1.7] text-[var(--bbi-muted)] md:text-lg">
+          <p className="max-w-[56ch] whitespace-pre-line text-[18px] leading-[1.48] text-white/80 md:text-[21px]">
             {subtitle}
           </p>
-          <div className="flex flex-wrap items-center gap-4 pt-1">
-            <Button href={ctaHref}>{ctaLabel}</Button>
+          <div className="flex flex-wrap items-center gap-3 pt-1.5">
+            <Button href={ctaHref} className="px-6 py-2 text-[13px] tracking-[0.02em] normal-case">
+              {ctaLabel}
+            </Button>
             {secondaryHref && (
-              <Button href={secondaryHref} variant="ghost">
+              <Button href={secondaryHref} variant="ghost" className="px-6 py-2 text-[13px] tracking-[0.02em] normal-case">
                 {secondaryLabel}
               </Button>
             )}
           </div>
-        </div>
-        <div className="relative flex min-h-[260px] items-start justify-end md:min-h-[360px]">
-          <img
-            src="/brand/pattern-white.png"
-            alt=""
-            className="pointer-events-none absolute -right-6 -top-10 h-[210px] w-auto opacity-[0.04] invert mix-blend-multiply"
-          />
-          <img
-            src="/brand/hero-mechanism-traced.png"
-            alt=""
-            className="relative h-[280px] w-auto opacity-90 brightness-0 md:h-[360px]"
-          />
         </div>
       </Container>
     </section>

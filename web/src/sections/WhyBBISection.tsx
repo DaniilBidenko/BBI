@@ -18,12 +18,6 @@ const NOT_ICON = (
   </svg>
 );
 
-const BBI_ICON = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-  </svg>
-);
-
 export function WhyBBISection({
   eyebrow,
   title,
@@ -35,20 +29,20 @@ export function WhyBBISection({
   const useNewLayout = topCards && topCards.length > 0 && wideCard;
 
   return (
-    <section className="relative py-16 md:py-20">
-      <div className="absolute inset-0 -z-10 bg-[var(--bbi-bg)]/30" />
+    <section className="relative py-14 md:py-18">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[90%]">
-        <header className="mb-12 text-center md:mb-14">
+        <header className="mb-10 text-center md:mb-12">
           {eyebrow && (
-            <span className="mb-3 inline-block text-xs font-medium uppercase tracking-[0.3em] text-[var(--bbi-red)]">
+            <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--bbi-red)]">
               {eyebrow}
             </span>
           )}
-          <h2 className="text-2xl font-semibold leading-tight text-[var(--bbi-text)] md:text-3xl lg:text-[2rem]">
+          <h2 className="text-[34px] font-semibold uppercase leading-[0.98] text-white md:text-[44px]">
             {title}
           </h2>
           {subtitle && (
-            <p className="mx-auto mt-4 max-w-3xl text-[15px] leading-[1.8] text-[var(--bbi-muted)] md:text-base">
+            <p className="mx-auto mt-3 max-w-4xl text-[13px] font-light uppercase leading-[1.16] tracking-[0.02em] text-[rgba(255,192,7,1)] md:text-[17px]">
               {subtitle}
             </p>
           )}
@@ -60,30 +54,31 @@ export function WhyBBISection({
               {topCards.map((card) => (
                 <article
                   key={card.label}
-                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-black/[0.08] bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:shadow-[0_6px_24px_rgba(0,0,0,0.08)]"
+                  className="group relative flex min-h-[328px] flex-col overflow-hidden rounded-[28px] border border-[rgba(255,43,68,0.24)] bg-[linear-gradient(160deg,rgba(255,43,68,0.16)_0%,rgba(36,20,26,0.78)_34%,rgba(9,11,16,0.96)_68%,rgba(7,8,11,0.98)_100%)] p-6 shadow-[0_16px_42px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-[rgba(255,43,68,0.38)]"
                 >
-                  <div className="absolute inset-y-0 left-0 w-1 bg-[var(--bbi-muted)]/30 transition-colors group-hover:bg-[var(--bbi-red)]/40" />
-                  <div className="flex flex-1 flex-col p-6 pl-7 md:p-7 md:pl-8">
+                  <div className="flex h-full flex-col">
                     <div className="mb-4 flex items-center gap-3">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-black/[0.1] bg-[var(--bbi-bg)]/60 text-[var(--bbi-muted)]">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[rgba(255,43,68,0.28)] bg-[rgba(255,43,68,0.08)] text-[rgba(255,43,68,0.95)]">
                         {NOT_ICON}
                       </span>
-                      <h3 className="text-lg font-semibold text-[var(--bbi-text)]">
+                      <h3 className="text-[40px] font-semibold leading-[1.02] text-white">
                         {card.label}
                       </h3>
                     </div>
-                    <p className="mb-5 text-[15px] leading-[1.75] text-[var(--bbi-muted)]">
+                    <p className="mb-5 text-[15px] leading-[1.62] text-white/78">
                       {card.intro}
                     </p>
                     {card.outcomeBullets.length > 0 && (
-                      <div className="mt-auto rounded-xl border border-black/[0.06] bg-[var(--bbi-bg)]/40 px-4 py-3">
-                        <span className="text-[11px] font-semibold uppercase tracking-widest text-[var(--bbi-muted)]">
+                      <div className="mt-auto rounded-[20px] border border-white/16 bg-black/32 px-4 py-4">
+                        <span className="text-[32px] font-semibold leading-none text-white">
                           Что происходит в итоге
                         </span>
                         <ul className="mt-3 space-y-2">
                           {card.outcomeBullets.map((b, i) => (
-                            <li key={i} className="flex gap-2.5 text-[14px] leading-snug text-[var(--bbi-text)]">
-                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--bbi-muted)]/70" />
+                            <li key={i} className="flex gap-2 text-[13px] leading-snug text-white/72">
+                              <span className="mt-0.5 shrink-0 text-[rgba(255,43,68,1)]" aria-hidden>
+                                &gt;
+                              </span>
                               {b}
                             </li>
                           ))}
@@ -96,23 +91,24 @@ export function WhyBBISection({
             </div>
 
             {wideCard && (
-              <article className="relative overflow-hidden rounded-2xl border-2 border-[var(--bbi-red)]/25 bg-white shadow-[0_4px_24px_rgba(185,28,28,0.08),0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:border-[var(--bbi-red)]/40 hover:shadow-[0_8px_32px_rgba(185,28,28,0.12)]">
-                <div className="absolute inset-y-0 left-0 w-1.5 bg-[var(--bbi-red)]" />
-                <div className="relative flex flex-col gap-6 bg-gradient-to-br from-[var(--bbi-red)]/[0.03] via-transparent to-transparent p-6 pl-8 md:gap-7 md:p-8 md:pl-10">
+              <article className="relative overflow-hidden rounded-[28px] border border-[rgba(255,192,7,0.46)] bg-[radial-gradient(130%_110%_at_25%_0%,rgba(255,192,7,0.24)_0%,rgba(255,192,7,0.08)_32%,rgba(255,255,255,0.015)_66%,rgba(7,8,11,0.98)_100%),linear-gradient(165deg,rgba(22,26,34,0.96),rgba(8,10,15,0.98))] shadow-[0_18px_50px_rgba(0,0,0,0.46)]">
+                <div className="relative flex flex-col gap-5 p-6 md:gap-6 md:p-8">
                   <div className="flex items-center gap-4">
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--bbi-red)]/15 text-[var(--bbi-red)]">
-                      {BBI_ICON}
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[rgba(255,192,7,0.35)] bg-[rgba(255,192,7,0.12)] text-[rgba(255,192,7,1)]">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+                        <path d="M12 3l8 3v6c0 5.25-3.4 8.8-8 10-4.6-1.2-8-4.75-8-10V6l8-3z" />
+                      </svg>
                     </span>
                     <div>
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--bbi-red)]">
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[rgba(255,192,7,1)]">
                         Наш подход
                       </span>
-                      <h3 className="mt-0.5 text-xl font-semibold text-[var(--bbi-text)] md:text-2xl">
+                      <h3 className="mt-0.5 text-[45px] font-semibold leading-[1.02] text-white md:text-[50px]">
                         {wideCard.label}
                       </h3>
                     </div>
                   </div>
-                  <p className="max-w-3xl text-[15px] leading-[1.8] text-[var(--bbi-text)]/90 md:text-base">
+                  <p className="max-w-4xl text-[15px] leading-[1.62] text-white/82 md:text-[16px]">
                     {wideCard.intro}
                   </p>
                   {wideCard.outcomeBullets.length > 0 && (
@@ -120,14 +116,12 @@ export function WhyBBISection({
                       {wideCard.outcomeBullets.map((b, i) => (
                         <div
                           key={i}
-                          className="flex gap-3 rounded-xl border border-[var(--bbi-red)]/10 bg-white/80 px-4 py-3 shadow-sm"
+                          className="flex gap-2 rounded-[14px] border border-white/18 bg-black/26 px-3.5 py-3"
                         >
-                          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--bbi-red)]/15 text-[var(--bbi-red)]">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-3 w-3">
-                              <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
+                          <span className="mt-0.5 shrink-0 text-white/55">
+                            +
                           </span>
-                          <span className="text-[14px] font-medium leading-snug text-[var(--bbi-text)]">
+                          <span className="text-[13px] font-medium leading-snug text-white/82">
                             {b}
                           </span>
                         </div>

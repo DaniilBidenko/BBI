@@ -7,17 +7,18 @@ type ButtonProps = {
   href?: string;
   children: ReactNode;
   variant?: "primary" | "ghost";
+  className?: string;
 };
 
 const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
   primary:
-    "bg-[var(--bbi-red)] text-white hover:bg-[var(--bbi-red-hover)] focus-visible:outline-[var(--bbi-red)]",
+    "bg-[rgba(255,43,68,1)] text-white hover:opacity-95 focus-visible:outline-[rgba(255,43,68,1)]",
   ghost:
-    "border border-[color:var(--bbi-border)] text-[var(--bbi-text)] hover:border-[color:var(--bbi-border)] hover:bg-[var(--bbi-ghost-hover)]",
+    "border border-[rgba(255,43,68,0.98)] text-[rgba(255,43,68,0.98)] hover:bg-[rgba(255,43,68,0.08)]",
 };
 
-export function Button({ href, children, variant = "primary" }: ButtonProps) {
-  const className = `inline-flex items-center justify-center rounded-full px-4 py-1.5 text-sm font-medium transition ${variantClasses[variant]}`;
+export function Button({ href, children, variant = "primary", className = "" }: ButtonProps) {
+  const baseClassName = `inline-flex items-center justify-center rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.07em] transition ${variantClasses[variant]} ${className}`;
 
   const isAnchor = href?.startsWith("#");
 
@@ -28,7 +29,7 @@ export function Button({ href, children, variant = "primary" }: ButtonProps) {
       el?.scrollIntoView({ behavior: "smooth", block: "start" });
     };
     return (
-      <button type="button" onClick={scrollToAnchor} className={className}>
+      <button type="button" onClick={scrollToAnchor} className={baseClassName}>
         {children}
       </button>
     );
@@ -36,11 +37,11 @@ export function Button({ href, children, variant = "primary" }: ButtonProps) {
 
   if (href) {
     return (
-      <Link href={href} className={className}>
+      <Link href={href} className={baseClassName}>
         {children}
       </Link>
     );
   }
 
-  return <button className={className}>{children}</button>;
+  return <button className={baseClassName}>{children}</button>;
 }

@@ -157,7 +157,7 @@ function CaseCard({
       className="bbi-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-[#1b1c21] p-6 transition-all duration-200 hover:border-[#ff2b44]/20"
     >
       <div className="absolute right-0 top-0 h-40 w-40 opacity-[0.06]">
-        <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(255,43,68,0.5)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.2)_0%,transparent_70%)]" />
       </div>
       <div className="relative flex flex-col gap-4">
         <div className="flex items-start justify-between gap-3">

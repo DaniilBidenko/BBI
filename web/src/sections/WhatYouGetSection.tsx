@@ -40,21 +40,28 @@ export function WhatYouGetSection({
   ctaHref,
 }: WhatYouGetSectionProps) {
   const useNewLayout = cards && cards.length > 0;
+  const CARD_TONES = [
+    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
+    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
+    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
+    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
+    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
+  ] as const;
 
   return (
     <section className="relative py-14 md:py-16">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--bbi-bg)]/50 to-[var(--bbi-bg)]/80" />
+      <div className="absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto w-full max-w-6xl px-4 lg:px-6">
         <header className="mb-10 text-center md:mb-12">
           <span className="mb-4 inline-block text-[11px] font-semibold uppercase tracking-[0.35em] text-[var(--bbi-red)]">
             {eyebrow}
           </span>
-          <h2 className="text-3xl font-semibold leading-tight tracking-tight text-[var(--bbi-text)] md:text-4xl">
+          <h2 className="text-[42px] font-semibold uppercase leading-[0.98] tracking-tight text-white md:text-[50px]">
             {title}
           </h2>
           <div className="mx-auto mt-3 h-0.5 w-12 rounded-full bg-[var(--bbi-red)]/70" />
           {subheadline && (
-            <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-[1.8] text-[var(--bbi-text)]/85 md:text-base">
+            <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-[1.8] text-white/78 md:text-base">
               {subheadline}
             </p>
           )}
@@ -66,7 +73,7 @@ export function WhatYouGetSection({
               {cards!.map((card, i) => (
                 <article
                   key={i}
-                  className={`group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--bbi-text)]/[0.08] bg-white shadow-[0_4px_24px_rgba(0,0,0,0.05)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[var(--bbi-red)]/20 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08),0_0_0_1px_rgba(0,0,0,0.02)] ${i === 4 ? "sm:col-span-2" : ""}`}
+                  className={`group relative flex flex-col overflow-hidden rounded-2xl border shadow-[0_12px_36px_rgba(0,0,0,0.4)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[var(--bbi-red)]/28 hover:shadow-[0_16px_46px_rgba(185,28,28,0.16)] ${CARD_TONES[i % CARD_TONES.length]} ${i === 4 ? "sm:col-span-2" : ""}`}
                 >
                   <div className="absolute inset-y-0 left-0 w-[3px] bg-[var(--bbi-red)]/40 transition-colors duration-300 group-hover:bg-[var(--bbi-red)]" />
 
@@ -89,7 +96,7 @@ export function WhatYouGetSection({
                         </p>
                         <ul className="space-y-2">
                           {card.clientGets.map((item, j) => (
-                            <li key={j} className="flex gap-2.5 text-[14px] leading-[1.55] text-[var(--bbi-text)]">
+                            <li key={j} className="flex gap-2.5 text-[14px] leading-[1.55] text-white/82">
                               <span className="mt-0.5 shrink-0 text-[var(--bbi-red)]">
                                 <CheckIcon className="h-4 w-4" />
                               </span>
@@ -102,21 +109,21 @@ export function WhatYouGetSection({
 
                     {/* Что это значит */}
                     <div>
-                      <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-widest text-[var(--bbi-text)]/70">
+                      <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-widest text-white/60">
                         Что это значит
                       </p>
-                      <p className="text-[14px] leading-[1.7] text-[var(--bbi-text)]">
+                      <p className="text-[14px] leading-[1.7] text-white/78">
                         {card.whatItMeans}
                       </p>
                     </div>
 
                     {/* Важно */}
                     <div>
-                      <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-widest text-[var(--bbi-text)]/70">
+                      <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-widest text-white/60">
                         Важно
                       </p>
                       <div className="rounded-lg border-l-4 border-[var(--bbi-red)]/50 bg-[var(--bbi-red)]/[0.06] py-3 pl-4 pr-4 md:pl-5">
-                        <p className="text-[13px] leading-[1.6] text-[var(--bbi-text)]">
+                        <p className="text-[13px] leading-[1.6] text-white/82">
                           {card.important}
                         </p>
                       </div>
@@ -128,11 +135,11 @@ export function WhatYouGetSection({
 
             {/* Итоговый блок — сильное закрытие, без градиента */}
             {finalAccent && (
-              <div className="relative mt-10 overflow-hidden rounded-2xl border border-[var(--bbi-text)]/[0.08] bg-white shadow-[0_8px_32px_rgba(0,0,0,0.06)] md:mt-12">
-                <div className="absolute inset-y-0 left-0 w-1.5 bg-[var(--bbi-red)]" />
+              <div className="relative mt-10 overflow-hidden rounded-2xl border border-[rgba(255,196,58,0.32)] bg-[linear-gradient(132deg,rgba(255,196,58,0.16)_0%,rgba(255,196,58,0.08)_18%,rgba(46,38,18,0.78)_42%,rgba(13,11,7,0.97)_72%,rgba(8,9,12,0.99)_100%)] shadow-[0_14px_44px_rgba(0,0,0,0.45)] md:mt-12">
+                <div className="absolute inset-y-0 left-0 w-1.5 bg-[rgba(255,196,58,0.72)]" />
                 <div className="flex flex-col gap-6 py-6 pl-9 pr-6 md:flex-row md:items-center md:justify-between md:gap-10 md:py-8 md:pl-11 md:pr-8">
                   <div className="min-w-0 flex-1">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[var(--bbi-red)]">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[rgba(255,196,58,0.95)]">
                       Итог
                     </p>
                     <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--bbi-text)] md:text-2xl">
@@ -141,10 +148,29 @@ export function WhatYouGetSection({
                     <p className="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[var(--bbi-text)]/90 md:text-base">
                       {finalAccent.text}
                     </p>
+                    {cards && cards.length > 0 && (
+                      <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                        {cards.slice(0, 5).map((card, i) => (
+                          <div
+                            key={`accent-pill-${i}`}
+                            className="flex gap-2 rounded-[14px] border border-white/18 bg-black/26 px-3.5 py-3"
+                          >
+                            <span className="mt-0.5 shrink-0 text-white/55">+</span>
+                            <span className="text-[13px] font-medium leading-snug text-white/82">
+                              {card.title}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   {finalAccent.ctaLabel && ctaHref && (
                     <div className="shrink-0 border-t border-[var(--bbi-text)]/[0.06] pt-6 md:border-t-0 md:border-l md:border-l-[var(--bbi-text)]/[0.08] md:pl-10 md:pt-0">
-                      <CtaBlock href={ctaHref} label={finalAccent.ctaLabel} />
+                      <CtaBlock
+                        href={ctaHref}
+                        label={finalAccent.ctaLabel}
+                        className="[&>a]:border [&>a]:border-[rgba(255,196,58,0.6)] [&>a]:bg-[rgba(255,196,58,0.16)] [&>a]:text-[rgba(255,231,180,0.98)] [&>a]:hover:bg-[rgba(255,196,58,0.24)] [&>a]:focus-visible:outline-[rgba(255,196,58,0.6)]"
+                      />
                     </div>
                   )}
                 </div>

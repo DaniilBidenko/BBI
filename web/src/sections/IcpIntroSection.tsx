@@ -10,107 +10,82 @@ type IcpIntroSectionProps = {
   excludeLabel?: string;
 };
 
-const TARGET_ICONS = [
-  // Владелец в росте — стрелка роста вверх
-  <svg key="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-    <path d="M12 19V5" />
-    <path d="m6 11 6-6 6 6" />
-  </svg>,
-  // Владелец масштабируется — сетка/масштабирование
-  <svg key="2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-    <rect x="4" y="4" width="6" height="6" rx="1" />
-    <rect x="14" y="4" width="6" height="6" rx="1" />
-    <rect x="4" y="14" width="6" height="6" rx="1" />
-    <rect x="14" y="14" width="6" height="6" rx="1" />
-  </svg>,
-  // Владелец готовится к инвестициям — актив, портфель
-  <svg key="3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-    <rect x="2" y="7" width="20" height="14" rx="2" />
-    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-    <path d="M12 12v4" />
-    <path d="M10 14h4" />
-  </svg>,
-];
+const TARGET_ICON = (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
+    <circle cx="12" cy="7" r="3.3" />
+    <circle cx="6.6" cy="8.9" r="2.05" />
+    <circle cx="17.4" cy="8.9" r="2.05" />
+    <rect x="8.6" y="10.6" width="6.8" height="9.2" rx="2.2" />
+    <rect x="3.8" y="12" width="3.8" height="7.8" rx="1.8" />
+    <rect x="16.4" y="12" width="3.8" height="7.8" rx="1.8" />
+  </svg>
+);
+
+const WARNING_ICON = (
+  <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden>
+    <path d="M12 3L22 21H2L12 3Z" fill="#FFC007" />
+    <rect x="11" y="9" width="2" height="7" rx="1" fill="#111111" />
+    <circle cx="12" cy="18.2" r="1.15" fill="#111111" />
+  </svg>
+);
 
 export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabel = "Не подходим" }: IcpIntroSectionProps) {
   return (
-    <section className="relative py-20 md:py-24">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[var(--bbi-bg)]/20 to-transparent" />
-      <Container className="relative mx-auto lg:w-[90%]">
-        <div className="w-full max-w-6xl">
-          <div className="mb-12 flex flex-col items-center gap-3 px-5 text-center lg:px-6">
-            <span className="rounded-full bg-[var(--bbi-red)]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--bbi-red)]">
-              {eyebrow}
-            </span>
-            <h2 className="text-3xl font-semibold text-[var(--bbi-text)] md:text-4xl">
-              {title}
-            </h2>
-          </div>
+    <section className="relative py-14 md:py-18">
+      <div className="absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
+      <Container className="relative mx-auto lg:w-[94%]">
+        <div className="mx-auto w-full max-w-[1320px]">
+          <article className="relative overflow-hidden rounded-[30px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(120%_90%_at_50%_0%,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.02)_34%,rgba(255,255,255,0)_66%),var(--bbi-panel-bg)] px-5 py-7 shadow-[0_14px_38px_rgba(0,0,0,0.48)] md:px-7 md:py-9">
+            <div className="mb-7 flex flex-col items-center gap-1.5 text-center">
+              <h2 className="text-[36px] font-semibold uppercase leading-none tracking-[0.01em] text-white md:text-[50px]">
+                {title}
+              </h2>
+              <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[rgba(255,192,7,1)] md:text-xs">
+                {eyebrow}
+              </span>
+            </div>
 
-          <article className="bbi-card relative overflow-hidden rounded-2xl border border-[var(--bbi-text)]/[0.08] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
-          <div className="absolute inset-y-0 left-0 w-1 bg-[var(--bbi-red)]" />
-
-          <div className="px-5 pt-5 lg:px-6 lg:pt-6">
-            <div className="grid grid-cols-1 gap-5 pb-5 sm:grid-cols-3 sm:items-stretch lg:gap-6 lg:pb-6">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-4">
               {segments.map((segment, i) => (
                 <div
                   key={i}
-                  className="group relative flex min-w-0 flex-col rounded-xl border border-[var(--bbi-text)]/[0.06] bg-white p-5 transition-all duration-200 hover:border-[var(--bbi-red)]/25 hover:shadow-[0_4px_20px_rgba(185,28,28,0.06)] md:p-6"
+                  className="flex min-h-[330px] min-w-0 flex-col rounded-[24px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(120%_95%_at_45%_0%,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.024)_34%,rgba(255,255,255,0)_66%),var(--bbi-panel-bg)] px-5 py-6 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] md:min-h-[355px] md:px-6 md:py-7"
                 >
-                <div className="mb-3 flex items-start justify-between">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--bbi-red)]/10 text-[var(--bbi-red)] transition-colors group-hover:bg-[var(--bbi-red)]/15 [&>svg]:h-5 [&>svg]:w-5">
-                    {TARGET_ICONS[i % TARGET_ICONS.length]}
+                  <div className="mb-3 flex h-9 w-9 items-center justify-center self-center text-white/95 [&>svg]:h-6 [&>svg]:w-6">
+                    {TARGET_ICON}
                   </div>
-                  <span className="text-[11px] font-medium tabular-nums text-[var(--bbi-muted)]/40">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <h3 className="mb-3 text-base font-semibold leading-tight text-[var(--bbi-text)] md:text-lg">
-                  {segment.title}
-                </h3>
-                <div className="w-full py-1">
-                  <p className="text-[14px] leading-[1.65] text-[var(--bbi-muted)]">
+                  <h3 className="mb-3 text-[26px] font-semibold leading-[1.06] tracking-tight text-white md:text-[32px]">
+                    {segment.title}
+                  </h3>
+                  <p className="mx-auto max-w-[31ch] text-[15px] leading-[1.5] text-white/74 md:text-[16px]">
                     {segment.details ?? segment.description}
                   </p>
                   {segment.metrics && (
-                    <p className="mt-3 text-[13px] font-medium tabular-nums text-[var(--bbi-text)]/80">
+                    <p className="mt-3 text-[14px] font-semibold text-white/68 md:text-[15px]">
                       {segment.metrics}
                     </p>
                   )}
+                  <div className="mt-auto w-full pt-4">
+                    <div className="mx-auto max-w-[300px] rounded-2xl border border-white/30 bg-white px-4 py-2 shadow-[0_4px_14px_rgba(0,0,0,0.2)]">
+                      <p className="text-center text-[12px] font-medium leading-[1.25] text-[#1d1d1f] md:text-[13px]">
+                      «{segment.pain}»
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-auto w-full rounded-r border-l-2 border-[var(--bbi-red)]/50 bg-[var(--bbi-red)]/5 py-2 pl-3">
-                  <p className="text-[13px] font-medium italic leading-[1.45] text-[var(--bbi-red)]">
-                    «{segment.pain}»
-                  </p>
-                </div>
-              </div>
               ))}
             </div>
+          </article>
 
-            <div className="relative mt-0 border-t-2 border-dashed border-[var(--bbi-red)]/25 pt-5 pb-5 lg:pt-6 lg:pb-6">
-              <div className="absolute left-5 top-0 flex -translate-y-1/2 lg:left-6">
-                <span className="rounded-full bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-[var(--bbi-red)]/80">
-                  Исключения
-                </span>
-              </div>
-              <div className="flex gap-3 rounded-xl border-2 border-[var(--bbi-red)]/15 bg-[var(--bbi-bg)]/50 p-4 md:p-5">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border-2 border-[var(--bbi-red)]/20 bg-white text-[var(--bbi-muted)] [&>svg]:h-4 [&>svg]:w-4">
-                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                    <path d="M5 5l10 10M15 5L5 15" />
-                  </svg>
-                </span>
-                <div>
-                  <h4 className="text-sm font-semibold text-[var(--bbi-text)] md:text-base">
-                    {excludeLabel}
-                  </h4>
-                  <p className="mt-1 text-[13px] leading-[1.65] text-[var(--bbi-muted)] md:text-[14px]">
-                    {exclude}
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="mx-auto mt-5 w-full max-w-xl rounded-[24px] border border-[var(--bbi-red)]/45 bg-black/25 px-5 py-4 text-center md:px-6 md:py-5">
+            <h4 className="flex items-center justify-center gap-2 text-[30px] font-semibold leading-none text-white md:text-[38px]">
+              {WARNING_ICON}
+              {excludeLabel}
+            </h4>
+            <p className="mx-auto mt-2.5 max-w-[56ch] text-[12px] leading-[1.45] text-white/74 md:text-[13px]">
+              {exclude}
+            </p>
           </div>
-        </article>
         </div>
       </Container>
     </section>

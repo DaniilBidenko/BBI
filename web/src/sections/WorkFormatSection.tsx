@@ -13,29 +13,55 @@ const toneClasses: Record<WorkZone["tone"], string> = {
   red: "bg-[#ff2b44]",
 };
 
+const toneTextClasses: Record<WorkZone["tone"], string> = {
+  green: "text-[#26d07c]",
+  yellow: "text-[#f7b500]",
+  red: "text-[#ff2b44]",
+};
+
 export function WorkFormatSection({
   title,
   description,
   zones,
 }: WorkFormatSectionProps) {
   return (
-    <section className="relative py-24">
-      <Container className="relative mx-auto space-y-6 lg:w-[85%]">
-          <h2 className="text-2xl font-semibold md:text-3xl">{title}</h2>
-          <p className="text-sm text-white/70 md:text-base">{description}</p>
-          <div className="space-y-4">
+    <section className="relative -mb-10 -mt-8 py-28 md:-mb-12 md:-mt-10 md:py-32">
+      <div className="pointer-events-none absolute inset-x-0 -top-32 -bottom-32 -z-10 overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/brand/work-format-photo.png"
+          alt=""
+          className="h-full w-full object-cover object-center brightness-[0.5] contrast-[1.04]"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.68)_38%,rgba(0,0,0,0.66)_62%,rgba(0,0,0,0.94)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_50%,rgba(0,0,0,0.08)_28%,rgba(0,0,0,0.46)_72%,#000_100%)]" />
+      </div>
+      <Container className="relative mx-auto space-y-12 lg:w-[96%]">
+          <div className="mx-auto max-w-5xl space-y-5 text-center">
+            <h2 className="text-[34px] font-semibold uppercase leading-[0.98] text-white md:text-[40px]">{title}</h2>
+            <p className="text-[18px] uppercase tracking-[0.14em] text-[rgba(255,196,58,0.98)] md:text-[20px]">{description}</p>
+          </div>
+          <div className="mx-auto w-full max-w-5xl space-y-12">
             {zones.map((zone) => (
               <div
                 key={zone.label}
-                className="bbi-card rounded-3xl border border-white/10 bg-[#1b1c21] p-6"
+                className="bbi-card relative min-h-[146px] rounded-[22px] border border-white/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.03)_38%,rgba(10,12,17,0.78)_100%)] px-7 pb-7 pt-9 backdrop-blur-[1px]"
               >
-                <div className="flex items-center gap-3">
+                <div className="absolute -top-8 left-1/2 z-10 -translate-x-1/2 rounded-[18px] border border-white/16 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.02)_42%,rgba(14,16,22,0.92)_100%)] p-2.5 shadow-[0_12px_24px_rgba(0,0,0,0.35)]">
                   <span
-                    className={`h-2.5 w-2.5 rounded-full ${toneClasses[zone.tone]}`}
-                  />
-                  <div className="text-sm font-semibold">{zone.label}</div>
+                    className={`flex h-6 w-6 items-center justify-center rounded-full text-[11px] font-semibold text-black ${toneClasses[zone.tone]}`}
+                  >
+                    {zone.tone === "green" ? "✓" : zone.tone === "yellow" ? "!" : "×"}
+                  </span>
                 </div>
-                <p className="mt-3 text-sm text-white/70">{zone.description}</p>
+                <div className="flex items-center justify-center gap-3 text-center">
+                  <div className={`text-[18px] font-semibold leading-none md:text-[19px] ${toneTextClasses[zone.tone]}`} style={{ opacity: 0.86 }}>
+                    {zone.label}
+                  </div>
+                </div>
+                <p className="mt-3 text-center text-[13px] text-white/72 md:text-[14px]">
+                  {zone.description}
+                </p>
               </div>
             ))}
           </div>

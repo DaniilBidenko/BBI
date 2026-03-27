@@ -3,16 +3,30 @@
 /* Тёмная тема (по умолчанию) — все страницы кроме главной */
 :root,
 .theme-dark {
-  --bbi-bg: #0e0e0e;
-  --bbi-text: #eeeeee;
-  --bbi-muted: rgba(255, 255, 255, 0.7);
+  --bbi-bg: #000000;
+  --bbi-text: #f3f4f6;
+  --bbi-muted: rgba(255, 255, 255, 0.66);
   --bbi-black: #ffffff;
-  --bbi-border: rgba(255, 255, 255, 0.1);
-  --bbi-ghost-hover: rgba(255, 255, 255, 0.05);
-  --bbi-card-shadow: 0 18px 50px rgba(0, 0, 0, 0.45), 0 6px 16px rgba(0, 0, 0, 0.35);
-  --bbi-scrollbar-track: rgba(20, 20, 24, 0.9);
-  --bbi-scrollbar-thumb: rgba(255, 43, 79, 0.6);
-  --bbi-scrollbar-thumb-hover: rgba(255, 73, 105, 0.8);
+  --bbi-border: rgba(255, 255, 255, 0.14);
+  --bbi-ghost-hover: rgba(255, 255, 255, 0.08);
+  --bbi-card-shadow: 0 16px 44px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.38);
+  --bbi-scrollbar-track: rgba(16, 16, 20, 0.95);
+  --bbi-scrollbar-thumb: rgba(255, 43, 68, 0.62);
+  --bbi-scrollbar-thumb-hover: rgba(255, 73, 96, 0.85);
+  --bbi-ambient-bg: radial-gradient(
+      160% 96% at 50% 0%,
+      rgba(255, 255, 255, 0.018) 0%,
+      rgba(255, 255, 255, 0.006) 24%,
+      rgba(0, 0, 0, 0) 52%
+    ),
+    linear-gradient(180deg, #000000 0%, #000000 100%);
+  --bbi-panel-bg: radial-gradient(
+      120% 100% at 50% 0%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgba(6, 7, 9, 0.97), rgba(3, 4, 5, 0.99));
+  --bbi-panel-border: rgba(255, 255, 255, 0.14);
 }
 
 /* Светлая тема — только главная страница */
@@ -27,11 +41,14 @@
   --bbi-scrollbar-track: #e8e6e2;
   --bbi-scrollbar-thumb: #b91c1c;
   --bbi-scrollbar-thumb-hover: #991b1b;
+  --bbi-ambient-bg: linear-gradient(180deg, #f2f1ed 0%, #f2f1ed 100%);
+  --bbi-panel-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 250, 250, 0.98));
+  --bbi-panel-border: rgba(0, 0, 0, 0.1);
 }
 
 :root {
-  --bbi-red: #b91c1c;
-  --bbi-red-hover: #991b1b;
+  --bbi-red: #ff2b44;
+  --bbi-red-hover: #e0243b;
 }
 
 /* Логотип в цвете --bbi-red */
@@ -66,7 +83,7 @@ html {
 }
 
 body {
-  font-family: "Articulat", "Akrobat", "Noto Sans", "Inter", "Arial", sans-serif;
+  font-family: "Akrobat", "Articulat", "Noto Sans", "Inter", "Arial", sans-serif;
   background-color: var(--bbi-bg);
   color: var(--bbi-text);
   letter-spacing: 0.01em;
@@ -86,21 +103,16 @@ body {
 
 .theme-dark .layout-bg {
   background: radial-gradient(
-      circle at 85% 35%,
-      rgba(255, 43, 68, 0.28),
-      rgba(14, 14, 14, 0) 45%
+      circle at 82% 26%,
+      rgba(255, 255, 255, 0.02),
+      rgba(0, 0, 0, 0) 36%
     ),
     radial-gradient(
-      circle at 70% 80%,
-      rgba(255, 43, 68, 0.16),
-      rgba(14, 14, 14, 0) 40%
+      circle at 22% 84%,
+      rgba(255, 255, 255, 0.014),
+      rgba(0, 0, 0, 0) 34%
     ),
-    #0e0e0e;
-}
-
-/* Страница О компании — без градиента, однотонный фон */
-.page-about .layout-bg {
-  background: #121212 !important;
+    #000000;
 }
 
 h1,
@@ -174,6 +186,143 @@ h4 {
 .pillars-details[open] .pillars-body {
   max-height: 200px;
   opacity: 1;
+}
+
+.icp-card {
+  position: relative;
+  height: 270px;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(82, 82, 82, 0.28) 42%, rgba(10, 12, 17, 0.96) 100%),
+    linear-gradient(165deg, rgba(16, 19, 27, 0.96), rgba(8, 10, 15, 0.99));
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 296 C 398 312 386 324 370 324 H 28 C 12 324 0 312 0 296 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+}
+
+.icp-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 94px;
+  height: 70px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-top-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 22px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.icp-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 28px;
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 296 C 398 312 386 324 370 324 H 28 C 12 324 0 312 0 296 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 12px 24px rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.icp-card__content {
+  position: relative;
+  height: 100%;
+  padding: 20px 20px 14px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.icp-card__title {
+  min-height: 72px;
+  padding: 0 20px 0 104px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icp-card__title h3 {
+  max-width: 240px;
+  text-wrap: balance;
+}
+
+.icp-card__body {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 0;
+}
+
+.icp-card__footer {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.icp-card__index {
+  left: 14px;
+  top: 4px;
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(82, 82, 82, 0.28) 42%, rgba(10, 12, 17, 0.96) 100%),
+    linear-gradient(165deg, rgba(16, 19, 27, 0.96), rgba(8, 10, 15, 0.99));
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -10px 18px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 640px) {
+  .icp-card {
+    height: 252px;
+    border-radius: 26px;
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 286 C 344 301 332 312 318 312 H 24 C 11 312 0 301 0 286 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+  }
+
+  .icp-card::before {
+    width: 78px;
+    height: 60px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 18px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+
+  .icp-card::after {
+    border-radius: 26px;
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 286 C 344 301 332 312 318 312 H 24 C 11 312 0 301 0 286 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+  }
+
+  .icp-card__title {
+    min-height: 64px;
+    padding-left: 90px;
+    padding-right: 12px;
+  }
+
+  .icp-card__index {
+    left: 12px;
+    top: 4px;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+  }
 }
 
 /* Scrollbar styling */

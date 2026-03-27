@@ -21,7 +21,7 @@ export default async function ContactsPage({ params }: LocalePageProps) {
     <div className="relative">
       <section className="relative overflow-hidden pb-12 pt-20">
         <div className="pointer-events-none absolute right-0 top-20 h-64 w-64 opacity-[0.05]">
-          <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(255,43,68,0.5)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.2)_0%,transparent_70%)]" />
         </div>
         <Container className="relative lg:w-[85%]">
           <div className="max-w-2xl space-y-4">
