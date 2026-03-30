@@ -21,6 +21,9 @@ export const ru: Dictionary = {
       ctaLabel: "6 СТОЛПОВ BBI",
       ctaHint: "Открыть страницу столпов",
     },
+    scheme: {
+      centerLabel: "Бизнес",
+    },
     pillarsIntro: {
       title: "Система BBI",
       description:
@@ -308,7 +311,7 @@ export const ru: Dictionary = {
         {
           title: "Тушу пожары вместо управления",
           description: "Бизнес не работает без вас. Каждый день — решения, тушение пожаров, ручное управление. Стратегия откладывается на «когда-нибудь».",
-          linkLabel: "Разобрать подробнее",
+          linkLabel: "Подробнее",
           href: "/icp/operations",
           symptoms: [
             "«Без меня ничего не решат» — вы в центре всех процессов",
@@ -320,7 +323,7 @@ export const ru: Dictionary = {
         {
           title: "Масштабирую хаос — масштабирую убытки",
           description: "Рост не приносит облегчения. Новые люди, отделы, процессы — а хаос и потери растут вместе с оборотами.",
-          linkLabel: "Разобрать подробнее",
+          linkLabel: "Подробнее",
           href: "/icp/scale",
           symptoms: [
             "80 человек ведут себя как 8 — без связки",
@@ -332,7 +335,7 @@ export const ru: Dictionary = {
         {
           title: "Инвестору нужен актив, а не бизнес в моей голове",
           description: "Вы знаете бизнес как свои пять пальцев. Но инвестор хочет цифры, структуру, прозрачность — не вашу голову.",
-          linkLabel: "Разобрать подробнее",
+          linkLabel: "Подробнее",
           href: "/icp/investor",
           symptoms: [
             "Due diligence выявляет «дыры» в учёте и процессах",
@@ -768,6 +771,12 @@ export const ru: Dictionary = {
       title: "Кейсы: системный подход в действии",
       description:
         "Мы показываем не «мы запустили рекламу», а как выстроили защиту, рычаги и систему. Контекст, проблема, действие BBI и измеримый результат.",
+      heroImage: "/brand/cases-war-room-hero.png",
+    },
+    list: {
+      sectionTitle: "Релевантные кейсы",
+      sectionEyebrow: "Навигация по кейсам",
+      sectionSubtitle: "Подберите кейс под ваш контекст",
     },
     filters: {
       industry: "Индустрия",
@@ -808,6 +817,7 @@ export const ru: Dictionary = {
     items: [
       {
         slug: "med-lab-sla",
+        headerImage: "/brand/case-med-lab-header.png",
         company: "Медицинская лаборатория (NDA)",
         industry: "Медицинские услуги",
         keyResult: "SLA 87%, реактивация 34% базы, конверсия +21%",
@@ -989,6 +999,13 @@ export const ru: Dictionary = {
       title: "Блог и экспертиза",
       description: "Статьи о построении автономных и защищённых бизнес-систем.",
     },
+    filters: {
+      all: "Все",
+      marketing: "Маркетинг",
+      finance: "Финансы",
+      operations: "Операционка",
+    },
+    noPosts: "В этой категории пока нет статей.",
     card: { readMore: "Подробнее" },
     article: { backToBlog: "← Блог" },
     posts: [

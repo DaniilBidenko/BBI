@@ -21,8 +21,12 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
   const [query, setQuery] = useState("");
   const localeMenuRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
-  const isHome = pathname === withLocale(locale, "/") || pathname === "/";
-  const isWork = pathname === withLocale(locale, "/work");
+
+  /** Список кейсов: фото героя под шапкой — без плотного фона app bar */
+  const isCasesListPage =
+    /^\/(ru|en|uz)\/cases\/?$/.test(pathname) ||
+    pathname === "/cases" ||
+    /^\/cases\/?$/.test(pathname);
 
   const isActive = (href: string) => pathname === withLocale(locale, href);
   const localePath = pathname.replace(/^\/(ru|en|uz)(?=\/|$)/, "") || "/";
@@ -50,12 +54,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
 
   return (
     <div
-      className={
-        isHome || isWork
-          ? "relative z-30 border-b border-white/18 bg-black/30 backdrop-blur-[1.5px]"
-          : "border-b border-[color:var(--bbi-border)] bg-[var(--bbi-bg)]/95 backdrop-blur"
-      }
-      style={undefined}
+      className={`bbi-appbar-cateye relative z-30 ${isCasesListPage ? "bbi-appbar-cateye--over-photo" : "backdrop-blur-[10px]"}`}
     >
       <Container className="flex items-center justify-between py-2.5">
         <Link href={withLocale(locale, "/")} className="flex items-center" aria-label="Bold Brands">
@@ -68,7 +67,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
               <Link
                 key={item.href}
                 href={withLocale(locale, item.href)}
-                className={`whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-medium leading-[1.1] transition xl:text-[12px] ${isHome ? "hover:text-white" : "hover:text-[var(--bbi-black)]"} ${active ? (isHome ? "bg-white/10 text-white" : "bg-black/10 text-[var(--bbi-black)]") : (isHome ? "text-white/80" : "text-[var(--bbi-muted)]")}`}
+                className={`whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-medium leading-[1.1] transition hover:text-white xl:text-[12px] ${active ? "bbi-appbar-nav-active-cateye px-3 text-[rgba(255,252,248,0.96)]" : "text-white/78"}`}
                 aria-current={active ? "page" : undefined}
               >
                 {item.label}
@@ -89,11 +88,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
               aria-haspopup="menu"
               aria-expanded={isLocaleOpen}
               onClick={() => setIsLocaleOpen((prev) => !prev)}
-              className={`inline-flex h-8 items-center gap-1 rounded-full px-2 text-[13px] uppercase tracking-[0.08em] transition ${
-                isHome
-                  ? "text-white/90 hover:text-white"
-                  : "text-[var(--bbi-muted)] hover:text-[var(--bbi-black)]"
-              }`}
+              className="inline-flex h-8 items-center gap-1 rounded-full px-2 text-[13px] uppercase tracking-[0.08em] text-white/90 transition hover:text-white"
             >
               {locale}
               <svg
@@ -110,11 +105,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
             {isLocaleOpen ? (
               <div
                 role="menu"
-                className={`absolute right-0 top-[calc(100%+6px)] z-40 min-w-[88px] rounded-xl border p-1.5 shadow-[0_14px_30px_rgba(0,0,0,0.4)] ${
-                  isHome
-                    ? "border-white/20 bg-[#0a0d14]/95 backdrop-blur"
-                    : "border-[color:var(--bbi-border)] bg-[var(--bbi-bg)]/95 backdrop-blur"
-                }`}
+                className="absolute right-0 top-[calc(100%+6px)] z-40 min-w-[88px] rounded-xl border border-white/20 bg-[#0a0d14]/95 p-1.5 shadow-[0_14px_30px_rgba(0,0,0,0.4)] backdrop-blur"
               >
                 {locales.map((item) => {
                   const active = item === locale;
@@ -126,12 +117,8 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
                       onClick={() => setIsLocaleOpen(false)}
                       className={`block rounded-lg px-2.5 py-1.5 text-[12px] uppercase tracking-[0.08em] transition ${
                         active
-                          ? isHome
-                            ? "bg-white/10 text-white"
-                            : "bg-black/10 text-[var(--bbi-black)]"
-                          : isHome
-                            ? "text-white/78 hover:bg-white/8 hover:text-white"
-                            : "text-[var(--bbi-muted)] hover:bg-black/5 hover:text-[var(--bbi-black)]"
+                          ? "bg-white/10 text-white"
+                          : "text-white/78 hover:bg-white/8 hover:text-white"
                       }`}
                     >
                       {item}
@@ -143,7 +130,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
           </div>
           <button
             type="button"
-            className={`flex h-8 w-8 items-center justify-center rounded-full transition ${isHome ? "text-white/85 hover:text-white" : "text-[var(--bbi-muted)] hover:text-[var(--bbi-black)]"}`}
+            className="flex h-8 w-8 items-center justify-center rounded-full text-white/85 transition hover:text-white"
             aria-label="Search"
             onClick={() => setIsOpen(true)}
           >
@@ -154,7 +141,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
           </button>
           <button
             type="button"
-            className={`flex h-8 w-8 items-center justify-center rounded-full transition lg:hidden ${isHome ? "text-white/80 hover:text-white" : "text-[var(--bbi-muted)] hover:text-[var(--bbi-black)]"}`}
+            className="flex h-8 w-8 items-center justify-center rounded-full text-white/80 transition hover:text-white lg:hidden"
             aria-label="Open menu"
             aria-expanded={isOpen}
             aria-controls="mobile-nav"
@@ -168,7 +155,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
           </button>
           <button
             type="button"
-            className={`hidden h-8 w-8 items-center justify-center rounded-full transition lg:flex ${isHome ? "text-white/80 hover:text-white" : "text-[var(--bbi-muted)] hover:text-[var(--bbi-black)]"}`}
+            className="hidden h-8 w-8 items-center justify-center rounded-full text-white/80 transition hover:text-white lg:flex"
             aria-label="Open menu"
             aria-expanded={isOpen}
             aria-controls="mobile-nav"
@@ -183,10 +170,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
         </div>
       </Container>
       {isOpen ? (
-        <div
-          id="mobile-nav"
-          className={`border-t ${isHome ? "border-white/15 bg-[#080a10]/95" : "border-[color:var(--bbi-border)] bg-[var(--bbi-bg)]/98"} `}
-        >
+        <div id="mobile-nav" className="border-t border-white/15 bg-[#080a10]/95">
           <div className="flex flex-col gap-4 px-6 py-5 text-sm">
             <div className="flex items-center gap-2">
               <input
@@ -196,11 +180,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
                   if (e.key === "Enter") runSearch();
                 }}
                 placeholder="Поиск"
-                className={`h-10 flex-1 rounded-lg border px-3 text-sm outline-none transition ${
-                  isHome
-                    ? "border-white/20 bg-black/30 text-white placeholder:text-white/45 focus:border-white/35"
-                    : "border-[color:var(--bbi-border)] bg-black/15 text-[var(--bbi-text)] placeholder:text-[var(--bbi-muted)] focus:border-[var(--bbi-red)]/40"
-                }`}
+                className="h-10 flex-1 rounded-lg border border-white/20 bg-black/30 px-3 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-white/35"
               />
               <button
                 type="button"
@@ -217,7 +197,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
                 <Link
                   key={item.href}
                   href={withLocale(locale, item.href)}
-                  className={`transition ${isHome ? "hover:text-white" : "hover:text-[var(--bbi-black)]"} ${active ? (isHome ? "font-medium text-white" : "font-medium text-[var(--bbi-black)]") : (isHome ? "text-white/78" : "text-[var(--bbi-muted)]")}`}
+                  className={`transition hover:text-white ${active ? "font-medium text-white" : "text-white/78"}`}
                   aria-current={active ? "page" : undefined}
                   onClick={() => setIsOpen(false)}
                 >

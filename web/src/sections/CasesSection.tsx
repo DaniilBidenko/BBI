@@ -2,6 +2,18 @@ import Link from "next/link";
 import { Container } from "@/components/Container";
 import type { CaseStudy } from "@/content/dictionaries/types";
 
+const READ_MORE_ARROW = (
+  <svg viewBox="0 0 24 24" fill="none" className="h-[11px] w-[11px]" aria-hidden>
+    <path
+      d="M7 17L17 7M17 7H9M17 7V15"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 function CaseIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-[var(--bbi-red)]">
@@ -45,11 +57,11 @@ export function CasesSection({
           {featuredCase && (
             <Link
               href={`/${locale}/cases/${featuredCase.slug}`}
-              className="group relative col-span-1 flex flex-col overflow-hidden rounded-[32px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(120%_95%_at_45%_0%,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.025)_34%,rgba(255,255,255,0)_66%),var(--bbi-panel-bg)] shadow-[0_18px_46px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-white/24 lg:col-span-4"
+              className="bbi-case-shell-cateye group relative col-span-1 flex flex-col overflow-hidden rounded-[32px] transition-colors hover:border-white/18 lg:col-span-4"
             >
               <div className="flex flex-1 flex-col gap-5 p-6 md:p-8">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-2xl border border-white/28 bg-white/6 text-white/90">
+                  <div className="bbi-case-icon-cateye flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-2xl text-white/90">
                     <CaseIcon />
                   </div>
                   <div className="pt-1">
@@ -68,17 +80,17 @@ export function CasesSection({
                   {featuredCase.tags.slice(0, 4).map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-white/20 bg-black/24 px-4 py-1.5 text-[13px] text-white/84"
+                      className="rounded-full border border-white/11 bg-white/[0.045] px-4 py-1.5 text-[13px] text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="mt-1 flex items-center gap-2">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/18 bg-black/30 text-[var(--bbi-red)]">
-                    ↗
-                  </span>
-                  <span className="text-[14px] font-medium text-[var(--bbi-red)] transition group-hover:text-[var(--bbi-red-hover)]">
+                <div className="mt-1">
+                  <span className="bbi-cateye-details bbi-cateye-details--neutral pointer-events-none inline-flex w-fit max-w-full items-center gap-2 text-[14px] font-medium leading-none text-white/86 transition group-hover:text-white/95">
+                    <span className="bbi-cateye-details__icon" aria-hidden>
+                      {READ_MORE_ARROW}
+                    </span>
                     {readMore}
                   </span>
                 </div>
@@ -88,10 +100,7 @@ export function CasesSection({
         </div>
 
         <div className="mt-8 flex justify-center">
-          <Link
-            href={`/${locale}/cases`}
-            className="group inline-flex items-center gap-1 rounded-full border border-white/28 bg-[linear-gradient(180deg,#f6f6f6_0%,#d8d8d8_100%)] px-5 py-2 text-[20px] font-medium text-[#1a1a1a] transition hover:brightness-105"
-          >
+          <Link href={`/${locale}/cases`} className="bbi-cases-all-pill group">
             {casesLabel} &gt;&gt;
           </Link>
         </div>

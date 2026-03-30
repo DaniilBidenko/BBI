@@ -21,6 +21,9 @@ export const uz: Dictionary = {
       ctaLabel: "6 BBI TAYANCHI",
       ctaHint: "Tayanchlar sahifasini ochish",
     },
+    scheme: {
+      centerLabel: "Biznes",
+    },
     pillarsIntro: {
       title: "BBI tizimi",
       description:
@@ -598,6 +601,11 @@ export const uz: Dictionary = {
       description:
         "«Reklama qildik» emas, balki himoya, tayanch va tizimni qanday qurganimizni ko'rsatamiz. Kontekst, muammo, BBI harakati va o'lchanadigan natija.",
     },
+    list: {
+      sectionTitle: "Tegishli keysler",
+      sectionEyebrow: "Keyslar bo'yicha navigatsiya",
+      sectionSubtitle: "Kontekstingizga mos keysni tanlang",
+    },
     filters: {
       industry: "Sanoat",
       direction: "Yo'nalish",
@@ -808,6 +816,13 @@ export const uz: Dictionary = {
   },
   blog: {
     hero: { title: "Blog va ekspertiza", description: "Mustaqil va himoyalangan biznes tizimlari haqida maqolalar." },
+    filters: {
+      all: "Barchasi",
+      marketing: "Marketing",
+      finance: "Moliya",
+      operations: "Operatsiya",
+    },
+    noPosts: "Bu toifada hozircha maqolalar yo'q.",
     card: { readMore: "Batafsil" },
     article: { backToBlog: "← Blog" },
     posts: [

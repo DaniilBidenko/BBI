@@ -60,16 +60,16 @@ export default async function AboutPage({ params }: LocalePageProps) {
             Главная <span className="px-2">→</span> О компании
           </div>
           <div className="rounded-[28px] bg-[var(--bbi-panel-bg)] p-5 shadow-[0_18px_44px_rgba(0,0,0,0.45)] md:p-8">
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
+            <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:gap-8 xl:gap-10">
             <div className="space-y-7">
-              <h1 className="text-[58px] font-semibold uppercase leading-[0.94] tracking-tight text-white">
+              <h1 className="text-[52px] font-semibold uppercase leading-[0.94] tracking-tight text-white sm:text-[58px] md:text-[64px] lg:text-[68px]">
                 {who.title}
               </h1>
-              <p className="max-w-[46ch] text-[16px] leading-[1.38] text-white/90 md:text-[17px]">
+              <p className="max-w-[56ch] text-[18px] leading-[1.42] text-white/90 md:text-[20px] lg:text-[21px]">
                 {who.text}
               </p>
-              <div className="w-fit rounded-[22px] border border-[rgba(255,43,68,0.82)] bg-[rgba(255,43,68,0.06)] px-6 py-4 text-[16px] leading-[1.34] text-[rgba(255,43,68,1)] md:text-[17px]">
-                <p className="max-w-[40ch]">{who.emphasis}</p>
+              <div className="w-fit rounded-[22px] border border-[rgba(255,43,68,0.82)] bg-[rgba(255,43,68,0.06)] px-6 py-4 text-[17px] leading-[1.38] text-[rgba(255,43,68,1)] md:px-7 md:py-5 md:text-[19px] lg:text-[20px]">
+                <p className="max-w-[50ch]">{who.emphasis}</p>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-[34px] border border-white/12 bg-black/40 shadow-[0_24px_64px_rgba(0,0,0,0.65)]">
@@ -123,9 +123,9 @@ export default async function AboutPage({ params }: LocalePageProps) {
             {principles.items.map((item, index) => (
               <div
                 key={item.text}
-                className="relative overflow-hidden rounded-[30px] border border-white/18 bg-[linear-gradient(180deg,rgba(255,43,68,0.16)_0%,rgba(46,17,24,0.48)_26%,rgba(14,17,24,0.9)_58%,rgba(8,11,17,0.96)_100%)] p-5 shadow-[0_18px_44px_rgba(0,0,0,0.5)] md:p-7"
+                data-ap-i={index % 4}
+                className="bbi-about-principle-card relative overflow-hidden rounded-[30px] p-5 md:p-7"
               >
-                <div className="pointer-events-none absolute inset-x-0 top-0 h-[42%] bg-[radial-gradient(120%_95%_at_50%_0%,rgba(255,43,68,0.25)_0%,rgba(255,43,68,0.08)_35%,rgba(255,43,68,0)_75%)]" />
                 <div className="relative flex items-center gap-5">
                 <IconBadge index={index} />
                 <p className="max-w-[28ch] text-[16px] leading-[1.4] text-white/86 md:text-[17px]">
@@ -143,13 +143,14 @@ export default async function AboutPage({ params }: LocalePageProps) {
           <h2 className="mb-8 text-[38px] font-semibold uppercase leading-[0.98] text-white md:mb-10 md:text-[50px]">
             {manifesto.title}
           </h2>
-          <div className="grid auto-rows-fr gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-            {manifesto.items.map((item) => (
+          <div className="grid auto-rows-fr gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4">
+            {manifesto.items.map((item, index) => (
               <div
                 key={item.text}
-                className="flex min-h-[84px] items-center rounded-full border border-white/22 bg-[linear-gradient(180deg,rgba(42,44,50,0.9)_0%,rgba(22,24,30,0.95)_100%)] px-7 py-4 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_10px_24px_rgba(0,0,0,0.35)] md:min-h-[92px] md:px-8 md:py-5"
+                data-mm-i={index % 5}
+                className="bbi-about-manifesto-pill flex w-fit max-w-full min-h-0 items-center justify-self-start rounded-full px-4 py-2.5 text-white md:px-5 md:py-3"
               >
-                <p className="max-w-[28ch] text-[16px] font-normal leading-[1.3] text-white/88 md:text-[17px]">
+                <p className="max-w-[32ch] text-[18px] font-normal leading-snug text-white/92 md:text-[20px]">
                   {item.text}
                 </p>
               </div>
@@ -175,19 +176,19 @@ export default async function AboutPage({ params }: LocalePageProps) {
               </svg>
             </div>
             <div className="no-scrollbar flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2">
-              {team.members.slice(0, 3).map((member) => (
+              {team.members.slice(0, 3).map((member, index) => (
                 <article
                   key={`${member.name}-${member.role}`}
-                  className="relative h-[226px] w-[86%] shrink-0 snap-start overflow-hidden rounded-[30px] border border-white/18 bg-[linear-gradient(170deg,rgba(255,43,68,0.14)_0%,rgba(52,16,23,0.46)_28%,rgba(15,18,25,0.92)_62%,rgba(9,11,17,0.97)_100%)] p-5 shadow-[0_18px_44px_rgba(0,0,0,0.5)] sm:w-[70%] md:w-[52%] lg:w-[calc((100%-3rem)/3)]"
+                  data-tc-i={index % 3}
+                  className="bbi-about-team-card relative h-[226px] w-[86%] shrink-0 snap-start overflow-hidden rounded-[30px] p-5 sm:w-[70%] md:w-[52%] lg:w-[calc((100%-3rem)/3)]"
                 >
-                  <div className="pointer-events-none absolute inset-x-0 top-0 h-[45%] bg-[radial-gradient(120%_90%_at_50%_0%,rgba(255,43,68,0.24)_0%,rgba(255,43,68,0.07)_34%,rgba(255,43,68,0)_72%)]" />
                   <div className="relative flex items-center gap-4">
                     <div className="h-[102px] w-[102px] shrink-0 overflow-hidden rounded-[18px] border border-white/18 bg-black/30">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src="/brand/team-member-1.png"
                         alt={member.name}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover object-[50%_18%]"
                       />
                     </div>
                     <div>
@@ -195,12 +196,12 @@ export default async function AboutPage({ params }: LocalePageProps) {
                         {member.name}
                       </div>
                       <div className="mt-2 text-[14px] font-medium uppercase tracking-[0.12em] text-[var(--bbi-red)]">
-                        CEO
+                        {member.role}
                       </div>
                     </div>
                   </div>
                   <p className="relative mt-3 max-w-[24ch] text-[16px] leading-[1.35] text-white/86 md:text-[17px]">
-                    Строит защиту бизнеса как систему, а не набор услуг.
+                    {member.note}
                   </p>
                 </article>
               ))}
@@ -211,13 +212,12 @@ export default async function AboutPage({ params }: LocalePageProps) {
 
       <section className="relative pb-20 pt-12 md:pb-24">
         <Container className="relative lg:w-[90%]">
-          <div className="relative overflow-hidden rounded-[30px] border border-white/14 bg-[linear-gradient(180deg,rgba(20,22,28,0.96)_0%,rgba(8,10,14,0.99)_100%)] p-6 shadow-[0_22px_58px_rgba(0,0,0,0.58)] md:p-8 lg:p-10">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.022)_34%,rgba(255,255,255,0)_70%)]" />
+          <div className="bbi-about-cta-shell relative overflow-hidden rounded-[30px] p-6 md:p-8 lg:p-10">
             <div className="relative space-y-5">
               <h2 className="max-w-3xl text-[34px] font-semibold uppercase leading-[0.98] text-white md:text-[48px]">
                 {cta.title}
               </h2>
-              <p className="text-[13px] uppercase tracking-[0.12em] text-[#f3c546] md:text-[14px]">
+              <p className="text-[13px] uppercase tracking-[0.12em] text-[rgba(255,192,7,1)] md:text-[14px]">
                 {cta.description}
               </p>
             </div>

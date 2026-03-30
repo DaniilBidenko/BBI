@@ -10,7 +10,7 @@
   --bbi-border: rgba(255, 255, 255, 0.14);
   --bbi-ghost-hover: rgba(255, 255, 255, 0.08);
   --bbi-card-shadow: 0 16px 44px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.38);
-  --bbi-scrollbar-track: rgba(16, 16, 20, 0.95);
+  --bbi-scrollbar-track: rgba(18, 17, 16, 0.95);
   --bbi-scrollbar-thumb: rgba(255, 43, 68, 0.62);
   --bbi-scrollbar-thumb-hover: rgba(255, 73, 96, 0.85);
   --bbi-ambient-bg: radial-gradient(
@@ -25,7 +25,7 @@
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0) 100%
     ),
-    linear-gradient(180deg, rgba(6, 7, 9, 0.97), rgba(3, 4, 5, 0.99));
+    linear-gradient(180deg, rgba(11, 10, 9, 0.97), rgba(5, 4, 4, 0.99));
   --bbi-panel-border: rgba(255, 255, 255, 0.14);
 }
 
@@ -126,6 +126,1102 @@ h4 {
   box-shadow: var(--bbi-card-shadow);
 }
 
+/* Ровный «кошачий глаз»: мягкий вертикальный блик, без радиальных «пятен» */
+.bbi-surface-cateye {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.052) 0%, rgba(255, 255, 255, 0.016) 26%, rgba(255, 255, 255, 0.004) 52%, transparent 74%),
+    linear-gradient(180deg, #1f1e1d 0%, #131211 100%);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.48),
+    inset 0 1px 0 rgba(255, 255, 255, 0.065);
+}
+
+/* Лёгкий внутренний слой на той же карточке — однотонно, без отдельных «полей» */
+.bbi-surface-cateye-inset {
+  background: rgba(255, 255, 255, 0.042);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.055);
+}
+
+/* «О компании» — блок принципов: кошачий глаз; красный блик смещён по углам сетки 2×2 */
+.bbi-about-principle-card {
+  --ap-rx: 50%;
+  --ap-ry: 40%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.024) 30%, transparent 56%),
+    linear-gradient(102deg, rgba(255, 130, 148, 0.05) 0%, rgba(255, 43, 68, 0.018) 36%, transparent 58%),
+    radial-gradient(ellipse 118% 100% at var(--ap-rx) var(--ap-ry), rgba(255, 88, 108, 0.14) 0%, rgba(70, 26, 36, 0.1) 40%, transparent 64%),
+    linear-gradient(165deg, rgba(20, 12, 16, 0.98) 0%, rgba(7, 9, 14, 0.99) 100%);
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 228, 234, 0.085),
+    inset 0 -8px 22px rgba(0, 0, 0, 0.34);
+}
+
+.bbi-about-principle-card[data-ap-i="0"] {
+  --ap-rx: 12%;
+  --ap-ry: 22%;
+}
+
+.bbi-about-principle-card[data-ap-i="1"] {
+  --ap-rx: 88%;
+  --ap-ry: 20%;
+}
+
+.bbi-about-principle-card[data-ap-i="2"] {
+  --ap-rx: 14%;
+  --ap-ry: 62%;
+}
+
+.bbi-about-principle-card[data-ap-i="3"] {
+  --ap-rx: 86%;
+  --ap-ry: 58%;
+}
+
+/* «О компании» — манифест (пилюли): компактнее; нейтральный бело-серый cat-eye без синевы; блик смещён по плиткам */
+.bbi-about-manifesto-pill {
+  --mm-rx: 24%;
+  --mm-ry: 48%;
+  border: 1px solid rgba(255, 250, 245, 0.17);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.048) 28%, rgba(255, 255, 255, 0.012) 46%, transparent 56%),
+    linear-gradient(98deg, rgba(248, 244, 236, 0.078) 0%, rgba(255, 255, 255, 0.02) 34%, transparent 48%),
+    radial-gradient(ellipse 152% 76% at var(--mm-rx) var(--mm-ry), rgba(255, 255, 252, 0.2) 0%, rgba(148, 138, 128, 0.072) 36%, transparent 58%),
+    linear-gradient(165deg, rgba(44, 42, 40, 0.97) 0%, rgba(22, 21, 20, 0.99) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 253, 248, 0.125),
+    inset 0 -3px 10px rgba(0, 0, 0, 0.3),
+    0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.bbi-about-manifesto-pill[data-mm-i="0"] {
+  --mm-rx: 14%;
+  --mm-ry: 46%;
+}
+
+.bbi-about-manifesto-pill[data-mm-i="1"] {
+  --mm-rx: 50%;
+  --mm-ry: 44%;
+}
+
+.bbi-about-manifesto-pill[data-mm-i="2"] {
+  --mm-rx: 86%;
+  --mm-ry: 50%;
+}
+
+.bbi-about-manifesto-pill[data-mm-i="3"] {
+  --mm-rx: 22%;
+  --mm-ry: 54%;
+}
+
+.bbi-about-manifesto-pill[data-mm-i="4"] {
+  --mm-rx: 78%;
+  --mm-ry: 48%;
+}
+
+/* «О компании» — карточки команды: кошачий глаз; красный блик смещён по карусели */
+.bbi-about-team-card {
+  --tc-rx: 48%;
+  --tc-ry: 42%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 28%, transparent 52%),
+    linear-gradient(102deg, rgba(255, 130, 148, 0.04) 0%, rgba(255, 43, 68, 0.014) 38%, transparent 58%),
+    radial-gradient(ellipse 118% 100% at var(--tc-rx) var(--tc-ry), rgba(255, 88, 108, 0.13) 0%, rgba(70, 26, 36, 0.09) 40%, transparent 64%),
+    linear-gradient(165deg, rgba(20, 12, 16, 0.98) 0%, rgba(7, 9, 14, 0.99) 100%);
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 228, 234, 0.08),
+    inset 0 -8px 22px rgba(0, 0, 0, 0.34);
+}
+
+.bbi-about-team-card[data-tc-i="0"] {
+  --tc-rx: 18%;
+  --tc-ry: 38%;
+}
+
+.bbi-about-team-card[data-tc-i="1"] {
+  --tc-rx: 72%;
+  --tc-ry: 44%;
+}
+
+.bbi-about-team-card[data-tc-i="2"] {
+  --tc-rx: 46%;
+  --tc-ry: 58%;
+}
+
+/* «О компании» — финальный блок формы: нейтральный cat-eye (почти без белого, тёплый серый) */
+/* AppBar на главной и «Как мы работаем»: нейтральный cat-eye, без холодного белого */
+.bbi-appbar-cateye {
+  border-bottom: 1px solid rgba(118, 112, 106, 0.32);
+  background:
+    linear-gradient(168deg, rgba(62, 58, 54, 0.52) 0%, rgba(38, 36, 34, 0.38) 38%, rgba(18, 16, 15, 0.55) 100%),
+    linear-gradient(102deg, rgba(96, 90, 84, 0.14) 0%, transparent 52%),
+    radial-gradient(ellipse 118% 160% at 16% 0%, rgba(108, 102, 96, 0.18) 0%, transparent 56%);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.22);
+}
+
+/* Кейсы — список: шапка поверх фото героя (продолжение фона) */
+.bbi-appbar-cateye--over-photo {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(4, 3, 3, 0.32);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25),
+    0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.bbi-appbar-nav-active-cateye {
+  border: 1px solid rgba(126, 118, 112, 0.42);
+  background:
+    linear-gradient(168deg, rgba(74, 70, 66, 0.62) 0%, rgba(48, 46, 44, 0.42) 42%, rgba(28, 26, 24, 0.55) 100%),
+    linear-gradient(102deg, rgba(104, 98, 92, 0.16) 0%, transparent 50%),
+    radial-gradient(ellipse 135% 190% at 28% 8%, rgba(112, 106, 100, 0.24) 0%, transparent 54%);
+  color: rgba(255, 252, 248, 0.96);
+  box-shadow:
+    inset 0 1px 0 rgba(132, 128, 124, 0.14),
+    0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Крошка текущей страницы — компактная рамка + cat-eye */
+.bbi-work-breadcrumb-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(124, 116, 110, 0.4);
+  padding: 0.32rem 0.72rem;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: rgba(255, 252, 248, 0.9);
+  background:
+    linear-gradient(168deg, rgba(70, 66, 62, 0.58) 0%, rgba(44, 42, 40, 0.48) 44%, rgba(24, 22, 20, 0.56) 100%),
+    linear-gradient(102deg, rgba(98, 92, 86, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 128% 170% at 22% 0%, rgba(118, 110, 104, 0.2) 0%, transparent 55%);
+  box-shadow:
+    inset 0 1px 0 rgba(118, 114, 110, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+/* «Как мы работаем» — карточки столпов: cat-eye; бейдж цифры в том же тоне */
+.bbi-work-pillar-index {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  z-index: 20;
+  display: flex;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.bbi-work-pillar-index--result {
+  border: 1px solid rgba(212, 168, 52, 0.4);
+  color: rgba(255, 205, 95, 0.98);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.028) 30%, transparent 52%),
+    linear-gradient(102deg, rgba(255, 200, 90, 0.1) 0%, transparent 48%),
+    radial-gradient(ellipse 122% 100% at 30% 20%, rgba(232, 182, 72, 0.42) 0%, rgba(82, 58, 26, 0.2) 48%, transparent 64%),
+    linear-gradient(165deg, rgba(48, 38, 22, 0.99) 0%, rgba(16, 13, 9, 0.99) 100%);
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 210, 120, 0.14);
+}
+
+.bbi-work-pillar-index--broken {
+  border: 1px solid rgba(255, 250, 245, 0.22);
+  color: rgba(255, 252, 248, 0.96);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.024) 30%, transparent 54%),
+    linear-gradient(102deg, rgba(240, 236, 230, 0.08) 0%, transparent 48%),
+    radial-gradient(ellipse 128% 100% at 28% 18%, rgba(220, 222, 228, 0.14) 0%, rgba(70, 72, 78, 0.12) 46%, transparent 62%),
+    linear-gradient(165deg, rgba(38, 36, 40, 0.99) 0%, rgba(16, 15, 18, 0.99) 100%);
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.bbi-work-pillar-index--actions {
+  border: 1px solid rgba(255, 75, 95, 0.38);
+  color: rgba(255, 75, 95, 0.98);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 30%, transparent 52%),
+    linear-gradient(102deg, rgba(255, 120, 138, 0.1) 0%, transparent 48%),
+    radial-gradient(ellipse 122% 100% at 30% 20%, rgba(255, 88, 108, 0.32) 0%, rgba(90, 34, 42, 0.22) 48%, transparent 64%),
+    linear-gradient(165deg, rgba(48, 22, 28, 0.99) 0%, rgba(18, 10, 12, 0.99) 100%);
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 130, 148, 0.12);
+}
+
+.bbi-work-pillar-card {
+  position: relative;
+  display: flex;
+  min-height: 220px;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 26px;
+  padding: 1rem 1.1rem 1rem 1.15rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .bbi-work-pillar-card {
+    min-height: 232px;
+    padding: 1.15rem 1.2rem 1.1rem 1.2rem;
+  }
+}
+
+.bbi-work-pillar-card--result {
+  border: 1px solid rgba(212, 168, 52, 0.22);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.024) 28%, transparent 54%),
+    linear-gradient(102deg, rgba(236, 190, 72, 0.06) 0%, transparent 46%),
+    radial-gradient(ellipse 132% 104% at 44% 14%, rgba(232, 178, 62, 0.16) 0%, rgba(90, 62, 28, 0.09) 42%, transparent 62%),
+    linear-gradient(168deg, rgba(32, 28, 20, 0.98) 0%, rgba(12, 10, 8, 0.99) 100%);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(220, 178, 88, 0.09);
+}
+
+.group:hover .bbi-work-pillar-card--result {
+  border-color: rgba(232, 180, 72, 0.38);
+}
+
+.bbi-work-pillar-card--broken {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.022) 32%, transparent 56%),
+    linear-gradient(102deg, rgba(240, 236, 230, 0.05) 0%, transparent 48%),
+    radial-gradient(ellipse 124% 96% at 40% 12%, rgba(220, 222, 228, 0.08) 0%, rgba(55, 58, 64, 0.08) 44%, transparent 62%),
+    linear-gradient(168deg, rgba(32, 30, 34, 0.98) 0%, rgba(12, 11, 14, 0.99) 100%);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.group:hover .bbi-work-pillar-card--broken {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.bbi-work-pillar-card--actions {
+  border: 1px solid rgba(255, 43, 68, 0.22);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.024) 28%, transparent 54%),
+    linear-gradient(102deg, rgba(255, 130, 148, 0.06) 0%, transparent 46%),
+    radial-gradient(ellipse 130% 100% at 42% 14%, rgba(255, 75, 95, 0.14) 0%, rgba(90, 32, 42, 0.1) 42%, transparent 62%),
+    linear-gradient(168deg, rgba(32, 18, 22, 0.98) 0%, rgba(12, 8, 10, 0.99) 100%);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 110, 128, 0.08);
+}
+
+.group:hover .bbi-work-pillar-card--actions {
+  border-color: rgba(255, 75, 95, 0.38);
+}
+
+/* «Этапы проекта» — внутренние карточки: заметнее белый cat-eye, шире по площади */
+.bbi-work-stage-card {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.072) 28%, rgba(255, 255, 255, 0.028) 52%, rgba(255, 255, 255, 0.008) 72%, transparent 92%),
+    linear-gradient(98deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 58%),
+    radial-gradient(ellipse 155% 125% at 50% 22%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 38%, rgba(100, 104, 112, 0.08) 58%, rgba(20, 22, 28, 0.35) 78%, transparent 100%),
+    radial-gradient(ellipse 110% 90% at 50% 100%, rgba(255, 255, 255, 0.04) 0%, transparent 52%),
+    linear-gradient(180deg, rgba(22, 24, 30, 0.97) 0%, rgba(11, 13, 17, 0.99) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.bbi-about-cta-shell {
+  border: 1px solid rgba(112, 106, 100, 0.28);
+  background:
+    linear-gradient(168deg, rgba(78, 74, 70, 0.22) 0%, rgba(52, 50, 48, 0.09) 32%, transparent 58%),
+    linear-gradient(102deg, rgba(92, 88, 84, 0.12) 0%, rgba(58, 56, 54, 0.05) 38%, transparent 52%),
+    radial-gradient(ellipse 142% 92% at 10% 8%, rgba(108, 102, 96, 0.11) 0%, rgba(62, 58, 54, 0.1) 42%, transparent 62%),
+    linear-gradient(165deg, rgba(42, 40, 38, 0.99) 0%, rgba(22, 21, 20, 0.99) 48%, rgba(10, 9, 8, 1) 100%);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.58),
+    0 0 0 1px rgba(48, 46, 44, 0.45),
+    inset 0 1px 0 rgba(96, 92, 88, 0.18),
+    inset 0 -14px 38px rgba(0, 0, 0, 0.33);
+}
+
+/*
+ * Кейсы — «Все кейсы»: радиал rgb(255,255,255) → rgba(255,255,255,0.67), мягкое белое свечение (y≈8.9px, blur≈46px)
+ * и едва заметная «глубина» внутри (inset).
+ */
+.bbi-cases-all-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: rgba(12, 12, 14, 0.92);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  background: radial-gradient(
+    ellipse 118% 148% at 50% 22%,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.67) 56%,
+    rgba(250, 250, 252, 0.92) 100%
+  );
+  box-shadow:
+    0 8.91px 46.31px rgba(255, 255, 255, 0.12),
+    0 2px 10px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 -1px 18px rgba(255, 255, 255, 0.2),
+    inset 0 4px 28px rgba(0, 0, 0, 0.04);
+  transition:
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.bbi-cases-all-pill:hover {
+  color: rgba(6, 6, 8, 1);
+  border-color: rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 8.91px 46.31px rgba(255, 255, 255, 0.17),
+    0 3px 12px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgb(255, 255, 255),
+    inset 0 -1px 20px rgba(255, 255, 255, 0.24),
+    inset 0 4px 30px rgba(0, 0, 0, 0.045);
+}
+
+.bbi-cases-all-pill:focus-visible {
+  outline: 2px solid rgba(255, 43, 68, 0.55);
+  outline-offset: 3px;
+}
+
+/* «Для кого мы» (IcpIntro): внешний блок чуть светлее «чистого» фона; внутренние — ближе по тону, контраст мягкий */
+.bbi-icp-intro-shell {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.028) 0%,
+      rgba(255, 255, 255, 0.007) 30%,
+      rgba(255, 255, 255, 0.034) 50%,
+      rgba(255, 255, 255, 0.008) 70%,
+      rgba(255, 255, 255, 0.014) 100%
+    ),
+    radial-gradient(ellipse 130% 100% at 50% 0%, rgba(220, 222, 228, 0.045) 0%, transparent 52%),
+    linear-gradient(180deg, #151516 0%, #101012 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.068);
+}
+
+/* Внутренние карточки — чуть светлее оболочки, блик приглушён (разница заметна, но не резкая) */
+.bbi-icp-intro-card {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.055) 0%,
+      rgba(255, 255, 255, 0.02) 26%,
+      rgba(255, 255, 255, 0.065) 50%,
+      rgba(255, 255, 255, 0.019) 74%,
+      rgba(255, 255, 255, 0.014) 100%
+    ),
+    radial-gradient(ellipse 125% 95% at 50% 4%, rgba(240, 242, 247, 0.05) 0%, transparent 58%),
+    linear-gradient(180deg, #1e1f21 0%, #161718 100%);
+  border: 1px solid rgba(245, 246, 250, 0.12);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.085);
+}
+
+/* Плашка с лозунгом — белая «кошачий глаз» как на примере */
+.bbi-icp-intro-pill {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(233, 233, 237, 0.96) 38%,
+      rgba(255, 255, 255, 0.92) 50%,
+      rgba(220, 220, 226, 0.92) 70%,
+      rgba(210, 210, 216, 0.9) 100%
+    );
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* «Чем мы поможем»: внешний блок — бело-серый блик сверху, плавно гаснет к низу */
+.bbi-help-panel-shell {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.058) 0%,
+      rgba(255, 255, 255, 0.022) 32%,
+      rgba(255, 255, 255, 0.008) 52%,
+      rgba(255, 255, 255, 0.003) 72%,
+      transparent 92%
+    ),
+    radial-gradient(ellipse 135% 95% at 50% -8%, rgba(232, 234, 240, 0.072) 0%, transparent 48%),
+    linear-gradient(180deg, #1b1c1e 0%, #121314 52%, #0b0b0d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.48),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+/* Верхний ряд карточек — тон и блик как у верхней зоны оболочки */
+.bbi-help-panel-card--top {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.018) 38%,
+      rgba(255, 255, 255, 0.042) 50%,
+      rgba(255, 255, 255, 0.014) 72%,
+      rgba(255, 255, 255, 0.01) 100%
+    ),
+    radial-gradient(ellipse 120% 90% at 50% 2%, rgba(230, 232, 238, 0.055) 0%, transparent 52%),
+    linear-gradient(180deg, #202124 0%, #18191c 100%);
+  border: 1px solid rgba(245, 246, 250, 0.11);
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.078);
+}
+
+/* Нижний ряд — как нижняя, более тёмная зона оболочки, блик мягче */
+.bbi-help-panel-card--bottom {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.028) 0%,
+      rgba(255, 255, 255, 0.01) 40%,
+      rgba(255, 255, 255, 0.022) 50%,
+      rgba(255, 255, 255, 0.008) 78%,
+      rgba(0, 0, 0, 0.06) 100%
+    ),
+    radial-gradient(ellipse 115% 75% at 50% 108%, rgba(200, 202, 210, 0.04) 0%, transparent 42%),
+    linear-gradient(180deg, #161719 0%, #101113 100%);
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055);
+}
+
+.bbi-help-stage-icon--top {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%),
+    rgba(20, 21, 24, 0.55);
+  border-color: rgba(255, 255, 255, 0.13) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bbi-help-stage-icon--bottom {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.015) 100%),
+    rgba(14, 15, 17, 0.65);
+  border-color: rgba(255, 255, 255, 0.095) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+/* «Почему BBI»: заметный кошачий глаз; красный только лёгкий оттенок */
+.bbi-cateye-red {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.085) 0%, rgba(255, 255, 255, 0.028) 25%, rgba(255, 255, 255, 0.008) 50%, transparent 72%),
+    linear-gradient(118deg, rgba(255, 255, 255, 0.042) 0%, transparent 50%),
+    radial-gradient(ellipse 62% 46% at 13% 10%, rgba(182, 38, 55, 0.14) 0%, rgba(130, 30, 43, 0.07) 30%, rgba(36, 18, 18, 0.1) 50%, transparent 75%),
+    linear-gradient(165deg, rgba(24, 13, 13, 0.99) 0%, rgba(10, 6, 6, 0.995) 100%);
+  box-shadow:
+    0 16.82px 38.22px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.095);
+}
+
+/* Нижний золотой блок: приглушённый янтарь, без кричащего жёлтого */
+.bbi-cateye-gold {
+  background:
+    linear-gradient(168deg, rgba(236, 190, 72, 0.09) 0%, rgba(212, 160, 48, 0.028) 30%, transparent 62%),
+    linear-gradient(102deg, rgba(228, 182, 70, 0.055) 0%, rgba(200, 145, 40, 0.01) 36%, transparent 62%),
+    radial-gradient(ellipse 140% 110% at 14% 10%, rgba(232, 178, 62, 0.16) 0%, rgba(185, 132, 42, 0.09) 34%, transparent 64%),
+    radial-gradient(ellipse 120% 90% at 70% 120%, rgba(0, 0, 0, 0.38) 0%, transparent 55%),
+    linear-gradient(165deg, rgba(18, 15, 10, 0.985) 0%, rgba(7, 6, 4, 0.995) 100%);
+  box-shadow:
+    0 18px 46px rgba(0, 0, 0, 0.56),
+    inset 0 1px 0 rgba(220, 178, 88, 0.09),
+    inset 0 -8px 18px rgba(0, 0, 0, 0.32);
+}
+
+.bbi-cateye-red-inset {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.036) 0%, rgba(255, 255, 255, 0.01) 36%, transparent 68%),
+    radial-gradient(ellipse 115% 88% at 12% 10%, rgba(155, 34, 50, 0.09) 0%, rgba(39, 20, 20, 0.1) 45%, transparent 72%),
+    linear-gradient(165deg, rgba(20, 11, 11, 0.96) 0%, rgba(12, 7, 7, 0.97) 100%);
+  border: 1px solid rgba(136, 42, 52, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 10px 22px rgba(0, 0, 0, 0.24);
+}
+
+.bbi-cateye-gold-inset {
+  background: rgba(212, 168, 52, 0.06);
+  border: 1px solid rgba(212, 168, 52, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+/* Плитки в золотом блоке: та же тёплая база, что у .bbi-cateye-gold, без «чужого» серого */
+.bbi-cateye-recognize {
+  border: 0.44px solid transparent;
+  background-image:
+    linear-gradient(170deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 30%, transparent 62%),
+    linear-gradient(100deg, rgba(236, 190, 72, 0.07) 0%, rgba(212, 160, 48, 0.025) 36%, transparent 62%),
+    radial-gradient(ellipse 140% 110% at 10% 10%, rgba(232, 178, 62, 0.11) 0%, rgba(185, 132, 42, 0.055) 34%, transparent 66%),
+    linear-gradient(180deg, #221f18 0%, #100e0a 100%),
+    linear-gradient(180deg, rgba(72, 62, 42, 0.32) 0%, rgba(38, 32, 22, 0.42) 48%, rgba(26, 22, 16, 0.38) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(220, 188, 120, 0.08),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.32);
+}
+
+/* «Что мы меняем»: тот же объём, но блик и радиал в тон --bbi-red вместо янтаря */
+.bbi-cateye-recognize--crimson {
+  background-image:
+    linear-gradient(170deg, rgba(255, 255, 255, 0.095) 0%, rgba(255, 255, 255, 0.03) 30%, transparent 62%),
+    linear-gradient(100deg, rgba(255, 120, 138, 0.07) 0%, rgba(255, 43, 68, 0.028) 36%, transparent 62%),
+    radial-gradient(ellipse 140% 110% at 10% 10%, rgba(255, 75, 95, 0.14) 0%, rgba(130, 38, 52, 0.07) 34%, transparent 66%),
+    linear-gradient(180deg, #1c1416 0%, #0e0a0b 100%),
+    linear-gradient(180deg, rgba(52, 28, 34, 0.3) 0%, rgba(30, 16, 20, 0.4) 48%, rgba(22, 12, 15, 0.36) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 110, 128, 0.085),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.32);
+}
+
+/* Градация красного для карточек слева -> справа */
+.bbi-cateye-recognize--crimson-mid {
+  background-image:
+    linear-gradient(170deg, rgba(255, 255, 255, 0.095) 0%, rgba(255, 255, 255, 0.03) 30%, transparent 62%),
+    linear-gradient(100deg, rgba(255, 108, 128, 0.045) 0%, rgba(255, 43, 68, 0.018) 36%, transparent 62%),
+    radial-gradient(ellipse 140% 110% at 10% 10%, rgba(255, 68, 88, 0.09) 0%, rgba(88, 30, 40, 0.05) 34%, transparent 66%),
+    linear-gradient(180deg, #191517 0%, #0d0b0c 100%),
+    linear-gradient(180deg, rgba(46, 28, 34, 0.24) 0%, rgba(26, 17, 20, 0.34) 48%, rgba(20, 12, 14, 0.3) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 102, 122, 0.065),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.32);
+}
+
+.bbi-cateye-recognize--crimson-soft {
+  background-image:
+    linear-gradient(170deg, rgba(255, 255, 255, 0.092) 0%, rgba(255, 255, 255, 0.03) 30%, transparent 62%),
+    linear-gradient(100deg, rgba(255, 96, 118, 0.022) 0%, rgba(255, 43, 68, 0.008) 36%, transparent 62%),
+    radial-gradient(ellipse 140% 110% at 10% 10%, rgba(255, 60, 82, 0.05) 0%, rgba(70, 28, 36, 0.03) 34%, transparent 66%),
+    linear-gradient(180deg, #171517 0%, #0d0c0d 100%),
+    linear-gradient(180deg, rgba(38, 30, 34, 0.2) 0%, rgba(24, 18, 20, 0.3) 48%, rgba(18, 14, 16, 0.28) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 98, 118, 0.045),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.32);
+}
+
+/* Мини-плитки без золота: холодный кошачий глаз (серебристый блик), для соседства с --warm */
+.bbi-cateye-recognize--neutral {
+  border: 0.44px solid transparent;
+  background-image:
+    linear-gradient(170deg, rgba(255, 255, 255, 0.086) 0%, rgba(255, 255, 255, 0.024) 30%, transparent 62%),
+    linear-gradient(100deg, rgba(248, 246, 242, 0.052) 0%, rgba(255, 255, 255, 0.014) 36%, transparent 62%),
+    radial-gradient(ellipse 140% 110% at 12% 10%, rgba(234, 230, 224, 0.075) 0%, rgba(86, 82, 78, 0.058) 34%, transparent 66%),
+    linear-gradient(180deg, #1c1a1b 0%, #0f0d0e 100%),
+    linear-gradient(180deg, rgba(52, 48, 46, 0.26) 0%, rgba(28, 24, 24, 0.36) 48%, rgba(19, 16, 16, 0.34) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 246, 238, 0.075),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.32);
+}
+
+/* Акцентные плитки (1-я и 4-я в «Наш подход»): заметный янтарь */
+.bbi-cateye-recognize--warm {
+  background-image:
+    linear-gradient(170deg, rgba(255, 255, 255, 0.096) 0%, rgba(255, 255, 255, 0.03) 30%, transparent 62%),
+    linear-gradient(100deg, rgba(255, 224, 150, 0.03) 0%, rgba(255, 192, 7, 0.014) 34%, transparent 62%),
+    radial-gradient(ellipse 140% 110% at 10% 10%, rgba(255, 192, 7, 0.045) 0%, rgba(150, 120, 64, 0.026) 34%, transparent 66%),
+    linear-gradient(180deg, #211f1a 0%, #110f0c 100%),
+    linear-gradient(180deg, rgba(70, 60, 42, 0.16) 0%, rgba(34, 30, 23, 0.26) 48%, rgba(22, 20, 17, 0.28) 100%);
+}
+
+/* Алиас: «холодная» плитка — как --neutral */
+.bbi-cateye-recognize--cool {
+  background-image:
+    linear-gradient(170deg, rgba(255, 255, 255, 0.086) 0%, rgba(255, 255, 255, 0.024) 30%, transparent 62%),
+    linear-gradient(100deg, rgba(248, 246, 242, 0.052) 0%, rgba(255, 255, 255, 0.014) 36%, transparent 62%),
+    radial-gradient(ellipse 140% 110% at 12% 10%, rgba(234, 230, 224, 0.075) 0%, rgba(86, 82, 78, 0.058) 34%, transparent 66%),
+    linear-gradient(180deg, #1c1a1b 0%, #0f0d0e 100%),
+    linear-gradient(180deg, rgba(52, 48, 46, 0.26) 0%, rgba(28, 24, 24, 0.36) 48%, rgba(19, 16, 16, 0.34) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 246, 238, 0.075),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.32);
+}
+
+/* Карточки "Что вы получаете": ярче сверху, к низу оттенок почти исчезает */
+.bbi-cateye-recognize--topfade {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 24%, rgba(255, 255, 255, 0.012) 46%, transparent 68%),
+    linear-gradient(102deg, rgba(246, 242, 236, 0.06) 0%, rgba(236, 232, 224, 0.03) 34%, transparent 62%),
+    radial-gradient(ellipse 128% 88% at 18% 8%, rgba(238, 232, 222, 0.09) 0%, rgba(86, 82, 78, 0.055) 36%, transparent 62%),
+    linear-gradient(180deg, #1b1a1a 0%, #0d0c0c 100%),
+    linear-gradient(180deg, rgba(50, 46, 44, 0.22) 0%, rgba(24, 21, 21, 0.3) 48%, rgba(16, 14, 14, 0.3) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 250, 242, 0.1),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.34);
+}
+
+/* «Что вы получаете»: только градиент оболочки шагает (красный блик → нейтраль); текст/акценты в TSX единые */
+.bbi-cateye-recognize.bbi-wyg-cateye--0 {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 24%, rgba(255, 255, 255, 0.012) 46%, transparent 68%),
+    linear-gradient(102deg, rgba(255, 118, 132, 0.09) 0%, rgba(255, 43, 68, 0.045) 34%, transparent 62%),
+    radial-gradient(ellipse 128% 88% at 18% 8%, rgba(255, 72, 92, 0.17) 0%, rgba(110, 40, 52, 0.11) 38%, transparent 62%),
+    linear-gradient(180deg, #1c1416 0%, #0e0a0b 100%),
+    linear-gradient(180deg, rgba(52, 28, 34, 0.32) 0%, rgba(30, 16, 20, 0.42) 48%, rgba(22, 12, 15, 0.38) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 110, 128, 0.1),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.34);
+}
+
+.bbi-cateye-recognize.bbi-wyg-cateye--1 {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 24%, rgba(255, 255, 255, 0.012) 46%, transparent 68%),
+    linear-gradient(102deg, rgba(255, 108, 124, 0.06) 0%, rgba(255, 43, 68, 0.03) 34%, transparent 62%),
+    radial-gradient(ellipse 128% 88% at 18% 8%, rgba(255, 68, 88, 0.12) 0%, rgba(95, 38, 48, 0.08) 38%, transparent 62%),
+    linear-gradient(180deg, #1a1416 0%, #0e0b0c 100%),
+    linear-gradient(180deg, rgba(46, 28, 34, 0.26) 0%, rgba(28, 17, 20, 0.36) 48%, rgba(20, 12, 15, 0.34) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 104, 122, 0.085),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.34);
+}
+
+.bbi-cateye-recognize.bbi-wyg-cateye--2 {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 24%, rgba(255, 255, 255, 0.012) 46%, transparent 68%),
+    linear-gradient(102deg, rgba(255, 96, 118, 0.04) 0%, rgba(255, 43, 68, 0.018) 34%, transparent 62%),
+    radial-gradient(ellipse 128% 88% at 18% 8%, rgba(255, 58, 80, 0.08) 0%, rgba(78, 32, 40, 0.05) 38%, transparent 62%),
+    linear-gradient(180deg, #191517 0%, #0d0b0c 100%),
+    linear-gradient(180deg, rgba(40, 28, 32, 0.22) 0%, rgba(26, 18, 20, 0.32) 48%, rgba(18, 13, 15, 0.3) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 98, 118, 0.07),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.34);
+}
+
+.bbi-cateye-recognize.bbi-wyg-cateye--3 {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 24%, rgba(255, 255, 255, 0.012) 46%, transparent 68%),
+    linear-gradient(102deg, rgba(248, 244, 240, 0.055) 0%, rgba(230, 220, 214, 0.028) 34%, transparent 62%),
+    radial-gradient(ellipse 128% 88% at 18% 8%, rgba(232, 224, 216, 0.085) 0%, rgba(88, 78, 72, 0.06) 38%, transparent 62%),
+    linear-gradient(180deg, #1b1a19 0%, #0d0c0c 100%),
+    linear-gradient(180deg, rgba(48, 44, 42, 0.22) 0%, rgba(26, 22, 22, 0.3) 48%, rgba(17, 15, 15, 0.3) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 248, 242, 0.095),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.34);
+}
+
+.bbi-cateye-recognize.bbi-wyg-cateye--4 {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 24%, rgba(255, 255, 255, 0.012) 46%, transparent 68%),
+    linear-gradient(102deg, rgba(246, 242, 236, 0.06) 0%, rgba(236, 232, 224, 0.03) 34%, transparent 62%),
+    radial-gradient(ellipse 128% 88% at 18% 8%, rgba(238, 232, 222, 0.075) 0%, rgba(86, 82, 78, 0.048) 36%, transparent 62%),
+    linear-gradient(180deg, #1b1a1a 0%, #0d0c0c 100%),
+    linear-gradient(180deg, rgba(50, 46, 44, 0.2) 0%, rgba(24, 21, 21, 0.28) 48%, rgba(16, 14, 14, 0.28) 100%);
+  background-clip: padding-box, padding-box, padding-box, border-box;
+  background-origin: padding-box, padding-box, padding-box, border-box;
+  box-shadow:
+    0 18px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 250, 242, 0.1),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.34);
+}
+
+/* «+» на плитке (золотая база / большие карточки): янтарный тон */
+.bbi-cateye-recognize .bbi-cateye-plus {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 34%, transparent 58%),
+    linear-gradient(104deg, rgba(236, 198, 120, 0.12) 0%, rgba(212, 165, 70, 0.04) 40%, transparent 52%),
+    radial-gradient(circle at 32% 28%, rgba(232, 190, 95, 0.14) 0%, rgba(100, 82, 48, 0.1) 48%, transparent 64%),
+    linear-gradient(165deg, #363028 0%, #1c1913 100%);
+  border: 1px solid rgba(210, 185, 130, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.38),
+    0 1px 2px rgba(0, 0, 0, 0.28);
+  color: rgba(248, 244, 235, 0.88);
+}
+
+.bbi-cateye-recognize--neutral .bbi-cateye-plus {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 34%, transparent 58%),
+    linear-gradient(104deg, rgba(215, 222, 235, 0.11) 0%, rgba(140, 150, 170, 0.05) 40%, transparent 52%),
+    radial-gradient(circle at 32% 28%, rgba(210, 216, 230, 0.13) 0%, rgba(65, 72, 88, 0.14) 48%, transparent 64%),
+    linear-gradient(165deg, #2e3340 0%, #181b22 100%);
+  border: 1px solid rgba(185, 195, 215, 0.2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.38),
+    0 1px 2px rgba(0, 0, 0, 0.28);
+  color: rgba(244, 246, 252, 0.88);
+}
+
+.bbi-cateye-recognize--warm .bbi-cateye-plus {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.19) 0%, rgba(255, 248, 228, 0.045) 34%, transparent 58%),
+    linear-gradient(104deg, rgba(255, 220, 140, 0.045) 0%, rgba(255, 192, 7, 0.018) 40%, transparent 52%),
+    radial-gradient(circle at 32% 28%, rgba(255, 210, 110, 0.072) 0%, rgba(108, 90, 60, 0.06) 48%, transparent 64%),
+    linear-gradient(165deg, #342f27 0%, #1c1a14 100%);
+  border-color: rgba(225, 190, 118, 0.14);
+  color: rgba(248, 244, 236, 0.86);
+}
+
+/* «Подробнее»: общая капсула + круг со стрелкой, оба с кошачьим глазом в тоне карточки */
+.bbi-cateye-details {
+  border-radius: 9999px;
+  padding: 5px 14px 5px 5px;
+  border: 1px solid transparent;
+  gap: 0.45rem;
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -5px 12px rgba(0, 0, 0, 0.32);
+}
+
+.bbi-cateye-details--gold {
+  background:
+    linear-gradient(170deg, rgba(255, 232, 190, 0.16) 0%, rgba(220, 170, 60, 0.04) 32%, transparent 58%),
+    linear-gradient(100deg, rgba(238, 200, 120, 0.07) 0%, transparent 46%),
+    radial-gradient(ellipse 130% 100% at 14% 22%, rgba(218, 175, 72, 0.14) 0%, transparent 56%),
+    linear-gradient(165deg, #1b1912 0%, #090806 100%);
+  border-color: rgba(210, 172, 68, 0.22);
+}
+
+.bbi-cateye-details--neutral {
+  background:
+    linear-gradient(170deg, rgba(255, 255, 255, 0.14) 0%, rgba(230, 232, 238, 0.05) 32%, transparent 58%),
+    linear-gradient(100deg, rgba(240, 242, 246, 0.06) 0%, transparent 46%),
+    radial-gradient(ellipse 130% 100% at 14% 22%, rgba(210, 214, 222, 0.12) 0%, transparent 56%),
+    linear-gradient(165deg, #191b20 0%, #0a0b0e 100%);
+  border-color: rgba(198, 204, 216, 0.18);
+}
+
+.bbi-cateye-details--red {
+  background:
+    linear-gradient(170deg, rgba(255, 228, 232, 0.12) 0%, rgba(255, 80, 98, 0.05) 32%, transparent 58%),
+    linear-gradient(100deg, rgba(255, 130, 148, 0.06) 0%, transparent 46%),
+    radial-gradient(ellipse 130% 100% at 14% 22%, rgba(255, 80, 98, 0.12) 0%, transparent 56%),
+    linear-gradient(165deg, #1a1214 0%, #080506 100%);
+  border-color: rgba(255, 60, 84, 0.2);
+}
+
+/* Мягкая версия красной капсулы «Подробнее» (менее ядерная) */
+.bbi-cateye-details--red-soft {
+  background:
+    linear-gradient(170deg, rgba(255, 236, 240, 0.1) 0%, rgba(255, 92, 110, 0.035) 32%, transparent 58%),
+    linear-gradient(100deg, rgba(255, 138, 154, 0.045) 0%, transparent 46%),
+    radial-gradient(ellipse 130% 100% at 14% 22%, rgba(255, 88, 108, 0.085) 0%, transparent 56%),
+    linear-gradient(165deg, #191214 0%, #0a0708 100%);
+  border-color: rgba(255, 72, 96, 0.16);
+}
+
+.bbi-cateye-details__icon {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.45),
+    0 1px 2px rgba(0, 0, 0, 0.28);
+}
+
+.bbi-cateye-details--gold .bbi-cateye-details__icon {
+  background:
+    linear-gradient(168deg, rgba(255, 248, 228, 0.22) 0%, rgba(215, 170, 70, 0.08) 34%, transparent 58%),
+    linear-gradient(104deg, rgba(255, 224, 150, 0.09) 0%, transparent 48%),
+    radial-gradient(circle at 30% 26%, rgba(232, 185, 75, 0.18) 0%, transparent 62%),
+    linear-gradient(165deg, #252016 0%, #0e0c08 100%);
+  border-color: rgba(212, 175, 80, 0.28);
+  color: rgba(255, 205, 95, 0.98);
+}
+
+.bbi-cateye-details--neutral .bbi-cateye-details__icon {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.24) 0%, rgba(236, 238, 242, 0.09) 34%, transparent 58%),
+    linear-gradient(104deg, rgba(250, 250, 252, 0.08) 0%, transparent 48%),
+    radial-gradient(circle at 30% 26%, rgba(220, 222, 228, 0.18) 0%, rgba(120, 122, 130, 0.1) 45%, transparent 62%),
+    linear-gradient(165deg, #282a2e 0%, #111316 100%);
+  border-color: rgba(200, 204, 212, 0.22);
+  color: rgba(255, 248, 242, 0.92);
+}
+
+.bbi-cateye-details--red .bbi-cateye-details__icon {
+  background:
+    linear-gradient(168deg, rgba(255, 236, 238, 0.2) 0%, rgba(255, 100, 118, 0.09) 34%, transparent 58%),
+    linear-gradient(104deg, rgba(255, 140, 155, 0.08) 0%, transparent 48%),
+    radial-gradient(circle at 30% 26%, rgba(255, 90, 110, 0.2) 0%, rgba(140, 40, 55, 0.1) 45%, transparent 62%),
+    linear-gradient(165deg, #241418 0%, #0c0809 100%);
+  border-color: rgba(255, 70, 90, 0.28);
+  color: rgba(255, 75, 95, 0.98);
+}
+
+.bbi-cateye-details--red-soft .bbi-cateye-details__icon {
+  background:
+    linear-gradient(168deg, rgba(255, 240, 242, 0.16) 0%, rgba(255, 110, 128, 0.06) 34%, transparent 58%),
+    linear-gradient(104deg, rgba(255, 146, 162, 0.055) 0%, transparent 48%),
+    radial-gradient(circle at 30% 26%, rgba(255, 92, 112, 0.12) 0%, rgba(90, 34, 42, 0.08) 45%, transparent 62%),
+    linear-gradient(165deg, #221517 0%, #0c0809 100%);
+  border-color: rgba(255, 78, 100, 0.18);
+  color: rgba(255, 82, 102, 0.9);
+}
+
+/* Кейсы: более чёткий cat-eye для контейнера карточки */
+.bbi-case-shell-cateye {
+  border: 1px solid rgba(255, 255, 255, 0.115);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 33%, transparent 60%),
+    linear-gradient(102deg, rgba(255, 255, 255, 0.05) 0%, transparent 48%),
+    radial-gradient(ellipse 125% 92% at 12% 8%, rgba(255, 255, 255, 0.08) 0%, rgba(55, 55, 60, 0.08) 42%, transparent 62%),
+    linear-gradient(180deg, #1a1a1c 0%, #0c0c0f 100%);
+  box-shadow:
+    0 18px 46px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.bbi-case-icon-cateye {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.035) 34%, transparent 58%),
+    linear-gradient(104deg, rgba(244, 240, 232, 0.05) 0%, transparent 48%),
+    radial-gradient(circle at 30% 26%, rgba(232, 226, 216, 0.085) 0%, rgba(84, 82, 80, 0.09) 45%, transparent 62%),
+    linear-gradient(165deg, #2a2a2c 0%, #121316 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.4),
+    0 3px 10px rgba(0, 0, 0, 0.28);
+}
+
+/* FAQ: одна нейтральная гамма + общий диагональный «кошачий глаз»; иконки — мягкая кромка */
+.bbi-faq-shell {
+  border: 1px solid rgba(255, 255, 255, 0.105);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.132) 0%, rgba(255, 255, 255, 0.036) 34%, transparent 58%),
+    linear-gradient(102deg, rgba(245, 242, 236, 0.06) 0%, transparent 48%),
+    radial-gradient(ellipse 128% 100% at 11% 7%, rgba(244, 240, 232, 0.085) 0%, rgba(72, 66, 60, 0.09) 42%, transparent 62%),
+    linear-gradient(180deg, #1e1c1b 0%, #0e0d0c 100%);
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.46),
+    inset 0 1px 0 rgba(255, 252, 246, 0.12),
+    inset 0 -11px 30px rgba(0, 0, 0, 0.27);
+}
+
+.bbi-faq-row {
+  border: 1px solid rgba(255, 255, 255, 0.098);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.118) 0%, rgba(255, 255, 255, 0.032) 34%, transparent 58%),
+    linear-gradient(102deg, rgba(245, 242, 236, 0.052) 0%, transparent 48%),
+    radial-gradient(ellipse 122% 94% at 12% 9%, rgba(240, 234, 224, 0.072) 0%, rgba(68, 62, 56, 0.078) 42%, transparent 60%),
+    linear-gradient(165deg, rgba(36, 34, 33, 0.98) 0%, rgba(20, 18, 17, 0.99) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 252, 246, 0.108),
+    inset 0 -4px 11px rgba(0, 0, 0, 0.3),
+    0 1px 5px rgba(0, 0, 0, 0.16);
+}
+
+.bbi-faq-row:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Финальный блок формы: внешний контейнер с мягким cat-eye */
+/* «Что вы получаете»: красная полоса — одна интенсивность на всех карточках */
+.wyg-card-accent-bar {
+  background-color: var(--wyg-bar, rgba(255, 43, 68, 0.42));
+  transition: background-color 0.3s ease;
+}
+
+.group:hover .wyg-card-accent-bar {
+  background-color: var(--wyg-bar-hover, rgba(255, 43, 68, 0.78));
+}
+
+/* Work: схема «6 столпов» — cat-eye на общем контейнере, не на плитках */
+.bbi-work-scheme-shell {
+  position: relative;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 43, 68, 0.16);
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.05) 0%, transparent 42%),
+    radial-gradient(ellipse 92% 72% at 50% 14%, rgba(255, 65, 85, 0.2) 0%, rgba(48, 20, 28, 0.2) 38%, transparent 62%),
+    linear-gradient(180deg, rgba(8, 7, 10, 0.98) 0%, rgba(3, 3, 5, 1) 100%);
+  box-shadow:
+    0 22px 56px rgba(0, 0, 0, 0.52),
+    inset 0 1px 0 rgba(255, 110, 128, 0.07),
+    inset 0 -12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.bbi-contact-shell {
+  border: 1px solid rgba(255, 255, 255, 0.105);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.112) 0%, rgba(255, 255, 255, 0.028) 34%, transparent 58%),
+    linear-gradient(102deg, rgba(244, 240, 232, 0.05) 0%, transparent 48%),
+    radial-gradient(ellipse 124% 96% at 12% 8%, rgba(236, 230, 220, 0.07) 0%, rgba(66, 60, 56, 0.082) 42%, transparent 62%),
+    linear-gradient(180deg, #1b1a19 0%, #0c0b0a 100%);
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.46),
+    inset 0 1px 0 rgba(255, 250, 242, 0.1),
+    inset 0 -10px 28px rgba(0, 0, 0, 0.28);
+}
+
+/* Страница «Контакты»: нейтральный серый cat-eye (без бордо/красного), диагональное свечение */
+.bbi-contacts-page-shell {
+  position: relative;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(142deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 26%, transparent 50%),
+    linear-gradient(318deg, rgba(255, 255, 255, 0.035) 0%, transparent 48%),
+    radial-gradient(ellipse 110% 75% at 16% 10%, rgba(255, 255, 255, 0.075) 0%, rgba(72, 74, 82, 0.14) 42%, transparent 68%),
+    linear-gradient(168deg, rgba(30, 30, 32, 0.98) 0%, rgba(14, 14, 15, 0.99) 100%);
+  box-shadow:
+    0 28px 72px rgba(0, 0, 0, 0.58),
+    0 0 0 1px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -14px 32px rgba(0, 0, 0, 0.38);
+  overflow: hidden;
+}
+
+.bbi-faq-icon {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  flex-shrink: 0;
+  color: rgba(255, 43, 68, 0.95);
+}
+
+.bbi-faq-icon--t0 {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.06) 34%, transparent 56%),
+    linear-gradient(104deg, rgba(255, 255, 255, 0.08) 0%, transparent 48%),
+    radial-gradient(circle at 30% 26%, rgba(255, 100, 118, 0.14) 0%, rgba(45, 32, 34, 0.2) 52%, transparent 66%),
+    linear-gradient(165deg, #3a3634 0%, #222020 100%);
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -3px 7px rgba(0, 0, 0, 0.36),
+    0 1px 4px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 75, 95, 1);
+}
+
+.bbi-faq-icon--t1 {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.05) 35%, transparent 56%),
+    linear-gradient(104deg, rgba(255, 255, 255, 0.065) 0%, transparent 48%),
+    radial-gradient(circle at 30% 26%, rgba(255, 85, 105, 0.11) 0%, rgba(38, 26, 28, 0.22) 54%, transparent 66%),
+    linear-gradient(165deg, #32302e 0%, #1c1a19 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.38),
+    0 1px 4px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 65, 85, 0.96);
+}
+
+.bbi-faq-icon--t2 {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.04) 36%, transparent 54%),
+    linear-gradient(104deg, rgba(255, 255, 255, 0.05) 0%, transparent 49%),
+    radial-gradient(circle at 30% 26%, rgba(255, 70, 92, 0.09) 0%, rgba(32, 22, 24, 0.26) 55%, transparent 67%),
+    linear-gradient(165deg, #2c2a28 0%, #181615 100%);
+  border: 1px solid rgba(255, 255, 255, 0.045);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -3px 8px rgba(0, 0, 0, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.22);
+  color: rgba(255, 55, 78, 0.92);
+}
+
+.bbi-faq-icon--t3 {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.1) 0%, transparent 48%),
+    linear-gradient(104deg, rgba(255, 255, 255, 0.04) 0%, transparent 49%),
+    radial-gradient(circle at 30% 26%, rgba(255, 55, 78, 0.07) 0%, rgba(28, 18, 20, 0.32) 56%, transparent 68%),
+    linear-gradient(165deg, #262423 0%, #141312 100%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.085),
+    inset 0 -3px 9px rgba(0, 0, 0, 0.42),
+    0 1px 3px rgba(0, 0, 0, 0.24);
+  color: rgba(255, 48, 72, 0.85);
+}
+
+.bbi-faq-icon--t4 {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.075) 0%, transparent 50%),
+    linear-gradient(104deg, rgba(255, 255, 255, 0.028) 0%, transparent 50%),
+    radial-gradient(circle at 30% 26%, rgba(255, 43, 68, 0.055) 0%, rgba(22, 14, 16, 0.36) 58%, transparent 70%),
+    linear-gradient(165deg, #201e1d 0%, #11100f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.035);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    inset 0 -3px 9px rgba(0, 0, 0, 0.44),
+    0 1px 2px rgba(0, 0, 0, 0.22);
+  color: rgba(255, 43, 68, 0.72);
+}
+
 .no-scrollbar {
   scrollbar-width: none;
 }
@@ -193,8 +1289,8 @@ h4 {
   height: 270px;
   border-radius: 28px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(82, 82, 82, 0.28) 42%, rgba(10, 12, 17, 0.96) 100%),
-    linear-gradient(165deg, rgba(16, 19, 27, 0.96), rgba(8, 10, 15, 0.99));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(82, 82, 82, 0.28) 42%, rgba(14, 12, 11, 0.96) 100%),
+    linear-gradient(165deg, rgba(22, 20, 19, 0.96), rgba(10, 9, 8, 0.99));
   box-shadow: 0 20px 46px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 296 C 398 312 386 324 370 324 H 28 C 12 324 0 312 0 296 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
@@ -280,13 +1376,245 @@ h4 {
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(82, 82, 82, 0.28) 42%, rgba(10, 12, 17, 0.96) 100%),
-    linear-gradient(165deg, rgba(16, 19, 27, 0.96), rgba(8, 10, 15, 0.99));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(82, 82, 82, 0.28) 42%, rgba(14, 12, 11, 0.96) 100%),
+    linear-gradient(165deg, rgba(22, 20, 19, 0.96), rgba(10, 9, 8, 0.99));
   box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
     inset 0 -10px 18px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* «Узнаёте себя»: кошачий глаз — диагональный блик, нейтральный холодный тон */
+.icp-card--recognize {
+  background:
+    linear-gradient(170deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.038) 30%, transparent 62%),
+    linear-gradient(100deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.02) 36%, transparent 62%),
+    radial-gradient(ellipse 140% 110% at 12% 10%, rgba(232, 234, 240, 0.14) 0%, rgba(168, 170, 178, 0.06) 34%, transparent 66%),
+    radial-gradient(ellipse 115% 90% at 72% 118%, rgba(0, 0, 0, 0.36) 0%, transparent 54%),
+    linear-gradient(180deg, #1a1b1e 0%, #0e0f12 100%) !important;
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.52),
+    inset 0 1px 0 rgba(255, 255, 255, 0.13),
+    inset 0 -10px 26px rgba(0, 0, 0, 0.32) !important;
+}
+
+.icp-card--recognize::before {
+  border-color: rgba(218, 220, 226, 0.1);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  opacity: 0.82;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09);
+}
+
+.icp-card--recognize::after {
+  border-color: rgba(215, 217, 224, 0.075);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.icp-card__index.icp-card__index--recognize {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 32%, transparent 58%),
+    linear-gradient(104deg, rgba(255, 255, 255, 0.11) 0%, transparent 48%),
+    radial-gradient(ellipse 125% 125% at 24% 20%, rgba(230, 232, 238, 0.2) 0%, rgba(110, 112, 120, 0.09) 42%, transparent 64%),
+    linear-gradient(165deg, #23252a 0%, #141518 100%) !important;
+  border: 1px solid rgba(218, 220, 228, 0.12) !important;
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -5px 12px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* /work — столпы: форма как у «Узнаёте себя» (icp-card + clip-path), цвета блоков result / broken / actions */
+.icp-card--pillar-result,
+.icp-card--pillar-broken,
+.icp-card--pillar-actions {
+  height: auto !important;
+  min-height: 256px;
+}
+
+/* Столпы /work: чуть плотнее оболочка под крупнее типографику */
+.icp-card--pillar-result .icp-card__content,
+.icp-card--pillar-broken .icp-card__content,
+.icp-card--pillar-actions .icp-card__content {
+  padding: 16px 18px 11px;
+  gap: 6px;
+}
+
+.icp-card--pillar-result .icp-card__title,
+.icp-card--pillar-broken .icp-card__title,
+.icp-card--pillar-actions .icp-card__title {
+  min-height: 64px;
+  padding: 0 10px 0 96px;
+}
+
+.icp-card--pillar-result .icp-card__title h3,
+.icp-card--pillar-broken .icp-card__title h3,
+.icp-card--pillar-actions .icp-card__title h3 {
+  max-width: 268px;
+}
+
+.icp-card--pillar-result .icp-card__footer,
+.icp-card--pillar-broken .icp-card__footer,
+.icp-card--pillar-actions .icp-card__footer {
+  padding-top: 6px;
+}
+
+.icp-card--pillar-result .icp-card__body {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.icp-card--pillar-result .icp-card__footer {
+  border-top-color: rgba(255, 192, 7, 0.2);
+}
+
+/* Столп «результат»: янтарный акцент rgba(255,192,7) — свечение, рамки; цифра и ссылка в TSX */
+.icp-card--pillar-result {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 26%, transparent 48%),
+    radial-gradient(ellipse 100% 75% at 82% 6%, rgba(255, 192, 7, 0.14) 0%, transparent 52%),
+    radial-gradient(ellipse 90% 50% at 48% 0%, rgba(255, 185, 60, 0.07) 0%, transparent 42%),
+    linear-gradient(168deg, rgba(24, 20, 14, 0.98) 0%, rgba(8, 7, 6, 0.99) 100%) !important;
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.44),
+    0 0 52px -12px rgba(255, 192, 7, 0.12),
+    inset 0 1px 0 rgba(255, 200, 95, 0.1) !important;
+}
+
+.icp-card--pillar-result::before {
+  border-color: rgba(255, 192, 7, 0.26);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  opacity: 0.95;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 192, 7, 0.09),
+    inset 0 1px 0 rgba(255, 200, 100, 0.1);
+}
+
+.icp-card--pillar-result::after {
+  border-color: rgba(255, 192, 7, 0.2);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 192, 7, 0.07),
+    inset 0 1px 0 rgba(255, 195, 85, 0.09),
+    inset 0 -10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.group:hover .icp-card--pillar-result::after {
+  border-color: rgba(255, 200, 75, 0.38);
+}
+
+.icp-card--pillar-broken {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.022) 32%, transparent 56%),
+    linear-gradient(102deg, rgba(240, 236, 230, 0.05) 0%, transparent 48%),
+    radial-gradient(ellipse 124% 96% at 40% 12%, rgba(220, 222, 228, 0.08) 0%, rgba(55, 58, 64, 0.08) 44%, transparent 62%),
+    linear-gradient(168deg, rgba(32, 30, 34, 0.98) 0%, rgba(12, 11, 14, 0.99) 100%) !important;
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+.icp-card--pillar-broken::before {
+  border-color: rgba(255, 250, 245, 0.18);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  opacity: 0.88;
+}
+
+.icp-card--pillar-broken::after {
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.group:hover .icp-card--pillar-broken::after {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+/* Столп «действия»: акцент rgba(255,43,68) — свечение и рамки; цифра и ссылка в TSX */
+.icp-card--pillar-actions {
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 26%, transparent 48%),
+    radial-gradient(ellipse 100% 75% at 82% 6%, rgba(255, 43, 68, 0.13) 0%, transparent 52%),
+    radial-gradient(ellipse 90% 50% at 48% 0%, rgba(255, 55, 78, 0.065) 0%, transparent 42%),
+    linear-gradient(168deg, rgba(26, 10, 12, 0.98) 0%, rgba(8, 3, 4, 0.99) 100%) !important;
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.44),
+    0 0 52px -12px rgba(255, 43, 68, 0.11),
+    inset 0 1px 0 rgba(255, 110, 125, 0.09) !important;
+}
+
+.icp-card--pillar-actions::before {
+  border-color: rgba(255, 43, 68, 0.26);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  opacity: 0.95;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 43, 68, 0.09),
+    inset 0 1px 0 rgba(255, 115, 128, 0.09);
+}
+
+.icp-card--pillar-actions::after {
+  border-color: rgba(255, 43, 68, 0.2);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 43, 68, 0.07),
+    inset 0 1px 0 rgba(255, 95, 110, 0.08),
+    inset 0 -10px 28px rgba(0, 0, 0, 0.32);
+}
+
+.group:hover .icp-card--pillar-actions::after {
+  border-color: rgba(255, 75, 92, 0.38);
+}
+
+.icp-card--pillar-actions .icp-card__footer {
+  border-top-color: rgba(255, 43, 68, 0.2);
+}
+
+.icp-card__index.icp-card__index--pillar-result {
+  border: 1px solid rgba(255, 192, 7, 0.38);
+  color: rgba(255, 192, 7, 1);
+  background:
+    radial-gradient(ellipse 95% 90% at 42% 38%, rgba(255, 192, 7, 0.18) 0%, transparent 58%),
+    linear-gradient(168deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 34%, transparent 54%),
+    linear-gradient(165deg, rgba(32, 26, 14, 0.99) 0%, rgba(12, 10, 6, 0.99) 100%);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.38),
+    0 0 24px -8px rgba(255, 192, 7, 0.22),
+    inset 0 1px 0 rgba(255, 215, 120, 0.14);
+}
+
+.icp-card__index.icp-card__index--pillar-broken {
+  border: 1px solid rgba(255, 250, 245, 0.22);
+  color: rgba(255, 252, 248, 0.96);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.024) 30%, transparent 54%),
+    linear-gradient(102deg, rgba(240, 236, 230, 0.08) 0%, transparent 48%),
+    radial-gradient(ellipse 128% 100% at 28% 18%, rgba(220, 222, 228, 0.14) 0%, rgba(70, 72, 78, 0.12) 46%, transparent 62%),
+    linear-gradient(165deg, rgba(38, 36, 40, 0.99) 0%, rgba(16, 15, 18, 0.99) 100%);
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.icp-card__index.icp-card__index--pillar-actions {
+  border: 1px solid rgba(255, 43, 68, 0.4);
+  color: rgba(255, 43, 68, 1);
+  background:
+    radial-gradient(ellipse 95% 90% at 42% 38%, rgba(255, 43, 68, 0.17) 0%, transparent 58%),
+    linear-gradient(168deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 34%, transparent 54%),
+    linear-gradient(102deg, rgba(255, 55, 72, 0.08) 0%, transparent 48%),
+    linear-gradient(165deg, rgba(38, 12, 16, 0.99) 0%, rgba(14, 5, 7, 0.99) 100%);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.38),
+    0 0 24px -8px rgba(255, 43, 68, 0.2),
+    inset 0 1px 0 rgba(255, 130, 145, 0.12);
 }
 
 @media (max-width: 640px) {
@@ -323,6 +1651,172 @@ h4 {
     height: 56px;
     border-radius: 16px;
   }
+
+  .icp-card--pillar-result,
+  .icp-card--pillar-broken,
+  .icp-card--pillar-actions {
+    height: auto !important;
+    min-height: 242px;
+  }
+
+  .icp-card--pillar-result .icp-card__title,
+  .icp-card--pillar-broken .icp-card__title,
+  .icp-card--pillar-actions .icp-card__title {
+    min-height: 58px;
+    padding-left: 88px;
+  }
+}
+
+/* Кейсы — список: панель фильтров — редкий яркий rgba(255,43,68): свечение и кромка, не заливка */
+.bbi-cases-filter-shell {
+  position: relative;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 43, 68, 0.22);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.015) 28%, transparent 50%),
+    linear-gradient(102deg, rgba(255, 43, 68, 0.045) 0%, transparent 46%),
+    radial-gradient(ellipse 120% 95% at 78% 6%, rgba(255, 43, 68, 0.1) 0%, transparent 52%),
+    radial-gradient(ellipse 100% 80% at 32% 0%, rgba(255, 43, 68, 0.05) 0%, transparent 48%),
+    linear-gradient(168deg, rgba(18, 8, 10, 0.98) 0%, rgba(6, 2, 3, 0.99) 100%);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.46),
+    0 0 48px -14px rgba(255, 43, 68, 0.09),
+    inset 0 1px 0 rgba(255, 95, 110, 0.08);
+  overflow: hidden;
+}
+
+.bbi-cases-filter-shell__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.bbi-cases-filter-chip {
+  position: relative;
+  isolation: isolate;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.58);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.bbi-cases-filter-chip:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Активный чип: яркий красный по кромке и свечению; текст почти белый — не сплошной #ff2b44 */
+.bbi-cases-filter-chip--active {
+  border-color: rgba(255, 43, 68, 0.48);
+  color: rgba(255, 252, 252, 0.97);
+  text-shadow: none;
+}
+
+.bbi-cases-filter-chip--active::before {
+  content: "";
+  position: absolute;
+  inset: -1px -3px;
+  border-radius: inherit;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse 118% 50% at 50% 48%,
+    rgba(255, 43, 68, 0.22) 0%,
+    rgba(255, 43, 68, 0.08) 42%,
+    rgba(40, 12, 16, 0.2) 62%,
+    transparent 82%
+  );
+  box-shadow:
+    0 0 14px rgba(255, 43, 68, 0.12),
+    inset 0 0 0 1px rgba(255, 43, 68, 0.12),
+    inset 0 0 14px rgba(0, 0, 0, 0.22);
+}
+
+/* Карточка кейса в списке — тёмно-красный акцент */
+.bbi-cases-card,
+.bbi-blog-card {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid rgba(105, 36, 38, 0.34);
+  background:
+    linear-gradient(168deg, rgba(255, 255, 255, 0.05) 0%, transparent 48%),
+    radial-gradient(ellipse 124% 92% at 48% 0%, rgba(72, 22, 24, 0.2) 0%, rgba(28, 10, 11, 0.2) 48%, transparent 70%),
+    linear-gradient(168deg, rgba(24, 10, 11, 0.96) 0%, rgba(8, 4, 5, 0.99) 100%);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(95, 34, 36, 0.09);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.bbi-cases-card:hover,
+.bbi-blog-card:hover {
+  border-color: rgba(125, 42, 44, 0.44);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.48),
+    inset 0 1px 0 rgba(105, 38, 40, 0.11);
+}
+
+/* Блог — иконка категории: тёмный красный тон */
+.bbi-blog-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(105, 36, 38, 0.42);
+  background:
+    linear-gradient(145deg, rgba(42, 16, 18, 0.95) 0%, rgba(18, 8, 9, 0.98) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(95, 36, 38, 0.14),
+    0 0 14px rgba(18, 6, 8, 0.38);
+  color: rgba(255, 240, 242, 0.92);
+}
+
+/* Категория на карточке кейса — тихий «кошачий глаз», без яркого свечения */
+.bbi-cases-card__category {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  color: rgba(188, 72, 72, 0.97);
+  text-shadow: none;
+}
+
+.bbi-cases-card__category::before {
+  content: "";
+  position: absolute;
+  inset: -3px -8px;
+  border-radius: 9999px;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse 122% 50% at 50% 50%,
+    rgba(72, 24, 26, 0.4) 0%,
+    rgba(38, 14, 15, 0.28) 50%,
+    transparent 78%
+  );
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.22);
+}
+
+.bbi-cases-card__key-result {
+  color: rgba(185, 68, 68, 0.98);
+}
+
+.bbi-cases-card__tag {
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%),
+    rgba(28, 26, 30, 0.85);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 /* Scrollbar styling */

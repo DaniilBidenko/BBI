@@ -16,6 +16,15 @@ type HelpAndProcessSectionProps = {
   ctaHref?: string;
 };
 
+const LIST_ARROW = (
+  <svg viewBox="0 0 24 24" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--bbi-red)]" aria-hidden fill="none">
+    <path
+      fill="currentColor"
+      d="M5 19h14v-2H9.41l12.3-12.29-1.42-1.42L8 15.59V5H5v14z"
+    />
+  </svg>
+);
+
 const STAGE_ICONS = [
   <svg key="0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
     <circle cx="11" cy="11" r="8" />
@@ -43,86 +52,95 @@ export function HelpAndProcessSection({
   ctaHref,
 }: HelpAndProcessSectionProps) {
   return (
-    <section className="relative py-14 md:py-16">
+    <section className="relative py-10 md:py-12">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
-      <Container className="relative mx-auto w-full max-w-6xl px-4 lg:px-6">
-        <div className="rounded-[28px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(125%_90%_at_50%_0%,rgba(255,255,255,0.085)_0%,rgba(255,255,255,0.02)_36%,rgba(255,255,255,0)_70%),var(--bbi-panel-bg)] p-5 shadow-[0_26px_70px_rgba(0,0,0,0.55)] md:p-7">
-        <header className="mb-8 text-center md:mb-10">
-          {label && (
-            <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.26em] text-[var(--bbi-red)]">
-              {label}
-            </span>
-          )}
-          <h2 className="text-[34px] font-semibold uppercase leading-[0.96] tracking-tight text-white md:text-[44px]">
-            {title}
-          </h2>
-          <div className="mx-auto mt-3 h-px w-[90px] bg-white/22" />
-          {description && (
-            <p className="mx-auto mt-3 max-w-3xl text-[12px] uppercase leading-[1.32] tracking-[0.16em] text-[rgba(255,192,7,1)] md:text-[13px]">
-              {description}
-            </p>
-          )}
-        </header>
-
-        <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">
-          {stages.map((stage, i) => (
-            <article
-              key={i}
-              className="group relative flex min-h-[305px] flex-col overflow-hidden rounded-[26px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(120%_92%_at_45%_0%,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.024)_34%,rgba(255,255,255,0)_66%),var(--bbi-panel-bg)] p-5 shadow-[0_16px_36px_rgba(0,0,0,0.46)] transition-all duration-300 hover:border-white/25 md:min-h-[320px] md:p-6"
-            >
-              <div className="flex h-full flex-col">
-                <div className="flex items-start gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/6 text-white/85 [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0">
-                    {STAGE_ICONS[i % STAGE_ICONS.length]}
-                  </span>
-                  <div className="pt-0.5">
-                    <h3 className="text-[37px] font-semibold leading-[1.05] text-white">
-                      {stage.title}
-                    </h3>
-                  </div>
-                </div>
-
-                <p className="mt-3 text-[15px] leading-[1.55] text-white/78">
-                  {stage.description}
+      <Container className="relative mx-auto lg:w-[94%]">
+        <div className="mx-auto w-full max-w-[1320px]">
+          <article className="bbi-help-panel-shell overflow-hidden rounded-[32px] px-4 py-7 md:px-7 md:py-9">
+            <header className="relative mb-5 flex flex-col items-center gap-2 text-center md:mb-6">
+              {label && (
+                <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[var(--bbi-red)] md:text-xs">
+                  {label}
+                </span>
+              )}
+              <h2 className="max-w-3xl text-[36px] font-semibold uppercase leading-none tracking-[0.01em] text-white md:text-[50px]">
+                {title}
+              </h2>
+              {description && (
+                <p className="mx-auto max-w-3xl text-[12px] uppercase leading-[1.35] tracking-[0.16em] text-[rgba(212,168,52,0.88)] md:text-[13px]">
+                  {description}
                 </p>
+              )}
+            </header>
 
-                {stage.result && (
-                  <div className="mt-4 w-fit rounded-full border border-[rgba(255,43,68,0.55)] px-3 py-1.5">
-                    <p className="text-[12px] font-medium leading-none text-[var(--bbi-red)]">
-                      {stage.result}
+            <div className="grid gap-4 sm:grid-cols-2 sm:gap-4 md:gap-5">
+              {stages.map((stage, i) => {
+                const topRow = Math.floor(i / 2) === 0;
+                return (
+                <article
+                  key={i}
+                  className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[24px] p-4 text-left transition-[box-shadow,border-color] md:min-h-[260px] md:p-5 ${
+                    topRow ? "bbi-help-panel-card--top hover:border-[rgba(245,246,250,0.14)]" : "bbi-help-panel-card--bottom hover:border-[rgba(255,255,255,0.11)]"
+                  }`}
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="flex items-start gap-3">
+                      <span
+                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border text-white/88 [&_svg]:h-[18px] [&_svg]:w-[18px] [&_svg]:shrink-0 ${
+                          topRow ? "bbi-help-stage-icon--top" : "bbi-help-stage-icon--bottom"
+                        }`}
+                      >
+                        {STAGE_ICONS[i % STAGE_ICONS.length]}
+                      </span>
+                      <div className="min-w-0 pt-0.5">
+                        <h3 className="text-[22px] font-semibold leading-[1.08] tracking-tight text-white md:text-[26px]">
+                          {stage.title}
+                        </h3>
+                      </div>
+                    </div>
+
+                    <p className="mt-3 text-[14px] leading-[1.55] text-white/74 md:text-[15px]">
+                      {stage.description}
                     </p>
-                  </div>
-                )}
 
-                {stage.clientGets && stage.clientGets.length > 0 && (
-                  <div className="mt-auto border-t border-white/16 pt-3">
-                    <ul className="space-y-1.5">
-                      {stage.clientGets.map((item, j) => (
-                        <li key={j} className="flex gap-2 text-[13px] leading-snug text-white/68">
-                          <span className="mt-0.5 shrink-0 text-[var(--bbi-red)]" aria-hidden>
-                            &gt;
-                          </span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
+                    {stage.result && (
+                      <div className="mt-4 w-fit rounded-full border border-[var(--bbi-red)]/45 bg-transparent px-3 py-1.5">
+                        <p className="text-[11px] font-medium leading-snug text-[var(--bbi-red)] md:text-[12px]">
+                          {stage.result}
+                        </p>
+                      </div>
+                    )}
 
-        {ctaLabel && ctaHref && (
-          <div className="mt-8 flex justify-center">
-            <a
-              href={ctaHref}
-              className="inline-flex items-center justify-center rounded-full bg-[var(--bbi-red)] px-6 py-2 text-[13px] font-medium text-white shadow-[0_0_28px_rgba(255,43,68,0.35)] transition hover:bg-[var(--bbi-red-hover)]"
-            >
-              {ctaLabel}
-            </a>
-          </div>
-        )}
+                    {stage.clientGets && stage.clientGets.length > 0 && (
+                      <div className="mt-auto pt-4">
+                        <div className="h-px w-full bg-gradient-to-r from-transparent via-white/18 to-transparent" />
+                        <ul className="mt-3 space-y-2">
+                          {stage.clientGets.map((item, j) => (
+                            <li key={j} className="flex gap-2.5 text-[12px] leading-snug text-white/68 md:text-[13px]">
+                              {LIST_ARROW}
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </article>
+                );
+              })}
+            </div>
+          </article>
+
+          {ctaLabel && ctaHref && (
+            <div className="mt-6 flex justify-center">
+              <a
+                href={ctaHref}
+                className="inline-flex items-center justify-center rounded-full bg-[var(--bbi-red)] px-8 py-2.5 text-[14px] font-medium text-white shadow-[0_3px_12px_rgba(0,0,0,0.28)] transition hover:bg-[var(--bbi-red-hover)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.32)]"
+              >
+                {ctaLabel}
+              </a>
+            </div>
+          )}
         </div>
       </Container>
     </section>

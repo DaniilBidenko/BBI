@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { CtaBlock } from "@/components/CtaBlock";
+import { MiniTilesCateye } from "@/components/MiniTilesCateye";
 
 function CheckIcon({ className }: { className?: string }) {
   return (
@@ -30,6 +31,15 @@ type WhatYouGetSectionProps = {
   ctaHref?: string;
 };
 
+/** Только градиент «кошачьего глаза» меняется по карточкам; текст, галочки и бейдж — одинаковые. */
+const WYG_SHELL: readonly string[] = [
+  "bbi-wyg-cateye--0",
+  "bbi-wyg-cateye--1",
+  "bbi-wyg-cateye--2",
+  "bbi-wyg-cateye--3",
+  "bbi-wyg-cateye--4",
+];
+
 export function WhatYouGetSection({
   eyebrow,
   title,
@@ -40,13 +50,6 @@ export function WhatYouGetSection({
   ctaHref,
 }: WhatYouGetSectionProps) {
   const useNewLayout = cards && cards.length > 0;
-  const CARD_TONES = [
-    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
-    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
-    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
-    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
-    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
-  ] as const;
 
   return (
     <section className="relative py-14 md:py-16">
@@ -70,17 +73,19 @@ export function WhatYouGetSection({
         {useNewLayout ? (
           <div className="space-y-6">
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6">
-              {cards!.map((card, i) => (
+              {cards!.map((card, i) => {
+                const shellClass = WYG_SHELL[Math.min(i, WYG_SHELL.length - 1)] ?? "bbi-wyg-cateye--4";
+                return (
                 <article
                   key={i}
-                  className={`group relative flex flex-col overflow-hidden rounded-2xl border shadow-[0_12px_36px_rgba(0,0,0,0.4)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[var(--bbi-red)]/28 hover:shadow-[0_16px_46px_rgba(185,28,28,0.16)] ${CARD_TONES[i % CARD_TONES.length]} ${i === 4 ? "sm:col-span-2" : ""}`}
+                  className={`bbi-cateye-recognize ${shellClass} group relative flex flex-col overflow-hidden rounded-2xl shadow-[0_16px_42px_rgba(0,0,0,0.34)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_22px_52px_rgba(0,0,0,0.42)] ${i === 4 ? "sm:col-span-2" : ""}`}
                 >
-                  <div className="absolute inset-y-0 left-0 w-[3px] bg-[var(--bbi-red)]/40 transition-colors duration-300 group-hover:bg-[var(--bbi-red)]" />
+                  <div className="wyg-card-accent-bar absolute inset-y-0 left-0 z-[1] w-[3px]" />
 
-                  <div className="flex flex-1 flex-col gap-5 p-6 pl-7 md:p-7 md:pl-8">
+                  <div className="relative z-[2] flex flex-1 flex-col gap-5 p-6 pl-7 md:p-7 md:pl-8">
                     {/* Заголовок */}
                     <div className="flex items-start gap-3">
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--bbi-red)]/15 text-[13px] font-bold tabular-nums text-[var(--bbi-red)]">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[rgba(255,43,68,0.12)] text-[13px] font-bold tabular-nums text-[rgba(255,43,68,0.95)]">
                         {i + 1}
                       </span>
                       <h3 className="pt-0.5 text-base font-semibold leading-snug text-[var(--bbi-text)] md:text-lg">
@@ -90,14 +95,14 @@ export function WhatYouGetSection({
 
                     {/* Что остаётся у клиента */}
                     {card.clientGets.length > 0 && (
-                      <div className="rounded-xl bg-[var(--bbi-red)]/[0.05] px-5 py-4 md:px-6 md:py-4">
-                        <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-[var(--bbi-red)]/90">
+                      <div className="bbi-surface-cateye-inset rounded-xl px-5 py-4 md:px-6 md:py-4">
+                        <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-[rgba(255,43,68,0.9)]">
                           Что остаётся у клиента
                         </p>
                         <ul className="space-y-2">
                           {card.clientGets.map((item, j) => (
                             <li key={j} className="flex gap-2.5 text-[14px] leading-[1.55] text-white/82">
-                              <span className="mt-0.5 shrink-0 text-[var(--bbi-red)]">
+                              <span className="mt-0.5 shrink-0 text-[rgba(255,43,68,0.88)]">
                                 <CheckIcon className="h-4 w-4" />
                               </span>
                               <span>{item}</span>
@@ -122,7 +127,7 @@ export function WhatYouGetSection({
                       <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-widest text-white/60">
                         Важно
                       </p>
-                      <div className="rounded-lg border-l-4 border-[var(--bbi-red)]/50 bg-[var(--bbi-red)]/[0.06] py-3 pl-4 pr-4 md:pl-5">
+                      <div className="rounded-lg border-l-4 border-[rgba(255,43,68,0.42)] bg-[rgba(255,43,68,0.06)] py-3 pl-4 pr-4 md:pl-5">
                         <p className="text-[13px] leading-[1.6] text-white/82">
                           {card.important}
                         </p>
@@ -130,46 +135,38 @@ export function WhatYouGetSection({
                     </div>
                   </div>
                 </article>
-              ))}
+                );
+              })}
             </div>
 
-            {/* Итоговый блок — сильное закрытие, без градиента */}
+            {/* Итоговый блок: плитки как в «BBI — операционный партнёр», CTA снизу без бокового разделителя */}
             {finalAccent && (
-              <div className="relative mt-10 overflow-hidden rounded-2xl border border-[rgba(255,196,58,0.32)] bg-[linear-gradient(132deg,rgba(255,196,58,0.16)_0%,rgba(255,196,58,0.08)_18%,rgba(46,38,18,0.78)_42%,rgba(13,11,7,0.97)_72%,rgba(8,9,12,0.99)_100%)] shadow-[0_14px_44px_rgba(0,0,0,0.45)] md:mt-12">
-                <div className="absolute inset-y-0 left-0 w-1.5 bg-[rgba(255,196,58,0.72)]" />
-                <div className="flex flex-col gap-6 py-6 pl-9 pr-6 md:flex-row md:items-center md:justify-between md:gap-10 md:py-8 md:pl-11 md:pr-8">
-                  <div className="min-w-0 flex-1">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[rgba(255,196,58,0.95)]">
+              <div className="bbi-cateye-gold relative mt-10 overflow-hidden rounded-2xl border border-[rgba(218,175,65,0.26)] shadow-[0_18px_46px_rgba(0,0,0,0.5)] md:mt-12">
+                <div className="absolute inset-y-0 left-0 z-[1] w-1.5 bg-[rgba(232,182,72,0.55)]" />
+                <div className="relative z-[2] flex flex-col gap-0 px-5 py-7 pl-8 pr-5 md:px-8 md:py-9 md:pl-11">
+                  <div className="min-w-0">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[rgba(232,182,72,0.92)]">
                       Итог
                     </p>
                     <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--bbi-text)] md:text-2xl">
                       {finalAccent.title}
                     </h3>
-                    <p className="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[var(--bbi-text)]/90 md:text-base">
+                    <p className="mt-4 max-w-3xl text-[15px] leading-[1.8] text-[var(--bbi-text)]/90 md:text-base">
                       {finalAccent.text}
                     </p>
-                    {cards && cards.length > 0 && (
-                      <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                        {cards.slice(0, 5).map((card, i) => (
-                          <div
-                            key={`accent-pill-${i}`}
-                            className="flex gap-2 rounded-[14px] border border-white/18 bg-black/26 px-3.5 py-3"
-                          >
-                            <span className="mt-0.5 shrink-0 text-white/55">+</span>
-                            <span className="text-[13px] font-medium leading-snug text-white/82">
-                              {card.title}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
                   </div>
+                  {cards && cards.length > 0 && (
+                    <MiniTilesCateye
+                      items={cards.slice(0, 5).map((c) => c.title)}
+                      rootClassName="mt-7 w-full max-w-[min(100%,58rem)] space-y-4 pb-0 md:mt-8 md:space-y-4"
+                    />
+                  )}
                   {finalAccent.ctaLabel && ctaHref && (
-                    <div className="shrink-0 border-t border-[var(--bbi-text)]/[0.06] pt-6 md:border-t-0 md:border-l md:border-l-[var(--bbi-text)]/[0.08] md:pl-10 md:pt-0">
+                    <div className="mt-8 flex justify-center border-t border-white/[0.09] pt-8 md:mt-10 md:pt-9">
                       <CtaBlock
                         href={ctaHref}
                         label={finalAccent.ctaLabel}
-                        className="[&>a]:border [&>a]:border-[rgba(255,196,58,0.6)] [&>a]:bg-[rgba(255,196,58,0.16)] [&>a]:text-[rgba(255,231,180,0.98)] [&>a]:hover:bg-[rgba(255,196,58,0.24)] [&>a]:focus-visible:outline-[rgba(255,196,58,0.6)]"
+                        className="!py-0 [&>a]:shadow-[0_8px_28px_rgba(0,0,0,0.35)]"
                       />
                     </div>
                   )}
@@ -178,15 +175,15 @@ export function WhatYouGetSection({
             )}
           </div>
         ) : (
-          <div className="bbi-card relative w-full overflow-hidden rounded-2xl border border-black/[0.08] bg-white">
-            <div className="absolute inset-y-0 left-0 w-1 bg-[var(--bbi-red)]" />
-            <div className="grid grid-cols-1 sm:grid-cols-2">
+          <div className="bbi-cateye-recognize bbi-cateye-recognize--topfade relative w-full overflow-hidden rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.32)]">
+            <div className="absolute inset-y-0 left-0 z-[1] w-1 bg-[var(--bbi-red)]" />
+            <div className="relative z-[2] grid grid-cols-1 sm:grid-cols-2">
               {items?.map((item, i) => (
                 <div
                   key={i}
-                  className={`group flex min-w-0 items-center justify-center gap-5 border-black/[0.06] p-5 pl-6 text-center transition-colors hover:bg-[var(--bbi-bg)]/50 ${i < 4 ? "border-b" : ""} ${i % 2 === 0 ? "sm:border-r" : ""}`}
+                  className={`group flex min-w-0 items-center justify-center gap-5 border-white/[0.08] p-5 pl-6 text-center transition-colors hover:bg-white/[0.04] ${i < 4 ? "border-b" : ""} ${i % 2 === 0 ? "sm:border-r" : ""}`}
                 >
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[var(--bbi-red)] bg-white text-sm font-bold tabular-nums text-[var(--bbi-red)] transition-colors group-hover:bg-[var(--bbi-red)] group-hover:text-white">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[var(--bbi-red)] bg-white/[0.08] text-sm font-bold tabular-nums text-[var(--bbi-red)] transition-colors group-hover:bg-[var(--bbi-red)] group-hover:text-white">
                     {i + 1}
                   </span>
                   <p className="min-w-0 flex-1 pt-0.5 text-[15px] leading-[1.7] text-[var(--bbi-text)]">

@@ -21,6 +21,9 @@ export const en: Dictionary = {
       ctaLabel: "6 PILLARS OF BBI",
       ctaHint: "Open the pillars page",
     },
+    scheme: {
+      centerLabel: "Business",
+    },
     pillarsIntro: {
       title: "BBI system",
       description:
@@ -597,6 +600,12 @@ export const en: Dictionary = {
       title: "Cases: systems approach in action",
       description:
         "We show not «we launched ads» but how we built protection, levers and system. Context, problem, BBI action and measurable result.",
+      heroImage: "/brand/cases-war-room-hero.png",
+    },
+    list: {
+      sectionTitle: "Relevant cases",
+      sectionEyebrow: "Case navigation",
+      sectionSubtitle: "Choose a case that fits your context",
     },
     filters: {
       industry: "Industry",
@@ -637,6 +646,7 @@ export const en: Dictionary = {
     items: [
       {
         slug: "med-lab-sla",
+        headerImage: "/brand/case-med-lab-header.png",
         company: "Medical laboratory (NDA)",
         industry: "Healthcare services",
         keyResult: "SLA 87%, base reactivation 34%, conversion +21%",
@@ -808,6 +818,13 @@ export const en: Dictionary = {
   },
   blog: {
     hero: { title: "Blog & Expertise", description: "Articles on building autonomous and protected business systems." },
+    filters: {
+      all: "All",
+      marketing: "Marketing",
+      finance: "Finance",
+      operations: "Operations",
+    },
+    noPosts: "No articles in this category yet.",
     card: { readMore: "Read more" },
     article: { backToBlog: "← Blog" },
     posts: [

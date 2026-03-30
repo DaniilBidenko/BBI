@@ -8,6 +8,16 @@ import { Container } from "@/components/Container";
 import { CaseResultsInfographic } from "@/components/CaseResultsInfographic";
 import { withLocale } from "@/i18n/paths";
 
+function CaseHeaderIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <rect x="4.5" y="9" width="3.2" height="10" rx="1.2" />
+      <rect x="10.4" y="5" width="3.2" height="14" rx="1.2" />
+      <rect x="16.3" y="11" width="3.2" height="8" rx="1.2" />
+    </svg>
+  );
+}
+
 type LocalePageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
@@ -63,15 +73,49 @@ export default async function CaseDetailPage({ params }: LocalePageProps) {
           >
             {caseDetail.backToCases}
           </Link>
-          <div className="space-y-6">
-            <div>
+
+          {item.headerImage ? (
+            <div className="mb-8 overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0f1014] shadow-[0_24px_56px_rgba(0,0,0,0.45)]">
+              <div className="relative aspect-[16/10] w-full sm:aspect-[2.15/1] md:aspect-[2.35/1]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.headerImage}
+                  alt=""
+                  className="h-full w-full object-cover object-[center_42%]"
+                />
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-[46%] bg-[linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.35)_38%,rgba(0,0,0,0.82)_88%,#0a0a0c_100%)]"
+                  aria-hidden
+                />
+              </div>
+              <div className="flex items-start gap-4 border-t border-white/[0.06] bg-[#121318] px-5 py-5 md:gap-5 md:px-7 md:py-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#ff2b44] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] md:h-14 md:w-14 md:rounded-[14px]">
+                  <CaseHeaderIcon className="h-6 w-6 md:h-7 md:w-7" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#ff2b44] md:text-xs md:tracking-[0.26em]">
+                    {item.industry}
+                  </p>
+                  <h1 className="mt-1.5 text-2xl font-bold leading-[1.15] tracking-tight text-white md:text-3xl lg:text-[2.1rem]">
+                    {item.h1 ?? item.company}
+                  </h1>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="mb-8 space-y-4">
               <span className="text-xs font-medium uppercase tracking-widest text-[#ff2b44]">
                 {item.industry}
               </span>
-              <h1 className="mt-1 text-2xl font-semibold leading-tight md:text-4xl">
+              <h1 className="text-2xl font-semibold leading-tight md:text-4xl">
                 {item.h1 ?? item.company}
               </h1>
-              <div className="mt-4 flex flex-wrap gap-2">
+            </div>
+          )}
+
+          <div className="space-y-6">
+            <div>
+              <div className="mt-4 flex flex-wrap gap-2 md:mt-5">
                 {item.tags.map((tag) => (
                   <span
                     key={tag}

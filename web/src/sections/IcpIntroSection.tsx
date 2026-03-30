@@ -31,48 +31,48 @@ const WARNING_ICON = (
 
 export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabel = "Не подходим" }: IcpIntroSectionProps) {
   return (
-    <section className="relative py-14 md:py-18">
+    <section className="relative py-10 md:py-12">
       <div className="absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[94%]">
         <div className="mx-auto w-full max-w-[1320px]">
-          <article className="relative overflow-hidden rounded-[30px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(120%_90%_at_50%_0%,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.02)_34%,rgba(255,255,255,0)_66%),var(--bbi-panel-bg)] px-5 py-7 shadow-[0_14px_38px_rgba(0,0,0,0.48)] md:px-7 md:py-9">
-            <div className="mb-7 flex flex-col items-center gap-1.5 text-center">
+          <article className="bbi-icp-intro-shell overflow-hidden rounded-[32px] px-4 py-5 md:px-6 md:py-6">
+            <div className="relative mb-7 flex flex-col items-center gap-1.5 text-center md:mb-8">
               <h2 className="text-[36px] font-semibold uppercase leading-none tracking-[0.01em] text-white md:text-[50px]">
                 {title}
               </h2>
-              <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[rgba(255,192,7,1)] md:text-xs">
+              <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[rgba(212,168,52,0.88)] md:text-xs">
                 {eyebrow}
               </span>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-4">
+            <div className="relative grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-3 md:gap-4">
               {segments.map((segment, i) => (
                 <div
                   key={i}
-                  className="flex min-h-[330px] min-w-0 flex-col rounded-[24px] border border-[color:var(--bbi-panel-border)] bg-[radial-gradient(120%_95%_at_45%_0%,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.024)_34%,rgba(255,255,255,0)_66%),var(--bbi-panel-bg)] px-5 py-6 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] md:min-h-[355px] md:px-6 md:py-7"
+                  className="bbi-icp-intro-card relative flex min-h-[260px] min-w-0 flex-col overflow-hidden rounded-[24px] px-4 py-5 text-center md:min-h-[280px] md:px-5 md:py-6"
                 >
-                  <div className="mb-3 flex h-9 w-9 items-center justify-center self-center text-white/95 [&>svg]:h-6 [&>svg]:w-6">
-                    {TARGET_ICON}
-                  </div>
-                  <h3 className="mb-3 text-[26px] font-semibold leading-[1.06] tracking-tight text-white md:text-[32px]">
-                    {segment.title}
-                  </h3>
-                  <p className="mx-auto max-w-[31ch] text-[15px] leading-[1.5] text-white/74 md:text-[16px]">
-                    {segment.details ?? segment.description}
+                <div className="mb-3 flex h-9 w-9 items-center justify-center self-center text-white/95 [&>svg]:h-6 [&>svg]:w-6">
+                  {TARGET_ICON}
+                </div>
+                <h3 className="mb-3 text-[26px] font-semibold leading-[1.06] tracking-tight text-white md:text-[32px]">
+                  {segment.title}
+                </h3>
+                <p className="mx-auto max-w-[31ch] text-[15px] leading-[1.5] text-white/74 md:text-[16px]">
+                  {segment.details ?? segment.description}
+                </p>
+                {segment.metrics && (
+                  <p className="mt-3 text-[14px] font-semibold text-white/68 md:text-[15px]">
+                    {segment.metrics}
                   </p>
-                  {segment.metrics && (
-                    <p className="mt-3 text-[14px] font-semibold text-white/68 md:text-[15px]">
-                      {segment.metrics}
-                    </p>
-                  )}
-                  <div className="mt-auto w-full pt-4">
-                    <div className="mx-auto max-w-[300px] rounded-2xl border border-white/30 bg-white px-4 py-2 shadow-[0_4px_14px_rgba(0,0,0,0.2)]">
-                      <p className="text-center text-[12px] font-medium leading-[1.25] text-[#1d1d1f] md:text-[13px]">
+                )}
+                <div className="mt-auto w-full pt-4">
+                  <div className="bbi-icp-intro-pill mx-auto max-w-[300px] rounded-full px-4 py-2.5">
+                    <p className="text-center text-[12px] font-medium leading-[1.25] text-[#1c1b1b] md:text-[13px]">
                       «{segment.pain}»
-                      </p>
-                    </div>
+                    </p>
                   </div>
                 </div>
+              </div>
               ))}
             </div>
           </article>

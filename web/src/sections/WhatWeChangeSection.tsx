@@ -51,15 +51,6 @@ export function WhatWeChangeSection({
   title,
   pillars,
 }: WhatWeChangeSectionProps) {
-  const CARD_STYLES = [
-    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
-    "border-[rgba(255,255,255,0.18)] bg-[rgba(9,11,16,0.94)]",
-    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
-    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
-    "border-[color:var(--bbi-panel-border)] bg-[rgba(9,11,16,0.94)]",
-    "border-[rgba(255,255,255,0.18)] bg-[rgba(9,11,16,0.94)]",
-  ] as const;
-
   return (
     <section className="relative py-16 md:py-20">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
@@ -75,10 +66,16 @@ export function WhatWeChangeSection({
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {pillars.map((pillar, pillarIndex) => {
             const Icon = PILLAR_ICONS[pillarIndex] ?? PILLAR_ICONS[0];
+            const toneClass =
+              pillarIndex % 3 === 0
+                ? "bbi-cateye-recognize--crimson"
+                : pillarIndex % 3 === 1
+                  ? "bbi-cateye-recognize--crimson-mid"
+                  : "bbi-cateye-recognize--crimson-soft";
             return (
               <article
                 key={pillar.title}
-                className={`bbi-card flex flex-col gap-4 rounded-2xl border p-6 transition hover:border-[var(--bbi-red)]/35 md:p-7 ${CARD_STYLES[pillarIndex % CARD_STYLES.length]}`}
+                className={`bbi-cateye-recognize ${toneClass} group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-6 shadow-[0_16px_40px_rgba(0,0,0,0.32)] transition hover:shadow-[0_20px_48px_rgba(0,0,0,0.38)] md:p-7`}
               >
                 <div className="flex items-center gap-2">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--bbi-red)]/10 text-[var(--bbi-red)] [&>svg]:h-4 [&>svg]:w-4">

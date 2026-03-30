@@ -27,7 +27,7 @@ export function CasesListSection({ cases, locale }: CasesListSectionProps) {
   const [direction, setDirection] = useState<string | null>(null);
   const [scale, setScale] = useState<string | null>(null);
 
-  const { items, filters, filterLabels, card, noResults } = cases;
+  const { items, list, filters, filterLabels, card, noResults } = cases;
 
   const filtered = useMemo(() => {
     return items.filter((item) => {
@@ -48,11 +48,7 @@ export function CasesListSection({ cases, locale }: CasesListSectionProps) {
   };
 
   const chipClass = (active: boolean) =>
-    `rounded-lg border px-3 py-1.5 text-xs font-medium uppercase tracking-wider transition-colors duration-200 ${
-      active
-        ? "border-[#ff2b44]/50 bg-[#ff2b44]/10 text-[#ff2b44]"
-        : "border-white/10 bg-transparent text-white/60 hover:border-white/20 hover:text-white/80"
-    }`;
+    `bbi-cases-filter-chip ${active ? "bbi-cases-filter-chip--active" : ""}`;
 
   const FilterRow = ({
     label,
@@ -94,31 +90,48 @@ export function CasesListSection({ cases, locale }: CasesListSectionProps) {
   return (
     <section className="relative py-6">
       <Container className="relative mx-auto space-y-10 lg:w-[85%]">
-        <div className="rounded-2xl border border-white/[0.08] bg-[#14151a]/60 px-6 py-6">
-          <div className="flex flex-col divide-y divide-white/[0.06]">
-            <FilterRow
-              label={filters.industry}
-              type="industry"
-              options={INDUSTRY_OPTIONS}
-              selected={industry}
-            />
-            <FilterRow
-              label={filters.direction}
-              type="direction"
-              options={DIRECTION_OPTIONS}
-              selected={direction}
-            />
-            <FilterRow
-              label={filters.scale}
-              type="scale"
-              options={SCALE_OPTIONS}
-              selected={scale}
-            />
+        <header className="space-y-5">
+          <h2 className="text-2xl font-bold uppercase tracking-tight text-white sm:text-3xl">
+            {list.sectionTitle}
+          </h2>
+          <div
+            className="h-px w-full max-w-3xl bg-gradient-to-r from-transparent via-[rgba(255,43,68,0.35)] to-transparent"
+            aria-hidden
+          />
+          <div className="bbi-cases-filter-shell px-5 py-6 sm:px-7 sm:py-8">
+            <div className="bbi-cases-filter-shell__inner space-y-2">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[rgba(255,43,68,0.72)]">
+                {list.sectionEyebrow}
+              </p>
+              <p className="text-lg font-semibold text-white sm:text-xl">
+                {list.sectionSubtitle}
+              </p>
+            </div>
+            <div className="bbi-cases-filter-shell__inner mt-8 flex flex-col divide-y divide-white/[0.08]">
+              <FilterRow
+                label={filters.industry}
+                type="industry"
+                options={INDUSTRY_OPTIONS}
+                selected={industry}
+              />
+              <FilterRow
+                label={filters.direction}
+                type="direction"
+                options={DIRECTION_OPTIONS}
+                selected={direction}
+              />
+              <FilterRow
+                label={filters.scale}
+                type="scale"
+                options={SCALE_OPTIONS}
+                selected={scale}
+              />
+            </div>
           </div>
-        </div>
+        </header>
 
         {filtered.length === 0 ? (
-          <div className="rounded-3xl border border-white/10 bg-[#14151a]/50 py-20 text-center">
+          <div className="bbi-cases-filter-shell py-20 text-center">
             <p className="text-white/60">{noResults}</p>
           </div>
         ) : (
@@ -154,14 +167,11 @@ function CaseCard({
   return (
     <Link
       href={`/${locale}/cases/${item.slug}`}
-      className="bbi-card group relative flex flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-[#1b1c21] p-6 transition-all duration-200 hover:border-[#ff2b44]/20"
+      className="bbi-cases-card group relative flex flex-col overflow-hidden p-6"
     >
-      <div className="absolute right-0 top-0 h-40 w-40 opacity-[0.06]">
-        <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.2)_0%,transparent_70%)]" />
-      </div>
       <div className="relative flex flex-col gap-4">
         <div className="flex items-start justify-between gap-3">
-          <span className="text-xs font-medium uppercase tracking-widest text-[#ff2b44]">
+          <span className="bbi-cases-card__category text-xs font-medium uppercase tracking-widest">
             {item.industry}
           </span>
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#2a2b30] text-white">
@@ -179,22 +189,20 @@ function CaseCard({
           </div>
         </div>
         <h3 className="text-xl font-semibold text-white">{item.company}</h3>
-        <p className="text-base font-semibold text-[#ff2b44]">{item.keyResult}</p>
+        <p className="bbi-cases-card__key-result text-base font-semibold">{item.keyResult}</p>
         {excerpt && (
           <p className="text-sm leading-relaxed text-white/80">{excerpt}</p>
         )}
         <div className="flex flex-wrap gap-2">
           {item.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-[#ff2b44]/35 bg-[#25262b] px-3 py-1 text-xs text-white"
-            >
+            <span key={tag} className="bbi-cases-card__tag px-3 py-1 text-xs text-white/90">
               {tag}
             </span>
           ))}
         </div>
-        <span className="mt-1 text-sm text-[#ff2b44] transition group-hover:underline">
-          {readMoreLabel} →
+        <span className="mt-1 text-sm text-white/90 transition group-hover:text-[rgba(185,68,68,0.97)] group-hover:underline">
+          {readMoreLabel}
+          {" >>"}
         </span>
       </div>
     </Link>

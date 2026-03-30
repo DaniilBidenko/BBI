@@ -238,7 +238,7 @@ export function BlogSection({
         <div className="mt-8 flex justify-center">
           <Link
             href={`/${locale}/blog`}
-            className="group inline-flex items-center gap-1 rounded-full border border-white/28 bg-[linear-gradient(180deg,#f6f6f6_0%,#d8d8d8_100%)] px-5 py-2 text-[20px] font-medium text-[#1a1a1a] transition hover:brightness-105"
+            className="bbi-cases-all-pill group"
           >
             {blogLabel} &gt;&gt;
           </Link>

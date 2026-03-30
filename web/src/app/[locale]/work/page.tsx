@@ -24,6 +24,8 @@ export default async function WorkPage({ params }: LocalePageProps) {
   const locale = localeParam as Locale;
   const dictionary = getDictionary(locale);
   const { work } = dictionary;
+  const navHome = dictionary.nav.items.find((item) => item.href === "/");
+  const navWork = dictionary.nav.items.find((item) => item.href === "/work");
 
   return (
     <div className="relative">
@@ -34,14 +36,18 @@ export default async function WorkPage({ params }: LocalePageProps) {
         ctaLabel={work.hero.ctaLabel}
         ctaHint={work.hero.ctaHint}
         ctaHref={withLocale(locale, "/pillars")}
+        breadcrumbHome={navHome?.label ?? "Home"}
+        breadcrumbCurrent={navWork?.label ?? "Work"}
+        breadcrumbHomeHref={withLocale(locale, "/")}
       />
-      <WorkSchemeSection />
+      <WorkSchemeSection centerLabel={work.scheme.centerLabel} pillars={work.pillars} />
       <WorkPillarGridSection
         title={work.results.title}
         description={work.results.description}
         pillars={work.pillars}
         field="result"
         badge={work.results.badge}
+        detailsLabel={work.pillarsIntro.detailsLabel}
       />
       <WorkPillarGridSection
         title={work.problems.title}
@@ -49,6 +55,7 @@ export default async function WorkPage({ params }: LocalePageProps) {
         pillars={work.pillars}
         field="broken"
         badge={work.problems.badge}
+        detailsLabel={work.pillarsIntro.detailsLabel}
       />
       <WorkPillarGridSection
         title={work.actions.title}
@@ -56,6 +63,7 @@ export default async function WorkPage({ params }: LocalePageProps) {
         pillars={work.pillars}
         field="actions"
         badge={work.actions.badge}
+        detailsLabel={work.pillarsIntro.detailsLabel}
       />
       <WorkFormatSection
         title={work.format.title}

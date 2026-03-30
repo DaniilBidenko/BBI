@@ -29,7 +29,7 @@ export function WorkStagesSection({
             {steps.map((step, index) => (
               <article
                 key={step.title}
-                className={`rounded-[24px] border border-white/16 bg-[radial-gradient(130%_100%_at_16%_0%,rgba(255,255,255,0.17)_0%,rgba(255,255,255,0.05)_26%,rgba(255,255,255,0.01)_48%,rgba(10,12,17,0)_70%),linear-gradient(180deg,rgba(16,18,24,0.95)_0%,rgba(9,11,15,0.98)_100%)] px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] ${
+                className={`bbi-work-stage-card rounded-[24px] px-5 py-4 ${
                   index >= 3 ? "md:col-span-1" : ""
                 }`}
               >

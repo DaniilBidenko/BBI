@@ -59,6 +59,9 @@ export type WorkPage = {
     ctaLabel: string;
     ctaHint: string;
   };
+  scheme: {
+    centerLabel: string;
+  };
   pillarsIntro: {
     title: string;
     description: string;
@@ -164,6 +167,8 @@ export type CaseStudy = {
   keywords?: string[];
   /** Кастомный H1 (если не задан — используется company) */
   h1?: string;
+  /** Фото только в шапке страницы кейса (не на карточках в списке) */
+  headerImage?: string;
   context: string;
   problem: string;
   whatBbiDid: string[];
@@ -185,6 +190,13 @@ export type CasesPage = {
     eyebrow: string;
     title: string;
     description: string;
+    /** Фон hero на странице списка кейсов */
+    heroImage?: string;
+  };
+  list: {
+    sectionTitle: string;
+    sectionEyebrow: string;
+    sectionSubtitle: string;
   };
   filters: {
     industry: string;
@@ -417,6 +429,13 @@ export type BlogPage = {
     title: string;
     description: string;
   };
+  filters: {
+    all: string;
+    marketing: string;
+    finance: string;
+    operations: string;
+  };
+  noPosts: string;
   card: {
     readMore: string;
   };

@@ -45,18 +45,28 @@ export default async function BlogArticlePage({ params }: LocalePageProps) {
           >
             {blog.article.backToBlog}
           </Link>
-          <div className="space-y-4">
-            <span className="text-xs font-medium uppercase tracking-widest text-[#ff2b44]">
-              [{post.category}]
-            </span>
-            <h1 className="text-2xl font-semibold leading-tight md:text-4xl">
-              {post.title}
-            </h1>
-            <p className="max-w-2xl text-base leading-relaxed text-white/75">
-              {post.description}
-            </p>
+          <div className="bbi-blog-card space-y-6 rounded-2xl p-6 md:p-8">
+            <div className="space-y-4">
+              <span className="text-xs font-medium uppercase tracking-widest text-[#ff2b44]">
+                {post.category}
+              </span>
+              <h1 className="text-2xl font-semibold leading-tight text-white md:text-4xl">
+                {post.title}
+              </h1>
+              <p className="max-w-2xl text-base leading-relaxed text-white/75">
+                {post.description}
+              </p>
+            </div>
             {post.image && (
-              <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border border-dashed border-white/20 bg-white/[0.03]" />
+              <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={post.image}
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+              </div>
             )}
           </div>
         </Container>
