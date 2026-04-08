@@ -59,7 +59,7 @@ export function WhatYouGetSection({
           <span className="mb-4 inline-block text-[11px] font-semibold uppercase tracking-[0.35em] text-[var(--bbi-red)]">
             {eyebrow}
           </span>
-          <h2 className="text-[42px] font-semibold uppercase leading-[0.98] tracking-tight text-white md:text-[50px]">
+          <h2 className="break-words text-[32px] font-semibold uppercase leading-[1.02] tracking-tight text-white sm:text-[40px] md:text-[50px]">
             {title}
           </h2>
           <div className="mx-auto mt-3 h-0.5 w-12 rounded-full bg-[var(--bbi-red)]/70" />
@@ -88,7 +88,7 @@ export function WhatYouGetSection({
                       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[rgba(255,43,68,0.12)] text-[13px] font-bold tabular-nums text-[rgba(255,43,68,0.95)]">
                         {i + 1}
                       </span>
-                      <h3 className="pt-0.5 text-base font-semibold leading-snug text-[var(--bbi-text)] md:text-lg">
+                      <h3 className="break-words pt-0.5 text-base font-semibold leading-snug text-[var(--bbi-text)] md:text-lg">
                         {card.title}
                       </h3>
                     </div>
@@ -117,7 +117,7 @@ export function WhatYouGetSection({
                       <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-widest text-white/60">
                         Что это значит
                       </p>
-                      <p className="text-[14px] leading-[1.7] text-white/78">
+                      <p className="break-words text-[14px] leading-[1.7] text-white/78">
                         {card.whatItMeans}
                       </p>
                     </div>
@@ -128,7 +128,7 @@ export function WhatYouGetSection({
                         Важно
                       </p>
                       <div className="rounded-lg border-l-4 border-[rgba(255,43,68,0.42)] bg-[rgba(255,43,68,0.06)] py-3 pl-4 pr-4 md:pl-5">
-                        <p className="text-[13px] leading-[1.6] text-white/82">
+                        <p className="break-words text-[13px] leading-[1.6] text-white/82">
                           {card.important}
                         </p>
                       </div>

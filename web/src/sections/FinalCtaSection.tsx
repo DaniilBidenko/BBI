@@ -20,7 +20,7 @@ export function FinalCtaSection({
         <div className="mx-auto w-full max-w-6xl">
           <div className="bbi-contact-shell rounded-[30px] p-6 md:p-8 lg:p-10">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-[40px] font-semibold uppercase leading-[0.98] text-white md:text-[52px]">
+              <h2 className="break-words text-[30px] font-semibold uppercase leading-[1.05] text-white sm:text-[36px] md:text-[52px]">
                 {title}
               </h2>
             </div>

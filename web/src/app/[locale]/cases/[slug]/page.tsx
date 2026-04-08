@@ -96,7 +96,7 @@ export default async function CaseDetailPage({ params }: LocalePageProps) {
                   <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#ff2b44] md:text-xs md:tracking-[0.26em]">
                     {item.industry}
                   </p>
-                  <h1 className="mt-1.5 text-2xl font-bold leading-[1.15] tracking-tight text-white md:text-3xl lg:text-[2.1rem]">
+                  <h1 className="mt-1.5 break-words text-2xl font-bold leading-[1.15] tracking-tight text-white md:text-3xl lg:text-[2.1rem]">
                     {item.h1 ?? item.company}
                   </h1>
                 </div>
@@ -107,7 +107,7 @@ export default async function CaseDetailPage({ params }: LocalePageProps) {
               <span className="text-xs font-medium uppercase tracking-widest text-[#ff2b44]">
                 {item.industry}
               </span>
-              <h1 className="text-2xl font-semibold leading-tight md:text-4xl">
+              <h1 className="break-words text-2xl font-semibold leading-tight md:text-4xl">
                 {item.h1 ?? item.company}
               </h1>
             </div>

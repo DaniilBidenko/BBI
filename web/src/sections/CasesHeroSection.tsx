@@ -44,14 +44,14 @@ export function CasesHeroSection({
           </Link>
           <span className="bbi-work-breadcrumb-pill">{breadcrumbCurrent}</span>
         </div>
-        <div className="max-w-4xl space-y-7 md:space-y-9 lg:space-y-10">
-          <span className="block text-sm uppercase tracking-[0.34em] text-[rgba(200,158,88,0.96)]">
+        <div className="max-w-4xl space-y-6 sm:space-y-7 md:space-y-9 lg:space-y-10">
+          <span className="block text-[11px] uppercase tracking-[0.28em] text-[rgba(200,158,88,0.96)] sm:text-sm sm:tracking-[0.34em]">
             {eyebrow}
           </span>
-          <h1 className="max-w-none text-[52px] font-semibold uppercase leading-[1.1] tracking-tight text-white sm:text-[58px] sm:leading-[1.09] md:text-[68px] md:leading-[1.08] lg:text-[76px] lg:leading-[1.07]">
+          <h1 className="max-w-none break-words text-[34px] font-semibold uppercase leading-[1.12] tracking-tight text-white sm:text-[46px] sm:leading-[1.1] md:text-[60px] md:leading-[1.08] lg:text-[72px] lg:leading-[1.07]">
             {title}
           </h1>
-          <p className="max-w-[40ch] text-[16px] leading-[1.5] text-white/90 md:max-w-[48ch] md:text-[17px] md:leading-[1.52] lg:text-[18px] lg:leading-[1.55]">
+          <p className="max-w-[40ch] break-words text-[15px] leading-[1.55] text-white/90 sm:text-[16px] md:max-w-[48ch] md:text-[17px] md:leading-[1.52] lg:text-[18px] lg:leading-[1.55]">
             {description}
           </p>
         </div>

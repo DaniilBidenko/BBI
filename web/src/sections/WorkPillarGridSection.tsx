@@ -73,12 +73,12 @@ function PillarGridCard({
       >
         <div className="icp-card__content">
           <div className="icp-card__title">
-            <h3 className="text-[1.0625rem] font-semibold leading-[1.14] tracking-tight text-white/90 sm:text-[1.1875rem] md:text-[1.25rem] lg:text-[1.3125rem]">
+            <h3 className="break-words text-[1.0625rem] font-semibold leading-[1.14] tracking-tight text-white/90 sm:text-[1.1875rem] md:text-[1.25rem] lg:text-[1.3125rem]">
               {pillar.title}
             </h3>
           </div>
           <div className="icp-card__body mt-1.5 text-[0.875rem] leading-[1.52] text-white/78 sm:mt-2 sm:text-[0.9375rem] sm:leading-[1.48] md:text-[0.96875rem] md:leading-[1.48] lg:text-[1rem]">
-            <p className="line-clamp-[5] sm:line-clamp-4 md:line-clamp-[5] xl:line-clamp-4">{body}</p>
+            <p className="line-clamp-[5] break-words sm:line-clamp-4 md:line-clamp-[5] xl:line-clamp-4">{body}</p>
           </div>
           <div className="icp-card__footer">
             <span className={detailsTextClass[field]}>{`${detailsLabel} >>`}</span>

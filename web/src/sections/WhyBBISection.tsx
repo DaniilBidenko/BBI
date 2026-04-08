@@ -21,27 +21,23 @@ const PROHIBITION_ICON = (
   </svg>
 );
 
-/** Щит: слева пусто, справа заливка, контур целиком (увеличенный) */
-const SHIELD_ICON = (
-  <svg viewBox="0 0 24 24" className="h-[28px] w-[28px]" aria-hidden>
-    <defs>
-      <clipPath id="whyBbiShieldRightHalf">
-        <rect x="12" y="0" width="12" height="24" />
-      </clipPath>
-    </defs>
-    <path
-      d="M12 3.5l7.2 2.7v5.8c0 4.2-2.7 7.9-7.2 9.4-4.5-1.5-7.2-5.2-7.2-9.4V6.2L12 3.5z"
-      fill="currentColor"
-      fillOpacity={0.92}
-      clipPath="url(#whyBbiShieldRightHalf)"
-    />
-    <path
-      d="M12 3.5l7.2 2.7v5.8c0 4.2-2.7 7.9-7.2 9.4-4.5-1.5-7.2-5.2-7.2-9.4V6.2L12 3.5z"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinejoin="round"
-    />
+/** Рукопожатие (Lucide handshake, stroke) */
+const HANDSHAKE_ICON = (
+  <svg
+    viewBox="0 0 24 24"
+    className="h-[28px] w-[28px]"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden
+  >
+    <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+    <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+    <path d="m21 3 1 11h-2" />
+    <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+    <path d="M3 4h8" />
   </svg>
 );
 
@@ -71,50 +67,50 @@ export function WhyBBISection({
     <section className="relative py-10 md:py-12">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[90%]">
-        <header className="mb-6 text-center md:mb-8">
+        <header className="mb-7 text-center md:mb-10">
           {eyebrow && (
             <span className="mb-3 inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-[var(--bbi-red)]">
               {eyebrow}
             </span>
           )}
-          <h2 className="text-[34px] font-semibold uppercase leading-[0.98] text-white md:text-[44px]">
+          <h2 className="break-words text-[26px] font-semibold uppercase leading-[1.08] text-white sm:text-[32px] md:text-[42px]">
             {title}
           </h2>
           {subtitle && (
-            <p className="mx-auto mt-3 max-w-4xl text-[13px] font-light uppercase leading-[1.2] tracking-[0.12em] text-[rgba(212,168,52,0.88)] md:text-[15px]">
+            <p className="mx-auto mt-4 max-w-4xl text-[12px] font-light uppercase leading-[1.35] tracking-[0.1em] text-[rgba(212,168,52,0.88)] md:text-[14px]">
               {subtitle}
             </p>
           )}
         </header>
 
         {useNewLayout ? (
-          <div className="space-y-4">
+          <div className="space-y-5">
             <div className="grid gap-4 sm:grid-cols-2 lg:gap-5">
               {topCards.map((card) => (
                 <article
                   key={card.label}
-                  className="bbi-cateye-red group relative flex min-h-0 flex-col overflow-hidden rounded-[24px] border border-white/11 p-5 transition-colors hover:border-white/16 md:rounded-[28px]"
+                  className="bbi-cateye-red group relative flex min-h-0 flex-col overflow-hidden rounded-[22px] border border-white/11 p-4 transition-colors hover:border-white/16 md:rounded-[26px] md:p-5"
                 >
                   <div className="flex h-full flex-col">
-                    <div className="mb-3 flex items-center gap-3">
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--bbi-red)]/25 bg-black/25 text-[var(--bbi-red)] shadow-[inset_0_1px_0_rgba(255,75,90,0.35)]">
+                    <div className="mb-3 flex items-center gap-2.5 md:gap-3">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--bbi-red)]/25 bg-black/25 text-[var(--bbi-red)] shadow-[inset_0_1px_0_rgba(255,75,90,0.35)] md:h-10 md:w-10">
                         {PROHIBITION_ICON}
                       </span>
-                      <h3 className="text-[34px] font-semibold leading-[1.05] text-white md:text-[38px]">
+                      <h3 className="break-words text-[30px] font-semibold leading-[1.08] text-white sm:text-[34px] md:text-[40px]">
                         {card.label}
                       </h3>
                     </div>
-                    <p className="mb-4 text-[15px] leading-[1.5] text-white/74">
+                    <p className="mb-4 text-[14px] leading-[1.55] text-white/74 md:text-[15px]">
                       {card.intro}
                     </p>
                     {card.outcomeBullets.length > 0 && (
-                      <div className="bbi-cateye-red-inset mt-auto rounded-[18px] p-3.5 md:p-4">
-                        <span className="text-[22px] font-semibold leading-tight text-white md:text-[26px]">
+                      <div className="bbi-cateye-red-inset mt-auto rounded-[16px] p-3 md:p-4">
+                        <span className="break-words text-[17px] font-semibold leading-tight text-white sm:text-[19px] md:text-[24px]">
                           Что происходит в итоге
                         </span>
-                        <ul className="mt-3 space-y-2">
+                        <ul className="mt-2.5 space-y-2">
                           {card.outcomeBullets.map((b, i) => (
-                            <li key={i} className="flex gap-2 text-[13px] leading-snug text-white/70">
+                            <li key={i} className="flex gap-2 text-[12px] leading-snug text-white/72 md:text-[13px]">
                               <span className="text-[var(--bbi-red)]">{LIST_ARROW_DOWN_RIGHT}</span>
                               {b}
                             </li>
@@ -128,20 +124,20 @@ export function WhyBBISection({
             </div>
 
             {wideCard && (
-              <article className="bbi-cateye-gold relative overflow-hidden rounded-[24px] border border-[rgba(218,175,65,0.26)] md:rounded-[28px]">
-                <div className="relative p-5 md:p-6">
+              <article className="bbi-cateye-gold relative overflow-hidden rounded-[22px] border border-[rgba(218,175,65,0.26)] md:rounded-[26px]">
+                <div className="relative p-4 md:p-6">
                   <div className="flex gap-4 md:gap-5">
-                    <span className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-[14px] border border-[rgba(218,175,65,0.28)] bg-black/22 text-[rgba(225,180,72,0.92)] shadow-[inset_0_1px_0_rgba(218,175,65,0.28)]">
-                      {SHIELD_ICON}
+                    <span className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[12px] border border-[rgba(218,175,65,0.28)] bg-black/22 text-[rgba(225,180,72,0.92)] shadow-[inset_0_1px_0_rgba(218,175,65,0.28)] md:h-[52px] md:w-[52px] md:rounded-[14px]">
+                      {HANDSHAKE_ICON}
                     </span>
                     <div className="min-w-0 flex-1">
                       <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[rgba(232,182,72,0.92)]">
                         Наш подход
                       </span>
-                      <h3 className="mt-0.5 text-[34px] font-semibold leading-[1.05] text-white md:text-[40px]">
+                      <h3 className="mt-1 break-words text-[30px] font-semibold leading-[1.08] text-white sm:text-[34px] md:text-[42px]">
                         {wideCard.label}
                       </h3>
-                      <p className="mt-3 max-w-none text-[15px] leading-[1.62] text-white/78 md:mt-4 md:text-[16px]">
+                      <p className="mt-3 max-w-none text-[14px] leading-[1.65] text-white/78 md:mt-4 md:text-[16px]">
                         {wideCard.intro}
                       </p>
                     </div>

@@ -16,7 +16,7 @@ const READ_MORE_ARROW = (
 
 function CaseIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-[var(--bbi-red)]">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 text-[var(--bbi-red)] md:h-8 md:w-8">
       <circle cx="6" cy="7" r="2" />
       <circle cx="12" cy="7" r="2" />
       <circle cx="18" cy="7" r="2" />
@@ -49,7 +49,7 @@ export function CasesSection({
     <section className="relative py-16 md:py-20">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[90%]">
-        <h2 className="mb-8 text-center text-[42px] font-semibold uppercase text-white md:mb-10 md:text-[50px]">
+        <h2 className="mb-7 break-words text-center text-[30px] font-semibold uppercase text-white sm:text-[38px] md:mb-10 md:text-[50px]">
           {title}
         </h2>
 
@@ -57,37 +57,37 @@ export function CasesSection({
           {featuredCase && (
             <Link
               href={`/${locale}/cases/${featuredCase.slug}`}
-              className="bbi-case-shell-cateye group relative col-span-1 flex flex-col overflow-hidden rounded-[32px] transition-colors hover:border-white/18 lg:col-span-4"
+              className="bbi-case-shell-cateye group relative col-span-1 flex flex-col overflow-hidden rounded-[26px] transition-colors hover:border-white/18 md:rounded-[30px] lg:col-span-4"
             >
-              <div className="flex flex-1 flex-col gap-5 p-6 md:p-8">
-                <div className="flex items-start gap-4">
-                  <div className="bbi-case-icon-cateye flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-2xl text-white/90">
+              <div className="flex flex-1 flex-col gap-4 p-4 md:gap-5 md:p-8">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="bbi-case-icon-cateye flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-xl text-white/90 md:h-[56px] md:w-[56px] md:rounded-2xl">
                     <CaseIcon />
                   </div>
-                  <div className="pt-1">
-                    <span className="text-[12px] font-medium uppercase tracking-[0.2em] text-[rgba(255,43,68,1)]">
+                  <div className="pt-0.5 md:pt-1">
+                    <span className="text-[11px] font-medium uppercase tracking-[0.16em] text-[rgba(255,43,68,1)] md:text-[12px] md:tracking-[0.2em]">
                       {featuredCase.industry}
                     </span>
-                    <h3 className="mt-1 text-[46px] font-semibold leading-[1.04] text-white md:text-[50px]">
+                    <h3 className="mt-1 break-words text-[28px] font-semibold leading-[1.06] text-white sm:text-[34px] md:text-[50px]">
                       {featuredCase.company}
                     </h3>
                   </div>
                 </div>
-                <p className="max-w-5xl text-[15px] leading-[1.48] text-white/78 md:text-[16px]">
+                <p className="max-w-5xl break-words text-[14px] leading-[1.52] text-white/78 md:text-[16px]">
                   {featuredCase.excerpt}
                 </p>
-                <div className="mt-2 flex flex-wrap gap-2.5">
+                <div className="mt-1 flex flex-wrap gap-2">
                   {featuredCase.tags.slice(0, 4).map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-white/11 bg-white/[0.045] px-4 py-1.5 text-[13px] text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+                      className="rounded-full border border-white/11 bg-white/[0.045] px-3 py-1 text-[12px] text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] md:px-4 md:py-1.5 md:text-[13px]"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="mt-1">
-                  <span className="bbi-cateye-details bbi-cateye-details--neutral pointer-events-none inline-flex w-fit max-w-full items-center gap-2 text-[14px] font-medium leading-none text-white/86 transition group-hover:text-white/95">
+                <div className="mt-2">
+                  <span className="bbi-cateye-details bbi-cateye-details--neutral pointer-events-none inline-flex w-fit max-w-full items-center gap-2 text-[13px] font-medium leading-none text-white/86 transition group-hover:text-white/95 md:text-[14px]">
                     <span className="bbi-cateye-details__icon" aria-hidden>
                       {READ_MORE_ARROW}
                     </span>
@@ -99,7 +99,7 @@ export function CasesSection({
           )}
         </div>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-7 flex justify-center md:mt-8">
           <Link href={`/${locale}/cases`} className="bbi-cases-all-pill group">
             {casesLabel} &gt;&gt;
           </Link>

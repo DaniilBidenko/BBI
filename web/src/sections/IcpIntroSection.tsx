@@ -37,7 +37,7 @@ export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabe
         <div className="mx-auto w-full max-w-[1320px]">
           <article className="bbi-icp-intro-shell overflow-hidden rounded-[32px] px-4 py-5 md:px-6 md:py-6">
             <div className="relative mb-7 flex flex-col items-center gap-1.5 text-center md:mb-8">
-              <h2 className="text-[36px] font-semibold uppercase leading-none tracking-[0.01em] text-white md:text-[50px]">
+              <h2 className="break-words text-[28px] font-semibold uppercase leading-[1.05] tracking-[0.01em] text-white sm:text-[34px] md:text-[50px]">
                 {title}
               </h2>
               <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[rgba(212,168,52,0.88)] md:text-xs">
@@ -45,34 +45,35 @@ export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabe
               </span>
             </div>
 
-            <div className="relative grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-3 md:gap-4">
+            <div className="relative grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))] [grid-auto-rows:1fr]">
               {segments.map((segment, i) => (
                 <div
                   key={i}
-                  className="bbi-icp-intro-card relative flex min-h-[260px] min-w-0 flex-col overflow-hidden rounded-[24px] px-4 py-5 text-center md:min-h-[280px] md:px-5 md:py-6"
+                  className="bbi-icp-intro-card flex h-full min-w-0 flex-col gap-3 overflow-hidden rounded-[24px] px-4 py-4 text-left md:px-5 md:py-5"
                 >
-                <div className="mb-3 flex h-9 w-9 items-center justify-center self-center text-white/95 [&>svg]:h-6 [&>svg]:w-6">
-                  {TARGET_ICON}
-                </div>
-                <h3 className="mb-3 text-[26px] font-semibold leading-[1.06] tracking-tight text-white md:text-[32px]">
-                  {segment.title}
-                </h3>
-                <p className="mx-auto max-w-[31ch] text-[15px] leading-[1.5] text-white/74 md:text-[16px]">
-                  {segment.details ?? segment.description}
-                </p>
-                {segment.metrics && (
-                  <p className="mt-3 text-[14px] font-semibold text-white/68 md:text-[15px]">
-                    {segment.metrics}
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/[0.04] text-white/92 [&>svg]:h-5 [&>svg]:w-5">
+                    {TARGET_ICON}
+                  </div>
+                  <h3 className="text-balance text-[18px] font-semibold leading-[1.18] tracking-tight text-white md:text-[20px]">
+                    {segment.title}
+                  </h3>
+                  <p className="w-full whitespace-pre-line text-[13px] leading-[1.62] text-white/78 md:text-[14px]">
+                    {segment.details ?? segment.description}
                   </p>
-                )}
-                <div className="mt-auto w-full pt-4">
-                  <div className="bbi-icp-intro-pill mx-auto max-w-[300px] rounded-full px-4 py-2.5">
-                    <p className="text-center text-[12px] font-medium leading-[1.25] text-[#1c1b1b] md:text-[13px]">
-                      «{segment.pain}»
+                  {segment.metrics && (
+                    <p className="text-[13px] font-semibold text-white/70 md:text-[14px]">
+                      {segment.metrics}
                     </p>
+                  )}
+                  <div className="mt-auto w-full pt-3">
+                    <div className="mb-3 h-px w-full bg-gradient-to-r from-transparent via-white/14 to-transparent" />
+                    <div className="bbi-icp-intro-pill w-full rounded-2xl px-3 py-2.5">
+                      <p className="text-center text-[12px] font-medium leading-snug text-[#1c1b1b]">
+                        {segment.pain}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
               ))}
             </div>
           </article>

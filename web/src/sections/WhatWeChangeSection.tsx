@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Container } from "@/components/Container";
 
-type Pillar = { title: string; items: string[] };
+type Pillar = { title: string; subtitle?: string; items: string[] };
 
 // Operations: grid/flow | Marketing: funnel | Sales: chart up | Finance: currency | HR: person | Legal: shield
 const PILLAR_ICONS: Record<number, ReactNode> = {
@@ -59,7 +59,7 @@ export function WhatWeChangeSection({
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-[var(--bbi-red)]">
             {eyebrow}
           </span>
-          <h2 className="text-center text-[42px] font-semibold uppercase text-white md:text-[50px]">
+          <h2 className="break-words text-center text-[32px] font-semibold uppercase text-white sm:text-[40px] md:text-[50px]">
             {title}
           </h2>
         </div>
@@ -81,15 +81,18 @@ export function WhatWeChangeSection({
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--bbi-red)]/10 text-[var(--bbi-red)] [&>svg]:h-4 [&>svg]:w-4">
                     {Icon}
                   </span>
-                  <h3 className="text-lg font-semibold text-[var(--bbi-text)]">
+                  <h3 className="break-words text-lg font-semibold text-[var(--bbi-text)]">
                     {pillar.title}
                   </h3>
                 </div>
+                {pillar.subtitle && (
+                  <p className="text-[13px] font-medium leading-snug text-white/78 md:text-sm">{pillar.subtitle}</p>
+                )}
                 <ul className="space-y-2 text-sm leading-[1.7] text-white/72">
                   {pillar.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--bbi-red)]/80" />
-                      <span>{item}</span>
+                      <span className="break-words">{item}</span>
                     </li>
                   ))}
                 </ul>

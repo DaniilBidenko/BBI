@@ -37,15 +37,19 @@ export function WorkFormatSection({
         <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_50%,rgba(0,0,0,0.08)_28%,rgba(0,0,0,0.46)_72%,#000_100%)]" />
       </div>
       <Container className="relative mx-auto space-y-12 lg:w-[96%]">
-          <div className="mx-auto max-w-5xl space-y-5 text-center">
-            <h2 className="text-[34px] font-semibold uppercase leading-[0.98] text-white md:text-[40px]">{title}</h2>
-            <p className="text-[18px] uppercase tracking-[0.14em] text-[rgba(255,196,58,0.98)] md:text-[20px]">{description}</p>
+        <div className="mx-auto max-w-5xl space-y-5 text-center">
+          <h2 className="break-words text-[28px] font-semibold uppercase leading-[1.05] text-white sm:text-[34px] md:text-[40px]">
+            {title}
+          </h2>
+          <p className="break-words text-[12px] uppercase tracking-[0.14em] text-[rgba(255,196,58,0.98)] sm:text-[14px] md:text-[20px]">
+            {description}
+          </p>
           </div>
           <div className="mx-auto w-full max-w-5xl space-y-12">
             {zones.map((zone) => (
               <div
                 key={zone.label}
-                className="bbi-card relative min-h-[146px] rounded-[22px] border border-white/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.03)_38%,rgba(10,12,17,0.78)_100%)] px-7 pb-7 pt-9 backdrop-blur-[1px]"
+                className="bbi-card relative min-h-[146px] rounded-[22px] border border-white/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.03)_38%,rgba(10,12,17,0.78)_100%)] px-5 pb-6 pt-8 backdrop-blur-[1px] sm:px-7 sm:pb-7 sm:pt-9"
               >
                 <div className="absolute -top-8 left-1/2 z-10 -translate-x-1/2 rounded-[18px] border border-white/16 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.02)_42%,rgba(14,16,22,0.92)_100%)] p-2.5 shadow-[0_12px_24px_rgba(0,0,0,0.35)]">
                   <span
@@ -59,7 +63,7 @@ export function WorkFormatSection({
                     {zone.label}
                   </div>
                 </div>
-                <p className="mt-3 text-center text-[13px] text-white/72 md:text-[14px]">
+                <p className="mt-3 break-words text-center text-[13px] text-white/72 md:text-[14px]">
                   {zone.description}
                 </p>
               </div>

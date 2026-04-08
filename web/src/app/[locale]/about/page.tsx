@@ -62,14 +62,14 @@ export default async function AboutPage({ params }: LocalePageProps) {
           <div className="rounded-[28px] bg-[var(--bbi-panel-bg)] p-5 shadow-[0_18px_44px_rgba(0,0,0,0.45)] md:p-8">
             <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:gap-8 xl:gap-10">
             <div className="space-y-7">
-              <h1 className="text-[52px] font-semibold uppercase leading-[0.94] tracking-tight text-white sm:text-[58px] md:text-[64px] lg:text-[68px]">
+              <h1 className="break-words text-[34px] font-semibold uppercase leading-[1.05] tracking-tight text-white sm:text-[44px] md:text-[56px] lg:text-[68px]">
                 {who.title}
               </h1>
-              <p className="max-w-[56ch] text-[18px] leading-[1.42] text-white/90 md:text-[20px] lg:text-[21px]">
+              <p className="max-w-[56ch] break-words text-[16px] leading-[1.5] text-white/90 sm:text-[18px] md:text-[20px] lg:text-[21px]">
                 {who.text}
               </p>
-              <div className="w-fit rounded-[22px] border border-[rgba(255,43,68,0.82)] bg-[rgba(255,43,68,0.06)] px-6 py-4 text-[17px] leading-[1.38] text-[rgba(255,43,68,1)] md:px-7 md:py-5 md:text-[19px] lg:text-[20px]">
-                <p className="max-w-[50ch]">{who.emphasis}</p>
+              <div className="w-fit rounded-[22px] border border-[rgba(255,43,68,0.82)] bg-[rgba(255,43,68,0.06)] px-5 py-4 text-[15px] leading-[1.38] text-[rgba(255,43,68,1)] sm:px-6 sm:text-[17px] md:px-7 md:py-5 md:text-[19px] lg:text-[20px]">
+                <p className="max-w-[50ch] break-words">{who.emphasis}</p>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-[34px] border border-white/12 bg-black/40 shadow-[0_24px_64px_rgba(0,0,0,0.65)]">
@@ -99,7 +99,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
                 </div>
                 <div>
                   <span className="text-[11px] uppercase tracking-[0.2em] text-[var(--bbi-red)]/95">BBI</span>
-                  <h2 className="mt-2 whitespace-nowrap text-[18px] font-semibold leading-[1.08] tracking-[-0.01em] text-white sm:text-[22px] md:text-[28px]">
+                  <h2 className="mt-2 break-words text-[18px] font-semibold leading-[1.08] tracking-[-0.01em] text-white sm:text-[22px] md:text-[28px]">
                     Bold Brands International
                   </h2>
                   <p className="mt-3 max-w-md text-[14px] leading-[1.4] text-white/84 sm:text-[15px] md:text-[16px]">
@@ -116,7 +116,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
 
       <section className="relative pb-16 pt-10 md:pb-16 md:pt-12">
         <Container className="relative lg:w-[90%]">
-          <h2 className="mb-8 text-[40px] font-semibold uppercase leading-[0.98] text-white md:mb-10 md:text-[50px]">
+          <h2 className="mb-8 break-words text-[30px] font-semibold uppercase leading-[1.05] text-white sm:text-[36px] md:mb-10 md:text-[50px]">
             {principles.title}
           </h2>
           <div className="grid gap-5 md:grid-cols-2 lg:gap-6">
@@ -128,7 +128,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
               >
                 <div className="relative flex items-center gap-5">
                 <IconBadge index={index} />
-                <p className="max-w-[28ch] text-[16px] leading-[1.4] text-white/86 md:text-[17px]">
+                <p className="max-w-[28ch] break-words text-[16px] leading-[1.4] text-white/86 md:text-[17px]">
                   {item.text}
                 </p>
                 </div>
@@ -140,7 +140,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
 
       <section className="relative py-12 md:py-16">
         <Container className="relative lg:w-[90%]">
-          <h2 className="mb-8 text-[38px] font-semibold uppercase leading-[0.98] text-white md:mb-10 md:text-[50px]">
+          <h2 className="mb-8 break-words text-[30px] font-semibold uppercase leading-[1.05] text-white sm:text-[36px] md:mb-10 md:text-[50px]">
             {manifesto.title}
           </h2>
           <div className="grid auto-rows-fr gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4">
@@ -150,7 +150,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
                 data-mm-i={index % 5}
                 className="bbi-about-manifesto-pill flex w-fit max-w-full min-h-0 items-center justify-self-start rounded-full px-4 py-2.5 text-white md:px-5 md:py-3"
               >
-                <p className="max-w-[32ch] text-[18px] font-normal leading-snug text-white/92 md:text-[20px]">
+                <p className="max-w-[32ch] break-words text-[16px] font-normal leading-snug text-white/92 sm:text-[18px] md:text-[20px]">
                   {item.text}
                 </p>
               </div>
@@ -161,7 +161,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
 
       <section className="relative py-12 md:py-16">
         <Container className="relative lg:w-[90%]">
-          <h2 className="mb-8 text-[38px] font-semibold uppercase leading-[0.98] text-white md:mb-10 md:text-[50px]">
+          <h2 className="mb-8 break-words text-[30px] font-semibold uppercase leading-[1.05] text-white sm:text-[36px] md:mb-10 md:text-[50px]">
             {team.title}
           </h2>
           <div className="relative md:px-12">
@@ -192,7 +192,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
                       />
                     </div>
                     <div>
-                      <div className="text-[18px] font-semibold leading-[1.1] text-white md:text-[20px]">
+                      <div className="break-words text-[16px] font-semibold leading-[1.1] text-white sm:text-[18px] md:text-[20px]">
                         {member.name}
                       </div>
                       <div className="mt-2 text-[14px] font-medium uppercase tracking-[0.12em] text-[var(--bbi-red)]">
@@ -200,7 +200,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
                       </div>
                     </div>
                   </div>
-                  <p className="relative mt-3 max-w-[24ch] text-[16px] leading-[1.35] text-white/86 md:text-[17px]">
+                  <p className="relative mt-3 max-w-[24ch] break-words text-[15px] leading-[1.35] text-white/86 sm:text-[16px] md:text-[17px]">
                     {member.note}
                   </p>
                 </article>
@@ -214,29 +214,29 @@ export default async function AboutPage({ params }: LocalePageProps) {
         <Container className="relative lg:w-[90%]">
           <div className="bbi-about-cta-shell relative overflow-hidden rounded-[30px] p-6 md:p-8 lg:p-10">
             <div className="relative space-y-5">
-              <h2 className="max-w-3xl text-[34px] font-semibold uppercase leading-[0.98] text-white md:text-[48px]">
+              <h2 className="max-w-3xl break-words text-[28px] font-semibold uppercase leading-[1.05] text-white sm:text-[34px] md:text-[48px]">
                 {cta.title}
               </h2>
-              <p className="text-[13px] uppercase tracking-[0.12em] text-[rgba(255,192,7,1)] md:text-[14px]">
+              <p className="break-words text-[11px] uppercase tracking-[0.12em] text-[rgba(255,192,7,1)] sm:text-[12px] md:text-[14px]">
                 {cta.description}
               </p>
             </div>
             <form className="relative mt-6 grid gap-5 md:mt-7">
               <input
-                className="h-12 rounded-full border border-white/14 bg-[#07090d]/95 px-5 text-[18px] text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/45 md:h-14 md:text-[19px]"
+                className="h-12 rounded-full border border-white/14 bg-[#07090d]/95 px-5 text-[16px] text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/45 sm:text-[18px] md:h-14 md:text-[19px]"
                 placeholder={cta.form.name}
               />
               <input
-                className="h-12 rounded-full border border-white/14 bg-[#07090d]/95 px-5 text-[18px] text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/45 md:h-14 md:text-[19px]"
+                className="h-12 rounded-full border border-white/14 bg-[#07090d]/95 px-5 text-[16px] text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/45 sm:text-[18px] md:h-14 md:text-[19px]"
                 placeholder={cta.form.phone}
               />
               <textarea
-                className="min-h-[120px] rounded-[24px] border border-white/14 bg-[#07090d]/95 px-5 py-4 text-[18px] text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/45 md:min-h-[150px] md:text-[19px]"
+                className="min-h-[120px] rounded-[14px] border border-white/14 bg-[#07090d]/95 px-5 py-4 text-[16px] text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/45 sm:text-[18px] md:min-h-[150px] md:rounded-[16px] md:text-[19px]"
                 placeholder={cta.form.message}
               />
               <button
                 type="button"
-                className="inline-flex h-12 w-fit items-center justify-center rounded-full bg-[var(--bbi-red)] px-7 text-[17px] font-medium text-white shadow-[0_10px_24px_rgba(255,43,68,0.35)] transition hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--bbi-red)] md:h-14 md:px-8 md:text-[18px]"
+                className="inline-flex h-12 w-fit items-center justify-center rounded-full bg-[var(--bbi-red)] px-6 text-[15px] font-medium text-white shadow-[0_10px_24px_rgba(255,43,68,0.35)] transition hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--bbi-red)] sm:px-7 sm:text-[17px] md:h-14 md:px-8 md:text-[18px]"
               >
                 {cta.form.submit}
               </button>

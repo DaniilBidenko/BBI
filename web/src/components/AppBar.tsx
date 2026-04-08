@@ -52,13 +52,23 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
     return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsOpen(false);
+      setIsLocaleOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
-      className={`bbi-appbar-cateye relative z-30 ${isCasesListPage ? "bbi-appbar-cateye--over-photo" : "backdrop-blur-[10px]"}`}
+      className={`bbi-appbar-cateye fixed inset-x-0 top-0 z-30 ${isCasesListPage ? "bbi-appbar-cateye--over-photo" : "backdrop-blur-[10px]"}`}
     >
       <Container className="flex items-center justify-between py-2.5">
         <Link href={withLocale(locale, "/")} className="flex items-center" aria-label="Bold Brands">
-          <span className="logo-wordmark !h-[15px] !w-[86px]" role="img" aria-hidden />
+          <span className="logo-wordmark !h-[30px] !w-[172px]" role="img" aria-hidden />
         </Link>
         <nav className="hidden items-center gap-5 xl:gap-6 lg:flex">
           {navItems.map((item) => {
@@ -132,11 +142,20 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
             type="button"
             className="flex h-8 w-8 items-center justify-center rounded-full text-white/85 transition hover:text-white"
             aria-label="Search"
-            onClick={() => setIsOpen(true)}
+            onClick={() => setIsOpen((prev) => !prev)}
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-3.5 w-3.5" aria-hidden>
-              <circle cx="11" cy="11" r="6.5" />
-              <path d="M16 16l5 5" strokeLinecap="round" />
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-4 w-4"
+              aria-hidden
+            >
+              <circle cx="11" cy="11" r="6.2" />
+              <path d="M20 20l-4.1-4.1" />
             </svg>
           </button>
           <button

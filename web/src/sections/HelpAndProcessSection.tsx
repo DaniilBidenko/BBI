@@ -26,15 +26,15 @@ const LIST_ARROW = (
 );
 
 const STAGE_ICONS = [
-  <svg key="0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-    <circle cx="11" cy="11" r="8" />
-    <path d="M21 21l-4.35-4.35" />
+  <svg key="0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+    <circle cx="11" cy="11" r="6.2" />
+    <path d="M20 20l-4.1-4.1" />
   </svg>,
   <svg key="1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
   </svg>,
-  <svg key="2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-    <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+  <svg key="2" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+    <path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.03-.66-.08-.98l2.11-1.65a.5.5 0 00.12-.64l-2-3.46a.5.5 0 00-.6-.22l-2.49 1c-.51-.42-1.08-.75-1.69-.98l-.38-2.65A.5.5 0 0014 2h-4a.5.5 0 00-.49.42l-.38 2.65c-.61.23-1.18.56-1.69.98l-2.49-1a.5.5 0 00-.6.22l-2 3.46a.5.5 0 00.12.64l2.1 1.65c-.04.32-.07.65-.07.98s.03.66.08.98l-2.11 1.65a.5.5 0 00-.12.64l2 3.46c.13.22.39.31.62.22l2.49-1c.51.42 1.08.75 1.69.98l.38 2.65c.05.24.25.42.49.42h4c.24 0 .44-.18.49-.42l.38-2.65c.61-.23 1.18-.56 1.69-.98l2.49 1c.23.09.49 0 .62-.22l2-3.46a.5.5 0 00-.12-.64l-2.12-1.66zM12 15.5A3.5 3.5 0 1112 8a3.5 3.5 0 010 7.5z" />
   </svg>,
   <svg key="3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
     <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
@@ -63,7 +63,7 @@ export function HelpAndProcessSection({
                   {label}
                 </span>
               )}
-              <h2 className="max-w-3xl text-[36px] font-semibold uppercase leading-none tracking-[0.01em] text-white md:text-[50px]">
+              <h2 className="max-w-3xl break-words text-[28px] font-semibold uppercase leading-[1.05] tracking-[0.01em] text-white sm:text-[34px] md:text-[50px]">
                 {title}
               </h2>
               {description && (

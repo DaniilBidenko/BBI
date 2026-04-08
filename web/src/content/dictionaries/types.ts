@@ -12,6 +12,12 @@ export type HomeCard = {
   symptoms?: string[];
   /** Намёк на решение — показывается в модалке */
   solutionHint?: string;
+  /** Модалка: вводный текст вместо заголовка карточки */
+  modalLead?: string;
+  partnershipCriteriaLabel?: string;
+  partnershipCriteria?: string[];
+  partnershipResultsLabel?: string;
+  partnershipResults?: string[];
 };
 
 export type HomeStep = {
@@ -292,7 +298,7 @@ export type Dictionary = {
     whatWeChange: {
       eyebrow: string;
       title: string;
-      pillars: { title: string; items: string[] }[];
+      pillars: { title: string; subtitle?: string; items: string[] }[];
     };
     whatYouGet: {
       eyebrow: string;

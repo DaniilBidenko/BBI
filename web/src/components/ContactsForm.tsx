@@ -151,7 +151,7 @@ export function ContactsForm({
           rows={4}
           required
           placeholder={contacts.form.request}
-          className={`${fieldBase} min-h-[150px] rounded-[28px] py-4 leading-[1.5] resize-y`}
+          className={`${fieldBase} min-h-[150px] rounded-[14px] py-4 leading-[1.5] resize-y md:rounded-[16px]`}
         />
       </div>
 

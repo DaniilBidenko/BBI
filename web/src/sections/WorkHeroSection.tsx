@@ -83,20 +83,20 @@ export function WorkHeroSection({
         <div className="grid gap-8 lg:grid-cols-[minmax(0,2.35fr)_minmax(0,1fr)] lg:items-start lg:gap-7 xl:gap-8">
           <div className="min-w-0 space-y-6 lg:pr-0">
             <span className="text-sm uppercase tracking-[0.34em] text-[#f3c546]">{eyebrow}</span>
-            <h1 className="max-w-none text-[52px] font-semibold uppercase leading-[0.98] tracking-tight text-white sm:text-[60px] md:text-[68px] lg:text-[72px] xl:text-[76px]">
+            <h1 className="max-w-none break-words text-[34px] font-semibold uppercase leading-[1.05] tracking-tight text-white sm:text-[46px] md:text-[58px] lg:text-[68px] xl:text-[72px]">
               {title}
             </h1>
-            <p className="max-w-[40ch] text-[16px] leading-[1.34] text-white/90 md:max-w-[48ch] md:text-[17px] lg:max-w-[58ch] lg:text-[18px]">
+            <p className="max-w-[40ch] break-words text-[15px] leading-[1.5] text-white/90 sm:text-[16px] md:max-w-[48ch] md:text-[17px] lg:max-w-[58ch] lg:text-[18px]">
               {description}
             </p>
-            <div className="flex items-center gap-4 pt-2 whitespace-nowrap">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <Link
                 href={ctaHref}
                 className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--bbi-red)] px-6 text-[12px] font-semibold uppercase tracking-[0.04em] text-white transition hover:opacity-90"
               >
                 {ctaLabel}
               </Link>
-              <span className="text-[12px] uppercase tracking-[0.2em] text-white/38">
+              <span className="text-[11px] uppercase tracking-[0.18em] text-white/42 sm:text-[12px] sm:tracking-[0.2em]">
                 {ctaHint}
               </span>
             </div>

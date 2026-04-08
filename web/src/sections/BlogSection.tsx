@@ -119,7 +119,7 @@ function BlogCard({
             {post.category}
           </span>
         </div>
-        <h3 className="text-[34px] font-semibold leading-[1.06] text-white line-clamp-2">
+        <h3 className="text-[1.35rem] font-semibold leading-[1.12] text-white line-clamp-2 sm:text-[1.5rem] md:text-[1.125rem] lg:text-[1.25rem] xl:text-[1.35rem]">
           {post.title}
         </h3>
         <p className="line-clamp-2 text-[14px] leading-[1.5] text-white/76">
@@ -194,8 +194,8 @@ export function BlogSection({
     <section className="relative py-16 md:py-20">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[90%]">
-        <div className="mb-8 flex items-center justify-between gap-4 md:mb-10">
-          <h2 className="text-[44px] font-semibold uppercase text-white md:text-[50px]">
+        <div className="mb-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between md:mb-10">
+          <h2 className="break-words text-[30px] font-semibold uppercase text-white sm:text-[38px] md:text-[50px]">
             {title}
           </h2>
           <div className="flex shrink-0 gap-2">
@@ -229,7 +229,10 @@ export function BlogSection({
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {loopPosts.map((post, i) => (
-            <div key={`${post.slug}-${i}`} className="w-[min(85vw,420px)] shrink-0 sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-32px)/2)]">
+            <div
+              key={`${post.slug}-${i}`}
+              className="w-[min(85vw,420px)] shrink-0 md:w-[calc((100%-3rem)/3)] lg:w-[calc((100%-4rem)/3)]"
+            >
               <BlogCard post={post} locale={locale} readMore={readMore} />
             </div>
           ))}

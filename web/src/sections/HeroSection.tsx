@@ -23,12 +23,20 @@ export function HeroSection({
   const formattedTitle = title
     .replace("Строим бизнес, ", "Строим бизнес,\n")
     .replace("который работает ", "который работает\n")
-    .replace("не хаотично, ", "не хаотично,\n")
-    .replace("а как управляемая ", "а как управляемая\n")
-    .replace("и масштабируемая ", "и масштабируемая\n");
+    .replace(
+      "не\u00A0хаотично,\u00A0а\u00A0как ",
+      "не\u00A0хаотично,\u00A0а\u00A0как\n",
+    )
+    .replace(
+      "управляемая\u00A0и масштабируемая ",
+      "управляемая\u00A0и\nмасштабируемая ",
+    )
+    .replace("масштабируемая система", "масштабируемая\nсистема");
+
+  const titleLines = formattedTitle.split("\n");
 
   return (
-    <section className="relative -mt-[58px] overflow-hidden bg-[var(--bbi-bg)] pb-12 pt-[72px] md:-mt-[62px] md:pt-[82px]">
+    <section className="relative overflow-hidden bg-[var(--bbi-bg)] pb-12 pt-[98px] md:pt-[108px]">
       <img
         src="/brand/hero-header-photo.png"
         alt=""
@@ -37,12 +45,23 @@ export function HeroSection({
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(6,7,10,0.18)_0%,rgba(6,7,10,0.34)_52%,rgba(6,7,10,0.72)_72%,rgba(6,7,10,0.94)_100%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(6,7,10,0.08)_0%,rgba(6,7,10,0.32)_46%,rgba(6,7,10,0.78)_70%,rgba(7,8,11,0.98)_88%,rgba(7,8,11,1)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(7,8,11,0)_0%,rgba(7,8,11,0.74)_70%,rgba(7,8,11,1)_100%)]" />
-      <Container className="relative grid gap-7 lg:grid-cols-[1fr] lg:items-center">
+      <Container className="relative grid gap-7 pr-1 sm:pr-0 lg:grid-cols-[1fr] lg:items-center">
         <div className="max-w-[760px] space-y-5">
-          <h1 className="max-w-[700px] whitespace-pre-line text-[35px] font-semibold uppercase leading-[0.98] tracking-[0.01em] text-white md:text-[52px] lg:text-[4rem]">
-            {formattedTitle}
+          <h1 className="max-w-[700px] text-[30px] font-semibold uppercase leading-[1.02] tracking-[0.01em] text-white sm:text-[40px] sm:leading-[0.98] md:text-[52px] lg:text-[4rem]">
+            {titleLines.map((line, i) => (
+              <span
+                key={i}
+                className={
+                  line.includes("хаотично")
+                    ? "block break-words sm:whitespace-nowrap"
+                    : "block break-words"
+                }
+              >
+                {line}
+              </span>
+            ))}
           </h1>
-          <p className="max-w-[56ch] whitespace-pre-line text-[18px] leading-[1.48] text-white/80 md:text-[21px]">
+          <p className="max-w-[56ch] break-words whitespace-pre-line text-[16px] leading-[1.5] text-white/80 sm:text-[17px] md:text-[21px]">
             {subtitle}
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-1.5">

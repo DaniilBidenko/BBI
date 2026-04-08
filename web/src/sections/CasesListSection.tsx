@@ -188,10 +188,10 @@ function CaseCard({
             </svg>
           </div>
         </div>
-        <h3 className="text-xl font-semibold text-white">{item.company}</h3>
-        <p className="bbi-cases-card__key-result text-base font-semibold">{item.keyResult}</p>
+        <h3 className="break-words text-xl font-semibold text-white">{item.company}</h3>
+        <p className="bbi-cases-card__key-result break-words text-base font-semibold">{item.keyResult}</p>
         {excerpt && (
-          <p className="text-sm leading-relaxed text-white/80">{excerpt}</p>
+          <p className="break-words text-sm leading-relaxed text-white/80">{excerpt}</p>
         )}
         <div className="flex flex-wrap gap-2">
           {item.tags.map((tag) => (

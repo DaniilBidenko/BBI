@@ -15,12 +15,12 @@ export function WorkStagesSection({
   return (
     <section className="relative py-20">
       <Container className="relative mx-auto lg:w-[96%]">
-        <div className="relative rounded-[34px] border border-white/14 bg-[radial-gradient(120%_86%_at_50%_0%,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.02)_34%,rgba(255,255,255,0)_70%),linear-gradient(180deg,rgba(14,16,22,0.9)_0%,rgba(8,10,14,0.94)_100%)] px-10 py-10 shadow-[0_16px_34px_rgba(0,0,0,0.35)] backdrop-blur-[1px] md:px-12 md:py-12">
+        <div className="relative rounded-[34px] border border-white/14 bg-[radial-gradient(120%_86%_at_50%_0%,rgba(255,255,255,0.09)_0%,rgba(255,255,255,0.02)_34%,rgba(255,255,255,0)_70%),linear-gradient(180deg,rgba(14,16,22,0.9)_0%,rgba(8,10,14,0.94)_100%)] px-5 py-8 shadow-[0_16px_34px_rgba(0,0,0,0.35)] backdrop-blur-[1px] sm:px-7 sm:py-9 md:px-12 md:py-12">
           <div className="relative">
-            <h2 className="text-[42px] font-semibold uppercase leading-[0.98] text-white md:text-[48px]">
+            <h2 className="break-words text-[30px] font-semibold uppercase leading-[1.05] text-white sm:text-[36px] md:text-[48px]">
               {title}
             </h2>
-            <p className="mt-3 text-[18px] uppercase tracking-[0.14em] text-[rgba(255,196,58,0.96)] md:text-[19px]">
+            <p className="mt-3 break-words text-[12px] uppercase tracking-[0.14em] text-[rgba(255,196,58,0.96)] sm:text-[14px] md:text-[19px]">
               {description}
             </p>
           </div>

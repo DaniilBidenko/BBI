@@ -25,8 +25,12 @@ export function WorkCtaSection({
         <div className="relative overflow-hidden rounded-[28px] border border-white/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.03)_34%,rgba(10,12,17,0.84)_100%)] p-6 shadow-[0_16px_34px_rgba(0,0,0,0.38)] backdrop-blur-[1px] md:p-8">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(130%_100%_at_50%_0%,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.04)_34%,rgba(255,255,255,0)_74%)]" />
           <div className="relative space-y-3">
-            <h2 className="text-[36px] font-semibold uppercase leading-[0.98] text-white md:text-[44px]">{title}</h2>
-            <p className="text-[14px] uppercase tracking-[0.14em] text-[rgba(255,196,58,0.98)] md:text-[15px]">{description}</p>
+            <h2 className="break-words text-[28px] font-semibold uppercase leading-[1.05] text-white sm:text-[34px] md:text-[44px]">
+              {title}
+            </h2>
+            <p className="break-words text-[12px] uppercase tracking-[0.14em] text-[rgba(255,196,58,0.98)] sm:text-[13px] md:text-[15px]">
+              {description}
+            </p>
           </div>
           <form className="relative mt-5 grid gap-4">
             <input
@@ -38,7 +42,7 @@ export function WorkCtaSection({
               placeholder={form.phone}
             />
             <textarea
-              className="min-h-[112px] rounded-[20px] border border-white/14 bg-[#07090d]/95 px-5 py-3.5 text-[15px] text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/45 md:min-h-[128px] md:text-[16px]"
+              className="min-h-[112px] rounded-[14px] border border-white/14 bg-[#07090d]/95 px-5 py-3.5 text-[15px] text-white placeholder:text-white/38 focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/45 md:min-h-[128px] md:rounded-[16px] md:text-[16px]"
               placeholder={form.message}
             />
             <Button href={submitHref} className="!h-11 !w-fit !px-7 !text-[12px] !tracking-[0.02em] md:!h-12">
