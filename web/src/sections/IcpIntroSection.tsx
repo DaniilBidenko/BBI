@@ -51,7 +51,7 @@ export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabe
               </span>
             </div>
 
-            <div className="relative grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))] [grid-auto-rows:1fr]">
+            <div className="relative grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))] [grid-auto-rows:auto] md:[grid-auto-rows:1fr]">
               {segments.map((segment, i) => {
                 const contentParts = (segment.details ?? segment.description)
                   .split("\n\n")
@@ -93,7 +93,7 @@ export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabe
                         {segment.metrics}
                       </p>
                     )}
-                    <div className="mt-auto w-full pt-3">
+                    <div className="mt-4 w-full pt-3 md:mt-auto">
                       <div className="mb-3 h-px w-full bg-gradient-to-r from-transparent via-white/14 to-transparent" />
                       <div className="bbi-icp-intro-pill w-full rounded-2xl px-3 py-2.5">
                         <p className="text-center text-[12px] font-medium leading-snug text-[#1c1b1b]">

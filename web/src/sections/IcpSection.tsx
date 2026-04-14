@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Container } from "@/components/Container";
 import type { HomeCard } from "@/content/dictionaries/types";
 
@@ -13,6 +14,12 @@ type IcpSectionProps = {
 };
 
 export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref }: IcpSectionProps) {
+  const [openCards, setOpenCards] = useState<Record<number, boolean>>({});
+
+  const toggleCard = (index: number) => {
+    setOpenCards((prev) => ({ ...prev, [index]: !prev[index] }));
+  };
+
   return (
     <section className="relative py-9 md:py-11">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
@@ -33,16 +40,20 @@ export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref 
           )}
         </div>
 
-        <div className="relative grid grid-cols-1 items-stretch gap-4 [grid-auto-rows:1fr] md:gap-5 lg:grid-cols-2 xl:grid-cols-3">
-          {cards.map((card, index) => (
-            <article
-              key={card.href}
-              className="group relative flex h-full min-h-0 flex-col overflow-visible"
-            >
+        <div className="relative grid grid-cols-1 items-start gap-4 [grid-auto-rows:auto] md:gap-5 md:items-stretch md:[grid-auto-rows:1fr] lg:grid-cols-2 xl:grid-cols-3">
+          {cards.map((card, index) => {
+            const isOpen = Boolean(openCards[index]);
+
+            return (
+              <article key={card.href} className="group relative flex h-full min-h-0 flex-col overflow-visible">
               <span className="icp-card__index icp-card__index--recognize absolute z-20 flex items-center justify-center text-[42px] font-semibold leading-none text-white/92 transition-transform duration-300 ease-out group-hover:-translate-y-0.5">
                 {index + 1}
               </span>
-              <div className="icp-card icp-card--recognize bbi-hover-lift relative mt-2 ml-2 !h-auto">
+              <div
+                className={`icp-card icp-card--recognize bbi-hover-lift relative mt-2 ml-2 ${
+                  isOpen ? "icp-card--recognize-open" : ""
+                }`}
+              >
                 <div className="icp-card__content">
                   <div className="icp-card__title">
                     <h3 className="break-words text-[19px] font-medium leading-[1.14] tracking-tight text-white/90 md:text-[20px]">
@@ -54,16 +65,26 @@ export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref 
                     <p>{card.description}</p>
                   </div>
 
-                  <div className="icp-card__footer mt-auto pt-3">
-                    <details className="group w-full">
-                      <summary className="inline-flex cursor-pointer list-none items-center gap-1 border-0 bg-transparent p-0 text-left font-inherit text-[15px] font-medium leading-normal tracking-wide text-[var(--bbi-red)] transition hover:text-[var(--bbi-red-hover)] marker:hidden [&::-webkit-details-marker]:hidden">
+                  <div className="icp-card__footer">
+                    <div className="group w-full">
+                      <button
+                        type="button"
+                        onClick={() => toggleCard(index)}
+                        className="inline-flex cursor-pointer list-none items-center gap-1 border-0 bg-transparent p-0 text-left font-inherit text-[15px] font-medium leading-normal tracking-wide text-[var(--bbi-red)] transition hover:text-[var(--bbi-red-hover)]"
+                        aria-expanded={isOpen ? "true" : "false"}
+                      >
                         {card.linkLabel}
-                        <span className="text-[13px] font-semibold text-[var(--bbi-red)] transition-transform duration-200 group-open:rotate-90" aria-hidden>
+                        <span
+                          className={`text-[13px] font-semibold text-[var(--bbi-red)] transition-transform duration-200 ${
+                            isOpen ? "rotate-90" : ""
+                          }`}
+                          aria-hidden
+                        >
                           &gt;&gt;
                         </span>
-                      </summary>
-                      {(card.modalLead || (card.symptoms && card.symptoms.length > 0)) && (
-                        <div className="mt-2.5 max-h-[28vh] space-y-2 overflow-y-auto pr-1 text-[14px] leading-[1.5] text-white/72 md:max-h-[240px] md:text-[14.5px]">
+                      </button>
+                      {isOpen && (card.modalLead || (card.symptoms && card.symptoms.length > 0)) && (
+                        <div className="mt-2.5 max-h-none space-y-2 overflow-visible pr-1 text-[14px] leading-[1.5] text-white/72 md:max-h-[240px] md:overflow-y-auto md:text-[14.5px]">
                           {card.modalLead && <p>{card.modalLead}</p>}
                           {card.symptoms && card.symptoms.length > 0 && (
                             <ul className="list-disc space-y-1 pl-4">
@@ -74,12 +95,13 @@ export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref 
                           )}
                         </div>
                       )}
-                    </details>
+                    </div>
                   </div>
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
         {ctaLabel && ctaHref && (
           <div className="relative mt-8 flex justify-center">

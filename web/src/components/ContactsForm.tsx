@@ -4,10 +4,10 @@ import { useState } from "react";
 import type { ContactsPage } from "@/content/dictionaries/types";
 
 const fieldBaseDark =
-  "w-full rounded-full border border-white/14 bg-[rgba(10,12,18,0.82)] px-6 py-3.5 text-[16px] leading-[1.45] text-white/90 placeholder:text-white/34 transition focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/40 focus:border-[#ff2b44]/40 md:px-7";
+  "w-full rounded-[8px] border border-white/14 bg-[rgba(10,12,18,0.82)] px-6 py-3.5 text-[16px] leading-[1.45] text-white/90 placeholder:text-white/34 transition focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/40 focus:border-[#ff2b44]/40 md:rounded-[8px] md:px-7";
 
 const fieldBaseDarkPage =
-  "w-full rounded-full border border-white/12 bg-[rgba(8,9,11,0.55)] px-5 py-3.5 text-[15px] leading-[1.45] text-white/90 placeholder:text-white/32 backdrop-blur-[2px] transition focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/35 focus:border-[#ff2b44]/38 md:px-6";
+  "w-full rounded-[8px] border border-white/12 bg-[rgba(8,9,11,0.55)] px-5 py-3.5 text-[15px] leading-[1.45] text-white/90 placeholder:text-white/32 backdrop-blur-[2px] transition focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/35 focus:border-[#ff2b44]/38 md:rounded-[8px] md:px-6";
 
 const fieldBaseLight =
   "w-full rounded-xl border border-[var(--bbi-text)]/10 bg-white px-4 py-3 text-sm text-[var(--bbi-text)] placeholder:text-[var(--bbi-muted)] transition focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/40 focus:border-[var(--bbi-red)]/30";
@@ -37,9 +37,9 @@ export function ContactsForm({
     : compactLabels
       ? "block text-xs font-medium uppercase tracking-[0.14em] text-white/72"
       : "block text-[18px] font-medium uppercase tracking-[0.02em] text-white/65";
-  const buttonClass = isLight
-    ? "inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--bbi-red)] px-6 py-3.5 text-sm font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/50 focus:ring-offset-2 focus:ring-offset-white disabled:opacity-70 sm:w-auto sm:min-w-[240px]"
-    : "inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ff2b44] px-6 py-3.5 text-[14px] font-medium text-white transition hover:bg-[#ff4960] focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/60 focus:ring-offset-2 focus:ring-offset-[#0e0e0e] disabled:opacity-70 sm:w-auto sm:min-w-[180px]";
+const buttonClass = isLight
+  ? "inline-flex w-full items-center justify-center gap-2 rounded-[16px] bg-[var(--bbi-red)] px-6 py-3.5 text-sm font-medium text-white transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--bbi-red)]/50 focus:ring-offset-2 focus:ring-offset-white disabled:opacity-70 sm:w-auto sm:min-w-[240px] sm:rounded-full"
+  : "inline-flex w-full items-center justify-center gap-2 rounded-[16px] bg-[#ff2b44] px-6 py-3.5 text-[14px] font-medium text-white transition hover:bg-[#ff4960] focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/60 focus:ring-offset-2 focus:ring-offset-[#0e0e0e] disabled:opacity-70 sm:w-auto sm:min-w-[180px] sm:rounded-full";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -151,7 +151,7 @@ export function ContactsForm({
           rows={4}
           required
           placeholder={contacts.form.request}
-          className={`${fieldBase} min-h-[150px] rounded-[14px] py-4 leading-[1.5] resize-y md:rounded-[16px]`}
+          className={`${fieldBase} min-h-[150px] rounded-[8px] py-4 leading-[1.5] resize-y md:rounded-[8px]`}
         />
       </div>
 

@@ -1366,7 +1366,7 @@ h4 {
 }
 
 .pillars-details[open] .pillars-body {
-  max-height: 200px;
+  max-height: 65vh;
   opacity: 1;
 }
 
@@ -1571,20 +1571,63 @@ h4 {
   width: auto;
 }
 
+/* JS toggle version for "Узнаёте себя": keep button row aligned when closed,
+   expand card shape and flow content naturally when opened. */
+.icp-card--recognize-open {
+  height: auto !important;
+  min-height: 456px;
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+}
+
+.icp-card--recognize-open::after {
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+}
+
+.icp-card--recognize-open .icp-card__content {
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.icp-card--recognize-open .icp-card__footer {
+  position: static;
+  width: auto;
+  margin-top: 8px;
+}
+
 @media (max-width: 640px) {
   .icp-card--recognize {
     height: auto !important;
-    min-height: 430px;
+    min-height: 520px;
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+  }
+
+  .icp-card--recognize .icp-card__content {
+    padding-bottom: 16px;
+  }
+
+  .icp-card--recognize .icp-card__footer {
+    position: static;
+    width: auto;
+    margin-top: 12px;
   }
 
   .icp-card--recognize:has(details[open]) {
     height: auto !important;
-    min-height: 430px;
-    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 900 C 344 915 332 926 318 926 H 24 C 11 926 0 915 0 900 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+    min-height: 520px;
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 
   .icp-card--recognize:has(details[open])::after {
-    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 900 C 344 915 332 926 318 926 H 24 C 11 926 0 915 0 900 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+  }
+
+  .icp-card--recognize-open {
+    min-height: 520px;
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+  }
+
+  .icp-card--recognize-open::after {
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 }
 
@@ -1848,12 +1891,13 @@ h4 {
   }
 
   .icp-card--recognize {
-    height: 430px !important;
-    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 404 C 344 419 332 430 318 430 H 24 C 11 430 0 419 0 404 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+    height: auto !important;
+    min-height: 470px;
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 
   .icp-card--recognize::after {
-    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 404 C 344 419 332 430 318 430 H 24 C 11 430 0 419 0 404 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 }
 

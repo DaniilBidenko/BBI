@@ -112,7 +112,7 @@ function PillarGridCard({
                   &gt;&gt;
                 </span>
               </summary>
-              <div className="mt-0 max-h-0 overflow-hidden rounded-xl border border-white/10 bg-black/20 p-0 text-left opacity-0 transition-all duration-300 ease-out group-open/details:mt-3 group-open/details:max-h-[30vh] group-open/details:overflow-y-auto group-open/details:p-3 group-open/details:opacity-100 sm:group-open/details:max-h-[260px] sm:group-open/details:p-3.5">
+              <div className="mt-0 max-h-0 overflow-hidden rounded-xl border border-white/10 bg-black/20 p-0 text-left opacity-0 transition-all duration-300 ease-out group-open/details:mt-3 group-open/details:max-h-[40vh] group-open/details:overflow-y-auto group-open/details:p-3 group-open/details:opacity-100 sm:group-open/details:max-h-[260px] sm:group-open/details:p-3.5">
                 {hasActionsExpanded && pillar.actionsExpanded ? (
                   <>
                     <p className="text-[0.875rem] font-medium leading-[1.45] text-white/90 sm:text-[0.9375rem]">

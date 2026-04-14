@@ -86,7 +86,7 @@ export function WorkStagesSection({
                             &gt;&gt;
                           </span>
                         </summary>
-                        <div className="mt-2.5 max-h-[26vh] overflow-y-auto pr-1 md:max-h-[220px]">
+                        <div className="mt-2.5 max-h-[36vh] overflow-y-auto pr-1 md:max-h-[220px]">
                           <p className="text-[12px] font-semibold uppercase tracking-[0.11em] text-white/68">
                             Что делаем
                           </p>
