@@ -112,27 +112,26 @@ export function WhatYouGetSection({
                       </div>
                     )}
 
-                    {/* Что это значит */}
-                    <div>
-                      <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-widest text-white/60">
+                    {/* Что это значит + Подробнее */}
+                    <details className="group">
+                      <summary className="inline-flex cursor-pointer list-none items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-white/60 marker:hidden [&::-webkit-details-marker]:hidden">
                         Что это значит
-                      </p>
-                      <p className="break-words text-[14px] leading-[1.7] text-white/78">
-                        {card.whatItMeans}
-                      </p>
-                    </div>
-
-                    {/* Важно */}
-                    <div>
-                      <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-widest text-white/60">
-                        Важно
-                      </p>
-                      <div className="rounded-lg border-l-4 border-[rgba(255,43,68,0.42)] bg-[rgba(255,43,68,0.06)] py-3 pl-4 pr-4 md:pl-5">
-                        <p className="break-words text-[13px] leading-[1.6] text-white/82">
-                          {card.important}
+                        <span className="text-[12px] normal-case tracking-normal text-[var(--bbi-red)]">
+                          Подробнее &gt;&gt;
+                        </span>
+                      </summary>
+                      <div className="mt-2.5 space-y-3">
+                        <p className="break-words text-[14px] leading-[1.7] text-white/78">
+                          {card.whatItMeans}
                         </p>
+                        <div className="rounded-lg border-l-4 border-[rgba(255,43,68,0.42)] bg-[rgba(255,43,68,0.06)] py-3 pl-4 pr-4 md:pl-5">
+                          <p className="break-words text-[13px] leading-[1.6] text-white/82">
+                            <span className="font-semibold text-white/88">Важно:</span>{" "}
+                            {card.important}
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    </details>
                   </div>
                 </article>
                 );
@@ -141,7 +140,7 @@ export function WhatYouGetSection({
 
             {/* Итоговый блок: плитки как в «BBI — операционный партнёр», CTA снизу без бокового разделителя */}
             {finalAccent && (
-              <div className="bbi-cateye-gold relative mt-10 overflow-hidden rounded-2xl border border-[rgba(218,175,65,0.26)] shadow-[0_18px_46px_rgba(0,0,0,0.5)] md:mt-12">
+              <div className="bbi-cateye-gold bbi-hover-lift relative mt-10 overflow-hidden rounded-2xl border border-[rgba(218,175,65,0.26)] shadow-[0_18px_46px_rgba(0,0,0,0.5)] md:mt-12">
                 <div className="absolute inset-y-0 left-0 z-[1] w-1.5 bg-[rgba(232,182,72,0.55)]" />
                 <div className="relative z-[2] flex flex-col gap-0 px-5 py-7 pl-8 pr-5 md:px-8 md:py-9 md:pl-11">
                   <div className="min-w-0">

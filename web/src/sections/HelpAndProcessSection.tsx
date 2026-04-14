@@ -79,7 +79,7 @@ export function HelpAndProcessSection({
                 return (
                 <article
                   key={i}
-                  className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[24px] p-4 text-left transition-[box-shadow,border-color] md:min-h-[260px] md:p-5 ${
+                  className={`bbi-hover-lift group relative flex min-h-[240px] flex-col overflow-hidden rounded-[24px] p-4 text-left transition-[box-shadow,border-color] md:min-h-[260px] md:p-5 ${
                     topRow ? "bbi-help-panel-card--top hover:border-[rgba(245,246,250,0.14)]" : "bbi-help-panel-card--bottom hover:border-[rgba(255,255,255,0.11)]"
                   }`}
                 >
@@ -104,8 +104,8 @@ export function HelpAndProcessSection({
                     </p>
 
                     {stage.result && (
-                      <div className="mt-4 w-fit rounded-full border border-[var(--bbi-red)]/45 bg-transparent px-3 py-1.5">
-                        <p className="text-[11px] font-medium leading-snug text-[var(--bbi-red)] md:text-[12px]">
+                      <div className="mt-4 w-fit self-start rounded-full border border-[var(--bbi-red)]/45 bg-transparent px-3 py-1.5">
+                        <p className="text-[13px] font-medium leading-snug text-[var(--bbi-red)] md:text-[14px]">
                           {stage.result}
                         </p>
                       </div>

@@ -46,7 +46,7 @@ export function CasesSection({
   const featuredCase = cases[0];
 
   return (
-    <section className="relative py-16 md:py-20">
+    <section id="cases" className="relative py-16 md:py-20">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[90%]">
         <h2 className="mb-7 break-words text-center text-[30px] font-semibold uppercase text-white sm:text-[38px] md:mb-10 md:text-[50px]">
@@ -57,11 +57,11 @@ export function CasesSection({
           {featuredCase && (
             <Link
               href={`/${locale}/cases/${featuredCase.slug}`}
-              className="bbi-case-shell-cateye group relative col-span-1 flex flex-col overflow-hidden rounded-[26px] transition-colors hover:border-white/18 md:rounded-[30px] lg:col-span-4"
+              className="bbi-case-shell-cateye bbi-hover-lift group relative col-span-1 flex flex-col overflow-hidden rounded-[26px] transition-colors hover:border-white/18 md:rounded-[30px] lg:col-span-4"
             >
               <div className="flex flex-1 flex-col gap-4 p-4 md:gap-5 md:p-8">
                 <div className="flex items-start gap-3 md:gap-4">
-                  <div className="bbi-case-icon-cateye flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-xl text-white/90 md:h-[56px] md:w-[56px] md:rounded-2xl">
+                  <div className="bbi-case-icon-cateye flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-xl text-white/90 transition-transform duration-300 ease-out group-hover:scale-105 md:h-[56px] md:w-[56px] md:rounded-2xl">
                     <CaseIcon />
                   </div>
                   <div className="pt-0.5 md:pt-1">

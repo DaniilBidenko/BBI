@@ -29,7 +29,7 @@ export function FAQSection({ title, items }: FAQSectionProps) {
               return (
                 <div
                   key={idx}
-                  className="bbi-faq-row overflow-hidden rounded-2xl"
+                  className="bbi-faq-row group overflow-hidden rounded-2xl"
                 >
                   <button
                     type="button"
@@ -37,12 +37,12 @@ export function FAQSection({ title, items }: FAQSectionProps) {
                     className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left md:px-6 md:py-4"
                     aria-expanded={isOpen}
                   >
-                    <span className="break-words font-medium text-[rgba(255,43,68,1)] text-[20px] sm:text-[22px] md:text-[24px]">
+                    <span className="break-words text-[20px] font-medium text-[rgba(255,43,68,1)] transition-colors duration-200 group-hover:text-[rgba(255,78,98,1)] sm:text-[22px] md:text-[24px]">
                       {item.q}
                     </span>
                     <span className={`bbi-faq-icon bbi-faq-icon--t${tone}`} aria-hidden>
                       <svg
-                        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-90" : ""}`}
+                        className={`h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 ${isOpen ? "rotate-90" : ""}`}
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"

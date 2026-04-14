@@ -26,8 +26,8 @@ export default async function HomePage({ params }: LocalePageProps) {
 
   const locale = localeParam as Locale;
   const dictionary = getDictionary(locale);
-  const casesHref = withLocale(locale, "/cases");
   const formAnchor = "#contact-form";
+  const casesAnchor = "#cases";
   const { home } = dictionary;
 
   return (
@@ -39,7 +39,7 @@ export default async function HomePage({ params }: LocalePageProps) {
         ctaLabel={home.hero.cta}
         ctaHref={formAnchor}
         secondaryLabel={home.hero.secondaryCta}
-        secondaryHref={home.hero.secondaryCtaHref ? withLocale(locale, home.hero.secondaryCtaHref) : undefined}
+        secondaryHref={casesAnchor}
       />
       <div className="relative overflow-hidden">
         <IcpIntroSection
@@ -56,10 +56,8 @@ export default async function HomePage({ params }: LocalePageProps) {
             ...card,
             href: withLocale(locale, card.href),
           }))}
-          segments={home.icpIntro.segments}
           ctaLabel={home.icp.ctaLabel}
           ctaHref={formAnchor}
-          modalLabels={home.icp.modal}
         />
         {home.helpAndProcess && (
           <HelpAndProcessSection
@@ -68,7 +66,7 @@ export default async function HomePage({ params }: LocalePageProps) {
             description={home.helpAndProcess.description}
             stages={home.helpAndProcess.stages}
             ctaLabel={home.helpAndProcess.ctaLabel}
-            ctaHref={casesHref}
+            ctaHref={casesAnchor}
           />
         )}
         <WhyBBISection

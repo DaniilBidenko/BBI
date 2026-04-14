@@ -1,26 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import { Container } from "@/components/Container";
-import { IcpCardModal } from "@/components/IcpCardModal";
 import type { HomeCard } from "@/content/dictionaries/types";
-
-type IcpSegment = { title: string; description: string; metrics?: string; pain: string };
 
 type IcpSectionProps = {
   eyebrow?: string;
   title: string;
   subtitle?: string;
   cards: HomeCard[];
-  segments?: IcpSegment[];
   ctaLabel?: string;
   ctaHref?: string;
-  modalLabels?: { scenarioLabel: string; signsLabel: string; solutionLabel: string };
 };
 
-export function IcpSection({ eyebrow, title, subtitle, cards, segments = [], ctaLabel, ctaHref, modalLabels }: IcpSectionProps) {
-  const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
-
+export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref }: IcpSectionProps) {
   return (
     <section className="relative py-9 md:py-11">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
@@ -41,38 +33,48 @@ export function IcpSection({ eyebrow, title, subtitle, cards, segments = [], cta
           )}
         </div>
 
-        <div className="relative grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-start md:gap-5 xl:grid-cols-3">
+        <div className="relative grid grid-cols-1 items-stretch gap-4 [grid-auto-rows:1fr] md:gap-5 lg:grid-cols-2 xl:grid-cols-3">
           {cards.map((card, index) => (
             <article
               key={card.href}
-              className="group relative flex flex-col overflow-visible"
+              className="group relative flex h-full min-h-0 flex-col overflow-visible"
             >
               <span className="icp-card__index icp-card__index--recognize absolute z-20 flex items-center justify-center text-[42px] font-semibold leading-none text-white/92">
                 {index + 1}
               </span>
-              <div className="icp-card icp-card--recognize relative mt-2 ml-2 !h-auto">
+              <div className="icp-card icp-card--recognize bbi-hover-lift relative mt-2 ml-2 !h-auto">
                 <div className="icp-card__content">
                   <div className="icp-card__title">
-                    <h3 className="break-words text-[17px] font-medium leading-[1.14] tracking-tight text-white/90 md:text-[18px]">
+                    <h3 className="break-words text-[19px] font-medium leading-[1.14] tracking-tight text-white/90 md:text-[20px]">
                       {card.title}
                     </h3>
                   </div>
 
-                  <div className="icp-card__body mt-2 text-[12.5px] leading-[1.5] text-white/76 md:text-[13px]">
+                  <div className="icp-card__body mt-2 min-h-0 text-[15px] leading-[1.5] text-white/76 md:text-[15.5px]">
                     <p>{card.description}</p>
                   </div>
 
-                  <div className="icp-card__footer mt-3">
-                    <button
-                      type="button"
-                      onClick={() => setOpenCardIndex(index)}
-                      className="inline-flex w-fit cursor-pointer items-center gap-1 border-0 bg-transparent p-0 text-left font-inherit text-[13px] font-medium leading-normal tracking-wide text-[var(--bbi-red)] transition hover:text-[var(--bbi-red-hover)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--bbi-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1012]"
-                    >
-                      {card.linkLabel}
-                      <span className="text-[12px] font-semibold text-[var(--bbi-red)]" aria-hidden>
-                        &gt;&gt;
-                      </span>
-                    </button>
+                  <div className="icp-card__footer mt-auto pt-3">
+                    <details className="group w-full">
+                      <summary className="inline-flex cursor-pointer list-none items-center gap-1 border-0 bg-transparent p-0 text-left font-inherit text-[15px] font-medium leading-normal tracking-wide text-[var(--bbi-red)] transition hover:text-[var(--bbi-red-hover)] marker:hidden [&::-webkit-details-marker]:hidden">
+                        {card.linkLabel}
+                        <span className="text-[13px] font-semibold text-[var(--bbi-red)] transition-transform duration-200 group-open:rotate-90" aria-hidden>
+                          &gt;&gt;
+                        </span>
+                      </summary>
+                      {(card.modalLead || (card.symptoms && card.symptoms.length > 0)) && (
+                        <div className="mt-2.5 space-y-2 text-[14px] leading-[1.5] text-white/72 md:text-[14.5px]">
+                          {card.modalLead && <p>{card.modalLead}</p>}
+                          {card.symptoms && card.symptoms.length > 0 && (
+                            <ul className="list-disc space-y-1 pl-4">
+                              {card.symptoms.slice(0, 3).map((item) => (
+                                <li key={item}>{item}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      )}
+                    </details>
                   </div>
                 </div>
               </div>
@@ -98,15 +100,6 @@ export function IcpSection({ eyebrow, title, subtitle, cards, segments = [], cta
           </div>
         )}
 
-        {openCardIndex !== null && cards[openCardIndex] && (
-          <IcpCardModal
-            isOpen
-            onClose={() => setOpenCardIndex(null)}
-            card={cards[openCardIndex]}
-            segment={segments[openCardIndex]}
-            labels={modalLabels}
-          />
-        )}
       </Container>
     </section>
   );

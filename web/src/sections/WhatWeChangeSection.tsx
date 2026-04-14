@@ -75,10 +75,10 @@ export function WhatWeChangeSection({
             return (
               <article
                 key={pillar.title}
-                className={`bbi-cateye-recognize ${toneClass} group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-6 shadow-[0_16px_40px_rgba(0,0,0,0.32)] transition hover:shadow-[0_20px_48px_rgba(0,0,0,0.38)] md:p-7`}
+                className={`bbi-cateye-recognize bbi-hover-lift ${toneClass} group relative flex flex-col gap-4 overflow-hidden rounded-2xl p-6 shadow-[0_16px_40px_rgba(0,0,0,0.32)] md:p-7`}
               >
                 <div className="flex items-center gap-2">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--bbi-red)]/10 text-[var(--bbi-red)] [&>svg]:h-4 [&>svg]:w-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--bbi-red)]/10 text-[var(--bbi-red)] transition-transform duration-300 ease-out group-hover:scale-105 [&>svg]:h-4 [&>svg]:w-4">
                     {Icon}
                   </span>
                   <h3 className="break-words text-lg font-semibold text-[var(--bbi-text)]">

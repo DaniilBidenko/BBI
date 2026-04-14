@@ -701,6 +701,19 @@ h4 {
     inset 0 -6px 12px rgba(0, 0, 0, 0.32);
 }
 
+/* Унифицированная анимация карточек, как в "Что вы получаете от работы с нами" */
+.bbi-hover-lift {
+  transition:
+    transform 300ms ease-out,
+    box-shadow 300ms ease-out,
+    border-color 220ms ease-out;
+}
+
+.bbi-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.42);
+}
+
 /* «Что мы меняем»: тот же объём, но блик и радиал в тон --bbi-red вместо янтаря */
 .bbi-cateye-recognize--crimson {
   background-image:
@@ -1078,10 +1091,19 @@ h4 {
     inset 0 1px 0 rgba(255, 252, 246, 0.108),
     inset 0 -4px 11px rgba(0, 0, 0, 0.3),
     0 1px 5px rgba(0, 0, 0, 0.16);
+  transition:
+    transform 260ms ease-out,
+    box-shadow 280ms ease-out,
+    border-color 220ms ease-out;
 }
 
 .bbi-faq-row:hover {
   border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 252, 246, 0.12),
+    inset 0 -4px 11px rgba(0, 0, 0, 0.32),
+    0 10px 24px rgba(0, 0, 0, 0.34);
 }
 
 /* Финальный блок формы: внешний контейнер с мягким cat-eye */
@@ -1150,6 +1172,13 @@ h4 {
   border-radius: 9999px;
   flex-shrink: 0;
   color: rgba(255, 43, 68, 0.95);
+  transition:
+    transform 220ms ease-out,
+    box-shadow 220ms ease-out;
+}
+
+.bbi-faq-row:hover .bbi-faq-icon {
+  transform: scale(1.04);
 }
 
 .bbi-faq-icon--t0 {
@@ -1371,11 +1400,24 @@ h4 {
 /* «Узнаёте себя»: кнопка "Подробнее" фиксируется внизу карточки */
 /* «Узнаёте себя»: растягиваем карточку по контенту */
 .icp-card--recognize .icp-card__content {
-  height: auto;
+  position: relative;
+  height: 100%;
+  padding-bottom: 58px;
+}
+
+.icp-card--recognize .icp-card__footer {
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  width: calc(100% - 40px);
+  margin-top: 0;
+  padding-top: 8px;
 }
 
 .icp-card--recognize {
   height: auto !important;
+  min-height: 456px;
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 428 C 398 444 386 456 370 456 H 28 C 12 456 0 444 0 428 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
 }
 
 .icp-card__index {
@@ -1421,11 +1463,34 @@ h4 {
 }
 
 .icp-card--recognize::after {
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 428 C 398 444 386 456 370 456 H 28 C 12 456 0 444 0 428 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
   border-color: rgba(215, 217, 224, 0.075);
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.045),
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
     inset 0 -10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.icp-card--recognize:has(details[open]) {
+  height: auto !important;
+  min-height: 456px;
+  clip-path: none;
+}
+
+.icp-card--recognize:has(details[open])::after {
+  clip-path: none;
+}
+
+@media (max-width: 640px) {
+  .icp-card--recognize {
+    height: auto !important;
+    min-height: 430px;
+  }
+
+  .icp-card--recognize:has(details[open]) {
+    height: auto !important;
+    min-height: 430px;
+  }
 }
 
 
@@ -1677,6 +1742,15 @@ h4 {
   .icp-card--pillar-actions .icp-card__title {
     min-height: 58px;
     padding-left: 88px;
+  }
+
+  .icp-card--recognize {
+    height: 430px !important;
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 404 C 344 419 332 430 318 430 H 24 C 11 430 0 419 0 404 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+  }
+
+  .icp-card--recognize::after {
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 404 C 344 419 332 430 318 430 H 24 C 11 430 0 419 0 404 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 }
 

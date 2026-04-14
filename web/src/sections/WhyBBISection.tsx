@@ -53,6 +53,16 @@ const LIST_ARROW_DOWN_RIGHT = (
   </svg>
 );
 
+const COMPARISON_HEADERS = ["Параметр", "Агентство", "Консалтинг", "BBI Operating Partner"];
+const COMPARISON_ROWS = [
+  ["Роль", "Исполнитель задач", "Советник", "Архитектор + интегратор + внедренец"],
+  ["Глубина", "Один инструмент/канал", "Анализ и рекомендации", "Система управления целиком"],
+  ["Присутствие", "Удалённо, по задаче", "Сессии и отчёты", "Внутри бизнеса до ЦКР (ценного конечного результата)"],
+  ["Ответственность", "За свою зону", "За рекомендации", "За достижение ЦКР"],
+  ["Результат", "Выполненная задача", "Документ/стратегия", "Работающая система"],
+  ["После ухода", "Останавливается", "Остаётся документ", "Остаётся система"],
+];
+
 export function WhyBBISection({
   eyebrow,
   title,
@@ -61,7 +71,7 @@ export function WhyBBISection({
   topCards,
   wideCard,
 }: WhyBBISectionProps) {
-  const useNewLayout = topCards && topCards.length > 0 && wideCard;
+  const useNewLayout = Boolean(wideCard);
 
   return (
     <section className="relative py-10 md:py-12">
@@ -85,46 +95,8 @@ export function WhyBBISection({
 
         {useNewLayout ? (
           <div className="space-y-5">
-            <div className="grid gap-4 sm:grid-cols-2 lg:gap-5">
-              {topCards.map((card) => (
-                <article
-                  key={card.label}
-                  className="bbi-cateye-red group relative flex min-h-0 flex-col overflow-hidden rounded-[22px] border border-white/11 p-4 transition-colors hover:border-white/16 md:rounded-[26px] md:p-5"
-                >
-                  <div className="flex h-full flex-col">
-                    <div className="mb-3 flex items-center gap-2.5 md:gap-3">
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[var(--bbi-red)]/25 bg-black/25 text-[var(--bbi-red)] shadow-[inset_0_1px_0_rgba(255,75,90,0.35)] md:h-10 md:w-10">
-                        {PROHIBITION_ICON}
-                      </span>
-                      <h3 className="break-words text-[30px] font-semibold leading-[1.08] text-white sm:text-[34px] md:text-[40px]">
-                        {card.label}
-                      </h3>
-                    </div>
-                    <p className="mb-4 text-[14px] leading-[1.55] text-white/74 md:text-[15px]">
-                      {card.intro}
-                    </p>
-                    {card.outcomeBullets.length > 0 && (
-                      <div className="bbi-cateye-red-inset mt-auto rounded-[16px] p-3 md:p-4">
-                        <span className="break-words text-[17px] font-semibold leading-tight text-white sm:text-[19px] md:text-[24px]">
-                          Что происходит в итоге
-                        </span>
-                        <ul className="mt-2.5 space-y-2">
-                          {card.outcomeBullets.map((b, i) => (
-                            <li key={i} className="flex gap-2 text-[12px] leading-snug text-white/72 md:text-[13px]">
-                              <span className="text-[var(--bbi-red)]">{LIST_ARROW_DOWN_RIGHT}</span>
-                              {b}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                </article>
-              ))}
-            </div>
-
             {wideCard && (
-              <article className="bbi-cateye-gold relative overflow-hidden rounded-[22px] border border-[rgba(218,175,65,0.26)] md:rounded-[26px]">
+              <article className="bbi-cateye-gold bbi-hover-lift relative overflow-hidden rounded-[22px] border border-[rgba(218,175,65,0.26)] md:rounded-[26px]">
                 <div className="relative p-4 md:p-6">
                   <div className="flex gap-4 md:gap-5">
                     <span className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[12px] border border-[rgba(218,175,65,0.28)] bg-black/22 text-[rgba(225,180,72,0.92)] shadow-[inset_0_1px_0_rgba(218,175,65,0.28)] md:h-[52px] md:w-[52px] md:rounded-[14px]">
@@ -148,6 +120,38 @@ export function WhyBBISection({
                 </div>
               </article>
             )}
+
+            <article className="bbi-hover-lift overflow-hidden rounded-[20px] border border-white/12 bg-[linear-gradient(180deg,#1f2126_0%,#16181d_52%,#111318_100%)] shadow-[0_14px_34px_rgba(0,0,0,0.42)]">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[760px] border-collapse text-left">
+                  <thead>
+                    <tr className="bg-[linear-gradient(180deg,rgba(168,187,220,0.94)_0%,rgba(148,167,198,0.9)_100%)]">
+                      {COMPARISON_HEADERS.map((header) => (
+                        <th key={header} className="border border-white/18 px-4 py-3 text-[15px] font-semibold text-[#1c232f] md:text-[16px]">
+                          {header}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {COMPARISON_ROWS.map((row) => (
+                      <tr key={row[0]} className="odd:bg-white/[0.02] even:bg-transparent">
+                        {row.map((cell, index) => (
+                          <td
+                            key={`${row[0]}-${index}`}
+                            className={`border border-white/14 px-4 py-3 text-[14px] leading-[1.4] text-white/86 md:text-[15px] ${
+                              index === 0 ? "font-medium text-white/92" : ""
+                            }`}
+                          >
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </article>
           </div>
         ) : (
           items &&

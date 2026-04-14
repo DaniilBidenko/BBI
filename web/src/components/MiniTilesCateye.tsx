@@ -31,7 +31,7 @@ export function MiniTilesCateye({ items, rootClassName, warmIndices }: MiniTiles
     return (
       <div
         key={`${rowIndex}-${i}`}
-        className={`bbi-cateye-recognize ${toneClass} flex ${widthCls} items-start gap-2 rounded-[16px] px-2.5 py-2.5 md:gap-2.5 md:rounded-[18px] md:px-3.5 md:py-3`}
+        className={`bbi-cateye-recognize bbi-hover-lift ${toneClass} flex ${widthCls} items-start gap-2 rounded-[16px] px-2.5 py-2.5 md:gap-2.5 md:rounded-[18px] md:px-3.5 md:py-3`}
       >
         <span
           className="bbi-cateye-plus ml-px mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[14px] font-medium leading-none md:mt-0.5 md:h-7 md:w-7 md:text-[15px]"

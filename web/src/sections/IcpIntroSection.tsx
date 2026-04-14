@@ -46,44 +46,67 @@ export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabe
             </div>
 
             <div className="relative grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))] [grid-auto-rows:1fr]">
-              {segments.map((segment, i) => (
-                <div
-                  key={i}
-                  className="bbi-icp-intro-card flex h-full min-w-0 flex-col gap-3 overflow-hidden rounded-[24px] px-4 py-4 text-left md:px-5 md:py-5"
-                >
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/[0.04] text-white/92 [&>svg]:h-5 [&>svg]:w-5">
-                    {TARGET_ICON}
-                  </div>
-                  <h3 className="text-balance text-[18px] font-semibold leading-[1.18] tracking-tight text-white md:text-[20px]">
-                    {segment.title}
-                  </h3>
-                  <p className="w-full whitespace-pre-line text-[13px] leading-[1.62] text-white/78 md:text-[14px]">
-                    {segment.details ?? segment.description}
-                  </p>
-                  {segment.metrics && (
-                    <p className="text-[13px] font-semibold text-white/70 md:text-[14px]">
-                      {segment.metrics}
-                    </p>
-                  )}
-                  <div className="mt-auto w-full pt-3">
-                    <div className="mb-3 h-px w-full bg-gradient-to-r from-transparent via-white/14 to-transparent" />
-                    <div className="bbi-icp-intro-pill w-full rounded-2xl px-3 py-2.5">
-                      <p className="text-center text-[12px] font-medium leading-snug text-[#1c1b1b]">
-                        {segment.pain}
+              {segments.map((segment, i) => {
+                const contentParts = (segment.details ?? segment.description)
+                  .split("\n\n")
+                  .map((part) => part.trim())
+                  .filter(Boolean);
+                const [leadParagraph, ...collapsedParagraphs] = contentParts;
+
+                return (
+                  <div
+                    key={i}
+                    className="bbi-icp-intro-card bbi-hover-lift flex h-full min-w-0 flex-col gap-3 overflow-hidden rounded-[24px] px-4 py-4 text-left md:px-5 md:py-5"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/[0.04] text-white/92 [&>svg]:h-5 [&>svg]:w-5">
+                      {TARGET_ICON}
+                    </div>
+                    <h3 className="text-balance text-[18px] font-semibold leading-[1.18] tracking-tight text-white md:text-[20px]">
+                      {segment.title}
+                    </h3>
+                    <div className="w-full text-[13px] leading-[1.62] text-white/78 md:text-[14px]">
+                      <p>{leadParagraph}</p>
+                      {collapsedParagraphs.length > 0 && (
+                        <details className="group mt-2">
+                          <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-[13px] font-medium tracking-wide text-[var(--bbi-red)] transition hover:text-[var(--bbi-red-hover)] marker:hidden [&::-webkit-details-marker]:hidden">
+                            Подробнее
+                            <span className="text-[12px] font-semibold" aria-hidden>
+                              &gt;&gt;
+                            </span>
+                          </summary>
+                          <div className="mt-2 space-y-2.5">
+                            {collapsedParagraphs.map((paragraph) => (
+                              <p key={paragraph}>{paragraph}</p>
+                            ))}
+                          </div>
+                        </details>
+                      )}
+                    </div>
+                    {segment.metrics && (
+                      <p className="text-[13px] font-semibold text-white/70 md:text-[14px]">
+                        {segment.metrics}
                       </p>
+                    )}
+                    <div className="mt-auto w-full pt-3">
+                      <div className="mb-3 h-px w-full bg-gradient-to-r from-transparent via-white/14 to-transparent" />
+                      <div className="bbi-icp-intro-pill w-full rounded-2xl px-3 py-2.5">
+                        <p className="text-center text-[12px] font-medium leading-snug text-[#1c1b1b]">
+                          {segment.pain}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </article>
 
-          <div className="mx-auto mt-5 w-full max-w-xl rounded-[24px] border border-[var(--bbi-red)]/45 bg-black/25 px-5 py-4 text-center md:px-6 md:py-5">
+          <div className="bbi-hover-lift mx-auto mt-5 w-full rounded-[24px] border border-[var(--bbi-red)]/45 bg-black/25 px-5 py-4 text-center md:px-6 md:py-5">
             <h4 className="flex items-center justify-center gap-2 text-[30px] font-semibold leading-none text-white md:text-[38px]">
               {WARNING_ICON}
               {excludeLabel}
             </h4>
-            <p className="mx-auto mt-2.5 max-w-[56ch] text-[12px] leading-[1.45] text-white/74 md:text-[13px]">
+            <p className="mx-auto mt-2.5 text-[12px] leading-[1.45] text-white/74 sm:whitespace-nowrap md:text-[13px]">
               {exclude}
             </p>
           </div>
