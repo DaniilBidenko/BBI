@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/content/dictionaries";
 import { ru } from "@/content/dictionaries/ru";
 import { Container } from "@/components/Container";
 import { CaseResultsInfographic } from "@/components/CaseResultsInfographic";
-import { withLocale } from "@/i18n/paths";
 
 function CaseHeaderIcon({ className }: { className?: string }) {
   return (
@@ -67,13 +65,6 @@ export default async function CaseDetailPage({ params }: LocalePageProps) {
           <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.22)_0%,transparent_70%)]" />
         </div>
         <Container className="relative mx-auto lg:w-[85%]">
-          <Link
-            href={withLocale(locale, "/cases")}
-            className="mb-6 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-white/50 transition hover:text-white"
-          >
-            {caseDetail.backToCases}
-          </Link>
-
           {item.headerImage ? (
             <div className="mb-8 overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0f1014] shadow-[0_24px_56px_rgba(0,0,0,0.45)]">
               <div className="relative aspect-[16/10] w-full sm:aspect-[2.15/1] md:aspect-[2.35/1]">

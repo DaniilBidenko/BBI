@@ -102,15 +102,20 @@ function BlogCard({
   return (
     <Link
       href={`/${locale}/blog/${post.slug}`}
-      className="group relative flex h-full flex-col overflow-hidden rounded-[30px] border border-[rgba(255,43,68,0.24)] bg-[linear-gradient(165deg,rgba(255,43,68,0.16)_0%,rgba(35,20,26,0.76)_32%,rgba(9,11,16,0.96)_66%,rgba(7,8,11,0.98)_100%)] shadow-[0_16px_42px_rgba(0,0,0,0.48)] transition-all duration-300 hover:border-[rgba(255,43,68,0.38)]"
+      className="group relative flex h-full flex-col overflow-hidden rounded-[30px] border border-[rgba(255,43,68,0.24)] bg-[linear-gradient(165deg,rgba(255,43,68,0.16)_0%,rgba(35,20,26,0.76)_32%,rgba(9,11,16,0.96)_66%,rgba(7,8,11,0.98)_100%)] shadow-[0_16px_42px_rgba(0,0,0,0.48)] transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(255,43,68,0.45)] hover:shadow-[0_26px_52px_rgba(0,0,0,0.56)]"
     >
+      <span className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(120%_90%_at_18%_0%,rgba(255,43,68,0.16)_0%,rgba(255,43,68,0.05)_42%,rgba(255,43,68,0)_72%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       {post.image && (
-        <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-[22px] border border-white/18 bg-[var(--bbi-bg)] m-4 mb-0">
+        <div className="relative z-[1] mx-4 mt-4 mb-0 aspect-video w-[calc(100%-2rem)] shrink-0 overflow-hidden rounded-[22px] border border-white/18 bg-[var(--bbi-bg)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={post.image} alt="" className="h-full w-full object-cover" />
+          <img
+            src={post.image}
+            alt=""
+            className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+          />
         </div>
       )}
-      <div className="flex flex-1 flex-col gap-4 p-5 pt-4">
+      <div className="relative z-[1] flex flex-1 flex-col gap-4 p-5 pt-4">
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[rgba(255,43,68,0.3)] bg-[rgba(255,43,68,0.08)]">
             <BlogIcon categoryKey={post.categoryKey} />
@@ -125,7 +130,7 @@ function BlogCard({
         <p className="line-clamp-2 text-[14px] leading-[1.5] text-white/76">
           {post.description}
         </p>
-        <span className="mt-auto text-[14px] text-[var(--bbi-red)] transition group-hover:text-[var(--bbi-red-hover)]">
+        <span className="mt-auto text-[14px] text-[var(--bbi-red)] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[var(--bbi-red-hover)]">
           {readMore} &gt;&gt;
         </span>
       </div>

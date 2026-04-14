@@ -18,17 +18,12 @@ export default async function BlogPage({ params }: LocalePageProps) {
   const locale = localeParam as Locale;
   const dictionary = getDictionary(locale);
   const { blog } = dictionary;
-  const navHome = dictionary.nav.items.find((item) => item.href === "/");
-  const navBlog = dictionary.nav.items.find((item) => item.href === "/blog");
 
   return (
     <div className="relative">
       <BlogHeroSection
         title={blog.hero.title}
         description={blog.hero.description}
-        breadcrumbHome={navHome?.label ?? "Home"}
-        breadcrumbCurrent={navBlog?.label ?? "Blog"}
-        breadcrumbHomeHref={withLocale(locale, "/")}
       />
       <BlogListSection
         posts={blog.posts}

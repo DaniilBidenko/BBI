@@ -36,18 +36,18 @@ export function HeroSection({
   const titleLines = formattedTitle.split("\n");
 
   return (
-    <section className="relative overflow-hidden bg-[var(--bbi-bg)] pb-10 pt-[92px] md:pb-12 md:pt-[102px]">
+    <section className="relative overflow-hidden bg-[var(--bbi-bg)] pb-14 pt-[92px] md:pb-16 md:pt-[102px]">
       <img
         src="/brand/hero-header-photo.png"
         alt=""
-        className="pointer-events-none absolute inset-0 h-full w-full scale-[1.06] object-cover object-[52%_30%] opacity-84"
+        className="pointer-events-none absolute inset-0 h-full w-full scale-[1.14] object-cover object-[54%_28%] opacity-84"
       />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(6,7,10,0.18)_0%,rgba(6,7,10,0.34)_52%,rgba(6,7,10,0.72)_72%,rgba(6,7,10,0.94)_100%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(6,7,10,0.08)_0%,rgba(6,7,10,0.32)_46%,rgba(6,7,10,0.78)_70%,rgba(7,8,11,0.98)_88%,rgba(7,8,11,1)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(7,8,11,0)_0%,rgba(7,8,11,0.74)_70%,rgba(7,8,11,1)_100%)]" />
       <Container className="relative grid gap-6 pr-1 sm:pr-0 lg:grid-cols-[1fr] lg:items-center">
         <div className="max-w-[720px] space-y-4.5 sm:space-y-5">
-          <h1 className="max-w-[700px] text-[26px] font-semibold uppercase leading-[1.02] tracking-[0.01em] text-white sm:text-[34px] sm:leading-[0.98] md:text-[44px] lg:text-[54px]">
+          <h1 className="max-w-[700px] text-[22px] font-semibold uppercase leading-[1.04] tracking-[0.01em] text-white sm:text-[28px] sm:leading-[1] md:text-[34px] lg:text-[42px]">
             {titleLines.map((line, i) => (
               <span
                 key={i}

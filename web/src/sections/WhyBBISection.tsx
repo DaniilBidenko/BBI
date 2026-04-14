@@ -121,35 +121,56 @@ export function WhyBBISection({
               </article>
             )}
 
-            <article className="bbi-hover-lift overflow-hidden rounded-[20px] border border-white/12 bg-[linear-gradient(180deg,#1f2126_0%,#16181d_52%,#111318_100%)] shadow-[0_14px_34px_rgba(0,0,0,0.42)]">
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[760px] border-collapse text-left">
-                  <thead>
-                    <tr className="bg-[linear-gradient(180deg,rgba(168,187,220,0.94)_0%,rgba(148,167,198,0.9)_100%)]">
-                      {COMPARISON_HEADERS.map((header) => (
-                        <th key={header} className="border border-white/18 px-4 py-3 text-[15px] font-semibold text-[#1c232f] md:text-[16px]">
-                          {header}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {COMPARISON_ROWS.map((row) => (
-                      <tr key={row[0]} className="odd:bg-white/[0.02] even:bg-transparent">
-                        {row.map((cell, index) => (
-                          <td
-                            key={`${row[0]}-${index}`}
-                            className={`border border-white/14 px-4 py-3 text-[14px] leading-[1.4] text-white/86 md:text-[15px] ${
-                              index === 0 ? "font-medium text-white/92" : ""
-                            }`}
-                          >
-                            {cell}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+            <article className="bbi-hover-lift overflow-hidden rounded-[22px] border border-white/12 bg-[linear-gradient(165deg,rgba(17,18,24,0.98)_0%,rgba(10,11,16,0.99)_100%)] p-3 sm:p-4 md:p-5">
+              <div className="mb-3 hidden grid-cols-[minmax(0,1.1fr)_repeat(3,minmax(0,1fr))] gap-2 md:grid">
+                <div className="rounded-lg border border-white/14 bg-white/[0.04] px-3 py-2.5 text-[12px] font-semibold uppercase tracking-[0.08em] text-white/78">
+                  {COMPARISON_HEADERS[0]}
+                </div>
+                <div className="rounded-lg border border-white/14 bg-white/[0.04] px-3 py-2.5 text-[12px] font-semibold uppercase tracking-[0.08em] text-white/78">
+                  {COMPARISON_HEADERS[1]}
+                </div>
+                <div className="rounded-lg border border-white/14 bg-white/[0.04] px-3 py-2.5 text-[12px] font-semibold uppercase tracking-[0.08em] text-white/78">
+                  {COMPARISON_HEADERS[2]}
+                </div>
+                <div className="rounded-lg border border-[rgba(232,182,72,0.58)] bg-[linear-gradient(145deg,rgba(232,182,72,0.26)_0%,rgba(232,182,72,0.08)_100%)] px-3 py-2.5 text-[12px] font-semibold uppercase tracking-[0.08em] text-[rgba(245,207,120,0.98)] shadow-[inset_0_1px_0_rgba(245,214,140,0.28)]">
+                  {COMPARISON_HEADERS[3]}
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                {COMPARISON_ROWS.map((row) => (
+                  <div
+                    key={row[0]}
+                    className="rounded-xl border border-white/12 bg-[linear-gradient(165deg,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0.01)_100%)] p-2.5 sm:p-3"
+                  >
+                    <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-white/72 md:mb-0 md:hidden">
+                      {row[0]}
+                    </p>
+                    <div className="grid gap-2 md:grid-cols-[minmax(0,1.1fr)_repeat(3,minmax(0,1fr))]">
+                      <div className="hidden items-center rounded-lg border border-white/14 bg-white/[0.04] px-3 py-3 md:flex">
+                        <span className="text-[14px] font-semibold leading-[1.25] text-white">{row[0]}</span>
+                      </div>
+                      <div className="rounded-lg border border-white/12 bg-[rgba(8,10,14,0.72)] px-3 py-3">
+                        <p className="mb-1 text-[11px] font-medium uppercase tracking-[0.08em] text-white/54 md:hidden">
+                          {COMPARISON_HEADERS[1]}
+                        </p>
+                        <p className="text-[13px] leading-[1.38] text-white/88 sm:text-[14px]">{row[1]}</p>
+                      </div>
+                      <div className="rounded-lg border border-white/12 bg-[rgba(8,10,14,0.72)] px-3 py-3">
+                        <p className="mb-1 text-[11px] font-medium uppercase tracking-[0.08em] text-white/54 md:hidden">
+                          {COMPARISON_HEADERS[2]}
+                        </p>
+                        <p className="text-[13px] leading-[1.38] text-white/88 sm:text-[14px]">{row[2]}</p>
+                      </div>
+                      <div className="rounded-lg border border-[rgba(232,182,72,0.58)] bg-[linear-gradient(145deg,rgba(232,182,72,0.22)_0%,rgba(232,182,72,0.07)_100%)] px-3 py-3 shadow-[inset_0_1px_0_rgba(245,214,140,0.24)]">
+                        <p className="mb-1 text-[11px] font-medium uppercase tracking-[0.08em] text-[rgba(245,207,120,0.9)] md:hidden">
+                          {COMPARISON_HEADERS[3]}
+                        </p>
+                        <p className="text-[13px] font-semibold leading-[1.38] text-white sm:text-[14px]">{row[3]}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </article>
           </div>

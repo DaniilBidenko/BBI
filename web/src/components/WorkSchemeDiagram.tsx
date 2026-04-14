@@ -4,13 +4,13 @@ const SCHEME_KEYS = ["operations", "finance", "sales", "hr", "legal", "marketing
 /** Углы узлов: сверху-слева по часовой — как на референсе */
 const ANGLE_DEG = [-135, -45, 0, 45, 135, 180] as const;
 
-/** Компактные плитки, больший радиус — больше воздуха между узлами */
-const VB = 480;
-const CX = 240;
-const CY = 240;
-const R = 168;
-const OUTER_HALF = 35;
-const CENTER_HALF = 40;
+/** Более крупная схема: больше радиус и плитки */
+const VB = 620;
+const CX = 310;
+const CY = 310;
+const R = 222;
+const OUTER_HALF = 44;
+const CENTER_HALF = 54;
 const SPOKE_IN = CENTER_HALF;
 const SPOKE_OUT = R - OUTER_HALF;
 const TILE_RX = 12;
@@ -25,7 +25,7 @@ function pt(r: number, deg: number) {
 }
 
 const stroke = "rgba(255,43,68,0.95)";
-const sw = 1.65;
+const sw = 1.7;
 const common = {
   fill: "none" as const,
   stroke,
@@ -102,11 +102,14 @@ function PillarIcon({ pillarKey }: { pillarKey: string }) {
   }
 }
 
-function ShieldCenterIcon() {
+/** Центр схемы: бизнес — портфель (без щита) */
+function BusinessCenterIcon() {
   return (
-    <g fill="none" stroke={stroke} strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-      <path d="M0-16.5 L13.5-9v11c0 8-5.5 14-13.5 16.5C-8.5 16-14 9.5-14 2v-11z" />
-      <path d="M-4.5 0.5l3.5 3.5 8-9.5" />
+    <g fill="none" stroke={stroke} strokeWidth={1.65} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M-10.5-1.5h21a2 2 0 012 2v8a2 2 0 01-2 2h-21a2 2 0 01-2-2v-8a2 2 0 012-2z" />
+      <path d="M-4.5-1.5v-3a4.5 4.5 0 019 0v3" />
+      <path d="M-6.5 4.5h13" opacity="0.55" strokeWidth={1.35} />
+      <path d="M0 6.5v3.5" opacity="0.55" strokeWidth={1.35} />
     </g>
   );
 }
@@ -130,7 +133,7 @@ export function WorkSchemeDiagram({ centerLabel, pillars }: WorkSchemeDiagramPro
       <img
         src="/brand/work-scheme.jpg"
         alt=""
-        className="h-auto w-full max-w-[560px] rounded-[18px] object-contain"
+        className="h-auto w-full max-w-[760px] rounded-[18px] object-contain"
         loading="eager"
       />
     );
@@ -139,13 +142,21 @@ export function WorkSchemeDiagram({ centerLabel, pillars }: WorkSchemeDiagramPro
   return (
     <svg
       viewBox={`0 0 ${VB} ${VB}`}
-      className="mx-auto h-auto w-full max-w-[min(100%,520px)] select-none sm:max-w-[540px] md:max-w-[580px] lg:max-w-[min(90vw,640px)]"
+      className="mx-auto h-auto w-full max-w-[min(100%,760px)] select-none sm:max-w-[720px] md:max-w-[760px] lg:max-w-[min(92vw,860px)]"
       role="img"
       aria-label={centerLabel}
     >
       <defs>
-        <marker id="work-scheme-arrow" markerWidth="5" markerHeight="5" refX="4.2" refY="2.5" orient="auto">
-          <path d="M0 0 L5 2.5 L0 5 Z" fill="rgba(255,43,68,0.58)" />
+        <marker
+          id="work-scheme-arrow"
+          markerWidth="8"
+          markerHeight="8"
+          refX="6.5"
+          refY="4"
+          orient="auto"
+          markerUnits="strokeWidth"
+        >
+          <path d="M0 0 L8 4 L0 8 Z" fill="rgba(255,43,68,0.9)" />
         </marker>
       </defs>
 
@@ -156,16 +167,13 @@ export function WorkSchemeDiagram({ centerLabel, pillars }: WorkSchemeDiagramPro
           const p1 = pt(R, a);
           const p2 = pt(R, b);
           return (
-            <line
+            <path
               key={`perim-${i}`}
-              x1={p1.x}
-              y1={p1.y}
-              x2={p2.x}
-              y2={p2.y}
+              d={`M ${p1.x} ${p1.y} L ${(p1.x + p2.x) / 2} ${(p1.y + p2.y) / 2} L ${p2.x} ${p2.y}`}
+              fill="none"
               stroke="rgba(255,43,68,0.4)"
-              strokeWidth="1.15"
-              markerStart="url(#work-scheme-arrow)"
-              markerEnd="url(#work-scheme-arrow)"
+              strokeWidth="1.3"
+              markerMid="url(#work-scheme-arrow)"
             />
           );
         })}
@@ -176,15 +184,13 @@ export function WorkSchemeDiagram({ centerLabel, pillars }: WorkSchemeDiagramPro
           const inner = pt(SPOKE_IN, deg);
           const outer = pt(SPOKE_OUT, deg);
           return (
-            <line
+            <path
               key={`spoke-${i}`}
-              x1={inner.x}
-              y1={inner.y}
-              x2={outer.x}
-              y2={outer.y}
+              d={`M ${inner.x} ${inner.y} L ${(inner.x + outer.x) / 2} ${(inner.y + outer.y) / 2} L ${outer.x} ${outer.y}`}
+              fill="none"
               stroke="rgba(255,43,68,0.48)"
-              strokeWidth="1.15"
-              markerEnd="url(#work-scheme-arrow)"
+              strokeWidth="1.3"
+              markerMid="url(#work-scheme-arrow)"
             />
           );
         })}
@@ -205,11 +211,14 @@ export function WorkSchemeDiagram({ centerLabel, pillars }: WorkSchemeDiagramPro
               stroke={tileStroke}
               strokeWidth="1"
             />
-            <g transform="translate(0,-11) scale(0.92)">
+            <g transform="translate(0,-16) scale(1.02)">
               <PillarIcon pillarKey={node.key} />
             </g>
-            <foreignObject x={-OUTER_HALF + 3} y={14} width={(OUTER_HALF - 3) * 2} height="42">
-              <div className="flex h-full items-start justify-center break-words px-0.5 text-center text-[8px] font-medium leading-[1.12] text-white/95 sm:text-[9px]">
+            <foreignObject x={-OUTER_HALF + 3} y={12} width={(OUTER_HALF - 3) * 2} height="70">
+              <div
+                lang="ru"
+                className="flex h-full items-start justify-center break-words px-1 text-center text-[8.5px] font-medium leading-[1.1] text-white/95 [overflow-wrap:anywhere] sm:text-[9px] sm:leading-[1.12]"
+              >
                 {node.title}
               </div>
             </foreignObject>
@@ -223,21 +232,21 @@ export function WorkSchemeDiagram({ centerLabel, pillars }: WorkSchemeDiagramPro
           y={-CENTER_HALF}
           width={CENTER_HALF * 2}
           height={CENTER_HALF * 2}
-          rx={13}
+          rx={16}
           fill={tileFill}
           stroke={centerStroke}
           strokeWidth="1.08"
         />
-        <g transform="translate(0,-12) scale(0.92)">
-          <ShieldCenterIcon />
+        <g transform="translate(0,-16) scale(1.05)">
+          <BusinessCenterIcon />
         </g>
         <text
           x="0"
-          y="26"
+          y="34"
           textAnchor="middle"
           fill="rgba(255,255,255,0.96)"
-          fontSize="11.5"
-          fontWeight="600"
+          fontSize="16"
+          fontWeight="700"
           fontFamily="inherit"
           letterSpacing="0.06em"
         >

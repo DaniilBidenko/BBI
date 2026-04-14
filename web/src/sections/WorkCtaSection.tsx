@@ -22,7 +22,7 @@ export function WorkCtaSection({
   return (
     <section className="relative pb-20 pt-10 md:pb-24 md:pt-12">
       <Container className="relative mx-auto lg:w-[90%]">
-        <div className="relative overflow-hidden rounded-[28px] border border-white/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.03)_34%,rgba(10,12,17,0.84)_100%)] p-6 shadow-[0_16px_34px_rgba(0,0,0,0.38)] backdrop-blur-[1px] md:p-8">
+        <div className="bbi-hover-lift relative overflow-hidden rounded-[28px] border border-white/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.03)_34%,rgba(10,12,17,0.84)_100%)] p-6 shadow-[0_16px_34px_rgba(0,0,0,0.38)] backdrop-blur-[1px] md:p-8">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(130%_100%_at_50%_0%,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.04)_34%,rgba(255,255,255,0)_74%)]" />
           <div className="relative space-y-3">
             <h2 className="break-words text-[28px] font-semibold uppercase leading-[1.05] text-white sm:text-[34px] md:text-[44px]">

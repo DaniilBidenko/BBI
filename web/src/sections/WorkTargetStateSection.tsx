@@ -22,7 +22,7 @@ export function WorkTargetStateSection({
           {title}
         </h2>
         <div className="grid gap-5 md:grid-cols-2">
-          <div className="bbi-card rounded-[28px] border border-[rgba(255,43,68,0.26)] bg-[radial-gradient(120%_92%_at_50%_0%,rgba(255,43,68,0.22)_0%,rgba(255,43,68,0.08)_36%,rgba(255,43,68,0)_72%),linear-gradient(180deg,rgba(28,14,20,0.9)_0%,rgba(10,12,16,0.94)_100%)] px-6 py-5 backdrop-blur-[1px] md:px-7 md:py-6">
+          <div className="bbi-card bbi-hover-lift rounded-[28px] border border-[rgba(255,43,68,0.26)] bg-[radial-gradient(120%_92%_at_50%_0%,rgba(255,43,68,0.22)_0%,rgba(255,43,68,0.08)_36%,rgba(255,43,68,0)_72%),linear-gradient(180deg,rgba(28,14,20,0.9)_0%,rgba(10,12,16,0.94)_100%)] px-6 py-5 backdrop-blur-[1px] md:px-7 md:py-6">
             <div className="flex items-start gap-3.5">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] border border-[rgba(255,43,68,0.35)] bg-[rgba(255,43,68,0.18)] text-[#ff2b44]">
                 <svg
@@ -47,7 +47,7 @@ export function WorkTargetStateSection({
               </div>
             </div>
           </div>
-          <div className="bbi-card rounded-[28px] border border-[rgba(255,43,68,0.26)] bg-[radial-gradient(120%_92%_at_50%_0%,rgba(255,43,68,0.22)_0%,rgba(255,43,68,0.08)_36%,rgba(255,43,68,0)_72%),linear-gradient(180deg,rgba(28,14,20,0.9)_0%,rgba(10,12,16,0.94)_100%)] px-6 py-5 backdrop-blur-[1px] md:px-7 md:py-6">
+          <div className="bbi-card bbi-hover-lift rounded-[28px] border border-[rgba(255,43,68,0.26)] bg-[radial-gradient(120%_92%_at_50%_0%,rgba(255,43,68,0.22)_0%,rgba(255,43,68,0.08)_36%,rgba(255,43,68,0)_72%),linear-gradient(180deg,rgba(28,14,20,0.9)_0%,rgba(10,12,16,0.94)_100%)] px-6 py-5 backdrop-blur-[1px] md:px-7 md:py-6">
             <div className="flex items-start gap-3.5">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] border border-[rgba(255,43,68,0.35)] bg-[rgba(255,43,68,0.18)] text-[#ff2b44]">
                 <svg

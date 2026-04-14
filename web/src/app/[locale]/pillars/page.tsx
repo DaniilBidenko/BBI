@@ -22,6 +22,7 @@ export default async function PillarsPage({ params }: LocalePageProps) {
       title={dictionary.pillarsPage.title}
       description={dictionary.pillarsPage.description}
       ctaLabel={dictionary.pillarsPage.ctaLabel}
+      ctaButtonLabel={dictionary.pillarsPage.ctaButtonLabel}
       ctaDescription={dictionary.pillarsPage.ctaDescription}
       detailsLabel={dictionary.work.pillarsIntro.detailsLabel}
       pillars={dictionary.work.pillars}

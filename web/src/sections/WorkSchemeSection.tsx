@@ -10,8 +10,8 @@ type WorkSchemeSectionProps = {
 export function WorkSchemeSection({ centerLabel, pillars }: WorkSchemeSectionProps) {
   return (
     <section className="relative py-10 md:py-12">
-      <Container className="relative mx-auto px-4 lg:w-[85%]">
-        <div className="bbi-work-scheme-shell relative flex min-h-[200px] justify-center overflow-hidden p-3 sm:p-4 md:p-5">
+      <Container className="relative mx-auto px-2 sm:px-3 lg:w-[96%]">
+        <div className="bbi-work-scheme-shell bbi-hover-lift relative flex min-h-[260px] justify-center overflow-hidden p-2 sm:p-3 md:p-4">
           <WorkSchemeDiagram centerLabel={centerLabel} pillars={pillars} />
           <div
             className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"

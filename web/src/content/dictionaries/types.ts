@@ -44,6 +44,18 @@ export type WorkPillar = {
   result: string;
   broken: string;
   actions: string;
+  /** Rich content for the “подробнее” modal on the valuable-result (ЦКР) cards */
+  resultExpanded?: {
+    whatWeBuild: string;
+    partnerOutcomes: string[];
+  };
+  /** Expanded “broken” symptoms shown under Подробнее */
+  brokenExpanded?: string[];
+  /** Structured deliverables for the “what BBI does” cards */
+  actionsExpanded?: {
+    partnerHeading: string;
+    sections: { title: string; items: string[] }[];
+  };
 };
 
 export type WorkZone = {
@@ -58,12 +70,14 @@ export type WorkStage = {
 };
 
 export type WorkPage = {
+  /** Current page label in the work hero breadcrumbs */
+  breadcrumb: string;
   hero: {
     eyebrow: string;
     title: string;
     description: string;
     ctaLabel: string;
-    ctaHint: string;
+    ctaHint?: string;
   };
   scheme: {
     centerLabel: string;
@@ -78,6 +92,9 @@ export type WorkPage = {
     title: string;
     description: string;
     badge: string;
+    resultModalWhatWeBuild: string;
+    resultModalPartnerLabel: string;
+    resultModalCloseLabel: string;
   };
   problems: {
     title: string;
@@ -101,10 +118,13 @@ export type WorkPage = {
   };
   responsibility: {
     title: string;
+    description?: string;
     bbiTitle: string;
     clientTitle: string;
     bbi: string[];
     client: string[];
+    bbiDetailed?: { title: string; description: string }[];
+    clientDetailed?: { title: string; description: string }[];
   };
   targetState: {
     title: string;
@@ -129,15 +149,18 @@ export type PillarsPage = {
   title: string;
   description: string;
   ctaLabel: string;
+  ctaButtonLabel?: string;
   ctaDescription: string;
 };
 
 export type AboutPrinciple = {
-  text: string;
+  title: string;
+  body: string;
 };
 
 export type AboutManifesto = {
-  text: string;
+  title: string;
+  body: string;
 };
 
 export type TeamMember = {
@@ -359,6 +382,15 @@ export type Dictionary = {
     };
   };
   about: {
+    heroPages: {
+      title: string;
+      body: string;
+    }[];
+    heroNav: {
+      prev: string;
+      next: string;
+      pagesGroup: string;
+    };
     who: {
       title: string;
       text: string;

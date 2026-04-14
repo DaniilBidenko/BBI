@@ -18,7 +18,7 @@ const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
 };
 
 export function Button({ href, children, variant = "primary", className = "" }: ButtonProps) {
-  const baseClassName = `inline-flex items-center justify-center rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.07em] transition-all duration-300 ease-out ${variantClasses[variant]} ${className}`;
+  const baseClassName = `inline-flex cursor-pointer items-center justify-center rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.07em] transition-all duration-300 ease-out ${variantClasses[variant]} ${className}`;
 
   const isAnchor = href?.startsWith("#");
 

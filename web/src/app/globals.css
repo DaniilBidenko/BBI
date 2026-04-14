@@ -89,6 +89,14 @@ body {
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+button,
+a,
+[role="button"] {
+  cursor: pointer;
 }
 
 .readable {
@@ -432,16 +440,17 @@ h4 {
 
 /* «Этапы проекта» — внутренние карточки: заметнее белый cat-eye, шире по площади */
 .bbi-work-stage-card {
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   background:
-    linear-gradient(168deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.072) 28%, rgba(255, 255, 255, 0.028) 52%, rgba(255, 255, 255, 0.008) 72%, transparent 92%),
-    linear-gradient(98deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 58%),
-    radial-gradient(ellipse 155% 125% at 50% 22%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 38%, rgba(100, 104, 112, 0.08) 58%, rgba(20, 22, 28, 0.35) 78%, transparent 100%),
-    radial-gradient(ellipse 110% 90% at 50% 100%, rgba(255, 255, 255, 0.04) 0%, transparent 52%),
-    linear-gradient(180deg, rgba(22, 24, 30, 0.97) 0%, rgba(11, 13, 17, 0.99) 100%);
+    linear-gradient(168deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.058) 30%, rgba(255, 255, 255, 0.02) 52%, rgba(255, 255, 255, 0.006) 72%, transparent 92%),
+    linear-gradient(98deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.016) 40%, transparent 58%),
+    radial-gradient(ellipse 155% 125% at 50% 22%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.045) 38%, rgba(100, 104, 112, 0.07) 58%, rgba(20, 22, 28, 0.32) 78%, transparent 100%),
+    radial-gradient(ellipse 110% 90% at 50% 100%, rgba(255, 255, 255, 0.03) 0%, transparent 52%),
+    linear-gradient(180deg, rgba(21, 23, 29, 0.97) 0%, rgba(10, 12, 16, 0.99) 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+    0 12px 30px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.14);
 }
 
 .bbi-about-cta-shell {
@@ -701,6 +710,39 @@ h4 {
     inset 0 -6px 12px rgba(0, 0, 0, 0.32);
 }
 
+/* Сравнительная таблица: минималистичный liquid glass */
+.bbi-compare-table {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 38%, transparent 70%),
+    radial-gradient(ellipse 140% 110% at 18% 6%, rgba(255, 255, 255, 0.16) 0%, rgba(120, 130, 150, 0.18) 42%, transparent 70%),
+    linear-gradient(180deg, rgba(20, 20, 24, 0.9) 0%, rgba(8, 8, 10, 0.96) 100%);
+  box-shadow:
+    0 22px 54px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+}
+
+.bbi-compare-table thead th {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.1) 100%);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+}
+
+.bbi-compare-table td,
+.bbi-compare-table th {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.bbi-compare-table tbody tr {
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+.bbi-compare-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.035);
+}
+
 /* Унифицированная анимация карточек, как в "Что вы получаете от работы с нами" */
 .bbi-hover-lift {
   transition:
@@ -712,6 +754,21 @@ h4 {
 .bbi-hover-lift:hover {
   transform: translateY(-2px);
   box-shadow: 0 22px 52px rgba(0, 0, 0, 0.42);
+}
+
+/* «Кто мы»: единая анимация карточек */
+.bbi-about-animated-card {
+  transition:
+    transform 320ms ease,
+    box-shadow 320ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+  will-change: transform;
+}
+
+.bbi-about-animated-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.42);
 }
 
 /* «Что мы меняем»: тот же объём, но блик и радиал в тон --bbi-red вместо янтаря */
@@ -1323,6 +1380,14 @@ h4 {
   box-shadow: 0 20px 46px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 296 C 398 312 386 324 370 324 H 28 C 12 324 0 312 0 296 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+  transition:
+    transform 280ms ease-out,
+    box-shadow 280ms ease-out;
+}
+
+.icp-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.54);
 }
 
 .icp-card::before {
@@ -1395,6 +1460,21 @@ h4 {
   justify-content: flex-start;
   padding-top: 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Для карточек столпов: при раскрытии сохраняем вырез, но даём больше высоты */
+.icp-card[class*="icp-card--pillar"]:has(details[open]) {
+  height: auto !important;
+  overflow: hidden;
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+}
+
+.icp-card[class*="icp-card--pillar"]:has(details[open])::after {
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+}
+
+.icp-card[class*="icp-card--pillar"]:has(details[open]) .icp-card__content {
+  height: auto;
 }
 
 /* «Узнаёте себя»: кнопка "Подробнее" фиксируется внизу карточки */
@@ -1474,11 +1554,21 @@ h4 {
 .icp-card--recognize:has(details[open]) {
   height: auto !important;
   min-height: 456px;
-  clip-path: none;
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
 }
 
 .icp-card--recognize:has(details[open])::after {
-  clip-path: none;
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+}
+
+.icp-card--recognize:has(details[open]) .icp-card__content {
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.icp-card--recognize:has(details[open]) .icp-card__footer {
+  position: static;
+  width: auto;
 }
 
 @media (max-width: 640px) {
@@ -1490,6 +1580,11 @@ h4 {
   .icp-card--recognize:has(details[open]) {
     height: auto !important;
     min-height: 430px;
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 900 C 344 915 332 926 318 926 H 24 C 11 926 0 915 0 900 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+  }
+
+  .icp-card--recognize:has(details[open])::after {
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 900 C 344 915 332 926 318 926 H 24 C 11 926 0 915 0 900 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 }
 
@@ -1742,6 +1837,14 @@ h4 {
   .icp-card--pillar-actions .icp-card__title {
     min-height: 58px;
     padding-left: 88px;
+  }
+
+  .icp-card[class*="icp-card--pillar"]:has(details[open]) {
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 900 C 344 915 332 926 318 926 H 24 C 11 926 0 915 0 900 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
+  }
+
+  .icp-card[class*="icp-card--pillar"]:has(details[open])::after {
+    clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 900 C 344 915 332 926 318 926 H 24 C 11 926 0 915 0 900 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 
   .icp-card--recognize {

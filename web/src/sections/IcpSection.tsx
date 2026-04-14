@@ -39,7 +39,7 @@ export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref 
               key={card.href}
               className="group relative flex h-full min-h-0 flex-col overflow-visible"
             >
-              <span className="icp-card__index icp-card__index--recognize absolute z-20 flex items-center justify-center text-[42px] font-semibold leading-none text-white/92">
+              <span className="icp-card__index icp-card__index--recognize absolute z-20 flex items-center justify-center text-[42px] font-semibold leading-none text-white/92 transition-transform duration-300 ease-out group-hover:-translate-y-0.5">
                 {index + 1}
               </span>
               <div className="icp-card icp-card--recognize bbi-hover-lift relative mt-2 ml-2 !h-auto">
@@ -63,7 +63,7 @@ export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref 
                         </span>
                       </summary>
                       {(card.modalLead || (card.symptoms && card.symptoms.length > 0)) && (
-                        <div className="mt-2.5 space-y-2 text-[14px] leading-[1.5] text-white/72 md:text-[14.5px]">
+                        <div className="mt-2.5 max-h-[28vh] space-y-2 overflow-y-auto pr-1 text-[14px] leading-[1.5] text-white/72 md:max-h-[240px] md:text-[14.5px]">
                           {card.modalLead && <p>{card.modalLead}</p>}
                           {card.symptoms && card.symptoms.length > 0 && (
                             <ul className="list-disc space-y-1 pl-4">

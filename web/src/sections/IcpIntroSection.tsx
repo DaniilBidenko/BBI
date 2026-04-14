@@ -30,6 +30,12 @@ const WARNING_ICON = (
 );
 
 export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabel = "Не подходим" }: IcpIntroSectionProps) {
+  const excludeParts = exclude
+    .split("\n")
+    .map((part) => part.trim())
+    .filter(Boolean);
+  const [excludeLead, ...excludeItems] = excludeParts;
+
   return (
     <section className="relative py-10 md:py-12">
       <div className="absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
@@ -106,9 +112,16 @@ export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabe
               {WARNING_ICON}
               {excludeLabel}
             </h4>
-            <p className="mx-auto mt-2.5 text-[12px] leading-[1.45] text-white/74 sm:whitespace-nowrap md:text-[13px]">
-              {exclude}
-            </p>
+            {excludeLead && <p className="mx-auto mt-2.5 text-[14px] leading-[1.45] text-white/78 md:text-[15px]">{excludeLead}</p>}
+            {excludeItems.length > 0 && (
+              <div className="mx-auto mt-3 max-w-[1120px] space-y-2.5 text-left">
+                {excludeItems.map((item) => (
+                  <p key={item} className="text-[13px] leading-[1.5] text-white/78 md:text-[14px]">
+                    {item}
+                  </p>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </Container>

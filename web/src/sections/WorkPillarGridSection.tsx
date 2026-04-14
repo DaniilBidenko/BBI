@@ -53,17 +53,39 @@ function PillarGridCard({
   field,
   body,
   detailsLabel,
+  whatWeBuildLabel,
+  partnerLabel,
 }: {
   pillar: WorkPillar;
   index: number;
   field: "result" | "broken" | "actions";
   body: string;
   detailsLabel: string;
+  whatWeBuildLabel: string;
+  partnerLabel: string;
 }) {
+  const hasActionsExpanded = field === "actions" && pillar.actionsExpanded;
+  const detailItems = pillar.details.filter((item) => !item.endsWith(":"));
+  const summaryText = hasActionsExpanded
+    ? ""
+    : field === "result" && pillar.resultExpanded
+      ? pillar.resultExpanded.whatWeBuild
+      : field === "broken"
+        ? ""
+        : pillar.summary;
+  const listItems = hasActionsExpanded
+    ? []
+    : field === "result" && pillar.resultExpanded
+      ? pillar.resultExpanded.partnerOutcomes
+      : field === "broken" && pillar.brokenExpanded
+        ? pillar.brokenExpanded
+        : detailItems;
+  const expandedLabel = field === "broken" ? "Как это выглядит на практике" : whatWeBuildLabel;
+
   return (
     <article className="group relative flex h-full min-h-0 min-w-0 flex-col overflow-visible">
       <span
-        className={`${indexClass[field]} absolute z-20 flex items-center justify-center text-[34px] font-semibold leading-none sm:text-[38px] md:text-[40px] lg:text-[42px]`}
+        className={`${indexClass[field]} absolute z-20 flex items-center justify-center text-[34px] font-semibold leading-none transition-transform duration-300 ease-out group-hover:-translate-y-0.5 sm:text-[38px] md:text-[40px] lg:text-[42px]`}
         aria-hidden
       >
         {index + 1}
@@ -80,8 +102,68 @@ function PillarGridCard({
           <div className="icp-card__body mt-1.5 text-[0.875rem] leading-[1.52] text-white/78 sm:mt-2 sm:text-[0.9375rem] sm:leading-[1.48] md:text-[0.96875rem] md:leading-[1.48] lg:text-[1rem]">
             <p className="line-clamp-[5] break-words sm:line-clamp-4 md:line-clamp-[5] xl:line-clamp-4">{body}</p>
           </div>
-          <div className="icp-card__footer">
-            <span className={detailsTextClass[field]}>{`${detailsLabel} >>`}</span>
+          <div className="icp-card__footer mt-auto pt-2">
+            <details className="group/details">
+              <summary
+                className={`${detailsTextClass[field]} inline-flex cursor-pointer list-none items-center gap-1.5 marker:hidden [&::-webkit-details-marker]:hidden`}
+              >
+                <span>{detailsLabel}</span>
+                <span className="text-[12px] font-semibold transition-transform duration-200 group-open/details:rotate-90" aria-hidden>
+                  &gt;&gt;
+                </span>
+              </summary>
+              <div className="mt-0 max-h-0 overflow-hidden rounded-xl border border-white/10 bg-black/20 p-0 text-left opacity-0 transition-all duration-300 ease-out group-open/details:mt-3 group-open/details:max-h-[30vh] group-open/details:overflow-y-auto group-open/details:p-3 group-open/details:opacity-100 sm:group-open/details:max-h-[260px] sm:group-open/details:p-3.5">
+                {hasActionsExpanded && pillar.actionsExpanded ? (
+                  <>
+                    <p className="text-[0.875rem] font-medium leading-[1.45] text-white/90 sm:text-[0.9375rem]">
+                      {pillar.actionsExpanded.partnerHeading}
+                    </p>
+                    {pillar.actionsExpanded.sections.map((section, si) => (
+                      <div key={`${pillar.key}-act-${si}`} className={si === 0 ? "mt-3" : "mt-4"}>
+                        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-white/70">
+                          {section.title}
+                        </p>
+                        <ul className="mt-2 space-y-2">
+                          {section.items.map((item, itemIndex) => (
+                            <li
+                              key={`${pillar.key}-act-${si}-${itemIndex}`}
+                              className="flex gap-2 text-[0.8125rem] leading-[1.45] text-white/82"
+                            >
+                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/70" aria-hidden />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  <>
+                    {summaryText ? (
+                      <p className="text-[0.875rem] leading-[1.52] text-white/88 sm:text-[0.9375rem]">{summaryText}</p>
+                    ) : null}
+                    {listItems.length > 0 ? (
+                      <>
+                        <p className="mt-3 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-white/70">
+                          {field === "result" && pillar.resultExpanded ? partnerLabel : expandedLabel}
+                        </p>
+                        <ul className="mt-2 space-y-2">
+                          {listItems.map((item, itemIndex) => (
+                            <li
+                              key={`${pillar.key}-${field}-${itemIndex}`}
+                              className="flex gap-2 text-[0.8125rem] leading-[1.45] text-white/82"
+                            >
+                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/70" aria-hidden />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : null}
+                  </>
+                )}
+              </div>
+            </details>
           </div>
         </div>
       </div>
@@ -101,12 +183,15 @@ export function WorkPillarGridSection({
   detailsLabel,
 }: WorkPillarGridSectionProps) {
   const header = headerStyles[field];
+  const showBadge = Boolean(badge.trim());
+  const whatWeBuildLabel = "Что строим";
+  const partnerLabel = "Что остаётся у партнёра";
 
   return (
     <section className={`${header.section} overflow-x-clip`}>
       <Container className="relative mx-auto max-w-[min(100%,72rem)] space-y-8 px-4 sm:space-y-9 sm:px-6 md:space-y-10 lg:w-[min(92%,76rem)] lg:px-8 xl:w-[min(92%,78rem)] 2xl:max-w-7xl">
         <div className="flex flex-col items-center gap-2.5 px-0.5 text-center sm:gap-3 sm:px-4 md:gap-3.5">
-          <div className={header.headerBadge}>{badge}</div>
+          {showBadge ? <div className={header.headerBadge}>{badge}</div> : null}
           <h2 className="max-w-[22rem] text-[1.375rem] font-semibold leading-tight tracking-tight text-white sm:max-w-none sm:text-2xl md:text-3xl lg:text-[2rem] lg:leading-[1.15]">
             {title}
           </h2>
@@ -125,6 +210,8 @@ export function WorkPillarGridSection({
                 field="result"
                 body={pillar[field]}
                 detailsLabel={detailsLabel}
+                whatWeBuildLabel={whatWeBuildLabel}
+                partnerLabel={partnerLabel}
               />
             ))}
           </div>
@@ -146,6 +233,8 @@ export function WorkPillarGridSection({
                   field="broken"
                   body={pillar[field]}
                   detailsLabel={detailsLabel}
+                  whatWeBuildLabel={whatWeBuildLabel}
+                  partnerLabel={partnerLabel}
                 />
               ))}
             </div>
@@ -162,6 +251,8 @@ export function WorkPillarGridSection({
                 field="actions"
                 body={pillar[field]}
                 detailsLabel={detailsLabel}
+                whatWeBuildLabel={whatWeBuildLabel}
+                partnerLabel={partnerLabel}
               />
             ))}
           </div>

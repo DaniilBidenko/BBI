@@ -5,7 +5,7 @@ export const en: Dictionary = {
     items: [
       { label: "Home", href: "/" },
       { label: "About BBI", href: "/about" },
-      { label: "How We Work", href: "/work" },
+      { label: "How we work", href: "/work" },
       { label: "Cases", href: "/cases" },
       { label: "Blog", href: "/blog" },
       { label: "Contacts", href: "/contacts" },
@@ -13,13 +13,13 @@ export const en: Dictionary = {
     cta: "Start",
   },
   work: {
+    breadcrumb: "How we work",
     hero: {
       eyebrow: "Operating Partner Model",
       title: "6 pillars: one system, not a bundle of services",
       description:
         "We don’t sell operations separately from marketing, or marketing separately from finance. Business is a system. A hole in one pillar collapses the rest. BBI enters all six and builds a single management contour.",
       ctaLabel: "6 PILLARS OF BBI",
-      ctaHint: "Open the pillars page",
     },
     scheme: {
       centerLabel: "Business",
@@ -33,7 +33,7 @@ export const en: Dictionary = {
     pillars: [
       {
         key: "operations",
-        title: "Operations",
+        title: "Operational efficiency",
         group: "Leverage",
         groupLabel: "Leverage",
         summary:
@@ -44,11 +44,50 @@ export const en: Dictionary = {
           "Dashboards, deadlines, and quality control.",
         ],
         result:
-          "The business runs on rhythm and rules, not on team mood.",
+          "The business no longer depends on the owner being present. Every process runs by the rules — no matter who is in the office today.",
+        resultExpanded: {
+          whatWeBuild:
+            "Management cadence, SOPs, org chart, RACI, and KPI dashboards. Every owner is assigned; every metric is visible in real time.",
+          partnerOutcomes: [
+            "The owner spends up to ~10 hours per week on operations instead of constant hands-on control",
+            "The business keeps running when a key person is on leave or has left",
+            "Decisions follow a protocol — not a call to the owner",
+            "Growth scales by design instead of creating a new layer of chaos",
+          ],
+        },
         broken:
           "Firefighting, chaos, manual control, and dependency on people.",
         actions:
-          "We build org structure, regulations, cadence, and control.",
+          "We build management architecture: who owns what, how decisions are made, and how execution is controlled. The business runs on rhythm and rules — not mood.",
+        actionsExpanded: {
+          partnerHeading: "What the partner receives:",
+          sections: [
+            {
+              title: "Documents & tools",
+              items: [
+                "Org chart with responsibility zones and decision hierarchy",
+                "SOPs for key processes",
+                "RACI matrix: owner, executor, approver — per process",
+                "Management meeting system (cadence): format, participants, cadence, minutes",
+              ],
+            },
+            {
+              title: "Metrics & dashboards",
+              items: [
+                "KPI dashboard: business state on one screen — without manual data collection",
+                "Execution control metrics: plan vs. actual on key indicators",
+                "Escalation points: when and to whom issues rise — without calling the owner",
+              ],
+            },
+            {
+              title: "Also",
+              items: [
+                "New hire adaptation checklists",
+                "Management cadence playbook the team can sustain on its own",
+              ],
+            },
+          ],
+        },
       },
       {
         key: "marketing",
@@ -63,11 +102,50 @@ export const en: Dictionary = {
           "Stable demand without budget leaks.",
         ],
         result:
-          "Clear cost per lead/client and controlled growth.",
+          "You know the cost of a lead and a client, which channel works — and who owns every account and dataset.",
+        resultExpanded: {
+          whatWeBuild:
+            "End-to-end analytics from first touch to payment, channel audit, acquisition economics, and transferring ownership of all ad accounts and databases to the company.",
+          partnerOutcomes: [
+            "All access and databases stay with the company — changing an agency does not erase history",
+            "A clear picture of which channel earns, which spends, and why",
+            "Marketing budget is allocated from data, not gut feel",
+            "Lead flow is manageable and forecastable — without a “star” contractor",
+          ],
+        },
         broken:
           "Budget leakage, no forecasts, and weak effectiveness control.",
         actions:
-          "We set analytics, funnels, budgets, and growth metrics.",
+          "We set up end-to-end analytics, transfer ownership of all accounts and databases, and build a model where every penny ties to outcomes.",
+        actionsExpanded: {
+          partnerHeading: "What the partner receives:",
+          sections: [
+            {
+              title: "Documents & tools",
+              items: [
+                "Acquisition channel map with economics: lead cost, CPL, customer cost",
+                "Current channel audit: what works, what burns budget — with numbers",
+                "Marketing budget allocation model by channels and goals",
+                "Playbook for managing ad accounts on the company side",
+              ],
+            },
+            {
+              title: "Metrics & dashboards",
+              items: [
+                "End-to-end analytics dashboard: first touch to payment",
+                "Funnel metrics per channel: impressions → leads → qualification → sale",
+                "LTV and ROI by customer segments",
+              ],
+            },
+            {
+              title: "Also",
+              items: [
+                "All accounts, databases, and access transferred to the company — documented",
+                "Regulation for agencies and contractors: who owns what",
+              ],
+            },
+          ],
+        },
       },
       {
         key: "sales",
@@ -82,11 +160,50 @@ export const en: Dictionary = {
           "Results stay stable when people change.",
         ],
         result:
-          "Sales are predictable and not tied to individual heroes.",
+          "Sales rest on a system, not on two star managers. Results are repeatable and predictable.",
+        resultExpanded: {
+          whatWeBuild:
+            "Scripts, lead-handling standards, CRM control, qualification funnel, and onboarding for new managers.",
+          partnerOutcomes: [
+            "Sales do not stop when a key manager leaves",
+            "A new hire reaches plan-level performance in 2–4 weeks",
+            "The owner sees the funnel in real time — without chasing reports",
+            "Revenue is predictable: plan vs. actual aligns — not “whatever this month brings”",
+          ],
+        },
         broken:
           "Dependence on stars and drops when people leave.",
         actions:
-          "We build sales system, standards, training, and control.",
+          "We build a system where results do not depend on “stars.” Any new manager reaches plan-level performance in 2–4 weeks — by playbook, not by gut feel.",
+        actionsExpanded: {
+          partnerHeading: "What the partner receives:",
+          sections: [
+            {
+              title: "Documents & tools",
+              items: [
+                "Sales scripts for each funnel stage and client type",
+                "Lead handling regulation: first touch to closed deal",
+                "CRM architecture: funnel structure, statuses, fields, automations",
+                "New manager onboarding: reach results in 2–4 weeks",
+              ],
+            },
+            {
+              title: "Metrics & dashboards",
+              items: [
+                "Live sales funnel: conversion at each stage",
+                "Manager KPIs: plan vs. actual on revenue, deals, conversion",
+                "“Lost leads” metric: where and why clients drop off",
+              ],
+            },
+            {
+              title: "Also",
+              items: [
+                "Manager training and certification system",
+                "Quality control regulation for calls and chats",
+              ],
+            },
+          ],
+        },
       },
       {
         key: "finance",
@@ -101,15 +218,54 @@ export const en: Dictionary = {
           "Cashflow discipline and risk control.",
         ],
         result:
-          "The owner sees real profit and makes decisions on data.",
+          "The owner sees real profit, not rough estimates. Decisions are data-driven, not feelings-driven.",
+        resultExpanded: {
+          whatWeBuild:
+            "Management accounting, plan vs. actual, payment calendar, P&L by line of business, and surfacing hidden financial leaks.",
+          partnerOutcomes: [
+            "“Where is my money?” — answered in minutes, not days",
+            "Decisions are based on data, not intuition",
+            "Financial holes and hidden leaks are found and closed",
+            "The business is ready for investors or banks: numbers are clear and defensible",
+          ],
+        },
         broken:
           "No single source of truth, cash gaps, blind spots.",
         actions:
-          "We build financial model, reporting, and control rules.",
+          "We set up management accounting and a financial model. The owner sees real profit, cash movement, and cash gaps — early, not after the fact.",
+        actionsExpanded: {
+          partnerHeading: "What the partner receives:",
+          sections: [
+            {
+              title: "Documents & tools",
+              items: [
+                "Management P&L by business lines",
+                "Cash flow (CF) statement: real picture by period",
+                "Payment calendar: cash gaps visible 2–4 weeks ahead",
+                "Financial model: breakeven, margin, unit economics",
+              ],
+            },
+            {
+              title: "Metrics & dashboards",
+              items: [
+                "Finance dashboard: revenue, profit, margin, expenses — one screen",
+                "Line-of-business view: what earns, what drags profit down",
+                "Plan vs. actual on all key financial metrics",
+              ],
+            },
+            {
+              title: "Also",
+              items: [
+                "Report on found financial leaks and how to close them",
+                "Finance regulations: who approves what spend, when",
+              ],
+            },
+          ],
+        },
       },
       {
         key: "hr",
-        title: "HR",
+        title: "HR & team",
         group: "Shield",
         groupLabel: "Shield",
         summary:
@@ -120,15 +276,54 @@ export const en: Dictionary = {
           "Evaluation system and talent growth.",
         ],
         result:
-          "Stable team, fixed roles, growth without system breaks.",
+          "The team is stable: roles are fixed, expertise lives in the system — not in people. Someone leaving is not a disaster.",
+        resultExpanded: {
+          whatWeBuild:
+            "Role profiles, hiring system, onboarding program, performance reviews, and bench coverage for critical functions.",
+          partnerOutcomes: [
+            "Any departure is a planned handover — not a function collapse",
+            "Hiring follows a standard: we take the right people, not “whoever showed up”",
+            "New hires plug into the system — they do not break it",
+            "Expertise is stored in processes and policies — not in two people’s heads",
+          ],
+        },
         broken:
           "Turnover, chaotic hiring, dependence on key people.",
         actions:
-          "We build HR processes, role profiles, and evaluation.",
+          "We build HR processes from hiring to evaluation. Expertise lives in the system — not in people. A departure no longer breaks the function.",
+        actionsExpanded: {
+          partnerHeading: "What the partner receives:",
+          sections: [
+            {
+              title: "Documents & tools",
+              items: [
+                "Role profiles for key roles: competencies, KPIs, ownership zones",
+                "Hiring funnel with evaluation criteria and selection method",
+                "Onboarding program: first 30–90 days with checklists and control points",
+                "Performance system: outcome metrics and regular reviews",
+              ],
+            },
+            {
+              title: "Metrics & dashboards",
+              items: [
+                "HR dashboard: turnover, time-to-performance, team NPS",
+                "Talent bench map: who is ready to grow into which roles",
+                "Succession matrix for critical functions",
+              ],
+            },
+            {
+              title: "Also",
+              items: [
+                "Offboarding regulation: handover of tasks, access, and knowledge by protocol",
+                "Company knowledge base: expertise captured inside the system",
+              ],
+            },
+          ],
+        },
       },
       {
         key: "legal",
-        title: "Legal protection",
+        title: "Asset protection",
         group: "Shield",
         groupLabel: "Shield",
         summary:
@@ -139,17 +334,59 @@ export const en: Dictionary = {
           "Legal audit and risk reduction.",
         ],
         result:
-          "The asset is protected: rights, data, and contracts.",
+          "Assets, data, and rights belong to the company — legally and technically. Not to individuals or contractors.",
+        resultExpanded: {
+          whatWeBuild:
+            "NDAs, employment agreements, contractor agreements, IP protection, and a legal audit of existing gaps.",
+          partnerOutcomes: [
+            "Key assets — databases, access, IP, brand — legally belong to the company",
+            "An employee or contractor leaving does not threaten the business",
+            "Protected against data theft, “irreplaceable” extortion, and loss of client bases",
+            "Legal setup is ready for scrutiny from investors, banks, or partners",
+          ],
+        },
         broken:
           "Lawsuit risks, data leaks, and asset vulnerabilities.",
         actions:
-          "We close legal risks and build a protective contour.",
+          "We close legal gaps and build a protective perimeter: rights to assets, data, and IP — with the company, not with people and contractors.",
+        actionsExpanded: {
+          partnerHeading: "What the partner receives:",
+          sections: [
+            {
+              title: "Documents & tools",
+              items: [
+                "NDAs and confidentiality templates for employees, partners, and contractors",
+                "Employment agreements protecting trade secrets and work results",
+                "Contractor agreements: rights to deliverables, content, and data — on the company side",
+                "Data storage and access regulation: who accesses what, under what terms",
+              ],
+            },
+            {
+              title: "Audit & risk maps",
+              items: [
+                "Legal audit: vulnerability map with closure priorities",
+                "Company asset register: what is formalized, what is not, what to fix",
+                "IP protection checklist: brand, product, content — formalized as assets",
+              ],
+            },
+            {
+              title: "Also",
+              items: [
+                "Access handover regulation when a contractor changes or an employee leaves",
+                "Document pack ready for investor, bank, or partner due diligence",
+              ],
+            },
+          ],
+        },
       },
     ],
     results: {
       title: "Valuable end result (VER)",
       description: "What the owner gets from each pillar.",
-      badge: "VER",
+      badge: "",
+      resultModalWhatWeBuild: "What we build",
+      resultModalPartnerLabel: "What stays with the partner",
+      resultModalCloseLabel: "Close",
     },
     problems: {
       title: "When a pillar is broken",
@@ -157,8 +394,9 @@ export const en: Dictionary = {
       badge: "Risks",
     },
     actions: {
-      title: "What BBI does",
-      description: "How we build the system in each pillar.",
+      title: "What BBI does concretely in your business",
+      description:
+        "We don’t give recommendations and leave after diagnostics. Across all six directions we build, implement, and hand over concrete tools — everything stays with the partner after the project.",
       badge: "BBI",
     },
     format: {
@@ -605,6 +843,28 @@ export const en: Dictionary = {
     },
   },
   about: {
+    heroNav: {
+      prev: "Previous screen",
+      next: "Next screen",
+      pagesGroup: "Panel pages",
+    },
+    heroPages: [
+      {
+        title: "Bold Brands International",
+        body:
+          "Operating Partner for owners and CEOs. We turn scattered practices into one coherent system: a management loop, financial truth, and protected assets you can lean on for growth.",
+      },
+      {
+        title: "Shield, Leverage, System",
+        body:
+          "We build the Shield (ownership and asset protection), Leverage (operating system, sales, analytics), and System (management rhythm, standards, RACI) so the business runs on a mechanism, not on “heroes.”",
+      },
+      {
+        title: "The owner’s partner through growth stages",
+        body:
+          "Our job is to make the business read as a manageable asset: one financial picture, secured rights to key assets, and a system.",
+      },
+    ],
     who: {
       title: "Who we are",
       text:
@@ -615,20 +875,61 @@ export const en: Dictionary = {
     principles: {
       title: "Key beliefs",
       items: [
-        { text: "We stand with owners and CEOs who carry full responsibility." },
-        { text: "We choose an honest view of the business, even if painful." },
-        { text: "System matters more than talent." },
-        { text: "Personal experience. We know threats firsthand." },
+        {
+          title: "We stand with the owner and the CEO",
+          body:
+            "Not a neutral position “between everyone.” We stand with the person who carries real risk—financial, reputational, operational. Their interests drive every decision we make.",
+        },
+        {
+          title: "We stand for an honest view of the business—even when it’s uncomfortable",
+          body:
+            "Calling problems by their names isn’t harshness—it’s respect. We show where the business really loses money, control, and value. A comfortable illusion costs more than hard truth—in money and time.",
+        },
+        {
+          title: "The system always matters more than talent",
+          body:
+            "“Irreplaceable” people are risk dressed up as value. We build models where expertise lives in processes and company standards, not in one person’s head. Anyone leaving is a planned handover, not a catastrophe.",
+        },
+        {
+          title: "We know threats from the inside—not from textbooks",
+          body:
+            "The situations we work with—database theft, extortion by “irreplaceables,” opaque finance schemes, agency dependency—we’ve unpacked in real businesses and faced ourselves. This isn’t theory. It’s practice we can recognize and close before it does damage.",
+        },
       ],
     },
     manifesto: {
       title: "What we stand against",
       items: [
-        { text: "We are against empty hype." },
-        { text: "We are against “services” instead of a system." },
-        { text: "We are against dependency on people." },
-        { text: "We are against opacity." },
-        { text: "We are against firefighting." },
+        {
+          title: "Against empty promises.",
+          body:
+            "Recommendations, strategies, and pretty decks that never get implemented are an illusion of work. We take responsibility for changes becoming real practice, not files archived for history.",
+        },
+        {
+          title: "Against “services” instead of a system.",
+          body:
+            "One-off actions with no links between them create local effect and do not change business architecture. We do not just close tasks - we build a management loop where tasks are solved systematically and repeatably.",
+        },
+        {
+          title: "Against dependency on people.",
+          body:
+            "A business held by two or three key people is not an asset but a vulnerability. Losing one can stop a function or damage client relationships. We build systems that work independently of specific personalities.",
+        },
+        {
+          title: "Against opacity.",
+          body:
+            "Hidden arrangements, gray finance schemes, and databases or accesses kept by contractors all reduce business value and create risks the owner learns about last. Transparency is not optional - it is a baseline for a manageable business.",
+        },
+        {
+          title: "Against firefighting mode.",
+          body:
+            "Constant urgent mode leaves no capacity for systemic change. We do not come to survive the next crisis - we come so crises stop being the normal way of working.",
+        },
+        {
+          title: "Against doing the owner's work for them.",
+          body:
+            "We are not a team replacement and not an external CEO. Our task is to build and transfer a system so the business remains fully independent after we leave. Dependency on BBI after project completion = 0.",
+        },
       ],
     },
     team: {

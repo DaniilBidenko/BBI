@@ -49,7 +49,7 @@ export function WorkFormatSection({
             {zones.map((zone) => (
               <div
                 key={zone.label}
-                className="bbi-card relative min-h-[146px] rounded-[22px] border border-white/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.03)_38%,rgba(10,12,17,0.78)_100%)] px-5 pb-6 pt-8 backdrop-blur-[1px] sm:px-7 sm:pb-7 sm:pt-9"
+                className="bbi-card bbi-hover-lift relative min-h-[146px] rounded-[22px] border border-white/14 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.03)_38%,rgba(10,12,17,0.78)_100%)] px-5 pb-6 pt-8 backdrop-blur-[1px] sm:px-7 sm:pb-7 sm:pt-9"
               >
                 <div className="absolute -top-8 left-1/2 z-10 -translate-x-1/2 rounded-[18px] border border-white/16 bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(255,255,255,0.02)_42%,rgba(14,16,22,0.92)_100%)] p-2.5 shadow-[0_12px_24px_rgba(0,0,0,0.35)]">
                   <span

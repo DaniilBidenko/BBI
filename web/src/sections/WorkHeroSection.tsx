@@ -9,11 +9,8 @@ type WorkHeroSectionProps = {
   title: string;
   description: string;
   ctaLabel: string;
-  ctaHint: string;
+  ctaHint?: string;
   ctaHref: string;
-  breadcrumbHome: string;
-  breadcrumbCurrent: string;
-  breadcrumbHomeHref: string;
 };
 
 export function WorkHeroSection({
@@ -23,29 +20,29 @@ export function WorkHeroSection({
   ctaLabel,
   ctaHint,
   ctaHref,
-  breadcrumbHome,
-  breadcrumbCurrent,
-  breadcrumbHomeHref,
 }: WorkHeroSectionProps) {
   const slides = useMemo(
     () => [
       {
-        lead: description,
-        title: "Система вместо хаоса",
-        body: "Мы проектируем единый контур управления и внедряем его вместе с вашей командой.",
+        lead:
+          "Мы не продаем операционку отдельно от маркетинга, а маркетинг — отдельно от финансов. BBI заходит во все шесть столпов и строит единый управленческий контур: где каждая функция связана с остальными через метрики, ответственность и ритм.",
+        title: "",
+        body: "",
       },
       {
-        lead: "Мы не лечим симптомы, а устраняем первопричины.",
-        title: "Диагностика и архитектура",
-        body: "Показываем, где бизнес теряет управляемость, и собираем рабочую модель роста.",
+        lead:
+          "Мы начинаем с диагностики: находим реальные первопричины — где бизнес теряет деньги, управляемость и стоимость. Затем проектируем целевую архитектуру: операционную модель, которая устраняет эти разрывы и создаёт рабочую основу для управляемого роста.",
+        title: "",
+        body: "",
       },
       {
-        lead: "BBI заходит во все 6 столпов, а не в один участок.",
-        title: "Внедрение 45+ дней",
-        body: "Изменения переходят в регулярную практику, чтобы система работала без ручного контроля.",
+        lead:
+          "BBI остаётся внутри бизнеса на протяжении всего внедрения — 90+ рабочих дней. За это время изменения проходят путь от схемы до ежедневной практики: встречи проходят по новому формату, решения принимаются по протоколу, метрики отслеживаются системой, а не вручную. Мы уходим только тогда, когда новая модель управления работает без нашего участия.",
+        title: "",
+        body: "",
       },
     ],
-    [description],
+    [],
   );
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -74,31 +71,28 @@ export function WorkHeroSection({
         <div className="absolute inset-x-0 bottom-0 h-[62%] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.32)_36%,rgba(0,0,0,0.62)_66%,rgba(0,0,0,0.88)_86%,#000_100%)]" />
       </div>
       <Container className="relative z-10 mx-auto lg:w-[90%]">
-        <div className="mb-10 flex flex-wrap items-center gap-2.5 text-[12px]">
-          <Link href={breadcrumbHomeHref} className="text-white/48 transition hover:text-white/72">
-            {breadcrumbHome}
-          </Link>
-          <span className="bbi-work-breadcrumb-pill">{breadcrumbCurrent}</span>
-        </div>
+        <div className="mb-10" />
         <div className="grid gap-8 lg:grid-cols-[minmax(0,2.35fr)_minmax(0,1fr)] lg:items-start lg:gap-7 xl:gap-8">
           <div className="min-w-0 space-y-6 lg:pr-0">
             <span className="text-sm uppercase tracking-[0.34em] text-[#f3c546]">{eyebrow}</span>
             <h1 className="max-w-none break-words text-[34px] font-semibold uppercase leading-[1.05] tracking-tight text-white sm:text-[46px] md:text-[58px] lg:text-[68px] xl:text-[72px]">
               {title}
             </h1>
-            <p className="max-w-[40ch] break-words text-[15px] leading-[1.5] text-white/90 sm:text-[16px] md:max-w-[48ch] md:text-[17px] lg:max-w-[58ch] lg:text-[18px]">
+            <p className="max-w-[40ch] whitespace-pre-line break-words text-[15px] leading-[1.5] text-white/90 sm:text-[16px] md:max-w-[48ch] md:text-[17px] lg:max-w-[58ch] lg:text-[18px]">
               {description}
             </p>
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <Link
                 href={ctaHref}
-                className="inline-flex h-10 items-center justify-center rounded-full bg-[var(--bbi-red)] px-6 text-[12px] font-semibold uppercase tracking-[0.04em] text-white transition hover:opacity-90"
+                className="inline-flex min-h-10 items-center justify-center rounded-full bg-[var(--bbi-red)] px-5 py-2 text-[12px] font-semibold leading-snug text-white transition hover:opacity-90 sm:px-6"
               >
                 {ctaLabel}
               </Link>
-              <span className="text-[11px] uppercase tracking-[0.18em] text-white/42 sm:text-[12px] sm:tracking-[0.2em]">
-                {ctaHint}
-              </span>
+              {ctaHint ? (
+                <span className="text-[11px] uppercase tracking-[0.18em] text-white/42 sm:text-[12px] sm:tracking-[0.2em]">
+                  {ctaHint}
+                </span>
+              ) : null}
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-[min(100%,580px)] rounded-[28px] border border-[rgba(255,43,68,0.56)] bg-[rgba(10,10,14,0.44)] p-6 text-[15px] leading-[1.42] text-[rgba(255,43,68,0.84)] backdrop-blur-[1px] sm:p-7 md:max-w-[640px] lg:mx-0 lg:mt-[148px] lg:max-w-none lg:p-8">
@@ -115,15 +109,10 @@ export function WorkHeroSection({
                   />
                 ))}
               </div>
-              <p className="line-clamp-4 text-[14px] leading-[1.42] text-[rgba(255,43,68,0.92)] sm:text-[15px] md:text-[16px]">
+              <p className="text-[14px] leading-[1.42] text-[rgba(255,43,68,0.92)] sm:text-[15px] md:text-[16px]">
                 {slides[activeIndex].lead}
               </p>
-              <div className="flex items-end gap-4">
-                <p className="min-w-0 flex-1 text-[14px] leading-[1.42] text-[rgba(255,43,68,0.92)] sm:text-[15px] md:text-[16px]">
-                  <span className="line-clamp-6">
-                    {slides[activeIndex].title}. {slides[activeIndex].body}
-                  </span>
-                </p>
+              <div className="flex justify-end">
                 <button
                   type="button"
                   aria-label="Next slide"

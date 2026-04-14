@@ -5,9 +5,6 @@ type CasesHeroSectionProps = {
   eyebrow: string;
   title: string;
   description: string;
-  breadcrumbHome: string;
-  breadcrumbCurrent: string;
-  breadcrumbHomeHref: string;
   /** Фон секции; по умолчанию — war room / дашборды */
   heroImage?: string;
 };
@@ -16,9 +13,6 @@ export function CasesHeroSection({
   eyebrow,
   title,
   description,
-  breadcrumbHome,
-  breadcrumbCurrent,
-  breadcrumbHomeHref,
   heroImage = "/brand/cases-war-room-hero.png",
 }: CasesHeroSectionProps) {
   return (
@@ -38,12 +32,6 @@ export function CasesHeroSection({
         <div className="absolute inset-x-0 bottom-0 h-[78%] min-h-[52vh] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.06)_14%,rgba(0,0,0,0.22)_32%,rgba(0,0,0,0.45)_52%,rgba(0,0,0,0.65)_72%,rgba(0,0,0,0.82)_88%,rgba(0,0,0,0.94)_96%,#000_100%)]" />
       </div>
       <Container className="relative z-10 mx-auto lg:w-[90%]">
-        <div className="mb-10 flex flex-wrap items-center gap-2.5 text-[12px]">
-          <Link href={breadcrumbHomeHref} className="text-white/48 transition hover:text-white/72">
-            {breadcrumbHome}
-          </Link>
-          <span className="bbi-work-breadcrumb-pill">{breadcrumbCurrent}</span>
-        </div>
         <div className="max-w-4xl space-y-6 sm:space-y-7 md:space-y-9 lg:space-y-10">
           <span className="block text-[11px] uppercase tracking-[0.28em] text-[rgba(200,158,88,0.96)] sm:text-sm sm:tracking-[0.34em]">
             {eyebrow}

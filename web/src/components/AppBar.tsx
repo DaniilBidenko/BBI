@@ -77,7 +77,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
               <Link
                 key={item.href}
                 href={withLocale(locale, item.href)}
-                className={`whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-medium leading-[1.1] transition hover:text-white xl:text-[12px] ${active ? "bbi-appbar-nav-active-cateye px-3 text-[rgba(255,252,248,0.96)]" : "text-white/78"}`}
+                className={`whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-medium leading-[1.1] transition hover:text-white xl:text-[12px] ${active ? "text-white" : "text-white/78"}`}
                 aria-current={active ? "page" : undefined}
               >
                 {item.label}

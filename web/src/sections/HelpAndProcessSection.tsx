@@ -17,10 +17,13 @@ type HelpAndProcessSectionProps = {
 };
 
 const LIST_ARROW = (
-  <svg viewBox="0 0 24 24" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--bbi-red)]" aria-hidden fill="none">
+  <svg viewBox="0 0 24 24" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[rgba(232,182,72,0.92)]" aria-hidden fill="none">
     <path
-      fill="currentColor"
-      d="M5 19h14v-2H9.41l12.3-12.29-1.42-1.42L8 15.59V5H5v14z"
+      d="M7 17L17 7M17 7H9M17 7V15"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -56,7 +59,7 @@ export function HelpAndProcessSection({
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
       <Container className="relative mx-auto lg:w-[94%]">
         <div className="mx-auto w-full max-w-[1320px]">
-          <article className="bbi-help-panel-shell overflow-hidden rounded-[32px] px-4 py-7 md:px-7 md:py-9">
+          <article className="bbi-help-panel-shell bbi-hover-lift overflow-hidden rounded-[32px] px-4 py-7 md:px-7 md:py-9">
             <header className="relative mb-5 flex flex-col items-center gap-2 text-center md:mb-6">
               {label && (
                 <span className="text-[11px] font-medium uppercase tracking-[0.32em] text-[var(--bbi-red)] md:text-xs">
@@ -135,7 +138,7 @@ export function HelpAndProcessSection({
             <div className="mt-6 flex justify-center">
               <a
                 href={ctaHref}
-                className="inline-flex items-center justify-center rounded-full bg-[var(--bbi-red)] px-8 py-2.5 text-[14px] font-medium text-white shadow-[0_3px_12px_rgba(0,0,0,0.28)] transition hover:bg-[var(--bbi-red-hover)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.32)]"
+                className="bbi-hover-lift inline-flex items-center justify-center rounded-full bg-[var(--bbi-red)] px-9 py-3 text-[15px] font-semibold text-white shadow-[0_3px_12px_rgba(0,0,0,0.28)] transition hover:bg-[var(--bbi-red-hover)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.32)]"
               >
                 {ctaLabel}
               </a>
