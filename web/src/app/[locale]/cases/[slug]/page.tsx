@@ -67,12 +67,12 @@ export default async function CaseDetailPage({ params }: LocalePageProps) {
         <Container className="relative mx-auto lg:w-[85%]">
           {item.headerImage ? (
             <div className="mb-8 overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0f1014] shadow-[0_24px_56px_rgba(0,0,0,0.45)]">
-              <div className="relative aspect-[16/10] w-full sm:aspect-[2.15/1] md:aspect-[2.35/1]">
+              <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[2.15/1] md:aspect-[2.35/1]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.headerImage}
                   alt=""
-                  className="h-full w-full object-cover object-[center_42%]"
+                  className="absolute inset-0 block h-full w-full max-w-none object-cover object-[center_42%] origin-center scale-[1.14]"
                 />
                 <div
                   className="pointer-events-none absolute inset-x-0 bottom-0 h-[46%] bg-[linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.35)_38%,rgba(0,0,0,0.82)_88%,#0a0a0c_100%)]"

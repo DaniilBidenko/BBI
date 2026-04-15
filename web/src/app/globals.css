@@ -771,6 +771,79 @@ h4 {
   box-shadow: 0 22px 48px rgba(0, 0, 0, 0.42);
 }
 
+/* Contacts page: subtle motion for link card */
+.bbi-contacts-link-card {
+  animation: bbi-contacts-fade-up 520ms ease-out both;
+  transform-origin: center;
+}
+
+.bbi-contacts-link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(10, 102, 194, 0.2);
+}
+
+.bbi-contacts-link-icon {
+  transition: transform 420ms ease, box-shadow 420ms ease;
+}
+
+.bbi-contacts-link-card:hover .bbi-contacts-link-icon {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 6px rgba(10, 102, 194, 0.14);
+}
+
+.bbi-contacts-link-arrow {
+  transition: transform 360ms ease, opacity 300ms ease;
+}
+
+.bbi-contacts-link-card:hover .bbi-contacts-link-arrow {
+  transform: translateX(2px) translateY(-2px);
+}
+
+/* Privacy modal: overlay fade + card highlight */
+.bbi-privacy-overlay {
+  background: rgba(0, 0, 0, 0.72);
+  animation: bbi-privacy-overlay-in 220ms ease-out both;
+}
+
+.bbi-privacy-modal {
+  animation: bbi-privacy-modal-in 280ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.64),
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 42px rgba(255, 255, 255, 0.05);
+}
+
+@keyframes bbi-contacts-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bbi-privacy-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bbi-privacy-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 /* «Что мы меняем»: тот же объём, но блик и радиал в тон --bbi-red вместо янтаря */
 .bbi-cateye-recognize--crimson {
   background-image:
@@ -1347,6 +1420,19 @@ h4 {
 @media (prefers-reduced-motion: reduce) {
   .timeline-track {
     animation: none;
+  }
+
+  .bbi-contacts-link-card,
+  .bbi-contacts-link-icon,
+  .bbi-contacts-link-arrow {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .bbi-privacy-overlay,
+  .bbi-privacy-modal {
+    animation: none !important;
   }
 }
 

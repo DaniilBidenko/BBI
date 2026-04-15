@@ -26,7 +26,7 @@ export default async function PillarsPage({ params }: LocalePageProps) {
       ctaDescription={dictionary.pillarsPage.ctaDescription}
       detailsLabel={dictionary.work.pillarsIntro.detailsLabel}
       pillars={dictionary.work.pillars}
-      ctaHref={withLocale(locale, "/contacts")}
+      ctaHref={`${withLocale(locale, "/work")}#work-cta-form`}
     />
   );
 }

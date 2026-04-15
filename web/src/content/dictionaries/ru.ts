@@ -19,7 +19,7 @@ export const ru: Dictionary = {
       title: "6 столпов: единая система, а не набор услуг",
       description:
         "Маркетинг приводит лиды — продажи их теряют, потому что нет регламента. Продажи закрывают сделки — финансы не понимают, откуда взялась выручка. Операционная эффективность держится на двух людях, которые ушли в отпуск.\n\nИменно поэтому мы не продаём отдельные «услуги по функциям». Точечное улучшение одного столпа при слабых остальных не дает устойчивого результата — оно даёт временный эффект и новую точку перегрузки.\n\nBBI заходит во все шесть столпов одновременно: операционная эффективность, маркетинг, продажи, финансы, HR и защита активов.",
-      ctaLabel: "подробнее о 6 столпах BBI",
+      ctaLabel: "Подробнее о 6 столпах BBI",
     },
     scheme: {
       centerLabel: "Бизнес",
@@ -1164,7 +1164,7 @@ export const ru: Dictionary = {
       text:
         "BBI (Bold Brands International) — Operating Partner (RevOps). Мы не ведём рекламу, не продаём SMM и не ограничиваемся презентацией стратегии. Наша зона ответственности — превращать бизнес в автономный и защищённый актив, которым владелец управляет через цифры и систему.",
       emphasis:
-        "Ключевой посыл: BBI — не подрядчик и не «третья сторона». Мы встаём на сторону владельца и его бизнеса, последовательно защищая его активы, данные и управляемость.",
+        "BBI — не подрядчик и не «третья сторона». Мы встаём на сторону владельца и его бизнеса, последовательно защищая его активы, данные и управляемость.",
     },
     principles: {
       title: "Ключевые убеждения",
@@ -1279,8 +1279,8 @@ export const ru: Dictionary = {
         phone: "+996 999 99 22 44",
         email: "office.kg@boldbrands.pro",
         socials: {
-          instagram: "https://instagram.com",
-          facebook: "https://facebook.com",
+          instagram: "https://www.instagram.com/boldbrands.international/",
+          facebook: "https://www.facebook.com/boldbrands.kg",
           whatsapp: "https://wa.me/996999992244",
         },
       },
@@ -1290,9 +1290,9 @@ export const ru: Dictionary = {
         phone: "+998 90 054 34 45",
         email: "office.uz@boldbrands.pro",
         socials: {
-          instagram: "https://instagram.com",
-          facebook: "https://facebook.com",
-          telegram: "https://t.me/",
+          instagram: "https://www.instagram.com/boldbrands.uz/",
+          facebook: "https://www.facebook.com/profile.php?id=61571120907112&locale=ru_RU",
+          telegram: "https://t.me/boldbrandsuz",
         },
       },
     ],

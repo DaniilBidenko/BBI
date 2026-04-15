@@ -39,26 +39,6 @@ export function AboutHeroMedia({
         <div className="absolute inset-0 bg-[linear-gradient(98deg,rgba(0,0,0,0.86)_0%,rgba(0,0,0,0.72)_28%,rgba(0,0,0,0.36)_55%,rgba(0,0,0,0.3)_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.22)_0%,rgba(0,0,0,0.58)_58%,rgba(0,0,0,0.9)_100%)]" />
       </div>
-      <button
-        type="button"
-        aria-label={prevLabel}
-        onClick={goPrev}
-        className="absolute left-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white/90 shadow-[0_6px_18px_rgba(0,0,0,0.42)] transition hover:bg-black/55 hover:text-white"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
-          <path d="M15 18l-6-6 6-6" />
-        </svg>
-      </button>
-      <button
-        type="button"
-        aria-label={nextLabel}
-        onClick={goNext}
-        className="absolute right-4 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white/90 shadow-[0_6px_18px_rgba(0,0,0,0.42)] transition hover:bg-black/55 hover:text-white"
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
-          <path d="M9 18l6-6-6-6" />
-        </svg>
-      </button>
       <div
         className="relative flex min-h-[390px] flex-col justify-end p-6 md:p-7 lg:px-12"
         aria-live="polite"
@@ -90,6 +70,28 @@ export function AboutHeroMedia({
               }`}
             />
           ))}
+        </div>
+        <div className="mt-4 flex items-center justify-between">
+          <button
+            type="button"
+            aria-label={prevLabel}
+            onClick={goPrev}
+            className="z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white/90 shadow-[0_6px_18px_rgba(0,0,0,0.42)] transition hover:bg-black/55 hover:text-white"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            aria-label={nextLabel}
+            onClick={goNext}
+            className="z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white/90 shadow-[0_6px_18px_rgba(0,0,0,0.42)] transition hover:bg-black/55 hover:text-white"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

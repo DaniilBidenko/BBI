@@ -1,7 +1,10 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import type { ContactsPage } from "@/content/dictionaries/types";
+import { defaultLocale, isLocale } from "@/i18n/config";
+import { PrivacyPolicyModalLink } from "@/components/PrivacyPolicyModalLink";
 
 const fieldBaseDark =
   "w-full rounded-[8px] border border-white/14 bg-[rgba(10,12,18,0.82)] px-6 py-3.5 text-[16px] leading-[1.45] text-white/90 placeholder:text-white/34 transition focus:outline-none focus:ring-2 focus:ring-[#ff2b44]/40 focus:border-[#ff2b44]/40 md:rounded-[8px] md:px-7";
@@ -25,6 +28,7 @@ export function ContactsForm({
   compactLabels = false,
 }: ContactsFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const pathname = usePathname();
   const isLight = variant === "light";
   const fieldBase = isLight ? fieldBaseLight : compactLabels ? fieldBaseDarkPage : fieldBaseDark;
   const labelClass = isLight
@@ -72,6 +76,14 @@ const buttonClass = isLight
 
   const successMsg = contacts.form.successMessage ?? "Заявка отправлена.";
   const errorMsg = contacts.form.errorMessage ?? "Не удалось отправить заявку.";
+  const localeCandidate = (pathname?.split("/").filter(Boolean)[0] ?? "").toLowerCase();
+  const locale = isLocale(localeCandidate) ? localeCandidate : defaultLocale;
+  const privacyHref = `/${locale}/privacy`;
+  const consentTextClass = isLight
+    ? "text-xs leading-relaxed text-[var(--bbi-muted)]"
+    : compactLabels
+      ? "text-[12px] leading-relaxed text-white/62"
+      : "text-[13px] leading-relaxed text-white/62";
 
   if (status === "success") {
     return (
@@ -160,7 +172,7 @@ const buttonClass = isLight
           {errorMsg}
         </p>
       )}
-      <div className={compactLabels ? "flex justify-start pt-2" : "pt-1"}>
+      <div className={compactLabels ? "pt-2" : "pt-1"}>
         <button
           type="submit"
           disabled={status === "submitting"}
@@ -175,6 +187,17 @@ const buttonClass = isLight
             contacts.form.submit
           )}
         </button>
+        <p className={`${consentTextClass} mt-3 max-w-3xl`}>
+          Нажимая на кнопку "Отправить", я даю свое согласие на{" "}
+          <PrivacyPolicyModalLink
+            href={privacyHref}
+            className="text-[var(--bbi-red)] transition hover:opacity-85"
+            title="Политика конфиденциальности"
+          >
+            обработку моих персональных данных
+          </PrivacyPolicyModalLink>
+          .
+        </p>
       </div>
     </form>
   );

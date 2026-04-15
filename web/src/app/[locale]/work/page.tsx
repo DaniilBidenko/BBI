@@ -142,6 +142,7 @@ export default async function WorkPage({ params }: LocalePageProps) {
           description={work.cta.description}
           form={work.cta.form}
           submitHref={withLocale(locale, "/contacts")}
+          privacyHref={withLocale(locale, "/privacy")}
         />
       </div>
     </div>

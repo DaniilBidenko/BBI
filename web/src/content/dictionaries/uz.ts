@@ -985,8 +985,8 @@ export const uz: Dictionary = {
         phone: "+996 999 99 22 44",
         email: "office.kg@boldbrands.pro",
         socials: {
-          instagram: "https://instagram.com",
-          facebook: "https://facebook.com",
+          instagram: "https://www.instagram.com/boldbrands.international/",
+          facebook: "https://www.facebook.com/boldbrands.kg",
           whatsapp: "https://wa.me/996999992244",
         },
       },
@@ -996,9 +996,9 @@ export const uz: Dictionary = {
         phone: "+998 90 054 34 45",
         email: "office.uz@boldbrands.pro",
         socials: {
-          instagram: "https://instagram.com",
-          facebook: "https://facebook.com",
-          telegram: "https://t.me/",
+          instagram: "https://www.instagram.com/boldbrands.uz/",
+          facebook: "https://www.facebook.com/profile.php?id=61571120907112&locale=ru_RU",
+          telegram: "https://t.me/boldbrandsuz",
         },
       },
     ],

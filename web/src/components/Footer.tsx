@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Container } from "./Container";
 import { withLocale } from "@/i18n/paths";
 import type { Locale } from "@/i18n/config";
+import { PrivacyPolicyModalLink } from "./PrivacyPolicyModalLink";
 
 const IconInstagram = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -79,160 +80,164 @@ function SocialIcon({
 }
 
 export function Footer({ footer, locale }: FooterProps) {
+  const privacyUrl = footer.privacyHref ? withLocale(locale, footer.privacyHref) : "";
+
   return (
-    <footer className="relative z-10 mt-10 text-white md:mt-12">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
-      <div className="rounded-t-3xl border-t border-[color:var(--bbi-panel-border)] bg-[var(--bbi-panel-bg)] pt-12 pb-10 md:pt-14 md:pb-12">
-        <Container className="px-4 lg:px-6">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-            <div className="max-w-xs">
-              <Link
-                href={withLocale(locale, "/")}
-                className="inline-flex items-center"
-                aria-label="BBI — на главную"
-              >
-                <span className="logo-wordmark" role="img" aria-hidden />
-              </Link>
-              {footer.tagline && (
-                <p className="mt-3 text-[13px] leading-[1.5] text-white/72">
-                  {footer.tagline}
-                </p>
+    <>
+      <footer className="relative z-10 mt-10 text-white md:mt-12">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
+        <div className="rounded-t-3xl border-t border-[color:var(--bbi-panel-border)] bg-[var(--bbi-panel-bg)] pt-12 pb-10 md:pt-14 md:pb-12">
+          <Container className="px-4 lg:px-6">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+              <div className="max-w-xs">
+                <Link
+                  href={withLocale(locale, "/")}
+                  className="inline-flex items-center"
+                  aria-label="BBI — на главную"
+                >
+                  <span className="logo-wordmark !h-[1.4rem] !w-[7.8rem]" role="img" aria-hidden />
+                </Link>
+                {footer.tagline && (
+                  <p className="mt-3 text-[13px] leading-[1.5] text-white/72">
+                    {footer.tagline}
+                  </p>
+                )}
+              </div>
+
+              <div>
+                <h3 className="text-[13px] font-semibold text-white">
+                  {footer.aboutTitle}
+                </h3>
+                <ul className="mt-3 space-y-2">
+                  {footer.aboutLinks.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={withLocale(locale, item.href)}
+                        className="text-[13px] text-white/72 transition hover:text-[var(--bbi-red)]"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-[13px] font-semibold text-white">
+                  {footer.socialTitle}
+                </h3>
+                <div className="mt-3 space-y-5">
+                  {footer.locations.map((loc) => (
+                    <div key={loc.city}>
+                      <p className="text-[13px] text-white/72">
+                        {loc.city}
+                      </p>
+                      {loc.socials && (
+                        <div className="mt-2 flex gap-2">
+                          {loc.socials.instagram && (
+                            <SocialIcon
+                              href={loc.socials.instagram}
+                              label="Instagram"
+                            >
+                              <IconInstagram />
+                            </SocialIcon>
+                          )}
+                          {loc.socials.facebook && (
+                            <SocialIcon href={loc.socials.facebook} label="Facebook">
+                              <IconFacebook />
+                            </SocialIcon>
+                          )}
+                          {loc.socials.whatsapp && (
+                            <SocialIcon href={loc.socials.whatsapp} label="WhatsApp">
+                              <IconWhatsApp />
+                            </SocialIcon>
+                          )}
+                          {loc.socials.telegram && (
+                            <SocialIcon href={loc.socials.telegram} label="Telegram">
+                              <IconTelegram />
+                            </SocialIcon>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="mt-10 grid gap-8 border-t border-white/10 pt-8 sm:grid-cols-2 lg:grid-cols-3">
+              {footer.locations.map((loc) => (
+                <div key={loc.city} className="space-y-3">
+                  {loc.address && (
+                    <div>
+                      <p className="text-[11px] font-medium uppercase tracking-wider text-white/45">
+                        {footer.addressLabel} ({loc.city})
+                      </p>
+                      <p className="mt-0.5 text-[13px] font-medium text-white/88">
+                        {loc.address}
+                      </p>
+                    </div>
+                  )}
+                  {loc.phone && (
+                    <div>
+                      <p className="text-[11px] font-medium uppercase tracking-wider text-white/45">
+                        {footer.phoneLabel} ({loc.city})
+                      </p>
+                      <a
+                        href={`tel:${loc.phone.replace(/\s/g, "")}`}
+                        className="mt-0.5 block text-[13px] font-medium text-white/88 hover:text-[var(--bbi-red)]"
+                      >
+                        {loc.phone}
+                      </a>
+                    </div>
+                  )}
+                  {loc.email && (
+                    <div>
+                      <p className="text-[11px] font-medium uppercase tracking-wider text-white/45">
+                        {footer.emailLabel} ({loc.city})
+                      </p>
+                      <a
+                        href={`mailto:${loc.email}`}
+                        className="mt-0.5 block text-[13px] font-medium text-white/88 hover:text-[var(--bbi-red)]"
+                      >
+                        {loc.email}
+                      </a>
+                    </div>
+                  )}
+                </div>
+              ))}
+              {footer.workingHoursLabel && footer.workingHours && (
+                <div className="space-y-3 sm:col-span-2 lg:col-span-1">
+                  <p className="text-[11px] font-medium uppercase tracking-wider text-white/45">
+                    {footer.workingHoursLabel}
+                  </p>
+                  <p className="mt-0.5 text-[13px] font-medium text-white/88">
+                    {footer.workingHours}
+                  </p>
+                </div>
               )}
             </div>
+          </Container>
+        </div>
 
-            <div>
-              <h3 className="text-[13px] font-semibold text-white">
-                {footer.aboutTitle}
-              </h3>
-              <ul className="mt-3 space-y-2">
-                {footer.aboutLinks.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={withLocale(locale, item.href)}
-                      className="text-[13px] text-white/72 transition hover:text-[var(--bbi-red)]"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+        <div className="border-t border-white/10 bg-[var(--bbi-panel-bg)] py-4">
+          <Container className="px-4 lg:px-6">
+            <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+              <p className="text-[12px] text-white/58">
+                {footer.copyright}
+              </p>
+              {footer.privacyLabel && footer.privacyHref && (
+                <PrivacyPolicyModalLink
+                  href={privacyUrl}
+                  title={footer.privacyLabel}
+                  className="text-[12px] text-white/58 transition hover:text-[var(--bbi-red)]"
+                >
+                  {footer.privacyLabel}
+                </PrivacyPolicyModalLink>
+              )}
             </div>
-
-            <div>
-              <h3 className="text-[13px] font-semibold text-white">
-                {footer.socialTitle}
-              </h3>
-              <div className="mt-3 space-y-5">
-                {footer.locations.map((loc) => (
-                  <div key={loc.city}>
-                    <p className="text-[13px] text-white/72">
-                      {loc.city}
-                    </p>
-                    {loc.socials && (
-                      <div className="mt-2 flex gap-2">
-                        {loc.socials.instagram && (
-                          <SocialIcon
-                            href={loc.socials.instagram}
-                            label="Instagram"
-                          >
-                            <IconInstagram />
-                          </SocialIcon>
-                        )}
-                        {loc.socials.facebook && (
-                          <SocialIcon href={loc.socials.facebook} label="Facebook">
-                            <IconFacebook />
-                          </SocialIcon>
-                        )}
-                        {loc.socials.whatsapp && (
-                          <SocialIcon href={loc.socials.whatsapp} label="WhatsApp">
-                            <IconWhatsApp />
-                          </SocialIcon>
-                        )}
-                        {loc.socials.telegram && (
-                          <SocialIcon href={loc.socials.telegram} label="Telegram">
-                            <IconTelegram />
-                          </SocialIcon>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10 grid gap-8 border-t border-white/10 pt-8 sm:grid-cols-2 lg:grid-cols-3">
-            {footer.locations.map((loc) => (
-              <div key={loc.city} className="space-y-3">
-                {loc.address && (
-                  <div>
-                    <p className="text-[11px] font-medium uppercase tracking-wider text-white/45">
-                      {footer.addressLabel} ({loc.city})
-                    </p>
-                    <p className="mt-0.5 text-[13px] font-medium text-white/88">
-                      {loc.address}
-                    </p>
-                  </div>
-                )}
-                {loc.phone && (
-                  <div>
-                    <p className="text-[11px] font-medium uppercase tracking-wider text-white/45">
-                      {footer.phoneLabel} ({loc.city})
-                    </p>
-                    <a
-                      href={`tel:${loc.phone.replace(/\s/g, "")}`}
-                      className="mt-0.5 block text-[13px] font-medium text-white/88 hover:text-[var(--bbi-red)]"
-                    >
-                      {loc.phone}
-                    </a>
-                  </div>
-                )}
-                {loc.email && (
-                  <div>
-                    <p className="text-[11px] font-medium uppercase tracking-wider text-white/45">
-                      {footer.emailLabel} ({loc.city})
-                    </p>
-                    <a
-                      href={`mailto:${loc.email}`}
-                      className="mt-0.5 block text-[13px] font-medium text-white/88 hover:text-[var(--bbi-red)]"
-                    >
-                      {loc.email}
-                    </a>
-                  </div>
-                )}
-              </div>
-            ))}
-            {footer.workingHoursLabel && footer.workingHours && (
-              <div className="space-y-3 sm:col-span-2 lg:col-span-1">
-                <p className="text-[11px] font-medium uppercase tracking-wider text-white/45">
-                  {footer.workingHoursLabel}
-                </p>
-                <p className="mt-0.5 text-[13px] font-medium text-white/88">
-                  {footer.workingHours}
-                </p>
-              </div>
-            )}
-          </div>
-        </Container>
-      </div>
-
-      <div className="border-t border-white/10 bg-[var(--bbi-panel-bg)] py-4">
-        <Container className="px-4 lg:px-6">
-          <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-            <p className="text-[12px] text-white/58">
-              {footer.copyright}
-            </p>
-            {footer.privacyLabel && footer.privacyHref && (
-              <Link
-                href={withLocale(locale, footer.privacyHref)}
-                className="text-[12px] text-white/58 transition hover:text-[var(--bbi-red)]"
-              >
-                {footer.privacyLabel}
-              </Link>
-            )}
-          </div>
-        </Container>
-      </div>
-    </footer>
+          </Container>
+        </div>
+      </footer>
+    </>
   );
 }

@@ -3,6 +3,8 @@ import { isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/content/dictionaries";
 import { Container } from "@/components/Container";
 import { AboutHeroMedia } from "@/components/AboutHeroMedia";
+import { withLocale } from "@/i18n/paths";
+import { PrivacyPolicyModalLink } from "@/components/PrivacyPolicyModalLink";
 
 type LocalePageProps = {
   params: Promise<{ locale: string }>;
@@ -63,7 +65,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
               <p className="max-w-[56ch] break-words text-[16px] leading-[1.5] text-white/90 sm:text-[18px] md:text-[20px] lg:text-[21px]">
                 {who.text}
               </p>
-              <div className="w-fit rounded-[22px] border border-[rgba(255,43,68,0.82)] bg-[rgba(255,43,68,0.06)] px-5 py-4 text-[15px] leading-[1.38] text-[rgba(255,43,68,1)] sm:px-6 sm:text-[17px] md:px-7 md:py-5 md:text-[19px] lg:text-[20px]">
+              <div className="w-fit rounded-[22px] border border-[#ffc107] bg-transparent px-5 py-4 text-[15px] leading-[1.38] text-[#ffc107] sm:px-6 sm:text-[17px] md:px-7 md:py-5 md:text-[19px] lg:text-[20px]">
                 <p className="max-w-[50ch] break-words">{who.emphasis}</p>
               </div>
             </div>
@@ -216,6 +218,17 @@ export default async function AboutPage({ params }: LocalePageProps) {
               >
                 {cta.form.submit}
               </button>
+              <p className="max-w-3xl text-[12px] leading-relaxed text-white/62 md:text-[13px]">
+                Нажимая на кнопку "Отправить", я даю свое согласие на{" "}
+                <PrivacyPolicyModalLink
+                  href={withLocale(locale, "/privacy")}
+                  className="text-[var(--bbi-red)] transition hover:opacity-85"
+                  title="Политика конфиденциальности"
+                >
+                  обработку моих персональных данных
+                </PrivacyPolicyModalLink>
+                .
+              </p>
             </form>
           </div>
         </Container>
