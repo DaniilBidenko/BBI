@@ -218,17 +218,45 @@ export default async function AboutPage({ params }: LocalePageProps) {
               >
                 {cta.form.submit}
               </button>
-              <p className="max-w-3xl text-[12px] leading-relaxed text-white/62 md:text-[13px]">
-                Нажимая на кнопку "Отправить", я даю свое согласие на{" "}
-                <PrivacyPolicyModalLink
-                  href={withLocale(locale, "/privacy")}
-                  className="text-[var(--bbi-red)] transition hover:opacity-85"
-                  title="Политика конфиденциальности"
-                >
-                  обработку моих персональных данных
-                </PrivacyPolicyModalLink>
-                .
-              </p>
+              <label className="flex max-w-3xl items-start gap-3 text-[12px] leading-relaxed text-white/62 md:text-[13px]">
+                <span className="relative mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    required
+                    className="peer absolute h-5 w-5 cursor-pointer opacity-0"
+                  />
+                  <span
+                    className="h-5 w-5 rounded-[6px] border border-white/25 bg-[rgba(8,9,11,0.55)] transition peer-checked:border-[var(--bbi-red)] peer-checked:bg-[var(--bbi-red)]/10"
+                    aria-hidden="true"
+                  />
+                  <svg
+                    viewBox="0 0 12 10"
+                    className="pointer-events-none absolute h-3 w-3 text-[var(--bbi-red)] opacity-0 transition peer-checked:opacity-100"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M1 5.5l3 3L11 1.5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span>
+                  Нажимая на кнопку "Отправить", я даю свое согласие на{" "}
+                  <PrivacyPolicyModalLink
+                    href={withLocale(locale, "/privacy")}
+                    className="text-[var(--bbi-red)] transition hover:opacity-85"
+                    title="Политика конфиденциальности"
+                  >
+                    обработку моих персональных данных
+                  </PrivacyPolicyModalLink>
+                  .
+                </span>
+              </label>
             </form>
           </div>
         </Container>
