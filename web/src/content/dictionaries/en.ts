@@ -988,6 +988,7 @@ export const en: Dictionary = {
           instagram: "https://www.instagram.com/boldbrands.international/",
           facebook: "https://www.facebook.com/boldbrands.kg",
           whatsapp: "https://wa.me/996999992244",
+          linkedin: "https://www.linkedin.com/in/boldbrands-international-857b78329/",
         },
       },
       {
@@ -999,6 +1000,7 @@ export const en: Dictionary = {
           instagram: "https://www.instagram.com/boldbrands.uz/",
           facebook: "https://www.facebook.com/profile.php?id=61571120907112&locale=ru_RU",
           telegram: "https://t.me/boldbrandsuz",
+          linkedin: "https://www.linkedin.com/in/boldbrands-international-857b78329/",
         },
       },
     ],

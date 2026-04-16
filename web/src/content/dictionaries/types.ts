@@ -430,7 +430,7 @@ export type Dictionary = {
       address?: string;
       phone?: string;
       email?: string;
-      socials?: { instagram?: string; facebook?: string; whatsapp?: string; telegram?: string };
+      socials?: { instagram?: string; facebook?: string; whatsapp?: string; telegram?: string; linkedin?: string };
     }[];
     addressLabel: string;
     phoneLabel: string;

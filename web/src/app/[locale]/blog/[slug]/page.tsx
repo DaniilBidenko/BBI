@@ -80,7 +80,9 @@ export default async function BlogArticlePage({ params }: LocalePageProps) {
                 key={i}
                 className={`space-y-6 ${section.image ? "lg:grid lg:grid-cols-[1fr_min(28rem,40%)] lg:gap-10 lg:items-start" : ""}`}
               >
-                <div className="space-y-6">
+                <div
+                  className={`space-y-6 ${section.image && i % 2 === 1 ? "lg:order-2" : "lg:order-1"}`}
+                >
                   {section.title && (
                     <h2 className="border-b border-white/10 pb-3 text-lg font-semibold uppercase tracking-tight text-white md:text-xl">
                       {section.title}
@@ -98,7 +100,17 @@ export default async function BlogArticlePage({ params }: LocalePageProps) {
                   </div>
                 </div>
                 {section.image && (
-                  <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-dashed border-white/20 bg-white/[0.03] lg:aspect-[4/3]" />
+                  <div
+                    className={`relative aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] lg:aspect-[4/3] ${i % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={section.image}
+                      alt={section.title ?? post.title}
+                      className="h-full w-full object-cover"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  </div>
                 )}
               </div>
             ))}

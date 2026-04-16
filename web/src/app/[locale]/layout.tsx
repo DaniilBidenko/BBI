@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
-import { Footer } from "@/components/Footer";
+import { LocaleFooter } from "@/components/LocaleFooter";
 import { AppBar } from "@/components/AppBar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { getDictionary } from "@/content/dictionaries";
@@ -37,7 +37,7 @@ export default async function LocaleLayout({
         ctaLabel={dictionary.nav.cta}
       />
       <main className="flex-1">{children}</main>
-        <Footer footer={dictionary.footer} locale={locale} />
+        <LocaleFooter footer={dictionary.footer} locale={locale} />
       </div>
     </ThemeProvider>
   );
