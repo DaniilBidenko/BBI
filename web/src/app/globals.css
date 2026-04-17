@@ -178,11 +178,11 @@ h4 {
   padding-bottom: min(2vh, 0.75rem);
 }
 
-/* Контейнер без zoom: zoom на самом Container ломал центрирование и давал «пустоту слева». */
+/* Контейнер фиксирован по центру как на макете. */
 .contacts-fluid .site-footer__page-body > .Container {
-  max-width: 100vw !important;
-  padding-left: clamp(16px, 5vw, 72px) !important;
-  padding-right: clamp(16px, 5vw, 72px) !important;
+  max-width: 72rem !important;
+  padding-left: clamp(16px, 4vw, 48px) !important;
+  padding-right: clamp(16px, 4vw, 48px) !important;
 }
 
 /*
@@ -191,7 +191,8 @@ h4 {
 */
 .contacts-fluid .contacts-uniform-scale {
   width: 100%;
-  zoom: clamp(0.98, calc(1 + (100vmin - 520px) / 980px), 2.05);
+  zoom: 1;
+  transform: none;
 }
 
 /* Полоса «Все права защищены» — к низу окна, не к блоку контента */
