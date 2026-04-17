@@ -8,7 +8,6 @@ import { WorkSchemeSection } from "@/sections/WorkSchemeSection";
 import { WorkFormatSection } from "@/sections/WorkFormatSection";
 import { WorkStagesSection } from "@/sections/WorkStagesSection";
 import { WorkResponsibilitySection } from "@/sections/WorkResponsibilitySection";
-import { WorkTargetStateSection } from "@/sections/WorkTargetStateSection";
 import { WorkCtaSection } from "@/sections/WorkCtaSection";
 
 type LocalePageProps = {
@@ -125,13 +124,6 @@ export default async function WorkPage({ params }: LocalePageProps) {
             </div>
           </div>
         </section>
-        <WorkTargetStateSection
-          title={work.targetState.title}
-          minimumTitle={work.targetState.minimumTitle}
-          minimumDescription={work.targetState.minimumDescription}
-          idealTitle={work.targetState.idealTitle}
-          idealDescription={work.targetState.idealDescription}
-        />
         <WorkCtaSection
           title={work.cta.title}
           description={work.cta.description}

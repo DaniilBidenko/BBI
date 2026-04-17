@@ -1687,7 +1687,7 @@ export const en: Dictionary = {
             image: "/blog/diagnostics-pillars-map.png",
           },
         ],
-        cta: { label: "Start with diagnostics", href: "/contacts" },
+        cta: { label: "Start with diagnostics", href: "/#contact-form" },
       },
       {
         slug: "ekonomika-kanalov-marketing",

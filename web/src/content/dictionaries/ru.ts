@@ -1682,7 +1682,7 @@ export const ru: Dictionary = {
             image: "/blog/diagnostics-pillars-map.png",
           },
         ],
-        cta: { label: "Начать с диагностики", href: "/contacts" },
+        cta: { label: "Начать с диагностики", href: "/#contact-form" },
       },
       {
         slug: "ekonomika-kanalov-marketing",
