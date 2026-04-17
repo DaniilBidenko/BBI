@@ -4,6 +4,7 @@ import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/content/dictionaries";
 import { ru } from "@/content/dictionaries/ru";
 import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
 import { withLocale } from "@/i18n/paths";
 
 type LocalePageProps = {
@@ -30,6 +31,8 @@ export default async function BlogArticlePage({ params }: LocalePageProps) {
   if (!post) {
     notFound();
   }
+
+  const shouldShowDiagnosticsCta = Boolean(post.cta?.href?.includes("#contact-form"));
 
   return (
     <div className="relative">
@@ -114,6 +117,28 @@ export default async function BlogArticlePage({ params }: LocalePageProps) {
               </div>
             ))}
           </article>
+          {post.cta && shouldShowDiagnosticsCta && (
+            <div className="mt-16 border-t border-white/10 pt-12">
+              <Button href={withLocale(locale, post.cta.href)}>
+                <span className="flex items-center gap-2 px-4 py-2">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  {post.cta.label}
+                </span>
+              </Button>
+            </div>
+          )}
         </Container>
       </section>
     </div>
