@@ -131,7 +131,7 @@ export function WhatYouGetSection({
                           {cardUi?.readMore}
                         </span>
                       </summary>
-                      <div className="mt-2.5 max-h-[min(48vh,300px)] space-y-3 overflow-y-auto overscroll-y-contain pr-1 [scrollbar-color:rgba(255,255,255,0.28)_transparent] [scrollbar-width:thin] md:max-h-[min(42vh,280px)] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/25 [&::-webkit-scrollbar-track]:bg-transparent">
+                      <div className="bbi-scroll-y-touch mt-2.5 max-h-[min(48vh,300px)] space-y-3 overflow-y-auto overscroll-y-contain pr-1 [scrollbar-color:rgba(255,255,255,0.28)_transparent] [scrollbar-width:thin] md:max-h-[min(42vh,280px)] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/25 [&::-webkit-scrollbar-track]:bg-transparent">
                         <p className="break-words text-[14px] leading-[1.7] text-white/78">
                           {card.whatItMeans}
                         </p>
