@@ -91,6 +91,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   overflow-x: clip;
+  zoom: var(--zoom-lock, 1);
+}
+
+/* Центрирование для масштаба: сохраняем центр экрана при увеличении */
+body {
+  transform-origin: top center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
 }
 
 button,
@@ -1789,7 +1802,7 @@ h4 {
 .icp-card--recognize .icp-card__content {
   position: relative;
   height: 100%;
-  padding-bottom: 58px;
+  padding-bottom: 86px;
 }
 
 .icp-card--recognize .icp-card__footer {
@@ -1802,8 +1815,8 @@ h4 {
 }
 
 .icp-card--recognize {
-  height: 456px;
-  min-height: 456px;
+  height: 520px;
+  min-height: 520px;
   clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
 }
 
@@ -1860,7 +1873,7 @@ h4 {
 
 .icp-card--recognize:has(details[open]) {
   height: auto !important;
-  min-height: 456px;
+  min-height: 520px;
   clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
 }
 
@@ -1882,7 +1895,7 @@ h4 {
    expand card shape and flow content naturally when opened. */
 .icp-card--recognize-open {
   height: auto;
-  min-height: 456px;
+  min-height: 520px;
   clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
 }
 
@@ -1904,7 +1917,7 @@ h4 {
 @media (max-width: 640px) {
   .icp-card--recognize {
     height: auto !important;
-    min-height: 520px;
+    min-height: 580px;
     clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 
@@ -1920,7 +1933,7 @@ h4 {
 
   .icp-card--recognize:has(details[open]) {
     height: auto !important;
-    min-height: 520px;
+    min-height: 580px;
     clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 
@@ -1929,7 +1942,7 @@ h4 {
   }
 
   .icp-card--recognize-open {
-    min-height: 520px;
+    min-height: 580px;
     clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 980 C 344 995 332 1006 318 1006 H 24 C 11 1006 0 995 0 980 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 

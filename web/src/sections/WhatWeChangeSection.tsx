@@ -54,7 +54,7 @@ export function WhatWeChangeSection({
   return (
     <section className="relative py-16 md:py-20">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
-      <Container className="relative mx-auto lg:w-[90%]">
+      <Container className="relative mx-auto max-w-[78rem] lg:w-[94%]">
         <div className="mb-10 flex flex-col items-center gap-3">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-[var(--bbi-red)]">
             {eyebrow}

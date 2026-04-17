@@ -64,11 +64,11 @@ export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref 
                     </h3>
                   </div>
 
-                  <div className="icp-card__body mt-2 min-h-0 text-[15px] leading-[1.5] text-white/76 md:text-[15.5px]">
+                  <div className="icp-card__body mt-2 min-h-0 break-words hyphens-auto text-[15px] leading-[1.5] text-white/76 md:text-[15.5px]">
                     <p>{card.description}</p>
                   </div>
 
-                    <div className="icp-card__footer">
+                    <div className="icp-card__footer mt-5 pt-3">
                     <div className="group w-full">
                       <button
                         type="button"

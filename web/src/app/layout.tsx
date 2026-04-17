@@ -25,6 +25,27 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                var root = document.documentElement;
+                function applyZoomLock(){
+                var baseW = 1300;
+                var baseH = 780;
+                  var scaleW = window.innerWidth / baseW;
+                  var scaleH = window.innerHeight / baseH;
+                  var scale = Math.min(scaleW, scaleH);
+                  if (scale < 1.06) scale = 1.06;
+                  if (scale > 1.8) scale = 1.8;
+                  root.style.setProperty('--zoom-lock', String(scale));
+                }
+                applyZoomLock();
+                window.addEventListener('resize', applyZoomLock, { passive: true });
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="flex min-h-[100dvh] min-h-screen flex-col antialiased">
         {children}
