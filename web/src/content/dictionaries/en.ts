@@ -4,22 +4,27 @@ export const en: Dictionary = {
   nav: {
     items: [
       { label: "Home", href: "/" },
-      { label: "About BBI", href: "/about" },
+      { label: "About the company", href: "/about" },
       { label: "How we work", href: "/work" },
       { label: "Cases", href: "/cases" },
       { label: "Blog", href: "/blog" },
       { label: "Contacts", href: "/contacts" },
     ],
-    cta: "Start",
+    cta: "Get started",
   },
   work: {
     breadcrumb: "How we work",
     hero: {
-      eyebrow: "Operating Partner Model",
-      title: "6 pillars: one system, not a bundle of services",
+      eyebrow: "Work model",
+      title: "6 pillars: a single system, not a set of services",
       description:
-        "We don’t sell operations separately from marketing, or marketing separately from finance. Business is a system. A hole in one pillar collapses the rest. BBI enters all six and builds a single management contour.",
-      ctaLabel: "6 PILLARS OF BBI",
+        "Marketing brings in leads, but sales loses them because there are no regulations. Sales closes deals—finance doesn’t understand where the revenue comes from. Operational efficiency rests on two people who went on vacation.\n\nThis is why we do not sell separate “feature services.” A targeted improvement of one pillar while the rest are weak does not give a sustainable result - it gives a temporary effect and a new point of overload.\n\nBBI addresses all six pillars simultaneously: operational excellence, marketing, sales, finance, HR and asset protection.",
+      ctaLabel: "Read more about the 6 pillars of BBI",
+      carouselSlides: [
+        "We do not sell operations separately from marketing, or marketing separately from finance. BBI enters all six pillars and builds a single management loop: every function is connected to the others through metrics, ownership, and cadence.",
+        "We start with diagnostics: we find the real root causes—where the business loses money, control, and value. Then we design the target architecture: an operating model that closes those gaps and creates a working foundation for manageable growth.",
+        "BBI stays inside the business for the full implementation—90+ working days. During that time, change moves from diagrams to daily practice: meetings follow a new format, decisions are made by protocol, metrics are tracked by the system rather than by hand. We leave only when the new management model runs without our involvement.",
+      ],
     },
     scheme: {
       centerLabel: "Business",
@@ -27,63 +32,74 @@ export const en: Dictionary = {
     pillarsIntro: {
       title: "BBI system",
       description:
-        "BBI unites six directions into one system aligned with the owner’s interests. These are not “services” you buy separately — these are six support points that make the business asset resilient and protected. Resilience is the outcome of all six.",
-      detailsLabel: "Learn more",
+        "BBI combines six areas into a single system, subordinate to the interests of the owner. These are not “services” that can be purchased individually. These are the six pillars on which a stable and protected business asset rests. Resilience is the result of all six.",
+      detailsLabel: "more details",
     },
     pillars: [
       {
         key: "operations",
         title: "Operational efficiency",
         group: "Leverage",
-        groupLabel: "Leverage",
+        groupLabel: "Lever",
         summary:
-          "Operating rhythm, SOPs, org structure, KPI panels, and execution control.",
+          "A business that operates without the constant involvement of the owner is not an accident, but an architecture. We build a management rhythm, describe key processes and create a control system in which everyone knows their area of ​​responsibility and result metrics.",
         details: [
-          "Operating rhythm and governance meetings.",
-          "SOPs, checklists, roles and ownership.",
-          "Dashboards, deadlines, and quality control.",
+          "What we do:",
+          "Management rhythm (cadence): a system of meetings, check-ins and control points - works according to a schedule, and not “when it lights up”",
+          "SOP and regulations: key processes are described, owner is assigned, logic is fixed",
+          "Organizational chart and responsibility matrix (RACI): who is responsible for what - no gray areas",
+          "KPI panels and dashboards: the state of the business is visible in 5 minutes, without manual data collection",
+          "Onboarding checklists: a new employee achieves results according to the standard, and does not “survive on his own”",
         ],
         result:
-          "The business no longer depends on the owner being present. Every process runs by the rules — no matter who is in the office today.",
+          "The business ceases to rely on the presence of the owner. Every process works according to the rules - no matter who is in the office today.",
         resultExpanded: {
           whatWeBuild:
-            "Management cadence, SOPs, org chart, RACI, and KPI dashboards. Every owner is assigned; every metric is visible in real time.",
+            "Management rhythm (cadence), SOP, org chart, responsibility matrix (RACI) and KPI panels. Each owner is assigned, each metric is visible in real time.",
           partnerOutcomes: [
-            "The owner spends up to ~10 hours per week on operations instead of constant hands-on control",
-            "The business keeps running when a key person is on leave or has left",
-            "Decisions follow a protocol — not a call to the owner",
-            "Growth scales by design instead of creating a new layer of chaos",
+            "The owner spends up to 10 hours a week on the operating system instead of constant manual control",
+            "Business doesn't stop when a key person is on vacation or has left.",
+            "Decisions are made according to the protocol, and not through a call to the owner",
+            "Growth scales with the model rather than creating a new level of chaos",
           ],
         },
         broken:
-          "Firefighting, chaos, manual control, and dependency on people.",
+          "The owner is in every process. Without him, nothing moves, and any urgency immediately flies into his phone.",
+        brokenExpanded: [
+          "Every day begins with the analysis of “fires” - the strategy is postponed again",
+          "Decisions rest with the owner: the team does not act without his approval",
+          "There is no clear organizational chart - it is unclear who is responsible for what, and responsibility is blurred",
+          "A key employee left - and with him went the processes that were only in his head",
+          "The growth of the company does not scale the system, but only adds chaos",
+          "There are no metrics: the owner learns about problems after the fact, and not from the dashboard",
+        ],
         actions:
-          "We build management architecture: who owns what, how decisions are made, and how execution is controlled. The business runs on rhythm and rules — not mood.",
+          "We build a management architecture: who is responsible for what, how decisions are made, how execution is controlled. Business works according to rhythm and rules, not according to mood.",
         actionsExpanded: {
-          partnerHeading: "What the partner receives:",
+          partnerHeading: "What does the partner receive:",
           sections: [
             {
-              title: "Documents & tools",
+              title: "Documents and tools",
               items: [
-                "Org chart with responsibility zones and decision hierarchy",
-                "SOPs for key processes",
-                "RACI matrix: owner, executor, approver — per process",
-                "Management meeting system (cadence): format, participants, cadence, minutes",
+                "Organizational chart with areas of responsibility and decision-making hierarchy",
+                "SOP (standard operating procedures) for key processes",
+                "RACI responsibility matrix: owner, executor, approver - for each process",
+                "System of management meetings (cadence): format, participants, frequency, protocol",
               ],
             },
             {
-              title: "Metrics & dashboards",
+              title: "Metrics and dashboards",
               items: [
-                "KPI dashboard: business state on one screen — without manual data collection",
-                "Execution control metrics: plan vs. actual on key indicators",
-                "Escalation points: when and to whom issues rise — without calling the owner",
+                "KPI dashboard: business status in one screen - without manual data collection",
+                "Execution control metrics: plan-facts based on key indicators",
+                "Escalation points: when and to whom the issue is raised - without calling the owner",
               ],
             },
             {
-              title: "Also",
+              title: "Additionally",
               items: [
-                "New hire adaptation checklists",
-                "Management cadence playbook the team can sustain on its own",
+                "Onboarding checklists for new employees",
+                "Management rhythm regulations that the team maintains independently",
               ],
             },
           ],
@@ -93,55 +109,66 @@ export const en: Dictionary = {
         key: "marketing",
         title: "Marketing",
         group: "Leverage",
-        groupLabel: "Leverage",
+        groupLabel: "Lever",
         summary:
-          "Full-funnel analytics, channel economics, predictable demand.",
+          "Marketing without analytics is a budget in the fog. We are building a system in which every invested ruble is tied to the result: it is clear where the client came from, how much it cost and which channel actually works.",
         details: [
-          "Channel economics and transparent budgets.",
-          "Full-funnel analytics and audit.",
-          "Stable demand without budget leaks.",
+          "What we do:",
+          "End-to-end analytics: from the first touch to payment - every channel is visible, every lead is tracked",
+          "Channel audit: what brings real customers, what wastes the budget - with numbers, not feelings",
+          "Ownership of accounts and databases: advertising accounts, CRM, databases - belong to the company, not the agency",
+          "Channel economics: cost of acquisition, LTV, break-even point for each direction",
+          "Predictable lead flow: the system works according to a model and does not depend on one contractor",
         ],
         result:
-          "You know the cost of a lead and a client, which channel works — and who owns every account and dataset.",
+          "It’s clear how much a lead and a client cost, what channel is working, and who owns all the data and accounts.",
         resultExpanded: {
           whatWeBuild:
-            "End-to-end analytics from first touch to payment, channel audit, acquisition economics, and transferring ownership of all ad accounts and databases to the company.",
+            "End-to-end analytics from touch to payment, channel audit, attraction economy and transfer of ownership of all accounts and databases to the company.",
           partnerOutcomes: [
-            "All access and databases stay with the company — changing an agency does not erase history",
-            "A clear picture of which channel earns, which spends, and why",
-            "Marketing budget is allocated from data, not gut feel",
-            "Lead flow is manageable and forecastable — without a “star” contractor",
+            "All access and databases are in the hands of the company: changing the agency does not reset the history and data",
+            "A clear picture: which channel earns, which spends and why",
+            "Marketing budget is allocated based on data, not intuition",
+            "We manage and predict the flow of leads - without depending on the “star” contractor",
           ],
         },
         broken:
-          "Budget leakage, no forecasts, and weak effectiveness control.",
+          "Money goes into advertising, but it’s unclear where clients come from. The agency reports, but there is no control.",
+        brokenExpanded: [
+          "The budget is distributed “according to feelings”: which channel actually works is unknown",
+          "No end-to-end analytics: it is impossible to calculate the real cost of attracting a client",
+          "All offices, bases and access are with the contractor. Changing agency = loss of history and data",
+          "The flow of leads is unpredictable: one month it’s thick, the next it’s empty",
+          "Marketing rests on one person or one agency - without him the system falls apart",
+          "No model: marketing decisions are not related to financial results",
+        ],
         actions:
-          "We set up end-to-end analytics, transfer ownership of all accounts and databases, and build a model where every penny ties to outcomes.",
+          "We set up end-to-end analytics, transfer ownership of all accounts and databases, and build a model in which every penny is tied to the result.",
         actionsExpanded: {
-          partnerHeading: "What the partner receives:",
+          partnerHeading: "What does the partner receive:",
           sections: [
             {
-              title: "Documents & tools",
+              title: "Documents and tools",
               items: [
-                "Acquisition channel map with economics: lead cost, CPL, customer cost",
-                "Current channel audit: what works, what burns budget — with numbers",
-                "Marketing budget allocation model by channels and goals",
-                "Playbook for managing ad accounts on the company side",
+                "Map of acquisition channels with the economics of each: cost per lead, CPL, customer cost",
+                "Audit of current channels: what works, what wastes the budget - with numbers",
+                "Model of marketing budget distribution by channels and goals",
+                "Instructions for managing advertising accounts on the company's side",
               ],
             },
             {
-              title: "Metrics & dashboards",
+              title: "Metrics and dashboards",
               items: [
-                "End-to-end analytics dashboard: first touch to payment",
-                "Funnel metrics per channel: impressions → leads → qualification → sale",
+                "End-to-end analytics dashboard: from first touch to payment",
+                "Funnel metrics for each channel: impressions → leads → qualification → sales",
                 "LTV and ROI by customer segments",
               ],
             },
             {
-              title: "Also",
+              title: "Additionally",
               items: [
-                "All accounts, databases, and access transferred to the company — documented",
-                "Regulation for agencies and contractors: who owns what",
+                "All accounts, databases and accesses have been transferred to the company - with documentation",
+                "Regulations for working with contractors and agencies: who owns what",
               ],
             },
           ],
@@ -151,55 +178,66 @@ export const en: Dictionary = {
         key: "sales",
         title: "Sales",
         group: "Leverage",
-        groupLabel: "Leverage",
+        groupLabel: "Lever",
         summary:
-          "Systemic sales without “stars”: standards, scripts, CRM control.",
+          "When sales results depend on two “irreplaceable” managers, this is not a system, this is a risk. We are building a sales department that works according to the standard: any new employee reaches the planned figures in 2–4 weeks.",
         details: [
-          "Communication standards and scripts.",
-          "CRM control, funnel, and lead handling.",
-          "Results stay stable when people change.",
+          "What we do:",
+          "Scripts and communication standards: the result does not depend on the talent of a particular person",
+          "Rules for working with a lead: from the first touch to closing the deal - every step is described",
+          "CRM control: not a single lead is lost, not a single deal is “stuck” without status",
+          "Funnel and qualification: the system itself weeds out non-targets and focuses efforts on those who will buy",
+          "Onboarding a new manager: according to regulations, not “watch how I do it”",
         ],
         result:
-          "Sales rest on a system, not on two star managers. Results are repeatable and predictable.",
+          "Sales depend on the system, and not on two “star” managers. The result is reproducible and predictable.",
         resultExpanded: {
           whatWeBuild:
-            "Scripts, lead-handling standards, CRM control, qualification funnel, and onboarding for new managers.",
+            "Scripts, standards for working with leads, CRM control, qualification funnel and onboarding for new managers.",
           partnerOutcomes: [
-            "Sales do not stop when a key manager leaves",
-            "A new hire reaches plan-level performance in 2–4 weeks",
-            "The owner sees the funnel in real time — without chasing reports",
-            "Revenue is predictable: plan vs. actual aligns — not “whatever this month brings”",
+            "Sales don't stop when a key manager leaves",
+            "A new employee reaches planned targets in 2–4 weeks",
+            "The owner sees the funnel in real time - without manually requesting reports",
+            "Revenue is predictable: the plan and fact converge, and not “how lucky this month”",
           ],
         },
         broken:
-          "Dependence on stars and drops when people leave.",
+          "There are two managers who “hold” sales. If they leave, the revenue will be lost.",
+        brokenExpanded: [
+          "The result depends on the “stars”: there are no standards, everyone sells as best they can",
+          "The new manager has been floating for months: no onboarding, no scripts, no system",
+          "CRM is not maintained or is maintained chaotically: leads are lost, deals are “stuck” without status",
+          "There is no funnel with standards: it is unclear at what stage clients leave and why",
+          "The owner does not see the picture in real time - only in the words of managers",
+          "Revenue forecast is a guess, not a calculation",
+        ],
         actions:
-          "We build a system where results do not depend on “stars.” Any new manager reaches plan-level performance in 2–4 weeks — by playbook, not by gut feel.",
+          "We are building a system in which the result does not depend on the “stars”. Any new manager reaches the planned indicators in 2–4 weeks - according to the regulations, and not “by eye”.",
         actionsExpanded: {
-          partnerHeading: "What the partner receives:",
+          partnerHeading: "What does the partner receive:",
           sections: [
             {
-              title: "Documents & tools",
+              title: "Documents and tools",
               items: [
-                "Sales scripts for each funnel stage and client type",
-                "Lead handling regulation: first touch to closed deal",
-                "CRM architecture: funnel structure, statuses, fields, automations",
-                "New manager onboarding: reach results in 2–4 weeks",
+                "Sales scripts for each stage of the funnel and type of client",
+                "Rules for working with a lead: from the first touch to closing the deal",
+                "CRM architecture: funnel structure, statuses, fields, automation",
+                "Onboarding program for a new manager: achieving results in 2–4 weeks",
               ],
             },
             {
-              title: "Metrics & dashboards",
+              title: "Metrics and dashboards",
               items: [
-                "Live sales funnel: conversion at each stage",
-                "Manager KPIs: plan vs. actual on revenue, deals, conversion",
-                "“Lost leads” metric: where and why clients drop off",
+                "Real-time sales funnel: conversions at every stage",
+                "Managers' KPIs: plan-facts for revenue, number of transactions, conversion",
+                "“Lost leads” metric: where and why clients leave",
               ],
             },
             {
-              title: "Also",
+              title: "Additionally",
               items: [
                 "Manager training and certification system",
-                "Quality control regulation for calls and chats",
+                "Regulations for quality control of calls and correspondence",
               ],
             },
           ],
@@ -211,53 +249,64 @@ export const en: Dictionary = {
         group: "Shield",
         groupLabel: "Shield",
         summary:
-          "Transparent finance, management accounting, and margin control.",
+          "“There is turnover, but where the profit is is unclear” is one of the most common phrases that people come to us with. We are building management accounting in which the owner sees the real picture of finances: without interpretation, without “different versions of numbers” from different people.",
         details: [
-          "Management accounting and plan-vs-actual.",
-          "Profit and cost transparency.",
-          "Cashflow discipline and risk control.",
+          "What we do:",
+          "Management accounting: real profit by area - not accounting figures, but business economics",
+          "Plan-fact and payment calendar: cash gaps are visible in advance, not after the fact",
+          "Identification of financial holes: hidden leaks, ineffective cost items, gray schemes - fixed and closed",
+          "Accounting by areas: which one makes money, which one drags down",
+          "Single financial truth: one version of the numbers - for the owner, for the team, for the investor",
         ],
         result:
-          "The owner sees real profit, not rough estimates. Decisions are data-driven, not feelings-driven.",
+          "The owner sees real profit, and not “approximate figures.” Decisions are made based on data, not feelings.",
         resultExpanded: {
           whatWeBuild:
-            "Management accounting, plan vs. actual, payment calendar, P&L by line of business, and surfacing hidden financial leaks.",
+            "Management accounting, plan-fact, payment calendar, accounting by direction and identifying hidden financial leaks.",
           partnerOutcomes: [
-            "“Where is my money?” — answered in minutes, not days",
-            "Decisions are based on data, not intuition",
-            "Financial holes and hidden leaks are found and closed",
-            "The business is ready for investors or banks: numbers are clear and defensible",
+            "The answer to the question “where is my money?” - in 5 minutes, not 5 days",
+            "Decisions are made based on data, not intuition.",
+            "Financial holes and hidden leaks - identified and closed",
+            "Business is ready to talk with an investor or bank: the numbers are clear and justified",
           ],
         },
         broken:
-          "No single source of truth, cash gaps, blind spots.",
+          "There is turnover, but no profit - or it is unclear where it went. The financial picture is blurry.",
+        brokenExpanded: [
+          "Several “versions of numbers”: the accountant says one thing, the operating director says another",
+          "The cash gap appears suddenly: no one warned in advance",
+          "It is unclear which direction makes money and which one eats up profits",
+          "Hidden leaks: money goes through overpaid contractors, ineffective articles and gray schemes",
+          "Decisions are made based on feelings, not management data",
+          "Business is not ready to talk with an investor or bank: the numbers don’t add up",
+        ],
         actions:
-          "We set up management accounting and a financial model. The owner sees real profit, cash movement, and cash gaps — early, not after the fact.",
+          "We set up management accounting and financial model. The owner sees real profits, cash flow and cash gaps - in advance, and not after the fact.",
         actionsExpanded: {
-          partnerHeading: "What the partner receives:",
+          partnerHeading: "What does the partner receive:",
           sections: [
             {
-              title: "Documents & tools",
+              title: "Documents and tools",
               items: [
-                "Management P&L by business lines",
-                "Cash flow (CF) statement: real picture by period",
-                "Payment calendar: cash gaps visible 2–4 weeks ahead",
-                "Financial model: breakeven, margin, unit economics",
+                "Management P&L (profit and loss statement) by business area",
+                "Cash flow statement (CF): the real picture by period",
+                "Payment calendar: cash gaps are visible 2–4 weeks before the fact",
+                "Financial business model: break-even point, marginality, unit economy",
               ],
             },
             {
-              title: "Metrics & dashboards",
+              title: "Metrics and dashboards",
               items: [
-                "Finance dashboard: revenue, profit, margin, expenses — one screen",
-                "Line-of-business view: what earns, what drags profit down",
-                "Plan vs. actual on all key financial metrics",
+                "Financial dashboard: revenue, profit, margin, expenses - in one screen",
+                "Accounting by areas: which earns, which drags down",
+                "Plan-fact for all key financial indicators",
               ],
             },
             {
-              title: "Also",
+              title: "Additionally",
               items: [
-                "Report on found financial leaks and how to close them",
-                "Finance regulations: who approves what spend, when",
+                "Report on identified financial leaks and recommendations for closing them",
+                "Financial regulations: who, what and when agrees on expenses",
               ],
             },
           ],
@@ -265,57 +314,73 @@ export const en: Dictionary = {
       },
       {
         key: "hr",
-        title: "HR & team",
+        title: "HR and team",
         group: "Shield",
         groupLabel: "Shield",
         summary:
-          "Structured hiring, onboarding, evaluation, and talent pipeline.",
+          "If a key person leaves and a function leaves with him, this is not an HR problem. This is an architectural problem. We are building a system in which the expertise belongs to the company, not the people: hiring, adaptation and development work according to the standard.",
         details: [
-          "Role profiles and hiring standards.",
-          "Onboarding, training, mentorship.",
-          "Evaluation system and talent growth.",
+          "What we do:",
+          "Job profiles: clear criteria for who to hire and by what parameters to evaluate",
+          "Systematic recruitment: candidate funnel, competency assessment, protocol decision-making",
+          "Onboarding program: a new employee achieves results according to the standard, rather than “watching and learning”",
+          "Evaluation system and HR analytics: it’s clear who is pulling, who is holding on, who is slowing down growth",
+          "Talent reserve and succession plan: critical functions are always closed",
+          "What remains for the partner:",
+          "The departure of any employee is a planned transfer of competencies, not a collapse of the function",
+          "Hiring is carried out according to the standard: we hire the right people, not “who came”",
+          "A new person does not break the system - he integrates into it",
+          "Expertise is stored in the company's processes and regulations, and not in the heads of two people",
         ],
         result:
-          "The team is stable: roles are fixed, expertise lives in the system — not in people. Someone leaving is not a disaster.",
+          "The team is stable: roles are fixed, expertise lies in the system, not in people. An employee leaving is not a disaster.",
         resultExpanded: {
           whatWeBuild:
-            "Role profiles, hiring system, onboarding program, performance reviews, and bench coverage for critical functions.",
+            "Job profiles, recruitment system, onboarding program, evaluation system and talent pool for critical functions.",
           partnerOutcomes: [
-            "Any departure is a planned handover — not a function collapse",
-            "Hiring follows a standard: we take the right people, not “whoever showed up”",
-            "New hires plug into the system — they do not break it",
-            "Expertise is stored in processes and policies — not in two people’s heads",
+            "The departure of any employee is a planned transfer of competencies, not a collapse of the function",
+            "Hiring is carried out according to the standard: we hire the right people, not “who came”",
+            "A new person does not break the system - he integrates into it",
+            "Expertise is stored in the company's processes and regulations, and not in the heads of two people",
           ],
         },
         broken:
-          "Turnover, chaotic hiring, dependence on key people.",
+          "The staff turnover does not stop, hiring is a lottery, and the “irreplaceable” know about it and take advantage of it.",
+        brokenExpanded: [
+          "There are no job profiles: they hire “by feel” - they hire the wrong people, they waste time and money",
+          "There is no onboarding: the new employee “survives on his own” and achieves results in 3–4 months instead of 2–4 weeks",
+          "Expertise is stored in people, not in the system: if a person leaves, the knowledge is gone",
+          "“Strong” employees are blackmailed into leaving, knowing that without them the function will collapse",
+          "There is no evaluation system: it is unclear who really pulls the company and who takes the place",
+          "There is no personnel reserve: any dismissal means an emergency search for a replacement",
+        ],
         actions:
-          "We build HR processes from hiring to evaluation. Expertise lives in the system — not in people. A departure no longer breaks the function.",
+          "We build HR processes from hiring to assessment. The expertise is stored in the system - not in the people. An employee leaving no longer breaks the function.",
         actionsExpanded: {
-          partnerHeading: "What the partner receives:",
+          partnerHeading: "What does the partner receive:",
           sections: [
             {
-              title: "Documents & tools",
+              title: "Documents and tools",
               items: [
-                "Role profiles for key roles: competencies, KPIs, ownership zones",
-                "Hiring funnel with evaluation criteria and selection method",
-                "Onboarding program: first 30–90 days with checklists and control points",
-                "Performance system: outcome metrics and regular reviews",
+                "Job profiles for all key roles: competencies, KPIs, areas of responsibility",
+                "Hiring funnel with evaluation criteria and selection methodology",
+                "Onboarding program: plan for the first 30–90 days with checklists and control points",
+                "Personnel evaluation system: performance metrics and regular review",
               ],
             },
             {
-              title: "Metrics & dashboards",
+              title: "Metrics and dashboards",
               items: [
-                "HR dashboard: turnover, time-to-performance, team NPS",
-                "Talent bench map: who is ready to grow into which roles",
+                "HR dashboard: turnover, time to achieve results, NPS teams",
+                "Personnel reserve map: who is ready for growth and in what positions",
                 "Succession matrix for critical functions",
               ],
             },
             {
-              title: "Also",
+              title: "Additionally",
               items: [
-                "Offboarding regulation: handover of tasks, access, and knowledge by protocol",
-                "Company knowledge base: expertise captured inside the system",
+                "Employee exit regulations: transfer of cases, accesses and knowledge according to the protocol",
+                "Company knowledge base: expertise is recorded and stored within the system",
               ],
             },
           ],
@@ -327,53 +392,64 @@ export const en: Dictionary = {
         group: "Shield",
         groupLabel: "Shield",
         summary:
-          "Asset protection, contracts, IP, and data security.",
+          "Most owners find out about legal holes when it’s too late: the database has leaked, the contractor is blackmailing with access, a former employee has stolen clients. The legal outline is not a formality, but a real shield that protects the business from these scenarios in advance.",
         details: [
-          "Contract base and ownership protection.",
-          "Security policies and personal data compliance.",
-          "Legal audit and risk reduction.",
+          "What we do:",
+          "Non-disclosure agreements: data, customer bases and trade secrets are protected at the entrance",
+          "Employment contracts and job descriptions: rights and obligations are fixed - there is no basis for blackmail",
+          "Contracts with contractors: rights to work results, accesses and databases belong to the company, not to the contractor",
+          "Intellectual property protection: brand, developments, content - registered as company assets",
+          "Legal audit: existing vulnerabilities identified, prioritized and closed",
         ],
         result:
-          "Assets, data, and rights belong to the company — legally and technically. Not to individuals or contractors.",
+          "The assets, data and rights belong to the company - legally and technically. Not people, not contractors.",
         resultExpanded: {
           whatWeBuild:
-            "NDAs, employment agreements, contractor agreements, IP protection, and a legal audit of existing gaps.",
+            "NDAs, employment contracts, contracts with contractors, IP protection and legal audit of existing vulnerabilities.",
           partnerOutcomes: [
-            "Key assets — databases, access, IP, brand — legally belong to the company",
-            "An employee or contractor leaving does not threaten the business",
-            "Protected against data theft, “irreplaceable” extortion, and loss of client bases",
-            "Legal setup is ready for scrutiny from investors, banks, or partners",
+            "All key assets - databases, access, IP (intellectual property), brand - legally belong to the company",
+            "The departure of an employee or contractor does not pose a threat to the business",
+            "Business is protected from data theft, blackmail of “irreplaceables” and loss of customer bases",
+            "The legal outline is ready for verification by an investor, bank or partner",
           ],
         },
         broken:
-          "Lawsuit risks, data leaks, and asset vulnerabilities.",
+          "The contracts are outdated, the data is stored by people, not by the company. One leak and it’s already a crisis.",
+        brokenExpanded: [
+          "Client bases and access - from managers or contractors: they can be “taken away” at any time",
+          "NDAs are not signed or signed for show - without real legal force",
+          "Employment contracts do not cover the rights to work results and trade secrets",
+          "The company's IP - brand, developments, content - are not legally registered as assets",
+          "Contractors work without contracts or with contracts where all rights are on their side",
+          "Any conflict with an employee or partner becomes a vulnerability: there is nothing to defend in court",
+        ],
         actions:
-          "We close legal gaps and build a protective perimeter: rights to assets, data, and IP — with the company, not with people and contractors.",
+          "We close legal vulnerabilities and build a protective circuit: the rights to assets, data and intellectual property belong to the company, and not to people and contractors.",
         actionsExpanded: {
-          partnerHeading: "What the partner receives:",
+          partnerHeading: "What does the partner receive:",
           sections: [
             {
-              title: "Documents & tools",
+              title: "Documents and tools",
               items: [
-                "NDAs and confidentiality templates for employees, partners, and contractors",
-                "Employment agreements protecting trade secrets and work results",
-                "Contractor agreements: rights to deliverables, content, and data — on the company side",
-                "Data storage and access regulation: who accesses what, under what terms",
+                "NDAs and Non-Disclosure Agreements: Templates for Employees, Partners and Contractors",
+                "Employment contracts with protection of trade secrets and rights to work results",
+                "Contracts with contractors: rights to developments, content and data are on the company’s side",
+                "Regulations for storage and access to data: who, for what, under what conditions",
               ],
             },
             {
-              title: "Audit & risk maps",
+              title: "Audit and risk maps",
               items: [
-                "Legal audit: vulnerability map with closure priorities",
-                "Company asset register: what is formalized, what is not, what to fix",
-                "IP protection checklist: brand, product, content — formalized as assets",
+                "Legal audit: map of vulnerabilities with closure priorities",
+                "Register of company assets: what is registered, what is not, what needs to be closed",
+                "IP protection checklist: brand, developments, content - registered as assets",
               ],
             },
             {
-              title: "Also",
+              title: "Additionally",
               items: [
-                "Access handover regulation when a contractor changes or an employee leaves",
-                "Document pack ready for investor, bank, or partner due diligence",
+                "Regulations for the transfer of access when changing a contractor or dismissing an employee",
+                "A package of documents ready for verification by an investor, bank or partner",
               ],
             },
           ],
@@ -381,457 +457,727 @@ export const en: Dictionary = {
       },
     ],
     results: {
-      title: "Valuable end result (VER)",
-      description: "What the owner gets from each pillar.",
+      title: "Valuable end result (VAR)",
+      description: "What does the owner receive as a result of each pillar?",
       badge: "",
-      resultModalWhatWeBuild: "What we build",
-      resultModalPartnerLabel: "What stays with the partner",
+      resultModalWhatWeBuild: "What are we building?",
+      resultModalPartnerLabel: "What remains with the partner?",
       resultModalCloseLabel: "Close",
     },
     problems: {
-      title: "When a pillar is broken",
-      description: "Symptoms in each direction when the system fails.",
+      title: "What happens when a pillar is \"broken\"",
+      description:
+        "Each of the six pillars of business can be a point of loss. This is what breakdown looks like from the inside - before it becomes a crisis.",
       badge: "Risks",
+      detailsExpandedListHeading: "What it looks like in practice",
     },
     actions: {
-      title: "What BBI does concretely in your business",
+      title: "What exactly does BBI do in your business?",
       description:
-        "We don’t give recommendations and leave after diagnostics. Across all six directions we build, implement, and hand over concrete tools — everything stays with the partner after the project.",
+        "We do not give recommendations and do not leave after diagnosis. For each of the six areas, we build, implement and transfer specific tools - everything remains with the partner after the project.",
       badge: "BBI",
     },
     format: {
-      title: "Format",
+      title: "Work format",
       description:
-        "BBI is not about tasks or hours. We work as a project for 45+ business days with full immersion.",
+        "BBI enters the business as a management system architect: for 90+ working days, with full immersion and responsibility for a specific result. Not hours and tasks - but the target state of the business, which is fixed in the contract.",
       zones: [
         {
-          label: "Green zone (this is BBI)",
+          label: "The green zone is BBI",
           description:
-            "Screening → diagnosis / audit → 45+ day project → retainer role.",
+            "We work in one format: diagnostics → audit → design → implementation → transfer of a protected and managed business asset. Each stage is strictly sequential. We don't jump to \"implementation\" until we understand the real picture of the business.",
           tone: "green",
         },
         {
-          label: "Yellow zone (allowed as part of the project)",
+          label: "Yellow zone - acceptable as part of the project",
           description:
-            "SMM, website, CRM — only as elements of the built system.",
+            "Some tools - CRM, website, SMM - can be part of the BBI project, but only if they are needed to achieve the agreed target result. Not as an independent service. Not for the instrument. Important rule: BBI remains the architect of the management system. Contractors are involved as a tool - they are performers, not owners of the function. After the project, all accesses, offices and databases belong to the company.",
           tone: "yellow",
         },
         {
-          label: "Red zone (we do not do this)",
+          label: "Red zone - we don't do this",
           description:
-            "SMM outsourcing, marketing-as-a-service, brandbook as a service, one-off consulting.",
+            "We don’t accept some requests on principle - not because we “don’t know how”, but because they contradict our model. The agent format does not produce systematic results. One-time services do not solve root problems. What we never do: maintaining SMM and regular content production as a permanent function; “turnkey” advertising/targeting; outsourced marketing without building a system; brand book, packaging, website as a separate service outside the project; one-time consultations without implementing and consolidating the system.",
           tone: "red",
         },
       ],
     },
     stages: {
-      title: "Project stages",
-      description: "How the system is built step by step.",
+      title: "How we work: from the first call to a working system",
+      description:
+        "Each stage is a specific result, not a process for the sake of a process. We move sequentially: first we understand the real picture, then we design, then we build. No jumping around and no “let’s get started and figure it out.”",
+      readMoreLabel: "Read more",
+      whatWeDoHeading: "What we do",
+      detailsListMarker: "What we do:",
       steps: [
         {
-          title: "Screening (free)",
-          description: "Fit check and problem framing.",
+          title: "Diagnostics",
+          description:
+            "The first conversation to honestly understand whether we are right for each other. No sales and no promises. Based on the results of the screening, there is a clear decision: “our client”, “not ours” or “only diagnostics”. Without vague “we’ll think about it.”",
         },
         {
-          title: "Diagnosis / audit",
+          title: "Audit",
           description:
-            "Full picture: finance, processes, team, marketing, sales.",
+            "A complete picture of the business with an evidence base. Not sensations - data. Not team opinions - facts. What we do: data collection (CRM, finance, sales reports, contracts, advertising accounts); interviews with the team (5–10 key employees in all six areas); audit on 6 pillars (operations, finance, sales, marketing, HR, asset protection); consolidation of findings into a single report with an evidence base.",
         },
         {
           title: "System design",
           description:
-            "Architecture of shield, leverage, and the management contour.",
+            "We translate the audit findings into a concrete drawing: what the business should look like, who is responsible for what, and by what metrics it is managed. Not recommendations - a working document. What we do: analyze audit data and agree on design principles with the owner; designing a target organizational chart (roles, areas of responsibility, hierarchy of decisions); We build a KPI tree and dashboard architecture; We create a RACI matrix for key processes; We draw up a roadmap of changes for 90–180 days; We prepare SOP and regulations templates.",
         },
         {
-          title: "Implementation & control (45–90 business days)",
+          title: "Implementation and control",
           description:
-            "BBI works inside the business until the system stabilizes.",
+            "The team works within the business and builds systems that actually work—they don’t sit in a folder on a shelf. What we do: stage 1 - onboarding and launch (verification of priorities, closing critical risks, launching the management rhythm); stage 2 - building systems (SOP and regulations on priority pillars, CRM logic and funnel, KPI dashboards, HR documentation, financial instruments); Stage 3 - testing and handover (combat testing, team training, Playbook finalization, final handover session).",
         },
         {
-          title: "Retainer role",
+          title: "Transfer of a protected and managed business asset",
           description:
-            "BBI stays as a partner to maintain resilience.",
+            "The final point of the journey with BBI is a business that can be transferred, sold, scaled, or attracted an investor to it. Not in words, but with documents, metrics and a working management system. We leave only when the business exists as an independent asset - with documents, a system and a team that works according to the standard without external support.",
         },
       ],
     },
     responsibility: {
       title: "Responsibility",
+      description:
+        "The result is achieved only when each side clearly understands its zone. BBI doesn’t do the client’s work—we build an architecture that the partner’s team implements and supports internally.",
       bbiTitle: "BBI is responsible for",
-      clientTitle: "Client is responsible for",
+      clientTitle: "The client is responsible for",
       bbi: [
-        "Management architecture and system",
-        "Asset protection and ownership",
+        "Architecture and control system",
+        "Asset and ownership protection",
         "Standards and reproducibility (SOP, playbook, RACI)",
-        "Financial transparency and decision logic",
+        "Transparency of finances and logic of decisions",
         "Change management",
       ],
       client: [
-        "Involvement (up to 10 h/week) and fast decisions",
+        "Involvement (up to 10 hours/week) and quick solutions",
         "Transparency and access to data",
-        "Responsible owners for 6 pillars",
-        "Execution inside the business by the client team",
-        "Governance rhythm and discipline",
+        "Availability of responsible persons for 6 pillars",
+        "Execution within the business by your own team",
+        "Maintaining management rhythm and discipline",
+      ],
+      bbiDetailed: [
+        {
+          title: "Architecture and control system",
+          description:
+            "We design the operating model: who is responsible for what, how decisions are made, how execution control is structured. We do not recommend it - we are building a working scheme for a specific business.",
+        },
+        {
+          title: "Asset and ownership protection",
+          description:
+            "All assets - accounts, databases, domains, IP, contracts - become the property of the company. We build a legal and operational protection framework.",
+        },
+        {
+          title: "Standards and reproducibility",
+          description:
+            "We create SOP, Playbook and RACI - documents according to which the team works without the participation of the owner and without dependence on specific people.",
+        },
+        {
+          title: "Transparency of finances and logic of decisions",
+          description:
+            "We are building management accounting: one version of numbers for everyone. Decisions are made based on data, not on the feelings and opinions of different people.",
+        },
+        {
+          title: "Change management",
+          description:
+            "We guide the team through transformation: training, consolidating new standards in daily practice, testing systems until handover.",
+        },
+        {
+          title: "Achieving the agreed CCR",
+          description:
+            "The project is considered completed when the target key result fixed in the contract is achieved. Not before.",
+        },
+      ],
+      clientDetailed: [
+        {
+          title: "Owner involvement - 5–8 hours per week",
+          description:
+            "Transformation is impossible without the participation of the decision maker. The owner (or CEO with full delegation) is present in work formats and controls through numbers and rhythm. Anything less and the speed of implementation drops exponentially.",
+        },
+        {
+          title: "Quick solutions - no longer than 72 hours",
+          description:
+            "Personnel forks, transfer of access, appointment of owners, budget priorities - these decisions cannot wait for weeks. Procrastination blocks the entire system.",
+        },
+        {
+          title: "Transparency and access to data",
+          description:
+            "CRM, financial reports, contracts, advertising accounts, analytics - are opened by BBI without filtering. Without data, it is impossible to make an accurate diagnosis and you cannot be responsible for the result.",
+        },
+        {
+          title: "Having people responsible for the 6 pillars",
+          description:
+            "Each area - operations, marketing, sales, finance, HR, legal protection - must have a manager or person in charge. If it is not there, it is recorded as a critical risk at the diagnostic stage.",
+        },
+        {
+          title: "Execution within the business by a team",
+          description:
+            "Operational activities are carried out by the partner's team. BBI builds a system - it does not work in place of managers and does not manage the client’s employees.",
+        },
+        {
+          title: "Maintaining management rhythm and discipline",
+          description:
+            "After the launch of new formats - scheduled meetings, monitoring by metrics, fulfillment of agreements without rollbacks or sabotage. The system is based on discipline, not just documents.",
+        },
+      ],
+      readMoreLabel: "Learn more",
+      readLessLabel: "Hide",
+    },
+    pillarCardUi: {
+      whatWeBuild: "What we build",
+      partnerWithClient: "What stays with the partner",
+      brokenPracticeHeading: "What it looks like in practice",
+    },
+    promises: {
+      title: "What BBI does not promise",
+      subtitle: "To avoid false expectations — honestly:",
+      paragraphs: [
+        "We do not guarantee instant revenue growth. BBI’s outcome is a manageable business asset. Growth becomes controllable and repeatable, not random.",
+        "We do not create a “no-owner autopilot.” The owner steps out of day-to-day operations but stays in control through numbers and cadence — that is not the same thing.",
+        "We do not work in a “just do this for us” mode. Only within the logic of an agreed valuable outcome — without an endless stream of tasks disconnected from the system.",
+        "We do not transform everything at once. Movement is phased: first critical risks and transparency, then standards and scalability.",
       ],
     },
     targetState: {
-      title: "Target State",
-      minimumTitle: "Target Minimum (45–90 business days)",
+      title: "Desired result (Target State)",
+      minimumTitle: "Target Minimum (45–90 working days)",
       minimumDescription:
-        "Threat control, single source of truth, system works without the owner.",
-      idealTitle: "Target Ideal (benchmark)",
+        "Threat control, “one truth” in numbers, the system does not break down without the owner.",
+      idealTitle: "Target Ideal (standard)",
       idealDescription:
-        "The business is stable, protected, and grows reproducibly, ready for investment.",
+        "The business is stable, protected and growing reproducibly, ready for investment.",
     },
     cta: {
-      title: "Start with screening",
-      description: "Free and no obligations.",
+      title: "Start with diagnosis",
+      description: "It's free and doesn't oblige you to anything.",
       form: {
         name: "Name",
-        phone: "Phone",
-        message: "Short brief",
-        submit: "Book a screening",
+        phone: "Telephone",
+        message: "Briefly about the request",
+        submit: "Send",
       },
     },
   },
   pillarsPage: {
     title: "6 pillars of BBI",
     description:
-      "Six support points that build a resilient and protected business asset.",
-    ctaLabel: "Start with screening",
-    ctaDescription: "We’ll map your gaps in 30 minutes.",
+      "Six points of support that create a sustainable and protected business asset.",
+    ctaLabel: "Start with diagnostics",
+    ctaButtonLabel: "Fill out the form",
+    ctaDescription: "Let's discuss the scale and growth points in 30 minutes.",
   },
   home: {
     hero: {
       eyebrow: "Brand Promise",
-      title: "We build a business that works not chaotically, but as a manageable and scalable system",
+      title:
+        "We build a business that works\nnot chaotically, but as a\nmanaged and scalable\nsystem",
+      titleLineBreakMatch: "chaotically",
       subtitle:
-        "Operating partner for owners and CEOs in Central Asia: we diagnose failure points, design business architecture and implement it together with your team.",
+        "Operating partner for owners and CEOs in Central Asia: we diagnose points of failure, design business architecture and implement it together with your team.",
       cta: "Start with diagnostics",
       secondaryCta: "View cases",
-      secondaryCtaHref: "/cases",
+      secondaryCtaHref: "#cases",
     },
     icpIntro: {
-      eyebrow: "Target audience",
-      title: "For whom we work",
+      eyebrow: "Target Audience",
+      title: "Who are we for?",
       segments: [
         {
-          title: "Your business is growing, but you're the busiest person in the company — and the most expensive executor.",
-          description: "The system isn't built — the business depends on your presence.",
+          title: "Your business is growing, but you are the busiest person in the company. And the most expensive performer.",
+          description: "The system is not built - the business rests on your presence.",
           details:
-            "Not because you manage poorly. Because the system isn't built: decisions loop through you, the team waits for orders instead of acting on protocol. No real weekends. Vacation is phone work in another time zone. Strategy waits for «after the fires» — and the fires don't stop.\n\nReports exist. Numbers exist. Truth doesn't. Sales say one thing, finance another, marketing a third. You decide without knowing which data to trust. Revenue grows. The feeling of control — doesn't.\n\nAs long as you hold it all on yourself, the business doesn't belong to you. It belongs to your presence.",
-          pain: "You're not running the business. You're its bottleneck.",
+            "Not because you manage poorly. But because the system is not built: decisions are made on you, the team waits for instructions, and does not act according to the protocol. There are no days off. Vacation means working from your phone in a different time zone. The strategy is postponed until “after the fires” - but the fires are not getting smaller.\n\nThere are reports. They have numbers. There is no truth. Sales show one thing, finance another, marketing another. You make decisions without knowing what data to believe. Business is growing. There is no feeling of control.\n\nAs long as you keep it to yourself, the business does not belong to you. It belongs to your presence.",
+          pain: "You are not a business leader. You are his bottleneck.",
         },
         {
-          title: "You scaled the business. Revenue grew. The team grew. So did the problems.",
-          description: "Without an operating model you scale losses, not efficiency.",
+          title: "You have scaled your business. Revenue increased. The team has grown. Problems too.",
+          description: "Without an operating model, waste scales, not efficiency.",
           details:
-            "Eighty people behave like eight: each department in its own reality, no standards, managers build their own «states». You opened a second office and got a second source of chaos: revenue grows but profit «disappears somewhere». Margin falls — for no clear reason. Because without an operating model, scaling isn't growth. It's copying losses.\n\nNo SOP — no standard. No RACI — no clear ownership. No unified metrics — no management. There's only the illusion of growth and a sharply higher load on the owner.",
-          pain: "Chaos doesn't scale — or you scale losses.",
+            "80 people behave like 8: each department is in its own reality, there are no standards, managers build their own “states”. You opened a second office and got a second source of chaos: revenue is growing, but the profit is “disappearing somewhere.” Margins are falling – it’s not clear why. Because without an operating model, scaling is not growth. This is the replication of losses.\n\nNo SOP - no standard. No RACI - no person in charge. No common metrics - no management. There is only the illusion of growth and a manifold increased burden on the owner.",
+          pain: "Chaos cannot be scaled. Otherwise, you scale up your losses.",
         },
         {
-          title: "You know the business inside out. The investor doesn't — and that's the problem.",
-          description: "A deal needs manageability on paper, not «potential in your head».",
+          title: "You know the business like the back of your hand. Investor - no. And that's the problem.",
+          description: "A deal requires manageability on paper, not “potential in your head.”",
           details:
-            "Due diligence doesn't care about your intuition or operating experience. It surfaces holes in accounting, missing rights to assets, opaque processes. «Business in the owner's head» isn't an asset. It's a red flag that pushes valuation down.\n\nNo single financial truth — no basis for the multiple. No ownership of databases, IP, and logins — no guarantees for the buyer. No management structure — no confidence the business survives without you.\n\nThe investor isn't buying your potential. They're buying manageability, transparency, and predictability. If it's not on paper — they either walk away or pay less.",
-          pain: "Your business works. But until it's structured as an asset — it's worth less than it should be.",
+            "You know your business like the back of your hand. Investor - no. And that's the problem. When a buyer or investor comes along, they don't look at your intuition and experience. He looks at the documents. And there are holes in accounting, assets without registered rights, processes that live only in the head of the owner. “Business in the head” is not an asset. This is a red flag that pushes the appraisal down or scares the buyer away even before negotiations.\n\nThere is no financial “one truth” - there is no justification for the price.\nClient databases, advertising accounts, domains are stored by the manager or contractor - which means they do not belong to the company.\nIP, developments and content are not legally secured anywhere - the buyer cannot be sure that he is buying them along with the business.\nThere is no management structure - there is no confidence that the business will survive without you.\nThe investor is not buying your potential. It buys controllability, transparency and predictability. If this is not on paper, he either leaves or pays less.",
+          pain: "Your business is working. But until it is registered as an asset, it costs less than it should.",
         },
       ],
-      exclude: "Business under 5 years, startups in PMF, one-off consulting, agency services. Or expecting «guarantee growth» without readiness to change the system.",
-      excludeLabel: "Not for",
+      exclude:
+        "Business up to 5 years, startups on PMF, one-time consultations, turnkey agency services. And the request “guarantee growth” without a willingness to change the system.",
+      excludeLabel: "We don't fit",
+      readMoreLabel: "Read more",
     },
     icp: {
       eyebrow: "Question",
-      title: "Is this you?",
-      subtitle: "Three typical scenarios. If you recognize yourself — below we explain exactly how we help.",
+      title: "Do you recognize yourself?",
+      subtitle: "Three typical scenarios. If you recognize yourself, below we will tell you exactly how we help.",
       cards: [
         {
-          title: "You're not running the business. You're its bottleneck.",
+          title: "You are not a business leader. You are his bottleneck.",
           description:
-            "Every day you're the final call on everything: from a client discount to a conflict in a department. The company can't decide without you — not on numbers, not on policies. CRM and reports exist on paper, but there's no single source of truth — sales, marketing, and finance live in silos. Instead of a management architecture, you're the 24/7 ops manager.",
-          linkLabel: "Learn more",
+            "Every day you act as the final authority on any issue: from a discount to a client to a conflict in the department. The company does not know how to make decisions without you - neither in terms of numbers nor in terms of regulations. Formally there are CRM and reports, but there is no “one truth” in the numbers - sales, marketing and finance live separately. Instead of a management architecture, you act as the chief operations manager 24/7.",
+          linkLabel: "More details",
           href: "/icp/operations",
           modalLead:
-            "That's the reality for 80% of business owners. You have to dive into operations, personally watch deals and sales, and build departments. A business that depends on you isn't an asset — it's a cage.",
+            "This is the reality of 80% of business owners. You have to delve into operational issues, monitor transactions and sales yourself, and build departments. A business that depends on you is not an asset, it is a cage.",
           symptoms: [
-            "You dive into operations, watch deals and sales yourself, and build out teams. A business that depends on you isn't an asset — it's a cage.",
-            "Nothing gets decided without your «yes». That's not management. It's an operational swamp.",
-            "Without you the business burns. Turn off your phone for three hours — things break: deals slip, mistakes multiply.",
-            "You're on 24/7: fires in finance, wrangling contractors… You no longer build strategy, grow, or scale.",
+            "You have to delve into operational issues, monitor transactions and sales yourself, and build departments. A business that depends on you is not an asset, it is a cage.",
+            "No decision is made without your “yes”. This is not management. This is an operational swamp.",
+            "Without you, the business is burning. As soon as you turn off your phone for 3 hours, problems begin: deals fall through, errors multiply.",
+            "At work 24/7: putting out the fire in finances, dealing with contractors... You are no longer building strategies, not developing and not scaling.",
           ],
           partnershipCriteriaLabel: "Partnership criteria",
           partnershipCriteria: [
             "Company age: 5+ years",
-            "Scale: $30k–250k/mo",
-            "Headcount: 15–80 employees",
-            "Stage: growth without manageability",
-            "Business type: B2B, B2B/B2C — with a sales function and operations",
+            "Scale: $30k–250k/month",
+            "Staff: 15–80 employees",
+            "Stage: there is growth, but no controllability",
+            "Type of business: B2B, B2B/B2C - where there is a sales department and an operational part",
           ],
-          partnershipResultsLabel: "Partnership outcomes:",
+          partnershipResultsLabel: "Partnership result:",
           partnershipResults: [
-            "Manageability",
+            "Controllability",
             "Transparency",
             "Ownership of assets",
-            "One picture of the numbers",
-            "Cadence — management rhythm",
+            "Unified picture of numbers",
+            "Cadence - management rhythm",
             "Less manual control",
           ],
         },
         {
-          title: "Chaos doesn't scale — or you scale losses.",
+          title: "Chaos cannot be scaled. Otherwise, you scale up your losses.",
           description:
-            "Company growth doesn't convert into manageability and margin. The team expands, new functions and layers appear, but there's no shared operating envelope. People work in silos like separate teams; each department relies on its own data and view of the goal. You end up scaling not efficiency, but chaos, overspend, and losses.",
-          linkLabel: "Learn more",
+            "The company's growth does not translate into manageability and margins. The team is expanding, new functions and levels are appearing, but there is no common operational outline. Employees work in silos, like several isolated teams, each department relying on its own data and ideas about the goal. As a result, you scale not efficiency, but chaos, overspending and waste.",
+          linkLabel: "More details",
           href: "/icp/scale",
           modalLead:
-            "Without standards and RACI, scaling becomes copying chaos. There's no unified management contour.\n\nDepartments make decisions in different realities, reports contradict each other, and managing profit and quality from one place becomes impossible.",
+            "Without standards and RACI, scaling turns into replicating chaos. There is no single management contour.\n\nDepartments make decisions in different realities, reports conflict with each other, and it becomes impossible to manage profit and quality from a single point.",
           symptoms: [
-            "You scale existing chaos instead of an operating model",
-            "Eighty people repeat the same mistakes in different places",
-            "Managers pull the blanket: everyone builds «their empire»",
-            "Departments decide in different management logics",
-            "Growth paradox: revenue is higher, yet sense of control and actual profit are lower than at a smaller scale",
+            "Instead of an operating model, the existing chaos is scaled",
+            "80 people reproducing the same errors in different areas",
+            "Leaders are pulling the blanket: everyone is building “their own empire”",
+            "Departments make decisions in different management logics",
+            "The paradox of growth: turnover is higher, but the sense of control and actual profit is lower than at a smaller scale",
           ],
           partnershipCriteriaLabel: "Partnership criteria",
           partnershipCriteria: [
             "Age: 5+ years",
-            "Scale: $80k–500k/mo",
-            "Headcount: 40–200 employees",
-            "Stage: scaling (2nd office / branch / new directions / team growth)",
-            "Management: the owner already tried to «delegate», but the system didn't stick",
+            "Scale: $80k–500k/month",
+            "Staff: 40–200 employees",
+            "Stage: scaling (2nd office/branch/new directions/team growth)",
+            "Management: the owner has already tried to “delegate”, but the system has not taken hold",
           ],
-          partnershipResultsLabel: "Partnership outcomes:",
+          partnershipResultsLabel: "Partnership result:",
           partnershipResults: [
             "Scaling operating model",
             "Standards",
-            "Single source of truth for metrics",
-            "SOP — step-by-step instructions for a specific task",
-            "RACI — responsibility assignment matrix",
+            "Single truth according to metrics",
+            "SOP - step-by-step instructions for performing a specific task",
+            "RACI - responsibility distribution matrix",
             "Unified KPIs",
-            "Manageable structure",
+            "Managed structure",
             "Stable quality",
           ],
         },
         {
-          title: "If the business isn't structured as an asset — it's worth less than it should be.",
+          title: "If your business is not registered as an asset, it is worth less than it should.",
           description:
-            "You know the company through intuition and detail, but that's not what an investor buys. They need a clear, manageable contour — not the owner's verbal explanation. Any due diligence quickly exposes gaps in accounting, contracts, and processes. Until there's a single financial truth, a risk map, and an investor pack, it's almost impossible to justify the valuation and deal terms you want.",
-          linkLabel: "Learn more",
+            "The owner’s intuition and “we already know everything” are not an argument for the investor. It is important for him to see clear economics, clear rights to assets and manageable risks. As soon as the outside party begins to look at the numbers and documents, unformed agreements, dependence on people and accounting gaps emerge. Without a systemic financial picture and described risks, your company looks not like a managed asset, but like a set of practices around the owner.",
+          linkLabel: "More details",
           href: "/icp/investor",
           modalLead:
-            "Today most of what you know about the company, risks, and customers lives in you and a few key people. For an investor that's a signal: the asset isn't packaged, risks aren't managed, and the system isn't fixed on paper.\n\nUntil there's an investor pack, a risk map, a single financial truth, and clearly documented ownership, any investment conversation starts from a weak position.",
+            "Today, most of the knowledge about the company, risks and customers lives in you and key people. For an investor, this is a signal: the asset is not registered, risks are not managed, the system is not recorded on paper.\n\nWhile there is no investment folder, risk map, unified financial truth and clearly defined ownership, any dialogue about investments comes from a position of weakness.",
           symptoms: [
-            "When preparing for a deal, numbers, contracts, and asset rights turn out scattered across systems and people",
-            "Valuation rests on the owner's expectations, not transparent economics: no structured P&L and no single «truth» on margin",
-            "The operating model isn't on paper: dependence on the owner and a «hero team» reads to investors as a red flag",
+            "When preparing for a transaction, you discover that numbers, contracts and rights to assets are scattered across different systems and people",
+            "Valuation is based on the owner’s expectations, and not on a transparent economy: there is no structured P&L and a single “truth” on the margin",
+            "The management model is not fixed on paper: dependence on the owner and the “team of heroes” is perceived by the investor as a red flag",
           ],
           partnershipCriteriaLabel: "Partnership criteria",
           partnershipCriteria: [
             "Age: 5+ years",
-            "Scale: $150k–1M+/mo",
-            "Headcount: 80–500+ employees (what matters is maturity of the task, not size alone)",
-            "Stage: preparing for investment / partnership / M&A / credit / major contract",
-            "Management: operations exist, but there's no «shop window» — unclear where the money is, where risks are, and who owns what",
+            "Scale: $150k–1M+/month",
+            "Staff: 80–500+ employees (but the key is not the size, but the maturity of the task)",
+            "Stage: preparation for investment / partnership / M&A / loan / large contract",
+            "Management: there is an operating system, but there is no “showcase” - the investor does not understand where the money is, the risks and who owns what",
           ],
-          partnershipResultsLabel: "Partnership outcomes:",
+          partnershipResultsLabel: "Partnership result:",
           partnershipResults: [
             "Business as an asset: transparency, protection, managed risks",
             "Single financial truth",
             "Closed vulnerabilities",
-            "Investor pack",
-            "Ownership + cadence",
+            "Investment folder",
+            "Owners+cadence",
           ],
         },
       ],
-      ctaLabel: "Discuss your situation",
+      ctaLabel: "Start with diagnostics",
       modal: {
-        scenarioLabel: "Scenario breakdown",
+        scenarioLabel: "Scenario analysis",
         signsLabel: "Typical signs",
-        solutionLabel: "What can be done",
+        solutionLabel: "What can you do",
       },
     },
     icpBridge: {
       label: "Answer",
-      title: "How do we help?",
+      title: "How can we help?",
       description:
-        "We design the target state, immerse in your reality, build the architecture and implement it with you. Not slides «to take away» — work inside the business.",
+        "We design the target state, immerse ourselves in your reality, build the architecture and implement it together with you. Not “takeaway” slides – work inside the business.",
       highlightPhrase: "work inside the business",
       items: [
-        "Diagnose real failure points — finance, processes, sales, team",
-        "Design target state for your scale and ambitions",
-        "Implement the system in 45–90 days — we do it ourselves, not recommend",
-        "Hand over control to your team, stay as partner for resilience",
+        "We diagnose real points of failure - finance, processes, sales, team",
+        "We design the target state to suit your scale and ambitions",
+        "We implement the system in 45–90 days—we don’t recommend it, we do it ourselves",
+        "We transfer control to your team, remain a partner for sustainability",
       ],
-      ctaLabel: "Discuss your task",
+      ctaLabel: "Start with diagnostics",
+    },
+    helpAndProcess: {
+      title: "How we build business systems",
+      description:
+        "We show the stages, the result of each stage and what the client receives.",
+      stages: [
+        {
+          title: "Diagnostics",
+          description:
+            "Before you change, you need to understand what exactly is broken and why. We conduct a structured operational audit: we reveal real points of failure in finance, processes, sales and management.",
+          result: "Map of holes: numbers, processes, people, assets.",
+          clientGets: [
+            "Map of key bottlenecks and their sources",
+            "Financial and operational gaps: where profits are lost",
+            "Ownership vulnerabilities: who really holds assets, accesses, databases",
+            "List of critical risks with assessment: “what damage if not closed”",
+          ],
+        },
+        {
+          title: "Design",
+          description:
+            "Based on diagnostics, we design the target state of the business - a manageable operating model tailored to your scale and ambitions. Not a “change plan”, but a working architecture: who is responsible for what, how it is measured, how it is controlled.",
+          result: "Roadmap: what we are doing, in what sequence and why.",
+          clientGets: [
+            "Target scheme for the operation of key functions",
+            "Architecture of the management circuit: metrics, owners, cadence, control points",
+            "RACI matrix: roles, responsibilities, ownership zones",
+            "Logic of interrelations between departments and contours of regular management",
+          ],
+        },
+        {
+          title: "Implementation",
+          description:
+            "We translate the designed model into daily practice: we work together with the team for 45–90 days. We launch the management rhythm, regulations, roles and metrics so that the system works in the operating system - not from the outside “recommended”, but together with those who implement it.",
+          result: "From recommendations to a regular operating habit.",
+          clientGets: [
+            "Implemented management rhythms and fixed cadence",
+            "Regulations and SOPs in operation; RACI and ownership zones in practice",
+            "Metrics, dashboards and escalation points: who looks at them, how often, what to do if there is a deviation",
+            "The team’s area of ​​responsibility for supporting changes and maintaining the standard",
+          ],
+        },
+        {
+          title: "Business system transfer.",
+          description:
+            "We leave when an agreed upon valuable end result has been achieved: we train key participants to work in the new system, fix the rules, transfer the control logic and remain a partner to maintain sustainability.",
+          result: "What remains behind us is a system, not a dependency.",
+          clientGets: [
+            "The folder with documents is ready: numbers, structure, contracts, accesses - everything is in order",
+            "The team works according to the system: roles, KPIs, cadence are fixed",
+            "The owner manages through dashboards (up to 10 hours per week)",
+            "The business looks like a managed asset - and undergoes due diligence",
+          ],
+        },
+      ],
+      ctaLabel: "View cases",
     },
     whatWeChange: {
       eyebrow: "Our 6 pillars",
-      title: "What exactly we change in your business",
+      title: "BBI operates simultaneously across six critical control nodes.",
       pillars: [
         {
           title: "Operational efficiency",
-          subtitle: "Goal: the owner exits manual management",
+          subtitle: "Goal: the owner leaves manual control",
           items: [
-            "Management cadence: meeting system, check-ins, control points",
-            "SOPs and org chart: every process described, every owner assigned",
-            "Dashboards and KPI panels: the owner sees business health in 5 minutes",
-            "Adaptation checklists: a new hire doesn’t break the system",
+            "Management rhythm (cadence): system of meetings, check-ins, control points",
+            "SOP and org chart: each process is described, each owner is assigned",
+            "Dashboards and KPI panels: the owner sees the state of the business in 5 minutes",
+            "Onboarding checklists: a new employee does not destroy the system",
           ],
         },
         {
           title: "Marketing",
-          subtitle: "Goal: every penny you put in is tied to a measurable result",
+          subtitle: "Goal: every penny invested is tied to the result",
           items: [
-            "Full-funnel analytics: touch to payment — every channel visible",
-            "Channel audit: what actually works vs. what burns budget",
-            "Ownership of databases, ad accounts, and logins — with the company, not the contractor",
-            "A manageable marketing system: not dependent on a single vendor",
+            "End-to-end analytics: from touch to payment - every channel is visible",
+            "Channel audit: what really works and what drains the budget",
+            "Ownership of databases, accounts and accounts - on the company, not on the contractor",
+            "Managed marketing system: does not depend on one performer",
           ],
         },
         {
           title: "Sales",
-          subtitle: "Goal: the system sells — not individual «stars»",
+          subtitle: "Goal: the system sells, not individual “stars”",
           items: [
-            "Scripts and communication playbooks: results don’t depend on one person’s talent",
-            "Building a sales team from scratch or rebuilding an existing one",
-            "CRM control: no lost leads, no deals left hanging",
-            "Funnel and inbound handling: systematic, not manual",
+            "Scripts and rules of communication: the result does not depend on the talent of a particular person",
+            "Building a sales department from scratch or rebuilding an existing one",
+            "CRM control: not a single lead is lost, not a single deal gets stuck",
+            "Funnel and incoming processing: systemic, not manual",
           ],
         },
         {
           title: "Finance",
-          subtitle: "Goal: an honest answer to «Where is my money?»",
+          subtitle: "Goal: An honest answer to the question “Where is my money?”",
           items: [
-            "Management accounting: the real economics of the business",
-            "Surfacing financial holes, hidden leaks, and theft schemes",
-            "Payment calendar: cash gaps visible in advance — not after the fact",
-            "Accounting by line of business: which ones earn and which drag you down",
+            "Management Accounting: Real Economics of Business",
+            "Identifying financial holes, hidden leaks and theft schemes",
+            "Payment calendar: cash gaps are visible in advance, not after the fact",
+            "Accounting by areas: which one makes money, which one drags down",
           ],
         },
         {
           title: "HR and team",
-          subtitle: "Goal: a reproducible team — one person leaving doesn’t break the system",
+          subtitle: "Goal: the team is reproducible - leaving a person does not break the system",
           items: [
-            "Role profiles and systemic hiring: we hire the right people, not random ones",
-            "Onboarding program: a new hire reaches output fast",
-            "Evaluation and HR analytics: clear who pulls weight, who holds steady, who drags",
-            "Talent bench and succession: critical roles always covered",
+            "Job profiles and systematic hiring: we hire the right ones, not the random ones",
+            "Onboarding program: a new employee achieves results",
+            "Evaluation system and HR analytics: it’s clear who is pushing, who is holding on, who is slowing down",
+            "Talent reserve and succession plan: critical functions are always closed",
           ],
         },
         {
-          title: "Legal protection",
-          subtitle: "Goal: assets belong to the company — technically and legally",
+          title: "Asset protection",
+          subtitle: "Purpose: assets belong to the company - technically and legally",
           items: [
-            "NDAs and confidentiality agreements: data and IP protected at the gate",
-            "Employment contracts and job descriptions: rights and duties on paper",
-            "Personal data consent and contractor agreements",
-            "Legal audit: vulnerabilities found, closed, and documented",
+            "NDAs and non-disclosure agreements: data and intellectual property are protected at entry",
+            "Employment contracts and job descriptions: rights and obligations are fixed",
+            "Consent to the processing of personal data, contracts with contractors",
+            "Legal audit: vulnerabilities identified, closed, documented",
           ],
         },
       ],
     },
     whatYouGet: {
-      eyebrow: "Outcome",
-      title: "What you get from working with us",
-      items: [
-        "Business runs without you 24/7 — autonomous and protected asset",
-        "No one is irreplaceable — system is reproducible, one person's exit isn't a stop",
-        "You manage through numbers and rhythm (up to 10 hrs/week), not in operations",
-        "Leads, sales and margin manageable — not «hope it works»",
-        "Growth is controlled and reproducible",
-        "Phased: first critical risks, then standards",
+      eyebrow: "Result",
+      title: "What do you get from working with us?",
+      subheadline:
+        "Not a set of recommendations or individual feature improvements. And a system that can be launched, controlled and developed within a business.",
+      ui: {
+        readMore: "Read more >>",
+        whatItMeans: "What this means",
+        clientGetsHeading: "What stays with the client",
+        importantPrefix: "Important:",
+        outcomeEyebrow: "Summary",
+      },
+      cards: [
+        {
+          title: "A clear picture of where the business is losing control",
+          whatItMeans:
+            "You see not a “sense of chaos”, but a specific map: where decisions are tied to the owner, where functions work in isolation, where growth already creates losses, not sustainability.",
+          clientGets: [
+            "Map of key bottlenecks and their root causes - not symptoms, but sources",
+            "Description of critical gaps between functions: where responsibility is lost",
+            "List of management risks with damage assessment for each",
+            "Priorities: what to close first, what to close after",
+          ],
+          important:
+            "This result is achievable only with full access to real data: CRM, finance, contracts and management logic. Without transparency, diagnosis is impossible.",
+        },
+        {
+          title: "Business architecture, not a set of unrelated actions",
+          whatItMeans:
+            "You get not a “list of ideas”, but a working model: what exactly needs to change in marketing, sales, finance, HR and operations - and in what sequence - for the business to become manageable and sustainable.",
+          clientGets: [
+            "The target framework for key functions is an operating model, not ideas on a whiteboard.",
+            "Roadmap of changes with priorities: what is implemented in the first 45 days, what after",
+            "Logic of relationships between departments, roles and metrics",
+            "RACI matrix: who is responsible, who executes, who coordinates for each process",
+          ],
+          important:
+            "This works when the owner and key managers are willing to look at the business as a single system, and not as a set of independent functions.",
+        },
+        {
+          title: "Implementation brought to a management rhythm",
+          whatItMeans:
+            "Every regulation, every rhythm, every metric is tested in the real conditions of your business - and only after that is fixed as a standard. The operating system ceases to depend on mood and presence - it works according to the protocol.",
+          clientGets: [
+            "Implemented cadence: regular meetings, check-ins, control points",
+            "List of regular management actions for each function: who does what and at what frequency",
+            "Control metrics and escalation points: the system itself signals deviations, does not wait for the owner’s participation",
+            "A clear area of ​​responsibility for each stage of implementation: who is the owner, who executes, who approves",
+          ],
+          important:
+            "This result is only possible with the active participation of the owner and key managers at critical points of implementation. Without buy-in, change will stall where it meets resistance from the team.",
+        },
+        {
+          title: "A team that better understands how to maintain the system",
+          whatItMeans:
+            "Your team understands how to work within the new logic, support changes, and not slip back into manual control. BBI's departure is not a loss, but a planned transfer. Dependence on external partner = 0.",
+          clientGets: [
+            "Trained key employees: understand their role, metrics and responsibilities",
+            "Fixed work rules: regulations, SOP, playbook - expertise belongs to the company, not the people",
+            "Transferred control logic: how to control, how to escalate, how to prevent the system from degrading",
+            "A management loop that holds together without external support",
+          ],
+          important:
+            "The effect directly depends on who exactly is included in the project on the client’s side. If key participants are not involved, the system does not take root. If they are involved, they stay and work without us.",
+        },
+        {
+          title: "A business that is less dependent on manual holding by the owner",
+          whatItMeans:
+            "Business works according to a system - through dashboards, protocols and management rhythm. The owner reclaims the role of Architect: managing strategy rather than putting out operational fires 24/7.",
+          clientGets: [
+            "Roles and areas of responsibility are fixed: each process has an owner, each decision has a clear protocol",
+            "Management decisions are made based on data, and not on the personal participation of the owner",
+            "Execution is predictable: standards, metrics and rhythm maintain quality without manual control",
+            "Growth is manageable: scaling follows the model and does not create a new level of chaos",
+          ],
+          important:
+            "This is not a “quick effect in a week” or “autopilot without an owner.” This is the result of systematic implementation and management discipline, which is supported by the owner himself. Up to 10 hours a week - not because the business works itself, but because the system is done correctly.",
+        },
       ],
+      finalAccent: {
+        title: "The result of working with BBI is a protected and managed business asset",
+        text: "Working with BBI is not a set of improvements to individual features or a consultation with recommendations. It is a transition from fragmented management to a seamless, transparent and repeatable business asset that belongs to the owner - technically, legally and operationally.",
+        ctaLabel: "Start with diagnostics",
+      },
     },
     process: {
       eyebrow: "Approach",
       title: "How we work",
       approaches: [
         {
-          title: "Design",
+          title: "We design",
           description:
-            "Define target state and architecture. Not «best practice» — what your business needs.",
+            "We define the target state and architecture. Not “as is customary” - as your business needs.",
         },
         {
-          title: "Immerse",
+          title: "Let's dive in",
           description:
-            "Analyze processes, finance, sales and team. Find bottlenecks and real causes of failures.",
+            "We analyze processes, finances, sales and teams. We find bottlenecks and real causes of failures.",
         },
         {
-          title: "Build the architecture",
+          title: "Building architecture",
           description:
-            "Rhythm, regulations, dashboards, accountability — one system, not scattered «improvements».",
+            "Rhythm, regulations, dashboards, areas of responsibility - into a single system, not into separate “improvements”.",
         },
         {
-          title: "Implement",
+          title: "Let's implement",
           description:
-            "Implement daily, train the team, hand over control. Stay as a partner for resilience.",
+            "We implement it daily, train the team, transfer control. We remain a partner for sustainability.",
         },
       ],
-      ctaLabel: "Book a diagnosis",
+      ctaLabel: "Start with diagnostics",
     },
     whyBbi: {
-      eyebrow: "Differentiation",
-      title: "Why BBI",
-      items: [
-        { label: "Not an agency", text: "We don't sell hands and hours. We build systems. Our competitor is chaos and unmanageability, not other contractors." },
-        { label: "Not consulting", text: "We don't recommend «to take away». We implement and control ourselves. We stay inside until systems stabilize." },
-        { label: "Not autopilot", text: "You need involvement up to 10 hrs/week. Management through numbers — not your disappearance." },
-        { label: "Not CEO replacement", text: "We build business autonomy, not dependence on us." },
-        { label: "Not «x10 in 30 days»", text: "Growth is controlled and reproducible — system, not magic." },
-        { label: "Operating partner", text: "Six directions into one system, on the owner's side." },
+      title: "Why BBI is not an agency or consulting",
+      subtitle:
+        "Most contractors work with symptoms: launching advertising, writing a strategy, hiring people. But systemic business failures live deeper - in management gaps, in dependence on the “irreplaceable”, in the absence of a single truth in the numbers. Point solutions don't work here. We need architecture.",
+      topCards: [
+        {
+          label: "Not an agency",
+          intro:
+            "The agency is the performer. It takes a task, completes it and reports on its KPIs: coverage, leads, clicks. But responsibility for the results of the business remains with the owner.",
+          outcomeBullets: [
+            "Each function lives in its own “black box”: marketing does not know what is happening in sales",
+            "The owner still remains a bottleneck - now also between contractors",
+            "Key data, access and developments are stored by the agency, not by the company",
+            "When the contractor leaves, the results go away",
+          ],
+        },
+        {
+          label: "Not consulting",
+          intro:
+            "Consulting is an analyst. He studies the business, formulates a diagnosis and makes recommendations. Implementing, achieving results, working with the team’s resistance is no longer his zone.",
+          outcomeBullets: [
+            "Decisions remain at document level",
+            "The team does not bring the changes to the rhythm",
+            "The owner is carrying everything on himself again",
+            "Business understands “what to do”, but does not move into sustainable implementation",
+          ],
+        },
       ],
+      wideCard: {
+        label: "BBI - operating partner",
+        intro:
+          "We do not sell marketing services and do not leave the owner alone with recommendations. We enter the business as management system architects: we uncover the real causes of failures, design the target state and implement changes hand in hand with the team. After our work, what remains is not a report - what remains is a working system that belongs to the company.",
+        outcomeBullets: [
+          "We start with diagnostics: we reveal system holes, call them by their proper names, identify root causes - not symptoms",
+          "We design the target architecture: operating model, roles, metrics, control contours - according to the scale and ambitions of the owner",
+          "We are building a single management circuit: marketing, sales, finance, HR and operating systems work according to the same rules and the same numbers",
+          "We accompany the implementation for 45–90 working days: we do not recommend it - we do it together with the team until the changes become practice",
+          "We transfer the system to the team: asset ownership, regulations and management rhythm remain within the business",
+        ],
+      },
+      approachEyebrow: "Our approach",
+      comparisonTable: {
+        columnHeaders: ["Parameter", "Agency", "Consulting", "BBI operating partner"],
+        rows: [
+          ["Role", "Task performer", "Advisor", "Architect + integrator + implementer"],
+          ["Depth", "One tool/channel", "Analysis and recommendations", "Entire management system"],
+          [
+            "Presence",
+            "Remote, per task",
+            "Sessions and reports",
+            "Inside the business until the CCR (valuable final result)",
+          ],
+          ["Responsibility", "For their scope", "For recommendations", "For achieving the CCR"],
+          ["Result", "Completed task", "Document/strategy", "Working system"],
+          ["After departure", "Stops", "Document remains", "System remains"],
+        ],
+      },
     },
     casesBlog: {
-      title: "Cases & Blog",
+      title: "Cases and blog",
       casesTitle: "Cases",
       blogTitle: "Blog",
       casesLabel: "All cases",
       blogLabel: "All articles",
-      readMore: "Read more",
-      ctaLabel: "Discuss your case",
+      readMore: "More details",
+      ctaLabel: "Start with diagnostics",
     },
     faq: {
-      title: "Frequently asked questions",
+      title: "Frequently Asked Questions",
       items: [
-        { q: "How long does a project take?", a: "Screening is free. Then: diagnosis → project from 45 business days → retainer support. Exact duration depends on scale." },
-        { q: "Do you work remotely?", a: "Yes, with regular on-site visits. Process immersion requires presence." },
-        { q: "Does a small business fit?", a: "We focus on turnover from $30k/mo and teams of 15+. Business under 5 years or startup in PMF — usually no." },
-        { q: "How do you differ from agencies and consultants?", a: "We don't sell hours (agency) or recommend «to take away» (consulting). We implement ourselves and stay until systems stabilize." },
-        { q: "When do you refuse?", a: "Owner is not involved. No data access. Agency model needed. Business under 5 years or startup. Expecting «guarantee growth» without readiness to change the system." },
+        { q: "How long does the project last?", a: "Diagnostics - design of the target state of the business - implementation (90+ days) - transfer of the business as a protected and systematized asset. The exact timing depends on the scale." },
+        { q: "Working remotely?", a: "Yes, but with regular visits. Immersion in processes requires presence in the office." },
+        { q: "Is a small business suitable?", a: "We focus on a turnover of $30k/month and a team of 15 people. Business under 5 years or a startup on PMF - usually not." },
+        { q: "How are you different from agencies and consultants?", a: "We do not sell watches (agency). We do not give “takeaway” recommendations (consulting). We implement it ourselves and stay until the systems are stabilized." },
+        { q: "When do you say no?", a: "The owner is not involved. No access to data. We need an agency model. Business up to 5 years or startup. The expectation to “guarantee growth” without the willingness to change the system." },
       ],
     },
     finalCta: {
-      title: "Business grows — manageability lags? Start with a diagnosis",
-      ctaLabel: "Start with diagnosis",
-      subtitle: "Understand real failure points, not treat symptoms",
+      title: "Business is growing - management can't keep up? Start with diagnosis",
+      ctaLabel: "Start with diagnostics",
+      subtitle: "Understand the real points of failure rather than treating the symptoms",
     },
     pillars: {
-      title: "Shield. Leverage. System.",
+      title: "Shield. Lever. System.",
       items: [
         {
           title: "Shield",
           description:
-            "Asset protection, ownership, legal armor, and transparent finances.",
+            "Asset protection, ownership, legal armor, transparent finances.",
           details:
-            "Shield is not «safety in general». It’s about moving assets and control into the company — so the business doesn’t depend on people, contractors, or «fictitious numbers». We don’t «reassure» — we surface vulnerabilities and close them with a system: ownership, legal armor, transparent finances, HR stability.",
-          linkLabel: "Learn more",
+            "The shield is not “security in general.” We are talking about transferring assets and control to the company - so that the business does not depend on people, contractors and “virtual numbers”. We do not “calm down” - we reveal vulnerabilities and close them with a system: ownership, legal armor, transparent finances, personnel stability.",
+          linkLabel: "More details",
           href: "/pillars/shield",
         },
         {
-          title: "Leverage",
+          title: "Lever",
           description:
-            "Operating cadence, full-funnel analytics, sales system without stars.",
+            "Operational rhythm, end-to-end analytics, sales system without “stars”.",
           details:
-            "Leverage is not «we’ll empower you 10x» (a dangerous promise). It’s about control points you can influence for measurable results: operating rhythm (cadence), full-funnel analytics, sales system without «stars», standards and reproducibility.",
-          linkLabel: "Learn more",
+            "Leverage is not “we’ll make you 10x stronger” (that’s a dangerous promise). We are talking about control points that can be influenced for a measurable result: operational rhythm (cadence), end-to-end analytics, a sales system without “stars”, standards and reproducibility.",
+          linkLabel: "More details",
           href: "/pillars/leverage",
         },
         {
           title: "System",
           description:
-            "Roles fixed, processes standardized, people changes do not break the system.",
+            "Roles are fixed, processes are standardized, changing people does not break the system.",
           details:
-            "System is the opposite of «heroism» and manual control. It replaces owner pressure with management rhythm and regulations. We build a mechanism where every process is documented, every result predictable, and an employee departure is «planned knowledge transfer», not a stop signal for the business.",
-          linkLabel: "Learn more",
+            "The system is the antithesis of “heroism” and manual control. We are talking about replacing the owner’s personal pressure with management rhythm and regulations. We are building a mechanism where every process is described, every result is predictable, and the departure of an employee is a “planned transfer of competencies” and not a stop signal for the business.",
+          linkLabel: "More details",
           href: "/pillars/system",
         },
       ],
@@ -839,96 +1185,96 @@ export const en: Dictionary = {
     position: {
       title: "BBI is not a neutral contractor",
       description:
-        "We take the owner’s side. We speak hard truth, surface vulnerabilities, and fix them systematically.",
+        "We take the owner's side. We tell the hard truth, reveal vulnerabilities and fix them systematically - so that the business becomes an autonomous asset.",
     },
   },
   about: {
     heroNav: {
       prev: "Previous screen",
       next: "Next screen",
-      pagesGroup: "Panel pages",
+      pagesGroup: "Block screens",
     },
     heroPages: [
       {
         title: "Bold Brands International",
         body:
-          "Operating Partner for owners and CEOs. We turn scattered practices into one coherent system: a management loop, financial truth, and protected assets you can lean on for growth.",
+          "Operating Partner for owners and CEOs. We assemble a holistic system from disparate practices: a management circuit, financial truth and protected assets that can be relied upon for growth.",
       },
       {
-        title: "Shield, Leverage, System",
+        title: "Shield, Lever. System",
         body:
-          "We build the Shield (ownership and asset protection), Leverage (operating system, sales, analytics), and System (management rhythm, standards, RACI) so the business runs on a mechanism, not on “heroes.”",
+          "We are building a Shield (ownership and asset protection), a Lever (operating system, sales, analytics) and a System (management rhythm, standards, RACI) so that the business rests on the mechanism, and not on “heroes.”",
       },
       {
-        title: "The owner’s partner through growth stages",
+        title: "Owner's partner during growth stages",
         body:
-          "Our job is to make the business read as a manageable asset: one financial picture, secured rights to key assets, and a system.",
+          "Our task is to make the business look like a managed asset: with a unified financial picture, registered rights to key assets and a system.",
       },
     ],
     who: {
-      title: "Who we are",
+      title: "Who are we?",
       text:
-        "BBI (Bold Brands International) is an Operating Partner (RevOps). We enter the business, surface real issues, and build systems. Not a marketing agency. Not consulting with pretty slides. Not a neutral contractor that leaves after delivery.",
+        "BBI (Bold Brands International) - Operating Partner (RevOps). We do not advertise, do not sell SMM and do not limit ourselves to the presentation of the strategy. Our area of ​​responsibility is to turn a business into an autonomous and protected asset that the owner manages through numbers and a system.",
       emphasis:
-        "Key point: BBI is on the owner’s side, not a contractor. There is no neutral position.",
+        "BBI is not a contractor or a “third party.” We stand by the owner and his business, consistently protecting his assets, data and controllability.",
     },
     principles: {
-      title: "Key beliefs",
+      title: "Core Beliefs",
       items: [
         {
-          title: "We stand with the owner and the CEO",
+          title: "We are on the side of the owner and CEO",
           body:
-            "Not a neutral position “between everyone.” We stand with the person who carries real risk—financial, reputational, operational. Their interests drive every decision we make.",
+            "Not a neutral position “between everyone.” We take the side of the person who bears the real risk - financial, reputational, operational. It is his interests that determine our every decision.",
         },
         {
-          title: "We stand for an honest view of the business—even when it’s uncomfortable",
+          title: "We are for an honest look at business - even when it is inconvenient",
           body:
-            "Calling problems by their names isn’t harshness—it’s respect. We show where the business really loses money, control, and value. A comfortable illusion costs more than hard truth—in money and time.",
+            "Calling problems by their names is not harshness, but respect. We show where a business is really losing money, manageability and value. A comfortable illusion costs more than the hard truth - in money and time.",
         },
         {
-          title: "The system always matters more than talent",
+          title: "System is more important than talent - always",
           body:
-            "“Irreplaceable” people are risk dressed up as value. We build models where expertise lives in processes and company standards, not in one person’s head. Anyone leaving is a planned handover, not a catastrophe.",
+            "“Irreplaceable” people are risk disguised as value. We build models in which expertise resides in the company's processes and standards, rather than in the head of one person. The departure of any employee is a planned transition, not a disaster.",
         },
         {
-          title: "We know threats from the inside—not from textbooks",
+          title: "We know the threats from within - not from textbooks",
           body:
-            "The situations we work with—database theft, extortion by “irreplaceables,” opaque finance schemes, agency dependency—we’ve unpacked in real businesses and faced ourselves. This isn’t theory. It’s practice we can recognize and close before it does damage.",
+            "The situations we work with - theft of databases, blackmail of the “irreplaceable”, opaque financial schemes, dependence on agencies - we have dealt with in real businesses and have encountered this ourselves. This is not a theory. This is a practice that we can recognize and stop before it causes damage.",
         },
       ],
     },
     manifesto: {
-      title: "What we stand against",
+      title: "What are we up against?",
       items: [
         {
           title: "Against empty promises.",
           body:
-            "Recommendations, strategies, and pretty decks that never get implemented are an illusion of work. We take responsibility for changes becoming real practice, not files archived for history.",
+            "Recommendations, strategies and “beautiful presentations” that are not implemented are an illusion of work. We take responsibility for ensuring that changes go into real practice and do not end up in the “for history” folder.",
         },
         {
           title: "Against “services” instead of a system.",
           body:
-            "One-off actions with no links between them create local effect and do not change business architecture. We do not just close tasks - we build a management loop where tasks are solved systematically and repeatably.",
+            "One-time actions without communication with each other have a local effect and do not change the business architecture. We do not “close problems” - we build a management circuit in which problems are solved systematically and reproducibly.",
         },
         {
-          title: "Against dependency on people.",
+          title: "Against dependence on people.",
           body:
-            "A business held by two or three key people is not an asset but a vulnerability. Losing one can stop a function or damage client relationships. We build systems that work independently of specific personalities.",
+            "A business that rests on two or three “key” people is not an asset, but a vulnerability. The departure of any one of them can stop the function or destroy customer relationships. We are building a system that works independently of specific individuals.",
         },
         {
           title: "Against opacity.",
           body:
-            "Hidden arrangements, gray finance schemes, and databases or accesses kept by contractors all reduce business value and create risks the owner learns about last. Transparency is not optional - it is a baseline for a manageable business.",
+            "Hidden agreements, “gray” financial schemes, databases and “contractor” access - all this reduces the real value of the business and creates risks that the owner is the last to know about. Transparency is not an option, but a basic condition for a managed business.",
         },
         {
-          title: "Against firefighting mode.",
+          title: "Against fire fighting.",
           body:
-            "Constant urgent mode leaves no capacity for systemic change. We do not come to survive the next crisis - we come so crises stop being the normal way of working.",
+            "The constant “solving urgent” mode does not leave resources for systemic changes. We do not come to help withstand the next crisis - we come so that crises cease to be the norm.",
         },
         {
-          title: "Against doing the owner's work for them.",
+          title: "Against working “for” the owner.",
           body:
-            "We are not a team replacement and not an external CEO. Our task is to build and transfer a system so the business remains fully independent after we leave. Dependency on BBI after project completion = 0.",
+            "We are not a team replacement or an “external CEO.” Our task is to build and transfer the system so that after our departure the business remains completely independent. Dependency on BBI after project completion = 0.",
         },
       ],
     },
@@ -936,52 +1282,52 @@ export const en: Dictionary = {
       title: "Team",
       members: [
         {
-          name: "First Last",
+          name: "First Name Last Name",
           role: "CEO",
-          note: "Builds business protection as a system, not services.",
+          note: "Builds business protection as a system, not a set of services.",
         },
         {
-          name: "First Last",
+          name: "First Name Last Name",
           role: "Operating Partner",
-          note: "Leads transformation with accountability for outcomes.",
+          note: "Leads the transformation and is responsible for the result, not the process.",
         },
         {
-          name: "First Last",
-          role: "RevOps Specialist",
-          note: "Sets operational rhythm, analytics, and control.",
+          name: "First Name Last Name",
+          role: "RevOps specialist",
+          note: "Builds rhythm, analytics and control in operations.",
         },
         {
-          name: "First Last",
-          role: "RevOps Specialist",
-          note: "Builds sales systems where results beat charisma.",
+          name: "First Name Last Name",
+          role: "RevOps specialist",
+          note: "Builds a sales system where results are more important than charisma.",
         },
       ],
     },
     cta: {
-      title: "Want to see if we fit?",
-      description: "Book a screening and we’ll map your gaps and growth.",
+      title: "Do you want to know if we are right for each other?",
+      description: "start with diagnostics",
       form: {
         name: "Name",
-        phone: "Phone",
-        message: "Short brief",
-        submit: "Book a screening",
+        phone: "Telephone",
+        message: "Briefly about the request",
+        submit: "send",
       },
     },
   },
   footer: {
-    copyright: "© 2024 BBI (Bold Brands International). All rights reserved.",
-    tagline: "Bold Brands International — your reliable operational partner.",
-    aboutTitle: "About company",
+    copyright: "© 2026 BBI (Bold Brands International). All rights reserved.",
+    tagline: "Bold Brands International is your trusted operating partner.",
+    aboutTitle: "About the company",
     aboutLinks: [
       { label: "How we work", href: "/work" },
       { label: "Cases", href: "/cases" },
       { label: "Blog", href: "/blog" },
     ],
-    socialTitle: "Find us",
+    socialTitle: "We are",
     locations: [
       {
         city: "Bishkek",
-        address: "Matrosova st., 102",
+        address: "st. Matrosova, house 102",
         phone: "+996 999 99 22 44",
         email: "office.kg@boldbrands.pro",
         socials: {
@@ -1005,25 +1351,25 @@ export const en: Dictionary = {
       },
     ],
     addressLabel: "Address",
-    phoneLabel: "Phone",
-    emailLabel: "Email",
-    workingHoursLabel: "Working hours",
+    phoneLabel: "Telephone",
+    emailLabel: "E-mail",
+    workingHoursLabel: "We are working",
     workingHours: "Mon-Fri: 09:00-18:00",
-    privacyLabel: "Privacy policy",
+    privacyLabel: "Privacy Policy",
     privacyHref: "/privacy",
   },
   cases: {
     hero: {
       eyebrow: "Real results",
-      title: "Cases: systems approach in action",
+      title: "Cases: a systematic approach in action",
       description:
-        "We show not «we launched ads» but how we built protection, levers and system. Context, problem, BBI action and measurable result.",
+        "We show not “we launched advertising,” but how we built protection, levers and a system. Context, problem, BBI action and measurable outcome.",
       heroImage: "/brand/cases-war-room-hero.png",
     },
     list: {
       sectionTitle: "Relevant cases",
       sectionEyebrow: "Case navigation",
-      sectionSubtitle: "Choose a case that fits your context",
+      sectionSubtitle: "Choose a case for your context",
     },
     filters: {
       industry: "Industry",
@@ -1037,27 +1383,27 @@ export const en: Dictionary = {
       services: "Services",
       ecom: "E-commerce",
       other: "Other",
-      operations: "Operations",
+      operations: "OS",
       marketing: "Marketing",
       sales: "Sales",
       finance: "Finance",
       hr: "HR",
-      legal: "Legal",
+      legal: "Legal protection",
       smb: "SMB",
       mid: "Mid-market",
       enterprise: "Enterprise",
     },
-    card: { readMore: "Read more" },
-    noResults: "No cases match the selected filters.",
+    card: { readMore: "More details" },
+    noResults: "No cases were found based on the selected filters.",
     caseDetail: {
       backToCases: "← Cases",
       context: "Context",
       problem: "Problem",
-      whatBbiDid: "What BBI did",
+      whatBbiDid: "What did BBI do?",
       result: "Result",
       artifacts: "Artifacts",
-      bbiRole: "BBI role",
-      infographicForecast: "Before",
+      bbiRole: "Role of the BBI",
+      infographicForecast: "To",
       infographicResult: "Result",
       infographicTitle: "Results in numbers",
     },
@@ -1066,168 +1412,175 @@ export const en: Dictionary = {
         slug: "med-lab-sla",
         headerImage: "/brand/case-med-lab-header.png",
         company: "Medical laboratory (NDA)",
-        industry: "Healthcare services",
-        keyResult: "SLA 87%, base reactivation 34%, conversion +21%",
-        excerpt: "How to tell systemic error from one-off: we redesigned the commercial block, separated roles — got a managed funnel and predictable pipeline.",
-        seoTitle: "Systemic error in sales: lab case — SLA 87%, 34% base reactivation",
+        industry: "Medical services",
+        keyResult: "SLA 87%, reactivation of 34% of the database, conversion +21%",
+        excerpt: "How to distinguish a system error from a private one: we redesigned the commercial block, divided the roles - we got a manageable funnel and a predictable pipeline.",
+        seoTitle: "System error in sales: laboratory case - SLA 87%, reactivation of 34% of the base",
         metaDescription:
-          "How to tell systemic from one-off: lab case — SLA 87%, order frequency +23%, 34% base reactivation and predictable pipeline.",
+          "How to distinguish a system error from a private one: laboratory case - SLA 87%, order frequency + 23%, reactivation of 34% of the database and a predictable pipeline.",
         keywords: [
-          "medical lab case study",
+          "medical laboratory case",
           "SLA in sales",
           "CRM and SLA",
           "managed sales funnel",
-          "systemic error in sales",
-          "lead conversion growth",
-          "revenue pipeline",
-          "leads lost",
-          "sales vs marketing",
-          "client base reactivation",
-          "order frequency growth",
+          "system error in sales",
+          "increase in lead conversion",
+          "pipeline by revenue",
+          "leads drained",
+          "sales department vs marketing",
+          "reactivation of the client base",
+          "increase in order frequency",
           "LTV growth",
           "SLA control in CRM",
-          "commercial block building",
+          "construction of a commercial block",
         ],
-        h1: "Medical lab case: how to tell systemic error from one-off — and restore revenue control",
-        tags: ["Sales", "CRM & SLA", "Operations"],
+        h1: "Case of a medical laboratory: how to distinguish a system error from a private one - and return revenue to control",
+        tags: ["Sales", "CRM and SLA", "OS"],
         industryFilter: "services",
         directionFilter: "sales",
         scaleFilter: "mid",
         context:
-          "Medical laboratory. CRM set up, SLA defined, ad campaigns running. But when analyzing effectiveness, most leads were «lost», funnel was unmanaged. Managers said: «marketing brought wrong leads, they're cold». Audit showed: SLA not followed, backlogs accumulating, manager ignored overdue alerts. 31% of leads were trigger requests with contacts (workable and worth working). 59% got only auto-reply — no one followed up. The problem wasn't «lead quality», but that lead handling as a process didn't exist.",
+          "Medical laboratory. CRM is set up, SLAs are set, advertising campaigns are running. But when analyzing the effectiveness, it turned out that most of the leads are “merged”, the funnel is not managed. Managers say: “marketing brought the wrong people, the leads are cold.” The audit showed that SLAs were not met, delays were accumulating, and the manager did not respond to notifications. 31% of leads are triggered requests with contacts (you can and should work with them). 59% received only an automatic response - no one worked with them. The problem is not “lead quality”, but that lead management as a process did not exist.",
         problem:
-          "Systemic error in role assignment: people in sales roles were actually doing admin — taking requests from existing clients, passing to execution, tracking status. Coordinator/admin role, not sales. Admin is reactive: handle the flow, close urgent. Sales is proactive: drive dialogue, bring back to contact, handle objections. Under operational load, admin always picks «urgent», sales gets «leftovers». Not a motivation issue, but an architecture-of-functions issue.",
+          "A systemic error in the selection of performers: people with administrative functions were appointed to the role of sales managers - receiving requests from regular customers, transferring them for execution, and providing status support. The role of a coordinator/administrator, not a salesperson. The administrator is reactive: accept the flow, close the urgent one. Sales are proactive: conduct a dialogue, return to contact, withstand refusals. When there is an operational load, the administrator always selects “urgent”, sales – “on a residual basis”. Not a question of motivation, but of function architecture.",
         whatBbiDid: [
-          "Separated functions and assigned measurable outcome to each role — instead of «pushing» people.",
-          "Shifted commercial block from «passive order waiting» to revenue management: expansion (new clients) + LTV maximization (base development).",
-          "Introduced roles: Hunter (new clients), Farmer (order frequency, retention, reactivation), KAM (key accounts), Administrators (operations without substituting sales).",
-          "Made each role «single-outcome» — removed blending where sales got eaten by production firefighting.",
+          "We divided functions and assigned a measurable result to each role - instead of “strengthening” people.",
+          "We transferred the commercial block from the model of “passively waiting for orders” to revenue management: expansion (new clients) + LTV maximization (base development).",
+          "The following roles were introduced: Hunter (new clients), Farmer (order frequency, retention, reactivation), KAM (key clients), Administrators (operating system without replacing sales).",
+          "We made each role “single-task” based on the result - we removed the confusion, in which sales were eaten up by production turnover.",
         ],
         resultNumbers: [
-          { before: "SLA not met, backlogs normal", after: "SLA 87%", beforeValue: 15, afterValue: 87, label: "SLA" },
-          { before: "Conversion: leads dying on auto-replies", after: "+21%", beforeValue: 5, afterValue: 26, label: "Conversion" },
-          { before: "Order frequency without base-owning role", after: "+23% first month", beforeValue: 10, afterValue: 33, label: "Order frequency" },
-          { before: "Dormant base 4–6 mo. with no returns", after: "34% reactivated", beforeValue: 0, afterValue: 34, label: "Base reactivation" },
+          { before: "SLAs were not met, delays are the norm", after: "SLA 87%", beforeValue: 15, afterValue: 87, label: "SLA" },
+          { before: "Conversion: leads died on auto-responses", after: "+21%", beforeValue: 5, afterValue: 26, label: "Conversion" },
+          { before: "Frequency of orders without role per base", after: "+23% in the first month", beforeValue: 10, afterValue: 33, label: "Order frequency" },
+          { before: "Sleeping base 4–6 months. no returns", after: "Reactivated 34%", beforeValue: 0, afterValue: 34, label: "Base reactivation" },
         ],
         artifacts: [
-          "Hunter / Farmer / KAM / Admin role structure",
+          "Role structure Hunter/Farmer/KAM/Admin",
           "SLA control in CRM",
-          "Lead handling playbooks",
-          "Base reactivation process",
+          "Lead processing regulations",
+          "Database reactivation process",
         ],
         bbiRole:
-          "Separated systemic from one-off. Instead of «punish/train/tighten KPI» we fixed the systemic cause — misdesigned roles. Result: managed funnel, predictable revenue pipeline, cash gaps in acceptable range. BBI redesigned the commercial block, not simulated management.",
+          "We separated the systemic from the private. Instead of “punish/train/tighten KPIs”, they eliminated the systemic cause - incorrectly designed roles. Result: a controlled funnel, a predictable revenue pipeline, cash gaps within the acceptable range. BBI redesigned the commercial unit rather than imitating control.",
         sections: [
-          { title: "Client", paragraphs: ["Healthcare / medical laboratory sector."] },
+          {
+            title: "Client",
+            paragraphs: ["Medical laboratory sphere."],
+          },
           {
             title: "Request",
             paragraphs: [
-              "The company set up CRM, defined SLA, runs regular ad campaigns. But when analyzing campaign effectiveness, most leads were in fact «lost», and the funnel was unmanaged.",
-              "The classic conflict started immediately: managers said «marketing brought the wrong people, leads are cold».",
+              "The company has set up a CRM, established an SLA, and launches regular advertising campaigns. But when analyzing the effectiveness of advertising campaigns, it turned out that most of the leads were actually “merged”, and the funnel itself was not managed.",
+              "The classic conflict began immediately: the managers said that “marketing brought the wrong leads, the leads were cold.”",
             ],
           },
           {
             title: "What the fact audit showed",
-            paragraphs: ["We traced the lead handling chain in CRM and saw the real picture:"],
+            paragraphs: [
+              "We raised the chain of processing requests in CRM and saw the real picture:",
+            ],
             bullets: [
-              "SLA was not followed by managers, backlogs accumulated.",
-              "The manager did not react to overdue notifications in CRM.",
-              "31% of leads came with trigger requests and left contacts (i.e. leads worth working with).",
-              "59% of leads received only the system auto-reply, after which no one followed up.",
+              "SLAs were not fulfilled by managers, and delays accumulated.",
+              "The manager did not respond to notifications about overdue payments in the CRM.",
+              "31% of leads came with trigger requests and left their contacts (that is, these were leads with whom you can and should work).",
+              "59% of leads received only a system auto-response, after which no one followed up with them.",
             ],
             paragraphsAfterBullets: [
-              "So the problem was not «lead quality» — the problem was that lead handling as a process did not exist.",
+              "That is, the problem was not “lead quality” - the problem was that working with leads as a process did not exist.",
             ],
           },
           {
-            title: "Why «punish / train / tighten KPI» is not always the answer",
-            paragraphs: ["When a business sees leads being lost, the standard toolkit looks like this:"],
+            title: "Why “punish / train / tighten KPIs” is not always the solution",
+            paragraphs: [
+              "When a business sees a lead drain, the standard set of measures looks like this:",
+            ],
             bullets: [
-              "train managers in «sales»,",
+              "train managers in “sales”,",
               "strengthen control,",
-              "introduce penalties,",
-              "recalculate KPI,",
-              "force «calling» and «pushing».",
+              "introduce a reduction in bonuses,",
+              "recalculate KPIs,",
+              "force them to “call” and “put the pressure on.”",
             ],
             paragraphsAfterBullets: [
-              "This works only if the cause is one-off: discipline slipped, team relaxed, manager didn't follow up, one or two people «messing up».",
-              "But the key management skill is distinguishing systemic error from one-off.",
-              "Because if the cause is systemic, any «tightening» turns into management theater: you'll spend time, get a short-term activity spike, and in 2–3 weeks the system will return to where it was.",
+              "This only works if the reason is private: discipline has sagged, the team has relaxed, the manager has under-performed, one or two employees are screwing up.",
+              "But a key management skill is to distinguish a systemic error from a private one.",
+              "Because if the reason is systemic, any “strengthening” turns into an imitation of control: you will waste time, get a short-term surge in activity, and after 2-3 weeks the system will return to its previous state.",
             ],
           },
           {
-            title: "What it really was: systemic error in choosing executors",
+            title: "What actually turned out to be: a systemic error in the selection of performers",
             paragraphs: [
-              "We went deeper into diagnostics and separated symptoms from cause.",
-              "It turned out that people in «sales manager» roles were actually doing an administrative function:",
+              "We went deeper into diagnosis and separated the symptoms from the cause.",
+              "It turned out that people who historically performed an administrative function were actually appointed to the role of “sales managers”:",
             ],
             bullets: [
-              "accepting requests from existing clients,",
-              "passing requests for execution,",
-              "tracking statuses,",
-              "handling operational issues.",
+              "accepted requests from regular customers,",
+              "submitted a request for execution,",
+              "accompanied by status,",
+              "solved operational issues.",
             ],
             paragraphsAfterBullets: [
-              "So this was a «coordinator/admin» role, not sales.",
-              "And here the systemic role mismatch kicked in:",
-              "Admin — reactive role: take the flow, avoid errors, close urgent, «hold operations».",
-              "Sales — proactive role: drive dialogue, bring client back into contact, handle objections, push to decision, keep timing.",
-              "Under operational load, the admin will always choose «urgent and hot», and sales will be «by default». And it's not a motivation issue. It's an architecture-of-functions issue.",
-              "Bottom line: the problem was systemic — not «bad leads» and not «bad managers», but misdesigned roles and accountability.",
+              "That is, it was the role of a “service coordinator/administrator”, not a salesperson.",
+              "And here the systemic incompatibility of roles came into play:",
+              "The administrator is a reactive role: accept the flow, prevent mistakes, close the urgent, “keep the operating system running.”",
+              "Sales is a proactive role: conduct a dialogue, bring the client back into contact, withstand refusals, push until a solution is reached, respect timing.",
+              "Under operational load conditions, the administrator will always choose “urgent and last minute”, and sales will become “on a residual basis”. And this is not a question of motivation. This is a function architecture issue.",
+              "The result of the diagnosis: the problem was systemic - not “bad leads” or “bad managers”, but incorrectly designed roles and responsibilities.",
             ],
           },
           {
-            title: "Solution: redesign the commercial block, not «push» people",
+            title: "Solution: Redesign the commercial block, not “strengthen” people",
             paragraphs: [
-              "Instead of treating the symptom (punish/train), we changed the system — separated functions and assigned measurable outcome to each role.",
-              "We shifted the commercial block from a «passive order waiting» model to revenue management via two levers:",
+              "Instead of treating the symptom (punish/train), we changed the system - divided the functions and assigned a measurable result to each role.",
+              "We transferred the commercial unit from a model of “passively waiting for orders” to a revenue management model through two key levers:",
             ],
             bullets: [
-              "Expansion — systematic market share capture through new clients (here: segments where the lab objectively benefits from growth).",
-              "LTV maximization — developing the current base: order frequency, average check, «sleeping» returns, retention.",
+              "Expansion is a systematic capture of market share through new clients (in our case, segments where it is objectively profitable for the laboratory to grow).",
+              "LTV maximization - development of the current base: increase in frequency, average check, returns from sleepers, retention.",
             ],
             paragraphsAfterBullets: [
-              "New structure by roles and outcomes:",
-              "We separated «sales», «base development» and «operational support» so sales weren't eaten by production firefighting.",
-              "1) Hunter Manager (new client acquisition) — responsible for new clients and onboarding them into a regular order cycle.",
-              "2) Farmer Manager (current base development) — responsible for share of client spend, order frequency, retention and returns.",
-              "3) KAM / Business unit head (key accounts and major contracts) — responsible for strategic relationships and protecting large deals.",
-              "4) Administrators (operations and service) — responsible for correct order handling and status communication — but do not substitute sales.",
-              "Key point: each role should be «single-outcome». When roles are mixed — the business loses money «in silence», then looks for someone to blame in marketing.",
+              "New structure by roles and results:",
+              "We separated the functions of “sales”, “base development” and “operational support” so that sales were not “eaten up” by production turnover.",
+              "1) Manager-Hunter (attracting new clients) - is responsible for new clients and their launch into the regular order cycle.",
+              "2) Manager-Farmer (development of the current base) - responsible for increasing the share in the client’s purchases, frequency of orders, retention and returns.",
+              "3) KAM / Line Manager (key clients and major contracts) - responsible for strategic relationships and protection of major contracts.",
+              "4) Administrators (OS and service) - are responsible for the correct processing of orders and the quality of communication by status - but do not replace sales.",
+              "Key point: each role should be “single-task” in terms of results. When the roles are mixed, a business loses money “in silence” and then looks for those to blame in marketing.",
             ],
           },
           {
-            title: "What changed after implementation: results in numbers",
+            title: "What has changed after implementation: the result in numbers",
             paragraphs: [
-              "When we removed the systemic cause, metrics moved quickly and predictably — because the system started working as a system, not as a set of heroic efforts.",
+              "When we removed the systemic cause, the metrics moved quickly and predictably - because the system began to work as a system, and not as a collection of heroic efforts.",
             ],
             bullets: [
-              "SLA leveled at 87% — overdues stopped being the norm, control became regular, lead handling became stable.",
-              "That drove a 21% conversion increase: inquiries stopped «dying» on auto-replies and overdues, more leads reached real dialogue and orders.",
-              "Order frequency per client grew 23% in the first month — thanks to a role dedicated to base development and returns.",
-              "34% of the client base that had gone «dormant» and hadn't ordered in 4–6 months was reactivated — because client return became a process, not chance.",
+              "The SLA leveled out to 87% - delays were no longer the norm, control became regular, lead processing became stable.",
+              "This resulted in an increase in conversions by 21%: requests stopped “dying” due to auto-responses and delays, more leads reached a real dialogue and an order.",
+              "The frequency of orders from one client increased by 23% in the first month - due to the emergence of a role responsible specifically for database development and returns.",
+              "34% of the customer base was reactivated, which went into “sleep mode” and did not place orders for 4-6 months - because returning customers became a process, not an accident.",
             ],
             insertInfographic: true,
           },
           {
-            title: "Financial effect: cash gaps moved into the «acceptable corridor»",
+            title: "Financial effect: cash gaps went “into the acceptable range”",
             paragraphs: [
-              "Separately important: SLA improvement and conversion growth brought not only commercial but also financial management impact.",
-              "When the funnel became manageable, the company got predictable revenue flow — clear future inflows tied to CRM stages and SLA discipline.",
-              "That in turn:",
+              "It is especially important to note: improving SLA and increasing conversions had not only a commercial, but also a financial and managerial effect.",
+              "When the funnel became manageable, the company received a predictable revenue flow - a clear volume of future revenues tied to CRM stages and SLA discipline.",
+              "This in turn:",
             ],
             bullets: [
-              "reduced recurring cash gaps, because inflows stopped being a «lottery»;",
-              "allowed planning payments and procurement not «by feel» but by revenue forecast based on funnel movement;",
-              "reduced dependence on manual control and firefighting — money became a consequence of process, not heroics.",
+              "reduced recurring cash gaps because receipts were no longer a “lottery”;",
+              "made it possible to plan payments and purchases not “by feeling”, but by revenue forecast based on the movement of the funnel;",
+              "reduced dependence on manual control and rush jobs - money became a consequence of the process, not heroism.",
             ],
           },
           {
-            title: "Main takeaway",
+            title: "Main conclusion",
             paragraphs: [
-              "This case is about one thing: you cannot make management decisions without separating systemic from one-off.",
-              "If we had gone the typical «managers are to blame — fine/train/tighten KPI» route, the company would have gotten a short-term effect and then returned to the same point, because the architecture of roles and accountability would have stayed the same.",
-              "We did otherwise: removed the systemic cause — and got measurable results in SLA, conversions, order frequency, base reactivation and, most importantly, revenue predictability.",
+              "This case is about one thing: you cannot make management decisions without separating the systemic from the private.",
+              "If we followed the typical path of “managers are to blame - we fine/train/strengthen KPIs,” the company would get a short-term effect and then return to the same point, because the architecture of roles and responsibilities would remain the same.",
+              "We did it differently: we eliminated the systemic cause - and got measurable results in SLA, conversions, order frequency, database reactivation and, most importantly, revenue predictability.",
             ],
           },
         ],
@@ -1235,41 +1588,275 @@ export const en: Dictionary = {
     ],
   },
   blog: {
-    hero: { title: "Blog & Expertise", description: "Articles on building autonomous and protected business systems." },
+    hero: {
+      title: "Blog and expertise",
+      description: "Articles about building autonomous and secure business systems.",
+    },
     filters: {
       all: "All",
       marketing: "Marketing",
       finance: "Finance",
-      operations: "Operations",
+      operations: "OS",
     },
-    noPosts: "No articles in this category yet.",
-    card: { readMore: "Read more" },
+    noPosts: "There are no articles in this category yet.",
+    card: { readMore: "More details" },
     article: { backToBlog: "← Blog" },
     posts: [
-      { slug: "5-shagov-avtonomnoe-upravlenie", category: "Operations", categoryKey: "operations", title: "5 Steps to Autonomous Management", description: "How to build rhythm, SOP and execution control.", image: "/blog/operations-autonomous.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Download checklist", href: "/contacts" } },
-      { slug: "diagnostika-problemy-biznesa", category: "Diagnostics", categoryKey: "diagnostics", title: "Diagnostics: Uncover Real Problems", description: "Find real failure points in your system.", image: "/blog/diagnostics-analysis.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }], cta: { label: "Book screening", href: "/contacts" } },
-      { slug: "ekonomika-kanalov-marketing", category: "Marketing", categoryKey: "marketing", title: "Channel Economics", description: "Full-funnel analytics and manageable growth.", image: "/blog/ekonomika-kanalov.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
-      { slug: "sistemnye-prodazhi", category: "Sales", categoryKey: "sales", title: "System Sales Without Stars", description: "Standards, scripts and CRM.", image: "/blog/sistemnye-prodazhi.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
-      { slug: "finansovaya-prozrachnost", category: "Finance", categoryKey: "finance", title: "Financial Transparency", description: "One truth in numbers.", image: "/blog/finansovaya-prozrachnost.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
-      { slug: "hr-kak-sistema", category: "HR", categoryKey: "hr", title: "HR as a System", description: "Roles, accountability, onboarding.", image: "/blog/hr-kak-sistema.png", sections: [{ title: "Overview", paragraphs: ["Content placeholder."] }] },
+      {
+        slug: "5-shagov-avtonomnoe-upravlenie",
+        category: "OS",
+        categoryKey: "operations",
+        title: "5 steps to autonomous driving",
+        description: "How to build a rhythm, SOP and execution control so that the business operates without the manual intervention of the owner.",
+        image: "/blog/operations-autonomous.png",
+        sections: [
+          {
+            title: "Why doesn't the \"director\" solve the problem?",
+            paragraphs: [
+              "Autonomous management is not about “hiring a good director.” We are talking about the system: the rhythm of meetings, SOPs, KPI panels and execution control. When all six pillars work together, the owner can step away from the operating room and focus on strategy.",
+              "A classic mistake is to replace the system with a person. While the director “keeps everything in his head,” the business depends on one person. The system works without heroes.",
+            ],
+            image: "/blog/director-problem.png",
+          },
+          {
+            title: "Step 1: Diagnosis of ruptures",
+            paragraphs: [
+              "Where are the breaks in the “decision → execution → control” chain? It often turns out that decisions are made at meetings, but are not followed through. Or control is divorced from reality - reports paint a picture that does not coincide with the facts.",
+              "Diagnostics reveals: who is responsible for what, how responsibility is transferred, where information is lost. Without this card, any improvements are shooting blindly.",
+            ],
+            image: "/blog/steps-alt-1.png",
+          },
+          {
+            title: "Step 2: Management Rhythm",
+            paragraphs: [
+              "Weekly planning meetings, monthly reviews, quarterly strategic sessions. Rhythm creates predictability: the team knows when and what to discuss and what decisions to make.",
+              "Rhythm is not “meeting for the sake of meeting.” Every event has a purpose, an agenda and an expected outcome. Otherwise it's just a waste of time.",
+            ],
+            image: "/blog/steps-alt-2.png",
+          },
+          {
+            title: "Step 3: SOPs and checklists",
+            paragraphs: [
+              "Processes must be described so that a new person can enter and perform a task as instructed. SOP is not a bureaucracy, but a guarantee of reproducibility.",
+              "Checklists record critical stages. They don't replace thinking, but they do eliminate forgotten steps and \"I thought you did it.\"",
+            ],
+            image: "/blog/sop-step-3.png",
+          },
+          {
+            title: "Step 4 and 5: Dashboards and execution control",
+            paragraphs: [
+              "One “truth” in numbers: finances, funnel, operating system. Without Excel files and “everyone counts in their own way.” Dashboards give the owner transparency without diving into the details.",
+              "Execution control is not “hoping that they will do it,” but a system for recording deadlines, statuses and escalations. Is the task overdue? The system signals. The person responsible is clear.",
+            ],
+            image: "/blog/step-4-5-dashboards.png",
+          },
+        ],
+        cta: { label: "Download checklist", href: "/contacts" },
+      },
+      {
+        slug: "diagnostika-problemy-biznesa",
+        category: "Diagnostics",
+        categoryKey: "diagnostics",
+        title: "Diagnostics: how to uncover real business problems",
+        description: "Why “everything is bad” is rarely true and how to find the real points of failure in the system.",
+        image: "/blog/diagnostics-analysis.png",
+        sections: [
+          {
+            title: "Why is diagnostics needed?",
+            paragraphs: [
+              "Diagnostics is not about “finding the culprit.” It's about understanding where the system fails. Often the owner feels that “something is wrong”: there is revenue, but the profit is disappearing; The command seems to be working, but there is no result. The reason is blurry.",
+              "Without a diagnosis, any treatment is guesswork. You can change people, introduce new tools, but if the root of the problem is not found, the symptoms will return.",
+            ],
+            image: "/blog/diagnostics-why-search.png",
+          },
+          {
+            title: "Three types of fault signals",
+            paragraphs: [
+              "Chaos in numbers is the first signal. If finances are calculated differently in different departments, there is no single picture. Decisions are made blindly, forecasts do not match the facts.",
+              "Dependence on people is the second. When one person keeps a key process in their head, the business is fragile. His departure, illness or burnout = disruption of the entire chain.",
+              "The opacity of the funnel is the third. Where do clients come from? How much does a lead cost? What is the conversion rate at each stage? No answers - only intuition and hope.",
+            ],
+            image: "/blog/diagnostics-signals.png",
+          },
+          {
+            title: "Six pillars as a diagnostic map",
+            paragraphs: [
+              "BBI conducts diagnostics through the prism of six pillars: operations, marketing, sales, finance, HR, legal. protection. Each pillar is an area of ​​risk and a point of growth.",
+              "A failure in one leads to others. Problems in sales can be a result of marketing or operations. Diagnostics show relationships and priorities.",
+            ],
+            image: "/blog/diagnostics-pillars-map.png",
+          },
+        ],
+        cta: { label: "Start with diagnostics", href: "/contacts" },
+      },
+      {
+        slug: "ekonomika-kanalov-marketing",
+        category: "Marketing",
+        categoryKey: "marketing",
+        title: "Channel economy: how to stop wasting your budget",
+        description: "End-to-end analytics, CAC, LTV and managed growth instead of “launch advertising and wait.”",
+        image: "/blog/ekonomika-kanalov-reshenie.png",
+        sections: [
+          {
+            title: "Why marketing without numbers is a lottery",
+            paragraphs: [
+              "Marketing without channel economics is a lottery. Money goes to Yandex, Google, social networks, but it is not clear which channel pays off and which one simply “eats” the budget. Revenue growth with unprofitable CAC is an illusion of success.",
+              "“We invest in marketing” is not a strategy. You need to know: how much a lead from each channel costs, what the client’s LTV is, whether the channel pays for itself over its life cycle.",
+            ],
+            image: "/blog/marketing-bez-tsifr-lotereya.png",
+          },
+          {
+            title: "End-to-end analytics as a basis",
+            paragraphs: [
+              "From click to payment: which channel led, how much the lead cost, what the client’s LTV is. Without end-to-end analytics, decisions are made based on feelings and reports with different methodologies.",
+              "Setting up end-to-end analytics is the first step. Only then can we talk about channel management and projected growth.",
+            ],
+            image: "/blog/skvoznaya-analitika-barchart.png",
+          },
+          {
+            title: "CAC, LTV and managed growth",
+            paragraphs: [
+              "CAC (customer acquisition cost) and LTV (lifetime value) are the main metrics. If CAC exceeds LTV, growth is unprofitable. Even with revenue growth.",
+              "Managed growth - when you can predict the result. Launched a channel, measured, scaled or turned off. Without “hope it will shoot” and “let’s wait another month.”",
+            ],
+            image: "/blog/cac-ltv-upravlyaemyj-rost.png",
+          },
+        ],
+      },
+      {
+        slug: "sistemnye-prodazhi",
+        category: "Sales",
+        categoryKey: "sales",
+        title: "System sales without “stars”",
+        description: "Standards, scripts and CRM instead of depending on the charisma of the manager.",
+        image: "/blog/sistemnye-prodazhi-process-chain.png",
+        sections: [
+          {
+            title: "What is system sales",
+            paragraphs: [
+              "Systemic sales - when the result does not depend on a specific person. Communication standards, scripts, CRM and funnel control create a repeatable result. A new manager can come in and post acceptable numbers in a short time.",
+              "This is not about “killing creativity” or “making everyone talk the same.” We are talking about the base: how to process a lead, what stages of the funnel, how to transfer it to delivery.",
+            ],
+            image: "/blog/sistemnye-prodazhi-checklist.png",
+          },
+          {
+            title: "The problem of \"stars\"",
+            paragraphs: [
+              "One manager handles 80% of deals - a familiar picture. His departure, vacation or burnout = disaster. Business is hostage to one person.",
+              "The system allows you to scale and replace people without losing results. Not “to find another star,” but to build a funnel where the result comes from the process, not charisma.",
+            ],
+            image: "/blog/sistemnye-prodazhi-zvezdy-lovushka.png",
+          },
+          {
+            title: "CRM as a control tool",
+            paragraphs: [
+              "CRM is not a “base for reports”, but a control tool. Funnel, lead processing time, conversions at stages. Everything is measurable. Who is stuck, where is the bottleneck, who does not close leads on time.",
+              "BBI builds sales as a system: from first contact scripts to transfer to delivery. Leverage, not “reliance on talent.”",
+            ],
+            image: "/blog/crm-element-kontrolya.png",
+          },
+        ],
+      },
+      {
+        slug: "finansovaya-prozrachnost",
+        category: "Finance",
+        categoryKey: "finance",
+        title: "Financial transparency: one truth in numbers",
+        description: "How to collect accounting so that the owner sees the real picture, and not versions of different departments.",
+        image: "/blog/finansovaya-prozrachnost-podpis.png",
+        sections: [
+          {
+            title: "What does \"one truth\" mean?",
+            paragraphs: [
+              "One truth in numbers is when finances are considered uniformly, without a “CFO version” and “OS version.” The owner sees one picture: revenue, costs, margin, cash flow.",
+              "Nowadays it often happens differently: finance gives one figure, operations gives another, sales gives a third. There are three versions of the “truth” at the meeting. Decisions are made in the fog.",
+            ],
+            image: "/blog/finansovaya-odna-pravda.png",
+          },
+          {
+            title: "Fragmented accounting and its consequences",
+            paragraphs: [
+              "Each department counts differently. Excel files multiply, methodologies vary. The result is conflicting reports and decisions based on inaccuracies.",
+              "Accounting standards, procurement control, cost, margins - everything should be in a single system. Dashboards, not miscellaneous reports.",
+            ],
+            image: "/blog/finansovaya-fragmentirovannyj-uchet.png",
+          },
+          {
+            title: "Finance as the basis of the pillars",
+            paragraphs: [
+              "Finance is one of the six pillars of BBI. Without transparency here, the remaining pillars are built on sand. It is impossible to make marketing, sales or operations decisions without seeing the financial picture.",
+            ],
+            image: "/blog/finansy-osnova-stolpov.png",
+          },
+        ],
+      },
+      {
+        slug: "hr-kak-sistema",
+        category: "HR",
+        categoryKey: "hr",
+        title: "HR as a system: not “find people”, but build sustainability",
+        description: "Roles, areas of responsibility, onboarding and a culture that does not break when the team changes.",
+        image: "/blog/hr-kak-sistema-ustojchivost.png",
+        sections: [
+          {
+            title: "HR is not just about recruitment",
+            paragraphs: [
+              "HR is not about “finding good people.” We are talking about the system: roles, areas of responsibility, onboarding, culture. The team must be repeatable. If a key person has left, the process can be transferred to someone else according to clear rules.",
+              "Selection without a system provides one-time solutions. The system is stable when changing people.",
+            ],
+            image: "/blog/hr-ne-tolko-podbor.png",
+          },
+          {
+            title: "RACI, instructions and boundaries",
+            paragraphs: [
+              "RACI, job descriptions, clear boundaries - this reduces dependence on “irreplaceable” employees. Any process can be described and conveyed.",
+              "If “only Vasya knows how it works,” this is not about Vasya’s unique abilities, but about the lack of documented processes.",
+            ],
+            image: "/blog/crm-instrument-kontrolya.png",
+          },
+          {
+            title: "Onboarding and culture",
+            paragraphs: [
+              "Onboarding - how a new person enters the system. If he has to “figure it out for himself” or “see what others do,” the system is broken. Onboarding should be structured.",
+              "HR as a pillar is part of the big picture. Without a stable team, operations, sales and marketing operate at risk. One step away and the chain breaks.",
+            ],
+            image: "/blog/hr-onboarding-kultura.png",
+          },
+        ],
+      },
     ],
   },
   contacts: {
     hero: {
       eyebrow: "Screening",
-      title: "Book a screening",
+      title: "Sign up for screening",
       description:
-        "Fill out the form — we'll get back within 24 hours to discuss scale, growth points and fit.",
+        "Fill out the form - we will contact you within 24 hours and discuss the scale, growth areas and the possibility of cooperation.",
     },
     form: {
       name: "Name",
-      company: "Company / business",
+      company: "Company/business",
       contact: "Phone or messenger",
       turnoverTeamSize: "Turnover or team size (optional)",
-      request: "Brief about your request",
-      submit: "Book a screening",
-      successMessage: "Request sent. We'll get back to you shortly.",
-      errorMessage: "Could not send the request. Please try again later or contact us directly.",
+      request: "Briefly about the request",
+      submit: "Send",
+      successMessage: "The application has been sent. We will contact you shortly.",
+      errorMessage: "Failed to submit application. Try again later or write to us directly.",
     },
+  },
+  ui: {
+    notFoundTitle: "Page not found",
+    notFoundDescription: "Check the link or return to the main page.",
+    notFoundHome: "Home",
+    searchPlaceholder: "Search",
+    searchSubmit: "Find",
+    footerLogoAria: "BBI - home",
+    contactsConsentBeforeLink:
+      "By clicking \"Submit\", I give my consent to the ",
+    contactsConsentLinkText: "processing of my personal data",
+    contactsConsentAfterLink: ".",
+    privacyModalCloseAria: "Close privacy policy window",
+    privacyPageTitle: "Privacy Policy",
+    privacyModalTitle: "Privacy Policy",
   },
 };

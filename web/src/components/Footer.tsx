@@ -96,16 +96,17 @@ export function Footer({ footer, locale, variant = "default" }: FooterProps) {
   return (
     <>
       <footer
-        className={`site-footer relative z-10 text-white ${isPage ? "mt-0 h-full min-h-full flex flex-col" : "mt-10 md:mt-12"}`}
+        className={`site-footer relative z-10 w-full shrink-0 text-white ${isPage ? "site-footer__page contacts-fluid mt-0 flex min-h-0 w-full flex-1 flex-col" : "mt-10 md:mt-12"}`}
       >
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
         <div
-          className={`w-full bg-[var(--bbi-panel-bg)] pt-12 pb-10 md:pt-14 md:pb-12 ${isPage ? "flex-1 flex flex-col justify-end rounded-none pt-8 pb-6 md:pt-10 md:pb-8" : "rounded-t-3xl border-t border-[color:var(--bbi-panel-border)]"}`}
+          className={`w-full bg-[var(--bbi-panel-bg)] ${isPage ? "site-footer__page-body flex min-h-0 flex-1 flex-col justify-center rounded-none py-0" : "site-footer__body rounded-t-3xl border-t border-[color:var(--bbi-panel-border)]"}`}
         >
-          <Container className="px-4 lg:px-6">
-            <div
-              className={`grid gap-7 ${isPage ? "mx-auto max-w-5xl sm:grid-cols-2 lg:grid-cols-2 text-center" : "sm:grid-cols-2 lg:grid-cols-3 lg:gap-10"}`}
-            >
+          <Container className={isPage ? "px-5 sm:px-8 lg:px-12" : "px-4 lg:px-6"}>
+            <div className={isPage ? "contacts-uniform-scale" : "contents"}>
+              <div
+                className={`grid ${isPage ? "mx-auto w-full max-w-none gap-5 text-center sm:grid-cols-2 sm:gap-6 lg:grid-cols-2 lg:gap-6" : "gap-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10"}`}
+              >
               {!isPage && (
                 <div className="max-w-xs">
                   <Link
@@ -192,10 +193,10 @@ export function Footer({ footer, locale, variant = "default" }: FooterProps) {
                   ))}
                 </div>
               </div>
-            </div>
-            <div
-              className={`mt-8 grid gap-7 border-t border-white/10 pt-7 ${isPage ? "mx-auto max-w-5xl text-center sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2 lg:grid-cols-3"}`}
-            >
+              </div>
+              <div
+                className={`grid border-t border-white/10 ${isPage ? "mx-auto mt-6 w-full max-w-none gap-5 pt-6 text-center sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-6" : "mt-8 gap-7 pt-7 sm:grid-cols-2 lg:grid-cols-3"}`}
+              >
               {footer.locations.map((loc) => (
                 <div key={loc.city} className={`space-y-3 ${isPage ? "text-center" : ""}`}>
                   {loc.address && (
@@ -246,13 +247,18 @@ export function Footer({ footer, locale, variant = "default" }: FooterProps) {
                   </p>
                 </div>
               )}
+              </div>
             </div>
           </Container>
         </div>
 
-        <div className={`mt-auto border-t border-white/10 bg-[var(--bbi-panel-bg)] ${isPage ? "pt-2 pb-0" : "py-4"}`}>
-          <Container className="px-4 lg:px-6">
-            <div className={`flex flex-col gap-3 sm:flex-row sm:items-center ${isPage ? "items-center justify-center text-center sm:justify-center" : "items-start justify-between"}`}>
+        <div
+          className={`w-full shrink-0 border-t border-white/10 bg-[var(--bbi-panel-bg)] ${isPage ? "site-footer__page-legal site-footer__page-legal--viewport" : "mt-auto py-4"}`}
+        >
+          <Container className={isPage ? "px-5 sm:px-8 lg:px-12" : "px-4 lg:px-6"}>
+            <div
+              className={`flex flex-col gap-3 sm:flex-row sm:items-center ${isPage ? "items-center justify-between text-center sm:justify-between" : "items-start justify-between"}`}
+            >
               <p className="text-[12px] text-white/58">
                 {footer.copyright}
               </p>

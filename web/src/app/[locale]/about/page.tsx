@@ -246,15 +246,16 @@ export default async function AboutPage({ params }: LocalePageProps) {
                   </svg>
                 </span>
                 <span>
-                  Нажимая на кнопку "Отправить", я даю свое согласие на{" "}
+                  {dictionary.ui.contactsConsentBeforeLink}
                   <PrivacyPolicyModalLink
                     href={withLocale(locale, "/privacy")}
                     className="text-[var(--bbi-red)] transition hover:opacity-85"
-                    title="Политика конфиденциальности"
+                    title={dictionary.ui.privacyModalTitle}
+                    closeAriaLabel={dictionary.ui.privacyModalCloseAria}
                   >
-                    обработку моих персональных данных
+                    {dictionary.ui.contactsConsentLinkText}
                   </PrivacyPolicyModalLink>
-                  .
+                  {dictionary.ui.contactsConsentAfterLink}
                 </span>
               </label>
             </form>

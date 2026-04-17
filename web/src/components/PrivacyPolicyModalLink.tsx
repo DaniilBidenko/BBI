@@ -1,14 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
-import { PRIVACY_POLICY_TEXT } from "@/content/privacyPolicyText";
+import { getPrivacyPolicyText } from "@/content/privacyPolicyByLocale";
+import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 
 type PrivacyPolicyModalLinkProps = {
   href?: string;
   children: React.ReactNode;
   className?: string;
   title?: string;
+  closeAriaLabel?: string;
 };
 
 export function PrivacyPolicyModalLink({
@@ -16,7 +19,15 @@ export function PrivacyPolicyModalLink({
   children,
   className,
   title = "Политика конфиденциальности",
+  closeAriaLabel = "Закрыть окно политики конфиденциальности",
 }: PrivacyPolicyModalLinkProps) {
+  const pathname = usePathname();
+  const locale = useMemo((): Locale => {
+    const raw = pathname?.split("/").filter(Boolean)[0]?.toLowerCase() ?? "";
+    return isLocale(raw) ? raw : defaultLocale;
+  }, [pathname]);
+  const policyText = useMemo(() => getPrivacyPolicyText(locale), [locale]);
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -68,7 +79,7 @@ export function PrivacyPolicyModalLink({
             type="button"
             onClick={() => setIsOpen(false)}
             className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70 transition hover:border-white/40 hover:text-white"
-            aria-label="Закрыть окно политики конфиденциальности"
+            aria-label={closeAriaLabel}
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M18 6L6 18M6 6l12 12" />
@@ -77,7 +88,7 @@ export function PrivacyPolicyModalLink({
         </div>
         <div className="h-[calc(88vh-57px)] overflow-y-auto overscroll-contain px-4 py-4 md:px-6 md:py-5">
           <div className="whitespace-pre-line text-[13.5px] leading-[1.62] text-white/85 md:text-[15px] md:leading-[1.68]">
-            {PRIVACY_POLICY_TEXT}
+            {policyText}
           </div>
         </div>
       </div>

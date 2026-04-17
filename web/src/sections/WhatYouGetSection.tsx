@@ -17,12 +17,22 @@ type WhatYouGetCard = {
   important: string;
 };
 
+type WhatYouGetCardUi = {
+  readMore: string;
+  whatItMeans: string;
+  clientGetsHeading: string;
+  importantPrefix: string;
+  outcomeEyebrow: string;
+};
+
 type WhatYouGetSectionProps = {
   eyebrow: string;
   title: string;
   subheadline?: string;
   items?: string[];
   cards?: WhatYouGetCard[];
+  /** Подписи карточек (обязательно, если передан cards) */
+  cardUi?: WhatYouGetCardUi;
   finalAccent?: {
     title: string;
     text: string;
@@ -46,6 +56,7 @@ export function WhatYouGetSection({
   subheadline,
   items,
   cards,
+  cardUi,
   finalAccent,
   ctaHref,
 }: WhatYouGetSectionProps) {
@@ -97,7 +108,7 @@ export function WhatYouGetSection({
                     {card.clientGets.length > 0 && (
                       <div className="bbi-surface-cateye-inset rounded-xl px-5 py-4 md:px-6 md:py-4">
                         <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-[rgba(255,43,68,0.9)]">
-                          Что остаётся у клиента
+                          {cardUi?.clientGetsHeading}
                         </p>
                         <ul className="space-y-2">
                           {card.clientGets.map((item, j) => (
@@ -115,18 +126,18 @@ export function WhatYouGetSection({
                     {/* Что это значит + Подробнее */}
                     <details className="group">
                       <summary className="inline-flex cursor-pointer list-none items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-white/60 marker:hidden [&::-webkit-details-marker]:hidden">
-                        Что это значит
+                        {cardUi?.whatItMeans}
                         <span className="text-[12px] normal-case tracking-normal text-[var(--bbi-red)]">
-                          Подробнее &gt;&gt;
+                          {cardUi?.readMore}
                         </span>
                       </summary>
-                      <div className="mt-2.5 space-y-3">
+                      <div className="mt-2.5 max-h-[min(48vh,300px)] space-y-3 overflow-y-auto overscroll-y-contain pr-1 [scrollbar-color:rgba(255,255,255,0.28)_transparent] [scrollbar-width:thin] md:max-h-[min(42vh,280px)] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/25 [&::-webkit-scrollbar-track]:bg-transparent">
                         <p className="break-words text-[14px] leading-[1.7] text-white/78">
                           {card.whatItMeans}
                         </p>
                         <div className="rounded-lg border-l-4 border-[rgba(255,43,68,0.42)] bg-[rgba(255,43,68,0.06)] py-3 pl-4 pr-4 md:pl-5">
                           <p className="break-words text-[13px] leading-[1.6] text-white/82">
-                            <span className="font-semibold text-white/88">Важно:</span>{" "}
+                            <span className="font-semibold text-white/88">{cardUi?.importantPrefix}</span>{" "}
                             {card.important}
                           </p>
                         </div>
@@ -145,7 +156,7 @@ export function WhatYouGetSection({
                 <div className="relative z-[2] flex flex-col gap-0 px-5 py-7 pl-8 pr-5 md:px-8 md:py-9 md:pl-11">
                   <div className="min-w-0">
                     <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[rgba(232,182,72,0.92)]">
-                      Итог
+                      {cardUi?.outcomeEyebrow}
                     </p>
                     <h3 className="mt-2 text-xl font-semibold tracking-tight text-[var(--bbi-text)] md:text-2xl">
                       {finalAccent.title}

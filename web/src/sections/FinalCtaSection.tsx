@@ -1,17 +1,28 @@
 import { Container } from "@/components/Container";
 import { ContactsForm } from "@/components/ContactsForm";
-import type { ContactsPage } from "@/content/dictionaries/types";
+import type { ContactsPage, Dictionary } from "@/content/dictionaries/types";
+
+type ConsentUi = Pick<
+  Dictionary["ui"],
+  | "contactsConsentBeforeLink"
+  | "contactsConsentLinkText"
+  | "contactsConsentAfterLink"
+  | "privacyModalTitle"
+  | "privacyModalCloseAria"
+>;
 
 type FinalCtaSectionProps = {
   title: string;
   subtitle: string;
   contacts: ContactsPage;
+  consentUi: ConsentUi;
 };
 
 export function FinalCtaSection({
   title,
   subtitle: _subtitle,
   contacts,
+  consentUi,
 }: FinalCtaSectionProps) {
   return (
     <section id="contact-form" className="relative py-16 md:py-20 scroll-mt-24">
@@ -25,7 +36,7 @@ export function FinalCtaSection({
               </h2>
             </div>
             <div className="mx-auto mt-8 max-w-5xl">
-              <ContactsForm contacts={contacts} variant="dark" />
+              <ContactsForm contacts={contacts} variant="dark" consentUi={consentUi} />
             </div>
           </div>
         </div>

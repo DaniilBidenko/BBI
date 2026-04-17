@@ -13,14 +13,17 @@ type AppBarProps = {
   locale: Locale;
   navItems: NavItem[];
   ctaLabel: string;
+  searchPlaceholder: string;
+  searchSubmitLabel: string;
 };
 
-export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
+export function AppBar({ locale, navItems, ctaLabel, searchPlaceholder, searchSubmitLabel }: AppBarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isLocaleOpen, setIsLocaleOpen] = useState(false);
   const [query, setQuery] = useState("");
   const localeMenuRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
+  const ctaHref = `${withLocale(locale, "/")}#contact-form`;
 
   /** Список кейсов: фото героя под шапкой — без плотного фона app bar */
   const isCasesListPage =
@@ -87,7 +90,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
         </nav>
         <div className="flex items-center gap-1.5 md:gap-2">
           <Link
-            href={withLocale(locale, "/contacts")}
+            href={ctaHref}
             className="hidden h-8 whitespace-nowrap items-center justify-center rounded-full bg-[var(--bbi-red)] px-4 text-[11px] font-medium text-white transition hover:opacity-90 lg:inline-flex"
           >
             {ctaLabel}
@@ -141,7 +144,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
           <button
             type="button"
             className="flex h-8 w-8 items-center justify-center rounded-full text-white/85 transition hover:text-white"
-            aria-label="Search"
+            aria-label={searchPlaceholder}
             onClick={() => setIsOpen((prev) => !prev)}
           >
             <svg
@@ -198,7 +201,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
                 onKeyDown={(e) => {
                   if (e.key === "Enter") runSearch();
                 }}
-                placeholder="Поиск"
+                placeholder={searchPlaceholder}
                 className="h-10 flex-1 rounded-lg border border-white/20 bg-black/30 px-3 text-sm text-white outline-none transition placeholder:text-white/45 focus:border-white/35"
               />
               <button
@@ -206,7 +209,7 @@ export function AppBar({ locale, navItems, ctaLabel }: AppBarProps) {
                 onClick={runSearch}
                 className="h-10 rounded-lg border border-[rgba(255,43,68,0.98)] px-3 text-[rgba(255,43,68,0.98)] transition hover:bg-[rgba(255,43,68,0.08)]"
               >
-                Найти
+                {searchSubmitLabel}
               </button>
             </div>
 

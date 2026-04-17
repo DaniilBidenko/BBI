@@ -147,6 +147,7 @@ export function BlogSection({
 }: BlogSectionProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const isLoopAdjusting = useRef(false);
+  const smoothLockRef = useRef<number | null>(null);
 
   /** Три копии: ручная прокрутка без конца, позиция «перекидывается» незаметно */
   const loopPosts = useMemo(
@@ -190,15 +191,26 @@ export function BlogSection({
   const scroll = (dir: "prev" | "next") => {
     const el = scrollRef.current;
     if (!el) return;
-    const step = el.clientWidth * (dir === "next" ? 1 : -1);
-    /* instant: без smooth — иначе длинная анимация и конфликт с бесконечным циклом */
-    el.scrollBy({ left: step, behavior: "auto" });
+    const card = el.querySelector<HTMLElement>("[data-blog-card]");
+    const styles = window.getComputedStyle(el);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap || "0") || 0;
+    const cardStep = card ? card.offsetWidth + gap : el.clientWidth;
+    const step = cardStep * (dir === "next" ? 1 : -1);
+    if (smoothLockRef.current) {
+      window.clearTimeout(smoothLockRef.current);
+    }
+    isLoopAdjusting.current = true;
+    smoothLockRef.current = window.setTimeout(() => {
+      isLoopAdjusting.current = false;
+      smoothLockRef.current = null;
+    }, 380);
+    el.scrollBy({ left: step, behavior: "smooth" });
   };
 
   return (
     <section className="relative py-16 md:py-20">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[var(--bbi-ambient-bg)]" />
-      <Container className="relative mx-auto lg:w-[90%]">
+      <Container className="relative mx-auto">
         <div className="mb-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between md:mb-10">
           <h2 className="break-words text-[30px] font-semibold uppercase text-white sm:text-[38px] md:text-[50px]">
             {title}
@@ -230,12 +242,13 @@ export function BlogSection({
         <div
           ref={scrollRef}
           onScroll={onScrollLoop}
-          className="flex touch-pan-x gap-6 overflow-x-auto overscroll-x-contain pb-2 [scroll-behavior:auto] lg:gap-8 [&::-webkit-scrollbar]:hidden"
+          className="flex touch-pan-x gap-6 overflow-x-auto overscroll-x-contain pb-2 lg:gap-8 [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {loopPosts.map((post, i) => (
             <div
               key={`${post.slug}-${i}`}
+              data-blog-card
               className="w-[min(85vw,420px)] shrink-0 md:w-[calc((100%-3rem)/3)] lg:w-[calc((100%-4rem)/3)]"
             >
               <BlogCard post={post} locale={locale} readMore={readMore} />

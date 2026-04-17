@@ -3,23 +3,28 @@ import type { Dictionary } from "./types";
 export const uz: Dictionary = {
   nav: {
     items: [
-      { label: "Bosh sahifa", href: "/" },
-      { label: "BBI haqida", href: "/about" },
-      { label: "Qanday ishlaymiz", href: "/work" },
-      { label: "Keyslar", href: "/cases" },
+      { label: "Uy", href: "/" },
+      { label: "Kompaniya haqida", href: "/about" },
+      { label: "Biz qanday ishlaymiz", href: "/work" },
+      { label: "Ishlar", href: "/cases" },
       { label: "Blog", href: "/blog" },
-      { label: "Aloqa", href: "/contacts" },
+      { label: "Kontaktlar", href: "/contacts" },
     ],
-    cta: "Ishni boshlash",
+    cta: "Boshlash",
   },
   work: {
-    breadcrumb: "Qanday ishlaymiz",
+    breadcrumb: "Biz qanday ishlaymiz",
     hero: {
       eyebrow: "Ish modeli",
-      title: "6 tayanch: bitta tizim, xizmatlar to'plami emas",
+      title: "6 ta ustun: xizmatlar to'plami emas, balki yagona tizim",
       description:
-        "Biz operatsiyani marketingdan, marketingni moliyadan ajratib sotmaymiz. Biznes — bu tizim. Bir tayanchdagi teshik boshqalarini ham qulatadi. BBI olti yo'nalishga bir vaqtning o'zida kiradi va yagona boshqaruv konturini quradi.",
-      ctaLabel: "6 BBI TAYANCHI",
+        "Marketing etakchilarni olib keladi, lekin sotish ularni yo'qotadi, chunki hech qanday qoidalar yo'q. Savdo bitimlarni yopadi - moliya daromad qayerdan kelganini tushunmaydi. Operatsion samaradorlik ta'tilga chiqqan ikki kishiga bog'liq.\n\nShuning uchun biz alohida \"xususiyatlar xizmatlarini\" sotmaymiz. Bir ustunni maqsadli takomillashtirish, qolganlari zaif bo'lsa, barqaror natija bermaydi - bu vaqtinchalik ta'sir va yangi ortiqcha yuk nuqtasini beradi.\n\nBBI bir vaqtning o'zida barcha oltita ustunga murojaat qiladi: operatsion mukammallik, marketing, savdo, moliya, HR va aktivlarni himoya qilish.",
+      ctaLabel: "BBIning 6 ta ustuni haqida ko'proq o'qing",
+      carouselSlides: [
+        "Biz operatsiyani marketingdan alohida yoki marketingni moliyadan alohida sotmaymiz. BBI barcha oltita ustunga kiradi va yagona boshqaruv konturini quradi: har bir funksiya boshqalariga metrikalar, javobgarlik va ritm orqali bog'langan.",
+        "Biz diagnostikadan boshlaymiz: haqiqiy ildiz sabablarni topamiz — qayerda biznes pul, boshqaruv va qiymat yo'qotadi. Keyin maqsadli arxitektura — bu bo'shliqlarni bartaraf qiladigan va boshqariladigan o'sish uchun ishchi asos yaratadigan operatsion modelni loyihalashtiramiz.",
+        "BBI joriy etishning boshidan oxirigacha biznes ichida qoladi — 90+ ish kuni. Bu vaqt ichida o'zgarishlar sxemadan kundalik amaliyotgacha yo'lni bosib o'tadi: uchrashuvlar yangi formatda bo'ladi, qarorlar protokol bo'yicha qabul qilinadi, metrikalar qo'lda emas, tizim tomonidan kuzatiladi. Yangi boshqaruv modeli bizsiz ishlaguncha ketmaymiz.",
+      ],
     },
     scheme: {
       centerLabel: "Biznes",
@@ -27,63 +32,74 @@ export const uz: Dictionary = {
     pillarsIntro: {
       title: "BBI tizimi",
       description:
-        "BBI oltita yo'nalishni egalar manfaatiga bo'ysunadigan yagona tizimga birlashtiradi. Bu alohida sotib olinadigan «xizmatlar» emas — barqaror va himoyalangan biznes‑aktivni ushlab turuvchi oltita tayanchdir. Barqarorlik — olti tayanchning natijasi.",
-      detailsLabel: "Batafsil",
+        "BBI oltita sohani egasining manfaatlariga bo'ysunadigan yagona tizimga birlashtiradi. Bu alohida sotib olinadigan \"xizmatlar\" emas. Bular barqaror va himoyalangan biznes aktivi tayanadigan oltita ustundir. Chidamlilik barcha oltitaning natijasidir.",
+      detailsLabel: "batafsil ma'lumot",
     },
     pillars: [
       {
         key: "operations",
-        title: "Operatsion samaradorlik",
+        title: "Operatsion samaradorligi",
         group: "Leverage",
-        groupLabel: "Rychag",
+        groupLabel: "Tutqich",
         summary:
-          "Boshqaruv ritmi, SOP, org‑tuzilma, KPI panellari va ijro nazorati.",
+          "Egasining doimiy ishtirokisiz ishlaydigan biznes - bu baxtsiz hodisa emas, balki arxitektura. Biz boshqaruv ritmini yaratamiz, asosiy jarayonlarni tavsiflaymiz va har bir kishi o'z mas'uliyat sohasi va natija ko'rsatkichlarini biladigan boshqaruv tizimini yaratamiz.",
         details: [
-          "Boshqaruv ritmi va muntazam yig'ilishlar.",
-          "SOP, chek‑listlar, rollar va mas'uliyat.",
-          "Dashboardlar, muddat va sifat nazorati.",
+          "Biz nima qilamiz:",
+          "Boshqaruv ritmi (kadens): yig'ilishlar, ro'yxatdan o'tish va nazorat punktlari tizimi - \"yoqilganda\" emas, balki jadvalga muvofiq ishlaydi",
+          "SOP va qoidalar: asosiy jarayonlar tasvirlangan, egasi tayinlangan, mantiq aniqlangan",
+          "Tashkilot sxemasi va mas'uliyat matritsasi (RACI): kim nima uchun javobgar - kulrang joylar yo'q",
+          "KPI panellari va asboblar paneli: biznes holati 5 daqiqada ma'lumotlarni qo'lda yig'masdan ko'rinadi",
+          "Nazorat ro'yxati: yangi xodim standartlarga muvofiq natijalarga erishadi va \"o'z-o'zidan omon qolmaydi\"",
         ],
         result:
-          "Biznes egasining doimiy ishtirokidagi qo'llab-quvvatlashsiz ham barqaror ishlaydi. Har bir jarayon qoidalarga ko'ra ishlaydi — bugun ofisda kim bo'lishidan qat'iy nazar.",
+          "Biznes egasining mavjudligiga tayanishni to'xtatadi. Bugun ofisda kim bo'lishidan qat'i nazar, har bir jarayon qoidalarga muvofiq ishlaydi.",
         resultExpanded: {
           whatWeBuild:
-            "Boshqaruv ritmi (cadence), SOP, orgsxema, RACI matritsasi va KPI panellari. Har bir owner tayinlangan; har bir metrika real vaqtda ko'rinadi.",
+            "Boshqaruv ritmi (kadans), SOP, tashkilot diagrammasi, javobgarlik matritsasi (RACI) va KPI panellari. Har bir egasi tayinlangan, har bir ko'rsatkich real vaqtda ko'rinadi.",
           partnerOutcomes: [
-            "Ega operatsiyaga haftasiga 10 soatgacha sarflaydi — doimiy qo'lda boshqaruv o'rniga",
-            "Asosiy odam ta'tilda yoki ketganida ham biznes to'xtamaydi",
-            "Qarorlar protokol bo'yicha qabul qilinadi — egaga qo'ng'iroq orqali emas",
-            "O'sish model bo'yicha masshtablanadi — yangi xaos darajasi yaratilmaydi",
+            "Egasi doimiy qo'lda boshqarish o'rniga operatsion tizimda haftasiga 10 soatgacha vaqt sarflaydi",
+            "Asosiy odam ta'tilda bo'lganida yoki ketganida biznes to'xtamaydi.",
+            "Qarorlar egasiga qo'ng'iroq qilish orqali emas, balki protokolga muvofiq qabul qilinadi",
+            "O'sish tartibsizlikning yangi darajasini yaratishdan ko'ra, modelga mos keladi",
           ],
         },
         broken:
-          "Yong'in o'chirish, xaos, qo'lda boshqaruv va odamga bog'liqlik.",
+          "Egasi har bir jarayonda. Usiz hech narsa harakat qilmaydi va har qanday shoshilinch darhol uning telefoniga tushadi.",
+        brokenExpanded: [
+          "Har kuni \"yong'inlar\" tahlili bilan boshlanadi - strategiya yana qoldiriladi",
+          "Qarorlar egasiga tegishli: jamoa uning roziligisiz harakat qilmaydi",
+          "Aniq tashkiliy sxema yo‘q – kim nima uchun mas’ul ekanligi noma’lum, mas’uliyat esa loyqa",
+          "Asosiy xodim ketdi - va u bilan faqat uning boshida bo'lgan jarayonlar ketdi",
+          "Kompaniyaning o'sishi tizimni kengaytirmaydi, faqat tartibsizlikni qo'shadi",
+          "Ko'rsatkichlar yo'q: egasi muammolarni asboblar panelidan emas, balki haqiqatdan keyin bilib oladi",
+        ],
         actions:
-          "Boshqaruv arxitekturasini quramiz: kim nima uchun javobgar, qarorlar qanday qabul qilinadi, ijro qanday nazorat qilinadi. Biznes ritm va qoidalarga ko'ra ishlaydi — kayfiyatga emas.",
+          "Biz boshqaruv arxitekturasini quramiz: kim nima uchun javobgar, qarorlar qanday qabul qilinadi, ijro qanday nazorat qilinadi. Biznes kayfiyatga qarab emas, ritm va qoidalarga muvofiq ishlaydi.",
         actionsExpanded: {
-          partnerHeading: "Hamkor nima oladi:",
+          partnerHeading: "Hamkor nimani oladi:",
           sections: [
             {
-              title: "Hujjatlar va vositalar",
+              title: "Hujjatlar va asboblar",
               items: [
-                "Mas'uliyat zonasi va qaror ierarxiyasi bilan orgsxema",
-                "Asosiy jarayonlar bo'yicha SOP",
-                "Har bir jarayon uchun RACI: owner, ijrochi, tasdiqlovchi",
-                "Boshqaruv uchrashuvlari tizimi (cadence): format, ishtirokchilar, chastota, bayonnoma",
+                "Mas'uliyat sohalari va qaror qabul qilish ierarxiyasi bilan tashkiliy sxema",
+                "Asosiy jarayonlar uchun SOP (standart operatsion protseduralar).",
+                "RACI mas'uliyat matritsasi: egasi, ijrochi, tasdiqlovchi - har bir jarayon uchun",
+                "Boshqaruv yig'ilishlari tizimi (kadens): format, ishtirokchilar, chastota, protokol",
               ],
             },
             {
-              title: "Metrikalar va panellar",
+              title: "Ko'rsatkichlar va asboblar paneli",
               items: [
-                "KPI-dashboard: biznes holati bitta ekranda — qo'lda yig'masdan",
-                "Ijro nazorati metrikalari: asosiy ko'rsatkichlar bo'yicha plan-fakt",
-                "Eskalatsiya nuqtalari: qachon va kimga masala ko'tariladi — egaga qo'ng'iroqsiz",
+                "KPI asboblar paneli: biznes holati bitta ekranda - qo'lda ma'lumotlarni yig'masdan",
+                "Amalga oshirishni nazorat qilish ko'rsatkichlari: asosiy ko'rsatkichlarga asoslangan reja-faktlar",
+                "Eskalatsiya nuqtalari: qachon va kimga masala qo'yilgan - egasiga qo'ng'iroq qilmasdan",
               ],
             },
             {
               title: "Qo'shimcha",
               items: [
-                "Yangi xodimlarni moslashtirish chek-listlari",
-                "Jamoa o'zi saqlaydigan boshqaruv ritmi reglamenti",
+                "Yangi xodimlar uchun ishga qabul qilish ro'yxati",
+                "Jamoa mustaqil ravishda saqlaydigan boshqaruv ritmi qoidalari",
               ],
             },
           ],
@@ -93,55 +109,66 @@ export const uz: Dictionary = {
         key: "marketing",
         title: "Marketing",
         group: "Leverage",
-        groupLabel: "Rychag",
+        groupLabel: "Tutqich",
         summary:
-          "Skvoznoy analitika, kanal iqtisodi, prognozli talab.",
+          "Analitikasiz marketing - bu tumandagi byudjet. Biz har bir investitsiya qilingan rubl natijaga bog'langan tizimni qurmoqdamiz: mijoz qaerdan kelgani, qancha turadi va qaysi kanal haqiqatda ishlashi aniq.",
         details: [
-          "Kanal iqtisodi va shaffof byudjet.",
-          "Skvoznoy analitika va audit.",
-          "Byudjetsiz yo'qotishlarsiz barqaror talab.",
+          "Biz nima qilamiz:",
+          "Yakuniy tahlil: birinchi tegishdan tortib to to‘lovgacha – har bir kanal ko‘rinadi, har bir yetakchi kuzatiladi",
+          "Kanal auditi: haqiqiy mijozlarga nima olib keladi, nima byudjetni isrof qiladi - his-tuyg'ular bilan emas, balki raqamlar bilan",
+          "Hisoblar va ma'lumotlar bazalariga egalik qilish: reklama hisoblari, CRM, ma'lumotlar bazalari - agentlikka emas, balki kompaniyaga tegishli",
+          "Kanal iqtisodiyoti: sotib olish qiymati, LTV, har bir yo'nalish uchun zararni yo'qotish nuqtasi",
+          "Prognoz qilinadigan qo'rg'oshin oqimi: tizim modelga muvofiq ishlaydi va bitta pudratchiga bog'liq emas",
         ],
         result:
-          "Lid va mijoz narxi, qaysi kanal ishlashi va barcha ma'lumotlar hamda kabinetlar kimga tegishli ekanligi aniq.",
+          "Etakchi va mijoz qancha turadi, qaysi kanal ishlayotgani va barcha ma'lumotlar va hisoblar kimga tegishli ekanligi aniq.",
         resultExpanded: {
           whatWeBuild:
-            "Birinchi tegishdan to'loqgacha skvoznoy analitika, kanallar auditi, jalb iqtisodi va barcha kabinetlar hamda bazalarning kompaniyaga o'tkazilishi.",
+            "Tegishdan tortib to to'lovgacha bo'lgan yakuniy tahlil, kanal auditi, jalb qilish iqtisodiyoti va barcha hisoblar va ma'lumotlar bazalariga egalik huquqini kompaniyaga o'tkazish.",
           partnerOutcomes: [
-            "Barcha kirish va bazalar kompaniyada — agentlik almashsa ham tarix yo'qolmaydi",
-            "Qaysi kanal daromad keltirishi, qaysi xarajat va nega — aniq tasvir",
-            "Marketing byudjeti intuitsiya emas, ma'lumotlar asosida taqsimlanadi",
-            "Lid oqimi boshqariladi va prognozlanadi — «yulduz» podryadchisiz",
+            "Barcha kirish va ma'lumotlar bazalari kompaniyaning qo'lida: agentlikni o'zgartirish tarix va ma'lumotlarni qayta tiklamaydi",
+            "Aniq rasm: qaysi kanal pul ishlaydi, qaysi pul sarflaydi va nima uchun",
+            "Marketing byudjeti sezgi emas, balki ma'lumotlar asosida taqsimlanadi",
+            "Biz \"yulduzli\" pudratchiga bog'liq holda, etakchilar oqimini boshqaramiz va bashorat qilamiz",
           ],
         },
         broken:
-          "Byudjet «yo'qoladi», prognoz va nazorat yo'q.",
+          "Pul reklamaga ketadi, ammo mijozlar qayerdan kelgani noma'lum. Agentlik xabar beradi, lekin nazorat yo'q.",
+        brokenExpanded: [
+          "Byudjet \"hissiyotlarga ko'ra\" taqsimlanadi: aslida qaysi kanal ishlashi noma'lum",
+          "Yakuniy tahlil yo'q: mijozni jalb qilishning haqiqiy narxini hisoblash mumkin emas",
+          "Barcha ofislar, bazalar va kirish pudratchi bilan. O'zgartirish agentligi = tarix va ma'lumotlarning yo'qolishi",
+          "Qo'rg'oshinlar oqimini oldindan aytib bo'lmaydi: bir oy qalin, keyingisi bo'sh",
+          "Marketing bir shaxsga yoki bitta agentlikka tayanadi - usiz tizim buziladi",
+          "Model yo'q: marketing qarorlari moliyaviy natijalar bilan bog'liq emas",
+        ],
         actions:
-          "Skvoznoy analitikani sozlaymiz, barcha kabinet va bazalarning egalik huquqini o'tkazamiz, har bir tiyin natijaga bog'langan modelni quramiz.",
+          "Biz yakuniy tahlilni o'rnatamiz, barcha hisoblar va ma'lumotlar bazalariga egalik huquqini o'tkazamiz va har bir tiyin natijaga bog'langan modelni yaratamiz.",
         actionsExpanded: {
-          partnerHeading: "Hamkor nima oladi:",
+          partnerHeading: "Hamkor nimani oladi:",
           sections: [
             {
-              title: "Hujjatlar va vositalar",
+              title: "Hujjatlar va asboblar",
               items: [
-                "Har bir kanal iqtisodi bilan jalb kanallari xaritasi: lid narxi, CPL, mijoz narxi",
-                "Joriy kanallar auditi: nima ishlaydi, nima byudjetni yo'qotadi — raqamlar bilan",
-                "Kanallar va maqsadlar bo'yicha marketing byudjeti taqsimlash modeli",
-                "Kompaniya tomonda reklama kabinetlarini boshqarish bo'yicha ko'rsatmalar",
+                "Har birining iqtisodiga ega bo'lgan sotib olish kanallari xaritasi: har bir etakchining narxi, CPL, mijozning narxi",
+                "Joriy kanallar auditi: nima ishlaydi, nima byudjetni isrof qiladi - raqamlar bilan",
+                "Kanallar va maqsadlar bo'yicha marketing byudjetini taqsimlash modeli",
+                "Kompaniya tomonida reklama hisoblarini boshqarish bo'yicha ko'rsatmalar",
               ],
             },
             {
-              title: "Metrikalar va panellar",
+              title: "Ko'rsatkichlar va asboblar paneli",
               items: [
-                "Skvoznoy analitika dashboard: birinchi tegishdan to'loqgacha",
-                "Har bir kanal bo'yicha voronka metrikalari: ko'rishlar → lidlar → kvalifikatsiya → sotuv",
+                "End-to-end analitika asboblar paneli: birinchi teginishdan tortib to to'lovgacha",
+                "Har bir kanal uchun huni ko'rsatkichlari: taassurotlar → etakchilar → malaka → savdo",
                 "Mijoz segmentlari bo'yicha LTV va ROI",
               ],
             },
             {
               title: "Qo'shimcha",
               items: [
-                "Barcha kabinet, baza va kirishlar kompaniyaga o'tkazilgan — hujjatlashtirilgan",
-                "Podryadchilar va agentliklar bilan ishlash reglamenti: kim nimaga egalik qiladi",
+                "Barcha hisoblar, ma'lumotlar bazalari va kirishlar kompaniyaga o'tkazildi - hujjatlar bilan",
+                "Pudratchilar va agentliklar bilan ishlash qoidalari: kimga tegishli",
               ],
             },
           ],
@@ -149,57 +176,68 @@ export const uz: Dictionary = {
       },
       {
         key: "sales",
-        title: "Savdo",
+        title: "Sotish",
         group: "Leverage",
-        groupLabel: "Rychag",
+        groupLabel: "Tutqich",
         summary:
-          "«Yulduzsiz» tizimli savdo: standartlar, skriptlar, CRM nazorat.",
+          "Savdo natijalari ikkita \"almashtirilmaydigan\" menejerga bog'liq bo'lsa, bu tizim emas, bu xavf. Biz standartga muvofiq ishlaydigan savdo bo'limini qurmoqdamiz: har qanday yangi xodim rejalashtirilgan ko'rsatkichlarga 2-4 hafta ichida erishadi.",
         details: [
-          "Muloqot standartlari va skriptlar.",
-          "CRM nazorat, voronka va lead ishlovi.",
-          "Xodim almashsa ham natija saqlanadi.",
+          "Biz nima qilamiz:",
+          "Skriptlar va aloqa standartlari: natija ma'lum bir shaxsning iste'dodiga bog'liq emas",
+          "Qo'rg'oshin bilan ishlash qoidalari: birinchi tegishdan tortib bitimni yopishgacha - har bir qadam tasvirlangan",
+          "CRM nazorati: bitta etakchi yo'qolmaydi, biron bir bitim statussiz \"yopishib qolmaydi\"",
+          "Huni va malaka: tizimning o'zi maqsadsiz narsalarni yo'q qiladi va sa'y-harakatlarni sotib oladiganlarga qaratadi",
+          "Yangi menejerni ishga qabul qilish: qoidalarga ko'ra, \"buni qanday qilishimni tomosha qilish\" emas.",
         ],
         result:
-          "Savdo tizimda ushlanadi, ikkita «yulduz» menejerda emas. Natija takrorlanadi va prognozlanadi.",
+          "Savdolar ikkita \"yulduzli\" menejerga emas, balki tizimga bog'liq. Natija takrorlanadi va oldindan aytib bo'ladi.",
         resultExpanded: {
           whatWeBuild:
-            "Skriptlar, lead bilan ishlash standartlari, CRM nazorati, kvalifikatsiya voronkasi va yangi menejerlar uchun onboarding.",
+            "Skriptlar, yetakchilar bilan ishlash standartlari, CRM boshqaruvi, malaka hunisi va yangi menejerlar uchun ishga qabul qilish.",
           partnerOutcomes: [
-            "Asosiy menejer ketganda ham savdo to'xtamaydi",
-            "Yangi xodim 2–4 haftada reja ko'rsatkichlariga chiqadi",
-            "Ega voronkani real vaqtda ko'radi — hisobot so'ramasdan",
-            "Daromad prognozlanadi: plan-fakt mos keladi — «bu oy qanday chiqadi» emas",
+            "Asosiy menejer ketganida savdo to'xtamaydi",
+            "Yangi xodim rejalashtirilgan maqsadlarga 2-4 hafta ichida erishadi",
+            "Egasi real vaqt rejimida hunini ko'radi - qo'lda hisobot talab qilmasdan",
+            "Daromadni bashorat qilish mumkin: \"bu oy qanchalik omadli\" emas, balki reja va haqiqat birlashadi",
           ],
         },
         broken:
-          "«Yulduz»larga bog'liqlik, jamoa almashsa natija tushadi.",
+          "Savdoni \"ushlab turadigan\" ikkita menejer bor. Agar ular ketsa, daromad yo'qoladi.",
+        brokenExpanded: [
+          "Natija \"yulduzlarga\" bog'liq: standartlar yo'q, har kim qo'lidan kelganicha sotadi",
+          "Yangi menejer bir necha oy davomida suzmoqda: na onboarding, na skriptlar, na tizim",
+          "CRM qo'llab-quvvatlanmaydi yoki tartibsiz saqlanadi: etakchilar yo'qoladi, bitimlar statussiz \"yopishib\" qoladi",
+          "Standartlar bilan huni yo'q: mijozlar qaysi bosqichda va nima uchun ketishlari noma'lum",
+          "Egasi rasmni real vaqtda ko'rmaydi - faqat menejerlarning so'zlari bilan",
+          "Daromad prognozi hisob emas, balki taxmindir",
+        ],
         actions:
-          "Natija «yulduzlarga» bog'liq bo'lmagan tizimni quramiz. Har yangi menejer 2–4 haftada reja ko'rsatkichlariga chiqadi — reglament bo'yicha, «ko'z bilan» emas.",
+          "Biz natija \"yulduzlarga\" bog'liq bo'lmagan tizimni qurmoqdamiz. Har qanday yangi menejer rejalashtirilgan ko'rsatkichlarga \"ko'z bilan\" emas, balki qoidalarga muvofiq 2-4 hafta ichida erishadi.",
         actionsExpanded: {
-          partnerHeading: "Hamkor nima oladi:",
+          partnerHeading: "Hamkor nimani oladi:",
           sections: [
             {
-              title: "Hujjatlar va vositalar",
+              title: "Hujjatlar va asboblar",
               items: [
-                "Har bir voronka bosqichi va mijoz turi uchun sotuv skriptlari",
-                "Lid bilan ishlash reglamenti: birinchi tegishdan bitim yopilishigacha",
-                "CRM-arxitektura: voronka tuzilishi, statuslar, maydonlar, avtomatlashtirishlar",
-                "Yangi menejer uchun onboarding: 2–4 haftada natijaga chiqish",
+                "Huni va mijozning har bir bosqichi uchun savdo skriptlari",
+                "Qo'rg'oshin bilan ishlash qoidalari: birinchi teginishdan boshlab bitimni yopishgacha",
+                "CRM arxitekturasi: huni tuzilishi, holatlar, maydonlar, avtomatlashtirish",
+                "Yangi menejer uchun ishga qabul qilish dasturi: 2-4 hafta ichida natijalarga erishish",
               ],
             },
             {
-              title: "Metrikalar va panellar",
+              title: "Ko'rsatkichlar va asboblar paneli",
               items: [
-                "Real vaqtda sotuv voronkasi: har bosqichdagi konversiya",
-                "Menejer KPIlari: daromad, bitimlar soni, konversiya bo'yicha plan-fakt",
-                "«Yo'qotilgan lidlar» metrikasi: qayerda va nima uchun ketishadi",
+                "Haqiqiy vaqtda savdo huni: har bir bosqichda konversiyalar",
+                "Menejerlarning KPIlari: daromadlar bo'yicha reja-faktlar, tranzaktsiyalar soni, konversiya",
+                "\"Yo'qotilgan etakchilar\" ko'rsatkichi: mijozlar qaerda va nima uchun ketishadi",
               ],
             },
             {
               title: "Qo'shimcha",
               items: [
-                "Menejerlarni o'qitish va sertifikatlash tizimi",
-                "Qo'ng'iroq va yozishmalar sifatini nazorat qilish reglamenti",
+                "Menejerni tayyorlash va sertifikatlash tizimi",
+                "Qo'ng'iroqlar va yozishmalar sifatini nazorat qilish qoidalari",
               ],
             },
           ],
@@ -211,53 +249,64 @@ export const uz: Dictionary = {
         group: "Shield",
         groupLabel: "Qalqon",
         summary:
-          "Shaffof moliya, boshqaruv hisobi va marja nazorati.",
+          "\"Oborot bor, lekin qayerdan foyda aniq emas\" - bu odamlar bizga murojaat qiladigan eng keng tarqalgan iboralardan biridir. Biz boshqaruv hisobini qurmoqdamiz, unda egasi moliyaning haqiqiy rasmini ko'radi: talqinsiz, turli odamlardan \"raqamlarning turli xil versiyalari\"siz.",
         details: [
-          "Boshqaruv hisobi va plan‑fakt.",
-          "Foyda va xarajat shaffofligi.",
-          "Kesh‑flow intizomi va risk nazorati.",
+          "Biz nima qilamiz:",
+          "Boshqaruv hisobi: hududlar bo'yicha real foyda - buxgalteriya ko'rsatkichlari emas, balki biznes iqtisodiyoti",
+          "Reja-fakt va to'lov taqvimi: naqd bo'shliqlar faktdan keyin emas, balki oldindan ko'rinadi",
+          "Moliyaviy teshiklarni aniqlash: yashirin qochqinlar, samarasiz xarajatlar, kulrang sxemalar - qattiq va yopiq",
+          "Hududlar bo'yicha buxgalteriya hisobi: qaysi biri pul topadi, qaysi biri pastga tortadi",
+          "Yagona moliyaviy haqiqat: raqamlarning bitta versiyasi - egasi uchun, jamoa uchun, investor uchun",
         ],
         result:
-          "Ega real foydani ko'radi, «taxminiy raqamlar» emas. Qarorlar tuyg'uda emas, ma'lumotlarda.",
+          "Egasi \"taxminiy raqamlarni\" emas, balki haqiqiy foydani ko'radi. Qarorlar his-tuyg'ularga emas, balki ma'lumotlarga asoslangan holda qabul qilinadi.",
         resultExpanded: {
           whatWeBuild:
-            "Boshqaruv hisobi, plan-fakt, to'lov kalendari, yo'nalishlar bo'yicha hisob va yashirin moliyaviy oqimlarni aniqlash.",
+            "Boshqaruv hisobi, reja-fakt, to'lov taqvimi, yo'nalish bo'yicha buxgalteriya hisobi va yashirin moliyaviy qochqinlarni aniqlash.",
           partnerOutcomes: [
-            "«Pulim qayerda?» savoli — 5 daqiqada, 5 kun emas",
-            "Qarorlar intuitsiya emas, ma'lumotlar asosida",
-            "Moliyaviy teshiklar va yashirin oqimlar topiladi va yopiladi",
-            "Investor yoki bank bilan suhbatga tayyor: raqamlar aniq va asoslangan",
+            "\"Mening pulim qayerda?\" Degan savolga javob. - 5 kun ichida emas, 5 daqiqada",
+            "Qarorlar sezgi emas, ma'lumotlar asosida qabul qilinadi.",
+            "Moliyaviy teshiklar va yashirin qochqinlar - aniqlangan va yopilgan",
+            "Biznes investor yoki bank bilan gaplashishga tayyor: raqamlar aniq va asosli",
           ],
         },
         broken:
-          "«Bitta haqiqat» yo'q, kassa uzilishlari, ko'r joylar.",
+          "Aylanma bor, lekin foyda yo'q - yoki qayerga ketgani noma'lum. Moliyaviy ko'rinish xiralashgan.",
+        brokenExpanded: [
+          "Bir nechta \"raqamlarning versiyalari\": buxgalter bir narsani aytadi, operatsion direktor boshqasini aytadi",
+          "Naqd pul bo'shlig'i birdan paydo bo'ladi: hech kim oldindan ogohlantirmagan",
+          "Qaysi yo'nalishda pul ishlab, qaysi biri foyda yeyayotgani noma'lum",
+          "Yashirin qochqinlar: pul ortiqcha to'langan pudratchilar, samarasiz maqolalar va kulrang sxemalar orqali o'tadi",
+          "Qarorlar boshqaruv ma'lumotlariga emas, balki his-tuyg'ularga asoslangan holda qabul qilinadi",
+          "Biznes investor yoki bank bilan gaplashishga tayyor emas: raqamlar qo'shilmaydi",
+        ],
         actions:
-          "Boshqaruv hisobi va moliya modelini sozlaymiz. Ega real foyda, pul harakati va kassa uzilishlarini oldindan ko'radi — keyin emas.",
+          "Biz boshqaruv hisobi va moliyaviy modelni o'rnatdik. Egasi haqiqiy foyda, pul oqimi va pul bo'shliqlarini oldindan ko'radi, lekin keyin emas.",
         actionsExpanded: {
-          partnerHeading: "Hamkor nima oladi:",
+          partnerHeading: "Hamkor nimani oladi:",
           sections: [
             {
-              title: "Hujjatlar va vositalar",
+              title: "Hujjatlar va asboblar",
               items: [
-                "Biznes yo'nalishlari bo'yicha boshqaruv P&L",
-                "Naqd oqim hisoboti (CF): davrlar bo'yicha haqiqiy tasvir",
-                "To'lov kalendari: kassa uzilishlari 2–4 hafta oldindan ko'rinadi",
-                "Biznes moliya modeli: rentabellik nuqtasi, marja, birlik iqtisodi",
+                "Biznes sohasi bo'yicha P&L boshqaruvi (foyda va zarar hisoboti).",
+                "Pul oqimi to'g'risidagi hisobot (CF): davrlar bo'yicha haqiqiy rasm",
+                "To'lov taqvimi: naqd puldagi bo'shliqlar faktdan 2-4 hafta oldin ko'rinadi",
+                "Moliyaviy biznes modeli: zararsizlik nuqtasi, marjinallik, birlik iqtisodiyoti",
               ],
             },
             {
-              title: "Metrikalar va panellar",
+              title: "Ko'rsatkichlar va asboblar paneli",
               items: [
-                "Moliya dashboard: tushum, foyda, marja, xarajatlar — bitta ekranda",
-                "Yo'nalishlar bo'yicha hisob: qaysi daromad keltiradi, qaysi tortadi",
-                "Barcha asosiy moliya ko'rsatkichlari bo'yicha plan-fakt",
+                "Moliyaviy boshqaruv paneli: daromad, foyda, marja, xarajatlar - bitta ekranda",
+                "Hududlar bo'yicha buxgalteriya hisobi: qaysi topadi, qaysi pastga tortadi",
+                "Barcha asosiy moliyaviy ko'rsatkichlar uchun reja-fakt",
               ],
             },
             {
               title: "Qo'shimcha",
               items: [
-                "Topilgan moliyaviy oqimlar hisoboti va ularni yopish bo'yicha tavsiyalar",
-                "Moliya reglamentlari: xarajatlarni kim, nima va qachon tasdiqlaydi",
+                "Aniqlangan moliyaviy qochqinlar to'g'risida hisobot va ularni yopish bo'yicha tavsiyalar",
+                "Moliyaviy qoidalar: kim, nima va qachon xarajatlarni kelishib oladi",
               ],
             },
           ],
@@ -269,53 +318,69 @@ export const uz: Dictionary = {
         group: "Shield",
         groupLabel: "Qalqon",
         summary:
-          "Tizimli yollash, onboarding, baholash va kadr zaxirasi.",
+          "Agar asosiy shaxs ketsa va u bilan bir funksiya ketsa, bu HR muammosi emas. Bu arxitektura muammosi. Biz tajriba odamlarga emas, kompaniyaga tegishli bo'lgan tizimni qurmoqdamiz: ishga qabul qilish, moslashtirish va ishlab chiqish standartga muvofiq.",
         details: [
-          "Lavozim profili va yollash standartlari.",
-          "Onboarding, o'qitish, mentoring.",
-          "Baholash tizimi va kadrlar o'sishi.",
+          "Biz nima qilamiz:",
+          "Ish profillari: kimni yollash va qanday parametrlar bo'yicha baholash uchun aniq mezonlar",
+          "Tizimli ishga qabul qilish: nomzod hunisi, malakasini baholash, protokol qarorlarini qabul qilish",
+          "Bortga qabul qilish dasturi: yangi xodim \"tomosha qilish va o'rganish\" emas, balki standartlarga muvofiq natijalarga erishadi.",
+          "Baholash tizimi va HR tahlili: kim tortayotgani, kim ushlab turgani, kim o'sishni sekinlashtirayotgani aniq.",
+          "Iste'dodlar zaxirasi va voris rejasi: muhim funktsiyalar doimo yopiq",
+          "Hamkor uchun nima qoladi:",
+          "Har qanday xodimning ketishi - bu funktsiyaning qulashi emas, balki vakolatlarning rejalashtirilgan o'tkazilishi",
+          "Ishga qabul qilish standartga muvofiq amalga oshiriladi: biz \"kim kelgan\" emas, to'g'ri odamlarni ishga olamiz.",
+          "Yangi odam tizimni buzmaydi - u unga qo'shiladi",
+          "Ekspertiza ikki kishining boshida emas, balki kompaniyaning jarayonlari va qoidalarida saqlanadi",
         ],
         result:
-          "Jamoa barqaror: rollar mustahkam, ekspertiza tizimda — odamlarda emas. Xodim ketishi falokat emas.",
+          "Jamoa barqaror: rollar belgilangan, tajriba odamlarda emas, tizimda. Xodimning ketishi falokat emas.",
         resultExpanded: {
           whatWeBuild:
-            "Lavozim profillari, yollash tizimi, onboarding dasturi, baholash tizimi va muhim funksiyalar bo'yicha kadrlar zaxirasi.",
+            "Ish profillari, ishga qabul qilish tizimi, ishga qabul qilish dasturi, baholash tizimi va muhim vazifalar uchun iqtidorlar fondi.",
           partnerOutcomes: [
-            "Har qanday xodim ketishi — rejalashtirilgan kompetensiya uzatish, funksiya qulashi emas",
-            "Yollash standart bo'yicha: keraklarni olamiz — «kim kelsa» emas",
-            "Yangi odam tizimni buzmaydi — unga moslashadi",
-            "Ekspertiza kompaniya jarayon va reglamentlarida — ikki kishining boshida emas",
+            "Har qanday xodimning ketishi - bu funktsiyaning qulashi emas, balki vakolatlarning rejalashtirilgan o'tkazilishi",
+            "Ishga qabul qilish standartga muvofiq amalga oshiriladi: biz \"kim kelgan\" emas, to'g'ri odamlarni ishga olamiz.",
+            "Yangi odam tizimni buzmaydi - u unga qo'shiladi",
+            "Ekspertiza ikki kishining boshida emas, balki kompaniyaning jarayonlari va qoidalarida saqlanadi",
           ],
         },
         broken:
-          "Kadrlar oqimi, tartibsiz yollash va odamga bog'liqlik.",
+          "Kadrlar almashinuvi to'xtamaydi, ishga yollash - bu lotereya va \"almashib bo'lmaydiganlar\" bu haqda bilishadi va undan foydalanadilar.",
+        brokenExpanded: [
+          "Ish profillari yo'q: ular \"sezish orqali\" yollashadi - ular noto'g'ri odamlarni yollashadi, vaqt va pulni behuda sarflashadi.",
+          "Bortga kirish yo'q: yangi xodim \"o'z-o'zidan omon qoladi\" va natijalarga 2-4 hafta o'rniga 3-4 oy ichida erishadi.",
+          "Mutaxassislik tizimda emas, odamlarda saqlanadi: agar odam ketsa, bilim yo'qoladi",
+          "\"Kuchli\" xodimlarni shantaj qilib ketishadi, chunki ularsiz funktsiya barbod bo'ladi",
+          "Baholash tizimi yo'q: kompaniyani kim tortib olishi va o'rinni kim egallashi noma'lum",
+          "Kadrlar zaxirasi yo'q: har qanday ishdan bo'shatish almashtirishni favqulodda qidirishni anglatadi",
+        ],
         actions:
-          "Yollashdan baholashgacha HR-jarayonlarini quramiz. Ekspertiza tizimda — odamlarda emas. Xodim ketishi endi funksiyani buzmaydi.",
+          "Biz ishga qabul qilishdan tortib baholashgacha HR jarayonlarini quramiz. Tajriba odamlarda emas, tizimda saqlanadi. Ishni tark etgan xodim endi funktsiyani buzmaydi.",
         actionsExpanded: {
-          partnerHeading: "Hamkor nima oladi:",
+          partnerHeading: "Hamkor nimani oladi:",
           sections: [
             {
-              title: "Hujjatlar va vositalar",
+              title: "Hujjatlar va asboblar",
               items: [
-                "Barcha asosiy rollar uchun lavozim profillari: kompetensiyalar, KPI, mas'uliyat zonasi",
-                "Baholash mezonlari va tanlash metodikasi bilan yollash voronkasi",
-                "Onboarding dasturi: birinchi 30–90 kun rejasi, chek-listlar va nazorat nuqtalari",
-                "Xodimlarni baholash tizimi: natija metrikalari va muntazam review",
+                "Barcha asosiy rollar uchun ish profillari: vakolatlar, KPI, mas'uliyat sohalari",
+                "Baholash mezonlari va tanlov metodologiyasi bilan yollash hunisi",
+                "Bortga qabul qilish dasturi: dastlabki 30-90 kunni nazorat ro'yxatlari va nazorat nuqtalari bilan rejalashtirish",
+                "Xodimlarni baholash tizimi: samaradorlik ko'rsatkichlari va muntazam tekshiruv",
               ],
             },
             {
-              title: "Metrikalar va panellar",
+              title: "Ko'rsatkichlar va asboblar paneli",
               items: [
-                "HR-dashboard: tekshuvchanlik, natijaga chiqish vaqti, jamoa NPS",
-                "Kadrlar zaxirasi xaritasi: kim qaysi lavozimlarga o'sishga tayyor",
-                "Muhim funksiyalar bo'yicha preemstvenlik matritsasi",
+                "HR asboblar paneli: aylanma, natijalarga erishish vaqti, NPS guruhlari",
+                "Kadrlar zaxirasi xaritasi: kim o'sishga tayyor va qaysi lavozimlarda",
+                "Kritik funksiyalar uchun ketma-ketlik matritsasi",
               ],
             },
             {
               title: "Qo'shimcha",
               items: [
-                "Xodim ketish reglamenti: vazifalar, kirishlar va bilimlarni protokol bo'yicha uzatish",
-                "Kompaniya bilimlar bazasi: ekspertiza tizimda saqlanadi",
+                "Xodimlarning chiqish qoidalari: protokol bo'yicha ishlarni, kirishlarni va bilimlarni uzatish",
+                "Kompaniya bilimlari bazasi: ekspertiza tizimda qayd qilinadi va saqlanadi",
               ],
             },
           ],
@@ -327,53 +392,64 @@ export const uz: Dictionary = {
         group: "Shield",
         groupLabel: "Qalqon",
         summary:
-          "Aktiv himoyasi, shartnomalar, IP va ma'lumot xavfsizligi.",
+          "Aksariyat egalar qonuniy teshiklar haqida juda kech bo'lganda bilib olishadi: ma'lumotlar bazasi sizib ketgan, pudratchi kirish bilan shantaj qilmoqda, sobiq xodim mijozlarni o'g'irlagan. Huquqiy sxema rasmiyatchilik emas, balki biznesni ushbu stsenariylardan oldindan himoya qiladigan haqiqiy qalqondir.",
         details: [
-          "Shartnoma bazasi va ownership himoyasi.",
-          "Xavfsizlik siyosatlari va personal data.",
-          "Yuridik audit va risklarni kamaytirish.",
+          "Biz nima qilamiz:",
+          "Oshkor qilmaslik to'g'risidagi shartnomalar: ma'lumotlar, mijozlar bazalari va tijorat sirlari kirish joyida himoyalangan.",
+          "Mehnat shartnomalari va lavozim tavsiflari: huquq va majburiyatlar qat'iy belgilangan - shantaj uchun asos yo'q",
+          "Pudratchilar bilan tuzilgan shartnomalar: ish natijalari, kirishlar va ma'lumotlar bazalariga bo'lgan huquqlar pudratchiga emas, kompaniyaga tegishli",
+          "Intellektual mulkni himoya qilish: brend, ishlanmalar, kontent - kompaniya aktivlari sifatida ro'yxatga olingan",
+          "Huquqiy audit: mavjud zaifliklar aniqlangan, ustuvor va yopilgan",
         ],
         result:
-          "Aktivlar, ma'lumotlar va huquqlar kompaniyaga tegishli — yuridik va texnik jihatdan. Odamlarga yoki podryadchilarga emas.",
+          "Aktivlar, ma'lumotlar va huquqlar yuridik va texnik jihatdan kompaniyaga tegishli. Odamlar emas, pudratchilar emas.",
         resultExpanded: {
           whatWeBuild:
-            "NDA, mehnat shartnomalari, podryadchi shartnomalari, IP himoyasi va mavjud zaifliklarning yuridik auditi.",
+            "NDAlar, mehnat shartnomalari, pudratchilar bilan shartnomalar, IPni himoya qilish va mavjud zaifliklarning huquqiy auditi.",
           partnerOutcomes: [
-            "Asosiy aktivlar — bazalar, kirishlar, IP (intellektual mulk), brend — yuridik jihatdan kompaniyaga tegishli",
-            "Xodim yoki podryadchi ketishi biznesga tahdid yaratmaydi",
-            "Ma'lumot o'g'irligi, «almashtirib bo'lmaydiganlar» shantaji va mijoz bazalarini yo'qotishdan himoyalangan",
-            "Yuridik kontur investor, bank yoki hamkor tekshiruviga tayyor",
+            "Barcha asosiy aktivlar - ma'lumotlar bazalari, kirish huquqi, IP (intellektual mulk), brend - qonuniy ravishda kompaniyaga tegishli",
+            "Xodim yoki pudratchining ketishi biznes uchun xavf tug'dirmaydi",
+            "Biznes ma'lumotlarni o'g'irlashdan, \"almashtirilmaydigan\" shantajlardan va mijozlar bazasini yo'qotishdan himoyalangan",
+            "Huquqiy sxema investor, bank yoki sherik tomonidan tekshirishga tayyor",
           ],
         },
         broken:
-          "Sud risklari, data sizishi va aktiv zaifligi.",
+          "Shartnomalar eskirgan, ma'lumotlar kompaniya tomonidan emas, balki odamlar tomonidan saqlanadi. Bitta oqish va bu allaqachon inqiroz.",
+        brokenExpanded: [
+          "Mijoz bazalari va kirish - menejerlar yoki pudratchilar tomonidan: ularni istalgan vaqtda \"olib qo'yish\" mumkin",
+          "NDAlar ko'rsatish uchun imzolanmaydi yoki imzolanmaydi - haqiqiy yuridik kuchga ega bo'lmagan",
+          "Mehnat shartnomalari mehnat natijalari va tijorat sirlariga bo'lgan huquqlarni qamrab olmaydi",
+          "Kompaniyaning IP - brendi, ishlanmalari, tarkibi - qonuniy ravishda aktivlar sifatida ro'yxatdan o'tkazilmagan",
+          "Pudratchilar shartnomalarsiz yoki barcha huquqlar ular tomonida bo'lgan shartnomalar bilan ishlaydi",
+          "Xodim yoki sherik bilan har qanday nizo zaiflikka aylanadi: sudda himoyalanadigan hech narsa yo'q",
+        ],
         actions:
-          "Yuridik zaifliklarni yopamiz va himoya konturini quramiz: aktivlar, ma'lumotlar va intellektual mulk huquqlari — kompaniyada, odamlar va podryadchilarda emas.",
+          "Biz huquqiy zaifliklarni yopamiz va himoya sxemasini yaratamiz: aktivlar, ma'lumotlar va intellektual mulkka bo'lgan huquqlar odamlar va pudratchilarga emas, balki kompaniyaga tegishli.",
         actionsExpanded: {
-          partnerHeading: "Hamkor nima oladi:",
+          partnerHeading: "Hamkor nimani oladi:",
           sections: [
             {
-              title: "Hujjatlar va vositalar",
+              title: "Hujjatlar va asboblar",
               items: [
-                "NDA va maxfiylik shartnomalari: xodimlar, hamkorlar va podryadchilar uchun shablonlar",
-                "Savdo siri va ish natijalari huquqlarini himoya qiluvchi mehnat shartnomalari",
-                "Podryadchi shartnomalari: ishlab chiqarish, kontent va ma'lumot huquqlari — kompaniya tomonda",
-                "Ma'lumotlarni saqlash va kirish reglamenti: kim, nimaga, qanday shartlarda",
+                "NDA va oshkor qilmaslik kelishuvlari: Xodimlar, hamkorlar va pudratchilar uchun shablonlar",
+                "Tijorat sirlarini va mehnat natijalariga bo'lgan huquqlarni himoya qiluvchi mehnat shartnomalari",
+                "Pudratchilar bilan shartnomalar: ishlanmalar, kontent va ma'lumotlarga bo'lgan huquqlar kompaniya tomonida",
+                "Ma'lumotlarni saqlash va ulardan foydalanish qoidalari: kim, nima uchun, qanday sharoitlarda",
               ],
             },
             {
-              title: "Audit va risk xaritalari",
+              title: "Audit va xavf xaritalari",
               items: [
-                "Yuridik audit: yopish ustuvorligi bilan zaifliklar xaritasi",
-                "Kompaniya aktivlari reyestri: nima rasmiylashtirilgan, nima yo'q, nima tuzatish kerak",
-                "IP himoya chek-listi: brend, ishlab chiqarish, kontent — aktiv sifatida",
+                "Huquqiy audit: yopish ustuvorliklari bilan zaifliklar xaritasi",
+                "Kompaniya aktivlari reyestri: nima ro'yxatga olingan, nima ro'yxatdan o'tmagan, nima yopilishi kerak",
+                "IP himoyasi nazorat ro'yxati: brend, ishlanmalar, kontent - aktivlar sifatida ro'yxatga olingan",
               ],
             },
             {
               title: "Qo'shimcha",
               items: [
-                "Podryadchi almashganda yoki xodim ishdan bo'lganida kirishlarni uzatish reglamenti",
-                "Investor, bank yoki hamkor tekshiruviga tayyor hujjatlar paketi",
+                "Pudratchini o'zgartirish yoki xodimni ishdan bo'shatishda kirish huquqini o'tkazish qoidalari",
+                "Investor, bank yoki sherik tomonidan tekshirish uchun tayyor hujjatlar to'plami",
               ],
             },
           ],
@@ -381,457 +457,727 @@ export const uz: Dictionary = {
       },
     ],
     results: {
-      title: "Qimmatli yakuniy natija (QYN)",
-      description: "Har bir tayanch bo'yicha egaga beriladigan natija.",
+      title: "Qiymatli yakuniy natija (VAR)",
+      description: "Har bir ustun natijasida egasi nima oladi?",
       badge: "",
-      resultModalWhatWeBuild: "Nima quramiz",
-      resultModalPartnerLabel: "Hamkor qoladigan narsa",
+      resultModalWhatWeBuild: "Biz nima qurmoqdamiz?",
+      resultModalPartnerLabel: "Hamkorda nima qoladi?",
       resultModalCloseLabel: "Yopish",
     },
     problems: {
-      title: "Tayanch «sinса» nima bo'ladi",
+      title: "Ustun \"singan\" bo'lsa nima bo'ladi",
       description:
-        "Tizim ishlamasa, har yo'nalishda ko'rinadigan alomatlar.",
-      badge: "Risklar",
+        "Biznesning oltita ustunining har biri yo'qotish nuqtasi bo'lishi mumkin. Bu inqirozga aylanishidan oldin, ichkaridan shunday ko'rinadi.",
+      badge: "Xatarlar",
+      detailsExpandedListHeading: "Amaliyotda bu qanday ko'rinadi",
     },
     actions: {
-      title: "BBI biznesingizda aniq nima qiladi",
+      title: "BBI sizning biznesingizda aynan nima qiladi?",
       description:
-        "Biz tavsiya berib diagnostikadan keyin ketmaymiz. Oltita yo'nalishning har birida quramiz, joriy qilamiz va aniq vositalarni topshiramiz — loyiha tugagach ham hamkorda qoladi.",
+        "Biz tavsiyalar bermaymiz va tashxisdan keyin ketmaymiz. Oltita yo'nalishning har biri uchun biz aniq vositalarni quramiz, amalga oshiramiz va topshiramiz - loyihadan keyin hamma narsa sherikda qoladi.",
       badge: "BBI",
     },
     format: {
-      title: "Format",
+      title: "Ish formati",
       description:
-        "BBI — vazifa yoki soat sotmaydi. 45+ ish kuniga mo'ljallangan loyiha va to'liq sho'ng'ish.",
+        "BBI biznesga boshqaruv tizimi arxitektori sifatida kiradi: 90+ ish kuni davomida, toʻliq identifikatsiya va aniq natija uchun javobgarlik. Soatlar va vazifalar emas, balki shartnomada belgilangan biznesning maqsadli holati.",
       zones: [
         {
-          label: "Yashil zona (BBI)",
+          label: "Yashil zona - BBI",
           description:
-            "Skrining → diagnostika/audit → 45+ kun loyiha → abonent roli.",
+            "Biz bitta formatda ishlaymiz: diagnostika → audit → dizayn → amalga oshirish → himoyalangan va boshqariladigan biznes aktivini uzatish. Har bir bosqich qat'iy ketma-ketlikda. Biz biznesning haqiqiy manzarasini tushunmagunimizcha, “amalga oshirish”ga shoshilmaymiz.",
           tone: "green",
         },
         {
-          label: "Sariq zona (loyiha ichida mumkin)",
+          label: "Sariq zona - loyihaning bir qismi sifatida qabul qilinadi",
           description:
-            "SMM, sayt, CRM — faqat tizim elementi sifatida.",
+            "Ba'zi vositalar - CRM, veb-sayt, SMM - BBI loyihasining bir qismi bo'lishi mumkin, ammo ular kelishilgan maqsadli natijaga erishish uchun kerak bo'lganda. Mustaqil xizmat sifatida emas. Asbob uchun emas. Muhim qoida: BBI boshqaruv tizimining me'mori bo'lib qoladi. Pudratchilar vosita sifatida ishtirok etadilar - ular funktsiyaning egalari emas, balki ijrochilardir. Loyihadan so'ng barcha kirishlar, ofislar va ma'lumotlar bazalari kompaniyaga tegishli.",
           tone: "yellow",
         },
         {
-          label: "Qizil zona (buni qilmaymiz)",
+          label: "Qizil zona - biz buni qilmaymiz",
           description:
-            "SMM outsourcing, marketing‑xizmat, brandbook, bir martalik konsultatsiya.",
+            "Biz ba'zi so'rovlarni printsipial jihatdan qabul qilmaymiz - \"qanday qilishni bilmasligimiz\" uchun emas, balki ular bizning modelimizga zid bo'lgani uchun. Agent formati tizimli natijalarni keltirib chiqarmaydi. Bir martalik xizmatlar ildiz muammolarini hal qilmaydi. Biz hech qachon nima qilmaymiz: doimiy funktsiya sifatida SMM va muntazam kontent ishlab chiqarishni saqlab qolish; \"kalit taslim\" reklama / maqsadli; tizimni yaratmasdan, tashqi manbalardan foydalanish; brend kitobi, qadoqlash, veb-sayt loyihadan tashqari alohida xizmat sifatida; tizimni joriy qilmasdan va birlashtirmasdan bir martalik maslahatlar.",
           tone: "red",
         },
       ],
     },
     stages: {
-      title: "Loyiha bosqichlari",
-      description: "Tizimni bosqichma-bosqich qurish.",
+      title: "Biz qanday ishlaymiz: birinchi qo'ng'iroqdan boshlab ishlaydigan tizimgacha",
+      description:
+        "Har bir bosqich muayyan natijadir, jarayon uchun jarayon emas. Biz ketma-ket harakat qilamiz: avval biz haqiqiy rasmni tushunamiz, keyin loyihalashtiramiz, keyin quramiz. Hech qanday sakrash va \"boshlaymiz va buni aniqlaymiz\".",
+      readMoreLabel: "Batafsil",
+      whatWeDoHeading: "Biz nima qilamiz",
+      detailsListMarker: "Biz nima qilamiz:",
       steps: [
         {
-          title: "Skrining (bepul)",
-          description: "Tanishtirish, moslik va vazifani aniqlash.",
+          title: "Diagnostika",
+          description:
+            "Bir-birimizga to'g'ri ekanligimizni halol tushunish uchun birinchi suhbat. Sotish va va'dalar yo'q. Skrining natijalariga ko'ra aniq qaror bor: \"bizning mijozimiz\", \"bizniki emas\" yoki \"faqat diagnostika\". Noaniq holda \"bu haqda o'ylaymiz\".",
         },
         {
-          title: "Diagnostika / audit",
+          title: "Audit",
           description:
-            "To'liq rasm: moliya, jarayonlar, jamoa, marketing, savdo.",
+            "Dalillar bazasi bilan biznesning to'liq tasviri. Sensatsiyalar emas - ma'lumotlar. Jamoa fikri emas - faktlar. Biz nima qilamiz: ma'lumotlarni yig'ish (CRM, moliya, savdo hisobotlari, shartnomalar, reklama hisoblari); jamoa bilan suhbatlar (barcha oltita sohada 5-10 ta asosiy xodim); 6 ta ustun bo'yicha audit (operatsiyalar, moliya, savdo, marketing, HR, aktivlarni himoya qilish); topilmalarni dalillar bazasi bilan yagona hisobotda birlashtirish.",
         },
         {
           title: "Tizim dizayni",
           description:
-            "Qalqon, leverage va boshqaruv konturi arxitekturasi.",
+            "Biz audit natijalarini aniq chizmaga aylantiramiz: biznes qanday bo'lishi kerak, kim nima uchun javobgar va u qanday ko'rsatkichlar bo'yicha boshqariladi. Tavsiyalar emas - ishchi hujjat. Biz nima qilamiz: audit ma'lumotlarini tahlil qilish va egasi bilan dizayn tamoyillarini kelishish; maqsadli tashkiliy sxemani ishlab chiqish (rollar, mas'uliyat sohalari, qarorlar ierarxiyasi); Biz KPI daraxti va asboblar paneli arxitekturasini quramiz; Biz asosiy jarayonlar uchun RACI matritsasini yaratamiz; Biz 90-180 kunlik o'zgarishlarning yo'l xaritasini tuzamiz; Biz SOP va qoidalar shablonlarini tayyorlaymiz.",
         },
         {
-          title: "Joriy etish va nazorat (45–90 ish kuni)",
+          title: "Amalga oshirish va nazorat qilish",
           description:
-            "BBI biznes ichida ishlaydi, tizim barqarorlashguncha.",
+            "Jamoa biznes ichida ishlaydi va aslida ishlaydigan tizimlarni quradi - ular javondagi papkada o'tirmaydi. Biz nima qilamiz: 1-bosqich - ishga tushirish va ishga tushirish (ustuvorlarni tekshirish, muhim xavflarni yopish, boshqaruv ritmini ishga tushirish); 2-bosqich - qurilish tizimlari (SOP va ustuvor ustunlar bo'yicha qoidalar, CRM mantiqiy va huni, KPI asboblar paneli, HR hujjatlari, moliyaviy vositalar); 3-bosqich - sinov va topshirish (jangovar testlar, jamoaviy tayyorgarlik, o'yin kitobini yakunlash, yakuniy topshirish sessiyasi).",
         },
         {
-          title: "Abonent roli",
-          description: "BBI barqarorlik uchun hamkor bo'lib qoladi.",
+          title: "Himoyalangan va boshqariladigan biznes aktivini o'tkazish",
+          description:
+            "BBI bilan sayohatning yakuniy nuqtasi o'tkazish, sotish, kengaytirish yoki investorni jalb qilish mumkin bo'lgan biznesdir. So'z bilan emas, balki hujjatlar, ko'rsatkichlar va ishlaydigan boshqaruv tizimi bilan. Biz biznes mustaqil aktiv sifatida mavjud bo'lgandagina ketamiz - hujjatlar, tizim va tashqi yordamsiz standartga muvofiq ishlaydigan jamoa.",
         },
       ],
     },
     responsibility: {
       title: "Mas'uliyat",
-      bbiTitle: "BBI javob beradi",
-      clientTitle: "Mijoz javob beradi",
+      description:
+        "Natijaga har bir tomon o'z zonasini aniq tushungandagina erishiladi. BBI mijozning ishini bajarmaydi - biz sheriklar jamoasi amalga oshiradigan va qo'llab-quvvatlaydigan arxitekturani quramiz.",
+      bbiTitle: "BBI uchun javobgardir",
+      clientTitle: "Mijoz javobgardir",
       bbi: [
-        "Boshqaruv arxitekturasi va tizimi",
-        "Aktiv himoyasi va ownership",
-        "Standart va takrorlanish (SOP, playbook, RACI)",
-        "Moliya shaffofligi va qarorlar logikasi",
+        "Arxitektura va boshqaruv tizimi",
+        "Mulk va mulkni himoya qilish",
+        "Standartlar va takrorlanuvchanlik (SOP, playbook, RACI)",
+        "Moliyaning shaffofligi va qarorlarning mantiqiyligi",
         "O'zgarishlarni boshqarish",
       ],
       client: [
-        "Ishtirok (haftasiga 10 soatgacha) va tez qarorlar",
+        "Ishtirok etish (haftasiga 10 soatgacha) va tezkor echimlar",
         "Shaffoflik va ma'lumotlarga kirish",
-        "6 tayanch bo'yicha mas'ullar",
-        "Ichki jamoa bilan bajarish",
-        "Boshqaruv ritmi va intizom",
+        "6 ta ustun uchun mas'ul shaxslarning mavjudligi",
+        "O'zingizning jamoangiz tomonidan biznes doirasida amalga oshirish",
+        "Boshqaruv ritmi va intizomini saqlash",
+      ],
+      bbiDetailed: [
+        {
+          title: "Arxitektura va boshqaruv tizimi",
+          description:
+            "Biz operatsion modelni ishlab chiqamiz: kim nima uchun javobgar, qarorlar qanday qabul qilinadi, ijro nazorati qanday tuzilgan. Biz buni tavsiya qilmaymiz - biz ma'lum bir biznes uchun ish sxemasini qurmoqdamiz.",
+        },
+        {
+          title: "Mulk va mulkni himoya qilish",
+          description:
+            "Barcha aktivlar - hisoblar, ma'lumotlar bazalari, domenlar, IP, shartnomalar - kompaniya mulkiga aylanadi. Biz huquqiy va operatsion himoya tizimini yaratamiz.",
+        },
+        {
+          title: "Standartlar va takrorlanuvchanlik",
+          description:
+            "Biz SOP, Playbook va RACI ni yaratamiz - hujjatlarga ko'ra, jamoa egasi ishtirokisiz va aniq odamlarga bog'liqsiz ishlaydi.",
+        },
+        {
+          title: "Moliyaning shaffofligi va qarorlarning mantiqiyligi",
+          description:
+            "Biz boshqaruv hisobini qurmoqdamiz: hamma uchun raqamlarning bitta versiyasi. Qarorlar turli odamlarning his-tuyg'ulari va fikrlariga emas, balki ma'lumotlarga asoslangan holda qabul qilinadi.",
+        },
+        {
+          title: "O'zgarishlarni boshqarish",
+          description:
+            "Biz jamoani o'zgartirish orqali yo'naltiramiz: o'qitish, kundalik amaliyotda yangi standartlarni birlashtirish, topshirilgunga qadar sinov tizimlari.",
+        },
+        {
+          title: "Kelishilgan CCR ga erishish",
+          description:
+            "Shartnomada belgilangan asosiy natijaga erishilganda loyiha tugallangan hisoblanadi. Oldin emas.",
+        },
+      ],
+      clientDetailed: [
+        {
+          title: "Egasining ishtiroki - haftasiga 5-8 soat",
+          description:
+            "Qaror qabul qiluvchining ishtirokisiz o'zgartirish mumkin emas. Egasi (yoki to'liq delegatsiyaga ega bo'lgan bosh direktor) ish formatlarida mavjud va raqamlar va ritm orqali nazorat qiladi. Har qanday narsa kamroq va amalga oshirish tezligi eksponent ravishda pasayadi.",
+        },
+        {
+          title: "Tez echimlar - 72 soatdan ortiq emas",
+          description:
+            "Xodimlar uchun vilkalar, kirish huquqini o'tkazish, egalarni tayinlash, byudjet ustuvorliklari - bu qarorlar bir necha hafta kuta olmaydi. Kechiktirish butun tizimni bloklaydi.",
+        },
+        {
+          title: "Shaffoflik va ma'lumotlarga kirish",
+          description:
+            "CRM, moliyaviy hisobotlar, shartnomalar, reklama hisoblari, tahlillar - BBI tomonidan filtrlashsiz ochiladi. Ma'lumotlarsiz aniq tashxis qo'yish mumkin emas va siz natija uchun javobgar bo'lolmaysiz.",
+        },
+        {
+          title: "6 ta ustun uchun mas'ul odamlarga ega bo'lish",
+          description:
+            "Har bir soha - operatsiyalar, marketing, savdo, moliya, kadrlar, huquqiy himoya - menejer yoki mas'ul shaxsga ega bo'lishi kerak. Agar u mavjud bo'lmasa, diagnostika bosqichida kritik xavf sifatida qayd etiladi.",
+        },
+        {
+          title: "Jamoa tomonidan biznes doirasida bajarilishi",
+          description:
+            "Operatsion faoliyat sherikning jamoasi tomonidan amalga oshiriladi. BBI tizimni quradi - u menejerlar o'rnida ishlamaydi va mijozning xodimlarini boshqarmaydi.",
+        },
+        {
+          title: "Boshqaruv ritmi va intizomini saqlash",
+          description:
+            "Yangi formatlar ishga tushirilgandan so'ng - rejalashtirilgan uchrashuvlar, ko'rsatkichlar bo'yicha monitoring, orqaga qaytish yoki sabotajsiz kelishuvlarni bajarish. Tizim faqat hujjatlarga emas, balki intizomga asoslanadi.",
+        },
+      ],
+      readMoreLabel: "Batafsil",
+      readLessLabel: "Yopish",
+    },
+    pillarCardUi: {
+      whatWeBuild: "Nima quramiz",
+      partnerWithClient: "Hamkor bilan nima qoladi",
+      brokenPracticeHeading: "Amaliyotda qanday ko‘rinadi",
+    },
+    promises: {
+      title: "BBI nimani va'da qilmaydi",
+      subtitle: "Noto‘g‘ri kutishlardan qochish uchun — halol:",
+      paragraphs: [
+        "Biz darhol daromad o‘sishini kafolatlamaymiz. BBI natijasi — boshqariladigan biznes-aktivi. O‘sish tasodifiy emas, balki nazorat qilinadigan va takrorlanadigan bo‘ladi.",
+        "Egasisiz «avtopilot» yaratmaymiz. Egasi operatsion kundan chiqadi, lekin raqamlar va ritm orqali boshqaruvda qoladi — bu bir xil emas.",
+        "«Bizga shuni qiling» rejimida ishlamaymiz. Faqat kelishilgan qimmatli yakuniy natija mantiqida — tizimdan uzilgan cheksiz vazifalar oqimisiz.",
+        "Hammasini bir vaqtning o‘zida o‘zgartirmaymiz. Harakat bosqichma-bosqich: avval tanqidiy tavakkalchiliklar va shaffoflik, keyin standartlar va kengaytirilishi mumkin bo‘lish.",
       ],
     },
     targetState: {
-      title: "Target State",
-      minimumTitle: "Target Minimum (45–90 ish kuni)",
+      title: "Istalgan natija (maqsadli davlat)",
+      minimumTitle: "Minimal maqsadli (45–90 ish kuni)",
       minimumDescription:
-        "Tahdidlar nazorati, raqamlarda «bitta haqiqat», egasiz ham ishlaydi.",
-      idealTitle: "Target Ideal (etalon)",
+        "Tahdidlarni nazorat qilish, raqamlarda \"bitta haqiqat\", tizim egasisiz buzilmaydi.",
+      idealTitle: "Maqsadli ideal (standart)",
       idealDescription:
-        "Biznes barqaror, himoyalangan, takrorlanib o'sadi va investitsiyaga tayyor.",
+        "Biznes barqaror, himoyalangan va ko'payib borayotgan, investitsiya qilishga tayyor.",
     },
     cta: {
-      title: "Skriningdan boshlang",
-      description: "Bepul va majburiyatsiz.",
+      title: "Tashxisdan boshlang",
+      description: "Bu bepul va sizni hech narsaga majburlamaydi.",
       form: {
         name: "Ism",
         phone: "Telefon",
-        message: "Qisqa so'rov",
-        submit: "Skriningga yozilish",
+        message: "Murojaat haqida qisqacha",
+        submit: "Yuborish",
       },
     },
   },
   pillarsPage: {
-    title: "BBI ning 6 tayanchi",
+    title: "BBIning 6 ta ustuni",
     description:
-      "Barqaror va himoyalangan biznes‑aktivni quradigan oltita tayanch.",
-    ctaLabel: "Skriningdan boshlash",
-    ctaDescription: "30 daqiqada bo'shliq va o'sishni aniqlaymiz.",
+      "Barqaror va himoyalangan biznes aktivini yaratadigan oltita yordam nuqtasi.",
+    ctaLabel: "Diagnostika bilan boshlang",
+    ctaButtonLabel: "Shaklni to'ldiring",
+    ctaDescription: "Keling, 30 daqiqada o'lchov va o'sish nuqtalarini muhokama qilaylik.",
   },
   home: {
     hero: {
       eyebrow: "Brand Promise",
-      title: "Biznesni xaotik emas, balki boshqariladigan va masshtablanadigan tizim sifatida quramiz",
+      title:
+        "Biz tartibsiz ishlamaydigan,\nbalki boshqariladigan va kengaytiriladigan\ntizim sifatida\nbiznes qurmoqdamiz",
+      titleLineBreakMatch: "tartibsiz",
       subtitle:
-        "Markaziy Osiyodagi egalar va CEOlar uchun operatsion hamkor: nosozlik nuqtalarini aniqlaymiz, biznes arxitekturasini loyihalaymiz va uni jamoangiz bilan birga joriy qilamiz.",
-      cta: "Diagnostikadan boshlash",
-      secondaryCta: "Keyslarni ko'rish",
-      secondaryCtaHref: "/cases",
+        "Markaziy Osiyodagi egalar va bosh direktorlar uchun operatsion hamkor: biz muvaffaqiyatsizlik nuqtalarini diagnostika qilamiz, biznes arxitekturasini loyihalashtiramiz va uni jamoangiz bilan birgalikda amalga oshiramiz.",
+      cta: "Diagnostika bilan boshlang",
+      secondaryCta: "Ishlarni ko'rish",
+      secondaryCtaHref: "#cases",
     },
     icpIntro: {
       eyebrow: "Maqsadli auditoriya",
-      title: "Kimlar uchun",
+      title: "Biz kim uchunmiz?",
       segments: [
         {
-          title: "Biznesingiz o'syapti, lekin kompaniyada eng band odam — siz. Va eng qimmat ijrochi ham siz.",
-          description: "Tizim qurilmagan — biznes sizning mavjudligingizga bog'liq.",
+          title: "Sizning biznesingiz rivojlanmoqda, lekin siz kompaniyadagi eng band odamsiz. Va eng qimmat ijrochi.",
+          description: "Tizim tuzilmagan - biznes sizning mavjudligingizga tayanadi.",
           details:
-            "Chunki yomon boshqarasiz, demasdan. Chunki tizim qurilmagan: qarorlar sizda yopiladi, jamoa ko'rsatma kutadi, protokol bo'yicha emas. Haqiqiy dam olish yo'q. Ta'til — boshqa vaqt zonasida telefonda ishlash. Strategiya «yong'inlar tugagach»ga qoldiriladi — yong'inlar kamaymaydi.\n\nHisobotlar bor. Raqamlar bor. Haqiqat yo'q. Savdo bir narsa, moliya boshqasi, marketing uchinchi. Qaysi ma'lumotga ishonishni bilmagan holda qaror qabul qilasiz. Tushum o'sadi. Nazorat tuyg'usi — yo'q.\n\nHammasini o'zingizda ushlab turganingizcha, biznes sizga tegishli emas. U sizning mavjudligingizga tegishli.",
-          pain: "Siz biznesni boshqarmayapsiz. Siz uning «cho'ntagisiz».",
+            "Siz yomon boshqarayotganingiz uchun emas. Ammo tizim qurilmaganligi sababli: qarorlar sizning ustingizda qabul qilinadi, jamoa ko'rsatmalarni kutadi va protokolga muvofiq harakat qilmaydi. Dam olish kunlari yo'q. Dam olish telefoningizdan boshqa vaqt zonasida ishlashni anglatadi. Strategiya \"yong'inlardan keyin\" ga qoldirildi - ammo yong'inlar kamaymayapti.\n\nHisobotlar bor. Ularning raqamlari bor. Haqiqat yo'q. Savdo bir narsani ko'rsatadi, boshqasini moliyalashtiradi, boshqasini marketing qiladi. Siz qanday ma'lumotlarga ishonishni bilmasdan qaror qabul qilasiz. Biznes rivojlanmoqda. Nazorat hissi yo'q.\n\nAgar siz uni o'zingizda saqlasangiz, biznes sizga tegishli emas. Bu sizning huzuringizga tegishli.",
+          pain: "Siz biznes rahbari emassiz. Siz uning to'sig'isiz.",
         },
         {
-          title: "Biznesni masshtablagansiz. Tushum o'sdi. Jamoa o'sdi. Muammolar ham.",
-          description: "Operatsion model bo'lmasa, samaradorlik emas, yo'qotishlar masshtablanadi.",
+          title: "Siz biznesingizni kengaytirdingiz. Daromad oshdi. Jamoa o'sdi. Muammolar ham.",
+          description: "Operatsion modeli bo'lmasa, samaradorlik emas, chiqindi shkalasi.",
           details:
-            "80 kishi 8 kabi harakat qiladi: har bir bo'lim o'z realiligida, standartlar yo'q, rahbarlar o'z «davlatlarini» quradi. Ikkinchi ofis ochdingiz va xaosning ikkinchi manbasini oldingiz: tushum o'sadi, lekin foyda «qayerdadir yo'qoladi». Marja tushadi — sababi tushunarsiz. Chunki operatsion modelsiz masshtablash — bu o'sish emas. Bu yo'qotishlarni ko'paytirish.\n\nSOP yo'q — standart yo'q. RACI yo'q — javobgar yo'q. Yagona metrikalar yo'q — boshqaruv yo'q. Faqat o'sish illuziyasi va egasiga yukning keskin oshishi bor.",
-          pain: "Xaosni masshtablash mumkin emas. Aks holda zararlarni masshtablaysiz.",
+            "80 kishi o'zini 8 kabi tutadi: har bir bo'lim o'z haqiqatida, standartlar yo'q, menejerlar o'zlarining \"davlatlarini\" quradilar. Siz ikkinchi ofis ochdingiz va tartibsizlikning ikkinchi manbaiga ega bo'ldingiz: daromad o'sib bormoqda, ammo foyda \"bir joyda yo'qolib ketmoqda\". Marjlar pasayib bormoqda - nima uchun aniq emas. Chunki operatsion modelsiz miqyoslash o'sish emas. Bu yo'qotishlarning takrorlanishi.\n\nSOP yo'q - standart yo'q. RACI yo'q - mas'ul shaxs yo'q. Umumiy ko'rsatkichlar yo'q - boshqaruv yo'q. Faqat o'sish xayoloti va egasiga ko'p marta ortib borayotgan yuk bor.",
+          pain: "Xaosni ko'paytirish mumkin emas. Aks holda, siz yo'qotishlaringizni oshirasiz.",
         },
         {
-          title: "Biznesni besh barmoqdek bilasiz. Investor — yo'q. Va bu muammo.",
-          description: "Bitimda qog'ozda boshqariluvchanlik kerak, «boshdagi potentsial» emas.",
+          title: "Siz biznesni besh barmoq kabi bilasiz. Investor - yo'q. Va bu muammo.",
+          description: "Bitim \"sizning boshingizdagi potentsial\" emas, balki qog'ozda boshqarishni talab qiladi.",
           details:
-            "Due diligence sizning intuitivligingiz va tajribangiz bilan qiziqmaydi. U hisobdagi teshiklar, aktivlarga huquq yo'qligi, shaffof bo'lmagan jarayonlarni ochadi. «Biznes egasi boshida» — aktiv emas. Bu bahoni pastga bosadigan qizil bayroq.\n\nYagona moliyaviy «haqiqat» yo'q — multiplikator uchun asos yo'q. Bazalar, IP, kirishlarga ownership yo'q — xaridor uchun kafolat yo'q. Boshqaruv tuzilmasi yo'q — sizsiz biznes omon qolishiga ishonch yo'q.\n\nInvestor sizning potentsialingizni sotib olmaydi. U boshqariluvchanlik, shaffoflik va bashorat qilinadigan natijani sotib oladi. Bu qog'ozda bo'lmasa — u yoki ketadi, yoki kamroq to'laydi.",
-          pain: "Biznesingiz ishlaydi. Lekin aktiv sifatida rasmiylashtirilmaguncha — bo'lishi kerak bo'lganidan arzon.",
+            "Siz o'z biznesingizni besh barmoqdek bilasiz. Investor - yo'q. Va bu muammo. Xaridor yoki investor kelganda, ular sizning sezgi va tajribangizga qaramaydi. U hujjatlarga qaraydi. Va buxgalteriya hisobidagi teshiklar, ro'yxatga olingan huquqlarga ega bo'lmagan aktivlar, faqat egasining boshida yashaydigan jarayonlar mavjud. \"Boshdagi biznes\" aktiv emas. Bu bahoni pastga tushiradigan yoki muzokaralar oldidan xaridorni qo'rqitadigan qizil bayroqdir.\n\nMoliyaviy \"bitta haqiqat\" yo'q - narxni oqlash yo'q.\nMijozlarning ma'lumotlar bazalari, reklama hisoblari, domenlar menejer yoki pudratchi tomonidan saqlanadi - bu ular kompaniyaga tegishli emasligini anglatadi.\nIP, ishlanmalar va kontent hech qanday joyda qonuniy himoyalanmagan - xaridor ularni biznes bilan birga sotib olayotganiga ishonch hosil qila olmaydi.\nBoshqaruv tuzilmasi yo'q - biznes sizsiz omon qolishiga ishonch yo'q.\nInvestor sizning potentsialingizni sotib olmaydi. U nazorat qilish, shaffoflik va bashorat qilish imkoniyatini sotib oladi. Agar bu qog'ozda bo'lmasa, u ketadi yoki kamroq to'laydi.",
+          pain: "Sizning biznesingiz ishlayapti. Ammo u aktiv sifatida ro'yxatga olinmaguncha, u kerak bo'lganidan kamroq turadi.",
         },
       ],
-      exclude: "5 yildan kam biznes, PMF bosqichidagi startaplar, bir martalik konsultatsiya, agentlik xizmatlari. Va tizimni o'zgartirishga tayyor emas holda «o'sishni kafolatlang» talabi.",
-      excludeLabel: "Mos emas",
+      exclude:
+        "5 yilgacha biznes, PMF bo'yicha startaplar, bir martalik maslahatlar, kalit taslim agentlik xizmatlari. Va tizimni o'zgartirishga tayyor bo'lmasdan \"o'sishni kafolatlash\" so'rovi.",
+      excludeLabel: "Biz mos emasmiz",
+      readMoreLabel: "Batafsil",
     },
     icp: {
       eyebrow: "Savol",
-      title: "O'zingizni tanidingizmi?",
-      subtitle: "Uch odatiy stsenariy. O'zingizni tanisangiz — pastda qanday yordam berishimizni tushuntiramiz.",
+      title: "O'zingizni taniysizmi?",
+      subtitle: "Uchta odatiy stsenariy. Agar siz o'zingizni tanisangiz, quyida biz sizga qanday yordam berishimizni aniq aytib beramiz.",
       cards: [
         {
-          title: "Siz biznesni boshqarmayapsiz. Siz uning «cho'ntagisiz».",
+          title: "Siz biznes rahbari emassiz. Siz uning to'sig'isiz.",
           description:
-            "Har kuni har qanday masalada yakuniy qaror sizdasiz: mijozga chegirmadan tortib bo'limdagi nizo qadar. Kompaniya sizsiz qaror qabul qila olmaydi — raqamlar bo'yicha ham, qoidalarda ham. CRM va hisobotlar shaklanadi, lekin raqamlar bo'yicha «bitta haqiqat» yo'q — savdo, marketing va moliya alohida yashaydi. Boshqaruv arxitekturasi o'rniga siz 24/7 operatsion menejersiz.",
-          linkLabel: "Batafsil",
+            "Har kuni siz har qanday masala bo'yicha yakuniy vakolat sifatida harakat qilasiz: chegirmadan tortib mijozgacha bo'limdagi mojarogacha. Kompaniya sizsiz qanday qaror qabul qilishni bilmaydi - na raqamlar bo'yicha, na qoidalar bo'yicha. Rasmiy ravishda CRM va hisobotlar mavjud, ammo raqamlarda \"bitta haqiqat\" yo'q - savdo, marketing va moliya alohida yashaydi. Boshqaruv arxitekturasi o'rniga siz 24/7 bosh operatsion menejer sifatida ishlaysiz.",
+          linkLabel: "Batafsil ma'lumot",
           href: "/icp/operations",
           modalLead:
-            "Biznes egalarining 80% uchun shunday. Operatsion masalalarga sho'ng'ishingiz, bitimlar va savdoni o'zingiz kuzatishingiz, bo'limlarni qurishingiz kerak. Sizga bog'liq biznes aktiv emas — qafas.",
+            "Bu biznes egalarining 80% haqiqati. Siz operatsion masalalarni o'rganishingiz, tranzaktsiyalar va savdolarni o'zingiz kuzatib borishingiz va bo'limlar qurishingiz kerak. Sizga bog'liq bo'lgan biznes aktiv emas, bu qafas.",
           symptoms: [
-            "Operatsion masalalarga sho'ng'ishingiz, bitimlar va savdoni o'zingiz kuzatishingiz, bo'limlarni qurishingiz kerak. Sizga bog'liq biznes aktiv emas — qafas.",
-            "Sizning «ha»ingizsiz hech qanday qaror qabul qilinmaydi. Bu boshqaruv emas. Bu operatsion botqoq.",
-            "Sizsiz biznes yonadi. Telefoni 3 soat o'chirsangiz — buzilishlar boshlanadi: bitimlar uziladi, xatolar ko'payadi.",
-            "24/7 ishdasiz: moliyada yong'in, podratchiklar… Endi strategiya qurmaysiz, rivojlanmaysiz va masshtablamaysiz.",
+            "Siz operatsion masalalarni o'rganishingiz, tranzaktsiyalar va savdolarni o'zingiz kuzatib borishingiz va bo'limlar qurishingiz kerak. Sizga bog'liq bo'lgan biznes aktiv emas, bu qafas.",
+            "Sizning \"ha\"siz hech qanday qaror qabul qilinmaydi. Bu boshqaruv emas. Bu operatsion botqoq.",
+            "Sizsiz biznes yonmoqda. Telefoningizni 3 soat davomida o'chirib qo'yganingizdan so'ng, muammolar boshlanadi: bitimlar amalga oshmaydi, xatolar ko'payadi.",
+            "Ishda 24/7: moliyadagi yong'inni o'chirish, pudratchilar bilan ishlash ... Siz endi strategiyalarni qurmayapsiz, rivojlanmayapsiz va miqyosni oshirmaysiz.",
           ],
           partnershipCriteriaLabel: "Hamkorlik mezonlari",
           partnershipCriteria: [
-            "Kompaniya yoshi: 5+ yil",
-            "Masshtab: $30k–250k/oy",
-            "Shtat: 15–80 xodim",
-            "Bosqich: o'sish bor, boshqariluvchanlik yo'q",
-            "Biznes turi: B2B, B2B/B2C — savdo bo'limi va operatsion qism bo'lsa",
+            "Kompaniyaning yoshi: 5+ yil",
+            "O'lchov: oyiga 30-250 ming dollar",
+            "Xodimlar: 15-80 kishi",
+            "Bosqich: o'sish bor, lekin nazorat qilish mumkin emas",
+            "Biznes turi: B2B, B2B/B2C - bu erda savdo bo'limi va operatsion qism mavjud",
           ],
           partnershipResultsLabel: "Hamkorlik natijasi:",
           partnershipResults: [
-            "Boshqariluvchanlik",
+            "Boshqarish qobiliyati",
             "Shaffoflik",
-            "Aktivlarga ownership",
-            "Raqamlarning yagona tasviri",
-            "Cadence — boshqaruv ritmi",
-            "Qo'lda boshqaruv kamroq",
+            "Aktivlarga egalik qilish",
+            "Raqamlarning birlashtirilgan tasviri",
+            "Kadens - boshqaruv ritmi",
+            "Kamroq qo'lda boshqarish",
           ],
         },
         {
-          title: "Xaosni masshtablash mumkin emas. Aks holda zararlarni masshtablaysiz.",
+          title: "Xaosni ko'paytirish mumkin emas. Aks holda, siz yo'qotishlaringizni oshirasiz.",
           description:
-            "Kompaniya o'sishi boshqariluvchanlik va marjaga aylanmaydi. Jamoa kengayadi, yangi funksiyalar va darajalar paydo bo'ladi, lekin umumiy operatsion kontur yo'q. Xodimlar ajratilgan jamoalar kabi tarqoq ishlaydi, har bir bo'lim o'z ma'lumotlari va maqsad haqidagi tasavvuriga tayangan. Natijada samaradorlik emas, balki xaos, ortiqcha xarajat va yo'qotishlar masshtablanadi.",
-          linkLabel: "Batafsil",
+            "Kompaniyaning o'sishi boshqaruv qobiliyatiga va marjaga aylanmaydi. Jamoa kengayib bormoqda, yangi funktsiyalar va darajalar paydo bo'lmoqda, ammo umumiy operatsion sxema yo'q. Xodimlar bir nechta alohida guruhlar kabi siloslarda ishlaydi, har bir bo'lim o'z ma'lumotlariga va maqsad haqidagi g'oyalariga tayanadi. Natijada siz samaradorlikni emas, balki tartibsizlikni, ortiqcha sarf-xarajatlarni va isrofgarchilikni o'lchaysiz.",
+          linkLabel: "Batafsil ma'lumot",
           href: "/icp/scale",
           modalLead:
-            "Standartlar va RACI bo'lmasa, masshtablanish xaosni ko'paytirishga aylanadi. Yagona boshqaruv konturi yo'q.\n\nBo'limlar turli realliklarda qaror qabul qiladi, hisobotlar bir-biriga zid chiqadi, foyda va sifatni bitta nuqtadan boshqarish esa imkonsiz bo'lib qoladi.",
+            "Standartlar va RACI bo'lmasa, masshtablash takrorlanuvchi tartibsizlikka aylanadi. Yagona boshqaruv konturi mavjud emas.\n\nBo'limlar turli voqeliklarda qarorlar qabul qiladi, hisobotlar bir-biriga zid keladi va foyda va sifatni bir nuqtadan boshqarish imkonsiz bo'lib qoladi.",
           symptoms: [
-            "Operatsion model o'rniga mavjud xaos masshtablanadi",
-            "80 kishi turli uchastkalarda xuddi xatolarni takrorlaydi",
-            "Rahbarlar «cho'ntak tortishadi» — har kim «o'z imperiyasini» quradi",
-            "Bo'limlar turli boshqaruv mantiqida qaror qabul qiladi",
-            "O'sish paradoksi: aylanma yuqori, lekin nazorat tuyg'usi va haqiqiy foyda kichikroq masshtabdagidan pastroq",
+            "Operatsion model o'rniga mavjud tartibsizlik miqyosda ko'rsatilgan",
+            "80 kishi turli sohalarda bir xil xatolarni takrorlaydi",
+            "Rahbarlar adyolni tortib olishmoqda: hamma \"o'z imperiyasini\" qurmoqda",
+            "Bo'limlar turli xil boshqaruv mantiqlarida qarorlar qabul qiladilar",
+            "O'sishning paradoksi: aylanma yuqori, ammo nazorat hissi va haqiqiy foyda kichikroq miqyosga qaraganda past.",
           ],
           partnershipCriteriaLabel: "Hamkorlik mezonlari",
           partnershipCriteria: [
-            "Yosh: 5+ yil",
-            "Masshtab: $80k–500k/oy",
-            "Shtat: 40–200 xodim",
-            "Bosqich: masshtablanish (2-ofis / filial / yangi yo'nalishlar / jamoa o'sishi)",
-            "Boshqaruv: egasi allaqachon «delegatsiya qilishni» sinab ko'rgan, lekin tizim mustahkam bo'lmagan",
+            "Yoshi: 5+ yil",
+            "O'lchov: oyiga 80-500 ming dollar",
+            "Xodimlar: 40-200 kishi",
+            "Bosqich: masshtablash (2-ofis/filial/yangi yo'nalishlar/jamoa o'sishi)",
+            "Boshqaruv: egasi allaqachon \"delegat\" berishga harakat qilgan, ammo tizim o'z zimmasiga olmadi",
           ],
           partnershipResultsLabel: "Hamkorlik natijasi:",
           partnershipResults: [
-            "Masshtablanishning operatsion modeli",
+            "Masshtabli operatsion model",
             "Standartlar",
-            "Metrikalar bo'yicha yagona haqiqat",
-            "SOP — muayyan vazifani bajarish uchun bosqichma-bosqich ko'rsatmalar",
-            "RACI — javobgarlikni taqsimlash matritsasi",
-            "Yagona KPI",
+            "Ko'rsatkichlar bo'yicha yagona haqiqat",
+            "SOP - muayyan vazifani bajarish uchun bosqichma-bosqich ko'rsatmalar",
+            "RACI - mas'uliyatni taqsimlash matritsasi",
+            "Birlashtirilgan KPI",
             "Boshqariladigan tuzilma",
             "Barqaror sifat",
           ],
         },
         {
-          title: "Biznes aktiv sifatida rasmiylashtirilmasa — narxi bo'lishi kerak bo'lganidan arzon.",
+          title: "Agar sizning biznesingiz aktiv sifatida ro'yxatdan o'tmagan bo'lsa, u kerak bo'lganidan kamroq qiymatga ega.",
           description:
-            "Kompaniyani intuitiv va detallar darajasida bilasiz, lekin investor buni sotib olmaydi. Unga tushunarli, boshqariladigan kontur kerak — egasining og'zaki tushuntirish emas. Har qanday due diligence tezda hisob, shartnomalar va jarayonlardagi bo'shliqlarni ochadi. Yagona moliyaviy haqiqat, xavflar xaritasi va invest-papkasi bo'lmasa, xohlagan baholash va bitim shartlarini asoslash deyarli mumkin emas.",
-          linkLabel: "Batafsil",
+            "Egasining sezgi va \"biz allaqachon hamma narsani bilamiz\" investor uchun argument emas. Uning uchun aniq iqtisod, aktivlarga aniq huquqlar va boshqarilishi mumkin bo'lgan xavflarni ko'rish muhimdir. Tashqi tomon raqamlar va hujjatlarni ko'rishni boshlashi bilanoq, tuzilmagan kelishuvlar, odamlarga qaramlik va buxgalteriya bo'shliqlari paydo bo'ladi. Tizimli moliyaviy rasm va tavsiflangan xavflarsiz sizning kompaniyangiz boshqariladigan aktivga o'xshamaydi, balki egasi atrofidagi amaliyotlar to'plamiga o'xshaydi.",
+          linkLabel: "Batafsil ma'lumot",
           href: "/icp/investor",
           modalLead:
-            "Bugun kompaniya, xavflar va mijozlar haqidagi bilimning katta qismi sizda va kalit odamlarda yashaydi. Investor uchun bu signal: aktiv rasmiylashtirilmagan, xavflar boshqarilmaydi, tizim qog'ozda mustahkam emas.\n\nInvest-papkasi, xavflar xaritasi, yagona moliyaviy haqiqat va aniq rasmiylashtirilgan ownership bo'lmasa, investitsiyalar haqidagi har qanday dialog zaif pozitsiyadan boshlanadi.",
+            "Bugungi kunda kompaniya, xavflar va mijozlar haqidagi bilimlarning aksariyati siz va asosiy odamlarda yashaydi. Investor uchun bu signal: aktiv ro'yxatdan o'tkazilmaydi, risklar boshqarilmaydi, tizim qog'ozga yozilmaydi.\n\nHech qanday investitsiya papkasi, risklar xaritasi, yagona moliyaviy haqiqat va aniq belgilangan egalik bo'lmasa-da, investitsiyalar bo'yicha har qanday muloqot zaif pozitsiyadan kelib chiqadi.",
           symptoms: [
-            "Bitimga tayyorlashda raqamlar, shartnomalar va aktivlarga huquqlar turli tizimlar va odamlarga sochilganligi aniqlanadi",
-            "Valuatsiya egasining kutilishlariga quriladi, shaffof iqtisodiyotga emas: tuzilgan P&L yo'q, marja bo'yicha yagona «haqiqat» yo'q",
-            "Boshqaruv modeli qog'ozda mustahkam emas: egaga va «qahramonlar jamoasiga» bog'liqlik investor uchun qizil bayroq sifatida qabul qilinadi",
+            "Tranzaktsiyaga tayyorgarlik ko'rayotganda siz raqamlar, shartnomalar va aktivlarga bo'lgan huquqlar turli tizimlar va odamlar bo'ylab tarqalganligini bilib olasiz.",
+            "Baholash shaffof iqtisodiyotga emas, balki egasining umidlariga asoslanadi: tuzilgan P&L va marjada yagona \"haqiqat\" mavjud emas.",
+            "Boshqaruv modeli qog'ozda belgilanmagan: egasiga va \"qahramonlar jamoasiga\" qaramlik investor tomonidan qizil bayroq sifatida qabul qilinadi.",
           ],
           partnershipCriteriaLabel: "Hamkorlik mezonlari",
           partnershipCriteria: [
-            "Yosh: 5+ yil",
-            "Masshtab: $150k–1M+/oy",
-            "Shtat: 80–500+ xodim (muhim bo'lgani hajm emas, vazifaning yoshligi)",
-            "Bosqich: investitsiyalar / hamkorlik / M&A / kredit / yirik shartnomaga tayyorlanish",
-            "Boshqaruv: operatsionka bor, lekin «vitrina» yo'q — pul va xavflar qayerda, kim nimaga ega — tushunarsiz",
+            "Yoshi: 5+ yil",
+            "O'lchov: oyiga $150k–1M+",
+            "Xodimlar: 80-500+ xodim (lekin asosiy narsa hajmi emas, balki vazifaning etukligi)",
+            "Bosqich: sarmoyaga tayyorgarlik / hamkorlik / M&A / kredit / yirik shartnoma",
+            "Boshqaruv: operatsion tizim mavjud, ammo \"vitrin\" yo'q - investor pul qayerda ekanligini, xavf-xatar va kimga tegishli ekanligini tushunmaydi.",
           ],
           partnershipResultsLabel: "Hamkorlik natijasi:",
           partnershipResults: [
-            "Biznes aktiv sifatida: shaffoflik, himoya, boshqariladigan xavflar",
+            "Biznes aktiv sifatida: shaffoflik, himoya, boshqariladigan risklar",
             "Yagona moliyaviy haqiqat",
-            "Yopilgan zaifliklar",
-            "Invest-papkasi",
-            "Ownership + cadence",
+            "Yopiq zaifliklar",
+            "Investitsion papka",
+            "Owners+cadence",
           ],
         },
       ],
-      ctaLabel: "Vaziyatingizni muhokama qilish",
+      ctaLabel: "Diagnostika bilan boshlang",
       modal: {
-        scenarioLabel: "Stsenariy tahlili",
-        signsLabel: "Odatiy belgilar",
-        solutionLabel: "Nima qilish mumkin",
+        scenarioLabel: "Ssenariy tahlili",
+        signsLabel: "Oddiy belgilar",
+        solutionLabel: "Nima qila olasiz",
       },
     },
     icpBridge: {
       label: "Javob",
-      title: "Qanday yordam beramiz?",
+      title: "Biz qanday yordam bera olamiz?",
       description:
-        "Maqsadli holatni loyihalaymiz, real holatga sho'ng'iramiz, arxitektura qurib amalga oshiramiz. «Olib ketish» uchun slaydlar emas — biznes ichida ish.",
-      highlightPhrase: "biznes ichida ish",
+        "Biz maqsadli holatni loyihalashtiramiz, sizning haqiqatingizga sho'ng'iymiz, arxitekturani quramiz va uni siz bilan birga amalga oshiramiz. \"Olib ketish\" slaydlari emas - biznes ichida ishlash.",
+      highlightPhrase: "biznes ichida ishlash",
       items: [
-        "Haqiqiy nosozlik nuqtalarini diagnostika qilamiz — moliya, jarayonlar, savdo, jamoa",
-        "Maqsadli holatni sizning o'lchamingiz va ambitsiyalaringizga loyihalaymiz",
-        "Tizimni 45–90 kun ichida joriy qilamiz — tavsiya bermaymiz, o'zimiz qilamiz",
-        "Boshqaruvni jamoangizga topshiramiz, barqarorlik uchun hamkor qolamiz",
+        "Biz haqiqiy muvaffaqiyatsizlik nuqtalarini tashxis qilamiz - moliya, jarayonlar, savdo, jamoa",
+        "Biz maqsadli holatni sizning ko'lamingiz va ambitsiyalaringizga mos ravishda ishlab chiqamiz",
+        "Biz tizimni 45–90 kun ichida amalga oshiramiz — buni tavsiya etmaymiz, o‘zimiz qilamiz",
+        "Biz boshqaruvni sizning jamoangizga topshiramiz, barqarorlik uchun sherik bo'lib qolamiz",
       ],
-      ctaLabel: "Vazifangizni muhokama qilish",
+      ctaLabel: "Diagnostika bilan boshlang",
+    },
+    helpAndProcess: {
+      title: "Biznes tizimlarini qanday quramiz",
+      description:
+        "Biz bosqichlarni, har bir bosqichning natijasini va mijoz nimani qabul qilishini ko'rsatamiz.",
+      stages: [
+        {
+          title: "Diagnostika",
+          description:
+            "O'zgartirishdan oldin, aniq nima buzilganligini va nima uchun ekanligini tushunishingiz kerak. Biz tuzilgan operatsion auditni o'tkazamiz: biz moliya, jarayonlar, savdo va boshqaruvdagi muvaffaqiyatsizliklarning haqiqiy nuqtalarini aniqlaymiz.",
+          result: "Teshiklar xaritasi: raqamlar, jarayonlar, odamlar, aktivlar.",
+          clientGets: [
+            "Asosiy to'siqlar va ularning manbalari xaritasi",
+            "Moliyaviy va operatsion bo'shliqlar: foyda yo'qolgan joyda",
+            "Egalik zaif tomonlari: aktivlarga, kirishlarga, ma'lumotlar bazalariga kim egalik qiladi",
+            "Baholash bilan tanqidiy xavflar ro'yxati: \"yopilmasa qanday zarar\"",
+          ],
+        },
+        {
+          title: "Dizayn",
+          description:
+            "Diagnostika asosida biz biznesning maqsadli holatini loyihalashtiramiz - sizning miqyosingiz va ambitsiyalaringiz uchun moslashtirilgan boshqariladigan operatsion model. \"O'zgartirish rejasi\" emas, balki ishlaydigan arxitektura: kim nima uchun javobgar, u qanday o'lchanadi, qanday nazorat qilinadi.",
+          result: "Yo'l xaritasi: biz nima qilyapmiz, qanday ketma-ketlikda va nima uchun.",
+          clientGets: [
+            "Asosiy funktsiyalarning ishlashi uchun maqsadli sxema",
+            "Boshqaruv sxemasining arxitekturasi: o'lchovlar, egalar, kadans, nazorat nuqtalari",
+            "RACI matritsasi: rollar, mas'uliyatlar, egalik zonalari",
+            "Muntazam boshqaruvning bo'limlari va konturlari o'rtasidagi o'zaro aloqalar mantig'i",
+          ],
+        },
+        {
+          title: "Amalga oshirish",
+          description:
+            "Biz ishlab chiqilgan modelni kundalik amaliyotga aylantiramiz: biz 45-90 kun davomida jamoa bilan birga ishlaymiz. Biz boshqaruv ritmini, qoidalarni, rollarni va o'lchovlarni ishga tushiramiz, shunda tizim operatsion tizimda ishlaydi - tashqaridan \"tavsiya etilgan\" emas, balki uni amalga oshiruvchilar bilan birga.",
+          result: "Tavsiyalardan tortib muntazam ishlash odatiga qadar.",
+          clientGets: [
+            "Amalga oshirilgan boshqaruv ritmlari va qat'iy kadans",
+            "Amaldagi qoidalar va SOPlar; RACI va amalda mulkchilik zonalari",
+            "Ko'rsatkichlar, asboblar paneli va eskalatsiya nuqtalari: ularga kim qaraydi, qanchalik tez-tez, og'ish bo'lsa nima qilish kerak",
+            "O'zgarishlarni qo'llab-quvvatlash va standartni saqlash uchun jamoaning mas'uliyat sohasi",
+          ],
+        },
+        {
+          title: "Biznes tizimini uzatish.",
+          description:
+            "Biz kelishilgan qimmatli yakuniy natijaga erishilgandan so'ng ketamiz: biz asosiy ishtirokchilarni yangi tizimda ishlashga o'rgatamiz, qoidalarni tuzatamiz, boshqaruv mantig'ini o'tkazamiz va barqarorlikni saqlab qolish uchun hamkor bo'lib qolamiz.",
+          result: "Ortimizda qolgan narsa - bu qaramlik emas, balki tizim.",
+          clientGets: [
+            "Hujjatlar bilan papka tayyor: raqamlar, tuzilma, shartnomalar, kirishlar - hamma narsa tartibda",
+            "Jamoa tizim bo'yicha ishlaydi: rollar, KPIlar, kadans belgilangan",
+            "Egasi asboblar paneli orqali boshqaradi (haftasiga 10 soatgacha)",
+            "Biznes boshqariladigan aktivga o'xshaydi va tegishli tekshiruvdan o'tadi",
+          ],
+        },
+      ],
+      ctaLabel: "Ishlarni ko'rish",
     },
     whatWeChange: {
-      eyebrow: "Bizning 6 tayanchimiz",
-      title: "Biznesda nimani o'zgartiramiz",
+      eyebrow: "Bizning 6 ta ustunimiz",
+      title: "BBI bir vaqtning o'zida oltita muhim boshqaruv tugunlarida ishlaydi.",
       pillars: [
         {
-          title: "Operatsion samaradorlik",
-          subtitle: "Maqsad: egasi qo'lda boshqaruvdan chiqadi",
+          title: "Operatsion samaradorligi",
+          subtitle: "Maqsad: egasi qo'lda boshqaruvni qoldiradi",
           items: [
-            "Boshqaruv ritmi (cadence): yig'ilishlar tizimi, chekinlar, nazorat nuqtalari",
-            "SOP va org-tuzilma: har bir jarayon tasvirlangan, har bir owner tayinlangan",
-            "Dashboardlar va KPI panellari: egasi 5 daqiqada biznes holatini ko'radi",
-            "Adaptatsiya chek-listlari: yangi xodim tizimni buzmaydi",
+            "Boshqaruv ritmi (kadans): uchrashuvlar tizimi, ro'yxatga olish, nazorat punktlari",
+            "SOP va tashkilot diagrammasi: har bir jarayon tavsiflanadi, har bir egasi tayinlanadi",
+            "Boshqaruv paneli va KPI panellari: egasi biznes holatini 5 daqiqada ko'radi",
+            "Bortga kirishni tekshirish varaqlari: yangi xodim tizimni buzmaydi",
           ],
         },
         {
           title: "Marketing",
-          subtitle: "Maqsad: sarflangan har bir tiyin natijaga bog'langan",
+          subtitle: "Maqsad: investitsiya qilingan har bir tiyin natijaga bog'liq",
           items: [
-            "Skvoznoy analitika: tegishdan to'lovgacha — har bir kanal ko'rinadi",
-            "Kanallar auditi: nima haqiqatan ishlaydi, nima byudjetni yo'qotadi",
-            "Bazalar, kabinetlar va akkauntlarga ownership — kompaniyada, pudratchida emas",
+            "End-to-end analitika: teginishdan tortib to to'lovgacha - har bir kanal ko'rinadi",
+            "Kanal auditi: aslida nima ishlaydi va byudjetni nima sarflaydi",
+            "Ma'lumotlar bazalari, hisoblar va hisoblarga egalik - pudratchida emas, balki kompaniyada",
             "Boshqariladigan marketing tizimi: bitta ijrochiga bog'liq emas",
           ],
         },
         {
-          title: "Savdo",
-          subtitle: "Maqsad: sotadi tizim — alohida «yulduz»lar emas",
+          title: "Sotish",
+          subtitle: "Maqsad: tizim alohida \"yulduzlar\" emas, balki sotadi",
           items: [
-            "Muloqot skriptlari va reglamentlari: natija aniq inson iqtidoriga bog'liq emas",
-            "Savdo bo'limini noldan qurish yoki mavjudini qayta qurish",
-            "CRM nazorati: hech qanday lead yo'qolmaydi, hech qanday bitim «osilib» qolmaydi",
-            "Voronka va kiruvchi arizalar: tizimli, qo'lda emas",
+            "Skriptlar va muloqot qoidalari: natija ma'lum bir shaxsning iste'dodiga bog'liq emas",
+            "Savdo bo'limini noldan qurish yoki mavjudini qayta tiklash",
+            "CRM nazorati: bitta etakchi yo'qolmaydi, bitta ham bitim yopishmaydi",
+            "Huni va kiruvchi ishlov berish: tizimli, qo'lda emas",
           ],
         },
         {
           title: "Moliya",
-          subtitle: "Maqsad: «Pulim qayerda?» savoliga halol javob",
+          subtitle: "Maqsad: \"Mening pulim qayerda?\" Degan savolga halol javob.",
           items: [
-            "Boshqaruv hisobi: biznesning haqiqiy iqtisodiyoti",
-            "Moliyaviy teshiklar, yashirin sizilishlar va o'g'irlik sxemalarini ochish",
-            "To'lov kalendari: kassa bo'shliqlari oldindan ko'rinadi, keyin emas",
-            "Yo'nalishlar bo'yicha hisob: qaysi topadi, qaysi pastga tortadi",
+            "Boshqaruv hisobi: biznesning real iqtisodiyoti",
+            "Moliyaviy teshiklarni, yashirin qochqinlarni va o'g'irlik sxemalarini aniqlash",
+            "To'lov taqvimi: naqd pul bo'shliqlari faktdan keyin emas, balki oldindan ko'rinadi",
+            "Hududlar bo'yicha buxgalteriya hisobi: qaysi biri pul topadi, qaysi biri pastga tortadi",
           ],
         },
         {
           title: "HR va jamoa",
-          subtitle: "Maqsad: jamoa qayta ishlab chiqariladi — odam ketishi tizimni buzmaydi",
+          subtitle: "Maqsad: jamoani takrorlash mumkin - odamni tark etish tizimni buzmaydi",
           items: [
-            "Lavozim profillari va tizimli yollash: keraklarni olamiz, tasodifiy emas",
-            "Onboarding dasturi: yangi xodim tezda natijaga chiqadi",
-            "Baholash va HR-analitika: kim tortadi, kim ushlab turadi, kim tormozlayotgani aniq",
-            "Kadr zaxirasi va vorislik rejasi: muhim funksiyalar doim yopilgan",
+            "Ish profillari va tizimli yollash: biz tasodifiy emas, balki to'g'ri bo'lganlarni ishga olamiz",
+            "Ishga qabul qilish dasturi: yangi xodim natijalarga erishadi",
+            "Baholash tizimi va HR tahlili: kim turtki berayotgani, kim ushlab turgani, kim sekinlashayotgani aniq.",
+            "Iste'dodlar zaxirasi va voris rejasi: muhim funktsiyalar doimo yopiq",
           ],
         },
         {
-          title: "Yuridik himoya",
-          subtitle: "Maqsad: aktivlar kompaniyaga tegishli — texnik va yuridik jihatdan",
+          title: "Aktivlarni himoya qilish",
+          subtitle: "Maqsad: aktivlar kompaniyaga tegishli - texnik va qonuniy",
           items: [
-            "NDA va maxfiylik shartnomalari: ma'lumotlar va intellektual mulk kirishda himoyalangan",
-            "Mehnat shartnomalari va lavozim tavsiflari: huquq va majburiyatlar qog'ozda",
-            "Shaxsiy ma'lumotlarni qayta ishlashga rozilik, pudratchilar bilan shartnomalar",
-            "Yuridik audit: zaifliklar aniqlangan, yopilgan va hujjatlashtirilgan",
+            "NDA va oshkor qilmaslik kelishuvlari: ma'lumotlar va intellektual mulk kirishda himoyalangan",
+            "Mehnat shartnomalari va lavozim tavsiflari: huquq va majburiyatlar belgilangan",
+            "Shaxsiy ma'lumotlarni qayta ishlashga rozilik, pudratchilar bilan tuzilgan shartnomalar",
+            "Huquqiy audit: zaifliklar aniqlangan, yopilgan, hujjatlashtirilgan",
           ],
         },
       ],
     },
     whatYouGet: {
       eyebrow: "Natija",
-      title: "Bilanishdan nima olasiz",
-      items: [
-        "Biznes sizsiz 24/7 ishlaydi — avtonom va himoyalangan aktiv",
-        "Hech kim almashtirilmas emas — tizim qayta ishlab chiqariladi, odam ketishi to'xtov emas",
-        "Siz raqamlar va ritm orqali boshqarasiz (10 soat/haftagacha), operatsiyada emas",
-        "Leadlar, savdo va marja boshqariladi — «ishlashini umid qilamiz» emas",
-        "O'sish boshqariladigan va qayta ishlab chiqariladigan",
-        "Bosqichma-bosqich: avval kritik risklar, keyin standartlar",
+      title: "Biz bilan ishlashdan nimaga erishasiz?",
+      subheadline:
+        "Tavsiyalar to'plami yoki individual xususiyatlarni yaxshilash emas. Va biznesda ishga tushirilishi, boshqarilishi va rivojlanishi mumkin bo'lgan tizim.",
+      ui: {
+        readMore: "Batafsil >>",
+        whatItMeans: "Bu nimani anglatadi",
+        clientGetsHeading: "Mijozda nima qoladi",
+        importantPrefix: "Muhim:",
+        outcomeEyebrow: "Xulosa",
+      },
+      cards: [
+        {
+          title: "Biznes qayerda nazoratni yo'qotayotganining aniq tasviri",
+          whatItMeans:
+            "Siz \"tartibsizlik tuyg'usi\" ni emas, balki o'ziga xos xaritani ko'rasiz: qarorlar egasiga bog'langan, funksiyalar yakka holda ishlaydi, o'sish barqarorlikni emas, balki allaqachon yo'qotishlarni keltirib chiqaradi.",
+          clientGets: [
+            "Asosiy to'siqlar xaritasi va ularning asosiy sabablari - alomatlar emas, balki manbalar",
+            "Funktsiyalar orasidagi tanqidiy bo'shliqlarning tavsifi: javobgarlik yo'qolgan joyda",
+            "Har biri uchun zararni baholash bilan boshqaruv risklari ro'yxati",
+            "Ustuvorliklar: avval nimani yopish kerak, keyin nima yopish kerak",
+          ],
+          important:
+            "Ushbu natijaga faqat haqiqiy ma'lumotlarga to'liq kirish bilan erishish mumkin: CRM, moliya, shartnomalar va boshqaruv mantig'i. Shaffoflik bo'lmasa, tashxis qo'yish mumkin emas.",
+        },
+        {
+          title: "Bir-biriga bog'liq bo'lmagan harakatlar to'plami emas, balki biznes arxitekturasi",
+          whatItMeans:
+            "Siz \"g'oyalar ro'yxati\" ni emas, balki ishlaydigan modelni olasiz: biznes boshqarilishi va barqaror bo'lishi uchun marketing, savdo, moliya, HR va operatsiyalarda nimani o'zgartirish kerak va qanday ketma-ketlikda -.",
+          clientGets: [
+            "Asosiy funktsiyalar uchun maqsadli ramka doskadagi g'oyalar emas, balki operatsion modeldir.",
+            "O'zgarishlarning ustuvor yo'nalishlari bilan yo'l xaritasi: birinchi 45 kun ichida nima amalga oshiriladi, keyin nima",
+            "Bo'limlar, rollar va ko'rsatkichlar o'rtasidagi munosabatlar mantig'i",
+            "RACI matritsasi: kim mas'ul, kim bajaradi, har bir jarayon uchun kim muvofiqlashtiradi",
+          ],
+          important:
+            "Bu egasi va asosiy menejerlar biznesga mustaqil funktsiyalar to'plami sifatida emas, balki yagona tizim sifatida qarashga tayyor bo'lganda ishlaydi.",
+        },
+        {
+          title: "Amalga oshirish boshqaruv ritmiga keltirildi",
+          whatItMeans:
+            "Har bir tartibga solish, har bir ritm, har bir ko'rsatkich biznesingizning haqiqiy sharoitida sinovdan o'tkaziladi va shundan keyingina standart sifatida belgilanadi. Operatsion tizim kayfiyat va mavjudligiga bog'liq bo'lishni to'xtatadi - u protokolga muvofiq ishlaydi.",
+          clientGets: [
+            "Amalga oshirilgan kadens: muntazam uchrashuvlar, ro'yxatga olish, nazorat punktlari",
+            "Har bir funktsiya uchun muntazam boshqaruv harakatlari ro'yxati: kim nima qiladi va qaysi chastotada",
+            "Nazorat ko'rsatkichlari va kuchayish nuqtalari: tizimning o'zi og'ishlar haqida signal beradi, egasining ishtirokini kutmaydi",
+            "Amalga oshirishning har bir bosqichi uchun aniq javobgarlik sohasi: egasi kim, kim ijro etadi, kim tasdiqlaydi",
+          ],
+          important:
+            "Bu natija faqat amalga oshirishning muhim nuqtalarida egasi va asosiy menejerlarning faol ishtirokida mumkin. Xarid bo'lmasa, o'zgarish jamoaning qarshiligiga duch kelgan joyda to'xtab qoladi.",
+        },
+        {
+          title: "Tizimni qanday saqlashni yaxshiroq tushunadigan jamoa",
+          whatItMeans:
+            "Sizning jamoangiz yangi mantiqda qanday ishlashni, o'zgarishlarni qo'llab-quvvatlashni va qo'lda boshqarishga qaytmaslikni tushunadi. BBIning ketishi yo'qotish emas, balki rejalashtirilgan transfer. Tashqi sherikga qaramlik = 0.",
+          clientGets: [
+            "O'qitilgan asosiy xodimlar: ularning roli, ko'rsatkichlari va mas'uliyatini tushunish",
+            "Ruxsat etilgan ish qoidalari: qoidalar, SOP, o'yin kitobi - ekspertiza odamlarga emas, kompaniyaga tegishli",
+            "O'tkazilgan boshqaruv mantig'i: qanday boshqarish kerak, qanday kuchayishi kerak, tizimning degradatsiyasining oldini olish",
+            "Tashqi yordamisiz birga ushlab turuvchi boshqaruv tsikli",
+          ],
+          important:
+            "Ta'sir bevosita mijoz tomonidan loyihaga kim kiritilganligiga bog'liq. Agar asosiy ishtirokchilar ishtirok etmasa, tizim ildiz otmaydi. Agar ular ishtirok etsa, ular bizsiz qoladilar va ishlaydilar.",
+        },
+        {
+          title: "Egasining qo'lda ushlab turishiga kamroq bog'liq bo'lgan biznes",
+          whatItMeans:
+            "Biznes tizim bo'yicha ishlaydi - asboblar paneli, protokollar va boshqaruv ritmi orqali. Egasi Arxitektor rolini tiklaydi: 24/7 operativ yong'inlarni o'chirishdan ko'ra strategiyani boshqarish.",
+          clientGets: [
+            "Rollar va mas'uliyat sohalari qat'iy belgilangan: har bir jarayonning egasi bor, har bir qarorda aniq protokol mavjud",
+            "Boshqaruv qarorlari egasining shaxsiy ishtiroki emas, balki ma'lumotlar asosida qabul qilinadi",
+            "Amalga oshirishni oldindan aytish mumkin: standartlar, o'lchovlar va ritm sifatni qo'lda nazorat qilmasdan saqlaydi",
+            "O'sishni boshqarish mumkin: miqyoslash modelga amal qiladi va tartibsizlikning yangi darajasini yaratmaydi",
+          ],
+          important:
+            "Bu \"bir hafta ichida tez effekt\" yoki \"egasiz avtopilot\" emas. Bu mulkdorning o'zi tomonidan qo'llab-quvvatlanadigan tizimli amalga oshirish va boshqaruv intizomi natijasidir. Haftada 10 soatgacha - biznesning o'zi ishlagani uchun emas, balki tizim to'g'ri bajarilganligi uchun.",
+        },
       ],
+      finalAccent: {
+        title: "BBI bilan ishlash natijasi himoyalangan va boshqariladigan biznes aktividir",
+        text: "BBI bilan ishlash individual xususiyatlarni yaxshilash yoki tavsiyalar bilan maslahatlashish emas. Bu parchalangan boshqaruvdan texnik, qonuniy va operatsion jihatdan egasiga tegishli bo'lgan uzluksiz, shaffof va takrorlanadigan biznes aktiviga o'tishdir.",
+        ctaLabel: "Diagnostika bilan boshlang",
+      },
     },
     process: {
       eyebrow: "Yondashuv",
-      title: "Qanday ishlaymiz",
+      title: "Biz qanday ishlaymiz",
       approaches: [
         {
-          title: "Loyihalaymiz",
+          title: "Biz dizayn qilamiz",
           description:
-            "Maqsadli holat va arxitektura aniqlaymiz. «Qanday qilish kerak» emas — biznesingizga nima kerak.",
+            "Biz maqsadli holat va arxitekturani aniqlaymiz. \"odatdagidek\" emas - biznesingiz kerak bo'lganidek.",
         },
         {
-          title: "Sho'ng'iramiz",
+          title: "Keling, suvga sho'ng'iymiz",
           description:
-            "Jarayonlar, moliya, savdo va jamoani tahlil qilamiz. Tor joylar va haqiqiy sabablarni topamiz.",
+            "Biz jarayonlar, moliya, savdo va jamoalarni tahlil qilamiz. Biz qiyinchiliklarni va muvaffaqiyatsizliklarning haqiqiy sabablarini topamiz.",
         },
         {
-          title: "Arxitektura quramiz",
+          title: "Bino arxitekturasi",
           description:
-            "Ritm, qoidalar, dashbordlar, mas'uliyat zonalari — bitta tizimda, ajratilgan «yaxshilanishlar» emas.",
+            "Ritm, qoidalar, asboblar paneli, mas'uliyat sohalari - alohida \"yaxshilanishlar\" ga emas, balki yagona tizimga.",
         },
         {
           title: "Amalga oshiramiz",
           description:
-            "Har kuni joriy qilamiz, jamoani o'qitamiz, boshqaruvni topshiramiz. Barqarorlik uchun hamkor qolamiz.",
+            "Biz buni har kuni amalga oshiramiz, jamoani o'rgatamiz, transfer nazorati qilamiz. Biz barqarorlik bo'yicha hamkor bo'lib qolamiz.",
         },
       ],
-      ctaLabel: "Diagnostikaga yozilish",
+      ctaLabel: "Diagnostika bilan boshlang",
     },
     whyBbi: {
-      eyebrow: "Farqlanish",
-      title: "Nima uchun BBI",
-      items: [
-        { label: "Agentlik emas", text: "Qo'l va soat sotmaymiz. Tizim quramiz. Raqibimiz — xaos va boshqarilmaslik, boshqa pudratchilar emas." },
-        { label: "Konsultatsiya emas", text: "«Olib ketish» uchun tavsiya bermaymiz. O'zimiz joriy qilamiz va nazorat qilamiz. Barqarorlashguncha ichida qolamiz." },
-        { label: "Avtopilot emas", text: "Sizga 10 soat/haftagacha jalb qilish kerak. Raqamlar orqali boshqaruv — siz yo'qolishingiz emas." },
-        { label: "CEO o'rni emas", text: "Biznes avtonomligini quramiz, bizga bog'liqlik emas." },
-        { label: "«30 kun ichida x10» emas", text: "O'sish boshqariladigan va qayta ishlab chiqariladigan — tizim, sehr emas." },
-        { label: "Operatsion hamkor", text: "6 yo'nalishni egasi manfaatiga yagona tizimga birlashtiramiz." },
+      title: "Nima uchun BBI agentlik yoki konsalting emas",
+      subtitle:
+        "Aksariyat pudratchilar alomatlar bilan ishlaydi: reklamani boshlash, strategiya yozish, odamlarni yollash. Ammo tizimli biznes muvaffaqiyatsizliklari chuqurroq yashaydi - boshqaruv bo'shliqlarida, \"almashtirilmaydigan\" ga bog'liqlikda, raqamlarda yagona haqiqat yo'q. Nuqtali echimlar bu erda ishlamaydi. Bizga arxitektura kerak.",
+      topCards: [
+        {
+          label: "Agentlik emas",
+          intro:
+            "Agentlik ijrochi hisoblanadi. U vazifani oladi, uni bajaradi va KPI haqida hisobot beradi: qamrov, etakchilar, bosishlar. Ammo biznes natijalari uchun javobgarlik egasida qoladi.",
+          outcomeBullets: [
+            "Har bir funktsiya o'zining \"qora qutisida\" yashaydi: marketing savdoda nima bo'layotganini bilmaydi",
+            "Egasi hali ham to'siq bo'lib qolmoqda - endi ham pudratchilar o'rtasida",
+            "Asosiy ma'lumotlar, kirish va ishlanmalar kompaniya tomonidan emas, balki agentlik tomonidan saqlanadi",
+            "Pudratchi ketganida, natijalar yo'qoladi",
+          ],
+        },
+        {
+          label: "Maslahat emas",
+          intro:
+            "Konsalting - bu tahlilchi. U biznesni o'rganadi, tashxis qo'yadi va tavsiyalar beradi. Amalga oshirish, natijalarga erishish, jamoaning qarshiligi bilan ishlash endi uning zonasi emas.",
+          outcomeBullets: [
+            "Qarorlar hujjat darajasida qoladi",
+            "Jamoa o'zgarishlarni ritmga olib kelmaydi",
+            "Egasi yana hamma narsani o'z zimmasiga oladi",
+            "Biznes \"nima qilish kerakligini\" tushunadi, lekin barqaror amalga oshirishga o'tmaydi",
+          ],
+        },
       ],
+      wideCard: {
+        label: "BBI - operatsion hamkor",
+        intro:
+          "Biz marketing xizmatlarini sotmaymiz va egasini tavsiyalar bilan yolg'iz qoldirmaymiz. Biz biznesga boshqaruv tizimi arxitektorlari sifatida kiramiz: biz muvaffaqiyatsizliklarning haqiqiy sabablarini ochib beramiz, maqsadli holatni loyihalashtiramiz va o'zgarishlarni jamoa bilan birgalikda amalga oshiramiz. Bizning ishimizdan so'ng, hisobot emas, balki kompaniyaga tegishli ishlaydigan tizim qoladi.",
+        outcomeBullets: [
+          "Biz diagnostikadan boshlaymiz: biz tizimdagi teshiklarni aniqlaymiz, ularni tegishli nomlari bilan chaqiramiz, asosiy sabablarni aniqlaymiz - alomatlar emas.",
+          "Biz maqsadli arxitekturani loyihalashtiramiz: operatsion model, rollar, o'lchovlar, boshqaruv konturlari - egasining miqyosi va ambitsiyalariga ko'ra.",
+          "Biz yagona boshqaruv sxemasini qurmoqdamiz: marketing, savdo, moliya, kadrlar va operatsion tizimlar bir xil qoidalar va bir xil raqamlarga muvofiq ishlaydi.",
+          "Biz 45-90 ish kuni davomida amalga oshirishga hamroh bo'lamiz: biz buni tavsiya etmaymiz - o'zgarishlar amalda bo'lgunga qadar biz buni jamoa bilan birga qilamiz.",
+          "Biz tizimni jamoaga o'tkazamiz: aktivlarga egalik qilish, qoidalar va boshqaruv ritmi biznesda qoladi",
+        ],
+      },
+      approachEyebrow: "Bizning yondashuvimiz",
+      comparisonTable: {
+        columnHeaders: ["Parametr", "Agentlik", "Konsalting", "BBI operatsion hamkor"],
+        rows: [
+          ["Rol", "Vazifa bajaruvchisi", "Maslahatchi", "Arxitektor + integrator + amalga oshiruvchi"],
+          ["Chuqurlik", "Bitta vosita/kanal", "Tahlil va tavsiyalar", "Butun boshqaruv tizimi"],
+          [
+            "Mavjudlik",
+            "Masofa, vazifa bo'yicha",
+            "Sessiyalar va hisobotlar",
+            "CCR (qimmatli yakuniy natija) gacha biznes ichida",
+          ],
+          ["Javobgarlik", "O'z zonasi uchun", "Tavsiyalar uchun", "CCR ga erishish uchun"],
+          ["Natija", "Bajarilgan vazifa", "Hujjat/strategiya", "Ishlaydigan tizim"],
+          ["Ketgandan keyin", "To'xtaydi", "Hujjat qoladi", "Tizim qoladi"],
+        ],
+      },
     },
     casesBlog: {
-      title: "Keyslar va blog",
-      casesTitle: "Keyslar",
+      title: "Holatlar va blog",
+      casesTitle: "Ishlar",
       blogTitle: "Blog",
-      casesLabel: "Barcha keyslar",
+      casesLabel: "Barcha holatlar",
       blogLabel: "Barcha maqolalar",
-      readMore: "Batafsil",
-      ctaLabel: "Keysingizni muhokama qilish",
+      readMore: "Batafsil ma'lumot",
+      ctaLabel: "Diagnostika bilan boshlang",
     },
     faq: {
-      title: "Tez-tez beriladigan savollar",
+      title: "Tez-tez so'raladigan savollar",
       items: [
-        { q: "Loyiha qancha davom etadi?", a: "Skrining bepul. Keyin: diagnostika → 45+ ish kunlari loyiha → abonent qo'llab-quvvatlash. Aniq davr o'lchamga bog'liq." },
-        { q: "Uzoqdan ishlaysizmi?", a: "Ha, muntazam tashriflar bilan. Jarayonlarga sho'ng'ish uchun mavjudlik kerak." },
-        { q: "Kichik biznes mos keladimi?", a: "Aylanma $30k/oydan va 15+ xodimga qaratamiz. 5 yildan kam biznes yoki PMF startap — odatda yo'q." },
-        { q: "Agentliklar va maslahatchilardan qanday farqlanasiz?", a: "Soat sotmaymiz (agentlik), «olib ketish» uchun tavsiya bermaymiz (konsultatsiya). O'zimiz joriy qilamiz va barqarorlashguncha qolamiz." },
-        { q: "Qachon rad etasiz?", a: "Egasi jalb qilinmaydi. Ma'lumotlarga kirish yo'q. Agentlik modeli kerak. 5 yildan kam biznes yoki startap. Tizimni o'zgartirishga tayyor emas holda «o'sishni kafolatlang» kutiladi." },
+        { q: "Loyiha qancha davom etadi?", a: "Diagnostika - biznesning maqsadli holatini loyihalash - amalga oshirish (90+ kun) - biznesni himoyalangan va tizimlashtirilgan aktiv sifatida o'tkazish. Aniq vaqt o'lchovga bog'liq." },
+        { q: "Masofadan ishlayapsizmi?", a: "Ha, lekin muntazam tashriflar bilan. Jarayonlarga sho'ng'ish ofisda bo'lishni talab qiladi." },
+        { q: "Kichik biznes mos keladimi?", a: "Biz oyiga 30 ming dollarlik aylanma va 15 kishilik jamoaga e'tibor qaratamiz. 5 yoshgacha bo'lgan biznes yoki PMF-da startap - odatda emas." },
+        { q: "Agentlik va maslahatchilardan nimasi bilan farq qilasiz?", a: "Biz soat sotmaymiz (agentlik). Biz \"olib ketish\" tavsiyalarini bermaymiz (konsalting). Biz buni o'zimiz amalga oshiramiz va tizimlar barqarorlashguncha qolamiz." },
+        { q: "Qachon yo'q deysiz?", a: "Egasining aloqasi yo'q. Ma'lumotlarga kirish imkoni yo'q. Bizga agentlik modeli kerak. 5 yilgacha biznes yoki boshlang'ich. Tizimni o'zgartirishga tayyor bo'lmasdan, \"o'sishni kafolatlash\" umidi." },
       ],
     },
     finalCta: {
-      title: "Biznes o'sadi — boshqaruv yetolmayaptimi? Diagnostikadan boshlang",
-      ctaLabel: "Diagnostikadan boshlash",
-      subtitle: "Haqiqiy nosozlik nuqtalarini tushunish, alomatlarni davolash emas",
+      title: "Biznes o'sib bormoqda - menejment ularni ushlab turolmaydimi? Tashxisdan boshlang",
+      ctaLabel: "Diagnostika bilan boshlang",
+      subtitle: "Semptomlarni davolashdan ko'ra, muvaffaqiyatsizlikning haqiqiy nuqtalarini tushuning",
     },
     pillars: {
-      title: "Qalqon. Lever. Tizim.",
+      title: "Qalqon. Tutqich. Tizim.",
       items: [
         {
           title: "Qalqon",
           description:
-            "Aktivlarni himoya qilish, ownership, yuridik himoya, shaffof moliya.",
+            "Aktivlarni himoya qilish, egalik qilish, huquqiy qurollar, shaffof moliya.",
           details:
-            "Qalqon — bu «umumiy xavfsizlik» emas. Aktivlar va nazoratni kompaniyaga o'tkazish haqida — biznes odamlar, pudratchilar va «virtual raqamlar»dan mustaqil bo'lishi uchun. Biz «tinchlantirmaymiz» — zaifliklarni ochamiz va tizim bilan yopamiz: ownership, yuridik himoya, shaffof moliya, kadrlar barqarorligi.",
-          linkLabel: "Batafsil",
+            "Qalqon \"umuman xavfsizlik\" emas. Biz aktivlarni va nazoratni kompaniyaga o'tkazish haqida gapiryapmiz - biznes odamlarga, pudratchilarga va \"virtual raqamlarga\" bog'liq bo'lmasligi uchun. Biz \"tinchlanmaymiz\" - biz zaifliklarni ochib beramiz va ularni tizim bilan yopamiz: mulk, qonuniy qurol-yarog ', shaffof moliya, kadrlar barqarorligi.",
+          linkLabel: "Batafsil ma'lumot",
           href: "/pillars/shield",
         },
         {
-          title: "Lever",
+          title: "Tutqich",
           description:
-            "Operatsion ritm, skvoznoy analitika, «yulduzsiz» savdo tizimi.",
+            "Operatsion ritm, end-to-end analitika, \"yulduzlar\"siz savdo tizimi.",
           details:
-            "Lever — «sizni 10 marta kuchaytiramiz» emas (bu xavfli va'da). O'lchanadigan natija uchun ta'sir qilish mumkin bo'lgan nazorat nuqtalari haqida: operatsion ritm (cadence), skvoznoy analitika, «yulduzsiz» savdo tizimi, standartlar va qayta ishlab chiqarish.",
-          linkLabel: "Batafsil",
+            "Leverage \"biz sizni 10 baravar kuchliroq qilamiz\" emas (bu xavfli va'da). Biz o'lchanadigan natijaga ta'sir qilishi mumkin bo'lgan nazorat nuqtalari haqida gapiramiz: operatsion ritm (kadans), yakuniy tahlil, \"yulduzlarsiz\" savdo tizimi, standartlar va takrorlanuvchanlik.",
+          linkLabel: "Batafsil ma'lumot",
           href: "/pillars/leverage",
         },
         {
           title: "Tizim",
           description:
-            "Rollar mustahkam, jarayonlar standart, odamlar almashsa ham buzilmaydi.",
+            "Rollar belgilangan, jarayonlar standartlashtirilgan, odamlarni o'zgartirish tizimni buzmaydi.",
           details:
-            "Tizim — «qahramonlik» va qo'lda boshqaruvning qarama-qarshisi. Egаning shaxsiy bosimini boshqaruv ritmi va qoidalar bilan almashtirish. Har bir jarayon tasvirlangan, har bir natija bashorat qilinadigan mexanizm qurish — xodimning ketishi «rejalashtirilgan kompetensiyalarni o'tkazish», biznes uchun to'xtov emas.",
-          linkLabel: "Batafsil",
+            "Tizim \"qahramonlik\" va qo'lda boshqarishning antitezidir. Biz egasining shaxsiy bosimini boshqaruv ritmi va qoidalari bilan almashtirish haqida gapiramiz. Biz mexanizmni qurmoqdamiz, unda har bir jarayon tasvirlangan, har bir natija bashorat qilinadigan va xodimning ketishi biznes uchun to'xtash signali emas, balki \"vakolatlarning rejalashtirilgan o'tkazilishi\" hisoblanadi.",
+          linkLabel: "Batafsil ma'lumot",
           href: "/pillars/system",
         },
       ],
@@ -839,96 +1185,96 @@ export const uz: Dictionary = {
     position: {
       title: "BBI neytral pudratchi emas",
       description:
-        "Biz egalar tomoni. Qattiq haqiqatni aytamiz, zaifliklarni ochamiz va tizimli tuzatamiz.",
+        "Biz egasining tomonini olamiz. Biz qattiq haqiqatni aytamiz, zaifliklarni ochib beramiz va ularni tizimli ravishda tuzatamiz - biznes avtonom aktivga aylanadi.",
     },
   },
   about: {
     heroNav: {
       prev: "Oldingi ekran",
       next: "Keyingi ekran",
-      pagesGroup: "Blok ekranlari",
+      pagesGroup: "Ekranlarni bloklash",
     },
     heroPages: [
       {
         title: "Bold Brands International",
         body:
-          "Egalar va CEO uchun Operating Partner. Bo‘linib ketgan amaliyotlarni yagona tizimga aylantiramiz: boshqaruv konturi, moliyaviy haqiqat va o‘sishga tayangan himoyalangan aktivlar.",
+          "Egalari va bosh direktorlar uchun operatsion hamkor. Biz turli xil amaliyotlardan yaxlit tizimni yig'amiz: boshqaruv sxemasi, moliyaviy haqiqat va o'sish uchun tayanishi mumkin bo'lgan himoyalangan aktivlar.",
       },
       {
-        title: "Qalqon, Rychag. Tizim",
+        title: "Qalqon, tutqich. Tizim",
         body:
-          "Qalqon (ownership va aktivlarni himoya qilish), Rychag (operatsion tizim, sotish, analitika) va Tizimni (boshqaruv ritmi, standartlar, RACI) quramiz — biznes «qahramonlarga» emas, mexanizmga tayanadi.",
+          "Biz Shield (egalik va aktivlarni himoya qilish), Lever (operatsion tizim, savdo, tahlil) va Tizimni (boshqaruv ritmi, standartlar, RACI) qurmoqdamiz, shunda biznes “qahramonlar”ga emas, mexanizmga tayanadi.",
       },
       {
-        title: "O‘sish bosqichlarida egalar hamkori",
+        title: "O'sish bosqichlarida egasining sherigi",
         body:
-          "Vazifamiz — biznesni boshqariladigan aktiv sifatida ko‘rinishini ta’minlash: yagona moliyaviy rasm, muhim aktivlarga rasmiylashtirilgan huquqlar va tizim.",
+          "Bizning vazifamiz biznesni boshqariladigan aktivga o'xshatishdir: yagona moliyaviy rasm, asosiy aktivlarga ro'yxatdan o'tgan huquqlar va tizim bilan.",
       },
     ],
     who: {
-      title: "Biz kimmiz",
+      title: "Biz kimmiz?",
       text:
-        "BBI (Bold Brands International) — Operating Partner (RevOps). Biz biznesga kiramiz, real muammolarni ochamiz va tizim quramiz. Marketing agentligi emas. Konsalting ham emas. «Neytral pudratchi» ham emas.",
+        "BBI (Bold Brands International) - Operatsion hamkor (RevOps). Biz reklama qilmaymiz, SMM sotmaymiz va strategiya taqdimoti bilan cheklanmaymiz. Bizning mas'uliyat sohamiz - biznesni egasi raqamlar va tizim orqali boshqaradigan avtonom va himoyalangan aktivga aylantirishdir.",
       emphasis:
-        "Asosiy fikr: BBI egalar tomonida, pudratchi emas. Neytral pozitsiya yo'q.",
+        "BBI pudratchi yoki “uchinchi tomon” emas. Biz egasi va uning biznesi yonida turib, uning aktivlari, maʼlumotlari va nazorat qilinishini doimiy ravishda himoya qilamiz.",
     },
     principles: {
       title: "Asosiy e'tiqodlar",
       items: [
         {
-          title: "Biz egalar va CEO tomonidamiz",
+          title: "Biz egasi va bosh direktor tomonidamiz",
           body:
-            "Bu «hammalar orasida» neytral pozitsiya emas. Haqiqiy xavfni — moliyaviy, obro‘, operatsion — olgan inson tomonida turamiz. Har bir qarorimiz aynan uning manfaatidan kelib chiqadi.",
+            "\"Hamma o'rtasida\" neytral pozitsiya emas. Biz haqiqiy tavakkalchilikni o'z zimmasiga olgan odam tomonini olamiz - moliyaviy, obro'li, operatsion. Bizning har bir qarorimizni uning manfaatlari belgilaydi.",
         },
         {
-          title: "Biznesga halol qarashni qo‘llab-quvvatlaymiz — noqulay bo‘lsa ham",
+          title: "Biz biznesga halol qarash tarafdorimiz - hatto noqulay bo'lsa ham",
           body:
-            "Muammolarni o‘z nomi bilan atash qattiqlik emas — hurmat. Biznes qayerda pul, boshqaruv va qiymat yo‘qotayotganini ko‘rsatamiz. Qulay illyuziya qattiq haqiqatdan qimmatroq — pul va vaqt hisobida.",
+            "Muammolarni ularning nomi bilan chaqirish - qo'pollik emas, balki hurmat. Biz biznes qayerda haqiqatan ham pul, boshqaruv qobiliyati va qiymatini yo'qotayotganini ko'rsatamiz. Qulay illyuziya qattiq haqiqatdan qimmatroq - pul va vaqt bilan.",
         },
         {
-          title: "Tizim iste'doddan har doim muhimroq",
+          title: "Tizim iste'doddan muhimroq - har doim",
           body:
-            "«Almashtirib bo‘lmaydigan» odamlar — bu qiymat kiyimiga o‘ralgan xavf. Ekspertiza jarayonlar va kompaniya standartlarida, bitta inson boshida emas. Har bir ketish — falokat emas, rejalashtirilgan topshiruv.",
+            "\"O'rnini almashtirib bo'lmaydigan\" odamlar xavf sifatida qiymat sifatida yashiringan. Biz tajriba bir kishining boshida emas, balki kompaniya jarayonlari va standartlarida joylashgan modellarni yaratamiz. Har qanday xodimning ketishi falokat emas, balki rejalashtirilgan o'tishdir.",
         },
         {
-          title: "Tahdidlarni ichkaridan bilamiz — darsliklardan emas",
+          title: "Biz tahdidlarni darsliklardan emas, balki ichimizdan bilamiz",
           body:
-            "Biz ishlaydigan vaziyatlar — ma’lumotlar bazasini o‘g‘irlash, «almashtirib bo‘lmaydiganlar» shantaji, moliyada shaffof bo‘lmagan sxemalar, agentliklarga bog‘liqlik — bularni haqiqiy bizneslarda ochganmiz va o‘zimiz ham duch kelganmiz. Bu nazariya emas. Zarar yetkazishidan oldin aniqlab yopish mumkin bo‘lgan amaliyot.",
+            "Biz ishlayotgan vaziyatlar - ma'lumotlar bazalarini o'g'irlash, \"almashtirilmaydigan\" shantaj, noaniq moliyaviy sxemalar, agentliklarga qaramlik - biz haqiqiy biznesda duch kelganmiz va bunga o'zimiz duch kelganmiz. Bu nazariya emas. Bu biz tanib olishimiz va zarar keltirmasdan oldin to'xtatishimiz mumkin bo'lgan amaliyotdir.",
         },
       ],
     },
     manifesto: {
-      title: "Biz qarshimiz",
+      title: "Biz nimaga qarshimiz?",
       items: [
         {
-          title: "Bo'sh va'dalarga qarshimiz.",
+          title: "Bo'sh va'dalarga qarshi.",
           body:
-            "Amaliyotga kirmaydigan tavsiyalar, strategiyalar va chiroyli taqdimotlar ish illyuziyasidir. Biz o'zgarishlar real amaliyotga aylanishi uchun javobgarlik olamiz, tarix uchun papkada qolib ketishi uchun emas.",
+            "Amalga oshirilmaydigan tavsiyalar, strategiyalar va \"chiroyli taqdimotlar\" ishning illyuziyasidir. Biz o'zgarishlarning amalda qo'llanilishini va \"tarix uchun\" jildiga tushmasligini ta'minlash uchun mas'uliyatni o'z zimmamizga olamiz.",
         },
         {
-          title: "Tizim o'rniga «xizmat»ga qarshimiz.",
+          title: "Tizim o'rniga \"xizmatlar\" ga qarshi.",
           body:
-            "Bir-biriga ulanmagan bir martalik harakatlar lokal natija beradi, lekin biznes arxitekturasini o'zgartirmaydi. Biz faqat vazifani yopmaymiz - vazifalar tizimli va qayta qo'llanadigan tarzda yechiladigan boshqaruv konturini quramiz.",
+            "Bir-biri bilan aloqa qilmasdan bir martalik harakatlar mahalliy ta'sirga ega va biznes arxitekturasini o'zgartirmaydi. Biz \"muammolarni yopmaymiz\" - biz muammolar tizimli va takrorlanadigan tarzda hal qilinadigan boshqaruv sxemasini quramiz.",
         },
         {
-          title: "Odamlarga qaramlikka qarshimiz.",
+          title: "Odamlarga qaramlikka qarshi.",
           body:
-            "Ikki-uch «kalit» odamga suyanadigan biznes aktiv emas, zaiflikdir. Ulardan biri ketishi funksiyani to'xtatishi yoki mijoz munosabatlarini buzishi mumkin. Biz aniq shaxslardan mustaqil ishlaydigan tizim quramiz.",
+            "Ikki yoki uchta \"asosiy\" odamlarga tayanadigan biznes aktiv emas, balki zaiflikdir. Ulardan birining ketishi funktsiyani to'xtatishi yoki mijozlar bilan munosabatlarni buzishi mumkin. Biz aniq shaxslardan mustaqil ishlaydigan tizimni qurmoqdamiz.",
         },
         {
-          title: "Shaffof emaslikka qarshimiz.",
+          title: "Shaffoflikka qarshi.",
           body:
-            "Yashirin kelishuvlar, «kulrang» moliyaviy sxemalar, pudratchi qo'lida qolgan baza va kirishlar - bularning barchasi biznesning real qiymatini pasaytiradi va egasi eng oxirida biladigan xavflarni yaratadi. Shaffoflik opsiya emas, boshqariladigan biznesning bazasi.",
+            "Yashirin kelishuvlar, \"kulrang\" moliyaviy sxemalar, ma'lumotlar bazalari va \"pudratchi\" kirish - bularning barchasi biznesning haqiqiy qiymatini pasaytiradi va egasi oxirgi marta bilishi mumkin bo'lgan xavflarni keltirib chiqaradi. Shaffoflik variant emas, balki boshqariladigan biznes uchun asosiy shartdir.",
         },
         {
-          title: "Doimiy yong'in o'chirish rejimiga qarshimiz.",
+          title: "Yong'inga qarshi.",
           body:
-            "Doimiy «hozir shoshilinchni hal qilamiz» rejimi tizimli o'zgarishlarga resurs qoldirmaydi. Biz navbatdagi inqirozdan omon qolish uchun emas, inqirozlar ish normasi bo'lib qolmasligi uchun kelamiz.",
+            "Doimiy \"shoshilinch hal qilish\" rejimi tizimli o'zgarishlar uchun resurslarni qoldirmaydi. Biz keyingi inqirozga qarshi turish uchun kelmayapmiz - inqirozlar odatiy holga aylanmasligi uchun kelamiz.",
         },
         {
-          title: "Egasi o'rniga ishlashga qarshimiz.",
+          title: "Egasi \"uchun\" ishlashga qarshi.",
           body:
-            "Biz jamoaning o'rnini bosmaymiz va «tashqi CEO» emasmiz. Vazifamiz - tizimni qurib topshirish, shunda ketganimizdan keyin biznes to'liq mustaqil bo'ladi. Loyiha tugagach BBI ga qaramlik = 0.",
+            "Biz jamoani almashtiruvchi yoki “tashqi bosh direktor” emasmiz. Bizning vazifamiz - biz ketganimizdan keyin biznes butunlay mustaqil bo'lib qolishi uchun tizimni qurish va o'tkazish. Loyiha tugagandan so'ng BBIga bog'liqlik = 0.",
         },
       ],
     },
@@ -936,52 +1282,52 @@ export const uz: Dictionary = {
       title: "Jamoa",
       members: [
         {
-          name: "Ism Familiya",
+          name: "Ism familiyasi",
           role: "CEO",
-          note: "Biznes himoyasini tizim sifatida quradi.",
+          note: "Biznesni himoya qilishni xizmatlar majmui emas, balki tizim sifatida quradi.",
         },
         {
-          name: "Ism Familiya",
+          name: "Ism familiyasi",
           role: "Operating Partner",
-          note: "Natijaga javob beradi, jarayonga emas.",
+          note: "Transformatsiyaga rahbarlik qiladi va jarayon uchun emas, balki natija uchun javobgardir.",
         },
         {
-          name: "Ism Familiya",
+          name: "Ism familiyasi",
           role: "RevOps mutaxassisi",
-          note: "Operatsion ritm, analitika va nazoratni quradi.",
+          note: "Operatsiyalarda ritm, tahlil va nazoratni quradi.",
         },
         {
-          name: "Ism Familiya",
+          name: "Ism familiyasi",
           role: "RevOps mutaxassisi",
-          note: "Savdo tizimini natija uchun quradi.",
+          note: "Natijalar xarizmadan ko'ra muhimroq bo'lgan savdo tizimini quradi.",
         },
       ],
     },
     cta: {
-      title: "Mos kelamizmi?",
-      description: "Skriningga yoziling — bo'shliq va o'sishni aniqlaymiz.",
+      title: "Bir-birimizga to'g'ri ekanligimizni bilmoqchimisiz?",
+      description: "diagnostikadan boshlang",
       form: {
         name: "Ism",
         phone: "Telefon",
-        message: "Qisqa so'rov",
-        submit: "Skriningga yozilish",
+        message: "Murojaat haqida qisqacha",
+        submit: "yuborish",
       },
     },
   },
   footer: {
-    copyright: "© 2024 BBI (Bold Brands International). Barcha huquqlar himoyalangan.",
-    tagline: "Bold Brands International — ishonchli operatsion hamkoringiz.",
+    copyright: "© 2026 BBI (Bold Brands International). Barcha huquqlar himoyalangan.",
+    tagline: "Bold Brands International sizning ishonchli operatsion hamkoringizdir.",
     aboutTitle: "Kompaniya haqida",
     aboutLinks: [
-      { label: "Qanday ishlaymiz", href: "/work" },
-      { label: "Keyslar", href: "/cases" },
+      { label: "Biz qanday ishlaymiz", href: "/work" },
+      { label: "Ishlar", href: "/cases" },
       { label: "Blog", href: "/blog" },
     ],
     socialTitle: "Biz",
     locations: [
       {
         city: "Bishkek",
-        address: "Matrosova ko'chasi, 102",
+        address: "st. Matrosova, 102-uy",
         phone: "+996 999 99 22 44",
         email: "office.kg@boldbrands.pro",
         socials: {
@@ -1007,267 +1353,510 @@ export const uz: Dictionary = {
     addressLabel: "Manzil",
     phoneLabel: "Telefon",
     emailLabel: "Elektron pochta",
-    workingHoursLabel: "Ish vaqti",
-    workingHours: "Du-Ju: 09:00-18:00",
+    workingHoursLabel: "Biz ishlayapmiz",
+    workingHours: "Dushanba-Jum: 09:00-18:00",
     privacyLabel: "Maxfiylik siyosati",
     privacyHref: "/privacy",
   },
   cases: {
     hero: {
       eyebrow: "Haqiqiy natijalar",
-      title: "Kейslar: tizimli yondashuv amalda",
+      title: "Holatlar: harakatda tizimli yondashuv",
       description:
-        "«Reklama qildik» emas, balki himoya, tayanch va tizimni qanday qurganimizni ko'rsatamiz. Kontekst, muammo, BBI harakati va o'lchanadigan natija.",
+        "Biz \"reklamani ishga tushirdik\" emas, balki himoya, tutqichlar va tizimni qanday qurganimizni ko'rsatamiz. Kontekst, muammo, BBI harakati va o'lchanadigan natija.",
+      heroImage: "/brand/cases-war-room-hero.png",
     },
     list: {
-      sectionTitle: "Tegishli keysler",
-      sectionEyebrow: "Keyslar bo'yicha navigatsiya",
-      sectionSubtitle: "Kontekstingizga mos keysni tanlang",
+      sectionTitle: "Tegishli holatlar",
+      sectionEyebrow: "Ish navigatsiyasi",
+      sectionSubtitle: "Kontekstingiz uchun vaziyatni tanlang",
     },
     filters: {
       industry: "Sanoat",
       direction: "Yo'nalish",
-      scale: "O'lcham",
-      all: "Barchasi",
+      scale: "Masshtab",
+      all: "Hammasi",
     },
     filterLabels: {
-      retail: "Chakana",
+      retail: "Chakana savdo",
       fAndB: "HoReCa / F&B",
       services: "Xizmatlar",
       ecom: "E-commerce",
       other: "Boshqa",
-      operations: "Operatsiya",
+      operations: "OS",
       marketing: "Marketing",
-      sales: "Savdo",
+      sales: "Sotish",
       finance: "Moliya",
       hr: "HR",
-      legal: "Yuridik",
+      legal: "Huquqiy himoya",
       smb: "SMB",
       mid: "Mid-market",
       enterprise: "Enterprise",
     },
-    card: { readMore: "Batafsil" },
-    noResults: "Tanlangan filterlar bo'yicha kейslar topilmadi.",
+    card: { readMore: "Batafsil ma'lumot" },
+    noResults: "Tanlangan filtrlar asosida hech qanday holat topilmadi.",
     caseDetail: {
-      backToCases: "← Keyslar",
+      backToCases: "← Ishlar",
       context: "Kontekst",
       problem: "Muammo",
-      whatBbiDid: "BBI nima qildi",
+      whatBbiDid: "BBI nima qildi?",
       result: "Natija",
       artifacts: "Artefaktlar",
-      bbiRole: "BBI roli",
-      infographicForecast: "Oldin",
+      bbiRole: "BBI ning roli",
+      infographicForecast: "Kimga",
       infographicResult: "Natija",
-      infographicTitle: "Raqamlarda natijalar",
+      infographicTitle: "Natijalar raqamlarda",
     },
     items: [
       {
         slug: "med-lab-sla",
+        headerImage: "/brand/case-med-lab-header.png",
         company: "Tibbiy laboratoriya (NDA)",
-        industry: "Sog'liqni saqlash xizmatlari",
-        keyResult: "SLA 87%, baza reaktivatsiyasi 34%, konversiya +21%",
-        excerpt: "Tizimli xatolikni yakka holdan ajratish: tijoriy blokni qayta loyihaladik, rollarni ajratdik — boshqariladigan vornka va bashorat qilinadigan pipeline.",
-        seoTitle: "Savdoda tizimli xato: laboratoriya keysi — SLA 87%, baza reaktivatsiyasi 34%",
+        industry: "Tibbiy xizmatlar",
+        keyResult: "SLA 87%, ma'lumotlar bazasining 34% qayta faollashishi, konvertatsiya +21%",
+        excerpt: "Tizim xatosini shaxsiy xatodan qanday ajratish mumkin: biz tijorat blokini qayta loyihalashtirdik, rollarni ajratdik - biz boshqariladigan huni va prognoz qilinadigan quvur liniyasiga ega bo'ldik.",
+        seoTitle: "Sotishdagi tizim xatosi: laboratoriya ishi - SLA 87%, bazaning 34% qayta faollashishi",
         metaDescription:
-          "Tizimlini yakka holdan ajratish: laboratoriya keysi — SLA 87%, buyurtma chastotasi +23%, baza reaktivatsiyasi 34% va bashorat qilinadigan pipeline.",
+          "Tizim xatosini shaxsiy xatodan qanday ajratish mumkin: laboratoriya ishi - SLA 87%, buyurtma chastotasi + 23%, ma'lumotlar bazasining 34% qayta faollashishi va prognoz qilinadigan quvur liniyasi.",
         keywords: [
-          "tibbiy laboratoriya keysi",
-          "savdoda SLA",
+          "tibbiy laboratoriya ishi",
+          "Savdoda SLA",
           "CRM va SLA",
-          "boshqariladigan savdo vornkasi",
-          "savdoda tizimli xato",
-          "lid konversiyasining o'sishi",
-          "daromad pipeline",
-          "lidlar yo'qolgan",
-          "savdo va marketing",
-          "mijozlar bazasini qayta faollashtirish",
-          "buyurtma chastotasi o'sishi",
+          "boshqariladigan savdo huni",
+          "savdodagi tizim xatosi",
+          "qo'rg'oshin konvertatsiyasining ortishi",
+          "daromad bo'yicha quvur liniyasi",
+          "o'tkazgichlar drenajlangan",
+          "savdo bo'limi va marketing",
+          "mijoz bazasini qayta faollashtirish",
+          "buyurtma chastotasini oshirish",
           "LTV o'sishi",
-          "CRM da SLA nazorati",
-          "tijoriy blok qurish",
+          "CRM-da SLA nazorati",
+          "tijorat blokini qurish",
         ],
-        h1: "Tibbiy laboratoriya keysi: tizimli xatolikni yakka holdan qanday ajratish — va daromadni boshqarishni qaytarish",
-        tags: ["Savdo", "CRM va SLA", "Operatsiya"],
+        h1: "Tibbiy laboratoriya ishi: tizim xatosini shaxsiy xatodan qanday ajratish va daromadni nazoratga qaytarish",
+        tags: ["Sotish", "CRM va SLA", "OS"],
         industryFilter: "services",
         directionFilter: "sales",
         scaleFilter: "mid",
         context:
-          "Tibbiy laboratoriya. CRM sozlangan, SLA belgilangan, reklama kampaniyalari ishlaydi. Ammo samaradorlikni tahlil qilganda: lidlar ko'pchiligi «yo'qolgan», vornka boshqarilmaydi. Menedjerlar: «marketing noto'g'ri lidlar olib keldi, ular sovuq». Audit ko'rsatdi: SLA bajarilmagan, kechikishlar yig'ilgan, rahbar xabarnomalarga javob bermagan. Lidlarning 31% trigger so'rovlar bilan kontaktlar (ishlash mumkin va kerak). 59% faqat avtojavob oldi — hech kim ishlamadi. Muammo «lid sifatida» emas, balki lidlar bilan ishlash jarayoni mavjud emas edi.",
+          "Tibbiy laboratoriya. CRM o'rnatildi, SLAlar o'rnatildi, reklama kampaniyalari olib borilmoqda. Ammo samaradorlikni tahlil qilganda, ko'pchilik etakchilar \"birlashtirilgan\", huni boshqarilmagani ma'lum bo'ldi. Menejerlar aytadilar: \"marketing noto'g'ri odamlarni olib keldi, etakchilar sovuq\". Audit shuni ko'rsatdiki, SLAlar bajarilmagan, kechikishlar to'plangan va menejer bildirishnomalarga javob bermagan. Potentsiallarning 31% kontaktlar orqali so'rovlarni keltirib chiqaradi (siz ular bilan ishlashingiz mumkin va kerak). 59% faqat avtomatik javob oldi - hech kim ular bilan ishlamadi. Muammo \"qo'rg'oshin sifati\" emas, balki jarayon sifatida etakchi boshqaruv mavjud emas.",
         problem:
-          "Ijrochilarni tanlashda tizimli xato: savdo menedjerlari o'rniga admin funktsiyasi bo'lgan odamlar — muntazam mijozlardan so'rovlarni qabul qilish, ijroga uzatish, status bo'yicha kuzatish. Koordinator/admin roli, savdo emas. Admin reaktiv: oqimni qabul qilish, shoshilinchni yopish. Savdo proaktiv: suhbat olib borish, kontaktga qaytarish, rad etishlarga chiday olish. Operatsion yuk ostida admin har doim «shoshilinch»ni tanlaydi, savdo «qoldiq»da. Motivatsiya masalasi emas, funktsiyalar arxitekturasi masalasi.",
+          "Ijrochilarni tanlashda tizimli xato: savdo menejerlari lavozimiga ma'muriy funktsiyalarga ega bo'lgan odamlar tayinlandi - doimiy mijozlarning so'rovlarini qabul qilish, ularni bajarish uchun o'tkazish va vaziyatni qo'llab-quvvatlash. Sotuvchi emas, koordinator/administratorning roli. Administrator reaktiv: oqimni qabul qiling, shoshilinchni yoping. Savdo faol: dialog o'tkazing, aloqaga qayting, rad etishga qarshi turing. Operatsion yuk mavjud bo'lganda, ma'mur har doim \"shoshilinch\", sotishni - \"qoldiq asosida\" tanlaydi. Motivatsiya masalasi emas, balki funktsiya arxitekturasi haqida.",
         whatBbiDid: [
-          "Funktsiyalarni ajratdik va har bir rol uchun o'lchanadigan natijani belgiladik — odamlarni «zo'rlash» o'rniga.",
-          "Tijoriy blokni «passiv buyurtma kutilishi» modelidan daromadni boshqarishga o'tkazdik: ekspansiya (yangi mijozlar) + LTV maksimallashtirish (baza rivoji).",
-          "Rollarni joriy qildik: Hunter (yangi mijozlar), Farmer (buyurtma chastotasi, saqlash, reaktivatsiya), KAM (asosiy hisoblar), Administratorlar (operatsiya savdoni almashtirmasdan).",
-          "Har bir rolni «bitta natija»da qildik — savdo ishlab chiqarish o'tini bilan yutilgan aralashuvni olib tashladik.",
+          "Biz funktsiyalarni ajratdik va har bir rolga odamlarni \"mustahkamlash\" o'rniga o'lchanadigan natijani belgiladik.",
+          "Biz tijorat blokini \"buyurtmalarni passiv kutish\" modelidan daromadlarni boshqarishga o'tkazdik: kengaytirish (yangi mijozlar) + LTV maksimallashtirish (bazaviy rivojlanish).",
+          "Quyidagi rollar joriy etildi: Hunter (yangi mijozlar), Fermer (buyurtma chastotasi, ushlab turish, qayta faollashtirish), KAM (asosiy mijozlar), Administratorlar (sotishni almashtirmasdan operatsion tizim).",
+          "Biz har bir rolni natijaga ko'ra \"bitta vazifa\" qildik - biz ishlab chiqarish aylanmasi savdoni yeb qo'ygan chalkashlikni olib tashladik.",
         ],
         resultNumbers: [
-          { before: "SLA bajarilmagan, kechikishlar odat", after: "SLA 87%", beforeValue: 15, afterValue: 87, label: "SLA" },
-          { before: "Konversiya: lidlar avtojavobda o'ldi", after: "+21%", beforeValue: 5, afterValue: 26, label: "Konversiya" },
-          { before: "Bazaga javobgar rol siz buyurtma chastotasi", after: "birinchi oy +23%", beforeValue: 10, afterValue: 33, label: "Buyurtma chastotasi" },
-          { before: "4–6 oy uxlab yotgan baza qaytishsiz", after: "34% reaktivatsiya qilindi", beforeValue: 0, afterValue: 34, label: "Baza reaktivatsiyasi" },
+          { before: "SLAlar bajarilmadi, kechikishlar odatiy holdir", after: "SLA 87%", beforeValue: 15, afterValue: 87, label: "SLA" },
+          { before: "Konvertatsiya: avtomatik javoblar bo'yicha etakchilar nobud bo'ldi", after: "+21%", beforeValue: 5, afterValue: 26, label: "Konvertatsiya" },
+          { before: "Baza uchun rolsiz buyurtmalar chastotasi", after: "Birinchi oyda +23%", beforeValue: 10, afterValue: 33, label: "Buyurtma chastotasi" },
+          { before: "Uyquning asosi 4-6 oy. qaytarilmaydi", after: "Qayta faollashtirilgan 34%", beforeValue: 0, afterValue: 34, label: "Baza reaktivatsiyasi" },
         ],
         artifacts: [
-          "Hunter / Farmer / KAM / Admin roli struktura",
-          "CRM da SLA nazorati",
-          "Lid qayta ishlash rejalari",
-          "Baza reaktivatsiya jarayoni",
+          "Rol tuzilishi Ovchi/Fermer/KAM/Admin",
+          "CRM-da SLA nazorati",
+          "Qo'rg'oshinni qayta ishlash qoidalari",
+          "Ma'lumotlar bazasini qayta faollashtirish jarayoni",
         ],
         bbiRole:
-          "Tizimlini yakka holdan ajratdik. «Jazolash/o'qitish/KPI ni qattiqlashtirish» o'rniga tizimli sababni bartaraf ettik — noto'g'ri loyihalangan rollar. Natija: boshqariladigan vornka, bashorat qilinadigan daromad pipeline, kassa bo'shliqlari ruxsat etilgan diapazonda. BBI tijoriy blokni qayta loyihaladi, boshqaruvni imitatsiya qilmadi.",
+          "Biz tizimlini xususiydan ajratdik. \"KPIlarni jazolash/o'rgatish/qattiqlash\" o'rniga ular tizimli sababni - noto'g'ri ishlab chiqilgan rollarni yo'q qilishdi. Natija: nazorat qilinadigan huni, bashorat qilinadigan daromad quvuri, maqbul diapazondagi naqd bo'shliqlar. BBI boshqaruvga taqlid qilishdan ko'ra, tijorat bo'linmasini qayta ishlab chiqdi.",
         sections: [
-          { title: "Mijoz", paragraphs: ["Sog'liqni saqlash / tibbiy laboratoriya sohasi."] },
+          {
+            title: "Mijoz",
+            paragraphs: ["Tibbiy laboratoriya sohasi."],
+          },
           {
             title: "So'rov",
             paragraphs: [
-              "Kompaniya CRM sozladi, SLA belgiladi, muntazam reklama kampaniyalarini olib bordi. Ammo reklama kampaniyalari samaradorligini tahlil qilganda, lidlarning ko'p qismi haqiqatda «yo'qolgan», vornka boshqarilmas edi.",
-              "Klassik konflikt darhol boshlandi: menedjerlar «marketing noto'g'ri odamlarni olib keldi, lidlar sovuq» deb aytishdi.",
+              "Kompaniya CRM-ni o'rnatdi, SLA-ni o'rnatdi va muntazam reklama kampaniyalarini yo'lga qo'ydi. Ammo reklama kampaniyalarining samaradorligini tahlil qilganda, ko'pchilik etakchilar aslida \"birlashtirilgan\" va hunining o'zi boshqarilmagani ma'lum bo'ldi.",
+              "Klassik to'qnashuv darhol boshlandi: menejerlar \"marketing noto'g'ri yo'l-yo'riqlarni olib keldi, etakchilar sovuq edi\" dedi.",
             ],
           },
           {
-            title: "Faktlar auditi nima ko'rsatdi",
-            paragraphs: ["CRM da murojaatlarni qayta ishlash zanjirini ko'tardik va haqiqiy rasmini ko'rdik:"],
+            title: "Fakt auditi nimani ko'rsatdi",
+            paragraphs: [
+              "Biz CRM-da so'rovlarni qayta ishlash zanjirini ko'tardik va haqiqiy rasmni ko'rdik:",
+            ],
             bullets: [
-              "SLA menedjerlar tomonidan bajarilmagan, kechikishlar yig'ilgan.",
-              "Rahbar CRM dagi kechikishlar haqidagi xabarnomalarga javob bermagan.",
-              "Lidlarning 31% trigger so'rovlar bilan kelgan va kontaktlarni qoldirgan (ya'ni ular bilan ishlash mumkin va kerak).",
-              "Lidlarning 59% faqat tizim avtojavobini olgan, keyin hech kim ular bilan ishlamagan.",
+              "SLAs menejerlar tomonidan bajarilmagan va kechikishlar to'plangan.",
+              "Menejer CRMda muddati o'tgan to'lovlar haqidagi bildirishnomalarga javob bermadi.",
+              "Potentsiallarning 31% trigger soʻrovlari bilan kelgan va oʻz kontaktlarini tark etgan (yaʼni, bular siz ishlashingiz mumkin boʻlgan va kerak boʻlgan yetakchilar edi).",
+              "Etakchilarning 59 foizi faqat tizim avtomatik javobini oldi, shundan so'ng hech kim ularga ergashmadi.",
             ],
             paragraphsAfterBullets: [
-              "Demak, muammo «lidlar sifatida» emas edi — muammo shundaki, lidlar bilan ishlash jarayoni mavjud emas edi.",
+              "Ya'ni, muammo \"qo'rg'oshin sifati\" emas edi - muammo etakchilar bilan jarayon sifatida ishlash mavjud emas edi.",
             ],
           },
           {
-            title: "Nima uchun «jazolash / o'qitish / KPI ni qattiqlashtirish» har doim yechim emas",
-            paragraphs: ["Biznes lidlarning yo'qolishini ko'rganda, standart choralar to'plami quyidagicha ko'rinadi:"],
+            title: "Nima uchun \"jazolash / o'rgatish / KPIlarni kuchaytirish\" har doim ham yechim emas",
+            paragraphs: [
+              "Agar korxona qo'rg'oshin oqimini ko'rsa, standart chora-tadbirlar to'plami quyidagicha ko'rinadi:",
+            ],
             bullets: [
-              "menedjerlarni «savdo»ga o'qitish,",
+              "menejerlarni \"savdo\" bo'yicha o'qitish,",
               "nazoratni kuchaytirish,",
-              "penaltilarni joriy qilish,",
-              "KPI ni qayta hisoblash,",
-              "«qo'ng'iroq qilish» va «bosish»ga majburlash.",
+              "bonuslarni kamaytirishni joriy etish,",
+              "KPIlarni qayta hisoblash,",
+              "ularni \"qo'ng'iroq qilish\" va \"bosim qilish\" ga majburlash.",
             ],
             paragraphsAfterBullets: [
-              "Bu faqat sabab yakka holda bo'lsa ishlaydi: intizom tushgan, jamoa bo'shashgan, rahbar bosishmagan, bir-ikki xodim «xato qilgan».",
-              "Lekin asosiy boshqaruv ko'nikmasi — tizimli xatolikni yakka holdan ajratish.",
-              "Chunki sabab tizimli bo'lsa, har qanday «kuchaytirish» boshqaruv teatriga aylanadi: vaqt sarflaysiz, qisqa muddatli faollik o'sishini olasiz va 2–3 hafta ichida tizim yana avvalgi holatiga qaytadi.",
+              "Bu faqat sabab shaxsiy bo'lsa ishlaydi: intizom pasaygan, jamoa bo'shashgan, menejer past ishlagan, bir yoki ikkita xodim buzilib ketgan.",
+              "Ammo asosiy boshqaruv mahorati tizimli xatoni shaxsiy xatodan ajratishdir.",
+              "Agar sabab tizimli bo'lsa, har qanday \"mustahkamlash\" nazorat taqlidiga aylanadi: siz vaqtni behuda sarflaysiz, faollikning qisqa muddatli o'sishiga erishasiz va 2-3 haftadan so'ng tizim avvalgi holatiga qaytadi.",
             ],
           },
           {
-            title: "Aslida nima bo'lgan: ijrochilarni tanlashda tizimli xato",
+            title: "Aslida nima bo'ldi: ijrochilarni tanlashda tizimli xato",
             paragraphs: [
-              "Diagnostikaga chuqurroq kirib, simptomlarni sababdan ajratdik.",
-              "Ma'lum bo'ldiki, «savdo menedjerlari» rolida haqiqatda ma'muriy funktsiyani bajaradigan odamlar tayinlangan:",
+              "Biz tashxisga chuqurroq kirib bordik va alomatlarni sababdan ajratdik.",
+              "Ma'lum bo'lishicha, tarixan ma'muriy funktsiyani bajargan odamlar \"savdo menejerlari\" roliga tayinlangan:",
             ],
             bullets: [
-              "muntazam mijozlardan so'rovlarni qabul qilish,",
-              "ijroga uzatish,",
-              "status bo'yicha kuzatish,",
-              "operatsion savollarni hal qilish.",
+              "doimiy mijozlardan qabul qilingan so'rovlar,",
+              "ijro etish uchun ariza topshirgan,",
+              "maqom bilan birga,",
+              "operatsion masalalarni hal qildi.",
             ],
             paragraphsAfterBullets: [
-              "Demak, bu «koordinator/admin» roli edi, savdo emas.",
-              "Va bu yerda tizimli rol nomuvofiqligi ishga tushdi:",
-              "Admin — reaktiv rol: oqimni qabul qilish, xatolarga yo'l qo'ymaslik, shoshilincni yopish, «operatsiyani ushlab turish».",
-              "Savdo — proaktiv rol: suhbat olib borish, mijozni kontaktga qaytarish, rad etishlarga chiday olish, qarorgacha bosish, taymingni saqlash.",
-              "Operatsion yuk ostida admin har doim «shoshilinch va qizigan»ni tanlaydi, savdo «qoldiq»da qoladi. Va bu motivatsiya masalasi emas. Bu funktsiyalar arxitekturasi masalasi.",
-              "Xulosa: muammo tizimli edi — «yomon lidlar» va «yomon menedjerlar» emas, balki noto'g'ri loyihalangan rollar va mas'uliyat.",
+              "Ya'ni, bu sotuvchi emas, balki \"xizmat koordinatori/administratori\" roli edi.",
+              "Va bu erda rollarning tizimli nomuvofiqligi paydo bo'ldi:",
+              "Administrator reaktiv roldir: oqimni qabul qilish, xatolarni oldini olish, shoshilinch ravishda yopish, \"operatsion tizimning ishlashini ta'minlash\".",
+              "Savdo - bu faol rol: dialog o'tkazing, mijozni qayta aloqaga keltiring, rad etishga dosh bering, yechimga kelgunga qadar turting, vaqtni hurmat qiling.",
+              "Operatsion yuklash sharoitida ma'mur har doim \"shoshilinch va oxirgi daqiqa\" ni tanlaydi va savdo \"qoldiq asosida\" bo'ladi. Va bu motivatsiya masalasi emas. Bu funktsiya arxitekturasi muammosi.",
+              "Tashxis natijasi: muammo tizimli edi - \"yomon etakchilar\" yoki \"yomon menejerlar\" emas, balki noto'g'ri ishlab chiqilgan rollar va majburiyatlar.",
             ],
           },
           {
-            title: "Yechim: tijoriy blokni qayta loyihalash, odamlarni «kuchaytirish» emas",
+            title: "Yechim: Odamlarni \"mustahkamlash\" emas, balki tijorat blokini qayta loyihalash",
             paragraphs: [
-              "Simptomni davolash (jazolash/o'qitish) o'rniga tizimni o'zgartirdik — funktsiyalarni ajratdik va har bir rol uchun o'lchanadigan natijani belgiladik.",
-              "Tijoriy blokni «passiv buyurtma kutilishi» modelidan daromadni boshqarish modeliga ikki asosiy rukn orqali o'tkazdik:",
+              "Alomatni davolash o'rniga (jazolash/poezd) biz tizimni o'zgartirdik - funktsiyalarni ajratdik va har bir rolga o'lchanadigan natijani tayinladik.",
+              "Biz tijorat bo'linmasini \"buyurtmalarni passiv kutish\" modelidan daromadlarni boshqarish modeliga ikkita asosiy dastak orqali o'tkazdik:",
             ],
             bullets: [
-              "Ekspansiya — yangi mijozlar orqali bozor ulushini tizimli egallash (bizning holatda — laboratoriyaga objektiv ravishda o'sish foydali bo'lgan segmentlar).",
-              "LTV maksimallashtirish — joriy bazani rivojlantirish: chastota o'sishi, o'rtacha chek, «uxlab yotgan» qaytishlar, saqlash.",
+              "Kengayish - bu yangi mijozlar orqali bozor ulushini muntazam ravishda qo'lga kiritish (bizning holatlarimizda, laboratoriya o'sishi ob'ektiv ravishda foydali bo'lgan segmentlar).",
+              "LTV maksimallashtirish - joriy bazani rivojlantirish: chastotani oshirish, o'rtacha tekshirish, shpallardan qaytish, ushlab turish.",
             ],
             paragraphsAfterBullets: [
-              "Rollar va natijalar bo'yicha yangi tuzilma:",
-              "«Savdo», «baza rivoji» va «operatsion qo'llab-quvvatlash» funktsiyalarini ajratdik, savdo ishlab chiqarish o'tini bilan yutilmasin.",
-              "1) Hunter Menedjer (yangi mijozlarni jalb qilish) — yangi mijozlar va ularni muntazam buyurtma tsikliga jalb qilish uchun javobgar.",
-              "2) Farmer Menedjer (joriy baza rivoji) — mijoz xaridlaridagi ulush, buyurtma chastotasi, saqlash va qaytishlar uchun javobgar.",
-              "3) KAM / Yo'nalish rahbari (asosiy mijozlar va yirik shartnomalar) — strategik munosabatlar va yirik shartnomalarni himoya qilish uchun javobgar.",
-              "4) Administratorlar (operatsiya va xizmat) — buyurtmalarni to'g'ri qayta ishlash va status bo'yicha kommunikatsiya uchun javobgar — lekin savdoni almashtirmaydi.",
-              "Asosiy ma'no: har bir rol «bitta natija»da bo'lishi kerak. Rollar aralashganda — biznes «sukunatda» pul yo'qotadi, keyin marketingda aybdorni qidiradi.",
+              "Rol va natijalar bo'yicha yangi tuzilma:",
+              "Biz \"sotish\", \"bazaviy ishlab chiqish\" va \"operativ qo'llab-quvvatlash\" funktsiyalarini ajratdik, shuning uchun sotish ishlab chiqarish aylanmasi bilan \"yeb ketmaydi\".",
+              "1) Menejer-Hunter (yangi mijozlarni jalb qilish) - yangi mijozlar va ularning muntazam buyurtma aylanishiga kirishi uchun javobgardir.",
+              "2) Menejer-Fermer (joriy bazani ishlab chiqish) - mijozning xaridlaridagi ulushini oshirish, buyurtmalar chastotasi, saqlash va qaytarish uchun javobgardir.",
+              "3) KAM / Line menejeri (asosiy mijozlar va yirik shartnomalar) - strategik munosabatlar va yirik shartnomalarni himoya qilish uchun javobgardir.",
+              "4) Administratorlar (OT va xizmat) - buyurtmalarni to'g'ri qayta ishlash va maqom bo'yicha aloqa sifati uchun javobgardir - lekin savdoni almashtirmaydi.",
+              "Asosiy nuqta: natijalar bo'yicha har bir rol \"bitta vazifa\" bo'lishi kerak. Rollar aralashib ketganda, biznes \"jimlikda\" pul yo'qotadi va keyin marketingda aybdorlarni qidiradi.",
             ],
           },
           {
-            title: "Joriy etilgandan keyin nima o'zgardi: raqamlarda natija",
+            title: "Amalga oshirilgandan keyin nima o'zgardi: natijalar raqamlarda",
             paragraphs: [
-              "Tizimli sababni olib tashlaganimizda, ko'rsatkichlar tez va bashorat qilinadigan tarzda siljidi — chunki tizim tizim sifatida ishlashni boshladi, geroik harakatlar to'plami emas.",
+              "Tizimli sababni olib tashlaganimizda, ko'rsatkichlar tez va bashoratli tarzda harakat qildi - chunki tizim qahramonona harakatlar to'plami sifatida emas, balki tizim sifatida ishlay boshladi.",
             ],
             bullets: [
-              "SLA 87% gacha tekislandi — kechikishlar odat bo'lishni to'xtatdi, nazorat muntazam bo'ldi, lidlarni qayta ishlash barqaror bo'ldi.",
-              "Bu konversiyada 21% o'sish berdi: murojaatlar avtojavoblar va kechikishlarda «o'lmasdan», ko'proq lidlar haqiqiy suhbat va buyurtmagacha yetdi.",
-              "Bitta mijozdan buyurtma chastotasi birinchi oyda 23% oshdi — bazani rivojlantirish va qaytishlar uchun javobgar rol paydo bo'lgani uchun.",
-              "4–6 oy buyurtma bermagan «uxlab yotgan» mijozlar bazasining 34% reaktivatsiya qilindi — chunki mijozlarni qaytarish jarayon bo'ldi, tasodif emas.",
+              "SLA 87% ga tenglashdi - kechikishlar endi odatiy hol emas edi, nazorat muntazam bo'lib qoldi, qo'rg'oshinni qayta ishlash barqaror bo'ldi.",
+              "Bu konversiyalarning 21% ga o'sishiga olib keldi: avtomatik javoblar va kechikishlar tufayli so'rovlar \"o'lishni\" to'xtatdi, ko'proq mijozlar haqiqiy dialog va buyurtmaga erishdilar.",
+              "Bir mijozdan buyurtmalar chastotasi birinchi oyda 23% ga oshdi - bu ma'lumotlar bazasini ishlab chiqish va qaytarish uchun maxsus mas'ul bo'lgan rolning paydo bo'lishi tufayli.",
+              "Mijozlar bazasining 34 foizi qayta ishga tushirildi, u \"uyqu rejimiga\" o'tdi va 4-6 oy davomida buyurtma bermadi - chunki mijozlarni qaytarish baxtsiz hodisa emas, balki jarayonga aylandi.",
             ],
             insertInfographic: true,
           },
           {
-            title: "Moliyaviy ta'sir: kassa bo'shliqlari «ruxsat etilgan koridor»ga kirgan",
+            title: "Moliyaviy ta'sir: naqd bo'shliqlar \"qabul qilinadigan chegaraga\" kirdi",
             paragraphs: [
-              "Alohida muhim: SLA yaxshilanishi va konversiya o'sishi nafaqat tijoriy, balki moliyaviy boshqaruv ta'sirini ham berdi.",
-              "Vornka boshqariladigan bo'lgach, kompaniya bashorat qilinadigan daromad oqimini oldi — CRM bosqichlari va SLA intizomiga bog'langan kelajakdagi tushumlarning aniq hajmi.",
+              "Shuni ta'kidlash kerakki, SLAni yaxshilash va konversiyalarni oshirish nafaqat tijorat, balki moliyaviy va boshqaruv ta'siriga ham ega edi.",
+              "Huni boshqarish mumkin bo'lganda, kompaniya bashorat qilinadigan daromad oqimini oldi - CRM bosqichlari va SLA intizomi bilan bog'liq bo'lgan kelajakdagi daromadlarning aniq hajmi.",
               "Bu o'z navbatida:",
             ],
             bullets: [
-              "davriy kassa bo'shliqlarini qisqartirdi, chunki tushumlar «lotereya» bo'lishni to'xtatdi;",
-              "to'lovlar va xaridlarni «his-tuyg'u» bo'yicha emas, vornka harakati asosida daromad prognozi bo'yicha rejalashtirishga imkon berdi;",
-              "qo'lda boshqaruv va favqulodda vaziyatlardan qat'iy nazar — pul jarayon natijasi bo'ldi, geroizm emas.",
+              "takroriy pul bo'shliqlari kamaytirildi, chunki tushumlar endi \"lotereya\" emas edi;",
+              "to'lovlar va xaridlarni \"hissiyot orqali\" emas, balki huni harakatidan kelib chiqqan holda daromad prognozi bilan rejalashtirish imkonini berdi;",
+              "qo'lda boshqarish va shoshilinch ishlarga bog'liqlikni kamaytirish - pul qahramonlik emas, balki jarayonning natijasi bo'ldi.",
             ],
           },
           {
             title: "Asosiy xulosa",
             paragraphs: [
-              "Bu keys bitta narsa haqida: tizimlini yakka holdan ajratmasdan boshqaruv qararlarini qabul qilib bo'lmaydi.",
-              "Agar biz odatiy «menedjerlar aybdor — jarima/o'qitish/KPI ni qattiqlashtirish» yo'lini tanlagan bo'lsak, kompaniya qisqa muddatli ta'sir olgan va keyin yana o'sha nuqtaga qaytgan bo'lar edi, chunki rollar va mas'uliyat arxitekturasi o'zgarmagan bo'lardi.",
-              "Biz boshqacha qildik: tizimli sababni olib tashladik — va SLA, konversiyalar, buyurtma chastotasi, baza reaktivatsiyasi va eng muhimi daromad bashorat qilinadiganligida o'lchanadigan natijaga erishdik.",
+              "Bu holat bitta narsaga bog'liq: siz tizimli va shaxsiyni ajratmasdan boshqaruv qarorlarini qabul qila olmaysiz.",
+              "Agar biz odatdagi \"menejerlar aybdor - biz KPIlarni yaxshilaymiz/o'qitamiz/mustahkamlaymiz\" yo'liga ergashgan bo'lsak, kompaniya qisqa muddatli ta'sirga ega bo'ladi va keyin o'sha nuqtaga qaytadi, chunki rollar va mas'uliyatlar arxitekturasi bir xil bo'lib qoladi.",
+              "Biz buni boshqacha qildik: tizimli sababni yo‘q qildik va SLA, konversiyalar, buyurtmalar chastotasi, ma’lumotlar bazasini qayta faollashtirish va eng muhimi, daromadni bashorat qilish bo‘yicha o‘lchanadigan natijalarga erishdik.",
             ],
           },
         ],
-      }
+      },
     ],
   },
   blog: {
-    hero: { title: "Blog va ekspertiza", description: "Mustaqil va himoyalangan biznes tizimlari haqida maqolalar." },
+    hero: {
+      title: "Blog va tajriba",
+      description: "Avtonom va xavfsiz biznes tizimlarini qurish haqida maqolalar.",
+    },
     filters: {
-      all: "Barchasi",
+      all: "Hammasi",
       marketing: "Marketing",
       finance: "Moliya",
-      operations: "Operatsiya",
+      operations: "OS",
     },
-    noPosts: "Bu toifada hozircha maqolalar yo'q.",
-    card: { readMore: "Batafsil" },
+    noPosts: "Ushbu turkumda hali maqolalar mavjud emas.",
+    card: { readMore: "Batafsil ma'lumot" },
     article: { backToBlog: "← Blog" },
     posts: [
-      { slug: "5-shagov-avtonomnoe-upravlenie", category: "Operatsiya", categoryKey: "operations", title: "5 qadam: avtonom boshqaruv", description: "Ritm, SOP va nazorat qanday quriladi.", image: "/blog/operations-autonomous.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }], cta: { label: "Chek-list yuklash", href: "/contacts" } },
-      { slug: "diagnostika-problemy-biznesa", category: "Diagnostika", categoryKey: "diagnostics", title: "Diagnostika", description: "Haqiqiy muammolarni topish.", image: "/blog/diagnostics-analysis.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }], cta: { label: "Skriningga yozilish", href: "/contacts" } },
-      { slug: "ekonomika-kanalov-marketing", category: "Marketing", categoryKey: "marketing", title: "Kanal iqtisodiyoti", description: "Skvoz analitika va o'sish.", image: "/blog/ekonomika-kanalov.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
-      { slug: "sistemnye-prodazhi", category: "Savdo", categoryKey: "sales", title: "Tizimli savdo", description: "Standartlar va CRM.", image: "/blog/sistemnye-prodazhi.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
-      { slug: "finansovaya-prozrachnost", category: "Moliya", categoryKey: "finance", title: "Moliyaviy shaffoflik", description: "Yagona haqiqat raqamlarda.", image: "/blog/finansovaya-prozrachnost.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
-      { slug: "hr-kak-sistema", category: "HR", categoryKey: "hr", title: "HR tizim sifatida", description: "Rollar va mas'uliyat.", image: "/blog/hr-kak-sistema.png", sections: [{ title: "Umumiy", paragraphs: ["Content placeholder."] }] },
+      {
+        slug: "5-shagov-avtonomnoe-upravlenie",
+        category: "OS",
+        categoryKey: "operations",
+        title: "Avtonom haydash uchun 5 qadam",
+        description: "Biznes egasining qo'l aralashuvisiz ishlashi uchun ritm, SOP va ijro nazoratini qanday qurish kerak.",
+        image: "/blog/operations-autonomous.png",
+        sections: [
+          {
+            title: "Nega “direktor” muammoni hal qilmaydi?",
+            paragraphs: [
+              "Avtonom boshqaruv \"yaxshi direktorni yollash\" haqida emas. Biz tizim haqida gapiramiz: uchrashuvlar ritmi, SOPlar, KPI panellari va ijroni nazorat qilish. Barcha oltita ustunlar birgalikda ishlaganda, egasi operatsiya xonasidan uzoqlashishi va strategiyaga e'tibor qaratishi mumkin.",
+              "Klassik xato - bu tizimni odam bilan almashtirish. Direktor \"hamma narsani boshida saqlasa\"-da, biznes bir kishiga bog'liq. Tizim qahramonlarsiz ishlaydi.",
+            ],
+            image: "/blog/director-problem.png",
+          },
+          {
+            title: "1-qadam: Yoriqlar diagnostikasi",
+            paragraphs: [
+              "“Qaror → ijro → nazorat” zanjiridagi uzilishlar qayerda? Ko'pincha qarorlar yig'ilishlarda qabul qilinadi, lekin ular bajarilmaydi. Yoki nazorat haqiqatdan ajralgan - hisobotlar faktlarga to'g'ri kelmaydigan rasmni chizadi.",
+              "Diagnostika shuni ko'rsatadi: kim nima uchun javobgar, javobgarlik qanday o'tkaziladi, ma'lumot qayerda yo'qoladi. Ushbu kartasiz har qanday yaxshilanishlar ko'r-ko'rona suratga olinadi.",
+            ],
+            image: "/blog/steps-alt-1.png",
+          },
+          {
+            title: "2-qadam: Boshqaruv ritmi",
+            paragraphs: [
+              "Haftalik rejalashtirish uchrashuvlari, oylik sharhlar, har chorakda strategik sessiyalar. Ritm bashoratlilikni yaratadi: jamoa qachon va nimani muhokama qilishni va qanday qarorlar qabul qilishni biladi.",
+              "Ritm \"uchrashuv uchun yig'ilish\" emas. Har bir tadbirning maqsadi, kun tartibi va kutilgan natijasi bor. Aks holda, bu shunchaki vaqtni behuda sarflash.",
+            ],
+            image: "/blog/steps-alt-2.png",
+          },
+          {
+            title: "3-qadam: SOP va nazorat ro'yxatlari",
+            paragraphs: [
+              "Jarayonlar yangi odam kirishi va topshiriqni ko'rsatmalarga muvofiq bajarishi uchun tasvirlangan bo'lishi kerak. SOP byurokratiya emas, balki takrorlanuvchanlik kafolati.",
+              "Tekshirish ro'yxatlari muhim bosqichlarni qayd etadi. Ular fikrlashning o'rnini bosmaydi, lekin unutilgan qadamlarni yo'q qiladi va \"Men buni siz qilgan deb o'yladim\".",
+            ],
+            image: "/blog/sop-step-3.png",
+          },
+          {
+            title: "4 va 5-qadam: asboblar paneli va bajarilishini nazorat qilish",
+            paragraphs: [
+              "Raqamlarda bitta \"haqiqat\": moliya, huni, operatsion tizim. Excel fayllarisiz va \"har kim o'z yo'lida hisoblaydi\". Boshqaruv panellari tafsilotlarga sho'ng'imasdan egasiga shaffoflikni beradi.",
+              "Ijroni nazorat qilish - bu \"ular buni amalga oshirishiga umid qilish\" emas, balki muddatlar, holatlar va kuchayishlarni qayd etish tizimi. Vazifa kechikdimi? Tizim signallari. Javobgar shaxs aniq.",
+            ],
+            image: "/blog/step-4-5-dashboards.png",
+          },
+        ],
+        cta: { label: "Tekshirish ro'yxatini yuklab olish", href: "/contacts" },
+      },
+      {
+        slug: "diagnostika-problemy-biznesa",
+        category: "Diagnostika",
+        categoryKey: "diagnostics",
+        title: "Diagnostika: haqiqiy biznes muammolarini qanday aniqlash mumkin",
+        description: "Nima uchun \"hamma narsa yomon\" kamdan-kam hollarda to'g'ri va tizimdagi haqiqiy muvaffaqiyatsizlik nuqtalarini qanday topish mumkin.",
+        image: "/blog/diagnostics-analysis.png",
+        sections: [
+          {
+            title: "Diagnostika nima uchun kerak?",
+            paragraphs: [
+              "Diagnostika \"aybdorni topish\" haqida emas. Bu tizim qayerda ishlamay qolganini tushunish haqida. Ko'pincha egasi \"nimadir noto'g'ri\" deb hisoblaydi: daromad bor, lekin foyda yo'qoladi; Buyruq ishlayotganga o'xshaydi, ammo natija yo'q. Sababi loyqa.",
+              "Tashxissiz har qanday davolanish taxminiydir. Siz odamlarni o'zgartirishingiz, yangi vositalarni kiritishingiz mumkin, ammo muammoning ildizi topilmasa, alomatlar qaytadi.",
+            ],
+            image: "/blog/diagnostics-why-search.png",
+          },
+          {
+            title: "Nosozlik signallarining uch turi",
+            paragraphs: [
+              "Raqamlardagi tartibsizlik birinchi signaldir. Agar turli bo'limlarda moliya boshqacha hisoblansa, bitta rasm yo'q. Qarorlar ko'r-ko'rona qabul qilinadi, prognozlar faktlarga mos kelmaydi.",
+              "Odamlarga qaramlik ikkinchi o'rinda turadi. Bir kishi asosiy jarayonni boshida saqlasa, biznes mo'rt bo'ladi. Uning ketishi, kasalligi yoki charchashi = butun zanjirning buzilishi.",
+              "Hunining shaffofligi uchinchi. Mijozlar qayerdan keladi? Qo'rg'oshin qancha turadi? Har bir bosqichda konvertatsiya darajasi qanday? Javoblar yo'q - faqat sezgi va umid.",
+            ],
+            image: "/blog/diagnostics-signals.png",
+          },
+          {
+            title: "Diagnostik xarita sifatida oltita ustun",
+            paragraphs: [
+              "BBI diagnostikani oltita ustun prizmasi orqali olib boradi: operatsiyalar, marketing, savdo, moliya, HR, yuridik. himoya qilish. Har bir ustun xavf zonasi va o'sish nuqtasidir.",
+              "Birida muvaffaqiyatsizlik boshqalarga olib keladi. Sotishdagi muammolar marketing yoki operatsiyalar natijasi bo'lishi mumkin. Diagnostika munosabatlar va ustuvorliklarni ko'rsatadi.",
+            ],
+            image: "/blog/diagnostics-pillars-map.png",
+          },
+        ],
+        cta: { label: "Diagnostika bilan boshlang", href: "/contacts" },
+      },
+      {
+        slug: "ekonomika-kanalov-marketing",
+        category: "Marketing",
+        categoryKey: "marketing",
+        title: "Kanal iqtisodiyoti: byudjetni behuda sarflashni qanday to'xtatish kerak",
+        description: "\"Reklamani ishga tushiring va kuting\" o'rniga end-to-end analitika, CAC, LTV va boshqariladigan o'sish.",
+        image: "/blog/ekonomika-kanalov-reshenie.png",
+        sections: [
+          {
+            title: "Nima uchun raqamlarsiz marketing lotereya",
+            paragraphs: [
+              "Kanal iqtisodiyotisiz marketing - bu lotereya. Pul Yandex, Google, ijtimoiy tarmoqlarga ketadi, ammo qaysi kanal to'lashi va qaysi biri oddiygina byudjetni \"yeyishi\" aniq emas. Zararli CAC bilan daromadning o'sishi muvaffaqiyat illyuziyasidir.",
+              "\"Biz marketingga sarmoya kiritamiz\" - bu strategiya emas. Siz bilishingiz kerak: har bir kanaldan qo'rg'oshin qancha turadi, mijozning LTV qiymati qancha, kanal o'z hayoti davomida o'zini o'zi to'laydimi yoki yo'qmi.",
+            ],
+            image: "/blog/marketing-bez-tsifr-lotereya.png",
+          },
+          {
+            title: "Asos sifatida yakuniy tahlil",
+            paragraphs: [
+              "Bosishdan to to'lovgacha: qaysi kanal olib bordi, qo'rg'oshin qancha turadi, mijozning LTV qancha. Yakuniy tahlillarsiz qarorlar his-tuyg'ular va hisobotlar asosida turli metodologiyalar bilan qabul qilinadi.",
+              "Yakuniy tahlilni o'rnatish birinchi qadamdir. Shundan keyingina kanal boshqaruvi va prognoz qilingan o'sish haqida gapirish mumkin.",
+            ],
+            image: "/blog/skvoznaya-analitika-barchart.png",
+          },
+          {
+            title: "CAC, LTV va boshqariladigan o'sish",
+            paragraphs: [
+              "CAC (mijozni sotib olish qiymati) va LTV (umr bo'yi qiymati) asosiy ko'rsatkichlardir. Agar CAC LTV dan oshsa, o'sish foydasiz bo'ladi. Hatto daromad o'sishi bilan ham.",
+              "Boshqariladigan o'sish - natijani taxmin qilish mumkin bo'lganda. Kanalni ishga tushirdi, o'lchadi, o'lchadi yoki o'chirildi. \"Umid qilamanki, otadi\" va \"yana bir oy kutamiz\".",
+            ],
+            image: "/blog/cac-ltv-upravlyaemyj-rost.png",
+          },
+        ],
+      },
+      {
+        slug: "sistemnye-prodazhi",
+        category: "Sotish",
+        categoryKey: "sales",
+        title: "\"Yulduzlar\"siz tizimli savdo",
+        description: "Menejerning xarizmasiga qarab o'rniga standartlar, skriptlar va CRM.",
+        image: "/blog/sistemnye-prodazhi-process-chain.png",
+        sections: [
+          {
+            title: "Tizim savdosi nima",
+            paragraphs: [
+              "Tizimli savdo - natija ma'lum bir shaxsga bog'liq bo'lmaganda. Aloqa standartlari, skriptlar, CRM va huni nazorati takrorlanadigan natijani yaratadi. Qisqa vaqt ichida yangi menejer kelib, maqbul raqamlarni joylashtirishi mumkin.",
+              "Bu \"ijodkorlikni o'ldirish\" yoki \"hammani bir xil gapirishga majbur qilish\" haqida emas. Biz baza haqida gapiramiz: qo'rg'oshinni qanday qayta ishlash, hunining qaysi bosqichlari, uni etkazib berishga qanday o'tkazish.",
+            ],
+            image: "/blog/sistemnye-prodazhi-checklist.png",
+          },
+          {
+            title: "\"Yulduzlar\" muammosi",
+            paragraphs: [
+              "Bitta menejer bitimlarning 80 foizini bajaradi - tanish rasm. Uning ketishi, ta'til yoki charchash = falokat. Biznes bir kishining garovidir.",
+              "Tizim natijalarni yo'qotmasdan odamlarni o'zgartirish va almashtirish imkonini beradi. \"Boshqa yulduzni topish\" uchun emas, balki natija xarizma emas, balki jarayondan kelib chiqadigan huni qurish uchun.",
+            ],
+            image: "/blog/sistemnye-prodazhi-zvezdy-lovushka.png",
+          },
+          {
+            title: "CRM boshqaruv vositasi sifatida",
+            paragraphs: [
+              "CRM bu “hisobotlar uchun asos” emas, balki boshqaruv vositasidir. Huni, qo'rg'oshinni qayta ishlash vaqti, bosqichlarda konvertatsiya qilish. Hamma narsani o'lchash mumkin. Kim tiqilib qoldi, qayerda darboğaz, kim o'z vaqtida yo'qotmaydi.",
+              "BBI savdoni tizim sifatida quradi: birinchi kontakt skriptlaridan tortib yetkazib berishgacha. \"Iqtidorga tayanish\" emas, balki leverage.",
+            ],
+            image: "/blog/crm-element-kontrolya.png",
+          },
+        ],
+      },
+      {
+        slug: "finansovaya-prozrachnost",
+        category: "Moliya",
+        categoryKey: "finance",
+        title: "Moliyaviy shaffoflik: raqamlarda bitta haqiqat",
+        description: "Egasi turli bo'limlarning versiyalarini emas, balki haqiqiy rasmni ko'rishi uchun buxgalteriya hisobini qanday yig'ish kerak.",
+        image: "/blog/finansovaya-prozrachnost-podpis.png",
+        sections: [
+          {
+            title: "\"Bir haqiqat\" nimani anglatadi?",
+            paragraphs: [
+              "Raqamlarda bitta haqiqat shundaki, moliya bir xilda, \"CFO versiyasi\" va \"OS versiyasi\"siz ko'rib chiqiladi. Egasi bitta rasmni ko'radi: daromad, xarajatlar, marja, pul oqimi.",
+              "Hozirgi kunda bu ko'pincha boshqacha sodir bo'ladi: moliya bir raqamni beradi, operatsiyalar boshqasini beradi, savdo uchinchisini beradi. Uchrashuvda \"haqiqat\" ning uchta versiyasi mavjud. Tumanda qarorlar qabul qilinadi.",
+            ],
+            image: "/blog/finansovaya-odna-pravda.png",
+          },
+          {
+            title: "Parchalangan buxgalteriya hisobi va uning oqibatlari",
+            paragraphs: [
+              "Har bir bo'lim boshqacha hisoblaydi. Excel fayllari ko'payadi, metodologiyalar farqlanadi. Natijada bir-biriga zid bo'lgan hisobotlar va noto'g'ri qarorlar.",
+              "Buxgalteriya hisobi standartlari, xaridlarni nazorat qilish, xarajatlar, marjalar - barchasi yagona tizimda bo'lishi kerak. Boshqa hisobotlar emas, asboblar paneli.",
+            ],
+            image: "/blog/finansovaya-fragmentirovannyj-uchet.png",
+          },
+          {
+            title: "Moliya ustunlar asosi sifatida",
+            paragraphs: [
+              "Moliya BBIning oltita ustunidan biridir. Bu erda shaffofliksiz, qolgan ustunlar qum ustiga qurilgan. Moliyaviy rasmni ko'rmasdan marketing, savdo yoki operatsion qarorlar qabul qilish mumkin emas.",
+            ],
+            image: "/blog/finansy-osnova-stolpov.png",
+          },
+        ],
+      },
+      {
+        slug: "hr-kak-sistema",
+        category: "HR",
+        categoryKey: "hr",
+        title: "HR tizim sifatida: \"odamlarni toping\" emas, balki barqarorlikni yarating",
+        description: "Rollar, mas'uliyat sohalari, ishga kirishish va jamoa o'zgarganda buzilmaydigan madaniyat.",
+        image: "/blog/hr-kak-sistema-ustojchivost.png",
+        sections: [
+          {
+            title: "HR nafaqat ishga qabul qilish bilan bog'liq",
+            paragraphs: [
+              "HR bu \"yaxshi odamlarni topish\" haqida emas. Biz tizim haqida gapiramiz: rollar, mas'uliyat sohalari, bortga kirish, madaniyat. Jamoa takrorlanadigan bo'lishi kerak. Agar asosiy shaxs ketgan bo'lsa, jarayon aniq qoidalarga muvofiq boshqasiga o'tkazilishi mumkin.",
+              "Tizimsiz tanlash bir martalik echimlarni beradi. Odamlarni almashtirishda tizim barqaror.",
+            ],
+            image: "/blog/hr-ne-tolko-podbor.png",
+          },
+          {
+            title: "RACI, ko'rsatmalar va chegaralar",
+            paragraphs: [
+              "RACI, ish ta'riflari, aniq chegaralar - bu \"almashib bo'lmaydigan\" xodimlarga qaramlikni kamaytiradi. Har qanday jarayonni tasvirlash va etkazish mumkin.",
+              "Agar \"faqat Vasya qanday ishlashini bilsa\", bu Vasyaning noyob qobiliyatlari haqida emas, balki hujjatlashtirilgan jarayonlarning etishmasligi haqida.",
+            ],
+            image: "/blog/crm-instrument-kontrolya.png",
+          },
+          {
+            title: "Bortga kirish va madaniyat",
+            paragraphs: [
+              "Onboarding - yangi odam tizimga qanday kiradi. Agar u \"o'zini o'zi aniqlashi\" yoki \"boshqalar nima qilayotganini ko'rishi\" kerak bo'lsa, tizim buzilgan. Onboarding tuzilgan bo'lishi kerak.",
+              "HR ustun sifatida katta rasmning bir qismidir. Barqaror jamoa bo'lmasa, operatsiyalar, savdo va marketing xavf ostida ishlaydi. Bir qadam qolganda zanjir uziladi.",
+            ],
+            image: "/blog/hr-onboarding-kultura.png",
+          },
+        ],
+      },
     ],
   },
   contacts: {
     hero: {
       eyebrow: "Skrining",
-      title: "Skriningga yozilish",
+      title: "Ko'rish uchun ro'yxatdan o'ting",
       description:
-        "Formani to'ldiring — 24 soat ichida bog'lanamiz va o'lcham, o'sish nuqtalari va hamkorlik imkoniyatini muhokama qilamiz.",
+        "Shaklni to'ldiring - biz 24 soat ichida siz bilan bog'lanamiz va miqyos, o'sish sohalari va hamkorlik imkoniyatlarini muhokama qilamiz.",
     },
     form: {
       name: "Ism",
-      company: "Kompaniya / biznes",
+      company: "Kompaniya/biznes",
       contact: "Telefon yoki messenjer",
       turnoverTeamSize: "Aylanma yoki jamoa hajmi (ixtiyoriy)",
-      request: "So'rov haqida qisqacha",
-      submit: "Skriningga yozilish",
-      successMessage: "So'rov yuborildi. Tez orada siz bilan bog'lanamiz.",
-      errorMessage: "So'rovni yuborib bo'lmadi. Keyinroq urinib ko'ring yoki to'g'ridan-to'g'ri yozing.",
+      request: "Murojaat haqida qisqacha",
+      submit: "Yuborish",
+      successMessage: "Ariza yuborildi. Tez orada siz bilan bog'lanamiz.",
+      errorMessage: "Ariza topshirilmadi. Keyinroq qayta urinib ko'ring yoki bizga to'g'ridan-to'g'ri yozing.",
     },
+  },
+  ui: {
+    notFoundTitle: "Sahifa topilmadi",
+    notFoundDescription: "Havolani tekshiring yoki asosiy sahifaga qayting.",
+    notFoundHome: "Bosh sahifaga",
+    searchPlaceholder: "Qidiruv",
+    searchSubmit: "Toping",
+    footerLogoAria: "BBI — bosh sahifaga",
+    contactsConsentBeforeLink:
+      "«Yuborish» tugmasini bosgan holda men ",
+    contactsConsentLinkText: "shaxsiy ma'lumotlarimni qayta ishlashga rozilik beraman",
+    contactsConsentAfterLink: ".",
+    privacyModalCloseAria: "Maxfiylik siyosati oynasini yoping",
+    privacyPageTitle: "Maxfiylik siyosati",
+    privacyModalTitle: "Maxfiylik siyosati",
   },
 };

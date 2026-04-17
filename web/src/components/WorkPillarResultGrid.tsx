@@ -45,13 +45,17 @@ export function WorkPillarResultGrid({ pillars, detailsLabel, modalLabels }: Wor
           const hasModal = Boolean(pillar.resultExpanded);
           return (
             <article key={`${pillar.key}-result`} className="group relative flex h-full min-h-0 min-w-0 flex-col overflow-visible">
-              <span
-                className={`${indexClass} absolute z-20 flex items-center justify-center text-[34px] font-semibold leading-none sm:text-[38px] md:text-[40px] lg:text-[42px]`}
+              <div
+                className="pointer-events-none absolute top-0 left-0 z-20 flex h-[60px] w-[78px] items-center justify-center sm:h-[70px] sm:w-[94px]"
                 aria-hidden
               >
-                {i + 1}
-              </span>
-              <div className={`${shellClass} relative mt-1 ml-1 min-w-0 sm:mt-1.5 sm:ml-1.5 md:mt-2 md:ml-2`}>
+                <span
+                  className={`${indexClass} relative flex items-center justify-center text-[34px] font-semibold leading-none sm:text-[38px] md:text-[40px] lg:text-[42px]`}
+                >
+                  {i + 1}
+                </span>
+              </div>
+              <div className={`${shellClass} relative mt-1 ml-1 min-h-0 min-w-0 flex-1 sm:mt-1.5 sm:ml-1.5 md:mt-2 md:ml-2`}>
                 <div className="icp-card__content">
                   <div className="icp-card__title">
                     <h3 className="break-words text-[1.0625rem] font-semibold leading-[1.14] tracking-tight text-white/90 sm:text-[1.1875rem] md:text-[1.25rem] lg:text-[1.3125rem]">
@@ -61,7 +65,7 @@ export function WorkPillarResultGrid({ pillars, detailsLabel, modalLabels }: Wor
                   <div className="icp-card__body mt-1.5 text-[0.875rem] leading-[1.52] text-white/78 sm:mt-2 sm:text-[0.9375rem] sm:leading-[1.48] md:text-[0.96875rem] md:leading-[1.48] lg:text-[1rem]">
                     <p className="line-clamp-[5] break-words sm:line-clamp-4 md:line-clamp-[5] xl:line-clamp-4">{pillar.result}</p>
                   </div>
-                  <div className="icp-card__footer">
+                  <div className="icp-card__footer mt-auto pt-2">
                     {hasModal ? (
                       <button
                         type="button"

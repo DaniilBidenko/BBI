@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Container } from "@/components/Container";
 import type { WorkPillar } from "@/content/dictionaries/types";
 
@@ -8,6 +11,11 @@ type WorkPillarGridSectionProps = {
   field: "result" | "broken" | "actions";
   badge: string;
   detailsLabel: string;
+  pillarCardUi: {
+    whatWeBuild: string;
+    partnerWithClient: string;
+    brokenPracticeHeading: string;
+  };
 };
 
 const headerStyles = {
@@ -55,6 +63,9 @@ function PillarGridCard({
   detailsLabel,
   whatWeBuildLabel,
   partnerLabel,
+  brokenPracticeHeading,
+  isOpen,
+  onToggle,
 }: {
   pillar: WorkPillar;
   index: number;
@@ -63,6 +74,9 @@ function PillarGridCard({
   detailsLabel: string;
   whatWeBuildLabel: string;
   partnerLabel: string;
+  brokenPracticeHeading: string;
+  isOpen: boolean;
+  onToggle: () => void;
 }) {
   const hasActionsExpanded = field === "actions" && pillar.actionsExpanded;
   const detailItems = pillar.details.filter((item) => !item.endsWith(":"));
@@ -80,18 +94,24 @@ function PillarGridCard({
       : field === "broken" && pillar.brokenExpanded
         ? pillar.brokenExpanded
         : detailItems;
-  const expandedLabel = field === "broken" ? "Как это выглядит на практике" : whatWeBuildLabel;
+  const expandedLabel = field === "broken" ? brokenPracticeHeading : whatWeBuildLabel;
 
   return (
-    <article className="group relative flex h-full min-h-0 min-w-0 flex-col overflow-visible">
-      <span
-        className={`${indexClass[field]} absolute z-20 flex items-center justify-center text-[34px] font-semibold leading-none transition-transform duration-300 ease-out group-hover:-translate-y-0.5 sm:text-[38px] md:text-[40px] lg:text-[42px]`}
+    <article className="group relative flex w-full min-w-0 flex-col self-start overflow-visible">
+      <div
+        className="pointer-events-none absolute top-0 left-0 z-20 flex h-[60px] w-[78px] items-center justify-center sm:h-[70px] sm:w-[94px]"
         aria-hidden
       >
-        {index + 1}
-      </span>
+        <span
+          className={`${indexClass[field]} relative flex items-center justify-center text-[34px] font-semibold leading-none transition-transform duration-300 ease-out group-hover:-translate-y-0.5 sm:text-[38px] md:text-[40px] lg:text-[42px]`}
+        >
+          {index + 1}
+        </span>
+      </div>
       <div
-        className={`${shellClass[field]} relative mt-1 ml-1 min-w-0 sm:mt-1.5 sm:ml-1.5 md:mt-2 md:ml-2`}
+        className={`${shellClass[field]} relative mt-1 ml-1 min-h-0 w-full min-w-0 sm:mt-1.5 sm:ml-1.5 md:mt-2 md:ml-2 ${
+          isOpen ? "icp-card--pillar-expanded" : ""
+        }`}
       >
         <div className="icp-card__content">
           <div className="icp-card__title">
@@ -103,67 +123,75 @@ function PillarGridCard({
             <p className="line-clamp-[5] break-words sm:line-clamp-4 md:line-clamp-[5] xl:line-clamp-4">{body}</p>
           </div>
           <div className="icp-card__footer mt-auto pt-2">
-            <details className="group/details">
-              <summary
-                className={`${detailsTextClass[field]} inline-flex cursor-pointer list-none items-center gap-1.5 marker:hidden [&::-webkit-details-marker]:hidden`}
+            <div className="group w-full">
+              <button
+                type="button"
+                onClick={onToggle}
+                aria-expanded={isOpen}
+                className={`${detailsTextClass[field]} inline-flex cursor-pointer items-center gap-1.5 border-0 bg-transparent p-0 text-left font-inherit underline-offset-2 transition hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgba(255,192,7,0.45)]`}
               >
                 <span>{detailsLabel}</span>
-                <span className="text-[12px] font-semibold transition-transform duration-200 group-open/details:rotate-90" aria-hidden>
+                <span
+                  className={`text-[12px] font-semibold transition-transform duration-200 ${isOpen ? "rotate-90" : ""}`}
+                  aria-hidden
+                >
                   &gt;&gt;
                 </span>
-              </summary>
-              <div className="mt-0 max-h-0 overflow-hidden rounded-xl border border-white/10 bg-black/20 p-0 text-left opacity-0 transition-all duration-300 ease-out group-open/details:mt-3 group-open/details:max-h-[40vh] group-open/details:overflow-y-auto group-open/details:p-3 group-open/details:opacity-100 sm:group-open/details:max-h-[260px] sm:group-open/details:p-3.5">
-                {hasActionsExpanded && pillar.actionsExpanded ? (
-                  <>
-                    <p className="text-[0.875rem] font-medium leading-[1.45] text-white/90 sm:text-[0.9375rem]">
-                      {pillar.actionsExpanded.partnerHeading}
-                    </p>
-                    {pillar.actionsExpanded.sections.map((section, si) => (
-                      <div key={`${pillar.key}-act-${si}`} className={si === 0 ? "mt-3" : "mt-4"}>
-                        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-white/70">
-                          {section.title}
-                        </p>
-                        <ul className="mt-2 space-y-2">
-                          {section.items.map((item, itemIndex) => (
-                            <li
-                              key={`${pillar.key}-act-${si}-${itemIndex}`}
-                              className="flex gap-2 text-[0.8125rem] leading-[1.45] text-white/82"
-                            >
-                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/70" aria-hidden />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </>
-                ) : (
-                  <>
-                    {summaryText ? (
-                      <p className="text-[0.875rem] leading-[1.52] text-white/88 sm:text-[0.9375rem]">{summaryText}</p>
-                    ) : null}
-                    {listItems.length > 0 ? (
-                      <>
-                        <p className="mt-3 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-white/70">
-                          {field === "result" && pillar.resultExpanded ? partnerLabel : expandedLabel}
-                        </p>
-                        <ul className="mt-2 space-y-2">
-                          {listItems.map((item, itemIndex) => (
-                            <li
-                              key={`${pillar.key}-${field}-${itemIndex}`}
-                              className="flex gap-2 text-[0.8125rem] leading-[1.45] text-white/82"
-                            >
-                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/70" aria-hidden />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </>
-                    ) : null}
-                  </>
-                )}
-              </div>
-            </details>
+              </button>
+              {isOpen && (
+                <div className="mt-3 max-h-[40vh] overflow-y-auto rounded-xl border border-white/10 bg-black/20 p-3 text-left sm:max-h-[260px] sm:p-3.5">
+                  {hasActionsExpanded && pillar.actionsExpanded ? (
+                    <>
+                      <p className="text-[0.875rem] font-medium leading-[1.45] text-white/90 sm:text-[0.9375rem]">
+                        {pillar.actionsExpanded.partnerHeading}
+                      </p>
+                      {pillar.actionsExpanded.sections.map((section, si) => (
+                        <div key={`${pillar.key}-act-${si}`} className={si === 0 ? "mt-3" : "mt-4"}>
+                          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-white/70">
+                            {section.title}
+                          </p>
+                          <ul className="mt-2 space-y-2">
+                            {section.items.map((item, itemIndex) => (
+                              <li
+                                key={`${pillar.key}-act-${si}-${itemIndex}`}
+                                className="flex gap-2 text-[0.8125rem] leading-[1.45] text-white/82"
+                              >
+                                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/70" aria-hidden />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </>
+                  ) : (
+                    <>
+                      {summaryText ? (
+                        <p className="text-[0.875rem] leading-[1.52] text-white/88 sm:text-[0.9375rem]">{summaryText}</p>
+                      ) : null}
+                      {listItems.length > 0 ? (
+                        <>
+                          <p className="mt-3 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-white/70">
+                            {field === "result" && pillar.resultExpanded ? partnerLabel : expandedLabel}
+                          </p>
+                          <ul className="mt-2 space-y-2">
+                            {listItems.map((item, itemIndex) => (
+                              <li
+                                key={`${pillar.key}-${field}-${itemIndex}`}
+                                className="flex gap-2 text-[0.8125rem] leading-[1.45] text-white/82"
+                              >
+                                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/70" aria-hidden />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      ) : null}
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -172,7 +200,7 @@ function PillarGridCard({
 }
 
 const gridClass =
-  "grid w-full grid-cols-1 gap-4 [align-items:stretch] sm:grid-cols-2 sm:gap-4 md:gap-5 lg:gap-5 xl:grid-cols-3 xl:gap-5 2xl:gap-6";
+  "grid w-full grid-cols-1 items-start gap-4 sm:grid-cols-2 sm:gap-4 md:gap-5 lg:gap-5 xl:grid-cols-3 xl:gap-5 2xl:gap-6";
 
 export function WorkPillarGridSection({
   title,
@@ -181,11 +209,39 @@ export function WorkPillarGridSection({
   field,
   badge,
   detailsLabel,
+  pillarCardUi,
 }: WorkPillarGridSectionProps) {
+  /** Одна открытая карточка на секцию — соседние не растягиваются по высоте строки */
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const header = headerStyles[field];
   const showBadge = Boolean(badge.trim());
-  const whatWeBuildLabel = "Что строим";
-  const partnerLabel = "Что остаётся у партнёра";
+  const whatWeBuildLabel = pillarCardUi.whatWeBuild;
+  const partnerLabel = pillarCardUi.partnerWithClient;
+  const brokenPracticeHeading = pillarCardUi.brokenPracticeHeading;
+
+  const toggleCard = (index: number) => {
+    setOpenIndex((prev) => (prev === index ? null : index));
+  };
+
+  const grid = (
+    <div className={gridClass}>
+      {pillars.map((pillar, i) => (
+        <PillarGridCard
+          key={`${pillar.key}-${field}`}
+          pillar={pillar}
+          index={i}
+          field={field}
+          body={pillar[field]}
+          detailsLabel={detailsLabel}
+          whatWeBuildLabel={whatWeBuildLabel}
+          partnerLabel={partnerLabel}
+          brokenPracticeHeading={brokenPracticeHeading}
+          isOpen={openIndex === i}
+          onToggle={() => toggleCard(i)}
+        />
+      ))}
+    </div>
+  );
 
   return (
     <section className={`${header.section} overflow-x-clip`}>
@@ -200,22 +256,7 @@ export function WorkPillarGridSection({
           </p>
         </div>
 
-        {field === "result" && (
-          <div className={gridClass}>
-            {pillars.map((pillar, i) => (
-              <PillarGridCard
-                key={`${pillar.key}-${field}`}
-                pillar={pillar}
-                index={i}
-                field="result"
-                body={pillar[field]}
-                detailsLabel={detailsLabel}
-                whatWeBuildLabel={whatWeBuildLabel}
-                partnerLabel={partnerLabel}
-              />
-            ))}
-          </div>
-        )}
+        {field === "result" && grid}
 
         {field === "broken" && (
           <>
@@ -224,39 +265,11 @@ export function WorkPillarGridSection({
                 <path d="M12 3 2 21h20L12 3Zm-1 6h2v6h-2V9Zm1 10a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Z" />
               </svg>
             </div>
-            <div className={gridClass}>
-              {pillars.map((pillar, i) => (
-                <PillarGridCard
-                  key={`${pillar.key}-${field}`}
-                  pillar={pillar}
-                  index={i}
-                  field="broken"
-                  body={pillar[field]}
-                  detailsLabel={detailsLabel}
-                  whatWeBuildLabel={whatWeBuildLabel}
-                  partnerLabel={partnerLabel}
-                />
-              ))}
-            </div>
+            {grid}
           </>
         )}
 
-        {field === "actions" && (
-          <div className={gridClass}>
-            {pillars.map((pillar, i) => (
-              <PillarGridCard
-                key={`${pillar.key}-${field}`}
-                pillar={pillar}
-                index={i}
-                field="actions"
-                body={pillar[field]}
-                detailsLabel={detailsLabel}
-                whatWeBuildLabel={whatWeBuildLabel}
-                partnerLabel={partnerLabel}
-              />
-            ))}
-          </div>
-        )}
+        {field === "actions" && grid}
       </Container>
     </section>
   );

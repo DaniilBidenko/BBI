@@ -2,7 +2,16 @@
 
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import type { ContactsPage } from "@/content/dictionaries/types";
+import type { ContactsPage, Dictionary } from "@/content/dictionaries/types";
+
+type ConsentUi = Pick<
+  Dictionary["ui"],
+  | "contactsConsentBeforeLink"
+  | "contactsConsentLinkText"
+  | "contactsConsentAfterLink"
+  | "privacyModalTitle"
+  | "privacyModalCloseAria"
+>;
 import { defaultLocale, isLocale } from "@/i18n/config";
 import { PrivacyPolicyModalLink } from "@/components/PrivacyPolicyModalLink";
 
@@ -20,12 +29,14 @@ type ContactsFormProps = {
   variant?: "dark" | "light";
   /** Подписи полей как на странице контактов: мелкий капс, тени под нейтральный shell */
   compactLabels?: boolean;
+  consentUi?: ConsentUi;
 };
 
 export function ContactsForm({
   contacts,
   variant = "dark",
   compactLabels = false,
+  consentUi,
 }: ContactsFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const pathname = usePathname();
@@ -218,15 +229,17 @@ const buttonClass = isLight
             </svg>
           </span>
           <span className={consentTextClass}>
-            Нажимая на кнопку "Отправить", я даю свое согласие на{" "}
+            {consentUi?.contactsConsentBeforeLink ??
+              'Нажимая на кнопку "Отправить", я даю свое согласие на '}
             <PrivacyPolicyModalLink
               href={privacyHref}
               className="text-[var(--bbi-red)] transition hover:opacity-85"
-              title="Политика конфиденциальности"
+              title={consentUi?.privacyModalTitle ?? "Политика конфиденциальности"}
+              closeAriaLabel={consentUi?.privacyModalCloseAria}
             >
-              обработку моих персональных данных
+              {consentUi?.contactsConsentLinkText ?? "обработку моих персональных данных"}
             </PrivacyPolicyModalLink>
-            .
+            {consentUi?.contactsConsentAfterLink ?? "."}
           </span>
         </label>
       </div>

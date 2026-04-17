@@ -78,6 +78,8 @@ export type WorkPage = {
     description: string;
     ctaLabel: string;
     ctaHint?: string;
+    /** Red card carousel on the work hero (3 slides) */
+    carouselSlides: [string, string, string];
   };
   scheme: {
     centerLabel: string;
@@ -100,6 +102,8 @@ export type WorkPage = {
     title: string;
     description: string;
     badge: string;
+    /** Heading above the symptom list inside “подробнее” on broken-pillar cards */
+    detailsExpandedListHeading: string;
   };
   actions: {
     title: string;
@@ -114,6 +118,12 @@ export type WorkPage = {
   stages: {
     title: string;
     description: string;
+    /** Подпись раскрытия списка в карточке этапа */
+    readMoreLabel: string;
+    /** Заголовок списка внутри раскрытого блока */
+    whatWeDoHeading: string;
+    /** Подстрока в description перед списком (включая «:»), напр. «Что делаем:» / «What we do:» */
+    detailsListMarker: string;
     steps: WorkStage[];
   };
   responsibility: {
@@ -125,6 +135,9 @@ export type WorkPage = {
     client: string[];
     bbiDetailed?: { title: string; description: string }[];
     clientDetailed?: { title: string; description: string }[];
+    /** details/summary toggle on responsibility cards when extra items are collapsed */
+    readMoreLabel: string;
+    readLessLabel: string;
   };
   targetState: {
     title: string;
@@ -142,6 +155,18 @@ export type WorkPage = {
       message: string;
       submit: string;
     };
+  };
+  /** Подписи в раскрытых карточках столпов (модалка «подробнее») */
+  pillarCardUi: {
+    whatWeBuild: string;
+    partnerWithClient: string;
+    brokenPracticeHeading: string;
+  };
+  /** Блок «что мы не обещаем» перед целевым состоянием */
+  promises: {
+    title: string;
+    subtitle: string;
+    paragraphs: [string, string, string, string];
   };
 };
 
@@ -278,6 +303,8 @@ export type Dictionary = {
     hero: {
       eyebrow: string;
       title: string;
+      /** If set, the hero line containing this substring uses tighter wrapping on small screens */
+      titleLineBreakMatch?: string;
       subtitle: string;
       cta: string;
       secondaryCta: string;
@@ -289,6 +316,8 @@ export type Dictionary = {
       segments: { title: string; description: string; details?: string; metrics?: string; pain: string }[];
       exclude: string;
       excludeLabel?: string;
+      /** Текст на summary у раскрывающегося блока (не хардкодить «Подробнее») */
+      readMoreLabel: string;
     };
     icp: {
       eyebrow: string;
@@ -328,6 +357,14 @@ export type Dictionary = {
       title: string;
       subheadline?: string;
       items?: string[];
+      /** Подписи к details/summary и внутренним блокам карточек «Что вы получаете» (обязательно для всех локалей) */
+      ui: {
+        readMore: string;
+        whatItMeans: string;
+        clientGetsHeading: string;
+        importantPrefix: string;
+        outcomeEyebrow: string;
+      };
       cards?: {
         title: string;
         whatItMeans: string;
@@ -353,6 +390,13 @@ export type Dictionary = {
       items?: { label: string; text: string }[];
       topCards?: { label: string; intro: string; outcomeBullets: string[] }[];
       wideCard?: { label: string; intro: string; outcomeBullets: string[] };
+      /** Над широкой карточкой (рубрика) */
+      approachEyebrow?: string;
+      /** Сетка «параметр / агентство / консалтинг / BBI» на главной */
+      comparisonTable?: {
+        columnHeaders: [string, string, string, string];
+        rows: [string, string, string, string][];
+      };
     };
     casesBlog: {
       title: string;
@@ -443,6 +487,20 @@ export type Dictionary = {
   cases: CasesPage & { items: CaseStudy[] };
   blog: BlogPage & { posts: BlogPost[] };
   contacts: ContactsPage;
+  ui: {
+    notFoundTitle: string;
+    notFoundDescription: string;
+    notFoundHome: string;
+    searchPlaceholder: string;
+    searchSubmit: string;
+    footerLogoAria: string;
+    contactsConsentBeforeLink: string;
+    contactsConsentLinkText: string;
+    contactsConsentAfterLink: string;
+    privacyModalCloseAria: string;
+    privacyPageTitle: string;
+    privacyModalTitle: string;
+  };
 };
 
 export type BlogSection = {

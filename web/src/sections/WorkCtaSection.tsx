@@ -1,6 +1,16 @@
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import { PrivacyPolicyModalLink } from "@/components/PrivacyPolicyModalLink";
+import type { Dictionary } from "@/content/dictionaries/types";
+
+type ConsentUi = Pick<
+  Dictionary["ui"],
+  | "contactsConsentBeforeLink"
+  | "contactsConsentLinkText"
+  | "contactsConsentAfterLink"
+  | "privacyModalTitle"
+  | "privacyModalCloseAria"
+>;
 
 type WorkCtaSectionProps = {
   title: string;
@@ -13,6 +23,7 @@ type WorkCtaSectionProps = {
   };
   submitHref: string;
   privacyHref: string;
+  consentUi: ConsentUi;
 };
 
 export function WorkCtaSection({
@@ -21,6 +32,7 @@ export function WorkCtaSection({
   form,
   submitHref,
   privacyHref,
+  consentUi,
 }: WorkCtaSectionProps) {
   return (
     <section id="work-cta-form" className="relative pb-20 pt-10 md:pb-24 md:pt-12">
@@ -79,15 +91,16 @@ export function WorkCtaSection({
                 </svg>
               </span>
               <span>
-                Нажимая на кнопку "Отправить", я даю свое согласие на{" "}
+                {consentUi.contactsConsentBeforeLink}
                 <PrivacyPolicyModalLink
                   href={privacyHref}
                   className="text-[var(--bbi-red)] transition hover:opacity-85"
-                  title="Политика конфиденциальности"
+                  title={consentUi.privacyModalTitle}
+                  closeAriaLabel={consentUi.privacyModalCloseAria}
                 >
-                  обработку моих персональных данных
+                  {consentUi.contactsConsentLinkText}
                 </PrivacyPolicyModalLink>
-                .
+                {consentUi.contactsConsentAfterLink}
               </span>
             </label>
           </form>

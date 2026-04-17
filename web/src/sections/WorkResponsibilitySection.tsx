@@ -10,6 +10,8 @@ type WorkResponsibilitySectionProps = {
   client: string[];
   bbiDetailed?: { title: string; description: string }[];
   clientDetailed?: { title: string; description: string }[];
+  readMoreLabel: string;
+  readLessLabel: string;
 };
 
 export function WorkResponsibilitySection({
@@ -21,6 +23,8 @@ export function WorkResponsibilitySection({
   client,
   bbiDetailed,
   clientDetailed,
+  readMoreLabel,
+  readLessLabel,
 }: WorkResponsibilitySectionProps) {
   return (
     <section className="relative py-16 md:py-18">
@@ -40,6 +44,8 @@ export function WorkResponsibilitySection({
           client={client}
           bbiDetailed={bbiDetailed}
           clientDetailed={clientDetailed}
+          readMoreLabel={readMoreLabel}
+          readLessLabel={readLessLabel}
         />
       </Container>
     </section>

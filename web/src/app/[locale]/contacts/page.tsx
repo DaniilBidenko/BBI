@@ -17,8 +17,10 @@ export default async function ContactsPage({ params }: LocalePageProps) {
   const dictionary = getDictionary(locale);
 
   return (
-    <div className="contacts-page-root h-[calc(100dvh-80px)] md:h-[calc(100dvh-92px)]">
-      <Footer footer={dictionary.footer} locale={locale} variant="page" />
+    <div className="contacts-page-root box-border flex min-h-0 flex-1 flex-col pt-[80px] md:pt-[92px]">
+      <div className="contacts-page-inner flex min-h-0 flex-1 flex-col">
+        <Footer footer={dictionary.footer} locale={locale} variant="page" />
+      </div>
     </div>
   );
 }

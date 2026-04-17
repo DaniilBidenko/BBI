@@ -9,6 +9,8 @@ type WorkResponsibilityCardsProps = {
   client: string[];
   bbiDetailed?: { title: string; description: string }[];
   clientDetailed?: { title: string; description: string }[];
+  readMoreLabel: string;
+  readLessLabel: string;
 };
 
 function withColon(value: string) {
@@ -16,7 +18,12 @@ function withColon(value: string) {
   return trimmed.endsWith(":") ? trimmed : `${trimmed}:`;
 }
 
-function renderDetailed(items: { title: string; description: string }[], isAccent = false) {
+function renderDetailed(
+  items: { title: string; description: string }[],
+  isAccent: boolean,
+  readMoreLabel: string,
+  readLessLabel: string
+) {
   const visibleItems = items.slice(0, 2);
   const hiddenItems = items.slice(2);
 
@@ -26,18 +33,14 @@ function renderDetailed(items: { title: string; description: string }[], isAccen
         {visibleItems.map((item) => (
           <article
             key={item.title}
-            className={`rounded-xl border-t pt-3 transition-colors duration-300 ease-out first:border-t-0 first:pt-0 ${
-              isAccent ? "border-[#111111]/22" : "border-white/10"
-            }`}
+            className="rounded-xl border-t border-white/10 pt-3 transition-colors duration-300 ease-out first:border-t-0 first:pt-0"
           >
-            <h3
-              className={`text-[16px] font-semibold leading-[1.25] md:text-[17px] ${
-                isAccent ? "text-[#111111]" : "text-white/92"
-              }`}
-            >
+            <h3 className="text-[16px] font-semibold leading-[1.25] text-white/92 md:text-[17px]">
               {item.title}
             </h3>
-            <p className={`mt-1.5 text-[13.5px] leading-[1.5] md:text-[14px] ${isAccent ? "text-[#111111]/82" : "text-white/74"}`}>
+            <p
+              className={`mt-1.5 text-[13.5px] leading-[1.5] md:text-[14px] ${isAccent ? "text-white/78" : "text-white/74"}`}
+            >
               {item.description}
             </p>
           </article>
@@ -52,25 +55,21 @@ function renderDetailed(items: { title: string; description: string }[], isAccen
                 : "bg-[var(--bbi-red)] text-white hover:opacity-90"
             }`}
           >
-            <span className="group-open:hidden">Узнать больше</span>
-            <span className="hidden group-open:inline">Скрыть</span>
+            <span className="group-open:hidden">{readMoreLabel}</span>
+            <span className="hidden group-open:inline">{readLessLabel}</span>
           </summary>
           <div className="mt-4 space-y-4">
             {hiddenItems.map((item) => (
               <article
                 key={item.title}
-                className={`rounded-xl border-t pt-3 transition-colors duration-300 ease-out first:border-t-0 first:pt-0 ${
-                  isAccent ? "border-[#111111]/22" : "border-white/10"
-                }`}
+                className="rounded-xl border-t border-white/10 pt-3 transition-colors duration-300 ease-out first:border-t-0 first:pt-0"
               >
-                <h3
-                  className={`text-[16px] font-semibold leading-[1.25] md:text-[17px] ${
-                    isAccent ? "text-[#111111]" : "text-white/92"
-                  }`}
-                >
+                <h3 className="text-[16px] font-semibold leading-[1.25] text-white/92 md:text-[17px]">
                   {item.title}
                 </h3>
-                <p className={`mt-1.5 text-[13.5px] leading-[1.5] md:text-[14px] ${isAccent ? "text-[#111111]/82" : "text-white/74"}`}>
+                <p
+                  className={`mt-1.5 text-[13.5px] leading-[1.5] md:text-[14px] ${isAccent ? "text-white/78" : "text-white/74"}`}
+                >
                   {item.description}
                 </p>
               </article>
@@ -89,6 +88,8 @@ export function WorkResponsibilityCards({
   client,
   bbiDetailed,
   clientDetailed,
+  readMoreLabel,
+  readLessLabel,
 }: WorkResponsibilityCardsProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
@@ -134,7 +135,7 @@ export function WorkResponsibilityCards({
           {withColon(bbiTitle)}
         </div>
         {bbiDetailed && bbiDetailed.length > 0 ? (
-          renderDetailed(bbiDetailed)
+          renderDetailed(bbiDetailed, false, readMoreLabel, readLessLabel)
         ) : (
           <ul className="mt-3.5 space-y-2 text-[14px] text-white/78 md:text-[15px]">
             {bbi.map((item) => (
@@ -156,7 +157,7 @@ export function WorkResponsibilityCards({
           </span>
         </div>
         {clientDetailed && clientDetailed.length > 0 ? (
-          renderDetailed(clientDetailed)
+          renderDetailed(clientDetailed, true, readMoreLabel, readLessLabel)
         ) : (
           <ul className="mt-3.5 space-y-2 text-[14px] text-white/80 md:text-[15px]">
             {client.map((item) => (

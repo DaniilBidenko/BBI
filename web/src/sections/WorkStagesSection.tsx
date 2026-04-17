@@ -5,11 +5,13 @@ type WorkStagesSectionProps = {
   title: string;
   description: string;
   steps: WorkStage[];
+  readMoreLabel: string;
+  whatWeDoHeading: string;
+  detailsListMarker: string;
 };
 
-function splitStageDescription(text: string) {
+function splitStageDescription(text: string, marker: string) {
   const cleaned = text.trim();
-  const marker = "Что делаем:";
 
   if (!cleaned.includes(marker)) {
     return { lead: cleaned, items: [] as string[] };
@@ -31,6 +33,9 @@ export function WorkStagesSection({
   title,
   description,
   steps,
+  readMoreLabel,
+  whatWeDoHeading,
+  detailsListMarker,
 }: WorkStagesSectionProps) {
   return (
     <section className="relative py-18 md:py-20">
@@ -47,7 +52,7 @@ export function WorkStagesSection({
 
           <div className="relative mt-8 grid items-start gap-4 md:mt-9 md:grid-cols-3">
             {steps.map((step, index) => {
-              const { lead, items } = splitStageDescription(step.description);
+              const { lead, items } = splitStageDescription(step.description, detailsListMarker);
               const isFinal = index === steps.length - 1;
 
               return (
@@ -81,14 +86,14 @@ export function WorkStagesSection({
                     {items.length > 0 && (
                       <details className="group mt-auto border-t border-white/10 pt-3.5">
                         <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-[14px] font-semibold tracking-wide text-[var(--bbi-red)] transition hover:text-[var(--bbi-red-hover)] marker:hidden [&::-webkit-details-marker]:hidden">
-                          Подробнее
+                          {readMoreLabel}
                           <span className="text-[12px] font-semibold transition-transform duration-200 group-open:rotate-90" aria-hidden>
                             &gt;&gt;
                           </span>
                         </summary>
                         <div className="mt-2.5 max-h-[36vh] overflow-y-auto pr-1 md:max-h-[220px]">
                           <p className="text-[12px] font-semibold uppercase tracking-[0.11em] text-white/68">
-                            Что делаем
+                            {whatWeDoHeading}
                           </p>
                           <ul className="mt-2 space-y-2">
                             {items.map((item) => (

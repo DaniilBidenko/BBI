@@ -29,15 +29,19 @@ export default async function LocaleLayout({
 
   return (
     <ThemeProvider>
-      <div className="flex min-h-screen flex-col">
+      <div className="flex min-h-[100dvh] min-h-screen flex-1 flex-col">
         <div className="layout-bg pointer-events-none fixed inset-0 -z-10" />
-      <AppBar
-        locale={locale}
-        navItems={dictionary.nav.items}
-        ctaLabel={dictionary.nav.cta}
-      />
-      <main className="flex-1">{children}</main>
-        <LocaleFooter footer={dictionary.footer} locale={locale} />
+        <AppBar
+          locale={locale}
+          navItems={dictionary.nav.items}
+          ctaLabel={dictionary.nav.cta}
+          searchPlaceholder={dictionary.ui.searchPlaceholder}
+          searchSubmitLabel={dictionary.ui.searchSubmit}
+        />
+        <div className="flex min-h-0 flex-1 flex-col">
+          <main className="flex min-h-0 flex-1 flex-col">{children}</main>
+          <LocaleFooter footer={dictionary.footer} locale={locale} />
+        </div>
       </div>
     </ThemeProvider>
   );

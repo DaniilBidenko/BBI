@@ -11,6 +11,11 @@ type WhyBBISectionProps = {
   items?: WhyBBIItem[];
   topCards?: WhyBBICard[];
   wideCard?: WhyBBICard;
+  approachEyebrow?: string;
+  comparisonTable?: {
+    columnHeaders: [string, string, string, string];
+    rows: [string, string, string, string][];
+  };
 };
 
 /** Как в макете: круг с диагональю «запрет» */
@@ -53,16 +58,6 @@ const LIST_ARROW_DOWN_RIGHT = (
   </svg>
 );
 
-const COMPARISON_HEADERS = ["Параметр", "Агентство", "Консалтинг", "BBI Operating Partner"];
-const COMPARISON_ROWS = [
-  ["Роль", "Исполнитель задач", "Советник", "Архитектор + интегратор + внедренец"],
-  ["Глубина", "Один инструмент/канал", "Анализ и рекомендации", "Система управления целиком"],
-  ["Присутствие", "Удалённо, по задаче", "Сессии и отчёты", "Внутри бизнеса до ЦКР (ценного конечного результата)"],
-  ["Ответственность", "За свою зону", "За рекомендации", "За достижение ЦКР"],
-  ["Результат", "Выполненная задача", "Документ/стратегия", "Работающая система"],
-  ["После ухода", "Останавливается", "Остаётся документ", "Остаётся система"],
-];
-
 export function WhyBBISection({
   eyebrow,
   title,
@@ -70,8 +65,26 @@ export function WhyBBISection({
   items,
   topCards,
   wideCard,
+  approachEyebrow = "Наш подход",
+  comparisonTable,
 }: WhyBBISectionProps) {
   const useNewLayout = Boolean(wideCard);
+  const COMPARISON_HEADERS = comparisonTable?.columnHeaders ?? [
+    "Параметр",
+    "Агентство",
+    "Консалтинг",
+    "BBI Operating Partner",
+  ];
+  const COMPARISON_ROWS =
+    comparisonTable?.rows ??
+    ([
+      ["Роль", "Исполнитель задач", "Советник", "Архитектор + интегратор + внедренец"],
+      ["Глубина", "Один инструмент/канал", "Анализ и рекомендации", "Система управления целиком"],
+      ["Присутствие", "Удалённо, по задаче", "Сессии и отчёты", "Внутри бизнеса до ЦКР (ценного конечного результата)"],
+      ["Ответственность", "За свою зону", "За рекомендации", "За достижение ЦКР"],
+      ["Результат", "Выполненная задача", "Документ/стратегия", "Работающая система"],
+      ["После ухода", "Останавливается", "Остаётся документ", "Остаётся система"],
+    ] as [string, string, string, string][]);
 
   return (
     <section className="relative py-10 md:py-12">
@@ -104,7 +117,7 @@ export function WhyBBISection({
                     </span>
                     <div className="min-w-0 flex-1">
                       <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[rgba(232,182,72,0.92)]">
-                        Наш подход
+                        {approachEyebrow}
                       </span>
                       <h3 className="mt-1 break-words text-[30px] font-semibold leading-[1.08] text-white sm:text-[34px] md:text-[42px]">
                         {wideCard.label}

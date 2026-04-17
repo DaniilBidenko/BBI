@@ -134,6 +134,149 @@ h4 {
   box-shadow: var(--bbi-card-shadow);
 }
 
+/* Footer: keep content centered with less empty space */
+.site-footer__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: clamp(160px, 20vh, 320px);
+  padding: clamp(14px, 3vh, 28px) 0 clamp(12px, 2.6vh, 24px);
+}
+
+/* Contacts page: whole page is this block — center in viewport */
+.site-footer__page-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding-top: 4rem;
+}
+
+/* Contacts page: базовые размеры в rem; единый масштаб — zoom на Container (пропорции не меняются) */
+.contacts-fluid {
+  --contacts-fs-title: 1rem;
+  --contacts-fs-body: 1.0625rem;
+  --contacts-fs-muted: 1rem;
+  --contacts-fs-label: 0.8125rem;
+  --contacts-fs-legal: 0.8125rem;
+  --contacts-gap: 1.35rem;
+  --contacts-icon: 3.25rem;
+  --contacts-icon-svg: 1.625rem;
+}
+
+/* Основной блок страницы контактов — по центру по вертикали между шапкой и фикс. полосой */
+.contacts-fluid.site-footer {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.contacts-fluid .site-footer__page-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  justify-content: center;
+  padding-top: min(4vh, 1.25rem);
+  padding-bottom: min(2vh, 0.75rem);
+}
+
+/* Контейнер без zoom: zoom на самом Container ломал центрирование и давал «пустоту слева». */
+.contacts-fluid .site-footer__page-body > .Container {
+  max-width: 100vw !important;
+  padding-left: clamp(16px, 5vw, 72px) !important;
+  padding-right: clamp(16px, 5vw, 72px) !important;
+}
+
+/*
+  Масштаб только контента страницы контактов: обёртка на всю ширину Container — симметрично, без сдвига вправо.
+  При 67% и др. отдалении вьюпорт в CSS px больше → 100vmin растёт → блок крупнее и заполняет экран.
+*/
+.contacts-fluid .contacts-uniform-scale {
+  width: 100%;
+  zoom: clamp(0.98, calc(1 + (100vmin - 520px) / 980px), 2.05);
+}
+
+/* Полоса «Все права защищены» — к низу окна, не к блоку контента */
+.site-footer__page-legal--viewport {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin-top: 0 !important;
+  padding-top: 0.75rem;
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .site-footer__page-legal--viewport {
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+.contacts-page-inner:has(.site-footer__page-legal--viewport) {
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Страница контактов: колонка на всю высоту main (между шапкой и низом вьюпорта) */
+.contacts-page-root {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.contacts-page-inner {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.contacts-fluid .site-footer__page-body .gap-7 {
+  gap: var(--contacts-gap) !important;
+}
+
+.contacts-fluid .site-footer__page-body > .Container > .grid {
+  gap: var(--contacts-gap) !important;
+}
+
+.contacts-fluid .site-footer__page-body h3 {
+  font-size: var(--contacts-fs-title) !important;
+}
+
+.contacts-fluid .site-footer__page-body ul a {
+  font-size: var(--contacts-fs-body) !important;
+}
+
+.contacts-fluid .site-footer__page-body .space-y-5 > div > p {
+  font-size: var(--contacts-fs-muted) !important;
+}
+
+.contacts-fluid .site-footer__page-body .grid.border-t p.uppercase,
+.contacts-fluid .site-footer__page-body .grid.border-t p.tracking-wider {
+  font-size: var(--contacts-fs-label) !important;
+}
+
+.contacts-fluid .site-footer__page-body .grid.border-t p.mt-0\.5,
+.contacts-fluid .site-footer__page-body .grid.border-t a {
+  font-size: var(--contacts-fs-body) !important;
+}
+
+.contacts-fluid .site-footer__page-body .flex.gap-2 a {
+  width: var(--contacts-icon) !important;
+  height: var(--contacts-icon) !important;
+  min-width: var(--contacts-icon) !important;
+  min-height: var(--contacts-icon) !important;
+}
+
+.contacts-fluid .site-footer__page-body .flex.gap-2 a svg {
+  width: var(--contacts-icon-svg) !important;
+  height: var(--contacts-icon-svg) !important;
+}
+
+.contacts-fluid.site-footer .site-footer__page-legal p,
+.contacts-fluid.site-footer .site-footer__page-legal a {
+  font-size: var(--contacts-fs-legal) !important;
+}
 /* Ровный «кошачий глаз»: мягкий вертикальный блик, без радиальных «пятен» */
 .bbi-surface-cateye {
   background:
@@ -1625,18 +1768,18 @@ h4 {
   border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-/* Для карточек столпов: при раскрытии сохраняем вырез, но даём больше высоты */
-.icp-card[class*="icp-card--pillar"]:has(details[open]) {
+/* Для карточек столпов: при раскрытии сохраняем вырез, но даём больше высоты (как «Узнаёте себя» на главной) */
+.icp-card[class*="icp-card--pillar"].icp-card--pillar-expanded {
   height: auto !important;
   overflow: hidden;
   clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
 }
 
-.icp-card[class*="icp-card--pillar"]:has(details[open])::after {
+.icp-card[class*="icp-card--pillar"].icp-card--pillar-expanded::after {
   clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
 }
 
-.icp-card[class*="icp-card--pillar"]:has(details[open]) .icp-card__content {
+.icp-card[class*="icp-card--pillar"].icp-card--pillar-expanded .icp-card__content {
   height: auto;
 }
 
@@ -1658,9 +1801,9 @@ h4 {
 }
 
 .icp-card--recognize {
-  height: auto !important;
+  height: 456px;
   min-height: 456px;
-  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 428 C 398 444 386 456 370 456 H 28 C 12 456 0 444 0 428 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
 }
 
 .icp-card__index {
@@ -1706,7 +1849,7 @@ h4 {
 }
 
 .icp-card--recognize::after {
-  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 428 C 398 444 386 456 370 456 H 28 C 12 456 0 444 0 428 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
+  clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
   border-color: rgba(215, 217, 224, 0.075);
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.045),
@@ -1737,7 +1880,7 @@ h4 {
 /* JS toggle version for "Узнаёте себя": keep button row aligned when closed,
    expand card shape and flow content naturally when opened. */
 .icp-card--recognize-open {
-  height: auto !important;
+  height: auto;
   min-height: 456px;
   clip-path: path("M 114 0 H 370 C 386 0 398 12 398 28 V 980 C 398 996 386 1008 370 1008 H 28 C 12 1008 0 996 0 980 V 90 Q 0 78 12 78 H 72 A 24 24 0 0 0 96 52 V 14 Q 96 0 114 0 Z");
 }
@@ -1814,6 +1957,9 @@ h4 {
 .icp-card--pillar-actions {
   height: auto !important;
   min-height: 256px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 /* Столпы /work: чуть плотнее оболочка под крупнее типографику */
@@ -1822,6 +1968,9 @@ h4 {
 .icp-card--pillar-actions .icp-card__content {
   padding: 16px 18px 11px;
   gap: 6px;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto !important;
 }
 
 .icp-card--pillar-result .icp-card__title,
@@ -1995,6 +2144,15 @@ h4 {
     inset 0 1px 0 rgba(255, 130, 145, 0.12);
 }
 
+/* Столпы /work: цифра по центру зоны выреза (см. .icp-card::before 94×70 / 78×60) */
+.icp-card__index.icp-card__index--pillar-result,
+.icp-card__index.icp-card__index--pillar-broken,
+.icp-card__index.icp-card__index--pillar-actions {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
 @media (max-width: 640px) {
   .icp-card {
     height: 252px;
@@ -2045,11 +2203,11 @@ h4 {
     padding-left: 88px;
   }
 
-  .icp-card[class*="icp-card--pillar"]:has(details[open]) {
+  .icp-card[class*="icp-card--pillar"].icp-card--pillar-expanded {
     clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 900 C 344 915 332 926 318 926 H 24 C 11 926 0 915 0 900 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 
-  .icp-card[class*="icp-card--pillar"]:has(details[open])::after {
+  .icp-card[class*="icp-card--pillar"].icp-card--pillar-expanded::after {
     clip-path: path("M 96 0 H 318 C 332 0 344 11 344 26 V 900 C 344 915 332 926 318 926 H 24 C 11 926 0 915 0 900 V 80 Q 0 68 10 68 H 56 A 18 18 0 0 0 74 48 V 10 Q 74 0 96 0 Z");
   }
 

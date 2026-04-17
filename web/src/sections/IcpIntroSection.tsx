@@ -8,6 +8,7 @@ type IcpIntroSectionProps = {
   segments: Segment[];
   exclude: string;
   excludeLabel?: string;
+  readMoreLabel?: string;
 };
 
 const TARGET_ICON = (
@@ -29,7 +30,14 @@ const WARNING_ICON = (
   </svg>
 );
 
-export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabel = "Не подходим" }: IcpIntroSectionProps) {
+export function IcpIntroSection({
+  eyebrow,
+  title,
+  segments,
+  exclude,
+  excludeLabel = "Не подходим",
+  readMoreLabel = "Подробнее",
+}: IcpIntroSectionProps) {
   const excludeParts = exclude
     .split("\n")
     .map((part) => part.trim())
@@ -75,12 +83,14 @@ export function IcpIntroSection({ eyebrow, title, segments, exclude, excludeLabe
                       {collapsedParagraphs.length > 0 && (
                         <details className="group mt-2">
                           <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-[13px] font-medium tracking-wide text-[var(--bbi-red)] transition hover:text-[var(--bbi-red-hover)] marker:hidden [&::-webkit-details-marker]:hidden">
-                            Подробнее
+                            {readMoreLabel}
                             <span className="text-[12px] font-semibold" aria-hidden>
                               &gt;&gt;
                             </span>
                           </summary>
-                          <div className="mt-2 space-y-2.5">
+                          <div
+                            className="mt-2 max-h-[min(48vh,300px)] space-y-2.5 overflow-y-auto overscroll-y-contain pr-1 [scrollbar-color:rgba(255,255,255,0.28)_transparent] [scrollbar-width:thin] md:max-h-[min(42vh,280px)] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/25 [&::-webkit-scrollbar-track]:bg-transparent"
+                          >
                             {collapsedParagraphs.map((paragraph) => (
                               <p key={paragraph}>{paragraph}</p>
                             ))}

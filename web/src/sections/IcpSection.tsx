@@ -40,17 +40,20 @@ export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref 
           )}
         </div>
 
-        <div className="relative grid grid-cols-1 items-start gap-4 [grid-auto-rows:auto] md:gap-5 md:items-stretch md:[grid-auto-rows:1fr] lg:grid-cols-2 xl:grid-cols-3">
+        <div className="relative flex flex-wrap justify-center gap-4 md:gap-5">
           {cards.map((card, index) => {
             const isOpen = Boolean(openCards[index]);
 
             return (
-              <article key={card.href} className="group relative flex h-full min-h-0 flex-col overflow-visible">
+              <article
+                key={card.href}
+                className="group relative flex w-[min(360px,100%)] max-w-[360px] shrink-0 flex-col overflow-visible"
+              >
               <span className="icp-card__index icp-card__index--recognize absolute z-20 flex items-center justify-center text-[42px] font-semibold leading-none text-white/92 transition-transform duration-300 ease-out group-hover:-translate-y-0.5">
                 {index + 1}
               </span>
               <div
-                className={`icp-card icp-card--recognize bbi-hover-lift relative mt-2 ml-2 ${
+                className={`icp-card icp-card--recognize bbi-hover-lift relative mt-2 ml-2 w-full max-w-full ${
                   isOpen ? "icp-card--recognize-open" : ""
                 }`}
               >
@@ -65,7 +68,7 @@ export function IcpSection({ eyebrow, title, subtitle, cards, ctaLabel, ctaHref 
                     <p>{card.description}</p>
                   </div>
 
-                  <div className="icp-card__footer">
+                    <div className="icp-card__footer">
                     <div className="group w-full">
                       <button
                         type="button"

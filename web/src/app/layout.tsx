@@ -26,7 +26,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased">
+      <body className="flex min-h-[100dvh] min-h-screen flex-col antialiased">
         {children}
       </body>
     </html>

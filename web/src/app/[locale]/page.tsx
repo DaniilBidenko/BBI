@@ -48,6 +48,7 @@ export default async function HomePage({ params }: LocalePageProps) {
           segments={home.icpIntro.segments}
           exclude={home.icpIntro.exclude}
           excludeLabel={home.icpIntro.excludeLabel}
+          readMoreLabel={home.icpIntro.readMoreLabel}
         />
         <IcpSection
           title={home.icp.title}
@@ -76,6 +77,8 @@ export default async function HomePage({ params }: LocalePageProps) {
           items={home.whyBbi.items}
           topCards={home.whyBbi.topCards}
           wideCard={home.whyBbi.wideCard}
+          approachEyebrow={home.whyBbi.approachEyebrow}
+          comparisonTable={home.whyBbi.comparisonTable}
         />
         <CasesSection
           title={home.casesBlog.casesTitle ?? home.casesBlog.title}
@@ -95,6 +98,7 @@ export default async function HomePage({ params }: LocalePageProps) {
           subheadline={home.whatYouGet.subheadline}
           items={home.whatYouGet.items}
           cards={home.whatYouGet.cards}
+          cardUi={home.whatYouGet.ui}
           finalAccent={home.whatYouGet.finalAccent}
           ctaHref={formAnchor}
         />
@@ -113,6 +117,7 @@ export default async function HomePage({ params }: LocalePageProps) {
           title={home.finalCta.title}
           subtitle={home.finalCta.subtitle}
           contacts={dictionary.contacts}
+          consentUi={dictionary.ui}
         />
       </div>
     </>
